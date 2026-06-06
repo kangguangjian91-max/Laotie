@@ -60,7 +60,8 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="/about" className="hover:text-white transition-colors">Certificates</a></li>
+              <li><a href="/certificates" className="hover:text-white transition-colors">Certificates</a></li>
+              <li><a href="/faq" className="hover:text-white transition-colors">FAQ</a></li>
               <li><a href="/projects" className="hover:text-white transition-colors">Projects</a></li>
               <li><a href="/blog" className="hover:text-white transition-colors">Blog</a></li>
               <li><a href="https://hnltgjg.en.alibaba.com/" target="_blank" rel="noopener noreferrer" className="hover:text-steel-accent transition-colors">Alibaba Store ↗</a></li>
@@ -116,6 +117,8 @@ export default function Footer() {
         <div className="mt-10 pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
           <p>&copy; {new Date().getFullYear()} OldTie Steel Structure Co., Ltd. All rights reserved.</p>
           <div className="flex items-center gap-6">
+            <a href="/faq" className="hover:text-white transition-colors">FAQ</a>
+            <a href="/certificates" className="hover:text-white transition-colors">Certificates</a>
             <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
             <a href="/sitemap.xml" className="hover:text-white transition-colors">Sitemap</a>

@@ -141,7 +141,7 @@ export default function WhatsAppFloatingButton() {
           </div>
 
           {/* Chat body — WhatsApp-style message bubbles */}
-          <div className="px-3 py-3 space-y-2.5 bg-[#E5DDD5] bg-[url('data:image/svg+xml,...')]">
+          <div className="px-3 py-3 space-y-2.5" style={{ backgroundColor: "#E5DDD5" }}>
             {/* Incoming message bubble (simulated) */}
             <div className="flex gap-2">
               <div className="bg-white rounded-[18px] rounded-tl-md px-3.5 py-2.5 shadow-sm max-w-[85%]">
