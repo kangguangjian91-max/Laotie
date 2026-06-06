@@ -43,8 +43,13 @@ export default function ContactPage() {
                 method="POST"
                 className="space-y-4"
               >
+                {/* FormSubmit configuration */}
                 <input type="hidden" name="_subject" value="New Inquiry — OldTie Steel Website" />
                 <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="https://www.oldtie-steel.com/thank-you" />
+                <input type="hidden" name="_template" value="table" />
+                {/* Honeypot spam protection */}
+                <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Name *</label>

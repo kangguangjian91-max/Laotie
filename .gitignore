@@ -10,8 +10,7 @@ coverage/
 .next/
 out/
 dist/
-out-v2/
-out-v3/
+out-*/
 
 # production
 build/
