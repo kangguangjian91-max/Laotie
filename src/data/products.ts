@@ -22,7 +22,9 @@ export const products: Product[] = [
       "Custom-designed steel portal frame buildings for factories, warehouses, workshops, and logistics centers. Section steel main frame, Z/C purlins, bracing system. Design in accordance with AS/NZS, BS, and Chinese GB standards.",
     overview: `Our steel structure buildings are the backbone of modern industrial construction. Using portal frame or truss systems, we deliver clear-span spaces up to 60m without internal columns — maximizing usable floor area for manufacturing, storage, and logistics operations.
 
-Each building is engineered to your local design codes (AS/NZS 1170, BS 5950, EN 1993, or GB 50017) and comes with full calculation reports, fabrication drawings, and erection manuals. Our 5 production lines output 5,000 tons per month, ensuring on-time delivery for projects of any scale.`,
+Each building is engineered to your local design codes (AS/NZS 1170, BS 5950, EN 1993, or GB 50017) and comes with full calculation reports, fabrication drawings, and erection manuals. Our 5 production lines output 5,000 tons per month, ensuring on-time delivery for projects of any scale.
+
+A typical 3,000 sqm warehouse structure ships from our factory in 25–35 working days. We provide optional on-site supervision and can recommend local erection contractors through our network. Every bolt, plate, and member is labeled and match-marked for rapid assembly — crews typically erect 500–800 sqm per day with a 5-person team.`,
     specifications: [
       { label: "Main Frame", value: "Q355B/Q235B H-section steel, hot-dip galvanized option" },
       { label: "Purlin", value: "C/Z cold-formed galvanized steel, 1.5-3.0mm thickness" },
@@ -63,7 +65,9 @@ Each building is engineered to your local design codes (AS/NZS 1170, BS 5950, EN
       "High-strength profiled steel deck for concrete composite floors. YX75-200-600, YX51-240-720, and custom profiles. Fire resistance up to 2H. Compatible with Australia/New Zealand construction standards.",
     overview: `Our steel floor deck systems serve as permanent formwork and tensile reinforcement for concrete composite slabs — eliminating the need for timber formwork and reducing on-site labor dramatically. The profiled steel sheet bonds with poured concrete via embossments, creating a strong composite floor diaphragm.
 
-We stock standard profiles including YX75-200-600 (3W), YX51-240-720, and YX51-305-915, with custom profiles available on request. All decking is manufactured from high-strength galvanized steel coil (G550/G350) and tested to AS/NZS 2327 and BS 5950-4 standards.`,
+We stock standard profiles including YX75-200-600 (3W), YX51-240-720, and YX51-305-915, with custom profiles available on request. All decking is manufactured from high-strength galvanized steel coil (G550/G350) and tested to AS/NZS 2327 and BS 5950-4 standards.
+
+For large projects, we provide full composite slab design — including reinforcement mesh layout, shear stud specification, and propping schedules — as part of our engineering package. Typical lead time is 15–20 working days from order confirmation to container loading.`,
     specifications: [
       { label: "Profile Types", value: "YX75-200-600 (3W), YX51-240-720, YX51-305-915" },
       { label: "Material", value: "G550 / G350 high-strength galvanized steel" },
@@ -103,7 +107,9 @@ We stock standard profiles including YX75-200-600 (3W), YX51-240-720, and YX51-3
       "Lightweight bolt-ball / welded space frame systems for stadiums, airports, exhibition halls, and industrial sheds. Span up to 120m without intermediate columns. PE/PVDF coating, 15-year warranty.",
     overview: `Our space frame systems use a three-dimensional truss network of tubular steel members connected by high-strength bolt-ball joints — creating an incredibly light yet stiff structure capable of spanning 120m+ without internal support columns.
 
-Each node is precision-machined and hot-dip galvanized, while members are cut to millimeter accuracy using CNC tube-cutting lines. The system assembles entirely on-site using simple bolted connections — no site welding required. Ideal for stadiums, airport terminals, exhibition halls, and industrial buildings requiring column-free interiors.`,
+Each node is precision-machined and hot-dip galvanized, while members are cut to millimeter accuracy using CNC tube-cutting lines. The system assembles entirely on-site using simple bolted connections — no site welding required. Ideal for stadiums, airport terminals, exhibition halls, and industrial buildings requiring column-free interiors.
+
+For complex geometries, our engineering team provides 3D BIM models (Tekla / Revit) showing every node, member, and connection. The entire roof structure is pre-assembled in factory for trial fitting before packing. Our 15-year structural warranty covers material defects and fabrication quality — backed by CE and ISO 9001 certification.`,
     specifications: [
       { label: "System Type", value: "Bolt-ball (BSJ) / Welded ball (WSJ)" },
       { label: "Member Material", value: "Q235B/Q355B seamless steel tube" },
@@ -143,7 +149,9 @@ Each node is precision-machined and hot-dip galvanized, while members are cut to
       "Insulated sandwich panels (PU/PIR/EPS) and single-skin metal cladding. 50mm-200mm thickness, fire-rated options. Compatible with steel structure buildings for complete envelope solution.",
     overview: `A steel building is only as good as its envelope. Our cladding systems — including PIR/PU insulated sandwich panels and single-skin profiled sheets — provide thermal insulation, weatherproofing, and architectural finish in one integrated system.
 
-Sandwich panels are manufactured on continuous lamination lines with zero-ODP blowing agents. The double metal skin with injected foam core delivers U-values as low as 0.18 W/m²K, meeting energy codes worldwide. Custom colors, profiles, and fire ratings available.`,
+Sandwich panels are manufactured on continuous lamination lines with zero-ODP blowing agents. The double metal skin with injected foam core delivers U-values as low as 0.18 W/m²K, meeting energy codes worldwide. Custom colors, profiles, and fire ratings available.
+
+For cold storage and food processing projects, we supply PIR-cored panels with food-grade stainless steel interior skins and antibacterial coatings — compliant with HACCP and FDA requirements. Our cladding systems ship with all necessary trims, flashings, fasteners, and sealants — a complete envelope kit ready for installation. Typical lead time is 20–25 working days.`,
     specifications: [
       { label: "Panel Type", value: "PU (Polyurethane) / PIR (Polyisocyanurate) / EPS / Rockwool" },
       { label: "Thickness", value: "50mm, 75mm, 100mm, 150mm, 200mm" },
