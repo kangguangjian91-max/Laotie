@@ -1,0 +1,293 @@
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { products, getAllProductSlugs, getProductBySlug } from "@/data/products";
+import { ArrowLeft, CheckCircle, Ruler, Shield, Zap, Globe } from "lucide-react";
+
+interface ProductPageProps {
+  params: Promise<{ slug: string }>;
+}
+
+export async function generateStaticParams() {
+  return getAllProductSlugs().map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const product = getProductBySlug(slug);
+  if (!product) return { title: "Product Not Found" };
+
+  return {
+    title: `${product.title} | OldTie Steel Structure`,
+    description: product.description,
+      openGraph: {
+      title: `${product.title} — OldTie Steel Structure`,
+      description: product.description,
+      images: [{ url: product.image, width: 800, height: 800 }],
+      url: `https://www.oldtie-steel.com/products/${slug}`,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${product.title} — OldTie Steel Structure`,
+      description: product.description,
+      images: [product.image],
+    },
+  };
+}
+
+const iconMap: Record<string, React.ReactNode> = {
+  Portal: <Ruler className="w-5 h-5 text-steel-accent" />,
+  Crane: <Ruler className="w-5 h-5 text-steel-accent" />,
+  Design: <Globe className="w-5 h-5 text-steel-accent" />,
+  Corrosion: <Shield className="w-5 h-5 text-steel-accent" />,
+  Fire: <Shield className="w-5 h-5 text-steel-accent" />,
+  Bolt: <Zap className="w-5 h-5 text-steel-accent" />,
+  Hot: <Shield className="w-5 h-5 text-steel-accent" />,
+  default: <CheckCircle className="w-5 h-5 text-green-badge" />,
+};
+
+function getFeatureIcon(feature: string): React.ReactNode {
+  for (const key of Object.keys(iconMap)) {
+    if (feature.includes(key)) return iconMap[key];
+  }
+  return iconMap.default;
+}
+
+export default async function ProductDetailPage({ params }: ProductPageProps) {
+  const { slug } = await params;
+  const product = getProductBySlug(slug);
+
+  if (!product) {
+    notFound();
+  }
+
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.title,
+    description: product.description,
+    image: `https://www.oldtie-steel.com${product.image}`,
+    category: "Steel Structure",
+    manufacturer: {
+      "@type": "Organization",
+      name: "OldTie Steel Structure Co., Ltd.",
+    },
+    offers: {
+      "@type": "AggregateOffer",
+      priceCurrency: "USD",
+      lowPrice: product.schemaPriceLow,
+      highPrice: product.schemaPriceHigh,
+      offerCount: "1",
+      availability: "https://schema.org/InStock",
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.oldtie-steel.com/" },
+      { "@type": "ListItem", position: 2, name: "Products", item: "https://www.oldtie-steel.com/products" },
+      { "@type": "ListItem", position: 3, name: product.title, item: `https://www.oldtie-steel.com/products/${slug}` },
+    ],
+  };
+
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={productSchema} />
+      <Header />
+      <main className="bg-white">
+        {/* Hero Banner */}
+        <section className="relative bg-steel overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+              src={product.image}
+              alt={product.title}
+              className="w-full h-full object-cover opacity-30"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-steel via-steel/90 to-steel/70" />
+          </div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+            <a
+              href="/products"
+              className="inline-flex items-center gap-1 text-sm text-steel-accent hover:text-white transition-colors mb-6"
+            >
+              <ArrowLeft className="w-4 h-4" /> All Products
+            </a>
+            {product.badge && (
+              <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-white bg-steel-accent mb-4">
+                {product.badge}
+              </span>
+            )}
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+              {product.title}
+            </h1>
+            <p className="text-lg text-steel-accent font-semibold mb-4">{product.subtitle}</p>
+            <p className="text-gray-300 max-w-2xl text-lg">{product.description}</p>
+          </div>
+        </section>
+
+        {/* Overview */}
+        <section className="py-16 lg:py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-3 gap-12">
+              {/* Main Content */}
+              <div className="lg:col-span-2">
+                <h2 className="text-2xl font-bold text-steel mb-6">Product Overview</h2>
+                <div className="prose prose-gray max-w-none text-gray-600 leading-relaxed space-y-4">
+                  {product.overview.split("\n\n").map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+
+                {/* Specifications Table */}
+                <h2 id="specifications" className="text-2xl font-bold text-steel mt-12 mb-6">Technical Specifications</h2>
+                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                  <table className="w-full">
+                    <tbody>
+                      {product.specifications.map((spec, i) => (
+                        <tr key={spec.label} className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                          <td className="px-6 py-3.5 text-sm font-semibold text-steel w-1/3 border-r border-gray-100">
+                            {spec.label}
+                          </td>
+                          <td className="px-6 py-3.5 text-sm text-gray-600">{spec.value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* Features */}
+                <h2 className="text-2xl font-bold text-steel mt-12 mb-6">Key Features</h2>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {product.features.map((feature) => (
+                    <div
+                      key={feature}
+                      className="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100"
+                    >
+                      <span className="mt-0.5 shrink-0">{getFeatureIcon(feature)}</span>
+                      <span className="text-sm text-gray-700 leading-relaxed">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Applications */}
+                <h2 className="text-2xl font-bold text-steel mt-12 mb-6">Applications</h2>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {product.applications.map((app) => (
+                    <div
+                      key={app}
+                      className="flex items-center gap-2 px-4 py-3 bg-steel-muted rounded-lg text-sm text-steel font-medium"
+                    >
+                      <CheckCircle className="w-4 h-4 text-green-badge shrink-0" />
+                      {app}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Sidebar */}
+              <aside className="lg:col-span-1">
+                <div className="sticky top-24 space-y-6">
+                  {/* Product Image Card */}
+                  <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className="w-full aspect-square object-cover"
+                    />
+                  </div>
+
+                  {/* CTA Card */}
+                  <div className="bg-gradient-to-br from-steel to-steel-light rounded-2xl p-6 text-white">
+                    <h3 className="text-lg font-bold mb-2">Interested in this product?</h3>
+                    <p className="text-gray-300 text-sm mb-5">
+                      Get a free quotation within 24 hours. We ship to 30+ countries worldwide.
+                    </p>
+                    <a
+                      href="/contact"
+                      className="block text-center w-full px-5 py-3 text-sm font-semibold text-white bg-gradient-to-r from-cta to-orange-600 hover:from-cta-hover hover:to-orange-700 rounded-lg transition-all shadow-lg"
+                    >
+                      Request a Quote
+                    </a>
+                  </div>
+
+                  {/* Quick Specs */}
+                  <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                    <h3 className="text-sm font-bold text-steel uppercase tracking-wider mb-4">
+                      Quick Specs
+                    </h3>
+                    <ul className="space-y-3">
+                      {product.specifications.slice(0, 5).map((spec) => (
+                        <li key={spec.label} className="flex justify-between text-sm">
+                          <span className="text-gray-500">{spec.label}</span>
+                          <span className="text-steel font-medium text-right ml-4 max-w-[180px] truncate">
+                            {spec.value}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                    <a
+                      href="#specifications"
+                      className="inline-block mt-4 text-xs text-steel-accent hover:text-steel font-semibold"
+                    >
+                      View full specs ↓
+                    </a>
+                  </div>
+
+                  {/* Trust Badges */}
+                  <div className="grid grid-cols-2 gap-3">
+                    {[
+                      { icon: <Shield className="w-4 h-4" />, label: "CE & ISO Certified" },
+                      { icon: <Globe className="w-4 h-4" />, label: "30+ Countries" },
+                      { icon: <Zap className="w-4 h-4" />, label: "5,000T/Month" },
+                      { icon: <Ruler className="w-4 h-4" />, label: "Custom Design" },
+                    ].map((badge) => (
+                      <div
+                        key={badge.label}
+                        className="flex flex-col items-center gap-1 p-3 bg-steel-muted rounded-xl text-center"
+                      >
+                        <span className="text-steel-accent">{badge.icon}</span>
+                        <span className="text-xs text-steel font-medium">{badge.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        {/* Bottom CTA */}
+        <section className="py-16 bg-section">
+          <div className="max-w-3xl mx-auto px-4 text-center">
+            <h2 className="text-2xl font-bold text-steel mb-3">Ready to Start Your Project?</h2>
+            <p className="text-gray-500 mb-8">
+              Send us your project requirements and drawings. Our engineering team will provide a
+              detailed quotation with structural calculations within 24 hours.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="/contact"
+                className="inline-flex items-center px-6 py-3.5 text-base font-semibold text-white bg-gradient-to-r from-cta to-orange-600 hover:from-cta-hover hover:to-orange-700 rounded-lg transition-all shadow-lg hover:shadow-xl"
+              >
+                Get Free Quotation
+              </a>
+              <a
+                href="/products"
+                className="inline-flex items-center px-6 py-3.5 text-base font-semibold text-steel border-2 border-steel/20 hover:border-steel-accent rounded-lg transition-all"
+              >
+                View All Products
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}

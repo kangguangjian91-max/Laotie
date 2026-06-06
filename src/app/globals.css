@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+@theme {
+  --color-steel: #1a365d;
+  --color-steel-light: #2a4a7f;
+  --color-steel-accent: #378ADD;
+  --color-steel-muted: #EBF4FF;
+  --color-cta: #e67e22;
+  --color-cta-hover: #d35400;
+  --color-green-badge: #1D9E75;
+  --color-green-badge-bg: #E1F5EE;
+  --color-section: #f8fafc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #1a202c;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Scroll-driven fade-in animations ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-count-up {
+  animation: countUp 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.7s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.7s ease-out forwards;
+}
+
+/* Staggered delay utilities */
+.animation-delay-100 { animation-delay: 0.1s; opacity: 0; }
+.animation-delay-200 { animation-delay: 0.2s; opacity: 0; }
+.animation-delay-300 { animation-delay: 0.3s; opacity: 0; }
+.animation-delay-400 { animation-delay: 0.4s; opacity: 0; }
+.animation-delay-500 { animation-delay: 0.5s; opacity: 0; }
+.animation-delay-600 { animation-delay: 0.6s; opacity: 0; }
+.animation-delay-700 { animation-delay: 0.7s; opacity: 0; }
+
+/* Section divider wave */
+.section-divider {
+  position: relative;
+}
+.section-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-steel-accent), transparent);
+}
+
+/* Process step connector animation */
+@keyframes flowPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.process-connector {
+  animation: flowPulse 2s ease-in-out infinite;
+}
+
+/* Gradient border on hover */
+.hover-gradient-border {
+  position: relative;
+}
+.hover-gradient-border::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--color-steel-accent), var(--color-cta));
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.hover-gradient-border:hover::after {
+  opacity: 1;
+}
+
+/* Cookie consent banner animations */
+@keyframes slideUpCookie {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes fadeInQuick {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-slide-up-cookie {
+  animation: slideUpCookie 0.35s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-fade-in-quick {
+  animation: fadeInQuick 0.2s ease-out forwards;
+}
+
+/* WhatsApp floating button animations */
+@keyframes fadeInUpQuick {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up-quick {
+  animation: fadeInUpQuick 0.3s ease-out forwards;
+}
+
+@keyframes whatsappPulse {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  50% { transform: scale(1.1); opacity: 0.3; }
+  100% { transform: scale(0.9); opacity: 0.6; }
+}
+
+.animate-whatsapp-pulse {
+  animation: whatsappPulse 2.5s ease-in-out infinite;
+}

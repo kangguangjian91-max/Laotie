@@ -1,0 +1,9 @@
+# https://www.oldtie-steel.com/robots.txt
+User-agent: *
+Allow: /
+
+# Disallow admin/internal paths (when they exist)
+# Disallow: /admin/
+# Disallow: /api/
+
+Sitemap: https://www.oldtie-steel.com/sitemap.xml
