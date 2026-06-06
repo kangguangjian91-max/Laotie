@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "Products", href: "/#products" },
-  { label: "Projects", href: "/#projects" },
+  { label: "Products", href: "/products" },
+  { label: "Projects", href: "/projects" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
 ];
@@ -71,7 +71,7 @@ export default function Header() {
               Alibaba Store
             </a>
             <a
-              href="/#contact"
+              href="/contact"
               className="hidden sm:inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-cta to-orange-600 hover:from-cta-hover hover:to-orange-700 rounded-lg transition-all shadow-sm hover:shadow-md"
             >
               Get Quote
@@ -117,7 +117,7 @@ export default function Header() {
               🛒 Alibaba Store
             </a>
             <a
-              href="/#contact"
+              href="/contact"
               onClick={() => setOpen(false)}
               className="block mt-2 mx-2 text-center px-4 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-cta to-orange-600 rounded-lg"
             >

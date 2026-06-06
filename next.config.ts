@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
   images: { unoptimized: true },
-  distDir: "out-v3",
+  distDir: "out-v5",
 };
 
 export default nextConfig;

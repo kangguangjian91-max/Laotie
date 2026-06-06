@@ -111,7 +111,7 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 mb-14 animate-fade-in-up animation-delay-300">
             <a
-              href="#contact"
+              href="/contact"
               className="group inline-flex items-center px-8 py-4 text-base font-bold text-white bg-gradient-to-r from-[#e67e22] to-orange-600 hover:from-[#d35400] hover:to-orange-700 rounded-lg transition-all duration-300 shadow-[0_4px_24px_rgba(230,126,34,0.35)] hover:shadow-[0_8px_36px_rgba(230,126,34,0.5)] hover:-translate-y-0.5 active:translate-y-0"
             >
               Request a Free Quote
@@ -120,7 +120,7 @@ export default function Hero() {
               </svg>
             </a>
             <a
-              href="#products"
+              href="/products"
               className="inline-flex items-center px-7 py-4 text-base font-semibold text-white/90 border border-white/20 hover:border-white/40 hover:bg-white/5 rounded-lg transition-all duration-300 backdrop-blur-sm group"
             >
               Explore Products

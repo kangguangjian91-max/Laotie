@@ -170,7 +170,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               Get a free quote from our engineering team. We respond within 2 hours.
             </p>
             <a
-              href="/#contact"
+              href="/contact"
               className="inline-flex items-center px-6 py-2.5 text-sm font-semibold bg-white text-steel rounded-lg hover:bg-gray-100 transition-colors"
             >
               Request a Quote

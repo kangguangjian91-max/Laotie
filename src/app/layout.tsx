@@ -58,7 +58,7 @@ const websiteSchema = {
 
 const siteUrl = "https://www.oldtie-steel.com";
 const siteName = "OldTie Steel Structure";
-const defaultTitle = "OldTie Steel Structure | Trusted Steel Manufacturer in China";
+const defaultTitle = "Trusted Steel Structure Manufacturer in China | OldTie";
 const defaultDescription =
   "OldTie Steel Structure — CE & ISO certified steel structure manufacturer in China. 5 production lines, 5,000T/month capacity. Portal frames, floor deck, space frames, cladding. Factory direct pricing. Get a quote today.";
 const ogImage = `${siteUrl}/images/og-image.webp`;
