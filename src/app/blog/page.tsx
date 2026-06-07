@@ -5,12 +5,12 @@ import { ArrowLeft, Clock, Tag } from "lucide-react";
 
 export const metadata = {
   title: "Blog | Steel Structure Insights & Guides",
-  description: "Expert articles on steel structure design, cost, importing from China, certifications, and factory production. Stay informed with OldTie Steel Structure.",
+  description: "Expert articles on steel structure design, cost, importing from China, certifications, and factory production. Stay informed with Laotie Steel Structure.",
   openGraph: {
     title: "Steel Structure Blog | Expert Guides & Industry Insights",
     description: "Expert articles on steel structure design, cost, importing from China, certifications, and factory production.",
     images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
-    url: "https://www.oldtie-steel.com/blog",
+    url: "https://oldtie-steel.netlify.app/blog",
     type: "website",
   },
   twitter: {

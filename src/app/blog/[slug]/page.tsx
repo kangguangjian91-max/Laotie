@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { getPostBySlug, getAllSlugs } from "@/data/blog";
+import { getPostBySlug, getAllSlugs, blogPosts } from "@/data/blog";
 import { ArrowLeft, Clock, Tag, Calendar } from "lucide-react";
 import { notFound } from "next/navigation";
 
@@ -62,22 +62,47 @@ function renderMarkdown(content: string): string {
     .replace(/<p class="text-gray-600 leading-relaxed mb-4">\s*$/, '');
 }
 
+function addInternalLinks(html: string): string {
+  // Add links to internal pages for key phrases
+  return html
+    .replace(
+      /(certified|CE certified|ISO 9001|quality management system)/gi,
+      '<a href="/certificates" class="text-steel-accent hover:underline">$1</a>'
+    )
+    .replace(
+      /(our factory|manufacturing plant|production facility|factory in Shangqiu)/gi,
+      '<a href="/about" class="text-steel-accent hover:underline">$1</a>'
+    )
+    .replace(
+      /(contact us|get a quote|free quote|get in touch)/gi,
+      '<a href="/contact" class="text-steel-accent hover:underline">$1</a>'
+    );
+}
+
+function getRelatedPosts(currentSlug: string): typeof blogPosts {
+  // Return 2 most recent posts excluding the current one
+  return blogPosts
+    .filter((p) => p.slug !== currentSlug)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 2);
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return { title: "Post Not Found" };
   return {
-    title: `${post.title} | OldTie Blog`,
+    title: `${post.title} | Laotie Blog`,
     description: post.description,
     openGraph: {
       title: post.title,
       description: post.description,
-      url: `https://www.oldtie-steel.com/blog/${post.slug}`,
-      siteName: "OldTie Steel Structure",
+      url: `https://oldtie-steel.netlify.app/blog/${post.slug}`,
+      siteName: "Laotie Steel Structure",
       images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
       type: "article",
       publishedTime: post.date,
-      authors: ["OldTie Steel Structure Co., Ltd."],
+      authors: ["Laotie Steel Structure Co., Ltd."],
     },
     twitter: {
       card: "summary_large_image",
@@ -105,17 +130,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     dateModified: post.date,
     author: {
       "@type": "Organization",
-      name: "OldTie Steel Structure Co., Ltd.",
-      url: "https://www.oldtie-steel.com",
+      name: "Laotie Steel Structure Co., Ltd.",
+      url: "https://oldtie-steel.netlify.app",
     },
     publisher: {
       "@type": "Organization",
-      name: "OldTie Steel Structure Co., Ltd.",
-      url: "https://www.oldtie-steel.com",
+      name: "Laotie Steel Structure Co., Ltd.",
+      url: "https://oldtie-steel.netlify.app",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://www.oldtie-steel.com/blog/${post.slug}`,
+      "@id": `https://oldtie-steel.netlify.app/blog/${post.slug}`,
     },
   };
 
@@ -123,13 +148,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.oldtie-steel.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.oldtie-steel.com/blog" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://oldtie-steel.netlify.app/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://oldtie-steel.netlify.app/blog" },
       { "@type": "ListItem", position: 3, name: post.title },
     ],
   };
 
-  const html = renderMarkdown(post.content);
+  const html = addInternalLinks(renderMarkdown(post.content));
+  const relatedPosts = getRelatedPosts(slug);
 
   return (
     <>
@@ -162,6 +188,32 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               className="prose max-w-none"
               dangerouslySetInnerHTML={{ __html: html }}
             />
+          </div>
+
+          <div className="mt-16 border-t border-gray-100 pt-10">
+            <h2 className="text-xl font-bold text-steel mb-6">Related Articles</h2>
+            <div className="grid sm:grid-cols-2 gap-5">
+              {relatedPosts.map((rp) => (
+                <a
+                  key={rp.slug}
+                  href={`/blog/${rp.slug}`}
+                  className="group bg-gray-50 rounded-xl border border-gray-100 hover:border-steel-accent hover:shadow-md transition-all p-5"
+                >
+                  <span className="inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-steel-muted text-steel mb-2">
+                    {rp.category}
+                  </span>
+                  <h3 className="font-semibold text-steel group-hover:text-steel-accent transition-colors text-sm leading-snug mb-1.5 line-clamp-2">
+                    {rp.title}
+                  </h3>
+                  <p className="text-xs text-gray-500 line-clamp-2 mb-2">{rp.description}</p>
+                  <div className="flex items-center gap-2 text-xs text-gray-400">
+                    <span>{rp.date}</span>
+                    <span>·</span>
+                    <span>{rp.readTime}</span>
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
 
           <div className="mt-16 p-6 bg-gradient-to-r from-steel to-steel-light rounded-xl text-white text-center">

@@ -121,14 +121,14 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "FAQ — Steel Structure Manufacturing Questions | OldTie",
+  title: "FAQ — Steel Structure Manufacturing Questions | Laotie",
   description:
     "Frequently asked questions about steel structure manufacturing, pricing, payment terms, production time, shipping, installation support, and warranty. Get answers before you order.",
   openGraph: {
-    title: "FAQ | OldTie Steel Structure",
+    title: "FAQ | Laotie Steel Structure",
     description:
       "Everything you need to know before ordering your steel structure project. Payment terms, production time, shipping, installation support.",
-    url: "https://www.oldtie-steel.com/faq",
+    url: "https://oldtie-steel.netlify.app/faq",
     type: "website",
   },
 };
@@ -209,7 +209,7 @@ export default function FAQPage() {
                 Send Us a Message
               </a>
               <a
-                href="https://wa.me/8616650735555?text=Hi%20OldTie%2C%20I%20have%20a%20question%20about%20my%20steel%20structure%20project."
+                href="https://wa.me/8616650735555?text=Hi%20Laotie%2C%20I%20have%20a%20question%20about%20my%20steel%20structure%20project."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 text-base font-semibold text-white bg-[#25D366] hover:bg-[#128C7E] rounded-lg transition-colors"

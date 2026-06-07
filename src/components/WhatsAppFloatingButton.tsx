@@ -9,19 +9,19 @@ const quickMessages = [
   {
     label: "Request a Quotation",
     message:
-      "Hi OldTie, I'd like to request a quotation for my steel structure project. Can you help?",
+      "Hi Laotie, I'd like to request a quotation for my steel structure project. Can you help?",
     color: "#075E54",
   },
   {
     label: "Product Inquiry",
     message:
-      "Hi OldTie, I'm interested in learning more about your steel structure products. Could you share details and pricing?",
+      "Hi Laotie, I'm interested in learning more about your steel structure products. Could you share details and pricing?",
     color: "#128C7E",
   },
   {
     label: "Talk to Sales",
     message:
-      "Hi OldTie, I have some questions about your steel structures. Can we chat?",
+      "Hi Laotie, I have some questions about your steel structures. Can we chat?",
     color: "#25D366",
   },
 ];
@@ -121,7 +121,7 @@ export default function WhatsAppFloatingButton() {
             {/* Title & status */}
             <div className="min-w-0 flex-1">
               <p className="text-white font-semibold text-[15px] leading-tight">
-                OldTie Steel
+                Laotie Steel
               </p>
               <p className="text-[11px] text-white/60 leading-tight mt-0.5">
                 Online &middot; Typically replies in 2 hours
@@ -227,7 +227,7 @@ export default function WhatsAppFloatingButton() {
         {showBubble && !open && (
           <div className="mb-2 mr-1 animate-fade-in-up">
             <div className="relative bg-white rounded-2xl rounded-br-md px-4 py-2.5 shadow-lg border border-gray-100 text-sm text-gray-700 whitespace-nowrap">
-              <span className="font-semibold text-[#075E54]">OldTie</span> is online
+              <span className="font-semibold text-[#075E54]">Laotie</span> is online
               <br />
               <span className="text-xs text-gray-400">Click to chat on WhatsApp</span>
               {/* Tail */}

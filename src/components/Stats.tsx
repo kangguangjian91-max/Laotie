@@ -1,4 +1,5 @@
 import { Factory, Globe, Award, TrendingUp } from "lucide-react";
+import Link from "next/link";
 
 const stats = [
   {
@@ -7,6 +8,7 @@ const stats = [
     icon: TrendingUp,
     color: "text-steel-accent",
     bg: "bg-steel-muted",
+    href: "/about",
   },
   {
     value: "15+ Years",
@@ -14,6 +16,7 @@ const stats = [
     icon: Award,
     color: "text-green-badge",
     bg: "bg-green-badge-bg",
+    href: "/about",
   },
   {
     value: "30+",
@@ -21,6 +24,7 @@ const stats = [
     icon: Globe,
     color: "text-cta",
     bg: "bg-orange-50",
+    href: "/projects",
   },
   {
     value: "CE / ISO / IAF",
@@ -28,6 +32,7 @@ const stats = [
     icon: Factory,
     color: "text-purple-600",
     bg: "bg-purple-50",
+    href: "/certificates",
   },
 ];
 
@@ -37,9 +42,10 @@ export default function Stats() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4">
           {stats.map((stat, i) => (
-            <div
+            <Link
               key={stat.label}
-              className="group py-8 px-4 text-center relative hover:bg-gray-50 transition-colors"
+              href={stat.href}
+              className="group py-8 px-4 text-center relative hover:bg-gray-50 transition-colors cursor-pointer block"
               style={{ animationDelay: `${i * 0.1}s` }}
             >
               {/* Divider between columns */}
@@ -67,7 +73,7 @@ export default function Stats() {
               <div className="text-xs sm:text-sm text-gray-500 font-medium uppercase tracking-wide">
                 {stat.label}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

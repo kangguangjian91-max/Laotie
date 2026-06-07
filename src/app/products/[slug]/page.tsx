@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import { products, getAllProductSlugs, getProductBySlug } from "@/data/products";
+import { blogPosts } from "@/data/blog";
 import { ArrowLeft, CheckCircle, Ruler, Shield, Zap, Globe } from "lucide-react";
 
 interface ProductPageProps {
@@ -20,18 +21,18 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   if (!product) return { title: "Product Not Found" };
 
   return {
-    title: `${product.title} | OldTie Steel Structure`,
+    title: `${product.title} | Laotie Steel Structure`,
     description: product.description,
       openGraph: {
-      title: `${product.title} — OldTie Steel Structure`,
+      title: `${product.title} — Laotie Steel Structure`,
       description: product.description,
       images: [{ url: product.image, width: 800, height: 800 }],
-      url: `https://www.oldtie-steel.com/products/${slug}`,
+      url: `https://oldtie-steel.netlify.app/products/${slug}`,
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${product.title} — OldTie Steel Structure`,
+      title: `${product.title} — Laotie Steel Structure`,
       description: product.description,
       images: [product.image],
     },
@@ -56,6 +57,29 @@ function getFeatureIcon(feature: string): React.ReactNode {
   return iconMap.default;
 }
 
+const productRelatedBlogs: Record<string, string[]> = {
+  "steel-structure-building": [
+    "steel-structure-production-china-manufacturing-guide",
+    "steel-structure-installation-guide-erection-process",
+    "factory-tour-5000-tons-monthly-production",
+  ],
+  "floor-deck": [
+    "steel-structure-cost-guide-2025",
+    "how-to-import-steel-structures-from-china",
+    "steel-structure-production-china-manufacturing-guide",
+  ],
+  "space-frame-truss": [
+    "portal-frame-vs-space-frame",
+    "how-to-import-steel-structures-from-china",
+    "factory-tour-5000-tons-monthly-production",
+  ],
+  "cladding-system": [
+    "steel-structure-installation-guide-erection-process",
+    "ce-iso-certified-steel-structures",
+    "factory-tour-5000-tons-monthly-production",
+  ],
+};
+
 export default async function ProductDetailPage({ params }: ProductPageProps) {
   const { slug } = await params;
   const product = getProductBySlug(slug);
@@ -69,11 +93,11 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     "@type": "Product",
     name: product.title,
     description: product.description,
-    image: `https://www.oldtie-steel.com${product.image}`,
+    image: `https://oldtie-steel.netlify.app${product.image}`,
     category: "Steel Structure",
     manufacturer: {
       "@type": "Organization",
-      name: "OldTie Steel Structure Co., Ltd.",
+      name: "Laotie Steel Structure Co., Ltd.",
     },
     offers: {
       "@type": "AggregateOffer",
@@ -89,9 +113,9 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.oldtie-steel.com/" },
-      { "@type": "ListItem", position: 2, name: "Products", item: "https://www.oldtie-steel.com/products" },
-      { "@type": "ListItem", position: 3, name: product.title, item: `https://www.oldtie-steel.com/products/${slug}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://oldtie-steel.netlify.app/" },
+      { "@type": "ListItem", position: 2, name: "Products", item: "https://oldtie-steel.netlify.app/products" },
+      { "@type": "ListItem", position: 3, name: product.title, item: `https://oldtie-steel.netlify.app/products/${slug}` },
     ],
   };
 
@@ -261,6 +285,84 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             </div>
           </div>
         </section>
+
+        {/* Related Products */}
+        <section className="py-16 bg-white border-t border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-steel mb-8 text-center">Related Products</h2>
+            <div className="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {products
+                .filter((p) => p.slug !== slug)
+                .map((relatedProduct) => (
+                  <a
+                    key={relatedProduct.slug}
+                    href={`/products/${relatedProduct.slug}`}
+                    className="group bg-gray-50 rounded-xl border border-gray-100 hover:border-steel-accent hover:shadow-md transition-all overflow-hidden"
+                  >
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img
+                        src={relatedProduct.image}
+                        alt={relatedProduct.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-semibold text-steel group-hover:text-steel-accent transition-colors text-sm">
+                        {relatedProduct.title}
+                      </h3>
+                      <p className="text-xs text-gray-500 mt-1 line-clamp-2">{relatedProduct.subtitle}</p>
+                    </div>
+                  </a>
+                ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Related Blog Posts */}
+        {(() => {
+          const relatedSlugs = productRelatedBlogs[slug] || [];
+          const relatedPosts = relatedSlugs
+            .map((s) => blogPosts.find((bp) => bp.slug === s))
+            .filter(Boolean) as typeof blogPosts;
+          if (relatedPosts.length === 0) return null;
+          return (
+            <section className="py-16 bg-section">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-2xl font-bold text-steel mb-2 text-center">Related Articles</h2>
+                <p className="text-gray-500 text-sm text-center mb-8">
+                  Learn more about {product.title.toLowerCase()} applications
+                </p>
+                <div className="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                  {relatedPosts.map((post) => (
+                    <a
+                      key={post.slug}
+                      href={`/blog/${post.slug}`}
+                      className="group bg-white rounded-xl border border-gray-100 hover:border-steel-accent hover:shadow-md transition-all p-5"
+                    >
+                      <span className="inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-steel-muted text-steel mb-3">
+                        {post.category}
+                      </span>
+                      <h3 className="font-semibold text-steel group-hover:text-steel-accent transition-colors text-sm leading-snug mb-2 line-clamp-2">
+                        {post.title}
+                      </h3>
+                      <p className="text-xs text-gray-500 line-clamp-2">{post.description}</p>
+                      <div className="flex items-center gap-2 mt-3 text-xs text-gray-400">
+                        <span>{post.date}</span>
+                        <span>·</span>
+                        <span>{post.readTime}</span>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+                <div className="text-center mt-8">
+                  <a href="/blog" className="inline-flex items-center gap-1 text-sm text-steel-accent hover:underline">
+                    View all articles →
+                  </a>
+                </div>
+              </div>
+            </section>
+          );
+        })()}
 
         {/* Bottom CTA */}
         <section className="py-16 bg-section">

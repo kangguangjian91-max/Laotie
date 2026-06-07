@@ -1,4 +1,4 @@
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
 
 const certificates = [
   "CE Certified",
@@ -82,6 +82,23 @@ export default function Factory() {
               raw material sourcing to final surface treatment. Our certifications ensure your
               project meets the strictest international standards.
             </p>
+
+            <div className="flex flex-wrap gap-3 mt-6">
+              <a
+                href="/certificates"
+                className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-steel to-steel-light rounded-lg hover:shadow-md transition-all"
+              >
+                View All Certificates
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <a
+                href="/about"
+                className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-steel bg-steel-muted rounded-lg hover:bg-gray-200 transition-all"
+              >
+                About Our Factory
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ interface Consent {
   marketing: boolean;
 }
 
-const STORAGE_KEY = 'oldtie-cookie-consent';
+const STORAGE_KEY = 'laotie-cookie-consent';
 
 function getStoredConsent(): Consent | null {
   if (typeof window === 'undefined') return null;
@@ -32,14 +32,14 @@ function loadGtag() {
 
   const s = document.createElement('script');
   s.async = true;
-  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-396908953';
+  s.src = `https://www.googletagmanager.com/gtag/js?id=G-74QWNLKHEH`;
   document.head.appendChild(s);
 
   const w = window as any;
   w.dataLayer = w.dataLayer || [];
   w.gtag = function () { w.dataLayer.push(arguments); };
   w.gtag('js', new Date());
-  w.gtag('config', 'G-396908953');
+  w.gtag('config', 'G-74QWNLKHEH');
 }
 
 // Clarity — add your project ID and uncomment when ready:

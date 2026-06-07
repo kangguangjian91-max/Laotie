@@ -7,9 +7,9 @@ import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "OldTie Steel Structure Co., Ltd.",
-  url: "https://www.oldtie-steel.com",
-  logo: "https://www.oldtie-steel.com/favicon.png",
+  name: "Laotie Steel Structure Co., Ltd.",
+  url: "https://oldtie-steel.netlify.app",
+  logo: "https://oldtie-steel.netlify.app/favicon.png",
   description:
     "CE & ISO certified steel structure manufacturer in China. 5 production lines, 5,000T/month capacity. Portal frames, floor deck, space frames, cladding.",
   address: {
@@ -50,17 +50,17 @@ const organizationSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "OldTie Steel Structure",
-  url: "https://www.oldtie-steel.com",
+  name: "Laotie Steel Structure",
+  url: "https://oldtie-steel.netlify.app",
   description:
     "CE & ISO certified steel structure manufacturer. Factory direct pricing, 5,000T/month capacity. Export to 30+ countries.",
 };
 
-const siteUrl = "https://www.oldtie-steel.com";
-const siteName = "OldTie Steel Structure";
-const defaultTitle = "Trusted Steel Structure Manufacturer in China | OldTie";
+const siteUrl = "https://oldtie-steel.netlify.app";
+const siteName = "Laotie Steel Structure";
+const defaultTitle = "Trusted Steel Structure Manufacturer in China | Laotie";
 const defaultDescription =
-  "OldTie Steel Structure — CE & ISO certified steel structure manufacturer in China. 5 production lines, 5,000T/month capacity. Portal frames, floor deck, space frames, cladding. Factory direct pricing. Get a quote today.";
+  "Laotie Steel Structure — CE & ISO certified steel structure manufacturer in China. 5 production lines, 5,000T/month capacity. Portal frames, floor deck, space frames, cladding. Factory direct pricing. Get a quote today.";
 const ogImage = `${siteUrl}/images/og-image.webp`;
 
 export const metadata: Metadata = {
@@ -80,9 +80,9 @@ export const metadata: Metadata = {
     "CE certified steel structure",
     "ISO steel factory",
   ],
-  authors: [{ name: "OldTie Steel Structure Co., Ltd." }],
-  creator: "OldTie Steel Structure",
-  publisher: "OldTie Steel Structure",
+  authors: [{ name: "Laotie Steel Structure Co., Ltd." }],
+  creator: "Laotie Steel Structure",
+  publisher: "Laotie Steel Structure",
   robots: { index: true, follow: true },
   icons: {
     icon: "/favicon.png",
@@ -100,7 +100,7 @@ export const metadata: Metadata = {
         url: ogImage,
         width: 1200,
         height: 630,
-        alt: "OldTie Steel Structure — CE & ISO Certified Steel Manufacturer",
+        alt: "Laotie Steel Structure — CE & ISO Certified Steel Manufacturer",
       },
     ],
     locale: "en_US",
@@ -129,6 +129,10 @@ export default function RootLayout({
       <head>
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
+        <meta
+          name="google-site-verification"
+          content="riVASts-AV1JmVEJr-_uYPILNl3p0dNTRF2U1fxdPFM"
+        />
         {/*
           GA4 and Clarity scripts are loaded dynamically
           by CookieConsent after user grants analytics consent.

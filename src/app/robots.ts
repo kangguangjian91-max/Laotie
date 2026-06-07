@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 // Force static generation for static export
 export const dynamic = "force-static";
 
-const siteUrl = "https://www.oldtie-steel.com";
+const siteUrl = "https://oldtie-steel.netlify.app";
 
 export default function robots(): MetadataRoute.Robots {
   return {

@@ -113,21 +113,30 @@ const projects: Project[] = [
 ];
 
 export const metadata = {
-  title: "Projects | OldTie Steel Structure",
+  title: "Projects | Laotie Steel Structure",
   description: "Featured steel structure projects delivered to 30+ countries worldwide. Portal frame buildings, space frames, floor decks, and cladding systems — Australia, Nigeria, Philippines, UAE, Indonesia.",
   openGraph: {
-    title: "Steel Structure Projects | OldTie Steel Structure",
+    title: "Steel Structure Projects | Laotie Steel Structure",
     description: "Industrial warehouses, factory complexes, shopping malls, logistics centers — delivered to 30+ countries worldwide.",
-    url: "https://www.oldtie-steel.com/projects",
-    siteName: "OldTie Steel Structure",
+    url: "https://oldtie-steel.netlify.app/projects",
+    siteName: "Laotie Steel Structure",
     images: [{ url: "/images/projects/project-01.jpg", width: 800, height: 600 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Steel Structure Projects | OldTie Steel Structure",
+    title: "Steel Structure Projects | Laotie Steel Structure",
     description: "Industrial warehouses, factory complexes, shopping malls — delivered to 30+ countries worldwide.",
     images: ["/images/projects/project-01.jpg"],
   },
+};
+
+const projectProductLinks: Record<string, string> = {
+  "Industrial Warehouse Complex (120×60m)": "/products/steel-structure-building",
+  "Factory Complex — Phase II Expansion": "/products/steel-structure-building",
+  "Shopping Mall Dome Roof": "/products/space-frame-truss",
+  "Logistics Distribution Center": "/products/steel-structure-building",
+  "Agricultural Processing Plant": "/products/steel-structure-building",
+  "Aircraft Maintenance Hangar": "/products/space-frame-truss",
 };
 
 export default function ProjectsPage() {
@@ -239,12 +248,22 @@ export default function ProjectsPage() {
                   </div>
 
                   {/* CTA */}
-                  <a
-                    href="/contact"
-                    className="inline-flex items-center mt-5 text-sm font-semibold text-steel-accent hover:text-steel transition-colors"
-                  >
-                    Request a similar project quote →
-                  </a>
+                  <div className="flex flex-wrap items-center gap-4 mt-5">
+                    <a
+                      href="/contact"
+                      className="inline-flex items-center text-sm font-semibold text-steel-accent hover:text-steel transition-colors"
+                    >
+                      Request a similar project quote →
+                    </a>
+                    {projectProductLinks[project.name] && (
+                      <a
+                        href={projectProductLinks[project.name]}
+                        className="inline-flex items-center text-sm text-gray-400 hover:text-steel-accent transition-colors"
+                      >
+                        View Related Product →
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}

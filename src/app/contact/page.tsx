@@ -4,21 +4,21 @@ import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | OldTie Steel Structure",
+  title: "Contact Us | Laotie Steel Structure",
   description:
-    "Contact OldTie Steel Structure for steel building quotations, technical support, and factory visits. WhatsApp: +86 166-5073-5555. Email: kangguangjian91@gmail.com. Respond within 2 hours.",
+    "Contact Laotie Steel Structure for steel building quotations, technical support, and factory visits. WhatsApp: +86 166-5073-5555. Email: kangguangjian91@gmail.com. Respond within 2 hours.",
   openGraph: {
-    title: "Contact OldTie Steel Structure | Get a Free Quote",
+    title: "Contact Laotie Steel Structure | Get a Free Quote",
     description:
       "Reach out for steel structure quotations, technical support, or factory visits. We respond within 2 hours.",
-    url: "https://www.oldtie-steel.com/contact",
-    siteName: "OldTie Steel Structure",
+    url: "https://oldtie-steel.netlify.app/contact",
+    siteName: "Laotie Steel Structure",
     images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact OldTie Steel Structure | Get a Free Quote",
+    title: "Contact Laotie Steel Structure | Get a Free Quote",
     description: "Steel structure quotations, technical support, factory visits. Respond within 2 hours.",
     images: ["/images/og-image.webp"],
   },
@@ -34,7 +34,15 @@ export default function ContactPage() {
             <ArrowLeft className="w-4 h-4" /> Back to Home
           </a>
           <h1 className="text-3xl font-bold text-steel mb-4">Contact Us</h1>
-          <p className="text-gray-500 mb-12 max-w-2xl">Reach out to us for quotations, technical support, or factory visits. We respond within 2 hours.</p>
+          <p className="text-gray-500 mb-6 max-w-2xl">Reach out to us for quotations, technical support, or factory visits. We respond within 2 hours.</p>
+
+          <div className="flex flex-wrap gap-2 mb-12">
+            <a href="/products" className="inline-flex items-center gap-1 text-sm text-steel-accent hover:underline">← Browse Products</a>
+            <span className="text-gray-300">|</span>
+            <a href="/faq" className="inline-flex items-center gap-1 text-sm text-steel-accent hover:underline">Check FAQ</a>
+            <span className="text-gray-300">|</span>
+            <a href="/projects" className="inline-flex items-center gap-1 text-sm text-steel-accent hover:underline">View Projects</a>
+          </div>
 
           <div className="grid lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2">
@@ -44,9 +52,9 @@ export default function ContactPage() {
                 className="space-y-4"
               >
                 {/* FormSubmit configuration */}
-                <input type="hidden" name="_subject" value="New Inquiry — OldTie Steel Website" />
+                <input type="hidden" name="_subject" value="New Inquiry — Laotie Steel Website" />
                 <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="https://www.oldtie-steel.com/thank-you" />
+                <input type="hidden" name="_next" value="https://oldtie-steel.netlify.app/thank-you" />
                 <input type="hidden" name="_template" value="table" />
                 {/* Honeypot spam protection */}
                 <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />

@@ -8,6 +8,8 @@ const navItems = [
   { label: "Projects", href: "/projects" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
+  { label: "Certificates", href: "/certificates" },
+  { label: "FAQ", href: "/faq" },
 ];
 
 export default function Header() {
@@ -33,10 +35,10 @@ export default function Header() {
           {/* Logo */}
           <a href="/" className="flex items-center gap-2 group">
             <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-steel to-steel-light flex items-center justify-center group-hover:scale-105 transition-transform">
-              <span className="text-white font-bold text-sm">OT</span>
+              <span className="text-white font-bold text-sm">LT</span>
             </div>
             <span className="text-steel font-bold text-xl tracking-tight">
-              OLDTIE
+              LAOTIE
             </span>
             <span className="hidden sm:inline text-gray-400 text-sm font-medium">
               Steel Structure

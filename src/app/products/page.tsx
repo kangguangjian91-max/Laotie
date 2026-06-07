@@ -5,17 +5,17 @@ import { products } from "@/data/products";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata = {
-  title: "Products | OldTie Steel Structure",
+  title: "Products | Laotie Steel Structure",
   description: "Steel structure products: portal frame buildings, floor deck, space frame, enclosure & cladding systems. CE & ISO certified.",
   openGraph: {
-    title: "Steel Structure Products | OldTie Steel Structure",
+    title: "Steel Structure Products | Laotie Steel Structure",
     description: "Portal frame buildings, floor deck systems, space frames, and enclosure cladding. CE & ISO certified, factory direct pricing.",
     images: [{ url: "/images/product-steel-building.webp", width: 800, height: 800 }],
-    url: "https://www.oldtie-steel.com/products",
+    url: "https://oldtie-steel.netlify.app/products",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Steel Structure Products | OldTie Steel Structure",
+    title: "Steel Structure Products | Laotie Steel Structure",
     description: "Portal frame buildings, floor deck systems, space frames, and enclosure cladding.",
     images: ["/images/product-steel-building.webp"],
   },
@@ -26,11 +26,11 @@ const productSchemas = products.map((p, i) => ({
   "@type": "Product",
   name: p.title,
   description: p.description,
-  image: `https://www.oldtie-steel.com${p.image}`,
+  image: `https://oldtie-steel.netlify.app${p.image}`,
   category: "Steel Structure",
   manufacturer: {
     "@type": "Organization",
-    name: "OldTie Steel Structure Co., Ltd.",
+    name: "Laotie Steel Structure Co., Ltd.",
   },
   offers: {
     "@type": "AggregateOffer",
@@ -46,8 +46,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.oldtie-steel.com/" },
-    { "@type": "ListItem", position: 2, name: "Products", item: "https://www.oldtie-steel.com/products" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://oldtie-steel.netlify.app/" },
+    { "@type": "ListItem", position: 2, name: "Products", item: "https://oldtie-steel.netlify.app/products" },
   ],
 };
 

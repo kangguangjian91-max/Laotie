@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Award, Download, Eye, FileCheck, Globe, Shield } from "lucide-react";
+import { Award, Eye, FileCheck, Globe, Shield } from "lucide-react";
 import type { Metadata } from "next";
 
 const certificates = [
@@ -94,14 +94,14 @@ const testingStandards = [
 ];
 
 export const metadata: Metadata = {
-  title: "Certificates & Certifications | OldTie Steel Structure",
+  title: "Certificates & Certifications | Laotie Steel Structure",
   description:
-    "View OldTie Steel Structure's certifications: ISO 9001, CE (EN 1090), IAF, Supplier Assessment, and AWS welding certifications. Quality assured for global projects.",
+    "View Laotie Steel Structure's certifications: ISO 9001, CE (EN 1090), IAF, Supplier Assessment, and AWS welding certifications. Quality assured for global projects.",
   openGraph: {
-    title: "Certificates & Certifications | OldTie",
+    title: "Certificates & Certifications | Laotie",
     description:
       "ISO 9001, CE, IAF, Supplier Assessment, AWS Certified Welders. Quality assured for your steel structure project.",
-    url: "https://www.oldtie-steel.com/certificates",
+    url: "https://oldtie-steel.netlify.app/certificates",
     type: "website",
   },
 };
@@ -155,16 +155,6 @@ export default function CertificatesPage() {
                     <br />
                     <span className="text-xs text-gray-400">(Upload your certificate image to replace this)</span>
                   </div>
-                </div>
-                <div className="mt-3 flex items-center gap-3">
-                  <button
-                    disabled
-                    className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-400 bg-gray-100 rounded-lg cursor-not-allowed"
-                  >
-                    <Download className="w-4 h-4" />
-                    Download PDF (Coming Soon)
-                  </button>
-                  <span className="text-xs text-gray-400">PDF upload required</span>
                 </div>
               </div>
             ))}

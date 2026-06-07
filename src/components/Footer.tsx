@@ -10,9 +10,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-steel-accent to-blue-500 flex items-center justify-center">
-                <span className="text-white font-bold text-xs">OT</span>
+                <span className="text-white font-bold text-xs">LT</span>
               </div>
-              <h3 className="text-white font-bold text-lg">OLDTIE</h3>
+              <h3 className="text-white font-bold text-lg">LAOTIE</h3>
             </div>
             <p className="text-sm leading-relaxed">
               Professional steel structure manufacturer based in Shangqiu, Henan, China.
@@ -115,7 +115,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-10 pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
-          <p>&copy; {new Date().getFullYear()} OldTie Steel Structure Co., Ltd. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Laotie Steel Structure Co., Ltd. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <a href="/faq" className="hover:text-white transition-colors">FAQ</a>
             <a href="/certificates" className="hover:text-white transition-colors">Certificates</a>

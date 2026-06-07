@@ -3,9 +3,9 @@ import Footer from "@/components/Footer";
 import { CheckCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Thank You | OldTie Steel Structure",
+  title: "Thank You | Laotie Steel Structure",
   description:
-    "Thank you for contacting OldTie Steel Structure. We have received your inquiry and will respond within 2 hours.",
+    "Thank you for contacting Laotie Steel Structure. We have received your inquiry and will respond within 2 hours.",
   robots: { index: false, follow: false },
 };
 
@@ -29,7 +29,7 @@ export default function ThankYouPage() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://wa.me/8616650735555?text=Hi%20OldTie%2C%20I%20just%20submitted%20an%20inquiry%20via%20the%20website."
+              href="https://wa.me/8616650735555?text=Hi%20Laotie%2C%20I%20just%20submitted%20an%20inquiry%20via%20the%20website."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 text-base font-semibold text-white bg-[#25D366] hover:bg-[#128C7E] rounded-lg transition-colors"
@@ -44,9 +44,24 @@ export default function ThankYouPage() {
             </a>
           </div>
 
+          <div className="mt-8 grid sm:grid-cols-3 gap-3 text-sm">
+            <a href="/products" className="p-4 rounded-xl border border-gray-200 hover:border-steel-accent hover:bg-steel-muted/30 transition-all text-left">
+              <div className="font-semibold text-steel mb-1">Browse Products</div>
+              <div className="text-gray-500 text-xs">See our full range of steel structures</div>
+            </a>
+            <a href="/projects" className="p-4 rounded-xl border border-gray-200 hover:border-steel-accent hover:bg-steel-muted/30 transition-all text-left">
+              <div className="font-semibold text-steel mb-1">View Projects</div>
+              <div className="text-gray-500 text-xs">See completed projects worldwide</div>
+            </a>
+            <a href="/blog" className="p-4 rounded-xl border border-gray-200 hover:border-steel-accent hover:bg-steel-muted/30 transition-all text-left">
+              <div className="font-semibold text-steel mb-1">Read Our Blog</div>
+              <div className="text-gray-500 text-xs">Steel structure guides & insights</div>
+            </a>
+          </div>
+
           <div className="mt-10 pt-8 border-t border-gray-100 text-sm text-gray-400">
             <p>Reference: Inquiry #{new Date().getFullYear()}{String(Date.now()).slice(-6)}</p>
-            <p className="mt-1">OldTie Steel Structure Co., Ltd.</p>
+            <p className="mt-1">Laotie Steel Structure Co., Ltd.</p>
           </div>
         </div>
       </main>

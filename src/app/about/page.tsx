@@ -49,18 +49,18 @@ const qualityChecks = [
 ];
 
 export const metadata = {
-  title: "About Us | OldTie Steel Structure",
-  description: "Learn about OldTie Steel Structure — trusted steel manufacturer in Shangqiu, China since 2009. 5 production lines, 5,000T/month capacity, 200+ skilled workers, 30+ countries served.",
+  title: "About Us | Laotie Steel Structure",
+  description: "Learn about Laotie Steel Structure — trusted steel manufacturer in Shangqiu, China since 2009. 5 production lines, 5,000T/month capacity, 200+ skilled workers, 30+ countries served.",
   openGraph: {
-    title: "About OldTie Steel Structure | CE & ISO Certified Factory",
+    title: "About Laotie Steel Structure | CE & ISO Certified Factory",
     description: "Founded 2009, 5 production lines, 5,000T/month capacity. 200+ skilled workers, 30+ countries served. Shenzhen HQ + Shangqiu factory.",
-    url: "https://www.oldtie-steel.com/about",
-    siteName: "OldTie Steel Structure",
+    url: "https://oldtie-steel.netlify.app/about",
+    siteName: "Laotie Steel Structure",
     images: [{ url: "/images/factory-workshop.webp", width: 800, height: 533 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About OldTie Steel Structure | CE & ISO Certified",
+    title: "About Laotie Steel Structure | CE & ISO Certified",
     description: "Trusted steel manufacturer since 2009. 5 production lines, 5,000T/month. Serving 30+ countries.",
     images: ["/images/factory-workshop.webp"],
   },
@@ -81,7 +81,7 @@ export default function AboutPage() {
             <a href="/" className="inline-flex items-center gap-1 text-sm text-steel-accent hover:text-white transition-colors mb-4">
               <ArrowLeft className="w-4 h-4" /> Back to Home
             </a>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">About OldTie Steel</h1>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">About Laotie Steel</h1>
             <p className="mt-3 text-lg text-gray-300 max-w-2xl">
               Since 2009 — CE & ISO certified steel structure manufacturer. 5 production lines, 5,000 tons/month, exporting to 30+ countries worldwide.
             </p>
@@ -110,7 +110,7 @@ export default function AboutPage() {
               <p className="text-steel-accent font-semibold text-sm tracking-wider uppercase mb-2">Who We Are</p>
               <h2 className="text-3xl font-bold text-steel mb-6">From Local Workshop to Global Supplier</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Founded in 2009 in Shangqiu, Henan Province — in the heart of China&apos;s steel manufacturing hub — OldTie Steel Structure Co., Ltd. has grown from a local fabrication shop into a modern, fully-equipped steel structure manufacturer serving clients across 5 continents.
+                Founded in 2009 in Shangqiu, Henan Province — in the heart of China&apos;s steel manufacturing hub — Laotie Steel Structure Co., Ltd. has grown from a local fabrication shop into a modern, fully-equipped steel structure manufacturer serving clients across 5 continents.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Our 20,000 square-meter factory houses 5 dedicated production lines with a combined monthly output of 5,000 metric tons. From raw steel plate to fully fabricated, surface-treated, and trial-assembled steel structures — every step happens under one roof, ensuring complete quality traceability.
@@ -126,7 +126,7 @@ export default function AboutPage() {
               <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-80 lg:h-96 overflow-hidden shadow-lg">
                 <img
                   src="/images/factory-workshop.webp"
-                  alt="OldTie Steel Structure Factory Workshop — Shangqiu, China"
+                  alt="Laotie Steel Structure Factory Workshop — Shangqiu, China"
                   className="w-full h-full object-cover"
                 />
               </div>

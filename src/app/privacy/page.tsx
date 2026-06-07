@@ -4,21 +4,21 @@ import { Shield, Lock, Eye, Globe, Cookie, Mail, MessageCircle, FileText } from 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | OldTie Steel Structure",
+  title: "Privacy Policy | Laotie Steel Structure",
   description:
-    "Privacy Policy for OldTie Steel Structure website. Learn how we collect, use, and protect your personal data (GDPR & CCPA compliant). Contact: kangguangjian91@gmail.com.",
+    "Privacy Policy for Laotie Steel Structure website. Learn how we collect, use, and protect your personal data (GDPR & CCPA compliant). Contact: kangguangjian91@gmail.com.",
   openGraph: {
-    title: "Privacy Policy | OldTie Steel Structure",
+    title: "Privacy Policy | Laotie Steel Structure",
     description:
-      "How OldTie Steel Structure collects, uses, and protects your personal data. GDPR & CCPA compliant.",
-    url: "https://www.oldtie-steel.com/privacy",
-    siteName: "OldTie Steel Structure",
+      "How Laotie Steel Structure collects, uses, and protects your personal data. GDPR & CCPA compliant.",
+    url: "https://oldtie-steel.netlify.app/privacy",
+    siteName: "Laotie Steel Structure",
     images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Privacy Policy | OldTie Steel Structure",
+    title: "Privacy Policy | Laotie Steel Structure",
     description: "How we collect, use, and protect your personal data. GDPR & CCPA compliant.",
     images: ["/images/og-image.webp"],
   },
@@ -238,7 +238,7 @@ export default function PrivacyPage() {
                   <Globe className="w-5 h-5 text-steel-accent" />
                   6. International Data Transfer
                 </h2>
-                <p>OldTie Steel Structure is headquartered in China. Our data processing infrastructure spans multiple countries:</p>
+                <p>Laotie Steel Structure is headquartered in China. Our data processing infrastructure spans multiple countries:</p>
                 <ul className="list-disc pl-6 space-y-1">
                   <li>Contact form data is processed by FormSubmit.co (US-based) and forwarded to our Google Workspace account.</li>
                   <li>WhatsApp messages are processed by Meta Platforms, Inc. (US-based).</li>
@@ -345,7 +345,7 @@ export default function PrivacyPage() {
                   </a>
                 </div>
                 <div className="mt-4 text-sm text-gray-500">
-                  <strong>OldTie Steel Structure Co., Ltd.</strong><br />
+                  <strong>Laotie Steel Structure Co., Ltd.</strong><br />
                   No. 37, Shed 5, Zijin Logistics Park Yanji Industrial Zone,<br />
                   Suiyang District, Shangqiu City, Henan Province, China
                 </div>

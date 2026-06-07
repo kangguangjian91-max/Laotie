@@ -10,6 +10,326 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "steel-structure-production-china-manufacturing-guide",
+    title: "Steel Structure Production in China: Complete Manufacturing Guide 2026",
+    description: "Learn how Chinese steel structure manufacturers produce high-quality steel buildings at competitive prices. Discover the production process, quality standards, and why China leads global steel structure manufacturing.",
+    date: "2026-06-07",
+    category: "Manufacturing",
+    readTime: "7 min read",
+    content: `China has become the world's leading hub for steel structure production, accounting for over 55% of global steel production capacity. For international buyers seeking quality steel buildings at competitive prices, understanding how Chinese manufacturers operate is essential.
+
+In this guide, we take you inside a modern Chinese steel structure factory — from raw steel to finished building components ready for global shipping.
+
+## Why China Leads Steel Structure Production
+
+Several factors make China the top choice for steel structure manufacturing:
+
+- **Integrated supply chain**: From steel mills to surface treatment, everything is within 100km
+- **Advanced automation**: CNC cutting, robotic welding, and automated coating lines
+- **Skilled workforce**: Decades of expertise in steel fabrication
+- **Competitive pricing**: 30-50% lower than US or European equivalents
+- **Massive capacity**: Top factories produce 5,000+ tons per month
+
+Laotie Steel Structure, based in Shangqiu, Henan Province, operates a 15,000 m² factory with an annual production capacity of 60,000 tons.
+
+## The Steel Structure Production Process: Step by Step
+
+### Step 1: Material Procurement & Inspection
+
+Production begins with high-grade steel plates and sections sourced from certified mills (Baosteel, Ansteel, Shagang). Every batch comes with a **mill test report (MTR)** verifying:
+
+- Chemical composition (C, Si, Mn, P, S content)
+- Yield strength (Q235: ≥235 MPa, Q355: ≥355 MPa)
+- Tensile strength
+- Impact resistance
+
+> **Quality check**: Ultrasonic testing (UT) verifies internal defects before any cutting begins.
+
+### Step 2: CNC Cutting & Profile
+
+Steel plates are cut to precise dimensions using **CNC plasma/laser cutting machines**. Tolerances are kept within ±1mm. For H-beams and I-beams, web and flange plates are cut separately.
+
+**Typical equipment**:
+- CNC plasma cutting machine (cutting accuracy ±0.5mm)
+- Laser cutting machine (for complex profiles)
+- Band saw (for section steel cutting)
+
+### Step 3: Assembly & Welding
+
+Cut plates are assembled into H-sections or box sections using **automatic submerged arc welding (SAW)**. This process ensures:
+
+- Deep penetration welds
+- Minimal spatter and distortion
+- Consistent weld quality
+
+**Welding standards**: AWS D1.1 / GB 50661 / EN 1090-2
+
+Each welder is certified, and **10% of all welds** undergo non-destructive testing (NDT):
+- Ultrasonic Testing (UT)
+- Magnetic Particle Testing (MT)
+- X-ray testing (for critical connections)
+
+### Step 4: Straightening & Dimensional Correction
+
+After welding, H-beams may have slight deformation. A **hydraulic straightening machine** corrects any twist or camber to within 1/1000 of the beam length.
+
+### Step 5: Surface Treatment (Blasting & Painting)
+
+Steel must be protected against corrosion. The process:
+
+1. **Shot blasting**: Abrasive blasting to SA 2.5 standard (near-white metal)
+2. **Primer coating**: Epoxy zinc-rich primer (60-80 μm thickness)
+3. **Intermediate coat**: Epoxy micaceous iron oxide (80-100 μm)
+4. **Top coat**: Polyurethane or fluorocarbon (40-60 μm)
+
+> For coastal or high-humidity projects, hot-dip galvanizing (HDG) is available with 80-120 μm zinc coating.
+
+### Step 6: Pre-assembly & Drilling
+
+Before shipping, connection holes are drilled using **CNC drilling machines**. For complex structures, a **pre-assembly test** is conducted in the factory to verify all connections fit perfectly. This reduces on-site installation time by up to 30%.
+
+### Step 7: Packing & Shipping
+
+Components are labeled with unique numbers matching the **erection drawing**. Packing methods:
+
+- Small components: Steel pallets + plastic wrapping
+- Large beams: Bundled with steel strips
+- Export packaging: 20GP/40HQ containers (or flat-rack for oversized members)
+
+## Quality Control: 6-Stage Inspection System
+
+At Laotie, every order goes through 6 inspection checkpoints:
+
+| Stage | Inspection Content | Standard |
+|-------|-------------------|----------|
+| Incoming material | Steel grade verification | MTR review |
+| Cutting | Dimensional accuracy | ±1mm tolerance |
+| Welding | Weld appearance & NDT | AWS D1.1 / EN 1090 |
+| Surface treatment | Coating thickness | 150-300 μm total |
+| Pre-assembly | Fit-up verification | 100% connection test |
+| Final inspection | Dimensional & visual | Customer checklist |
+
+## Production Lead Time
+
+| Order Size | Production Time | Shipping Ready |
+|------------|-----------------|---------------|
+| < 500 m² | 15-20 days | 25-30 days |
+| 500-2000 m² | 20-30 days | 30-40 days |
+| 2000-5000 m² | 30-45 days | 40-55 days |
+| > 5000 m² | 45-60 days | 55-70 days |
+
+## Why Choose Laotie for Steel Structure Production
+
+- ✅ **15,000 m² factory** in Shangqiu, Henan
+- ✅ **5,000+ tons/month** production capacity
+- ✅ **CE & ISO 9001 certified**
+- ✅ **EN 1090-2 EXC2** execution class
+- ✅ **20+ countries** exported to
+- ✅ **24/7 WhatsApp support**: +86 166-5073-5555
+
+## Frequently Asked Questions
+
+**Q: Can I visit the factory before ordering?**
+A: Absolutely! We welcome client visits. Shangqiu is 1.5 hours by high-speed rail from Zhengzhou, and we can arrange airport pickup.
+
+**Q: What steel grades do you use?**
+A: Q235B and Q355B as standard. Higher grades (Q420, ASTM A992) available on request.
+
+**Q: Do you provide the erection drawings?**
+A: Yes. Our engineering team provides complete erection drawings, bolt lists, and installation manuals with every order.
+
+## Get a Free Production Quote
+
+Ready to start your steel structure project? Contact Laotie for a **free quote within 24 hours**.
+
+📱 **WhatsApp**: +86 166-5073-5555  
+🌐 **Website**: https://oldtie-steel.netlify.app  
+📧 **Email**: Contact us via the website contact form
+
+---
+
+*Laotie Steel Structure — Trusted by 200+ clients across 20+ countries. Factory-direct pricing, international quality standards.*`,
+  },
+  {
+    slug: "steel-structure-installation-guide-erection-process",
+    title: "Steel Structure Installation Guide: Step-by-Step Erection Process",
+    description: "Complete guide to steel structure installation. Learn the erection process, safety requirements, equipment needed, and timeline for steel building installation in 2026.",
+    date: "2026-06-07",
+    category: "Installation",
+    readTime: "8 min read",
+    content: `Proper installation is critical to the safety, durability, and performance of any steel structure building. Whether you're erecting a warehouse, factory, or commercial building, this guide walks you through the complete installation process.
+
+At Laotie Steel Structure, we have installed 200+ buildings across 20+ countries. Here's everything you need to know.
+
+## Pre-Installation Preparation
+
+### 1. Foundation Inspection
+
+Before any steel arrives on site, the concrete foundation must be inspected:
+
+- **Concrete strength**: Minimum 70% of design strength (typically C30)
+- **Anchor bolt accuracy**: Position tolerance ±2mm, elevation tolerance ±3mm
+- **Foundation dimensions**: Verify all dimensions against the erection drawing
+- **Embedded parts**: Check alignment of column base plates
+
+> ⚠️ **Critical**: Never start erection until the foundation inspection report is signed off.
+
+### 2. Site Preparation
+
+- Level the site (maximum slope 1:50)
+- Prepare access roads for trucks and cranes
+- Set up temporary power and water supply
+- Designate material storage area (raised 20cm above ground)
+- Install temporary fencing and safety signage
+
+### 3. Equipment & Tools Required
+
+| Equipment | Specification | Quantity |
+|-----------|---------------|----------|
+| Crawler crane / Truck crane | 25-100 ton | 1-2 units |
+| Mobile scaffolding | 6-12 meter height | As needed |
+| High-strength bolts (10.9S) | M20-M30 | Per drawing |
+| Torque wrench | 1000-3000 N·m | 2-4 units |
+| Safety harness & lifelines | GB/EN certified | 1 per worker |
+| Leveling instruments | Precision ±1mm/10m | 1-2 units |
+
+## Step-by-Step Installation Process
+
+### Phase 1: Column Erection (Days 1-3)
+
+**Step 1: Mark foundation centerlines**
+Use a theodolite or total station to mark exact column positions on the foundation.
+
+**Step 2: Lift & position first column**
+- Attach slings at 60-70% of column height
+- Lower onto anchor bolts slowly
+- Insert all anchor bolts but **do not fully tighten**
+- Use temporary guy ropes for stability
+
+**Step 3: Erect adjacent columns**
+- Install 2-3 columns before tightening any anchor bolts
+- Connect with crane beam (if any) for temporary stability
+- Check verticality with plumb bob or theodolite (tolerance: H/1000, max 10mm)
+
+**Step 4: Install column-to-column bracing**
+- Install cross bracing between columns
+- Tighten anchor bolts to 70% design torque
+- Re-check verticality
+
+> **Pro tip**: Always erect columns in sequence from one end to the other — never skip ahead.
+
+### Phase 2: Beam & Roof Installation (Days 4-10)
+
+**Step 5: Install main crane beams / roof beams**
+- Lift beams in sequence (typically from end bay)
+- Use temporary supports if span > 24m
+- Connect with high-strength bolts (finger-tight first, then torque to spec)
+- Install roof purlins immediately after each beam section
+
+**Step 6: Install roof bracing system**
+- Diagonal bracing in roof plane
+- Tension rods / cable bracing
+- Check roof plane flatness (tolerance: ±5mm)
+
+**Step 7: Install secondary truss / purlins**
+- C/Z purlins at 1.2-1.5m spacing
+- Bracing between purlins
+- Verify roof slope matches drawing (typically 5-10%)
+
+### Phase 3: Wall & Cladding (Days 11-18)
+
+**Step 8: Install wall columns / girts**
+- Vertical girts at 1.5-2.0m spacing
+- Check straightness with string line
+
+**Step 9: Install wall cladding**
+- Start from bottom, work upward
+- Overlap direction: downward for walls, weather-side up for roof
+- Self-drilling screws at every purlin/girt intersection
+- Seal all joints with butyl tape
+
+**Step 10: Install roof cladding**
+- Single-skin: corrugated or trapezoidal sheet
+- Sandwich panel: install from eaves to ridge
+- Ridge capping and flashings
+- Verify waterproofing at all penetrations (vents, skylights)
+
+### Phase 4: Finishing & Inspection (Days 19-21)
+
+**Step 11: Tighten all bolted connections**
+- Final torque check on all high-strength bolts
+- Torque value: per design (typically 1550-2700 N·m for M24 10.9S)
+- Mark all tightened bolts with paint pen
+
+**Step 12: Install doors, windows, ventilators**
+- Roll-up doors / sliding doors
+- Eave vents, ridge vents
+- Gutters and downpipes
+
+**Step 13: Final inspection & handover**
+- Dimensional check (overall length/width/height ±10mm)
+- Bolt tightness check (10% random sampling)
+- Paint touch-up on damaged areas
+- Hand over with as-built drawings and warranty certificate
+
+## Installation Timeline (Reference)
+
+| Building Size | Preparation | Erection | Cladding | Finishing | Total |
+|--------------|-------------|----------|----------|-----------|-------|
+| 500 m² warehouse | 2 days | 5 days | 5 days | 3 days | ~15 days |
+| 2000 m² factory | 3 days | 10 days | 10 days | 5 days | ~28 days |
+| 5000 m² logistics center | 5 days | 20 days | 20 days | 7 days | ~52 days |
+
+> Timeline assumes: good weather, 10-15 skilled workers, cranes available on schedule.
+
+## Safety Requirements (Non-Negotiable)
+
+- ✅ **100% of workers** must have safety training before site entry
+- ✅ **Safety harness** mandatory above 2m height
+- ✅ **Crane operator** must hold valid license
+- ✅ **Wind speed** > 6级 (13.8 m/s): stop crane operations
+- ✅ **Rain/snow**: stop welding and high-altitude work
+- ✅ Daily safety briefing before work starts
+
+## Laotie Installation Support Services
+
+We don't just manufacture — we support your installation success:
+
+| Service | Description |
+|---------|-------------|
+| **Erection drawings** | Complete bolt lists, connection details, torque specs |
+| **Installation manual** | Step-by-step PDF in English/Spanish/French |
+| **Engineer on-site** | Dispatch Chinese engineer to supervise (optional) |
+| **Video support** | Daily WhatsApp video call for remote guidance |
+| **Spare parts kit** | 2% extra bolts, screws, sealant included free |
+
+## Common Installation Mistakes to Avoid
+
+| Mistake | Consequence | Prevention |
+|---------|-------------|-------------|
+| Anchor bolts not surveyed before erection | Columns won't fit | 100% re-check foundation before shipping |
+| Tightening bolts too early | Structure can't self-align | Tighten only after full bay is erected |
+| Ignoring torque sequence | Uneven load distribution | Follow cross/star pattern torque sequence |
+| Cladding overlap direction wrong | Water leakage | Train team with our installation video |
+| No temporary bracing | Collapse during construction | Install bracing before crane leaves |
+
+## Get Your Installation Support Plan
+
+Every Laotie order includes:
+- ✅ Complete erection drawings (AutoCAD + PDF)
+- ✅ English installation manual (80+ pages)
+- ✅ WhatsApp video support (daily during installation)
+- ✅ Optional: on-site engineer dispatch
+
+📱 **WhatsApp**: +86 166-5073-5555  
+🌐 **Website**: https://oldtie-steel.netlify.app  
+📧 **Email**: Contact us via website contact form
+
+---
+
+*Laotie Steel Structure — Your trusted partner from factory to finished building.*`,
+  },
+  {
     slug: "why-choose-chinese-steel-structure-manufacturer",
     title: "Why Choose a Chinese Steel Structure Manufacturer: Quality, Cost, and Capacity",
     description: "Discover why global buyers are turning to Chinese steel structure factories for their construction projects — from competitive pricing to CE/ISO certified quality.",
@@ -22,7 +342,7 @@ export const blogPosts: BlogPost[] = [
 
 China's mature steel industry supply chain means raw materials are sourced locally at competitive prices. Combined with efficient production processes, Chinese manufacturers can offer 20-40% cost savings compared to Western or regional suppliers — without compromising on quality.
 
-At OldTie Steel Structure, our 5 production lines produce 5,000 tons monthly. This scale allows us to pass savings directly to our clients.
+At Laotie Steel Structure, our 5 production lines produce 5,000 tons monthly. This scale allows us to pass savings directly to our clients.
 
 ## 2. International Certifications You Can Trust
 
@@ -37,7 +357,7 @@ Gone are the days when "Made in China" meant questionable quality. Today's top C
 
 Need 10,000 square meters of steel structure delivered in 60 days? Chinese factories can handle it. With multiple production lines running simultaneously, lead times are significantly shorter than many competitors.
 
-OldTie's production flow: Cutting → Assembling → Welding → Straightening → Shot Blasting & Painting — all tracked by tonnage for precise progress monitoring.
+Laotie's production flow: Cutting → Assembling → Welding → Straightening → Shot Blasting & Painting — all tracked by tonnage for precise progress monitoring.
 
 ## 4. One-Stop Service
 
@@ -64,7 +384,7 @@ Chinese manufacturers ship to 30+ countries regularly. They understand export do
 
 Chinese steel structure manufacturers offer a compelling combination of quality, cost, and capacity. With proper due diligence, you can find a reliable partner that delivers world-class steel buildings at competitive prices.
 
-Ready to start your project? Contact OldTie Steel Structure for a free quote today.`,
+Ready to start your project? Contact Laotie Steel Structure for a free quote today.`,
   },
   {
     slug: "portal-frame-vs-space-frame",
@@ -163,9 +483,9 @@ A space frame is a three-dimensional truss system where members are connected at
 
 Absolutely! Many large projects use portal frames for the main structure and space frames for entrance canopies, atriums, or special architectural features. This hybrid approach balances cost and design flexibility.
 
-## OldTie's Experience
+## Laotie's Experience
 
-OldTie Steel Structure has delivered both portal frame and space frame projects across 30+ countries. Our engineering team can help you evaluate which system best fits your project requirements.
+Laotie Steel Structure has delivered both portal frame and space frame projects across 30+ countries. Our engineering team can help you evaluate which system best fits your project requirements.
 
 Contact us with your building dimensions and requirements — we'll provide technical recommendations and a free quote.`,
   },
@@ -256,7 +576,7 @@ Simple rectangular warehouses are the cheapest. Costs increase with:
 4. Indicate surface treatment preference
 5. Share your target port for shipping
 
-Contact OldTie Steel Structure with these specifications, and we'll provide a detailed quotation within 24 hours.`,
+Contact Laotie Steel Structure with these specifications, and we'll provide a detailed quotation within 24 hours.`,
   },
   {
     slug: "ce-iso-certified-steel-structures",
@@ -282,7 +602,7 @@ The CE marking indicates that a product meets EU health, safety, and environment
 - **Ensures traceability** of materials and processes
 - **Third-party verified** — not self-declared
 
-### OldTie's CE Certification
+### Laotie's CE Certification
 Our CE certification covers the complete range of steel structures:
 - Portal frame buildings
 - Floor deck / composite decking
@@ -329,7 +649,7 @@ Third-party supplier assessment verifies:
 - **Reduces supply chain risk**
 - **Often required** by major buyers and government tenders
 
-## OldTie's Certification Portfolio
+## Laotie's Certification Portfolio
 
 | Certification | Scope | Issuing Body |
 |--------------|-------|-------------|
@@ -350,7 +670,7 @@ Third-party supplier assessment verifies:
 
 Certifications are your insurance policy when importing steel structures. They're proof that the manufacturer has been independently verified — not just making claims.
 
-OldTie Steel Structure welcomes buyer inspections and certification audits. Contact us for copies of our current certifications.`,
+Laotie Steel Structure welcomes buyer inspections and certification audits. Contact us for copies of our current certifications.`,
   },
   {
     slug: "import-steel-structures-from-china-guide",
@@ -477,7 +797,7 @@ Before contacting suppliers, prepare a clear specification:
 4. **Skipping pre-shipment inspection** — Much cheaper than fixing issues after delivery
 5. **Not planning for import duties** — Budget 5-25% extra
 
-## Why Choose OldTie?
+## Why Choose Laotie?
 
 - **5 production lines**, 5,000T/month capacity
 - **CE + ISO 9001 + IAF** certified
@@ -490,11 +810,11 @@ Ready to import? Contact us with your project requirements for a free consultati
   {
     slug: "factory-tour-5000-tons-monthly-production",
     title: "Factory Tour: How We Produce 5,000 Tons of Steel Structures Monthly",
-    description: "Take a virtual tour of OldTie's steel structure factory — 5 production lines, a 5-step manufacturing process, and quality control at every stage.",
+    description: "Take a virtual tour of Laotie's steel structure factory — 5 production lines, a 5-step manufacturing process, and quality control at every stage.",
     date: "2025-09-20",
     category: "Company News",
     readTime: "5 min read",
-    content: `Welcome to OldTie Steel Structure's manufacturing facility in Shangqiu, Henan Province — one of China's key steel production hubs. With 5 production lines and 5,000 tons of monthly capacity, here's how we turn raw steel into finished structures.
+    content: `Welcome to Laotie Steel Structure's manufacturing facility in Shangqiu, Henan Province — one of China's key steel production hubs. With 5 production lines and 5,000 tons of monthly capacity, here's how we turn raw steel into finished structures.
 
 ## Factory Overview
 
@@ -608,7 +928,7 @@ We track every order by **tonnage** through each production stage:
 
 Can't visit Shangqiu in person? We offer live video factory tours via WhatsApp — walk through our production lines with an English-speaking engineer and see your project being manufactured in real time.
 
-Contact OldTie Steel Structure today to schedule your virtual factory tour.`,
+Contact Laotie Steel Structure today to schedule your virtual factory tour.`,
   },
 ];
 

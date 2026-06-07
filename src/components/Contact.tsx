@@ -25,7 +25,7 @@ export default function Contact() {
           method="POST"
           className="max-w-2xl mx-auto grid sm:grid-cols-3 gap-4"
         >
-          <input type="hidden" name="_subject" value="Quick Inquiry — OldTie Steel Website" />
+          <input type="hidden" name="_subject" value="Quick Inquiry — Laotie Steel Website" />
           <input type="hidden" name="_captcha" value="false" />
           <input
             type="text"
