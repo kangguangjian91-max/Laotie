@@ -11,7 +11,7 @@ export const metadata = {
     title: "Steel Structure Products | Laotie Steel Structure",
     description: "Portal frame buildings, floor deck systems, space frames, and enclosure cladding. CE & ISO certified, factory direct pricing.",
     images: [{ url: "/images/product-steel-building.webp", width: 800, height: 800 }],
-    url: "https://oldtie-steel.netlify.app/products",
+    url: "https://laotie-steel-structure.netlify.app/products",
   },
   twitter: {
     card: "summary_large_image",
@@ -26,7 +26,7 @@ const productSchemas = products.map((p, i) => ({
   "@type": "Product",
   name: p.title,
   description: p.description,
-  image: `https://oldtie-steel.netlify.app${p.image}`,
+  image: `https://laotie-steel-structure.netlify.app${p.image}`,
   category: "Steel Structure",
   manufacturer: {
     "@type": "Organization",
@@ -46,8 +46,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://oldtie-steel.netlify.app/" },
-    { "@type": "ListItem", position: 2, name: "Products", item: "https://oldtie-steel.netlify.app/products" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://laotie-steel-structure.netlify.app/" },
+    { "@type": "ListItem", position: 2, name: "Products", item: "https://laotie-steel-structure.netlify.app/products" },
   ],
 };
 

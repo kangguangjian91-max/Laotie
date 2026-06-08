@@ -118,7 +118,7 @@ export const metadata = {
   openGraph: {
     title: "Steel Structure Projects | Laotie Steel Structure",
     description: "Industrial warehouses, factory complexes, shopping malls, logistics centers — delivered to 30+ countries worldwide.",
-    url: "https://oldtie-steel.netlify.app/projects",
+    url: "https://laotie-steel-structure.netlify.app/projects",
     siteName: "Laotie Steel Structure",
     images: [{ url: "/images/projects/project-01.jpg", width: 800, height: 600 }],
   },

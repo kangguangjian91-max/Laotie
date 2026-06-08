@@ -97,7 +97,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: post.title,
       description: post.description,
-      url: `https://oldtie-steel.netlify.app/blog/${post.slug}`,
+      url: `https://laotie-steel-structure.netlify.app/blog/${post.slug}`,
       siteName: "Laotie Steel Structure",
       images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
       type: "article",
@@ -131,16 +131,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     author: {
       "@type": "Organization",
       name: "Laotie Steel Structure Co., Ltd.",
-      url: "https://oldtie-steel.netlify.app",
+      url: "https://laotie-steel-structure.netlify.app",
     },
     publisher: {
       "@type": "Organization",
       name: "Laotie Steel Structure Co., Ltd.",
-      url: "https://oldtie-steel.netlify.app",
+      url: "https://laotie-steel-structure.netlify.app",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://oldtie-steel.netlify.app/blog/${post.slug}`,
+      "@id": `https://laotie-steel-structure.netlify.app/blog/${post.slug}`,
     },
   };
 
@@ -148,8 +148,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://oldtie-steel.netlify.app/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://oldtie-steel.netlify.app/blog" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://laotie-steel-structure.netlify.app/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://laotie-steel-structure.netlify.app/blog" },
       { "@type": "ListItem", position: 3, name: post.title },
     ],
   };

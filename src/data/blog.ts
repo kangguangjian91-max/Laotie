@@ -143,7 +143,7 @@ A: Yes. Our engineering team provides complete erection drawings, bolt lists, an
 Ready to start your steel structure project? Contact Laotie for a **free quote within 24 hours**.
 
 📱 **WhatsApp**: +86 166-5073-5555  
-🌐 **Website**: https://oldtie-steel.netlify.app  
+🌐 **Website**: https://laotie-steel-structure.netlify.app  
 📧 **Email**: Contact us via the website contact form
 
 ---
@@ -322,7 +322,7 @@ Every Laotie order includes:
 - ✅ Optional: on-site engineer dispatch
 
 📱 **WhatsApp**: +86 166-5073-5555  
-🌐 **Website**: https://oldtie-steel.netlify.app  
+🌐 **Website**: https://laotie-steel-structure.netlify.app  
 📧 **Email**: Contact us via website contact form
 
 ---

@@ -124,7 +124,7 @@ export default function Footer() {
             <a href="/sitemap.xml" className="hover:text-white transition-colors">Sitemap</a>
             {/* Social: update href after creating LinkedIn Company Page */}
             <a
-              href="https://www.linkedin.com/company/oldtie-steel"
+              href="https://www.linkedin.com/company/laotie-steel-structure"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Privacy Policy | Laotie Steel Structure",
     description:
       "How Laotie Steel Structure collects, uses, and protects your personal data. GDPR & CCPA compliant.",
-    url: "https://oldtie-steel.netlify.app/privacy",
+    url: "https://laotie-steel-structure.netlify.app/privacy",
     siteName: "Laotie Steel Structure",
     images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
     type: "website",
@@ -219,7 +219,7 @@ export default function PrivacyPage() {
                   </div>
                   <div className="border border-gray-200 rounded-lg p-4">
                     <h4 className="font-semibold text-gray-800 text-sm">Google Workspace (Email)</h4>
-                    <p className="text-sm text-gray-600 mt-1">Hosts our business email (@oldtietie.com). Subject to Google’s privacy policy and data processing terms.</p>
+                    <p className="text-sm text-gray-600 mt-1">Hosts our business email (@laotiesteel.com). Subject to Google’s privacy policy and data processing terms.</p>
                   </div>
                   <div className="border border-gray-200 rounded-lg p-4">
                     <h4 className="font-semibold text-gray-800 text-sm">WhatsApp Business API</h4>

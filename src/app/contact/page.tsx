@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Contact Laotie Steel Structure | Get a Free Quote",
     description:
       "Reach out for steel structure quotations, technical support, or factory visits. We respond within 2 hours.",
-    url: "https://oldtie-steel.netlify.app/contact",
+    url: "https://laotie-steel-structure.netlify.app/contact",
     siteName: "Laotie Steel Structure",
     images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
     type: "website",
@@ -54,7 +54,7 @@ export default function ContactPage() {
                 {/* FormSubmit configuration */}
                 <input type="hidden" name="_subject" value="New Inquiry — Laotie Steel Website" />
                 <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="https://oldtie-steel.netlify.app/thank-you" />
+                <input type="hidden" name="_next" value="https://laotie-steel-structure.netlify.app/thank-you" />
                 <input type="hidden" name="_template" value="table" />
                 {/* Honeypot spam protection */}
                 <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />

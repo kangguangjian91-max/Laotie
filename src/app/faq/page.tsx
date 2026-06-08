@@ -128,7 +128,7 @@ export const metadata: Metadata = {
     title: "FAQ | Laotie Steel Structure",
     description:
       "Everything you need to know before ordering your steel structure project. Payment terms, production time, shipping, installation support.",
-    url: "https://oldtie-steel.netlify.app/faq",
+    url: "https://laotie-steel-structure.netlify.app/faq",
     type: "website",
   },
 };
