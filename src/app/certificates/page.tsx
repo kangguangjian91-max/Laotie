@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Award, Eye, FileCheck, Globe, Shield } from "lucide-react";
+import { Award, FileCheck, Globe, Shield } from "lucide-react";
 import type { Metadata } from "next";
 
 const certificates = [
@@ -147,14 +147,14 @@ export default function CertificatesPage() {
                     </div>
                   </div>
                 </div>
-                {/* Certificate image placeholder */}
-                <div className="mt-4 bg-gray-100 rounded-lg h-40 flex items-center justify-center text-gray-400 text-sm border-2 border-dashed border-gray-300">
-                  <div className="text-center">
-                    <Eye className="w-8 h-8 mx-auto mb-2 text-gray-300" />
-                    Certificate Preview
-                    <br />
-                    <span className="text-xs text-gray-400">(Upload your certificate image to replace this)</span>
-                  </div>
+                {/* Certificate image */}
+                <div className="mt-4 bg-gray-50 rounded-lg overflow-hidden border border-gray-200">
+                  <img
+                    src={cert.image}
+                    alt={`${cert.title} certificate`}
+                    className="w-full h-auto object-contain"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             ))}
