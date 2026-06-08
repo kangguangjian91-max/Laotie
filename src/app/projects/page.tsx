@@ -108,7 +108,7 @@ const projects: Project[] = [
       "Integrated fire suppression system supports in roof structure",
       "4 × 25T overhead crane runways for engine maintenance",
     ],
-    image: "/images/projects/project-06.jpg",
+    image: "/images/projects/project-06.webp",
   },
 ];
 
