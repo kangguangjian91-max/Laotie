@@ -37,7 +37,7 @@ export default function Projects() {
                 {/* Project photo */}
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src={`/images/projects/project-${String(i + 1).padStart(2, '0')}.jpg`}
+                    src={`/images/projects/project-${String(i + 1).padStart(2, '0')}.webp`}
                     alt={project.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"

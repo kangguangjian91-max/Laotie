@@ -28,7 +28,7 @@ const projects: Project[] = [
       "120 km/h wind rating with full engineering certification",
       "Integrated mezzanine office space — 600 sqm",
     ],
-    image: "/images/projects/project-01.jpg",
+    image: "/images/projects/project-01.webp",
   },
   {
     name: "Factory Complex — Phase II Expansion",
@@ -44,7 +44,7 @@ const projects: Project[] = [
       "Integrated natural ventilation ridge vents — 120 units",
       "Completed 6 weeks ahead of schedule",
     ],
-    image: "/images/projects/project-02.jpg",
+    image: "/images/projects/project-02.webp",
   },
   {
     name: "Shopping Mall Dome Roof",
@@ -92,7 +92,7 @@ const projects: Project[] = [
       "Integrated 15T crane system with full engineering certification",
       "Dust extraction and positive-pressure ventilation ready",
     ],
-    image: "/images/projects/project-05.jpg",
+    image: "/images/projects/project-05.webp",
   },
   {
     name: "Aircraft Maintenance Hangar",
@@ -120,13 +120,13 @@ export const metadata = {
     description: "Industrial warehouses, factory complexes, shopping malls, logistics centers — delivered to 30+ countries worldwide.",
     url: "https://laotie-steel-structure.netlify.app/projects",
     siteName: "Laotie Steel Structure",
-    images: [{ url: "/images/projects/project-01.jpg", width: 800, height: 600 }],
+    images: [{ url: "/images/projects/project-01.webp", width: 800, height: 600 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Steel Structure Projects | Laotie Steel Structure",
     description: "Industrial warehouses, factory complexes, shopping malls — delivered to 30+ countries worldwide.",
-    images: ["/images/projects/project-01.jpg"],
+    images: ["/images/projects/project-01.webp"],
   },
 };
 
