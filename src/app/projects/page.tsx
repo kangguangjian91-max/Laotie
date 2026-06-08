@@ -60,7 +60,7 @@ const projects: Project[] = [
       "Seismic design per NSCP 2015 (Philippine Building Code)",
       "PVDF coated for tropical UV resistance — 15-year warranty",
     ],
-    image: "/images/projects/project-03.jpg",
+    image: "/images/projects/project-03.webp",
   },
   {
     name: "Logistics Distribution Center",
@@ -76,7 +76,7 @@ const projects: Project[] = [
       "Designed for 50°C ambient temperature per UAE Building Code",
       "HVAC-ready roof structure with equipment support platforms",
     ],
-    image: "/images/projects/project-04.jpg",
+    image: "/images/projects/project-04.webp",
   },
   {
     name: "Agricultural Processing Plant",
@@ -147,7 +147,7 @@ export default function ProjectsPage() {
         {/* Hero */}
         <section className="relative bg-steel overflow-hidden">
           <div className="absolute inset-0 opacity-15">
-            <img src="/images/projects/project-04.jpg" alt="" className="w-full h-full object-cover" />
+            <img src="/images/projects/project-04.webp" alt="" className="w-full h-full object-cover" />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-steel via-steel/95 to-steel/80" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
