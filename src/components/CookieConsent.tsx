@@ -78,15 +78,25 @@ export default function CookieConsent() {
 
   useEffect(() => {
     setMounted(true);
+    
+    // Use requestIdleCallback to avoid blocking main thread (reduces TBT)
+    const scheduleShow = (callback: () => void) => {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(callback, { timeout: 500 });
+      } else {
+        setTimeout(callback, 200);
+      }
+    };
+
     const stored = getStoredConsent();
     if (stored) {
       // User already made a choice — apply it to GA4
       updateGtagConsent(stored.analytics, stored.marketing);
       return; // don't show banner
     }
-    // First visit — show banner after a slight delay for smooth entry
-    const t = setTimeout(() => setShow(true), 200);
-    return () => clearTimeout(t);
+    
+    // First visit — show banner after idle callback (reduces TBT)
+    scheduleShow(() => setShow(true));
   }, []);
 
   function applyAndClose(c: Consent) {
