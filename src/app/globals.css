@@ -103,3 +103,13 @@ body {
   height: 3px;
   background: linear-gradient(90deg, transparent, var(--color-steel-accent), transparent);
 }
+
+/* Animation utility classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
