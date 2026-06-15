@@ -1,0 +1,19 @@
+name = "laotie-steel-structure"
+type = "webpack"
+account_id = ""
+workers_dev = true
+compatibility_date = "2026-06-15"
+
+[site]
+bucket = "./out-v10"
+entry-point = "workers-site"
+
+# For Cloudflare Pages (recommended)
+# This file is for Cloudflare Workers (alternative deployment)
+# For Pages, use the web interface instead
+
+# Build configuration for Cloudflare Pages:
+# - Build command: npm run build
+# - Output directory: out-v10
+# - Node.js version: 18 or 20
+# - Environment variables: None required
