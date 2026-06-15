@@ -8,8 +8,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Laotie Steel Structure Co., Ltd.",
-  url: "https://laotie-steel.com",
-  logo: "https://laotie-steel.com/favicon.png",
+  url: "https://www.laotie-steel.com",
+  logo: "https://www.laotie-steel.com/favicon.png",
   description:
     "CE & ISO certified steel structure manufacturer in China. 5 production lines, 5,000T/month capacity. Portal frames, floor deck, space frames, cladding.",
   address: {
@@ -51,12 +51,12 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Laotie Steel Structure",
-  url: "https://laotie-steel.com",
+  url: "https://www.laotie-steel.com",
   description:
     "CE & ISO certified steel structure manufacturer. Factory direct pricing, 5,000T/month capacity. Export to 30+ countries.",
 };
 
-const siteUrl = "https://laotie-steel.com";
+const siteUrl = "https://www.laotie-steel.com";
 const siteName = "Laotie Steel Structure";
 const defaultTitle = "Trusted Steel Structure Manufacturer in China | Laotie";
 const defaultDescription =

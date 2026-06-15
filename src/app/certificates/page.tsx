@@ -101,7 +101,7 @@ export const metadata: Metadata = {
     title: "Certificates & Certifications | Laotie",
     description:
       "ISO 9001, CE, IAF, Supplier Assessment, AWS Certified Welders. Quality assured for your steel structure project.",
-    url: "https://laotie-steel.com/certificates",
+    url: "https://www.laotie-steel.com/certificates",
     type: "website",
   },
 };

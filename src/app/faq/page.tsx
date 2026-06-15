@@ -129,7 +129,7 @@ export const metadata: Metadata = {
     title: "FAQ | Laotie Steel Structure",
     description:
       "Everything you need to know before ordering your steel structure project. Payment terms, production time, shipping, installation support.",
-    url: "https://laotie-steel.com/faq",
+    url: "https://www.laotie-steel.com/faq",
     type: "website",
   },
 };

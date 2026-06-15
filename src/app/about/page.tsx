@@ -54,7 +54,7 @@ export const metadata = {
   openGraph: {
     title: "About Laotie Steel Structure | CE & ISO Certified Factory",
     description: "Founded 2009, 5 production lines, 5,000T/month capacity. 200+ skilled workers, 30+ countries served. Shenzhen HQ + Shangqiu factory.",
-    url: "https://laotie-steel.com/about",
+    url: "https://www.laotie-steel.com/about",
     siteName: "Laotie Steel Structure",
     images: [{ url: "/images/factory-workshop.webp", width: 800, height: 533 }],
   },

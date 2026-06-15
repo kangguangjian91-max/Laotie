@@ -11,7 +11,7 @@ export const metadata = {
     title: "Steel Structure Products | Laotie Steel Structure",
     description: "Portal frame buildings, floor deck systems, space frames, and enclosure cladding. CE & ISO certified, factory direct pricing.",
     images: [{ url: "/images/product-steel-building.webp", width: 800, height: 800 }],
-    url: "https://laotie-steel.com/products",
+    url: "https://www.laotie-steel.com/products",
   },
   twitter: {
     card: "summary_large_image",
@@ -26,7 +26,7 @@ const productSchemas = products.map((p, i) => ({
   "@type": "Product",
   name: p.title,
   description: p.description,
-  image: `https://laotie-steel.com${p.image}`,
+  image: `https://www.laotie-steel.com${p.image}`,
   category: "Steel Structure",
   manufacturer: {
     "@type": "Organization",
@@ -46,8 +46,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://laotie-steel.com/" },
-    { "@type": "ListItem", position: 2, name: "Products", item: "https://laotie-steel.com/products" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.laotie-steel.com/" },
+    { "@type": "ListItem", position: 2, name: "Products", item: "https://www.laotie-steel.com/products" },
   ],
 };
 

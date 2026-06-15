@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Privacy Policy | Laotie Steel Structure",
     description:
       "How Laotie Steel Structure collects, uses, and protects your personal data. GDPR & CCPA compliant.",
-    url: "https://laotie-steel.com/privacy",
+    url: "https://www.laotie-steel.com/privacy",
     siteName: "Laotie Steel Structure",
     images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
     type: "website",
