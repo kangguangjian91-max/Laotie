@@ -56,7 +56,8 @@ export default function Products() {
                   src={product.image}
                   alt={product.title}
                   fill
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

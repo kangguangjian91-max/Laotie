@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 
 // Client data with real avatars
@@ -56,12 +55,6 @@ const clientLogos = [
 ];
 
 export default function ClientLogos() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  if (!isVisible) {
-    setTimeout(() => setIsVisible(true), 100);
-  }
-
   return (
     <section className="py-16 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

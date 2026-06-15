@@ -30,12 +30,13 @@ export default function Factory() {
               State-of-the-Art Manufacturing Plant
             </h2>
 
-            <div className="relative rounded-2xl overflow-hidden group mb-6">
+            <div className="relative rounded-2xl overflow-hidden group mb-6 h-64 md:h-72 lg:h-80">
               <Image
                 src="/images/factory-building.webp"
                 alt="Laotie Steel Structure modern manufacturing facility"
                 fill
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               <div className="absolute bottom-3 left-3">

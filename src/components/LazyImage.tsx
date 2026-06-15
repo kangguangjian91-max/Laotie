@@ -58,9 +58,12 @@ export default function LazyImage({
   // Set image src only when in view
   useEffect(() => {
     if (isInView && src) {
-      setImgSrc(typeof src === "string" ? src : src.src);
+      const resolvedSrc = typeof src === "string" 
+        ? src 
+        : (src as { src: string }).src || fallbackSrc;
+      setImgSrc(resolvedSrc);
     }
-  }, [isInView, src]);
+  }, [isInView, src, fallbackSrc]);
 
   const handleLoad = useCallback(() => {
     setIsLoaded(true);

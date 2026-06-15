@@ -136,10 +136,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google Consent Mode v2 — GA4 always loads, defaults to denied */}
+        {/* Google Consent Mode v2 — GA4 loads after interactive to reduce TBT */}
         <Script
           id="ga4-consent-mode"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -156,7 +156,10 @@ export default function RootLayout({
               s.async = true;
               s.src = 'https://www.googletagmanager.com/gtag/js?id=G-74QWNLKHEH';
               s.onload = function() {
-                gtag('config', 'G-74QWNLKHEH');
+                gtag('config', 'G-74QWNLKHEH', {
+                  transport_type: 'beacon',
+                  anonymize_ip: true
+                });
               };
               document.head.appendChild(s);
             `,
@@ -187,8 +190,8 @@ export default function RootLayout({
         {/* Apple mobile web app optimization */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        {/* Preload critical images */}
-        <link rel="preload" as="image" href="/images/hero-bg.webp" />
+        {/* Preload critical images with highest priority */}
+        <link rel="preload" as="image" href="/images/hero-bg.webp" fetchPriority="high" crossOrigin="anonymous" />
       </head>
       <body className="antialiased">
         <ServiceWorkerRegistration />

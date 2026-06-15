@@ -42,7 +42,8 @@ export default function Projects() {
                     src={`/images/projects/project-${String(i + 1).padStart(2, '0')}.webp`}
                     alt={project.name}
                     fill
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />
                   {/* Location badge */}
