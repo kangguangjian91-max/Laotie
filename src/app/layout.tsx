@@ -1,11 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
+import dynamic from "next/dynamic";
 import "./globals.css";
-import CookieConsent from "@/components/CookieConsent";
 import JsonLd from "@/components/JsonLd";
-import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
-import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
-import FloatingCTA from "@/components/FloatingCTA";
+
+// Lazy load non-critical client components (reduces initial JS bundle)
+const CookieConsent = dynamic(() => import("@/components/CookieConsent"));
+const WhatsAppFloatingButton = dynamic(() => import("@/components/WhatsAppFloatingButton"));
+const FloatingCTA = dynamic(() => import("@/components/FloatingCTA"));
+const ServiceWorkerRegistration = dynamic(() => import("@/components/ServiceWorkerRegistration"));
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -177,26 +180,14 @@ export default function RootLayout({
         />
         {/* Performance: preconnect to external domains */}
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        {/* Font optimization - use system fonts directly, no custom font files */}
+        {/* Critical CSS for instant FCP - minimal above-the-fold styles */}
         <style dangerouslySetInnerHTML={{
           __html: `
-            body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
-          `
-        }} />
-        {/* Apple mobile web app optimization */}
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        {/* Critical CSS for faster FCP */}
-        <style dangerouslySetInnerHTML={{
-          __html: `
-            *, *::before, *::after { box-sizing: border-box; }
-            body { margin: 0; font-family: system-ui, -apple-system, sans-serif; color: #1a202c; -webkit-text-size-adjust: 100%; }
-            .bg-steel { background-color: #1a365d; }
-            .text-white { color: #fff; }
-            img { max-width: 100%; height: auto; }
+            *,*::before,*::after{box-sizing:border-box}
+            body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#1a202c;-webkit-text-size-adjust:100%}
+            .bg-steel{background-color:#1a365d}.text-white{color:#fff}
+            img{max-width:100%;height:auto}
           `
         }} />
       </head>

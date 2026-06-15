@@ -27,7 +27,7 @@ const certificates = [
       "Our steel structure products comply with EU standards (EN 1090-1) and carry the CE mark, allowing free circulation within the European Economic Area. Essential for clients in Europe.",
     scope: "Structural steel components for building construction",
     validUntil: "2026-08",
-    image: "/images/certificates/ce-cert.png",
+    image: "/images/certificates/ce-cert.webp",
     bgColor: "from-yellow-50 to-white",
     borderColor: "border-yellow-200",
     iconBg: "from-yellow-500 to-amber-500",
