@@ -51,15 +51,15 @@ const qualityChecks = [
 ];
 
 const factoryImages = [
-  { src: "/images/factory/01-h-beam-warehouse.jpg", alt: "H-Beam storage warehouse at Laotie Steel factory", caption: "H-Beam Warehouse" },
+  { src: "/images/factory/01-h-beam-warehouse.webp", alt: "H-Beam storage warehouse at Laotie Steel factory", caption: "H-Beam Warehouse" },
   { src: "/images/factory/02-tekla-modeling.webp", alt: "Tekla Structures 3D BIM modeling for steel structure design", caption: "3D BIM Design" },
   { src: "/images/factory/03-steel-fabrication.webp", alt: "Steel structure fabrication workshop with H-beam assembly", caption: "Steel Fabrication" },
-  { src: "/images/factory/04-welding-work.jpg", alt: "Certified welder performing submerged arc welding on steel beam", caption: "SAW Welding" },
-  { src: "/images/factory/05-shot-blasting.jpg", alt: "Shot blasting machine for surface treatment of steel members", caption: "Shot Blasting" },
+    { src: "/images/factory/04-welding-work.webp", alt: "Certified welder performing submerged arc welding on steel beam", caption: "SAW Welding" },
+    { src: "/images/factory/05-shot-blasting.webp", alt: "Shot blasting machine for surface treatment of steel members", caption: "Shot Blasting" },
   { src: "/images/factory/06-steel-storage.webp", alt: "Steel plate and raw material storage area in factory", caption: "Raw Materials" },
-  { src: "/images/factory/07-fabricated-parts.jpg", alt: "Fabricated steel components ready for shipment", caption: "Finished Parts" },
+  { src: "/images/factory/07-fabricated-parts.webp", alt: "Fabricated steel components ready for shipment", caption: "Finished Parts" },
   { src: "/images/factory/08-factory-wide.webp", alt: "Wide angle view of Laotie Steel manufacturing plant interior", caption: "Factory Overview" },
-  { src: "/images/factory/09-roller-conveyor.jpg", alt: "Roller conveyor system for automated steel processing line", caption: "Conveyor System" },
+  { src: "/images/factory/09-roller-conveyor.webp", alt: "Roller conveyor system for automated steel processing line", caption: "Conveyor System" },
   { src: "/images/factory/10-quality-inspection.webp", alt: "Quality control inspector measuring steel beam dimensions", caption: "Quality Inspection" },
 ];
 

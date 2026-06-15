@@ -87,6 +87,9 @@ export const metadata: Metadata = {
   creator: "Laotie Steel Structure",
   publisher: "Laotie Steel Structure",
   robots: { index: true, follow: true },
+  alternates: {
+    canonical: siteUrl,
+  },
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
@@ -177,26 +180,42 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        {/* Preload critical CSS - inline critical styles */}
+        {/* Preload critical images with highest priority */}
+        <link rel="preload" as="image" href="/images/hero-bg.webp" fetchPriority="high" crossOrigin="anonymous" />
+        {/* Font optimization - system fonts with fallback */}
         <style dangerouslySetInnerHTML={{
           __html: `
-            /* Critical CSS - inlined for faster FCP */
-            *, *::before, *::after { box-sizing: border-box; }
-            body { margin: 0; font-family: system-ui, -apple-system, sans-serif; color: #1a202c; }
-            .bg-steel { background-color: #1a365d; }
-            .text-white { color: #fff; }
-            .min-h-[680px] { min-height: 680px; }
+            /* Font loading optimization */
+            @font-face {
+              font-family: 'System';
+              src: local('Segoe UI'), local('Roboto'), local('Helvetica Neue'), local('Arial');
+              font-display: swap;
+            }
           `
         }} />
         {/* Apple mobile web app optimization */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        {/* Preload critical images with highest priority */}
-        <link rel="preload" as="image" href="/images/hero-bg.webp" fetchPriority="high" crossOrigin="anonymous" />
+        {/* Critical CSS for faster FCP */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            *, *::before, *::after { box-sizing: border-box; }
+            body { margin: 0; font-family: system-ui, -apple-system, sans-serif; color: #1a202c; -webkit-text-size-adjust: 100%; }
+            .bg-steel { background-color: #1a365d; }
+            .text-white { color: #fff; }
+            img { max-width: 100%; height: auto; }
+          `
+        }} />
       </head>
       <body className="antialiased">
+        {/* Skip to main content - accessibility */}
+        <a href="#main-content" className="skip-to-content">
+          Skip to main content
+        </a>
         <ServiceWorkerRegistration />
+        <main id="main-content">
         {children}
+        </main>
         <CookieConsent />
         <WhatsAppFloatingButton />
         <FloatingCTA />

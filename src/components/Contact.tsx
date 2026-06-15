@@ -82,16 +82,20 @@ export default function Contact() {
           method="POST"
           onSubmit={handleSubmit}
           noValidate
+          aria-label="Quick inquiry form"
           className="max-w-2xl mx-auto grid sm:grid-cols-3 gap-4"
         >
           <input type="hidden" name="_subject" value="Quick Inquiry — Laotie Steel Website" />
           <input type="hidden" name="_captcha" value="false" />
           <div>
+            <label htmlFor="contact-name" className="sr-only">Your Name</label>
             <input
+              id="contact-name"
               type="text"
               name="name"
               placeholder="Your Name *"
               required
+              aria-required="true"
               value={formData.name}
               onChange={(e) => handleChange("name", e.target.value)}
               className={`px-5 py-3.5 rounded-xl bg-white/[0.07] backdrop-blur border ${
@@ -103,11 +107,14 @@ export default function Contact() {
             )}
           </div>
           <div>
+            <label htmlFor="contact-email" className="sr-only">Email or WhatsApp</label>
             <input
+              id="contact-email"
               type="text"
               name="contact"
               placeholder="Email / WhatsApp *"
               required
+              aria-required="true"
               value={formData.contact}
               onChange={(e) => handleChange("contact", e.target.value)}
               className={`px-5 py-3.5 rounded-xl bg-white/[0.07] backdrop-blur border ${
@@ -128,7 +135,9 @@ export default function Contact() {
             {isSubmitting ? "Sending..." : "Send Inquiry"}
           </button>
           <div className="sm:col-span-3">
+            <label htmlFor="contact-message" className="sr-only">Project Description</label>
             <textarea
+              id="contact-message"
               name="message"
               rows={3}
               placeholder="Briefly describe your project: building type, dimensions, location, quantity..."
