@@ -1,4 +1,61 @@
+"use client";
+
+import { useState, FormEvent } from "react";
+
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    contact: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validate = () => {
+    const newErrors: Record<string, string> = {};
+    
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    } else if (formData.name.trim().length < 2) {
+      newErrors.name = "Name must be at least 2 characters";
+    }
+    
+    if (!formData.contact.trim()) {
+      newErrors.contact = "Email or WhatsApp is required";
+    } else {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const phoneRegex = /^[\d\s\-\+\(\)]{7,}$/;
+      if (!emailRegex.test(formData.contact) && !phoneRegex.test(formData.contact.replace(/[\s\-\(\)]/g, ""))) {
+        newErrors.contact = "Please enter a valid email or WhatsApp number";
+      }
+    }
+    
+    if (formData.message && formData.message.trim().length < 10) {
+      newErrors.message = "Message must be at least 10 characters";
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!validate()) return;
+    
+    setIsSubmitting(true);
+    const form = e.target as HTMLFormElement;
+    form.submit();
+  };
+
+  const handleChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+    if (errors[field]) {
+      setErrors(prev => { const next = { ...prev }; delete next[field]; return next; });
+    }
+  };
+
+  const hasErrors = Object.keys(errors).length > 0;
+
   return (
     <section id="contact" className="py-20 bg-steel relative overflow-hidden">
       {/* Background decorative elements */}
@@ -23,37 +80,67 @@ export default function Contact() {
         <form
           action="https://formsubmit.co/kangguangjian91@gmail.com"
           method="POST"
+          onSubmit={handleSubmit}
+          noValidate
           className="max-w-2xl mx-auto grid sm:grid-cols-3 gap-4"
         >
           <input type="hidden" name="_subject" value="Quick Inquiry — Laotie Steel Website" />
           <input type="hidden" name="_captcha" value="false" />
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name *"
-            required
-            className="px-5 py-3.5 rounded-xl bg-white/[0.07] backdrop-blur border border-white/[0.12] text-white placeholder:text-gray-400 focus:outline-none focus:border-steel-accent focus:bg-white/[0.1] text-sm transition-all"
-          />
-          <input
-            type="text"
-            name="contact"
-            placeholder="Email / WhatsApp *"
-            required
-            className="px-5 py-3.5 rounded-xl bg-white/[0.07] backdrop-blur border border-white/[0.12] text-white placeholder:text-gray-400 focus:outline-none focus:border-steel-accent focus:bg-white/[0.1] text-sm transition-all"
-          />
+          <div>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name *"
+              required
+              value={formData.name}
+              onChange={(e) => handleChange("name", e.target.value)}
+              className={`px-5 py-3.5 rounded-xl bg-white/[0.07] backdrop-blur border ${
+                errors.name ? "border-red-500" : "border-white/[0.12] focus:border-steel-accent"
+              } text-white placeholder:text-gray-400 focus:outline-none focus:bg-white/[0.1] text-sm transition-all w-full`}
+            />
+            {errors.name && (
+              <p className="text-red-400 text-xs mt-1 ml-1">{errors.name}</p>
+            )}
+          </div>
+          <div>
+            <input
+              type="text"
+              name="contact"
+              placeholder="Email / WhatsApp *"
+              required
+              value={formData.contact}
+              onChange={(e) => handleChange("contact", e.target.value)}
+              className={`px-5 py-3.5 rounded-xl bg-white/[0.07] backdrop-blur border ${
+                errors.contact ? "border-red-500" : "border-white/[0.12] focus:border-steel-accent"
+              } text-white placeholder:text-gray-400 focus:outline-none focus:bg-white/[0.1] text-sm transition-all w-full`}
+            />
+            {errors.contact && (
+              <p className="text-red-400 text-xs mt-1 ml-1">{errors.contact}</p>
+            )}
+          </div>
           <button
             type="submit"
-            className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-cta to-orange-600 hover:from-cta-hover hover:to-orange-700 text-white font-semibold text-sm transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            disabled={hasErrors || isSubmitting}
+            className={`px-6 py-3.5 rounded-xl bg-gradient-to-r from-cta to-orange-600 hover:from-cta-hover hover:to-orange-700 text-white font-semibold text-sm transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 ${
+              (hasErrors || isSubmitting) ? "opacity-50 cursor-not-allowed" : ""
+            }`}
           >
-            Send Inquiry
+            {isSubmitting ? "Sending..." : "Send Inquiry"}
           </button>
           <div className="sm:col-span-3">
             <textarea
               name="message"
               rows={3}
               placeholder="Briefly describe your project: building type, dimensions, location, quantity..."
-              className="w-full px-5 py-3.5 rounded-xl bg-white/[0.07] backdrop-blur border border-white/[0.12] text-white placeholder:text-gray-400 focus:outline-none focus:border-steel-accent focus:bg-white/[0.1] text-sm resize-none transition-all"
+              value={formData.message}
+              onChange={(e) => handleChange("message", e.target.value)}
+              className={`w-full px-5 py-3.5 rounded-xl bg-white/[0.07] backdrop-blur border ${
+                errors.message ? "border-red-500" : "border-white/[0.12] focus:border-steel-accent"
+              } text-white placeholder:text-gray-400 focus:outline-none focus:bg-white/[0.1] text-sm resize-none transition-all`}
             />
+            {errors.message && (
+              <p className="text-red-400 text-xs mt-1 ml-1">{errors.message}</p>
+            )}
           </div>
         </form>
 

@@ -46,7 +46,7 @@ export default function ImageCarousel({ images, interval = 4000 }: ImageCarousel
         {images.map((img, idx) => (
           <div
             key={img.src}
-            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+            className={`absolute inset-0 transition-opacity duration-300 ease-in-out ${
               idx === current ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
           >

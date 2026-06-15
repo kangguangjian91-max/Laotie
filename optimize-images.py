@@ -16,7 +16,12 @@ except ImportError:
     from PIL import Image
 
 # 配置
-IMAGES_DIR = Path("public/images/factory")
+IMAGES_DIRS = [
+    Path("public/images/factory"),
+    Path("public/images/avatars"),
+    Path("public/images/products"),
+    Path("public/images/projects"),
+]
 TARGET_MAX_SIZE_KB = 500  # 目标最大文件大小
 WEBP_QUALITY = 82  # WebP 质量 (0-100)
 
@@ -52,15 +57,18 @@ def optimize_image(image_path: Path, target_path: Path = None) -> dict:
     }
 
 def main():
-    print("🚀 开始优化工厂图片...\n")
+    print("🚀 开始优化图片...\n")
     
     # 找出需要优化的图片（>500KB 或 PNG 格式）
     images_to_optimize = []
-    for ext in ["*.png", "*.jpg", "*.jpeg"]:
-        for img_path in IMAGES_DIR.glob(ext):
-            size_kb = img_path.stat().st_size / 1024
-            if size_kb > TARGET_MAX_SIZE_KB or img_path.suffix.lower() == ".png":
-                images_to_optimize.append(img_path)
+    for dir in IMAGES_DIRS:
+        if not dir.exists():
+            continue
+        for ext in ["*.png", "*.jpg", "*.jpeg"]:
+            for img_path in dir.glob(ext):
+                size_kb = img_path.stat().st_size / 1024
+                if size_kb > TARGET_MAX_SIZE_KB or img_path.suffix.lower() == ".png":
+                    images_to_optimize.append(img_path)
     
     if not images_to_optimize:
         print("✅ 所有图片都已经优化过了！")

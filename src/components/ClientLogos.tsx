@@ -11,7 +11,7 @@ const clientLogos = [
     country: '澳大利亚',
     countryEn: 'Australia',
     industry: 'Warehouse',
-    avatar: '/images/avatars/client-australia.png',
+    avatar: '/images/avatars/client-australia.webp',
   },
   {
     name: '客户 B',
@@ -19,7 +19,7 @@ const clientLogos = [
     country: '尼日利亚',
     countryEn: 'Nigeria',
     industry: 'Factory',
-    avatar: '/images/avatars/client-nigeria.png',
+    avatar: '/images/avatars/client-nigeria.webp',
   },
   {
     name: '客户 C',
@@ -27,7 +27,7 @@ const clientLogos = [
     country: '菲律宾',
     countryEn: 'Philippines',
     industry: 'Mall',
-    avatar: '/images/avatars/client-philippines.png',
+    avatar: '/images/avatars/client-philippines.webp',
   },
   {
     name: '客户 D',
@@ -35,7 +35,7 @@ const clientLogos = [
     country: '阿曼',
     countryEn: 'Oman',
     industry: 'Logistics',
-    avatar: '/images/avatars/client-oman.png',
+    avatar: '/images/avatars/client-oman.webp',
   },
   {
     name: '客户 E',
@@ -43,7 +43,7 @@ const clientLogos = [
     country: '沙特阿拉伯',
     countryEn: 'Saudi Arabia',
     industry: 'Steel Plant',
-    avatar: '/images/avatars/client-saudi.png',
+    avatar: '/images/avatars/client-saudi.webp',
   },
   {
     name: '客户 F',
@@ -51,7 +51,7 @@ const clientLogos = [
     country: '南非',
     countryEn: 'South Africa',
     industry: 'Mining',
-    avatar: '/images/avatars/client-south-africa.png',
+    avatar: '/images/avatars/client-south-africa.webp',
   },
 ];
 

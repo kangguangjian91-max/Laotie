@@ -33,7 +33,7 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
               {index < items.length - 1 ? (
                 <a
                   href={item.href}
-                  className="hover:text-steel-accent transition-colors duration-200"
+                  className="hover:text-steel-accent transition-colors duration-300"
                 >
                   {item.label}
                 </a>

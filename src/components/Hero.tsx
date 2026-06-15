@@ -19,7 +19,7 @@ export default function Hero() {
           alt="Steel structure factory"
           priority
           fill
-          className={`object-cover transition-opacity duration-1000 ease-out ${bgLoaded ? 'opacity-100' : 'opacity-0'}`}
+          className={`object-cover transition-opacity duration-300 ease-out ${bgLoaded ? 'opacity-100' : 'opacity-0'}`}
           onLoad={() => setBgLoaded(true)}
         />
 

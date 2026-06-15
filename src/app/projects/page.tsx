@@ -194,7 +194,7 @@ export default function ProjectsPage() {
                   <img
                     src={project.image}
                     alt={project.name}
-                    className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-300"
                     loading={i > 1 ? "lazy" : "eager"}
                   />
                 </div>
