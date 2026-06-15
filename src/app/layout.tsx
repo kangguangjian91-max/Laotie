@@ -180,17 +180,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        {/* Preload critical fonts */}
-        <link rel="preload" href="/fonts/system-fonts.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        {/* Font optimization - system fonts with fallback */}
+        {/* Font optimization - use system fonts directly, no custom font files */}
         <style dangerouslySetInnerHTML={{
           __html: `
-            /* Font loading optimization */
-            @font-face {
-              font-family: 'System';
-              src: local('Segoe UI'), local('Roboto'), local('Helvetica Neue'), local('Arial');
-              font-display: swap;
-            }
+            body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
           `
         }} />
         {/* Apple mobile web app optimization */}
