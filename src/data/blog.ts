@@ -578,7 +578,7 @@ Use a theodolite or total station to mark exact column positions on the foundati
 - ✅ **100% of workers** must have safety training before site entry
 - ✅ **Safety harness** mandatory above 2m height
 - ✅ **Crane operator** must hold valid license
-- ✅ **Wind speed** > 6级 (13.8 m/s): stop crane operations
+- ✅ **Wind speed** > Level 6 (13.8 m/s): stop crane operations
 - ✅ **Rain/snow**: stop welding and high-altitude work
 - ✅ Daily safety briefing before work starts
 
@@ -1120,7 +1120,7 @@ Ready to import? Contact us with your project requirements for a free consultati
 
 ## The 5-Step Production Process
 
-### Step 1: Cutting (下料)
+### Step 1: Cutting
 
 Raw steel plates and sections enter the cutting bay.
 
@@ -1135,7 +1135,7 @@ Raw steel plates and sections enter the cutting bay.
 - Dimensional tolerance: ±1mm for critical connections
 - Material traceability: each piece marked with heat number
 
-### Step 2: Assembling (组立)
+### Step 2: Assembling
 
 Cut pieces are assembled into structural components.
 
@@ -1150,7 +1150,7 @@ Cut pieces are assembled into structural components.
 - Gap inspection between web and flange
 - Fit-up verified before full welding
 
-### Step 3: Welding (焊接)
+### Step 3: Welding
 
 This is the most critical stage — structural integrity depends on weld quality.
 
@@ -1165,7 +1165,7 @@ This is the most critical stage — structural integrity depends on weld quality
 - Visual inspection on 100% of welds
 - Weld size and profile verified against design
 
-### Step 4: Straightening (矫正)
+### Step 4: Straightening
 
 Welding causes thermal distortion — components must be corrected.
 
@@ -1178,7 +1178,7 @@ Welding causes thermal distortion — components must be corrected.
 - Twist: within specified tolerance
 - Camber: as per design (for pre-cambered beams)
 
-### Step 5: Shot Blasting & Painting (抛丸喷漆)
+### Step 5: Shot Blasting & Painting
 
 Surface preparation and coating for corrosion protection.
 
