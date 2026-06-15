@@ -181,7 +181,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         {/* Preload critical images with highest priority */}
-        <link rel="preload" as="image" href="/images/hero-bg.webp" fetchPriority="high" crossOrigin="anonymous" />
+        <link rel="preload" as="image" href="/images/hero-bg-mobile.webp" fetchPriority="high" crossOrigin="anonymous" />
         {/* Font optimization - system fonts with fallback */}
         <style dangerouslySetInnerHTML={{
           __html: `

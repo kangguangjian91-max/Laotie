@@ -15,7 +15,7 @@ export default function Hero() {
           <div className="absolute inset-0 bg-gradient-to-br from-[#0c1929] via-[#1a365d] to-[#0f2744]" />
         )}
         <Image
-          src="/images/hero-bg.webp"
+          src="/images/hero-bg-mobile.webp"
           alt="Steel structure factory"
           priority
           fill
