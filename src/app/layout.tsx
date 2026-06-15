@@ -59,7 +59,7 @@ const websiteSchema = {
 
 const siteUrl = "https://www.laotie-steel.com";
 const siteName = "Laotie Steel Structure";
-const defaultTitle = "Trusted Steel Structure Manufacturer in China | Laotie";
+const defaultTitle = "Trusted Steel Structure Manufacturer in China — Factory Direct Pricing";
 const defaultDescription =
   "Laotie Steel Structure — CE & ISO certified steel structure manufacturer in China. 5 production lines, 5,000T/month capacity. Portal frames, floor deck, space frames, cladding. Factory direct pricing. Get a quote today.";
 const ogImage = `${siteUrl}/images/og-image.webp`;
