@@ -111,13 +111,6 @@ export default function ClientLogos() {
             </div>
           ))}
         </div>
-
-        {/* Note for real implementation */}
-        <div className="mt-8 text-center">
-          <p className="text-sm text-gray-400">
-            💡 将占位符徽标替换为客户公司的真实徽标，以最大程度地提升信任度
-          </p>
-        </div>
       </div>
     </section>
   );
