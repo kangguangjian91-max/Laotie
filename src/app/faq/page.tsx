@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import { HelpCircle, Truck, Shield, DollarSign, Package, Wrench, FileText, Clock } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -134,8 +135,24 @@ export const metadata: Metadata = {
 };
 
 export default function FAQPage() {
+  const faqPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.flatMap((cat) =>
+      cat.questions.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.a,
+        },
+      }))
+    ),
+  };
+
   return (
     <>
+      <JsonLd data={faqPageSchema} />
       <Header />
       <main className="bg-white">
         {/* Hero */}

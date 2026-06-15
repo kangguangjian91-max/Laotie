@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -25,8 +26,40 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "ManufacturingBusiness",
+    name: "Laotie Steel Structure Co., Ltd.",
+    description:
+      "CE & ISO certified steel structure manufacturer in China. 5 production lines, 5,000T/month capacity. Portal frames, floor deck, space frames, cladding.",
+    url: "https://laotie-steel-structure.netlify.app",
+    telephone: "+86-166-5073-5555",
+    email: "mailto:kangguangjian91@gmail.com",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Shangqiu City, Henan Province",
+      addressLocality: "Shangqiu",
+      addressRegion: "Henan",
+      addressCountry: "CN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "34.44",
+      longitude: "115.63",
+    },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "08:00",
+      closes: "18:00",
+    },
+    areaServed: "Worldwide",
+    knowsAbout: ["Steel Structure", "Portal Frame", "Floor Deck", "Space Frame", "Industrial Building"],
+  };
+
   return (
     <>
+      <JsonLd data={localBusinessSchema} />
       <Header />
       <main className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">

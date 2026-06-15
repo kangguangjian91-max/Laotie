@@ -43,3 +43,10 @@ next-env.d.ts
 
 # Local Netlify folder
 .netlify
+
+# Workbuddy local files
+.workbuddy/
+
+# OS files
+Thumbs.db
+Desktop.ini

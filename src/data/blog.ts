@@ -10,6 +10,297 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "steel-structure-maintenance-guide-lifespan-corrosion",
+    title: "Steel Structure Maintenance: Extend Building Lifespan to 50+ Years",
+    description: "Learn how to maintain steel structures for maximum lifespan. Annual inspection checklists, corrosion prevention, coating repair, and maintenance schedules for warehouses and factories.",
+    date: "2026-06-10",
+    category: "Maintenance",
+    readTime: "8 min read",
+    content: `A well-designed steel structure should last 50 years or more — but only with proper maintenance. Unlike concrete or timber buildings, steel structures have predictable deterioration patterns. When you know what to watch for and when to act, maintenance becomes a manageable annual routine rather than an emergency response.
+
+This guide covers everything building owners and facility managers need to maintain their steel structures — from routine inspections to major coating renewal.
+
+## How Long Does a Steel Structure Actually Last?
+
+The design life of a steel structure depends on three factors:
+
+| Factor | Impact on Lifespan |
+|--------|-------------------|
+| **Coating system** | Single largest determinant — quality coating = decades of protection |
+| **Environment** | Coastal > industrial > rural (corrosivity categories C1 to C5 per ISO 9223) |
+| **Maintenance frequency** | Annual inspection + prompt repair can add 10-20 years |
+
+**Typical lifespans by environment and coating:**
+
+| Environment | Painted (standard) | Painted (epoxy system) | Hot-dip galvanized |
+|-------------|-------------------|----------------------|-------------------|
+| Rural / inland (C1-C2) | 15-25 years | 30-40 years | 50+ years |
+| Urban / light industrial (C3) | 10-20 years | 25-35 years | 40-50 years |
+| Coastal / heavy industrial (C4-C5) | 5-10 years | 15-25 years | 25-35 years |
+
+> **Note for international buyers**: OldTie ships steel structures to over 20 countries. We recommend coating specifications based on your local environment — not the Chinese climate. A warehouse in Lagos needs very different protection than one in Melbourne.
+
+## Annual Inspection: Your First Line of Defense
+
+The single most impactful maintenance activity is a thorough annual inspection. Here's a structured checklist.
+
+### Structural Frame Inspection
+
+What to check on columns, rafters, and beams:
+
+- **Visual sweep**: Walk the entire perimeter. Look for rust spots, paint blistering, or flaking — especially at connection points and base plates
+- **Column verticality**: Check with plumb bob or laser level. Deviation should not exceed H/500 (2mm per meter of height)
+- **Beam deflection**: Measure at mid-span. Compare against original design values. Excessive deflection signals overload or section weakening
+- **Connection bolts**: Check for looseness with torque wrench (5% random sample). Missing bolts are a red flag — replace immediately
+- **Base plate condition**: Look for water pooling around column bases. Standing water accelerates corrosion dramatically
+
+### Roof System Inspection
+
+- **Roof cladding**: Check for displaced sheets, missing screws, or torn panels
+- **Gutters and downpipes**: Clear debris. Blocked drainage causes water overflow onto wall cladding
+- **Roof bracing**: Verify all tension rods are taut. Loose bracing compromises the entire roof diaphragm
+- **Skylight seals**: Check for cracks or gaps in sealant around skylight panels
+- **Ridge and eave flashings**: Ensure all flashings are secure and sealed
+
+### Corrosion Assessment
+
+Rate corrosion severity on each structural member:
+
+| Grade | Description | Action Required |
+|-------|-------------|-----------------|
+| **Ri 0** | No visible corrosion | None — continue monitoring |
+| **Ri 1** | Minor surface rust spots (<1% of area) | Clean and touch-up paint within 6 months |
+| **Ri 2** | Moderate rust (1-10% of area) | Power-tool clean and repaint within 3 months |
+| **Ri 3** | Heavy rust, paint failure (10-33%) | Abrasive blast clean and full repaint |
+| **Ri 4** | Severe corrosion, section loss | Structural assessment required — possible member replacement |
+
+*Corrosion grading per ISO 4628-3 standard.*
+
+## Preventive Maintenance Schedule
+
+### Monthly (Facility Manager)
+
+- Visual walk-around — any new rust spots, damage, or water ingress?
+- Clear obvious debris from gutters and roof valleys
+- Check that all doors and windows operate correctly
+
+### Quarterly
+
+- Inspect all roof penetrations (vents, flues, skylights) — reseal if needed
+- Lubricate roller door tracks and hinges
+- Check tension in bracing rods
+
+### Annually (Professional Inspection)
+
+- Complete structural inspection using the checklist above
+- Coating thickness measurement on 10 representative points
+- Bolt torque audit (5% random sample)
+- Document findings with dated photos — build a maintenance history
+
+### Every 5-7 Years
+
+- Full coating condition assessment by a coatings inspector
+- Plan for recoating if dry film thickness has decreased by 30%+ from original
+- Structural member thickness measurement if corrosion is suspected
+
+### Every 15-20 Years
+
+- Major coating renewal — abrasive blast to SA 2.0 minimum, full repaint system
+- Replace all sealants (panel laps, flashings, penetrations)
+- Replace any fasteners showing corrosion
+
+## Common Maintenance Issues and Solutions
+
+### Rust at Column Base Plates
+
+**Cause**: Water pooling at the base, capillary action drawing moisture up.
+
+**Fix**: Chip away loose grout → clean steel to bare metal → apply zinc-rich epoxy primer → re-grout with non-shrink material → ensure proper drainage slope.
+
+### Roof Leaks at Screw Fasteners
+
+**Cause**: Neoprene washers degrade under UV exposure.
+
+**Fix**: Remove failed screws one at a time → clean hole → install new screw with EPDM washer (superior UV resistance) → apply neutral-cure silicone over screw head.
+
+### Peeling or Blistering Paint
+
+**Cause**: Moisture trapped under coating or coating reaching end of service life.
+
+**Fix**: Scrape loose paint → power-tool clean to St 3 standard → apply compatible primer within 4 hours → apply matching top coats.
+
+### Loose or Missing Bolts
+
+**Cause**: Vibration, thermal cycling, or improper initial torque.
+
+**Fix**: Replace (never re-tighten) loose high-strength bolts. Check adjacent bolts. Investigate root cause if bolt loss exceeds 2%.
+
+## Cost of Maintenance vs Cost of Neglect
+
+| Maintenance Approach | 30-Year Cost (% of building value) | Building Condition at Year 30 |
+|---------------------|-----------------------------------|-------------------------------|
+| Proactive (annual + prompt repair) | 3-5% | Excellent — near-original condition |
+| Reactive (fix only when visible) | 8-15% | Fair — accumulated damage |
+| Neglect (no maintenance) | 20-40% or replacement | Poor to unsafe — structural deterioration |
+
+Spending $3,000-5,000 per year on a $100,000 steel building saves $15,000-35,000 over the building's life.
+
+## When to Call a Structural Engineer
+
+- Beam deflection exceeding L/200
+- Visible section loss on any primary structural member
+- Foundation settlement or cracking around column bases
+- After major events: earthquakes, cyclones, vehicle impacts, fires
+- Before changing building use (adding crane, heavier loads)
+
+## OldTie's Commitment to Building Longevity
+
+Every OldTie steel structure ships with:
+- Complete as-built documentation — design parameters, material certificates, coating specs
+- Maintenance manual tailored to your coating system and environment
+- Touch-up paint kit — 2 liters of matching primer and topcoat
+- Spare fasteners — 2% extra bolts, screws, and washers
+
+## Start With a Structure Built to Last
+
+The best maintenance program starts with a well-built structure. Our factory in Shangqiu, Henan produces steel buildings engineered for your local conditions — correct steel grade, wind/snow/seismic design, and coating system matched to your environment.
+
+📱 **WhatsApp**: +86 166-5073-5555  
+🌐 **Website**: https://oldtie-steel.netlify.app`,
+  },
+  {
+    slug: "steel-structure-processing-techniques-cnc-welding-guide",
+    title: "Steel Structure Processing: CNC Cutting, Welding & Surface Treatment Guide",
+    description: "Master steel structure processing techniques including CNC plasma cutting, submerged arc welding, shot blasting, and surface treatment. Learn how Chinese factories achieve precision fabrication.",
+    date: "2026-06-10",
+    category: "Manufacturing",
+    readTime: "7 min read",
+    content: `Steel structure processing is where engineering meets craftsmanship. Raw steel plates and sections are transformed into precision building components through a sequence of controlled industrial processes.
+
+At OldTie Steel Structure, our Shangqiu factory processes over 5,000 tons of steel monthly across five production lines. Here's a detailed look at the core processing techniques.
+
+## CNC Cutting: The Foundation of Precision Fabrication
+
+Modern steel fabrication begins with computer-controlled cutting. CNC technology ensures every component matches the shop drawing within millimeter tolerances.
+
+### Plasma Cutting
+
+CNC plasma cutting is the workhorse of steel structure processing:
+- **Cutting thickness**: 3mm to 50mm steel plate (up to 80mm for heavy-duty)
+- **Accuracy**: ±0.5mm for plates up to 25mm thickness
+- **Speed**: 500-3,500 mm/min depending on material
+- **Best for**: Regular structural plates, gusset plates, base plates, stiffeners
+
+### Laser Cutting
+
+For complex profiles and tight tolerances:
+- **Cutting thickness**: 0.5mm to 25mm (fiber laser)
+- **Accuracy**: ±0.1mm — unmatched by any thermal cutting method
+- **Edge quality**: Minimal heat-affected zone, near-machined finish
+- **Best for**: Connection plates with tight bolt patterns, architectural details
+
+### Flame Cutting (Oxy-Fuel)
+
+For heavy steel plates beyond plasma capability:
+- **Cutting thickness**: 25mm to 300mm
+- **Accuracy**: ±1.5mm
+- **Best for**: Column base plates, thick flange plates, crane runway beams
+
+### Quality Control at Cutting Stage
+
+| Check | Tolerance | Method |
+|-------|-----------|--------|
+| Overall dimensions | ±1mm (critical), ±2mm (general) | Steel tape + caliper |
+| Edge squareness | 90° ± 0.5° | Try square |
+| Hole position | ±0.5mm | Go/no-go gauge |
+| Surface roughness | Ra ≤ 25μm | Visual comparator |
+
+Precision cutting reduces assembly issues and on-site rework by up to 40%.
+
+## Welding Methods: The Backbone of Structural Integrity
+
+### Submerged Arc Welding (SAW)
+
+The preferred method for H-beam longitudinal seams:
+- Arc burns beneath a blanket of granular flux — no visible arc, no spatter
+- Deep, consistent fusion into the root of the joint
+- 3-5× faster than manual welding for beam fabrication
+
+### CO₂ Gas Shielded Welding (GMAW)
+
+All-position welding for connections and stiffeners:
+- Continuous wire electrode with CO₂ or Ar/CO₂ shielding gas
+- Applications: column-to-base-plate, stiffener plates, purlin cleats, bracing
+
+### Welding Quality Control
+
+| Test Method | What It Detects | Coverage Rate |
+|-------------|-----------------|---------------|
+| Visual Testing (VT) | Surface defects, weld profile | 100% of all welds |
+| Ultrasonic Testing (UT) | Internal porosity, cracks | 10-20% of critical welds |
+| Magnetic Particle (MT) | Surface and near-surface cracks | Supplementary to UT |
+| Radiographic Testing (RT) | Internal defects (critical) | Full-penetration butt welds |
+
+OldTie holds EN 1090-2 EXC2 certification — verifying welding procedures meet European structural requirements.
+
+## Straightening: Correcting Thermal Distortion
+
+Welding introduces heat, and heat causes distortion. Every welded member passes through straightening:
+- **H-beam straightening machine**: Hydraulic rollers correct flange tilt, web waviness, and camber
+- **Tolerance**: Straightness deviation ≤ L/1000 (1mm per meter of length)
+
+## Surface Treatment: Corrosion Protection That Lasts
+
+### Shot Blasting
+
+Surface preparation to SA 2.5 (near-white metal) per ISO 8501-1 — the industry benchmark for structural steel.
+
+### Painting Systems
+
+| System | Coats | Total DFT | Best For | Lifespan |
+|--------|-------|-----------|----------|----------|
+| Alkyd (standard) | Primer + topcoat | 80-120μm | Indoor, mild climate | 5-10 years |
+| Epoxy (intermediate) | Zinc primer + epoxy MIO + PU topcoat | 200-280μm | Outdoor, industrial | 15-25 years |
+| Polysiloxane (premium) | Zinc primer + polysiloxane | 200-250μm | Coastal, chemical | 20-30 years |
+
+### Hot-Dip Galvanizing
+
+For maximum protection: immersion in molten zinc at ~450°C, coating 85-200μm per ISO 1461. Lifespan: 30-50+ years in most environments.
+
+## Drilling and Pre-Assembly
+
+- **CNC drilling**: ±0.5mm hole position accuracy, H12 tolerance on diameter
+- **Factory pre-assembly**: Random bays assembled to verify connection fit before shipping
+- Pre-assembly reduces on-site installation issues by up to 70%
+
+## Why Processing Quality Matters
+
+| Processing Quality Level | Impact on Project |
+|--------------------------|-------------------|
+| Poor cutting accuracy | Components don't fit → on-site rework → delays + cost |
+| Inadequate welding | Structural failure risk → liability |
+| Substandard surface prep | Premature corrosion → 3-5× higher maintenance costs |
+| Skipped pre-assembly | Installation issues discovered on site → costly delays |
+
+At OldTie, every component passes through six inspection checkpoints before shipping.
+
+## Choosing a Processing Partner
+
+When evaluating suppliers, ask:
+1. "What CNC machines do you use and what tolerance do you guarantee?"
+2. "What percentage of welds undergo UT/NDT testing?"
+3. "What blasting standard do you achieve? What coating system for my climate?"
+4. "What inspection checkpoints do you have? Can I receive progress photos?"
+5. "Do you offer factory pre-assembly for complex structures?"
+
+## Get Your Steel Structure Processing Quote
+
+Whether you're building a 500m² warehouse or a 10,000m² factory complex, processing quality determines your project's success. OldTie Steel Structure combines CNC precision, certified welding, and proven surface treatment to deliver structures that last.
+
+📱 **WhatsApp**: +86 166-5073-5555  
+🌐 **Website**: https://oldtie-steel.netlify.app`,
+  },
+  {
     slug: "steel-structure-production-china-manufacturing-guide",
     title: "Steel Structure Production in China: Complete Manufacturing Guide 2026",
     description: "Learn how Chinese steel structure manufacturers produce high-quality steel buildings at competitive prices. Discover the production process, quality standards, and why China leads global steel structure manufacturing.",
