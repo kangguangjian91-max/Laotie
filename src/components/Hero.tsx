@@ -84,8 +84,8 @@ export default function Hero() {
       {/* ===== Main Content ===== */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28 lg:py-36 w-full">
         <div className="max-w-2xl lg:max-w-2xl">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] mb-8 animate-fade-in-up hover:border-white/25 transition-colors group">
+          {/* Badge — no animation */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] mb-8">
             <span className="relative flex h-2.5 w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-badge opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-badge shadow-[0_0_6px_rgba(29,158,117,0.5)]"></span>
@@ -95,9 +95,9 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* Headline */}
+          {/* Headline — no animation for faster LCP */}
           <h1
-            className="text-[2.5rem] sm:text-4xl lg:text-[3.75rem] xl:text-[4.25rem] font-bold leading-[1.08] mb-6 animate-fade-in-up animation-delay-100 tracking-tight"
+            className="text-[2.5rem] sm:text-4xl lg:text-[3.75rem] xl:text-[4.25rem] font-bold leading-[1.08] mb-6"
           >
             <span className="block text-white">Custom Steel Structures</span>
             <span className="block mt-1 bg-gradient-to-r from-[#7dd3fc] via-[#38bdf8] to-[#FF6B00] bg-clip-text text-transparent drop-shadow-[0_2px_16px_rgba(55,138,221,0.25)]">
@@ -106,13 +106,13 @@ export default function Hero() {
             <span className="block mt-1 text-gray-300 text-[0.65em] font-semibold">Factory Direct Pricing — Get a Free Quote in 24h</span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-lg sm:text-xl text-gray-300/90 mb-10 leading-relaxed animate-fade-in-up animation-delay-200 font-light max-w-lg">
+          {/* Subtitle — no animation */}
+          <p className="text-lg sm:text-xl text-gray-300/90 mb-10 leading-relaxed font-light max-w-lg">
             5,000T/Month Production Capacity &middot; 15+ Years Experience &middot; CE & ISO Certified
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-4 mb-8 animate-fade-in-up animation-delay-300">
+          {/* CTA Buttons — no animation */}
+          <div className="flex flex-wrap gap-4 mb-8">
             <a
               href="/contact"
               className="group inline-flex items-center px-10 py-5 text-lg font-bold text-white bg-[#FF6B00] hover:bg-[#e55a00] rounded-xl transition-all duration-300 shadow-[0_8px_32px_rgba(255,107,0,0.4)] hover:shadow-[0_12px_48px_rgba(255,107,0,0.6)] hover:-translate-y-1 active:translate-y-0"
@@ -133,8 +133,8 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Trust Indicators — Certification Logos */}
-          <div className="animate-fade-in-up animation-delay-400">
+          {/* Trust Indicators — Certification Logos — no animation */}
+          <div className="mt-8">
             <p className="text-xs text-gray-400 mb-3 uppercase tracking-wider">Trusted & Certified By</p>
             <div className="flex items-center gap-6">
               {/* CE Certification Logo */}
@@ -152,8 +152,8 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Social Proof — Recent Activity */}
-          <div className="mt-6 animate-fade-in-up animation-delay-500">
+          {/* Social Proof — Recent Activity — no animation */}
+          <div className="mt-6">
             <p className="text-sm text-gray-400">
               <span className="inline-block w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
               <span className="text-green-400 font-semibold">12+</span> companies requested quotes this month
