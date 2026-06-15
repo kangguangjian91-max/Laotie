@@ -1,51 +1,14 @@
-'use client'
-
-import Image from 'next/image'
-
 export default function Hero() {
   return (
-    <section id="home" className="relative bg-steel overflow-hidden min-h-[680px] sm:min-h-[720px] lg:min-h-[780px] flex items-center">
-      {/* ===== Background Image Layer ===== */}
-      <div className="absolute inset-0">
-        <Image
-          src="/images/hero-bg-mobile.webp"
-          alt="Steel structure factory"
-          priority
-          fill
-          sizes="100vw"
-          className="object-cover"
-        />
+    <section id="home" className="relative overflow-hidden min-h-[680px] sm:min-h-[720px] lg:min-h-[780px] flex items-center" style={{ background: 'linear-gradient(135deg, #0a1628 0%, #1a365d 50%, #0d2137 100%)' }}>
+      {/* ===== Animated Gradient Background ===== */}
+      <div className="absolute inset-0" style={{
+        background: 'radial-gradient(ellipse at 20% 50%, rgba(55,138,221,0.15) 0%, transparent 50%), radiel-gradient(ellipse at 80% 50%, rgba(255,107,0,0.1) 0%, transparent 50%)',
+      }} />
 
-        {/* ===== Multi-layer Gradient Overlay — cinematic depth ===== */}
-        {/* Left dark gradient: gives text area breathing room */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/98 via-[#0d2137]/85 to-[#0d2137]/30" />
-        {/* Bottom gradient: seamless transition to white content below */}
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/[.15] to-transparent" />
-        {/* Top vignette: subtle darkening at edges for focus */}
-        <div className="absolute inset-0 shadow-[inset_0_-80px_60px_rgba(255,255,255,.08),inset_0_40px_40px_rgba(0,0,0,.2)]" />
-      </div>
-
-      {/* ===== Atmospheric Light Effects ===== */}
-      {/* Large soft glow behind the text area */}
+      {/* ===== Grid Pattern Overlay ===== */}
       <div
-        className="absolute -top-20 -left-20 w-[600px] h-[600px] rounded-full opacity-[0.12]"
-        style={{
-          background: 'radial-gradient(circle, #378ADD 0%, transparent 70%)',
-          filter: 'blur(80px)',
-        }}
-      />
-      {/* Secondary warm accent glow (bottom right) */}
-      <div
-        className="absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full opacity-[0.08]"
-        style={{
-          background: 'radial-gradient(circle, #FF6B00 0%, transparent 70%)',
-          filter: 'blur(90px)',
-        }}
-      />
-
-      {/* ===== Geometric Grid Pattern (subtle tech feel) ===== */}
-      <div
-        className="absolute inset-0 opacity-[0.04]"
+        className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage:
             'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
@@ -53,30 +16,13 @@ export default function Hero() {
         }}
       />
 
-      {/* ===== Diagonal accent lines (architectural blueprint feel) ===== */}
-      <svg
-        className="absolute inset-0 w-full h-full opacity-[0.03] pointer-events-none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <pattern id="diagonal-lines" width="120" height="120" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-            <line x1="0" y1="0" x2="0" y2="120" stroke="white" strokeWidth="0.8" />
-            <line x1="60" y1="0" x2="60" y2="120" stroke="white" strokeWidth="0.4" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#diagonal-lines)" />
-      </svg>
-
-      {/* ===== Floating Particles / Accent Dots ===== */}
-      <div className="absolute top-[18%] right-[22%] w-2 h-2 rounded-full bg-[#378ADD]/50 animate-pulse-dot shadow-[0_0_10px_rgba(55,138,221,0.4)]" />
-      <div className="absolute top-[35%] right-[35%] w-1.5 h-1.5 rounded-full bg-[#FF6B00]/40 animate-pulse-dot shadow-[0_0_8px_rgba(255,107,0,0.3)]" style={{ animationDelay: '0.7s' }} />
-      <div className="absolute bottom-[28%] right-[25%] w-1 h-1 rounded-full bg-white/30 animate-pulse-dot" style={{ animationDelay: '1.4s' }} />
-      <div className="absolute top-[55%] left-[18%] w-1.5 h-1.5 rounded-full bg-[#378ADD]/30 animate-pulse-dot" style={{ animationDelay: '2s' }} />
+      {/* ===== Bottom Gradient (transition to white) ===== */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white via-white/95 to-transparent pointer-events-none" />
 
       {/* ===== Main Content ===== */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28 lg:py-36 w-full">
         <div className="max-w-2xl lg:max-w-2xl">
-          {/* Badge — no animation */}
+          {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] mb-8">
             <span className="relative flex h-2.5 w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-badge opacity-75"></span>
@@ -87,27 +33,27 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* Headline — no animation for faster LCP */}
+          {/* Headline */}
           <h1
-            className="text-[2.5rem] sm:text-4xl lg:text-[3.75rem] xl:text-[4.25rem] font-bold leading-[1.08] mb-6"
+            className="text-[2.5rem] sm:text-4xl lg:text-[3.75rem] xl:text-[4.25rem] font-bold leading-[1.08] mb-6 text-white"
           >
-            <span className="block text-white">Custom Steel Structures</span>
-            <span className="block mt-1 bg-gradient-to-r from-[#7dd3fc] via-[#38bdf8] to-[#FF6B00] bg-clip-text text-transparent drop-shadow-[0_2px_16px_rgba(55,138,221,0.25)]">
+            <span className="block">Custom Steel Structures</span>
+            <span className="block mt-1 bg-gradient-to-r from-[#7dd3fc] via-[#38bdf8] to-[#FF6B00] bg-clip-text text-transparent">
               Delivered Globally in 30 Days
             </span>
             <span className="block mt-1 text-gray-300 text-[0.65em] font-semibold">Factory Direct Pricing — Get a Free Quote in 24h</span>
           </h1>
 
-          {/* Subtitle — no animation */}
+          {/* Subtitle */}
           <p className="text-lg sm:text-xl text-gray-300/90 mb-10 leading-relaxed font-light max-w-lg">
             5,000T/Month Production Capacity &middot; 15+ Years Experience &middot; CE & ISO Certified
           </p>
 
-          {/* CTA Buttons — no animation */}
+          {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 mb-8">
             <a
               href="/contact"
-              className="group inline-flex items-center px-10 py-5 text-lg font-bold text-white bg-[#FF6B00] hover:bg-[#e55a00] rounded-xl transition-all duration-300 shadow-[0_8px_32px_rgba(255,107,0,0.4)] hover:shadow-[0_12px_48px_rgba(255,107,0,0.6)] hover:-translate-y-1 active:translate-y-0"
+              className="group inline-flex items-center px-10 py-5 text-lg font-bold text-white bg-[#FF6B00] hover:bg-[#e55a00] rounded-xl transition-all duration-300 shadow-[0_8px_32px_rgba(255,107,0,0.4)] hover:shadow-[0_12px_48px_rgba(255,107,0,0.6)] hover:-translate-y-1"
             >
               Request a Free Quote
               <svg className="ml-3 w-6 h-6 group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
@@ -116,35 +62,32 @@ export default function Hero() {
             </a>
             <a
               href="/products"
-              className="inline-flex items-center px-8 py-4 text-base font-semibold text-white/90 border-2 border-white/30 hover:border-white/50 hover:bg-white/10 rounded-xl transition-all duration-300 backdrop-blur-sm group"
+              className="inline-flex items-center px-8 py-4 text-base font-semibold text-white/90 border-2 border-white/30 hover:border-white/50 hover:bg-white/10 rounded-xl transition-all duration-300 backdrop-blur-sm"
             >
               Explore Products
-              <svg className="ml-2 w-5 h-5 group-hover:translate-y-0.5 transition-transform opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+              <svg className="ml-2 w-5 h-5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                 <path strokeLinecap="round" d="M19 9l-7 7-7-7" />
               </svg>
             </a>
           </div>
 
-          {/* Trust Indicators — Certification Logos — no animation */}
+          {/* Trust Indicators */}
           <div className="mt-8">
             <p className="text-xs text-gray-400 mb-3 uppercase tracking-wider">Trusted & Certified By</p>
             <div className="flex items-center gap-6">
-              {/* CE Certification Logo */}
               <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
                 <span className="text-white font-bold text-sm">CE</span>
               </div>
-              {/* ISO Certification Logo */}
               <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
                 <span className="text-white font-bold text-sm">ISO 9001</span>
               </div>
-              {/* SGS Certification Logo */}
               <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
                 <span className="text-white font-bold text-sm">SGS</span>
               </div>
             </div>
           </div>
 
-          {/* Social Proof — Recent Activity — no animation */}
+          {/* Social Proof */}
           <div className="mt-6">
             <p className="text-sm text-gray-400">
               <span className="inline-block w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
@@ -154,9 +97,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      {/* ===== Bottom fade gradient ===== */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white via-white/95 to-transparent pointer-events-none" />
 
       {/* ===== Decorative bottom line ===== */}
       <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#378ADD]/40 to-transparent" />
