@@ -4,6 +4,7 @@ import "./globals.css";
 import CookieConsent from "@/components/CookieConsent";
 import JsonLd from "@/components/JsonLd";
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
+import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -172,6 +173,17 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        {/* Preload critical CSS - inline critical styles */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            /* Critical CSS - inlined for faster FCP */
+            *, *::before, *::after { box-sizing: border-box; }
+            body { margin: 0; font-family: system-ui, -apple-system, sans-serif; color: #1a202c; }
+            .bg-steel { background-color: #1a365d; }
+            .text-white { color: #fff; }
+            .min-h-[680px] { min-height: 680px; }
+          `
+        }} />
         {/* Apple mobile web app optimization */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -179,6 +191,7 @@ export default function RootLayout({
         <link rel="preload" as="image" href="/images/hero-bg.webp" />
       </head>
       <body className="antialiased">
+        <ServiceWorkerRegistration />
         {children}
         <CookieConsent />
         <WhatsAppFloatingButton />
