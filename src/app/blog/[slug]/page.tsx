@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import JsonLd from "@/components/JsonLd";
 import { getPostBySlug, getAllSlugs, blogPosts } from "@/data/blog";
 import { ArrowLeft, Clock, Tag, Calendar } from "lucide-react";
@@ -167,7 +168,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <a href="/blog" className="inline-flex items-center gap-1 text-sm text-steel-accent hover:text-steel mb-8">
             <ArrowLeft className="w-4 h-4" /> Back to Blog
           </a>
-
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Blog", href: "/blog" },
+              { label: post.title, href: `/blog/${slug}` },
+            ]}
+          />
           <div className="flex items-center gap-3 text-xs text-gray-400 mb-4">
             <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-steel-accent/10 text-steel text-xs font-medium">
               <Tag className="w-3 h-3" /> {post.category}

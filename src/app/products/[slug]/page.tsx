@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Image from 'next/image';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import JsonLd from "@/components/JsonLd";
 import { products, getAllProductSlugs, getProductBySlug } from "@/data/products";
 import { blogPosts } from "@/data/blog";
@@ -144,6 +145,13 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             >
               <ArrowLeft className="w-4 h-4" /> All Products
             </a>
+            <Breadcrumb
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Products", href: "/products" },
+                { label: product.title, href: `/products/${slug}` },
+              ]}
+            />
             {product.badge && (
               <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-white bg-steel-accent mb-4">
                 {product.badge}
