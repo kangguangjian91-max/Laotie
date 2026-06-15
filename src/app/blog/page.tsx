@@ -10,7 +10,7 @@ export const metadata = {
     title: "Steel Structure Blog | Expert Guides & Industry Insights",
     description: "Expert articles on steel structure design, cost, importing from China, certifications, and factory production.",
     images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
-    url: "https://https://laotie-steel.com/blog",
+    url: "https://laotie-steel.com/blog",
     type: "website",
   },
   twitter: {

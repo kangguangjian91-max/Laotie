@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Terms of Service | Laotie Steel Structure",
     description:
       "Terms of Service covering website use, product info, quotations, and intellectual property. Governed by laws of China.",
-    url: "https://https://laotie-steel.com/terms",
+    url: "https://laotie-steel.com/terms",
     siteName: "Laotie Steel Structure",
     images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
     type: "website",

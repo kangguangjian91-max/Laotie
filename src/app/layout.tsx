@@ -8,8 +8,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Laotie Steel Structure Co., Ltd.",
-  url: "https://https://laotie-steel.com",
-  logo: "https://https://laotie-steel.com/favicon.png",
+  url: "https://laotie-steel.com",
+  logo: "https://laotie-steel.com/favicon.png",
   description:
     "CE & ISO certified steel structure manufacturer in China. 5 production lines, 5,000T/month capacity. Portal frames, floor deck, space frames, cladding.",
   address: {
@@ -51,12 +51,12 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Laotie Steel Structure",
-  url: "https://https://laotie-steel.com",
+  url: "https://laotie-steel.com",
   description:
     "CE & ISO certified steel structure manufacturer. Factory direct pricing, 5,000T/month capacity. Export to 30+ countries.",
 };
 
-const siteUrl = "https://https://laotie-steel.com";
+const siteUrl = "https://laotie-steel.com";
 const siteName = "Laotie Steel Structure";
 const defaultTitle = "Trusted Steel Structure Manufacturer in China | Laotie";
 const defaultDescription =
@@ -131,7 +131,7 @@ export default function RootLayout({
         <JsonLd data={websiteSchema} />
         <meta
           name="google-site-verification"
-          content="riVASts-AV1JmVEJr-_uYPILNl3p0dNTRF2U1fxdPFM"
+          content="5KqpO4dMQBfGbZFqadCEqcbNzXNCCaVc9WMje2NcEuE"
         />
         {/*
           GA4 and Clarity scripts are loaded dynamically

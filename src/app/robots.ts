@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 // Force static generation for static export
 export const dynamic = "force-static";
 
-const siteUrl = "https://https://laotie-steel.com";
+const siteUrl = "https://laotie-steel.com";
 
 export default function robots(): MetadataRoute.Robots {
   return {

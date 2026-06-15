@@ -5,7 +5,7 @@ import { getAllProductSlugs } from "@/data/products";
 // Force static generation for static export
 export const dynamic = "force-static";
 
-const siteUrl = "https://https://laotie-steel.com";
+const siteUrl = "https://laotie-steel.com";
 
 const staticRoutes = [
   "",

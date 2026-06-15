@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Contact Laotie Steel Structure | Get a Free Quote",
     description:
       "Reach out for steel structure quotations, technical support, or factory visits. We respond within 2 hours.",
-    url: "https://https://laotie-steel.com/contact",
+    url: "https://laotie-steel.com/contact",
     siteName: "Laotie Steel Structure",
     images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
     type: "website",
@@ -32,7 +32,7 @@ export default function ContactPage() {
     name: "Laotie Steel Structure Co., Ltd.",
     description:
       "CE & ISO certified steel structure manufacturer in China. 5 production lines, 5,000T/month capacity. Portal frames, floor deck, space frames, cladding.",
-    url: "https://https://laotie-steel.com",
+    url: "https://laotie-steel.com",
     telephone: "+86-166-5073-5555",
     email: "mailto:kangguangjian91@gmail.com",
     address: {
@@ -87,7 +87,7 @@ export default function ContactPage() {
                 {/* FormSubmit configuration */}
                 <input type="hidden" name="_subject" value="New Inquiry — Laotie Steel Website" />
                 <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="https://https://laotie-steel.com/thank-you" />
+                <input type="hidden" name="_next" value="https://laotie-steel.com/thank-you" />
                 <input type="hidden" name="_template" value="table" />
                 {/* Honeypot spam protection */}
                 <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
