@@ -5,7 +5,7 @@ import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Laotie Steel Structure",
+  title: "Contact Us",
   description:
     "Contact Laotie Steel Structure for steel building quotations, technical support, and factory visits. WhatsApp: +86 166-5073-5555. Email: kangguangjian91@gmail.com. Respond within 2 hours.",
   openGraph: {

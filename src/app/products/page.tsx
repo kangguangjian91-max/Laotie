@@ -6,7 +6,7 @@ import { products } from "@/data/products";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata = {
-  title: "Products | Laotie Steel Structure",
+  title: "Products",
   description: "Steel structure products: portal frame buildings, floor deck, space frame, enclosure & cladding systems. CE & ISO certified.",
   openGraph: {
     title: "Steel Structure Products | Laotie Steel Structure",

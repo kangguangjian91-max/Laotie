@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { CheckCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Thank You | Laotie Steel Structure",
+  title: "Thank You",
   description:
     "Thank you for contacting Laotie Steel Structure. We have received your inquiry and will respond within 2 hours.",
   robots: { index: false, follow: false },

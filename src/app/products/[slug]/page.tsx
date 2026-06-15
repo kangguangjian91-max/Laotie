@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   if (!product) return { title: "Product Not Found" };
 
   return {
-    title: `${product.title} | Laotie Steel Structure`,
+    title: product.title,
     description: product.description,
       openGraph: {
       title: `${product.title} — Laotie Steel Structure`,

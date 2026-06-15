@@ -92,11 +92,6 @@ export const metadata: Metadata = {
       { rel: "icon", url: "/favicon.ico", sizes: "any" },
     ],
   },
-  // Theme color for mobile browsers
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#1e3a5f" },
-    { media: "(prefers-color-scheme: dark)", color: "#1e3a5f" },
-  ],
   // Open Graph
   openGraph: {
     type: "website",
@@ -126,6 +121,10 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#1e3a5f" },
+    { media: "(prefers-color-scheme: dark)", color: "#1e3a5f" },
+  ],
 };
 
 export default function RootLayout({

@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Laotie Steel Structure",
+  title: "Terms of Service",
   description:
     "Terms of Service for Laotie Steel Structure website and products. Covers website use, product information, quotations, intellectual property, and governing law in China.",
   openGraph: {

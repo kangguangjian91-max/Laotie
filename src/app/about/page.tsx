@@ -52,19 +52,19 @@ const qualityChecks = [
 
 const factoryImages = [
   { src: "/images/factory/01-h-beam-warehouse.jpg", alt: "H-Beam storage warehouse at Laotie Steel factory", caption: "H-Beam Warehouse" },
-  { src: "/images/factory/02-tekla-modeling.png", alt: "Tekla Structures 3D BIM modeling for steel structure design", caption: "3D BIM Design" },
-  { src: "/images/factory/03-steel-fabrication.png", alt: "Steel structure fabrication workshop with H-beam assembly", caption: "Steel Fabrication" },
+  { src: "/images/factory/02-tekla-modeling.webp", alt: "Tekla Structures 3D BIM modeling for steel structure design", caption: "3D BIM Design" },
+  { src: "/images/factory/03-steel-fabrication.webp", alt: "Steel structure fabrication workshop with H-beam assembly", caption: "Steel Fabrication" },
   { src: "/images/factory/04-welding-work.jpg", alt: "Certified welder performing submerged arc welding on steel beam", caption: "SAW Welding" },
   { src: "/images/factory/05-shot-blasting.jpg", alt: "Shot blasting machine for surface treatment of steel members", caption: "Shot Blasting" },
-  { src: "/images/factory/06-steel-storage.png", alt: "Steel plate and raw material storage area in factory", caption: "Raw Materials" },
+  { src: "/images/factory/06-steel-storage.webp", alt: "Steel plate and raw material storage area in factory", caption: "Raw Materials" },
   { src: "/images/factory/07-fabricated-parts.jpg", alt: "Fabricated steel components ready for shipment", caption: "Finished Parts" },
-  { src: "/images/factory/08-factory-wide.png", alt: "Wide angle view of Laotie Steel manufacturing plant interior", caption: "Factory Overview" },
+  { src: "/images/factory/08-factory-wide.webp", alt: "Wide angle view of Laotie Steel manufacturing plant interior", caption: "Factory Overview" },
   { src: "/images/factory/09-roller-conveyor.jpg", alt: "Roller conveyor system for automated steel processing line", caption: "Conveyor System" },
-  { src: "/images/factory/10-quality-inspection.png", alt: "Quality control inspector measuring steel beam dimensions", caption: "Quality Inspection" },
+  { src: "/images/factory/10-quality-inspection.webp", alt: "Quality control inspector measuring steel beam dimensions", caption: "Quality Inspection" },
 ];
 
 export const metadata = {
-  title: "About Us | Laotie Steel Structure",
+  title: "About Us",
   description: "Learn about Laotie Steel Structure — trusted steel manufacturer in Shangqiu, China since 2009. 5 production lines, 5,000T/month capacity, 200+ skilled workers, 30+ countries served.",
   openGraph: {
     title: "About Laotie Steel Structure | CE & ISO Certified Factory",

@@ -113,7 +113,7 @@ const projects: Project[] = [
 ];
 
 export const metadata = {
-  title: "Projects | Laotie Steel Structure",
+  title: "Projects",
   description: "Featured steel structure projects delivered to 30+ countries worldwide. Portal frame buildings, space frames, floor decks, and cladding systems — Australia, Nigeria, Philippines, UAE, Indonesia.",
   openGraph: {
     title: "Steel Structure Projects | Laotie Steel Structure",

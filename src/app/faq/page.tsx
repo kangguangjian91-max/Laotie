@@ -122,7 +122,7 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "FAQ — Steel Structure Manufacturing Questions | Laotie",
+  title: "FAQ",
   description:
     "Frequently asked questions about steel structure manufacturing, pricing, payment terms, production time, shipping, installation support, and warranty. Get answers before you order.",
   openGraph: {
