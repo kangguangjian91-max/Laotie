@@ -1,5 +1,6 @@
 import { products as productData } from "@/data/products";
 import Image from 'next/image';
+import Link from "next/link";
 
 /* Map slugs to the homepage display format */
 const products = [
@@ -50,8 +51,8 @@ export default function Products() {
                 animation: 'fadeInUp 0.6s ease-out forwards',
               }}
             >
-              {/* Image Container */}
-              <div className="relative h-52 overflow-hidden">
+              {/* Image Container - Fixed 4:3 aspect ratio */}
+              <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src={product.image}
                   alt={product.title}
@@ -62,23 +63,14 @@ export default function Products() {
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                {/* Badge */}
-                {product.badge && (
-                  <div className="absolute top-3 left-3">
-                    <span className="px-2.5 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-steel-accent to-blue-500 shadow-lg">
-                      {product.badge}
-                    </span>
-                  </div>
-                )}
-
-                {/* Quick view overlay */}
+                {/* Get Quote button on hover */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a
-                    href={product.href}
-                    className="px-4 py-2 bg-white/90 backdrop-blur text-steel text-sm font-semibold rounded-lg shadow-lg hover:bg-white transition-colors"
+                  <Link
+                    href="/contact"
+                    className="px-6 py-3 bg-[#FF6B00] text-white text-sm font-bold rounded-xl shadow-lg hover:bg-[#e55a00] transition-colors inline-block"
                   >
-                    Learn More
-                  </a>
+                    Get Quote
+                  </Link>
                 </div>
               </div>
 
@@ -89,9 +81,35 @@ export default function Products() {
                 </h3>
                 <p className="text-steel-accent text-xs font-semibold mb-2">{product.subtitle}</p>
                 <p className="text-sm text-gray-500 leading-relaxed">{product.desc}</p>
+                
+                {/* CTA link */}
+                <div className="mt-4 pt-4 border-t border-gray-100">
+                  <Link
+                    href={product.href}
+                    className="text-steel-accent hover:text-[#FF6B00] text-sm font-semibold inline-flex items-center gap-1 transition-colors"
+                  >
+                    Learn More
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                      <path strokeLinecap="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CTA at the end of Products module */}
+        <div className="text-center mt-12">
+          <Link
+            href="/products"
+            className="inline-flex items-center px-8 py-4 bg-steel text-white text-base font-bold rounded-xl hover:bg-steel-light transition-colors shadow-lg hover:shadow-xl"
+          >
+            View All Products
+            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+              <path strokeLinecap="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>

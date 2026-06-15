@@ -46,7 +46,7 @@ export default function Hero() {
       <div
         className="absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full opacity-[0.08]"
         style={{
-          background: 'radial-gradient(circle, #e67e22 0%, transparent 70%)',
+          background: 'radial-gradient(circle, #FF6B00 0%, transparent 70%)',
           filter: 'blur(90px)',
         }}
       />
@@ -77,7 +77,7 @@ export default function Hero() {
 
       {/* ===== Floating Particles / Accent Dots ===== */}
       <div className="absolute top-[18%] right-[22%] w-2 h-2 rounded-full bg-[#378ADD]/50 animate-pulse-dot shadow-[0_0_10px_rgba(55,138,221,0.4)]" />
-      <div className="absolute top-[35%] right-[35%] w-1.5 h-1.5 rounded-full bg-[#e67e22]/40 animate-pulse-dot shadow-[0_0_8px_rgba(230,126,34,0.3)]" style={{ animationDelay: '0.7s' }} />
+      <div className="absolute top-[35%] right-[35%] w-1.5 h-1.5 rounded-full bg-[#FF6B00]/40 animate-pulse-dot shadow-[0_0_8px_rgba(255,107,0,0.3)]" style={{ animationDelay: '0.7s' }} />
       <div className="absolute bottom-[28%] right-[25%] w-1 h-1 rounded-full bg-white/30 animate-pulse-dot" style={{ animationDelay: '1.4s' }} />
       <div className="absolute top-[55%] left-[18%] w-1.5 h-1.5 rounded-full bg-[#378ADD]/30 animate-pulse-dot" style={{ animationDelay: '2s' }} />
 
@@ -99,57 +99,66 @@ export default function Hero() {
           <h1
             className="text-[2.5rem] sm:text-4xl lg:text-[3.75rem] xl:text-[4.25rem] font-bold leading-[1.08] mb-6 animate-fade-in-up animation-delay-100 tracking-tight"
           >
-            <span className="block text-white">Your Trusted</span>
-            <span className="block mt-1 bg-gradient-to-r from-[#7dd3fc] via-[#38bdf8] to-[#e67e22] bg-clip-text text-transparent drop-shadow-[0_2px_16px_rgba(55,138,221,0.25)]">
-              Steel Structure Partner
+            <span className="block text-white">Custom Steel Structures</span>
+            <span className="block mt-1 bg-gradient-to-r from-[#7dd3fc] via-[#38bdf8] to-[#FF6B00] bg-clip-text text-transparent drop-shadow-[0_2px_16px_rgba(55,138,221,0.25)]">
+              Delivered Globally in 30 Days
             </span>
-            <span className="block mt-1 text-gray-300 text-[0.65em] font-semibold">in China</span>
+            <span className="block mt-1 text-gray-300 text-[0.65em] font-semibold">Factory Direct Pricing — Get a Free Quote in 24h</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-gray-300/90 mb-10 leading-relaxed animate-fade-in-up animation-delay-200 font-light max-w-lg">
-            5 Production Lines &middot; 5,000T/Month Capacity &middot; Factory Direct Pricing
+            5,000T/Month Production Capacity &middot; 15+ Years Experience &middot; CE & ISO Certified
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-4 mb-14 animate-fade-in-up animation-delay-300">
+          <div className="flex flex-wrap gap-4 mb-8 animate-fade-in-up animation-delay-300">
             <a
               href="/contact"
-              className="group inline-flex items-center px-8 py-4 text-base font-bold text-white bg-gradient-to-r from-[#e67e22] to-orange-600 hover:from-[#d35400] hover:to-orange-700 rounded-lg transition-all duration-300 shadow-[0_4px_24px_rgba(230,126,34,0.35)] hover:shadow-[0_8px_36px_rgba(230,126,34,0.5)] hover:-translate-y-0.5 active:translate-y-0"
+              className="group inline-flex items-center px-10 py-5 text-lg font-bold text-white bg-[#FF6B00] hover:bg-[#e55a00] rounded-xl transition-all duration-300 shadow-[0_8px_32px_rgba(255,107,0,0.4)] hover:shadow-[0_12px_48px_rgba(255,107,0,0.6)] hover:-translate-y-1 active:translate-y-0"
             >
               Request a Free Quote
-              <svg className="ml-2.5 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                <path strokeLinecap="round" d="M13 7l5 5m0 0l-5 5m5-6H6" />
+              <svg className="ml-3 w-6 h-6 group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                <path strokeLinecap="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </a>
             <a
               href="/products"
-              className="inline-flex items-center px-7 py-4 text-base font-semibold text-white/90 border border-white/20 hover:border-white/40 hover:bg-white/5 rounded-lg transition-all duration-300 backdrop-blur-sm group"
+              className="inline-flex items-center px-8 py-4 text-base font-semibold text-white/90 border-2 border-white/30 hover:border-white/50 hover:bg-white/10 rounded-xl transition-all duration-300 backdrop-blur-sm group"
             >
               Explore Products
-              <svg className="ml-2 w-4 h-4 group-hover:translate-y-0.5 transition-transform opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+              <svg className="ml-2 w-5 h-5 group-hover:translate-y-0.5 transition-transform opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                 <path strokeLinecap="round" d="M19 9l-7 7-7-7" />
               </svg>
             </a>
           </div>
 
-          {/* Trust Indicators — elevated card style */}
-          <div className="grid grid-cols-3 gap-3 sm:gap-5 animate-fade-in-up animation-delay-400 max-w-md">
-            {[
-              { value: '15+', label: 'Years Experience' },
-              { value: '30+', label: 'Countries Served' },
-              { value: '5K', label: 'Tons/Month Capacity' },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="flex flex-col items-center sm:items-start p-3 sm:p-4 rounded-xl bg-white/[0.06] backdrop-blur-sm border border-white/[0.07] hover:bg-white/[0.09] hover:border-white/12 transition-all group"
-              >
-                <span className="text-2xl sm:text-3xl font-bold bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent group-hover:from-[#7dd3fc] group-hover:to-[#38bdf8] transition-all">
-                  {item.value}
-                </span>
-                <span className="text-[11px] sm:text-xs text-gray-400 mt-0.5 tracking-wide">{item.label}</span>
+          {/* Trust Indicators — Certification Logos */}
+          <div className="animate-fade-in-up animation-delay-400">
+            <p className="text-xs text-gray-400 mb-3 uppercase tracking-wider">Trusted & Certified By</p>
+            <div className="flex items-center gap-6">
+              {/* CE Certification Logo */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
+                <span className="text-white font-bold text-sm">CE</span>
               </div>
-            ))}
+              {/* ISO Certification Logo */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
+                <span className="text-white font-bold text-sm">ISO 9001</span>
+              </div>
+              {/* SGS Certification Logo */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
+                <span className="text-white font-bold text-sm">SGS</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Social Proof — Recent Activity */}
+          <div className="mt-6 animate-fade-in-up animation-delay-500">
+            <p className="text-sm text-gray-400">
+              <span className="inline-block w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+              <span className="text-green-400 font-semibold">12+</span> companies requested quotes this month
+            </p>
+            <p className="text-xs text-gray-500 mt-1">Usually reply within 24 hours</p>
           </div>
         </div>
       </div>

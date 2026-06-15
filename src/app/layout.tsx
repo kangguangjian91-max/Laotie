@@ -5,6 +5,7 @@ import CookieConsent from "@/components/CookieConsent";
 import JsonLd from "@/components/JsonLd";
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
+import FloatingCTA from "@/components/FloatingCTA";
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -198,6 +199,7 @@ export default function RootLayout({
         {children}
         <CookieConsent />
         <WhatsAppFloatingButton />
+        <FloatingCTA />
       </body>
     </html>
   );
