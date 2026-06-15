@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from 'next/image';
+import ImageCarousel from "@/components/ImageCarousel";
 import { ArrowLeft, Wrench, Factory, Shield, Globe, Users, Award } from "lucide-react";
 
 const milestones = [
@@ -47,6 +48,19 @@ const qualityChecks = [
   { stage: "Straightening & Correction", detail: "Straightness tolerance ≤ 1/1000. Visual + dial gauge inspection on every member." },
   { stage: "Surface Treatment", detail: "Surface cleanliness SA 2.5 per ISO 8501-1. Dry film thickness (DFT) measured to specification." },
   { stage: "Pre-Shipment", detail: "Trial assembly of main frame components. Packing list verification. Container loading supervision." },
+];
+
+const factoryImages = [
+  { src: "/images/factory/01-h-beam-warehouse.jpg", alt: "H-Beam storage warehouse at Laotie Steel factory", caption: "H-Beam Warehouse" },
+  { src: "/images/factory/02-tekla-modeling.png", alt: "Tekla Structures 3D BIM modeling for steel structure design", caption: "3D BIM Design" },
+  { src: "/images/factory/03-steel-fabrication.png", alt: "Steel structure fabrication workshop with H-beam assembly", caption: "Steel Fabrication" },
+  { src: "/images/factory/04-welding-work.jpg", alt: "Certified welder performing submerged arc welding on steel beam", caption: "SAW Welding" },
+  { src: "/images/factory/05-shot-blasting.jpg", alt: "Shot blasting machine for surface treatment of steel members", caption: "Shot Blasting" },
+  { src: "/images/factory/06-steel-storage.png", alt: "Steel plate and raw material storage area in factory", caption: "Raw Materials" },
+  { src: "/images/factory/07-fabricated-parts.jpg", alt: "Fabricated steel components ready for shipment", caption: "Finished Parts" },
+  { src: "/images/factory/08-factory-wide.png", alt: "Wide angle view of Laotie Steel manufacturing plant interior", caption: "Factory Overview" },
+  { src: "/images/factory/09-roller-conveyor.jpg", alt: "Roller conveyor system for automated steel processing line", caption: "Conveyor System" },
+  { src: "/images/factory/10-quality-inspection.png", alt: "Quality control inspector measuring steel beam dimensions", caption: "Quality Inspection" },
 ];
 
 export const metadata = {
@@ -124,15 +138,8 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-80 lg:h-96 overflow-hidden shadow-lg relative">
-                <Image
-                  src="/images/factory-workshop.webp"
-                  alt="Laotie Steel Structure Factory Workshop — Shangqiu, China"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-3 -left-3 bg-white rounded-xl shadow-lg p-4 border border-gray-100">
+              <ImageCarousel images={factoryImages} interval={4000} />
+              <div className="absolute -bottom-3 -left-3 bg-white rounded-xl shadow-lg p-4 border border-gray-100 z-30">
                 <div className="text-xs text-gray-400 mb-0.5">Certified Since</div>
                 <div className="text-lg font-bold text-steel-accent">2015</div>
                 <div className="text-xs text-gray-500">ISO 9001 + CE EN 1090-1</div>
