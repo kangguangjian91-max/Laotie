@@ -43,12 +43,13 @@ function updateGtagConsent(analytics: boolean, marketing: boolean) {
 }
 
 // Toggle switch sub-component
-function Toggle({ checked, disabled = false, onChange }: { checked: boolean; disabled?: boolean; onChange?: () => void }) {
+function Toggle({ checked, disabled = false, onChange, label }: { checked: boolean; disabled?: boolean; onChange?: () => void; label?: string }) {
   return (
     <button
       type="button"
       role="switch"
       aria-checked={checked}
+      aria-label={label || (checked ? 'Disable' : 'Enable')}
       disabled={disabled}
       onClick={onChange}
       className={`
@@ -159,19 +160,19 @@ export default function CookieConsent() {
             <div className="flex items-center justify-between py-2 px-3 rounded-lg bg-gray-50">
               <div>
                 <span className="text-sm font-semibold text-gray-700">Necessary</span>
-                <span className="text-xs text-gray-400 ml-2">Always active</span>
-                <p className="text-xs text-gray-400 mt-0.5">
+                <span className="text-xs text-gray-500 ml-2">Always active</span>
+                <p className="text-xs text-gray-500 mt-0.5">
                   Required for the website to function.
                 </p>
               </div>
-              <Toggle checked disabled />
+              <Toggle checked disabled label="Necessary cookies (always active)" />
             </div>
 
             {/* Analytics */}
             <div className="flex items-center justify-between py-2 px-3 rounded-lg bg-gray-50">
               <div>
                 <span className="text-sm font-semibold text-gray-700">Analytics</span>
-                <p className="text-xs text-gray-400 mt-0.5">
+                <p className="text-xs text-gray-500 mt-0.5">
                   Google Analytics — helps us understand visitor behavior.
                 </p>
               </div>
@@ -180,6 +181,7 @@ export default function CookieConsent() {
                 onChange={() =>
                   setConsent((prev) => ({ ...prev, analytics: !prev.analytics }))
                 }
+                label="Analytics cookies"
               />
             </div>
 
@@ -187,7 +189,7 @@ export default function CookieConsent() {
             <div className="flex items-center justify-between py-2 px-3 rounded-lg bg-gray-50">
               <div>
                 <span className="text-sm font-semibold text-gray-700">Marketing</span>
-                <p className="text-xs text-gray-400 mt-0.5">
+                <p className="text-xs text-gray-500 mt-0.5">
                   Personalized advertising and remarketing.
                 </p>
               </div>
@@ -196,6 +198,7 @@ export default function CookieConsent() {
                 onChange={() =>
                   setConsent((prev) => ({ ...prev, marketing: !prev.marketing }))
                 }
+                label="Marketing cookies"
               />
             </div>
           </div>

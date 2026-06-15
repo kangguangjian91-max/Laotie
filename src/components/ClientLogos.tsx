@@ -98,7 +98,7 @@ export default function ClientLogos() {
               </p>
 
               {/* Country */}
-              <p className="text-xs text-gray-400 text-center mt-0.5">
+              <p className="text-xs text-gray-500 text-center mt-0.5">
                 {client.country}
               </p>
             </div>

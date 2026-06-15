@@ -46,6 +46,7 @@ export default function FloatingWhatsApp() {
             </div>
             <button
               onClick={() => setIsOpen(false)}
+              aria-label="Close WhatsApp chat"
               className="ml-auto text-white/80 hover:text-white transition-colors"
             >
               <X className="w-5 h-5" />

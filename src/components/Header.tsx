@@ -40,7 +40,7 @@ export default function Header() {
             <span className="text-steel font-bold text-xl tracking-tight">
               LAOTIE
             </span>
-            <span className="hidden sm:inline text-gray-400 text-sm font-medium">
+            <span className="hidden sm:inline text-gray-500 text-sm font-medium">
               Steel Structure
             </span>
           </a>
