@@ -147,7 +147,7 @@ export default function ProjectsPage() {
         {/* Hero */}
         <section className="relative bg-steel overflow-hidden">
           <div className="absolute inset-0 opacity-15">
-            <img src="/images/projects/project-04.webp" alt="" className="w-full h-full object-cover" />
+            <img src="/images/projects/project-04.webp" alt="Completed steel structure project by Laotie Steel - industrial building construction" className="w-full h-full object-cover" />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-steel via-steel/95 to-steel/80" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">

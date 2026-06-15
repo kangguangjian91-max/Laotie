@@ -88,6 +88,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
+    other: [
+      { rel: "icon", url: "/favicon.ico", sizes: "any" },
+    ],
   },
   // Open Graph
   openGraph: {
