@@ -12,7 +12,7 @@ import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Steel Structure Manufacturer in China — Factory Direct Pricing | Laotie Steel Structure",
   description:
     "Laotie Steel Structure: 15+ years factory direct steel buildings. 5 production lines, 5,000T/month. Portal frames, space frames, floor decks, cladding. CE & ISO certified. Serving 30+ countries. Get quotation within 24 hours.",
   openGraph: {
