@@ -1,27 +1,19 @@
 'use client'
 
-import { useState } from 'react'
 import Image from 'next/image'
 
 export default function Hero() {
-  const [bgLoaded, setBgLoaded] = useState(false)
-
   return (
     <section id="home" className="relative bg-steel overflow-hidden min-h-[680px] sm:min-h-[720px] lg:min-h-[780px] flex items-center">
       {/* ===== Background Image Layer ===== */}
       <div className="absolute inset-0">
-        {/* Skeleton shimmer placeholder */}
-        {!bgLoaded && (
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0c1929] via-[#1a365d] to-[#0f2744]" />
-        )}
         <Image
           src="/images/hero-bg-mobile.webp"
           alt="Steel structure factory"
           priority
           fill
           sizes="100vw"
-          className={`object-cover transition-opacity duration-300 ease-out ${bgLoaded ? 'opacity-100' : 'opacity-0'}`}
-          onLoad={() => setBgLoaded(true)}
+          className="object-cover"
         />
 
         {/* ===== Multi-layer Gradient Overlay — cinematic depth ===== */}
