@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Image from 'next/image';
 import { ArrowLeft, Wrench, Factory, Shield, Globe, Users, Award } from "lucide-react";
 
 const milestones = [
@@ -74,7 +75,7 @@ export default function AboutPage() {
         {/* Hero banner */}
         <section className="relative bg-steel overflow-hidden">
           <div className="absolute inset-0 opacity-15">
-            <img src="/images/factory-workshop.webp" alt="Laotie Steel factory workshop interior - steel structure manufacturing facility" className="w-full h-full object-cover" />
+            <Image src="/images/factory-workshop.webp" alt="Laotie Steel factory workshop interior - steel structure manufacturing facility" fill className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-steel via-steel/95 to-steel/80" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
@@ -123,11 +124,12 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-80 lg:h-96 overflow-hidden shadow-lg">
-                <img
+              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-80 lg:h-96 overflow-hidden shadow-lg relative">
+                <Image
                   src="/images/factory-workshop.webp"
                   alt="Laotie Steel Structure Factory Workshop — Shangqiu, China"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <div className="absolute -bottom-3 -left-3 bg-white rounded-xl shadow-lg p-4 border border-gray-100">

@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Image from 'next/image';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
@@ -127,10 +128,11 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
       <main className="bg-white">
         {/* Hero Banner */}
         <section className="relative bg-steel overflow-hidden">
-          <div className="absolute inset-0">
-            <img
+          <div className="absolute inset-0 relative">
+            <Image
               src={product.image}
               alt={product.title}
+              fill
               className="w-full h-full object-cover opacity-30"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-steel via-steel/90 to-steel/70" />
@@ -218,11 +220,12 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               <aside className="lg:col-span-1">
                 <div className="sticky top-24 space-y-6">
                   {/* Product Image Card */}
-                  <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
-                    <img
+                  <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm relative aspect-square">
+                    <Image
                       src={product.image}
                       alt={product.title}
-                      className="w-full aspect-square object-cover"
+                      fill
+                      className="w-full h-full object-cover"
                     />
                   </div>
 
@@ -299,10 +302,11 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                     href={`/products/${relatedProduct.slug}`}
                     className="group bg-gray-50 rounded-xl border border-gray-100 hover:border-steel-accent hover:shadow-md transition-all overflow-hidden"
                   >
-                    <div className="aspect-[4/3] overflow-hidden">
-                      <img
+                    <div className="aspect-[4/3] overflow-hidden relative">
+                      <Image
                         src={relatedProduct.image}
                         alt={relatedProduct.title}
+                        fill
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>

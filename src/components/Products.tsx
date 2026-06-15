@@ -1,4 +1,5 @@
 import { products as productData } from "@/data/products";
+import Image from 'next/image';
 
 /* Map slugs to the homepage display format */
 const products = [
@@ -51,9 +52,10 @@ export default function Products() {
             >
               {/* Image Container */}
               <div className="relative h-52 overflow-hidden">
-                <img
+                <Image
                   src={product.image}
                   alt={product.title}
+                  fill
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 {/* Overlay gradient */}

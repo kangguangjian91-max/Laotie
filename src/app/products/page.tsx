@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
+import Image from 'next/image';
 import { products } from "@/data/products";
 import { ArrowLeft } from "lucide-react";
 
@@ -96,10 +97,11 @@ export default function ProductsPage() {
                     </a>
                   </div>
                 </div>
-                <div className={`bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 lg:h-80 overflow-hidden ${i % 2 === 1 ? "lg:order-1" : ""}`}>
-                  <img
+                <div className={`bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 lg:h-80 overflow-hidden relative ${i % 2 === 1 ? "lg:order-1" : ""}`}>
+                  <Image
                     src={product.image}
                     alt={product.title}
+                    fill
                     className="w-full h-full object-cover"
                   />
                 </div>

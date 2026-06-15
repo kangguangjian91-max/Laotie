@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Image from 'next/image';
 import { Award, FileCheck, Globe, Shield } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -148,11 +149,12 @@ export default function CertificatesPage() {
                   </div>
                 </div>
                 {/* Certificate image */}
-                <div className="mt-4 bg-gray-50 rounded-lg overflow-hidden border border-gray-200">
-                  <img
+                <div className="mt-4 bg-gray-50 rounded-lg overflow-hidden border border-gray-200 relative min-h-[200px]">
+                  <Image
                     src={cert.image}
                     alt={`${cert.title} certificate`}
-                    className="w-full h-auto object-contain"
+                    fill
+                    className="object-contain p-4"
                     loading="lazy"
                   />
                 </div>

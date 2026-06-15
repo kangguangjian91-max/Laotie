@@ -122,8 +122,8 @@ export default function Footer() {
             <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
             <a href="/sitemap.xml" className="hover:text-white transition-colors">Sitemap</a>
-            {/* Social: update href after creating LinkedIn Company Page */}
-            <a
+            {/* Social — LinkedIn: create company page at linkedin.com/company/laotie-steel-structure, then uncomment below */}
+            {/* <a
               href="https://www.linkedin.com/company/laotie-steel-structure"
               target="_blank"
               rel="noopener noreferrer"
@@ -133,7 +133,7 @@ export default function Footer() {
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M20.447 20.452h-3.769v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.369 4.267 5.455v6.286zM5.337 7.433a2.18 2.18 0 01-2.182-2.18c0-1.205.977-2.182 2.182-2.182 1.205 0 2.182.977 2.182 2.182a2.18 2.18 0 01-2.182 2.18zM6.758 20.452H3.918V9h2.84v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
               </svg>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

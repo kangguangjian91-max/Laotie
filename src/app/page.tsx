@@ -5,6 +5,7 @@ import Products from "@/components/Products";
 import Factory from "@/components/Factory";
 import ProductionProcess from "@/components/ProductionProcess";
 import Projects from "@/components/Projects";
+import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
@@ -40,6 +41,7 @@ export default function Home() {
         <Factory />
         <ProductionProcess />
         <Projects />
+        <Testimonials />
         <Contact />
       </main>
       <Footer />

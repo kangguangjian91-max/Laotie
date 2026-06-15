@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 
 export default function Hero() {
   const [bgLoaded, setBgLoaded] = useState(false)
@@ -13,11 +14,12 @@ export default function Hero() {
         {!bgLoaded && (
           <div className="absolute inset-0 bg-gradient-to-br from-[#0c1929] via-[#1a365d] to-[#0f2744]" />
         )}
-        <img
+        <Image
           src="/images/hero-bg.webp"
           alt="Steel structure factory"
-          fetchPriority="high"
-          className={`w-full h-full object-cover transition-opacity duration-1000 ease-out ${bgLoaded ? 'opacity-100' : 'opacity-0'}`}
+          priority
+          fill
+          className={`object-cover transition-opacity duration-1000 ease-out ${bgLoaded ? 'opacity-100' : 'opacity-0'}`}
           onLoad={() => setBgLoaded(true)}
         />
 

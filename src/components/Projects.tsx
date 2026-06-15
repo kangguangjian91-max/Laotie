@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const projects = [
   { name: "Industrial Warehouse", location: "Australia", type: "Portal Frame" },
   { name: "Factory Complex", location: "Nigeria", type: "Steel Structure" },
@@ -36,9 +38,10 @@ export default function Projects() {
               >
                 {/* Project photo */}
                 <div className="relative h-48 overflow-hidden">
-                  <img
+                  <Image
                     src={`/images/projects/project-${String(i + 1).padStart(2, '0')}.webp`}
                     alt={project.name}
+                    fill
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
