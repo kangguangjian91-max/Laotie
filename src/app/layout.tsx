@@ -140,10 +140,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google Consent Mode v2 — GA4 loads after interactive to reduce TBT */}
+        {/* Google Consent Mode v2 — GA4 lazy loads to reduce render blocking */}
         <Script
           id="ga4-consent-mode"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -180,8 +180,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        {/* Preload critical images with highest priority */}
-        <link rel="preload" as="image" href="/images/hero-bg-mobile.webp" fetchPriority="high" crossOrigin="anonymous" />
+        {/* Preload critical fonts */}
+        <link rel="preload" href="/fonts/system-fonts.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         {/* Font optimization - system fonts with fallback */}
         <style dangerouslySetInnerHTML={{
           __html: `

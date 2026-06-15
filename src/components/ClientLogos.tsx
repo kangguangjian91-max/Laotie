@@ -1,4 +1,4 @@
-'use client';
+// Server Component - no client-side interactivity needed
 
 import Image from 'next/image';
 
