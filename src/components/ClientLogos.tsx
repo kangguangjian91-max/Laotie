@@ -6,49 +6,49 @@ import Image from 'next/image';
 // Client data with real avatars
 const clientLogos = [
   {
-    name: '客户 A',
+    name: 'Client A',
     nameEn: 'Client A',
-    country: '澳大利亚',
+    country: 'Australia',
     countryEn: 'Australia',
     industry: 'Warehouse',
     avatar: '/images/avatars/client-australia.webp',
   },
   {
-    name: '客户 B',
+    name: 'Client B',
     nameEn: 'Client B',
-    country: '尼日利亚',
+    country: 'Nigeria',
     countryEn: 'Nigeria',
     industry: 'Factory',
     avatar: '/images/avatars/client-nigeria.webp',
   },
   {
-    name: '客户 C',
+    name: 'Client C',
     nameEn: 'Client C',
-    country: '菲律宾',
+    country: 'Philippines',
     countryEn: 'Philippines',
     industry: 'Mall',
     avatar: '/images/avatars/client-philippines.webp',
   },
   {
-    name: '客户 D',
+    name: 'Client D',
     nameEn: 'Client D',
-    country: '阿曼',
+    country: 'Oman',
     countryEn: 'Oman',
     industry: 'Logistics',
     avatar: '/images/avatars/client-oman.webp',
   },
   {
-    name: '客户 E',
+    name: 'Client E',
     nameEn: 'Client E',
-    country: '沙特阿拉伯',
+    country: 'Saudi Arabia',
     countryEn: 'Saudi Arabia',
     industry: 'Steel Plant',
     avatar: '/images/avatars/client-saudi.webp',
   },
   {
-    name: '客户 F',
+    name: 'Client F',
     nameEn: 'Client F',
-    country: '南非',
+    country: 'South Africa',
     countryEn: 'South Africa',
     industry: 'Mining',
     avatar: '/images/avatars/client-south-africa.webp',
@@ -74,10 +74,10 @@ export default function ClientLogos() {
             </svg>
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            深受全球客户信赖
+            Trusted by Global Clients
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            我们已成功为30多个国家的客户交付了钢结构项目。
+            We have successfully delivered steel structure projects to clients in 30+ countries.
           </p>
         </div>
 
