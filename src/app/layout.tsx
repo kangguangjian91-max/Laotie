@@ -92,6 +92,11 @@ export const metadata: Metadata = {
       { rel: "icon", url: "/favicon.ico", sizes: "any" },
     ],
   },
+  // Theme color for mobile browsers
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#1e3a5f" },
+    { media: "(prefers-color-scheme: dark)", color: "#1e3a5f" },
+  ],
   // Open Graph
   openGraph: {
     type: "website",
@@ -163,6 +168,11 @@ export default function RootLayout({
           name="google-site-verification"
           content="5KqpO4dMQBfGbZFqadCEqcbNzXNCCaVc9WMje2NcEuE"
         />
+        {/* Apple mobile web app optimization */}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        {/* Preload critical images */}
+        <link rel="preload" as="image" href="/images/hero-bg.webp" />
       </head>
       <body className="antialiased">
         {children}
