@@ -86,9 +86,10 @@ export default function Products() {
                 <div className="mt-4 pt-4 border-t border-gray-100">
                   <Link
                     href={product.href}
+                    aria-label={`Learn more about ${product.title}`}
                     className="text-steel-accent hover:text-[#FF6B00] text-sm font-semibold inline-flex items-center gap-1 transition-colors"
                   >
-                    Learn More
+                    Learn more about {product.title}
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                       <path strokeLinecap="round" d="M9 5l7 7-7 7" />
                     </svg>
