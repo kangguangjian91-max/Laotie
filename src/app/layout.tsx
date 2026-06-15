@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 import CookieConsent from "@/components/CookieConsent";
 import JsonLd from "@/components/JsonLd";
@@ -127,17 +128,38 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google Consent Mode v2 — GA4 always loads, defaults to denied */}
+        <Script
+          id="ga4-consent-mode"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                'analytics_storage': 'denied',
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'wait_for_update': 500
+              });
+              gtag('js', new Date());
+              var s = document.createElement('script');
+              s.async = true;
+              s.src = 'https://www.googletagmanager.com/gtag/js?id=G-74QWNLKHEH';
+              s.onload = function() {
+                gtag('config', 'G-74QWNLKHEH');
+              };
+              document.head.appendChild(s);
+            `,
+          }}
+        />
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
         <meta
           name="google-site-verification"
           content="5KqpO4dMQBfGbZFqadCEqcbNzXNCCaVc9WMje2NcEuE"
         />
-        {/*
-          GA4 and Clarity scripts are loaded dynamically
-          by CookieConsent after user grants analytics consent.
-          This ensures GDPR compliance.
-        */}
       </head>
       <body className="antialiased">
         {children}

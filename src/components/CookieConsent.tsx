@@ -10,6 +10,7 @@ interface Consent {
 
 const STORAGE_KEY = 'laotie-cookie-consent';
 
+/** Read consent from localStorage (runs only on client) */
 function getStoredConsent(): Consent | null {
   if (typeof window === 'undefined') return null;
   try {
@@ -20,38 +21,26 @@ function getStoredConsent(): Consent | null {
   }
 }
 
+/** Persist consent to localStorage */
 function storeConsent(c: Consent) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(c));
   } catch { /* ignore */ }
 }
 
-function loadGtag() {
+/** Tell GA4 to update consent based on user choice */
+function updateGtagConsent(analytics: boolean, marketing: boolean) {
   if (typeof window === 'undefined') return;
-  if (document.querySelector('script[src*="googletagmanager"]')) return;
-
-  const s = document.createElement('script');
-  s.async = true;
-  s.src = `https://www.googletagmanager.com/gtag/js?id=G-74QWNLKHEH`;
-  document.head.appendChild(s);
-
   const w = window as any;
-  w.dataLayer = w.dataLayer || [];
-  w.gtag = function () { w.dataLayer.push(arguments); };
-  w.gtag('js', new Date());
-  w.gtag('config', 'G-74QWNLKHEH');
-}
+  if (!w.gtag) return;
 
-// Clarity — add your project ID and uncomment when ready:
-// function loadClarity(id: string) {
-//   if (typeof window === 'undefined') return;
-//   const w = window as any;
-//   w.clarity = w.clarity || function () { (w.clarity.q = w.clarity.q || []).push(arguments); };
-//   const t = document.createElement('script');
-//   t.async = true;
-//   t.src = 'https://www.clarity.ms/tag/' + id;
-//   document.head.appendChild(t);
-// }
+  w.gtag('consent', 'update', {
+    'analytics_storage': analytics ? 'granted' : 'denied',
+    'ad_storage':        marketing ? 'granted' : 'denied',
+    'ad_user_data':      marketing ? 'granted' : 'denied',
+    'ad_personalization': marketing ? 'granted' : 'denied',
+  });
+}
 
 // Toggle switch sub-component
 function Toggle({ checked, disabled = false, onChange }: { checked: boolean; disabled?: boolean; onChange?: () => void }) {
@@ -91,21 +80,18 @@ export default function CookieConsent() {
     setMounted(true);
     const stored = getStoredConsent();
     if (stored) {
-      if (stored.analytics) {
-        loadGtag();
-      }
-      return;
+      // User already made a choice — apply it to GA4
+      updateGtagConsent(stored.analytics, stored.marketing);
+      return; // don't show banner
     }
-    // slight delay for smooth entry
+    // First visit — show banner after a slight delay for smooth entry
     const t = setTimeout(() => setShow(true), 200);
     return () => clearTimeout(t);
   }, []);
 
   function applyAndClose(c: Consent) {
     storeConsent(c);
-    if (c.analytics) {
-      loadGtag();
-    }
+    updateGtagConsent(c.analytics, c.marketing);
     setShow(false);
   }
 
@@ -176,7 +162,7 @@ export default function CookieConsent() {
               <div>
                 <span className="text-sm font-semibold text-gray-700">Analytics</span>
                 <p className="text-xs text-gray-400 mt-0.5">
-                  Google Analytics &amp; Clarity — helps us understand visitor behavior.
+                  Google Analytics — helps us understand visitor behavior.
                 </p>
               </div>
               <Toggle
