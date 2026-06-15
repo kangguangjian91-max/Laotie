@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description:
       "Factory-direct steel buildings, space frames, floor decks, cladding systems. 5 lines, 5,000T/month capacity. CE & ISO certified.",
     images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
-    url: "https://laotie-steel-structure.netlify.app",
+    url: "https://https://laotie-steel.com",
     type: "website",
   },
   twitter: {

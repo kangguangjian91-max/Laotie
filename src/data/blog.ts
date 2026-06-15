@@ -166,7 +166,7 @@ Every OldTie steel structure ships with:
 The best maintenance program starts with a well-built structure. Our factory in Shangqiu, Henan produces steel buildings engineered for your local conditions — correct steel grade, wind/snow/seismic design, and coating system matched to your environment.
 
 📱 **WhatsApp**: +86 166-5073-5555  
-🌐 **Website**: https://oldtie-steel.netlify.app`,
+🌐 **Website**: https://https://laotie-steel.com`,
   },
   {
     slug: "steel-structure-processing-techniques-cnc-welding-guide",
@@ -298,7 +298,7 @@ When evaluating suppliers, ask:
 Whether you're building a 500m² warehouse or a 10,000m² factory complex, processing quality determines your project's success. OldTie Steel Structure combines CNC precision, certified welding, and proven surface treatment to deliver structures that last.
 
 📱 **WhatsApp**: +86 166-5073-5555  
-🌐 **Website**: https://oldtie-steel.netlify.app`,
+🌐 **Website**: https://https://laotie-steel.com`,
   },
   {
     slug: "steel-structure-production-china-manufacturing-guide",
@@ -434,7 +434,7 @@ A: Yes. Our engineering team provides complete erection drawings, bolt lists, an
 Ready to start your steel structure project? Contact Laotie for a **free quote within 24 hours**.
 
 📱 **WhatsApp**: +86 166-5073-5555  
-🌐 **Website**: https://laotie-steel-structure.netlify.app  
+🌐 **Website**: https://https://laotie-steel.com  
 📧 **Email**: Contact us via the website contact form
 
 ---
@@ -613,7 +613,7 @@ Every Laotie order includes:
 - ✅ Optional: on-site engineer dispatch
 
 📱 **WhatsApp**: +86 166-5073-5555  
-🌐 **Website**: https://laotie-steel-structure.netlify.app  
+🌐 **Website**: https://https://laotie-steel.com  
 📧 **Email**: Contact us via website contact form
 
 ---

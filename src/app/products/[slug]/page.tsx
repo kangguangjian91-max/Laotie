@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
       title: `${product.title} — Laotie Steel Structure`,
       description: product.description,
       images: [{ url: product.image, width: 800, height: 800 }],
-      url: `https://laotie-steel-structure.netlify.app/products/${slug}`,
+      url: `https://https://laotie-steel.com/products/${slug}`,
       type: "article",
     },
     twitter: {
@@ -93,7 +93,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     "@type": "Product",
     name: product.title,
     description: product.description,
-    image: `https://laotie-steel-structure.netlify.app${product.image}`,
+    image: `https://https://laotie-steel.com${product.image}`,
     category: "Steel Structure",
     manufacturer: {
       "@type": "Organization",
@@ -113,9 +113,9 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://laotie-steel-structure.netlify.app/" },
-      { "@type": "ListItem", position: 2, name: "Products", item: "https://laotie-steel-structure.netlify.app/products" },
-      { "@type": "ListItem", position: 3, name: product.title, item: `https://laotie-steel-structure.netlify.app/products/${slug}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://https://laotie-steel.com/" },
+      { "@type": "ListItem", position: 2, name: "Products", item: "https://https://laotie-steel.com/products" },
+      { "@type": "ListItem", position: 3, name: product.title, item: `https://https://laotie-steel.com/products/${slug}` },
     ],
   };
 
