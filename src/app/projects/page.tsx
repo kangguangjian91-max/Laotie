@@ -188,6 +188,24 @@ export default function ProjectsPage() {
           </div>
         </section>
 
+        {/* Calculator CTA */}
+        <section className="bg-blue-50 py-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-xl font-bold text-steel mb-2">
+              Want to Estimate Your Project Cost?
+            </h2>
+            <p className="text-gray-600 mb-4">
+              Use our free online calculator to get a preliminary quote in 1 minute.
+            </p>
+            <a
+              href="/calculator"
+              className="inline-block bg-steel text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-900 transition"
+            >
+              Try Cost Calculator →
+            </a>
+          </div>
+        </section>
+
         {/* Project Cards */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
           <div className="space-y-12">

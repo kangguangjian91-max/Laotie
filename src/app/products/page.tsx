@@ -66,7 +66,21 @@ export default function ProductsPage() {
             <ArrowLeft className="w-4 h-4" /> Back to Home
           </a>
           <h1 className="text-3xl font-bold text-steel mb-4">Our Products</h1>
-          <p className="text-gray-500 mb-12 max-w-2xl">CE & ISO certified steel structure products, 5 production lines, 5,000T/month capacity. Factory direct export to 30+ countries.</p>
+          <p className="text-gray-500 mb-8 max-w-2xl">CE & ISO certified steel structure products, 5 production lines, 5,000T/month capacity. Factory direct export to 30+ countries.</p>
+
+          {/* Calculator CTA */}
+          <div className="mb-12 p-6 bg-blue-50 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h3 className="font-bold text-steel mb-1">Estimate Your Project Cost</h3>
+              <p className="text-sm text-gray-600">Free online calculator — get a preliminary quote in 1 minute.</p>
+            </div>
+            <a
+              href="/calculator"
+              className="whitespace-nowrap bg-steel text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-blue-900 transition"
+            >
+              Try Cost Calculator →
+            </a>
+          </div>
 
           <div className="space-y-16">
             {products.map((product, i) => (

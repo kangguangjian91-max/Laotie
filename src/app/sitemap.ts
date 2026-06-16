@@ -9,6 +9,7 @@ const siteUrl = "https://www.laotie-steel.com";
 
 const staticRoutes = [
   "",
+  "/calculator",
   "/products",
   "/projects",
   "/blog",

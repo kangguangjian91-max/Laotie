@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steel Structure Quote Calculator - UI Prototype | Laotie Steel</title>
+<style>
+  :root {
+    --steel: #1e3a5f;
+    --steel-light: #2d5a8a;
+    --steel-accent: #e67e22;
+    --cta: #ff6b35;
+    --cta-hover: #e55a2b;
+    --section-bg: #f8fafc;
+    --text-primary: #1a1a2e;
+    --text-secondary: #64748b;
+    --text-muted: #94a3b8;
+    --border-color: #e2e8f0;
+    --border-hover: #cbd5e1;
+    --success: #16a34a;
+    --info: #2563eb;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--section-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== Header (mock) ===== */
+  .proto-header {
+    background: var(--steel);
+    color: white;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .proto-header .logo {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+  }
+
+  .proto-header .logo span { color: var(--steel-accent); }
+
+  .proto-header .badge {
+    font-size: 11px;
+    background: rgba(255,255,255,0.15);
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  /* ===== Hero ===== */
+  .hero {
+    background: linear-gradient(135deg, var(--steel) 0%, var(--steel-light) 100%);
+    color: white;
+    padding: 48px 24px 40px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+  }
+
+  .hero h1 span { color: var(--steel-accent); }
+
+  .hero p {
+    font-size: 15px;
+    opacity: 0.85;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+
+  .hero-stat {
+    text-align: center;
+  }
+
+  .hero-stat .num {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--steel-accent);
+  }
+
+  .hero-stat .label {
+    font-size: 12px;
+    opacity: 0.7;
+  }
+
+  /* ===== Main Container ===== */
+  .container {
+    max-width: 1100px;
+    margin: -28px auto 40px;
+    padding: 0 20px;
+  }
+
+  .calc-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 4px 24px rgba(30,58,95,0.08), 0 1px 3px rgba(0,0,0,0.05);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+  }
+
+  .calc-grid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    min-height: 600px;
+  }
+
+  @media (max-width: 860px) {
+    .calc-grid { grid-template-columns: 1fr; }
+    .result-panel { order: -1; }
+  }
+
+  /* ===== Input Panel ===== */
+  .input-panel {
+    padding: 32px 28px;
+    border-right: 1px solid var(--border-color);
+    background: white;
+  }
+
+  .input-panel h2 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--text-primary);
+  }
+
+  .input-panel .subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+
+  .form-group { margin-bottom: 18px; }
+
+  .form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+  }
+
+  .form-group label .hint {
+    font-weight: 400;
+    color: var(--text-muted);
+    font-size: 12px;
+  }
+
+  select, input[type="number"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    color: var(--text-primary);
+    background: white;
+    transition: border-color 0.2s;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394a3b8' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+  }
+
+  select:focus, input:focus {
+    border-color: var(--steel-light);
+    box-shadow: 0 0 0 3px rgba(45,90,138,0.1);
+  }
+
+  .dim-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
+  .dim-row .form-group { margin-bottom: 0; }
+
+  .area-display {
+    background: var(--section-bg);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -4px;
+  }
+
+  .area-display strong { color: var(--steel-light); font-size: 15px; }
+
+  .calc-btn {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, var(--cta) 0%, #d94a1e 100%);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: transform 0.15s, box-shadow 0.15s;
+    letter-spacing: 0.3px;
+  }
+
+  .calc-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(230,126,34,0.35);
+  }
+
+  .disclaimer {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-color);
+  }
+
+  /* ===== Result Panel ===== */
+  .result-panel {
+    background: linear-gradient(180deg, #f0f4f8 0%, white 100%);
+    padding: 36px 36px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .result-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .result-header .icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--success) 0%, #15803d 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .result-header h2 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .result-header .status-badge {
+    font-size: 11px;
+    background: #dcfce7;
+    color: #166534;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-left: auto;
+  }
+
+  /* Metric Cards */
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 650px) {
+    .metrics { grid-template-columns: 1fr 1fr; }
+  }
+
+  .metric-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 18px 16px;
+    text-align: center;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+
+  .metric-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+  }
+
+  .metric-card.highlight {
+    border-color: var(--steel-accent);
+    background: linear-gradient(180deg, #fffbeb 0%, white 100%);
+  }
+
+  .metric-card .m-icon {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .metric-card .m-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .metric-card .m-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--steel);
+    line-height: 1.2;
+  }
+
+  .metric-card .m-unit {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--text-secondary);
+  }
+
+  .metric-card .m-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  /* Price Bar */
+  .price-bar {
+    background: white;
+    border: 2px solid var(--steel-accent);
+    border-radius: var(--radius-lg);
+    padding: 20px 24px;
+    margin-bottom: 20px;
+  }
+
+  .price-bar .pb-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .price-bar .pb-range {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .price-bar .pb-from {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .price-bar .pb-price {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--steel-accent);
+    letter-spacing: -1px;
+  }
+
+  .price-bar .pb-to {
+    font-size: 18px;
+    color: var(--text-muted);
+  }
+
+  .price-bar .pb-note {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 6px;
+  }
+
+  .price-bar .pb-breakdown {
+    display: flex;
+    gap: 16px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--border-color);
+    flex-wrap: wrap;
+  }
+
+  .pb-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  .pb-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* Spec Box */
+  .spec-box {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    margin-bottom: 20px;
+  }
+
+  .spec-box .sb-title {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .spec-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .spec-tag {
+    font-size: 12px;
+    background: var(--section-bg);
+    border: 1px solid var(--border-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  .spec-tag.primary {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+    color: var(--info);
+  }
+
+  /* Timeline */
+  .timeline {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    margin-bottom: 20px;
+  }
+
+  .tl-title {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .tl-bar {
+    display: flex;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .tl-seg { transition: all 0.5s ease; }
+
+  .tl-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--text-secondary);
+  }
+
+  .tl-label span { font-weight: 600; color: var(--steel); }
+
+  /* CTA Button */
+  .cta-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--steel) 0%, var(--steel-light) 100%);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: transform 0.15s, box-shadow 0.15s;
+    margin-top: auto;
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba(30,58,95,0.25);
+  }
+
+  .cta-btn .arrow {
+    font-size: 18px;
+    transition: transform 0.2s;
+  }
+
+  .cta-btn:hover .arrow { transform: translateX(4px); }
+
+  /* Empty State */
+  .empty-state {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 40px;
+  }
+
+  .empty-state .es-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.4;
+  }
+
+  .empty-state p {
+    font-size: 14px;
+    max-width: 280px;
+  }
+
+  /* Hidden result initially */
+  #resultContent { display: none; }
+  #resultContent.visible { display: flex; flex-direction: column; }
+  #emptyState.hidden { display: none; }
+
+  /* Number animation */
+  .animate-num { transition: all 0.4s ease-out; }
+
+  /* Footer note */
+  .proto-footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .proto-footer strong { color: var(--steel-accent); }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="proto-header">
+  <div class="logo">LAOTIE<span>STEEL</span></div>
+  <span class="badge">UI Prototype v1.0</span>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>Steel Structure <span>Quote Calculator</span></h1>
+  <p>Get a preliminary estimate for your steel structure project in under 60 seconds. No signup required.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="num">30+</div><div class="label">Countries Served</div></div>
+    <div class="hero-stat"><div class="num">5,000T</div><div class="label">Monthly Capacity</div></div>
+    <div class="hero-stat"><div class="num">&plusmn;15%</div><div class="label">Estimate Accuracy</div></div>
+    <div class="hero-stat"><div class="num">24h</div><div class="label">Quote Response</div></div>
+  </div>
+</section>
+
+<!-- Main -->
+<div class="container">
+  <div class="calc-card">
+    <div class="calc-grid">
+
+      <!-- Input Panel -->
+      <div class="input-panel">
+        <h2>Project Parameters</h2>
+        <p class="subtitle">Fill in your project details below</p>
+
+        <div class="form-group">
+          <label>Building Type</label>
+          <select id="buildingType" onchange="recalculate()">
+            <option value="warehouse">Warehouse / Storage</option>
+            <option value="factory">Factory / Workshop</option>
+            <option value="hangar">Aircraft Hangar</option>
+            <option value="logistics">Logistics Center</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Dimensions <span class="hint">(Length x Width x Eave Height)</span></label>
+          <div class="dim-row">
+            <div>
+              <input type="number" id="length" value="120" min="10" max="300" onchange="recalculate()" />
+              <div style="font-size:11px;color:var(--text-muted);margin-top:3px;">L (m)</div>
+            </div>
+            <div>
+              <input type="number" id="width" value="60" min="10" max="150" onchange="recalculate()" />
+              <div style="font-size:11px;color:var(--text-muted);margin-top:3px;">W (m)</div>
+            </div>
+            <div>
+              <input type="number" id="height" value="12" min="6" max="30" step="0.5" onchange="recalculate()" />
+              <div style="font-size:11px;color:var(--text-muted);margin-top:3px;">H (m)</div>
+            </div>
+          </div>
+          <div class="area-display">
+            Building Area: <strong><span id="areaDisplay">7,200</span> m&sup2;</strong>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Crane System</label>
+          <select id="crane" onchange="recalculate()">
+            <option value="none">No Crane Required</option>
+            <option value="5">5 Ton Overhead Crane</option>
+            <option value="10">10 Ton Overhead Crane</option>
+            <option value="20" selected>20 Ton Overhead Crane</option>
+            <option value="50">50 Ton Overhead Crane</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Project Location</label>
+          <select id="location" onchange="recalculate()">
+            <option value="australia" selected>Australia (AUD)</option>
+            <option value="nigeria">Nigeria (USD)</option>
+            <option value="philippines">Philippines (USD)</option>
+            <option value="uae">UAE / Dubai (USD)</option>
+            <option value="indonesia">Indonesia (USD)</option>
+            <option value="china">China (CNY/¥)</option>
+            <option value="other">Other Country (USD)</option>
+          </select>
+        </div>
+
+        <button class="calc-btn" onclick="showResult()">Calculate Estimate</button>
+
+        <p class="disclaimer">
+          This is a preliminary estimate based on industry-standard formulas. Actual pricing requires detailed engineering drawings, site conditions review, and local code compliance analysis.
+        </p>
+      </div>
+
+      <!-- Result Panel -->
+      <div class="result-panel">
+        <!-- Empty State -->
+        <div id="emptyState" class="empty-state">
+          <div class="es-icon">&#128202;</div>
+          <p>Enter your project parameters and click <strong>"Calculate Estimate"</strong> to see your preliminary quote.</p>
+        </div>
+
+        <!-- Result Content -->
+        <div id="resultContent">
+
+          <div class="result-header">
+            <div class="icon">&#10003;</div>
+            <div>
+              <h2>Your Project Estimate</h2>
+              <div style="font-size:12px;color:var(--text-muted);" id="projectName">120m x 60m Warehouse</div>
+            </div>
+            <span class="status-badge">Preliminary</span>
+          </div>
+
+          <!-- Metric Cards -->
+          <div class="metrics">
+            <div class="metric-card highlight">
+              <div class="m-icon">&#128176;</div>
+              <div class="m-label">Total Price</div>
+              <div class="m-value"><span id="totalPriceMin">$612K</span></div>
+              <div class="m-sub">&ndash; <span id="totalPriceMax">$792K</span> AUD</div>
+            </div>
+            <div class="metric-card">
+              <div class="m-icon">&#128295;</div>
+              <div class="m-label">Steel Quantity</div>
+              <div class="m-value"><span id="steelQty">385</span></div>
+              <div class="m-unit">tons (&plusmn;15%)</div>
+            </div>
+            <div class="metric-card">
+              <div class="m-icon">&#9201;</div>
+              <div class="m-label">Lead Time</div>
+              <div class="m-value"><span id="leadTime">55</span></div>
+              <div class="m-unit">days total</div>
+            </div>
+          </div>
+
+          <!-- Price Breakdown Bar -->
+          <div class="price-bar">
+            <div class="pb-label">Estimated Cost per Square Meter</div>
+            <div class="pb-range">
+              <span class="pb-from">from</span>
+              <span class="pb-price" id="pricePerSqm">$85</span>
+              <span class="pb-to">&ndash; $110 <span id="currencyUnit">/m&sup2; AUD</span></span>
+            </div>
+            <div class="pb-note">FOB China + Shipping + Local Installation (estimated)</div>
+            <div class="pb-breakdown">
+              <div class="pb-item"><div class="pb-dot" style="background:#378add;"></div>Fabrication <span id="costFab">$308K</span></div>
+              <div class="pb-item"><div class="pb-dot" style="background:#16a34a;"></div>Shipping <span id="costShip">$58K</span></div>
+              <div class="pb-item"><div class="pb-dot" style="background:#e67e22;"></div>Erection <span id="costErect">$115K</span></div>
+              <div class="pb-item"><div class="pb-dot" style="background:#94a3b8;"></div>Misc &amp; Contingency <span id="costMisc">$131K</span></div>
+            </div>
+          </div>
+
+          <!-- Recommended Specs -->
+          <div class="spec-box">
+            <div class="sb-title">Recommended Specification</div>
+            <div class="spec-tags">
+              <span class="spec-tag primary">Q355B Steel</span>
+              <span class="spec-tag primary">Portal Frame</span>
+              <span class="spec-tag">Epoxy 280um DFT</span>
+              <span class="spec-tag">Colorbond Roof</span>
+              <span class="spec-tag">PIR Sandwich Wall</span>
+              <span class="spec-tag">SA 2.5 Shot Blast</span>
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <div class="timeline">
+            <div class="tl-title">Production &amp; Delivery Schedule</div>
+            <div class="tl-bar">
+              <div class="tl-seg" id="tlProd" style="width:40%;background:#378add;"></div>
+              <div class="tl-seg" id="tlShip" style="width:35%;background:#16a34a;"></div>
+              <div class="tl-seg" id="tlErect" style="width:25%;background:#e67e22;"></div>
+            </div>
+            <div class="tl-labels">
+              <span>Fab. <span id="daysProd">22</span>d</span>
+              <span>Ship. <span id="daysShip">19</span>d</span>
+              <span>Erect. <span id="daysErect">14</span>d</span>
+              <span>Total: <span id="daysTotal">55</span> days</span>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <button class="cta-btn">
+            Get Detailed Quote with Engineering
+            <span class="arrow">&rarr;</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="proto-footer">
+  <strong>Laotie Steel Structure Quote Calculator</strong> &mdash; UI Prototype for Design Review Only &mdash; Not for Production Use
+</div>
+
+<script>
+// ========== Calculation Engine ==========
+const CONFIG = {
+  // kg per m² base rate by building type
+  baseRate: { warehouse: 28, factory: 38, hangar: 52, logistics: 32 },
+  // additional kg/m² by crane tonnage
+  craneAdd: { none: 0, '5': 3, '10': 5, '20': 8, '50': 12 },
+  // height multiplier (taller = more steel)
+  heightFactorBase: 9, // baseline eave height
+
+  // USD per ton FOB China
+  fobPricePerTon: 800,
+  // shipping USD per ton by location
+  shipCostPerTon: { australia: 160, nigeria: 220, philippines: 130, uae: 105, indonesia: 115, china: 35, other: 180 },
+  // erection USD per ton
+  erectCostPerTon: 320,
+  // contingency %
+  contingencyPct: 15,
+
+  // production capacity tons per week
+  weeklyCapacity: 200,
+  // erection speed sqm per week
+  erectSpeedSqmWeek: 500,
+
+  // exchange rates to local currency
+  fxRate: { australia: 1.53, nigeria: 1, philippines: 1, uae: 1, indonesia: 1, china: 7.2, other: 1 }, // 1 USD = X local
+  currencySymbol: { australia: 'AUD', nigeria: 'USD', philippines: 'USD', uae: 'USD', indonesia: 'USD', china: 'CNY', other: 'USD' },
+
+  // shipping days
+  shipDays: { australia: 30, nigeria: 42, philippines: 18, uae: 24, indonesia: 21, china: 8, other: 35 },
+};
+
+function calculate() {
+  const type = document.getElementById('buildingType').value;
+  const L = parseFloat(document.getElementById('length').value) || 60;
+  const W = parseFloat(document.getElementById('width').value) || 40;
+  const H = parseFloat(document.getElementById('height').value) || 9;
+  const crane = document.getElementById('crane').value;
+  const loc = document.getElementById('location').value;
+
+  const area = L * W;
+
+  // Steel quantity
+  let rate = (CONFIG.baseRate[type] || 28) + (CONFIG.craneAdd[crane] || 0);
+  // Height adjustment: +5% per meter above baseline
+  const heightAdj = 1 + Math.max(0, H - CONFIG.heightFactorBase) * 0.05;
+  rate *= heightAdj;
+  const steelTons = Math.round((area * rate) / 1000);
+
+  // Costs (base USD)
+  const fabCost = steelTons * CONFIG.fobPricePerTon;
+  const shipCost = steelTons * (CONFIG.shipCostPerTon[loc] || 160);
+  const erectCost = steelTons * CONFIG.erectCostPerTon;
+  const subTotal = fabCost + shipCost + erectCost;
+  const miscCost = subTotal * (CONFIG.contingencyPct / 100);
+  const totalCost = subTotal + miscCost;
+
+  // Convert to local currency
+  const fx = CONFIG.fxRate[loc] || 1;
+  const sym = CONFIG.currencySymbol[loc] || 'USD';
+  const totalLocal = totalCost * fx;
+  const pricePerSqmLow = Math.round((totalLocal * 0.85) / area);
+  const pricePerSqmHigh = Math.round((totalLocal * 1.15) / area);
+
+  // Lead time
+  const prodDays = Math.ceil(steelTons / CONFIG.weeklyCapacity) * 7;
+  const shipD = CONFIG.shipDays[loc] || 30;
+  const erectD = Math.ceil(area / CONFIG.erectSpeedSqmWeek) * 7;
+  const totalD = prodDays + shipD + erectD;
+
+  return {
+    area, steelTons, type, L, W, H, loc, sym, fx,
+    fabCost, shipCost, erectCost, miscCost, totalCost, totalLocal,
+    pricePerSqmLow, pricePerSqmHigh,
+    prodDays, shipD, erectD, totalD,
+  };
+}
+
+function formatMoney(n, sym) {
+  const prefix = (sym === 'USD' || sym === 'AUD') ? '$' : (sym === 'CNY' ? '¥' : '$');
+  const symbolAfter = (sym === 'CNY') ? ` ${sym}` : '';
+  if (n >= 1000000) return `${prefix}${(n/1000000).toFixed(1)}M${symbolAfter}`;
+  if (n >= 1000) return `${prefix}${Math.round(n/1000)}K${symbolAfter}`;
+  return `${prefix}${Math.round(n)}${symbolAfter}`;
+}
+
+function recalculate() {
+  const L = parseFloat(document.getElementById('length').value) || 60;
+  const W = parseFloat(document.getElementById('width').value) || 40;
+  document.getElementById('areaDisplay').textContent = (L * W).toLocaleString();
+}
+
+function showResult() {
+  const r = calculate();
+
+  // Update project name
+  const typeNames = { warehouse: 'Warehouse', factory: 'Factory', hangar: 'Hangar', logistics: 'Logistics Center' };
+  document.getElementById('projectName').textContent =
+    `${r.L}m x ${r.W}m ${typeNames[r.type] || 'Warehouse'}`;
+
+  document.getElementById('totalPriceMin').textContent = formatMoney(r.totalLocal * 0.85, r.sym);
+  document.getElementById('totalPriceMax').textContent = formatMoney(r.totalLocal * 1.15, r.sym);
+  document.getElementById('steelQty').textContent = r.steelTons.toLocaleString();
+  document.getElementById('leadTime').textContent = r.totalD;
+  document.getElementById('pricePerSqm').textContent = `$${r.pricePerSqmLow}`;
+
+  // Currency unit
+  document.querySelectorAll('#currencyUnit')[0].textContent = ` &ndash; $${r.pricePerSqmHigh}/m&sup2; ${r.sym}`;
+
+  // Breakdown costs
+  document.getElementById('costFab').textContent = formatMoney(r.fabCost * r.fx, r.sym);
+  document.getElementById('costShip').textContent = formatMoney(r.shipCost * r.fx, r.sym);
+  document.getElementById('costErect').textContent = formatMoney(r.erectCost * r.fx, r.sym);
+  document.getElementById('costMisc').textContent = formatMoney(r.miscCost * r.fx, r.sym);
+
+  // Timeline
+  const tot = r.prodDays + r.shipD + r.erectD;
+  document.getElementById('tlProd').style.width = `${Math.round(r.prodDays/tot*100)}%`;
+  document.getElementById('tlShip').style.width = `${Math.round(r.shipD/tot*100)}%`;
+  document.getElementById('tlErect').style.width = `${Math.round(r.erectD/tot*100)}%`;
+  document.getElementById('daysProd').textContent = r.prodDays;
+  document.getElementById('daysShip').textContent = r.shipD;
+  document.getElementById('daysErect').textContent = r.erectD;
+  document.getElementById('daysTotal').textContent = r.totalD;
+
+  // Show result, hide empty state
+  document.getElementById('emptyState').classList.add('hidden');
+  document.getElementById('resultContent').classList.add('visible');
+}
+
+// Auto-calculate on load with default values
+setTimeout(showResult, 300);
+</script>
+
+</body>
+</html>

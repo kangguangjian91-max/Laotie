@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steel Structure Quote Calculator v4 — Laotie Steel</title>
+<style>
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f5f5f5; color: #333; }
+
+/* Header */
+.header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 20px 0; }
+.header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-size: 20px; font-weight: 700; }
+.logo span { color: #f59e0b; }
+
+/* Share Button */
+.share-btn { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 8px 16px; border-radius: 6px; font-size: 12px; cursor: pointer; transition: all 0.2s; }
+.share-btn:hover { background: rgba(255,255,255,0.25); }
+
+/* Main Layout */
+.calculator-container { max-width: 1200px; margin: 32px auto; padding: 0 24px; }
+.calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 768px) { .calc-grid { grid-template-columns: 1fr; } }
+
+/* Cards */
+.card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.card-title { font-size: 16px; font-weight: 600; margin-bottom: 20px; color: #1a1a2e; display: flex; align-items: center; gap: 8px; }
+
+/* Form Elements */
+.form-group { margin-bottom: 16px; }
+.form-label { display: block; font-size: 13px; font-weight: 500; color: #666; margin-bottom: 6px; }
+.form-input { width: 100%; padding: 10px 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 14px; transition: border-color 0.2s; }
+.form-input:focus { border-color: #f59e0b; outline: none; }
+.form-input.error { border-color: #ef4444; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+.error-msg { font-size: 11px; color: #ef4444; margin-top: 4px; display: none; }
+.error-msg.show { display: block; }
+
+/* Dimension Display */
+.dimension-display { background: #fef3c7; border: 1px solid #f59e0b; border-radius: 8px; padding: 12px; text-align: center; margin-bottom: 16px; cursor: pointer; }
+.dimension-display .area { font-size: 24px; font-weight: 700; color: #92400e; }
+.dimension-display .label { font-size: 12px; color: #78350f; }
+.formula-detail { display: none; background: #fffbeb; border: 1px solid #fbbf24; border-radius: 6px; padding: 12px; margin-top: 8px; font-size: 12px; color: #92400e; line-height: 1.6; }
+.formula-detail.show { display: block; }
+
+/* Result Cards */
+.result-metrics { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+.metric-card { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; border-radius: 8px; padding: 16px; text-align: center; }
+.metric-card .value { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+.metric-card .label { font-size: 11px; opacity: 0.9; }
+
+/* Cost Breakdown with Progress Bar */
+.cost-breakdown { margin-bottom: 20px; }
+.cost-item { padding: 10px 0; border-bottom: 1px solid #f3f4f6; font-size: 13px; position: relative; }
+.cost-item:last-child { border-bottom: none; }
+.cost-item-header { display: flex; justify-content: space-between; align-items: center; }
+.cost-item .name { color: #666; cursor: help; position: relative; }
+.cost-item .name strong { color: #333; }
+.cost-item .price { font-weight: 500; }
+.cost-bar-container { height: 4px; background: #f3f4f6; border-radius: 2px; margin-top: 6px; overflow: hidden; }
+.cost-bar { height: 100%; border-radius: 2px; transition: width 0.8s ease-out; }
+.cost-percent { font-size: 10px; color: #999; margin-top: 2px; }
+.cost-item.total { background: #f9fafb; padding: 12px; border-radius: 6px; margin-top: 8px; border: none; }
+
+/* Tooltip */
+.tooltip { position: relative; display: inline-block; }
+.tooltip .tooltiptext { visibility: hidden; width: 220px; background: #1a1a2e; color: white; text-align: left; padding: 8px 12px; border-radius: 6px; font-size: 11px; line-height: 1.5; position: absolute; z-index: 100; bottom: 125%; left: 50%; margin-left: -110px; opacity: 0; transition: opacity 0.3s; }
+.tooltip .tooltiptext::after { content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: #1a1a2e transparent transparent transparent; }
+.tooltip:hover .tooltiptext { visibility: visible; opacity: 1; }
+
+/* Buttons */
+.btn { padding: 12px 24px; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+.btn-primary { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; width: 100%; margin-bottom: 12px; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(245,158,11,0.4); }
+.btn-secondary { background: #1a1a2e; color: white; width: 100%; }
+.btn-secondary:hover { background: #16213e; }
+
+/* Advanced Settings Panel */
+.advanced-toggle { display: flex; align-items: center; justify-content: space-between; padding: 12px; background: #f9fafb; border-radius: 8px; margin-bottom: 16px; cursor: pointer; border: 1px solid #e5e7eb; }
+.advanced-toggle:hover { background: #f3f4f6; }
+.advanced-panel { display: none; background: #f9fafb; border-radius: 8px; padding: 16px; margin-bottom: 16px; border: 1px solid #e5e7eb; }
+.advanced-panel.active { display: block; }
+.price-edit-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #e5e7eb; }
+.price-edit-row:last-child { border-bottom: none; }
+.price-input { width: 80px; padding: 6px; border: 1px solid #e5e7eb; border-radius: 4px; font-size: 13px; text-align: right; }
+
+/* Spec Tags */
+.spec-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+.spec-tag { background: #eff6ff; color: #1e40af; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 500; }
+
+/* Disclaimer */
+.disclaimer { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; border-radius: 4px; font-size: 12px; color: #92400e; line-height: 1.5; }
+
+/* Modal */
+.modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; }
+.modal-overlay.active { display: flex; }
+.modal { background: white; border-radius: 12px; padding: 32px; max-width: 500px; width: 90%; max-height: 90vh; overflow-y: auto; }
+.modal-title { font-size: 20px; font-weight: 700; margin-bottom: 16px; color: #1a1a2e; }
+.modal-close { float: right; background: none; border: none; font-size: 24px; cursor: pointer; color: #999; }
+
+/* Region Badge */
+.region-badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; margin-left: 8px; }
+.region-badge.australia { background: #dbeafe; color: #1e40af; }
+.region-badge.china { background: #fef3c7; color: #92400e; }
+.region-badge.nigeria { background: #fee2e2; color: #991b1b; }
+
+/* Share Modal */
+.share-link-box { display: flex; gap: 8px; margin: 12px 0; }
+.share-link-input { flex: 1; padding: 8px 12px; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 12px; background: #f9fafb; }
+.share-copy-btn { padding: 8px 16px; background: #f59e0b; color: white; border: none; border-radius: 6px; font-size: 12px; cursor: pointer; }
+
+/* Print Styles */
+@media print {
+  .header, .advanced-toggle, .advanced-panel, .btn, .share-btn, .modal-overlay { display: none !important; }
+  .card { box-shadow: none; border: 1px solid #e5e7eb; break-inside: avoid; }
+  body { background: white; }
+  .calculator-container { margin: 0; padding: 0; }
+  .calc-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">🔧 <span>Laotie Steel</span> Quote Calculator</div>
+    <div style="display: flex; gap: 12px; align-items: center;">
+      <div style="font-size: 13px; opacity: 0.8;">Preliminary Quote Estimator v4.0</div>
+      <button class="share-btn" onclick="shareResults()">🔗 Share</button>
+    </div>
+  </div>
+</header>
+
+<!-- Calculator -->
+<div class="calculator-container">
+  <div class="calc-grid">
+
+    <!-- ======== LEFT: INPUT ======== -->
+    <div class="card">
+      <div class="card-title">📐 Project Parameters</div>
+
+      <!-- Building Type -->
+      <div class="form-group">
+        <label class="form-label">Building Type</label>
+        <select id="buildingType" class="form-input" onchange="calculate()">
+          <option value="warehouse">Warehouse / Logistics</option>
+          <option value="factory">Factory / Workshop</option>
+          <option value="hangar">Aircraft Hangar</option>
+          <option value="logistics">Logistics Center (with Mezzanine)</option>
+          <option value="dome">Space Frame Dome</option>
+        </select>
+      </div>
+
+      <!-- Dimensions -->
+      <div class="form-group">
+        <label class="form-label">Dimensions</label>
+        <div class="form-row">
+          <input type="number" id="length" class="form-input" value="120" min="10" max="300" placeholder="Length (m)" onchange="calculate()">
+          <input type="number" id="width" class="form-input" value="60" min="10" max="200" placeholder="Width (m)" onchange="calculate()">
+        </div>
+        <div class="form-row" style="margin-top: 8px;">
+          <input type="number" id="eaveHeight" class="form-input" value="12" min="6" max="30" placeholder="Eave Height (m)" onchange="calculate()">
+          <select id="crane" class="form-input" onchange="calculate()">
+            <option value="none">No Crane</option>
+            <option value="5T">5 Ton Crane</option>
+            <option value="10T">10 Ton Crane</option>
+            <option value="20T">20 Ton Crane</option>
+            <option value="50T">50 Ton Crane</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Area Display (clickable for formula) -->
+      <div class="dimension-display" onclick="toggleFormula()">
+        <div class="area" id="areaDisplay">7,200 m²</div>
+        <div class="label">Click to view calculation formula ↓</div>
+        <div class="formula-detail" id="formulaDetail">
+          <strong>📐 Area Calculation:</strong><br>
+          Area = Length × Width = <span id="formulaLength">120</span>m × <span id="formulaWidth">60</span>m = <span id="formulaArea">7,200</span> m²<br><br>
+          <strong>🏗️ Steel Quantity:</strong><br>
+          Rate = <span id="formulaRate">28</span> kg/m² (base for <span id="formulaType">Warehouse</span>)<br>
+          <span id="formulaCrane"></span>
+          Steel = Area × Rate / 1000 = <span id="formulaSteel">216</span> tons<br><br>
+          <strong>📏 Wall Area:</strong> 2 × (L+W) × H = <span id="formulaWallArea">4,320</span> m²<br>
+          <strong>🏠 Roof Area:</strong> Area × 1.05 = <span id="formulaRoofArea">7,560</span> m²
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="form-group">
+        <label class="form-label">Project Location</label>
+        <select id="location" class="form-input" onchange="onLocationChange()">
+          <option value="australia">Australia (AUD $)</option>
+          <option value="china">China (CNY ¥)</option>
+          <option value="nigeria">Nigeria (USD $)</option>
+          <option value="philippines">Philippines (USD $)</option>
+          <option value="uae">UAE (USD $)</option>
+          <option value="indonesia">Indonesia (USD $)</option>
+          <option value="other">Other Country (USD $)</option>
+        </select>
+      </div>
+
+      <!-- Advanced Settings Toggle -->
+      <div class="advanced-toggle" onclick="toggleAdvanced()">
+        <span style="font-size: 13px; font-weight: 500; color: #666;">⚙️ Advanced: Edit Unit Prices</span>
+        <span id="advancedArrow" style="font-size: 12px; color: #999;">▼</span>
+      </div>
+
+      <!-- Advanced Settings Panel -->
+      <div id="advancedPanel" class="advanced-panel">
+        <div style="font-size: 12px; color: #999; margin-bottom: 12px;">Adjust unit prices below. Changes apply to this calculation only.</div>
+        <div class="price-edit-row">
+          <span style="font-size: 13px;">Steel Fabrication</span>
+          <div style="display: flex; align-items: center; gap: 4px;">
+            <input type="number" id="priceSteel" class="price-input" value="1350" onchange="calculate()">
+            <span style="font-size: 11px; color: #999;" id="unitSteel">AUD/ton</span>
+          </div>
+        </div>
+        <div class="price-edit-row">
+          <span style="font-size: 13px;">Roof Panel (Sandwich)</span>
+          <div style="display: flex; align-items: center; gap: 4px;">
+            <input type="number" id="priceRoof" class="price-input" value="42" onchange="calculate()">
+            <span style="font-size: 11px; color: #999;" id="unitRoof">AUD/m²</span>
+          </div>
+        </div>
+        <div class="price-edit-row">
+          <span style="font-size: 13px;">Wall Panel (Sandwich)</span>
+          <div style="display: flex; align-items: center; gap: 4px;">
+            <input type="number" id="priceWall" class="price-input" value="38" onchange="calculate()">
+            <span style="font-size: 11px; color: #999;" id="unitWall">AUD/m²</span>
+          </div>
+        </div>
+        <div class="price-edit-row">
+          <span style="font-size: 13px;">Ocean Freight</span>
+          <div style="display: flex; align-items: center; gap: 4px;">
+            <input type="number" id="priceShipping" class="price-input" value="240" onchange="calculate()">
+            <span style="font-size: 11px; color: #999;" id="unitShipping">AUD/ton</span>
+          </div>
+        </div>
+        <div class="price-edit-row">
+          <span style="font-size: 13px;">Installation Labor</span>
+          <div style="display: flex; align-items: center; gap: 4px;">
+            <input type="number" id="priceInstall" class="price-input" value="95" onchange="calculate()">
+            <span style="font-size: 11px; color: #999;" id="unitInstall">AUD/m²</span>
+          </div>
+        </div>
+        <div class="price-edit-row">
+          <span style="font-size: 13px;">Foundation Work</span>
+          <div style="display: flex; align-items: center; gap: 4px;">
+            <input type="number" id="priceFoundation" class="price-input" value="68" onchange="calculate()">
+            <span style="font-size: 11px; color: #999;" id="unitFoundation">AUD/m²</span>
+          </div>
+        </div>
+        <div class="price-edit-row">
+          <span style="font-size: 13px;">Design & Engineering</span>
+          <div style="display: flex; align-items: center; gap: 4px;">
+            <input type="number" id="priceDesign" class="price-input" value="5" onchange="calculate()">
+            <span style="font-size: 11px; color: #999;">% of total</span>
+          </div>
+        </div>
+        <div class="price-edit-row">
+          <span style="font-size: 13px;">Contingency Buffer</span>
+          <div style="display: flex; align-items: center; gap: 4px;">
+            <input type="number" id="priceContingency" class="price-input" value="8" onchange="calculate()">
+            <span style="font-size: 11px; color: #999;">% of total</span>
+          </div>
+        </div>
+        <button onclick="resetPrices()" style="margin-top: 12px; padding: 8px 16px; background: #e5e7eb; border: none; border-radius: 6px; font-size: 12px; cursor: pointer;">Reset to Default</button>
+      </div>
+
+      <button class="btn btn-primary" onclick="calculate()">🔄 Recalculate Estimate</button>
+    </div>
+
+    <!-- ======== RIGHT: RESULTS ======== -->
+    <div class="card">
+      <div class="card-title">
+        📊 Estimation Results
+        <span id="regionBadge" class="region-badge australia">Australia</span>
+      </div>
+
+      <!-- Key Metrics (with animation) -->
+      <div class="result-metrics">
+        <div class="metric-card">
+          <div class="value" id="totalPriceDisplay">$287K</div>
+          <div class="label">Total Price (Est.)</div>
+        </div>
+        <div class="metric-card" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);">
+          <div class="value" id="steelTonsDisplay">216 t</div>
+          <div class="label">Steel Quantity</div>
+        </div>
+        <div class="metric-card" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+          <div class="value" id="leadTimeDisplay">62 d</div>
+          <div class="label">Lead Time</div>
+        </div>
+      </div>
+
+      <!-- Cost Breakdown with Progress Bars -->
+      <div class="cost-breakdown">
+        <div style="font-size: 13px; font-weight: 600; color: #666; margin-bottom: 8px;">📊 Cost Breakdown</div>
+        
+        <div class="cost-item">
+          <div class="cost-item-header">
+            <span class="name tooltip">
+              🏗️ Steel Fabrication
+              <span class="tooltiptext">Q355B steel fabrication including cutting, welding, drilling, and surface treatment. Price includes material + labor.</span>
+            </span>
+            <span class="price" id="costSteel">$172,800</span>
+          </div>
+          <div class="cost-bar-container"><div class="cost-bar" id="barSteel" style="width: 0%; background: #f59e0b;"></div></div>
+          <div class="cost-percent" id="pctSteel">0%</div>
+        </div>
+        
+        <div class="cost-item">
+          <div class="cost-item-header">
+            <span class="name tooltip">
+              🏠 Roof Panels (Sandwich)
+              <span class="tooltiptext">50mm sandwich panel roofing with Colorbond® or equivalent. Includes installation accessories.</span>
+            </span>
+            <span class="price" id="costRoof">$43,200</span>
+          </div>
+          <div class="cost-bar-container"><div class="cost-bar" id="barRoof" style="width: 0%; background: #3b82f6;"></div></div>
+          <div class="cost-percent" id="pctRoof">0%</div>
+        </div>
+        
+        <div class="cost-item">
+          <div class="cost-item-header">
+            <span class="name tooltip">
+              🧱 Wall Panels (Sandwich)
+              <span class="tooltiptext">50mm sandwich panel walls. Includes flashing, trim, and sealants.</span>
+            </span>
+            <span class="price" id="costWall">$25,920</span>
+          </div>
+          <div class="cost-bar-container"><div class="cost-bar" id="barWall" style="width: 0%; background: #8b5cf6;"></div></div>
+          <div class="cost-percent" id="pctWall">0%</div>
+        </div>
+        
+        <div class="cost-item">
+          <div class="cost-item-header">
+            <span class="name tooltip">
+              🚢 Ocean Freight
+              <span class="tooltiptext">Ocean freight cost including container loading, customs clearance, and port handling.</span>
+            </span>
+            <span class="price" id="costShipping">$34,560</span>
+          </div>
+          <div class="cost-bar-container"><div class="cost-bar" id="barShipping" style="width: 0%; background: #06b6d4;"></div></div>
+          <div class="cost-percent" id="pctShipping">0%</div>
+        </div>
+        
+        <div class="cost-item">
+          <div class="cost-item-header">
+            <span class="name tooltip">
+              🔧 Installation Labor
+              <span class="tooltiptext">On-site installation labor including steel erection, panel installation, and final commissioning.</span>
+            </span>
+            <span class="price" id="costInstall">$64,800</span>
+          </div>
+          <div class="cost-bar-container"><div class="cost-bar" id="barInstall" style="width: 0%; background: #10b981;"></div></div>
+          <div class="cost-percent" id="pctInstall">0%</div>
+        </div>
+        
+        <div class="cost-item">
+          <div class="cost-item-header">
+            <span class="name tooltip">
+              🏢 Foundation Work
+              <span class="tooltiptext">Concrete foundation including piling, footing, and anchor bolt installation.</span>
+            </span>
+            <span class="price" id="costFoundation">$50,400</span>
+          </div>
+          <div class="cost-bar-container"><div class="cost-bar" id="barFoundation" style="width: 0%; background: #f97316;"></div></div>
+          <div class="cost-percent" id="pctFoundation">0%</div>
+        </div>
+        
+        <div class="cost-item">
+          <div class="cost-item-header">
+            <span class="name tooltip">
+              📐 Design & Engineering
+              <span class="tooltiptext">Structural design, calculation report, and engineering certification. Includes SkyCiv analysis.</span>
+            </span>
+            <span class="price" id="costDesign">$14,920</span>
+          </div>
+          <div class="cost-bar-container"><div class="cost-bar" id="barDesign" style="width: 0%; background: #ec4899;"></div></div>
+          <div class="cost-percent" id="pctDesign">0%</div>
+        </div>
+        
+        <div class="cost-item">
+          <div class="cost-item-header">
+            <span class="name tooltip">
+              ⚠️ Contingency (8%)
+              <span class="tooltiptext">Buffer for unforeseen costs including currency fluctuation, weather delays, and material price changes.</span>
+            </span>
+            <span class="price" id="costContingency">$23,872</span>
+          </div>
+          <div class="cost-bar-container"><div class="cost-bar" id="barContingency" style="width: 0%; background: #ef4444;"></div></div>
+          <div class="cost-percent" id="pctContingency">0%</div>
+        </div>
+        
+        <div class="cost-item total">
+          <div class="cost-item-header">
+            <span class="name"><strong>TOTAL PROJECT COST</strong></span>
+            <span class="price" id="costTotal" style="font-size: 16px; color: #f59e0b;">$430,572</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Price per m² -->
+      <div style="background: #eff6ff; border-radius: 8px; padding: 12px; margin-bottom: 16px; text-align: center;">
+        <div style="font-size: 12px; color: #666; margin-bottom: 4px;">Estimated Price per m²</div>
+        <div style="font-size: 24px; font-weight: 700; color: #1e40af;" id="pricePerSqm">$59.8/m²</div>
+        <div style="font-size: 11px; color: #999; margin-top: 4px;">Range: <span id="priceRange">$54 - $66/m²</span></div>
+      </div>
+
+      <!-- Timeline -->
+      <div style="margin-bottom: 16px;">
+        <div style="font-size: 13px; font-weight: 600; color: #666; margin-bottom: 8px;">⏱️ Project Timeline</div>
+        <div style="display: flex; height: 24px; border-radius: 12px; overflow: hidden; margin-bottom: 8px;" id="timelineBar">
+          <div style="background: #f59e0b; flex: 21; font-size: 9px; color: white; display: flex; align-items: center; justify-content: center;">Production 21d</div>
+          <div style="background: #3b82f6; flex: 30; font-size: 9px; color: white; display: flex; align-items: center; justify-content: center;">Shipping 30d</div>
+          <div style="background: #10b981; flex: 11; font-size: 9px; color: white; display: flex; align-items: center; justify-content: center;">Install 11d</div>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 11px; color: #999;">
+          <span>Day 1</span>
+          <span id="timelineEnd">Day 62</span>
+        </div>
+      </div>
+
+      <!-- Recommended Spec -->
+      <div style="margin-bottom: 16px;">
+        <div style="font-size: 13px; font-weight: 600; color: #666; margin-bottom: 8px;">✅ Recommended Specification</div>
+        <div class="spec-tags">
+          <span class="spec-tag">Q355B Steel</span>
+          <span class="spec-tag">280μm Epoxy</span>
+          <span class="spec-tag">50mm Sandwich Panel</span>
+          <span class="spec-tag">Colorbond Roof</span>
+          <span class="spec-tag">Hot-dip Galvanized</span>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <button class="btn btn-primary" onclick="showQuoteForm()">📝 Get Detailed Quote with Engineering</button>
+      <button class="btn btn-secondary" style="margin-top: 8px;" onclick="downloadPDF()">📥 Download Estimate (PDF)</button>
+
+      <!-- Disclaimer -->
+      <div class="disclaimer" style="margin-top: 16px;">
+        ⚠️ <strong>Disclaimer:</strong> This is a preliminary estimate based on industry average data. Actual price may vary ±15% depending on final design, site conditions, and market fluctuations. For a fixed quote, please contact our engineering team.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Quote Request Modal -->
+<div id="quoteModal" class="modal-overlay">
+  <div class="modal">
+    <button class="modal-close" onclick="closeQuoteForm()">&times;</button>
+    <div class="modal-title">📝 Request Detailed Quote</div>
+    <form onsubmit="submitQuoteForm(event)">
+      <div style="margin-bottom: 12px;">
+        <label style="display: block; font-size: 13px; margin-bottom: 4px;">Name *</label>
+        <input type="text" id="quoteName" required style="width: 100%; padding: 8px; border: 1px solid #e5e7eb; border-radius: 6px;">
+        <div class="error-msg" id="errorName">Please enter your name</div>
+      </div>
+      <div style="margin-bottom: 12px;">
+        <label style="display: block; font-size: 13px; margin-bottom: 4px;">Email *</label>
+        <input type="email" id="quoteEmail" required style="width: 100%; padding: 8px; border: 1px solid #e5e7eb; border-radius: 6px;">
+        <div class="error-msg" id="errorEmail">Please enter a valid email</div>
+      </div>
+      <div style="margin-bottom: 12px;">
+        <label style="display: block; font-size: 13px; margin-bottom: 4px;">Phone</label>
+        <input type="tel" id="quotePhone" style="width: 100%; padding: 8px; border: 1px solid #e5e7eb; border-radius: 6px;">
+      </div>
+      <div style="margin-bottom: 12px;">
+        <label style="display: block; font-size: 13px; margin-bottom: 4px;">Message</label>
+        <textarea id="quoteMessage" rows="3" style="width: 100%; padding: 8px; border: 1px solid #e5e7eb; border-radius: 6px;"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+    </form>
+  </div>
+</div>
+
+<!-- Share Modal -->
+<div id="shareModal" class="modal-overlay">
+  <div class="modal" style="max-width: 600px;">
+    <button class="modal-close" onclick="closeShareForm()">&times;</button>
+    <div class="modal-title">🔗 Share Estimation Results</div>
+    <div style="font-size: 13px; color: #666; margin-bottom: 16px;">Copy the link below to share this estimate with your team:</div>
+    <div class="share-link-box">
+      <input type="text" id="shareLinkInput" class="share-link-input" readonly>
+      <button class="share-copy-btn" onclick="copyShareLink()">Copy</button>
+    </div>
+    <div style="font-size: 12px; color: #999; margin-top: 8px;" id="shareLinkDetail"></div>
+    <button onclick="closeShareForm()" class="btn btn-secondary" style="margin-top: 16px; width: 100%;">Close</button>
+  </div>
+</div>
+
+<script>
+// ============================================
+// REGION-SPECIFIC DEFAULT PRICES (LOCAL CURRENCY)
+// ============================================
+const REGION_PRICES = {
+  australia: {
+    steel: 1350,
+    roof: 42,
+    wall: 38,
+    shipping: 240,
+    install: 95,
+    foundation: 68,
+    design: 5,
+    contingency: 8,
+    currency: 'AUD',
+    fx: 1,
+    symbol: 'AUD',
+    shipDays: 30,
+    installDaysBase: 14
+  },
+  china: {
+    steel: 5800,
+    roof: 105,
+    wall: 95,
+    shipping: 280,
+    install: 320,
+    foundation: 220,
+    design: 3,
+    contingency: 5,
+    currency: 'CNY',
+    fx: 1,
+    symbol: 'CNY',
+    shipDays: 8,
+    installDaysBase: 10
+  },
+  nigeria: {
+    steel: 800,
+    roof: 28,
+    wall: 25,
+    shipping: 220,
+    install: 55,
+    foundation: 40,
+    design: 7,
+    contingency: 12,
+    currency: 'USD',
+    fx: 1,
+    symbol: 'USD',
+    shipDays: 42,
+    installDaysBase: 18
+  },
+  philippines: {
+    steel: 800,
+    roof: 24,
+    wall: 21,
+    shipping: 130,
+    install: 50,
+    foundation: 38,
+    design: 5,
+    contingency: 10,
+    currency: 'USD',
+    fx: 1,
+    symbol: 'USD',
+    shipDays: 18,
+    installDaysBase: 12
+  },
+  uae: {
+    steel: 800,
+    roof: 26,
+    wall: 23,
+    shipping: 105,
+    install: 60,
+    foundation: 42,
+    design: 5,
+    contingency: 8,
+    currency: 'USD',
+    fx: 1,
+    symbol: 'USD',
+    shipDays: 24,
+    installDaysBase: 14
+  },
+  indonesia: {
+    steel: 800,
+    roof: 23,
+    wall: 20,
+    shipping: 115,
+    install: 48,
+    foundation: 36,
+    design: 5,
+    contingency: 9,
+    currency: 'USD',
+    fx: 1,
+    symbol: 'USD',
+    shipDays: 21,
+    installDaysBase: 12
+  },
+  other: {
+    steel: 800,
+    roof: 25,
+    wall: 22,
+    shipping: 180,
+    install: 55,
+    foundation: 40,
+    design: 6,
+    contingency: 10,
+    currency: 'USD',
+    fx: 1,
+    symbol: 'USD',
+    shipDays: 35,
+    installDaysBase: 15
+  }
+};
+
+// Steel consumption rates (kg/m²)
+const STEEL_RATES = {
+  warehouse: 28,
+  factory: 38,
+  hangar: 52,
+  logistics: 32,
+  dome: 45
+};
+
+// ============================================
+// ANIMATED COUNTER
+// ============================================
+function animateValue(el, start, end, duration, prefix='', suffix='') {
+  const range = end - start;
+  const startTime = performance.now();
+  
+  function update(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+    const current = Math.round(start + range * eased);
+    
+    if (suffix === '/m²') {
+      el.textContent = `${prefix}${current.toLocaleString()}${suffix}`;
+    } else if (end >= 1000000) {
+      el.textContent = `${prefix}${(current/1000000).toFixed(1)}M${suffix}`;
+    } else if (end >= 1000) {
+      el.textContent = `${prefix}${Math.round(current/1000)}K${suffix}`;
+    } else {
+      el.textContent = `${prefix}${current}${suffix}`;
+    }
+    
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    }
+  }
+  requestAnimationFrame(update);
+}
+
+// ============================================
+// CALCULATION FUNCTION
+// ============================================
+function calculate() {
+  const type = document.getElementById('buildingType').value;
+  const length = parseFloat(document.getElementById('length').value) || 0;
+  const width = parseFloat(document.getElementById('width').value) || 0;
+  const height = parseFloat(document.getElementById('eaveHeight').value) || 0;
+  const crane = document.getElementById('crane').value;
+  const location = document.getElementById('location').value;
+  
+  // Get custom prices
+  const priceSteel = parseFloat(document.getElementById('priceSteel').value) || 1350;
+  const priceRoof = parseFloat(document.getElementById('priceRoof').value) || 42;
+  const priceWall = parseFloat(document.getElementById('priceWall').value) || 38;
+  const priceShipping = parseFloat(document.getElementById('priceShipping').value) || 240;
+  const priceInstall = parseFloat(document.getElementById('priceInstall').value) || 95;
+  const priceFoundation = parseFloat(document.getElementById('priceFoundation').value) || 68;
+  const priceDesign = parseFloat(document.getElementById('priceDesign').value) || 5;
+  const priceContingency = parseFloat(document.getElementById('priceContingency').value) || 8;
+  
+  // Area
+  const area = length * width;
+  const wallArea = 2 * (length + width) * height;
+  const roofArea = area * 1.05;
+  
+  // Steel quantity
+  let steelRate = STEEL_RATES[type];
+  let craneText = '';
+  if (crane === '5T') { steelRate += 3; craneText = '+5T crane (+3 kg/m²)'; }
+  if (crane === '10T') { steelRate += 5; craneText = '+10T crane (+5 kg/m²)'; }
+  if (crane === '20T') { steelRate += 8; craneText = '+20T crane (+8 kg/m²)'; }
+  if (crane === '50T') { steelRate += 12; craneText = '+50T crane (+12 kg/m²)'; }
+  const steelTons = (area * steelRate) / 1000;
+  
+  // ===== COST CALCULATION =====
+  const costSteel = steelTons * priceSteel;
+  const costRoof = roofArea * priceRoof;
+  const costWall = wallArea * priceWall;
+  const costShipping = steelTons * priceShipping;
+  const costInstall = area * priceInstall;
+  const costFoundation = area * priceFoundation;
+  
+  const subtotal = costSteel + costRoof + costWall + costShipping + costInstall + costFoundation;
+  
+  const costDesign = subtotal * (priceDesign / 100);
+  const costContingency = subtotal * (priceContingency / 100);
+  
+  const totalCost = subtotal + costDesign + costContingency;
+  
+  // Currency
+  const regionConfig = REGION_PRICES[location];
+  const symbol = regionConfig.symbol;
+  
+  // Format function
+  function formatMoney(n) {
+    const prefix = (symbol === 'USD' || symbol === 'AUD') ? '$' : (symbol === 'CNY' ? '¥' : '$');
+    const suffix = (symbol === 'CNY') ? ' CNY' : '';
+    if (n >= 1000000) return `${prefix}${(n/1000000).toFixed(1)}M${suffix}`;
+    if (n >= 1000) return `${prefix}${Math.round(n/1000)}K${suffix}`;
+    return `${prefix}${Math.round(n)}${suffix}`;
+  }
+  
+  // Update display with animation
+  animateValue(document.getElementById('totalPriceDisplay'), 0, totalCost, 800, formatMoney(0).charAt(0), '');
+  document.getElementById('steelTonsDisplay').textContent = `${Math.round(steelTons)} t`;
+  document.getElementById('pricePerSqm').textContent = `${formatMoney(totalCost / area)}/m²`;
+  document.getElementById('priceRange').textContent = `${formatMoney(totalCost * 0.85 / area)} - ${formatMoney(totalCost * 1.15 / area)}/m²`;
+  
+  // Cost breakdown
+  document.getElementById('costSteel').textContent = formatMoney(costSteel);
+  document.getElementById('costRoof').textContent = formatMoney(costRoof);
+  document.getElementById('costWall').textContent = formatMoney(costWall);
+  document.getElementById('costShipping').textContent = formatMoney(costShipping);
+  document.getElementById('costInstall').textContent = formatMoney(costInstall);
+  document.getElementById('costFoundation').textContent = formatMoney(costFoundation);
+  document.getElementById('costDesign').textContent = formatMoney(costDesign);
+  document.getElementById('costContingency').textContent = formatMoney(costContingency);
+  document.getElementById('costTotal').textContent = formatMoney(totalCost);
+  
+  // Update cost bars (animation)
+  const maxCost = totalCost;
+  setTimeout(() => {
+    document.getElementById('barSteel').style.width = `${(costSteel/maxCost)*100}%`;
+    document.getElementById('pctSteel').textContent = `${((costSteel/totalCost)*100).toFixed(1)}%`;
+  }, 100);
+  setTimeout(() => {
+    document.getElementById('barRoof').style.width = `${(costRoof/maxCost)*100}%`;
+    document.getElementById('pctRoof').textContent = `${((costRoof/totalCost)*100).toFixed(1)}%`;
+  }, 200);
+  setTimeout(() => {
+    document.getElementById('barWall').style.width = `${(costWall/maxCost)*100}%`;
+    document.getElementById('pctWall').textContent = `${((costWall/totalCost)*100).toFixed(1)}%`;
+  }, 300);
+  setTimeout(() => {
+    document.getElementById('barShipping').style.width = `${(costShipping/maxCost)*100}%`;
+    document.getElementById('pctShipping').textContent = `${((costShipping/totalCost)*100).toFixed(1)}%`;
+  }, 400);
+  setTimeout(() => {
+    document.getElementById('barInstall').style.width = `${(costInstall/maxCost)*100}%`;
+    document.getElementById('pctInstall').textContent = `${((costInstall/totalCost)*100).toFixed(1)}%`;
+  }, 500);
+  setTimeout(() => {
+    document.getElementById('barFoundation').style.width = `${(costFoundation/maxCost)*100}%`;
+    document.getElementById('pctFoundation').textContent = `${((costFoundation/totalCost)*100).toFixed(1)}%`;
+  }, 600);
+  setTimeout(() => {
+    document.getElementById('barDesign').style.width = `${(costDesign/maxCost)*100}%`;
+    document.getElementById('pctDesign').textContent = `${((costDesign/totalCost)*100).toFixed(1)}%`;
+  }, 700);
+  setTimeout(() => {
+    document.getElementById('barContingency').style.width = `${(costContingency/maxCost)*100}%`;
+    document.getElementById('pctContingency').textContent = `${((costContingency/totalCost)*100).toFixed(1)}%`;
+  }, 800);
+  
+  // Formula detail
+  const typeNames = { warehouse: 'Warehouse', factory: 'Factory', hangar: 'Hangar', logistics: 'Logistics Center', dome: 'Space Frame Dome' };
+  document.getElementById('formulaLength').textContent = length;
+  document.getElementById('formulaWidth').textContent = width;
+  document.getElementById('formulaArea').textContent = area.toLocaleString();
+  document.getElementById('formulaRate').textContent = steelRate;
+  document.getElementById('formulaType').textContent = typeNames[type] || type;
+  document.getElementById('formulaCrane').textContent = craneText ? `Crane adjustment: ${craneText}<br>` : '';
+  document.getElementById('formulaSteel').textContent = Math.round(steelTons);
+  document.getElementById('formulaWallArea').textContent = wallArea.toLocaleString();
+  document.getElementById('formulaRoofArea').textContent = Math.round(roofArea).toLocaleString();
+  
+  // Timeline
+  const prodDays = Math.ceil(steelTons / 200) * 7;
+  const shipDays = regionConfig.shipDays;
+  const installDays = Math.ceil(area / 500) * 7 + regionConfig.installDaysBase;
+  const totalDays = prodDays + shipDays + installDays;
+  
+  document.getElementById('leadTimeDisplay').textContent = `${totalDays} d`;
+  document.getElementById('timelineEnd').textContent = `Day ${totalDays}`;
+  
+  document.getElementById('timelineBar').innerHTML = `
+    <div style="background: #f59e0b; flex: ${prodDays}; font-size: 9px; color: white; display: flex; align-items: center; justify-content: center;">Production ${prodDays}d</div>
+    <div style="background: #3b82f6; flex: ${shipDays}; font-size: 9px; color: white; display: flex; align-items: center; justify-content: center;">Shipping ${shipDays}d</div>
+    <div style="background: #10b981; flex: ${installDays}; font-size: 9px; color: white; display: flex; align-items: center; justify-content: center;">Install ${installDays}d</div>
+  `;
+}
+
+// ============================================
+// LOCATION CHANGE HANDLER
+// ============================================
+function onLocationChange() {
+  const location = document.getElementById('location').value;
+  const config = REGION_PRICES[location];
+  
+  document.getElementById('priceSteel').value = config.steel;
+  document.getElementById('priceRoof').value = config.roof;
+  document.getElementById('priceWall').value = config.wall;
+  document.getElementById('priceShipping').value = config.shipping;
+  document.getElementById('priceInstall').value = config.install;
+  document.getElementById('priceFoundation').value = config.foundation;
+  document.getElementById('priceDesign').value = config.design;
+  document.getElementById('priceContingency').value = config.contingency;
+  
+  const cur = config.currency;
+  const tonUnit = `${cur}/ton`;
+  const sqmUnit = `${cur}/m²`;
+  
+  document.getElementById('unitSteel').textContent = tonUnit;
+  document.getElementById('unitRoof').textContent = sqmUnit;
+  document.getElementById('unitWall').textContent = sqmUnit;
+  document.getElementById('unitShipping').textContent = tonUnit;
+  document.getElementById('unitInstall').textContent = sqmUnit;
+  document.getElementById('unitFoundation').textContent = sqmUnit;
+  
+  const badge = document.getElementById('regionBadge');
+  badge.textContent = location.charAt(0).toUpperCase() + location.slice(1);
+  badge.className = 'region-badge ' + location;
+  
+  calculate();
+}
+
+// ============================================
+// TOGGLE FUNCTIONS
+// ============================================
+function toggleAdvanced() {
+  const panel = document.getElementById('advancedPanel');
+  const arrow = document.getElementById('advancedArrow');
+  panel.classList.toggle('active');
+  arrow.textContent = panel.classList.contains('active') ? '▲' : '▼';
+}
+
+function toggleFormula() {
+  const detail = document.getElementById('formulaDetail');
+  detail.classList.toggle('show');
+}
+
+function resetPrices() {
+  onLocationChange();
+}
+
+// ============================================
+// MODAL FUNCTIONS
+// ============================================
+function showQuoteForm() {
+  document.getElementById('quoteModal').classList.add('active');
+}
+
+function closeQuoteForm() {
+  document.getElementById('quoteModal').classList.remove('active');
+}
+
+function submitQuoteForm(event) {
+  event.preventDefault();
+  const name = document.getElementById('quoteName');
+  const email = document.getElementById('quoteEmail');
+  let valid = true;
+  
+  // Validate name
+  if (!name.value.trim()) {
+    document.getElementById('errorName').classList.add('show');
+    name.classList.add('error');
+    valid = false;
+  } else {
+    document.getElementById('errorName').classList.remove('show');
+    name.classList.remove('error');
+  }
+  
+  // Validate email
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email.value.trim() || !emailRegex.test(email.value)) {
+    document.getElementById('errorEmail').classList.add('show');
+    email.classList.add('error');
+    valid = false;
+  } else {
+    document.getElementById('errorEmail').classList.remove('show');
+    email.classList.remove('error');
+  }
+  
+  if (valid) {
+    alert('✅ Quote request submitted successfully!\n\nOur engineering team will contact you within 24 hours with a detailed quote.');
+    closeQuoteForm();
+  }
+}
+
+// ============================================
+// SHARE FUNCTION
+// ============================================
+function shareResults() {
+  const type = document.getElementById('buildingType').value;
+  const len = document.getElementById('length').value;
+  const wid = document.getElementById('width').value;
+  const h = document.getElementById('eaveHeight').value;
+  const crane = document.getElementById('crane').value;
+  const loc = document.getElementById('location').value;
+  
+  const params = new URLSearchParams({
+    type: type,
+    l: len,
+    w: wid,
+    h: h,
+    crane: crane,
+    loc: loc
+  });
+  
+  const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
+  document.getElementById('shareLinkInput').value = url;
+  
+  const totalPrice = document.getElementById('totalPriceDisplay').textContent;
+  const steelTons = document.getElementById('steelTonsDisplay').textContent;
+  document.getElementById('shareLinkDetail').textContent = `Quote: ${totalPrice} | Steel: ${steelTons} | Location: ${loc}`;
+  
+  document.getElementById('shareModal').classList.add('active');
+}
+
+function closeShareForm() {
+  document.getElementById('shareModal').classList.remove('active');
+}
+
+function copyShareLink() {
+  const input = document.getElementById('shareLinkInput');
+  input.select();
+  document.execCommand('copy');
+  alert('✅ Link copied to clipboard!');
+}
+
+// ============================================
+// DOWNLOAD PDF (Simulated)
+// ============================================
+function downloadPDF() {
+  const location = document.getElementById('location').value;
+  const totalPrice = document.getElementById('totalPriceDisplay').textContent;
+  const steelTons = document.getElementById('steelTonsDisplay').textContent;
+  
+  alert(`📥 Downloading PDF Estimate...\n\nFile: Laotie-Steel-Quote-${location}.pdf\nTotal Price: ${totalPrice}\nSteel Quantity: ${steelTons}\n\n(In production version, this will generate a formatted PDF with full cost breakdown)`);
+}
+
+// ============================================
+// INITIAL CALCULATION
+// ============================================
+window.addEventListener('DOMContentLoaded', function() {
+  // Check URL params for shared links
+  const params = new URLSearchParams(window.location.search);
+  if (params.has('type')) {
+    document.getElementById('buildingType').value = params.get('type') || 'warehouse';
+    document.getElementById('length').value = params.get('l') || '120';
+    document.getElementById('width').value = params.get('w') || '60';
+    document.getElementById('eaveHeight').value = params.get('h') || '12';
+    document.getElementById('crane').value = params.get('crane') || 'none';
+    document.getElementById('location').value = params.get('loc') || 'australia';
+    onLocationChange();
+  } else {
+    calculate();
+  }
+});
+</script>
+
+</body>
+</html>
