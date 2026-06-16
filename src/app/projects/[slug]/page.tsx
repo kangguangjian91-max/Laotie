@@ -87,17 +87,15 @@ export default async function ProjectDetailPage(props: PageProps) {
       <Header />
 
       <main className="bg-white">
-        {/* ===== Hero Section ===== */}
-        <section className="relative bg-steel overflow-hidden">
-          <div className="absolute inset-0 opacity-15">
-            <img
-              src="/images/projects/project-05.webp"
-              alt="Steel warehouse construction by Laotie Steel — Perth Australia agricultural processing plant 50m x 60m"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-steel via-steel/95 to-steel/80" />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+        {/* ===== Project Hero Image ===== */}
+        <section className="relative bg-steel">
+          <img
+            src={project.image}
+            alt={project.h1}
+            className="w-full h-[400px] lg:h-[500px] object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-steel/90 via-steel/50 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
             <a href="/projects" className="inline-flex items-center gap-1 text-sm text-steel-accent hover:text-white transition-colors mb-4">
               ← Back to All Projects
             </a>

@@ -31,7 +31,7 @@ const projects: Project[] = [
       "120 km/h wind rating with full engineering certification",
       "Integrated mezzanine office space — 600 sqm",
     ],
-    image: "/images/projects/project-01.webp",
+    image: "/images/projects/project-sydney-01.webp",
   },
   {
     name: "Factory Complex — Phase II Expansion",
@@ -48,7 +48,7 @@ const projects: Project[] = [
       "Integrated natural ventilation ridge vents — 120 units",
       "Completed 6 weeks ahead of schedule",
     ],
-    image: "/images/projects/project-02.webp",
+    image: "/images/projects/project-lagos-01.webp",
   },
   {
     name: "Shopping Mall Dome Roof",
@@ -65,7 +65,7 @@ const projects: Project[] = [
       "Seismic design per NSCP 2015 (Philippine Building Code)",
       "PVDF coated for tropical UV resistance — 15-year warranty",
     ],
-    image: "/images/projects/project-03.webp",
+    image: "/images/projects/project-manila-01.webp",
   },
   {
     name: "Logistics Distribution Center",
@@ -82,7 +82,7 @@ const projects: Project[] = [
       "Designed for 50°C ambient temperature per UAE Building Code",
       "HVAC-ready roof structure with equipment support platforms",
     ],
-    image: "/images/projects/project-04.webp",
+    image: "/images/projects/project-dubai-01.webp",
   },
   {
     name: "Agricultural Processing Plant",
@@ -99,7 +99,7 @@ const projects: Project[] = [
       "Integrated 15T crane system with full engineering certification",
       "Dust extraction and positive-pressure ventilation ready",
     ],
-    image: "/images/projects/project-05.webp",
+    image: "/images/projects/project-perth-01.webp",
   },
   {
     name: "Aircraft Maintenance Hangar",
@@ -116,7 +116,7 @@ const projects: Project[] = [
       "Integrated fire suppression system supports in roof structure",
       "4 × 25T overhead crane runways for engine maintenance",
     ],
-    image: "/images/projects/project-06.webp",
+    image: "/images/projects/project-jakarta-01.webp",
   },
 ];
 

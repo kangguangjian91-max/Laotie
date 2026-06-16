@@ -3,6 +3,7 @@ export interface ProjectDetail {
   metaTitle: string;
   metaDescription: string;
   urlSlug: string;
+  image: string;
   h1: string;
   overview: string;
   challenges: string;
@@ -29,6 +30,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
     metaDescription:
       "Custom 120m×60m industrial warehouse in Sydney, Australia. 7,200 sqm portal frame design, AS/NZS 1170 compliant, 12m eave height, 20T crane ready. Get a quote.",
     urlSlug: "/projects/industrial-warehouse-sydney",
+    image: "/images/projects/project-sydney-01.webp",
     h1: "120m × 60m Industrial Warehouse in Sydney — Logistics Distribution Facility",
     overview: `
       <p>This 7,200 m² industrial warehouse was designed and fabricated for a Sydney-based logistics company in 2025. The facility serves as a regional distribution hub, requiring a large-span portal frame structure capable of accommodating high-bay racking systems, 20T overhead crane operations, and Australia's stringent cyclone-region wind loading requirements.</p>
@@ -203,6 +205,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
     metaDescription:
       "Custom 15,000 sqm factory complex in Lagos, Nigeria. Multi-span steel structure, tropical climate design, 30m×3 continuous spans. Get a quote for West Africa projects.",
     urlSlug: "/projects/factory-complex-lagos",
+    image: "/images/projects/project-lagos-01.webp",
     h1: "15,000 sqm Factory Complex in Lagos — Phase II Expansion",
     overview: `
       <p>This 15,000 m² factory complex is located in the Lagos Free Trade Zone, Nigeria. Completed in 2024, the project represents Phase II of a multi-stage manufacturing plant expansion. The facility required a massive column-free production floor to accommodate heavy manufacturing equipment and material handling systems.</p>
@@ -360,6 +363,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
     metaDescription:
       "Custom 80m×40m space frame dome roof for Manila shopping mall. Bolt-ball system, zero site welding, seismic design per NSCP 2015. Get a quote for space frame projects.",
     urlSlug: "/projects/shopping-mall-dome-roof-manila",
+    image: "/images/projects/project-manila-01.webp",
     h1: "80m × 40m Space Frame Dome Roof in Manila — Shopping Mall Atrium",
     overview: `
       <p>This 3,200 m² space frame dome roof was designed and fabricated for a 4-story shopping mall in Metro Manila, Philippines. Completed in 2024, the project features a curved bolt-ball space frame system covering the mall's central atrium, providing an iconic architectural feature while maintaining structural efficiency.</p>
@@ -532,6 +536,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
     metaDescription:
       "Custom 22,000 sqm logistics center in Dubai South, UAE. Steel building + mezzanine, 50m clear-span, fire-rated, designed for 50°C. Get a quote for Middle East projects.",
     urlSlug: "/projects/logistics-center-dubai",
+    image: "/images/projects/project-dubai-01.webp",
     h1: "22,000 sqm Logistics Distribution Center in Dubai — Dubai South (DWC)",
     overview: `
       <p>This 22,000 m² logistics hub is located in Dubai South (DWC) Free Zone, UAE. Completed in 2023, the project serves as a regional distribution center for a global logistics company. The facility required a massive clear-span warehouse with integrated office mezzanine, fire-rated construction, and design for extreme ambient temperatures (up to 50°C).</p>
@@ -691,6 +696,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
     metaDescription:
       "Custom 80m×60m aircraft maintenance hangar in Jakarta, Indonesia. Space frame roof, 80m clear span, SNI 1727 compliant, tropical cyclone design. Get a quote.",
     urlSlug: "/projects/aircraft-hangar-jakarta",
+    image: "/images/projects/project-jakarta-01.webp",
     h1: "80m × 60m Aircraft Maintenance Hangar in Jakarta — Narrow-Body Aircraft (Boeing 737 / Airbus A320)",
     overview: `
       <p>This 4,800 m² aircraft maintenance hangar was designed and fabricated for a regional airport in Jakarta, Indonesia. Completed in 2023, the project provides maintenance facilities for narrow-body aircraft (Boeing 737 class and Airbus A320 class). The hangar features an 80-meter clear-span space frame roof that provides unobstructed interior space for aircraft tail clearance.</p>
@@ -863,6 +869,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
     metaDescription:
       "Custom 50m×60m steel warehouse in Perth, Australia. AS/NZS compliant design, 120-ton Q355B structure, Colorbond roof & sandwich panel walls. Get a quote today.",
     urlSlug: "/projects/perth-agricultural-processing-plant",
+    image: "/images/projects/project-perth-01.webp",
     h1: "50m × 60m Steel Warehouse in Perth — Agricultural Processing Plant",
     overview: `
       <p>This 3,000 m² steel structure warehouse was designed, fabricated, and exported from our Henan facility to Perth, Western Australia in 2025. The client required a food-grade processing facility capable of withstanding Western Australia's moderate wind loads while providing a corrosion-resistant environment for agricultural product handling.</p>
