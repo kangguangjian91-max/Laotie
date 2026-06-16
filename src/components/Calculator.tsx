@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
+import { useSearchParams } from "next/navigation";
 
 // Region-specific prices (local currency per unit)
 const REGION_PRICES: Record<
@@ -136,12 +137,16 @@ const CRANE_ADDITION: Record<string, number> = {
 };
 
 export default function Calculator() {
+  const searchParams = useSearchParams();
+
   const [buildingType, setBuildingType] = useState("warehouse");
   const [length, setLength] = useState(120);
   const [width, setWidth] = useState(60);
   const [height, setHeight] = useState(12);
   const [crane, setCrane] = useState("none");
   const [location, setLocation] = useState("australia");
+  const [shareUrl, setShareUrl] = useState("");
+  const [copied, setCopied] = useState(false);
 
   const [result, setResult] = useState<{
     area: number;
@@ -229,10 +234,44 @@ export default function Calculator() {
   // Auto-calculate on mount
   useEffect(() => { calc(); }, [calc]);
 
+  // Read URL parameters on mount
+  useEffect(() => {
+    const bt = searchParams.get("buildingType");
+    const loc = searchParams.get("location");
+    const len = searchParams.get("length");
+    const wdt = searchParams.get("width");
+    const hgt = searchParams.get("height");
+    const crn = searchParams.get("crane");
+
+    if (bt && ["warehouse", "factory", "hangar", "logistics"].includes(bt)) setBuildingType(bt);
+    if (loc && REGION_PRICES[loc]) setLocation(loc);
+    if (len) setLength(Number(len));
+    if (wdt) setWidth(Number(wdt));
+    if (hgt) setHeight(Number(hgt));
+    if (crn) setCrane(crn.toUpperCase());
+  }, [searchParams]);
+
   const fmt = (n: number, sym: string) => {
     if (n >= 1_000_000) return `${sym === "CNY" ? "¥" : "$"}${(n / 1_000_000).toFixed(2)}M`;
     if (n >= 1_000) return `${sym === "CNY" ? "¥" : "$"}${Math.round(n / 1_000)}K`;
     return `${sym === "CNY" ? "¥" : "$"}${Math.round(n)}`;
+  };
+
+  // Generate share URL
+  const generateShareUrl = () => {
+    const params = new URLSearchParams({
+      buildingType,
+      location,
+      length: String(length),
+      width: String(width),
+      height: String(height),
+      crane: crane.toUpperCase(),
+    });
+    const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
+    setShareUrl(url);
+    navigator.clipboard.writeText(url);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   const pct = result
@@ -454,6 +493,16 @@ export default function Calculator() {
             <strong>Disclaimer:</strong> This is a preliminary estimate (±15–20% accuracy).
             Actual price depends on final design, steel market fluctuation, and site
             conditions. Contact our engineering team for a detailed quotation.
+          </div>
+
+          {/* Share Button */}
+          <div className="mt-6 flex gap-3">
+            <button
+              onClick={generateShareUrl}
+              className="flex-1 border-2 border-steel text-steel py-3 px-6 rounded-lg font-semibold hover:bg-steel hover:text-white transition flex items-center justify-center gap-2"
+            >
+              {copied ? "✓ Copied!" : "📋 Share This Estimate"}
+            </button>
           </div>
 
           <a

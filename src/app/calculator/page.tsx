@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Calculator from "@/components/Calculator";
 import Script from "next/script";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Steel Structure Cost Calculator 2026 | Free Online Quote Tool",
@@ -82,7 +83,9 @@ export default function CalculatorPage() {
       {/* ===== Calculator Component (Client-side) ===== */}
       <section className="py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Calculator />
+          <Suspense fallback={<div className="p-8 text-center">Loading calculator...</div>}>
+            <Calculator />
+          </Suspense>
         </div>
       </section>
 
