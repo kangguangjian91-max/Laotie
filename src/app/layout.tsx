@@ -150,6 +150,20 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="en-AU" href="https://www.laotie-steel.com/australia" />
         <link rel="alternate" hrefLang="en-NG" href="https://www.laotie-steel.com/nigeria" />
         */}
+        {/* Microsoft Clarity — free user behavior analytics (Hotjar alternative) */}
+        <Script
+          id="microsoft-clarity"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag.js";
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "REPLACE_WITH_YOUR_CLARITY_PROJECT_ID");
+            `,
+          }}
+        />
         {/* Google Consent Mode v2 — GA4 lazy loads to reduce render blocking */}
         <Script
           id="ga4-consent-mode"
