@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import dynamic from "next/dynamic";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import type { Metadata } from "next";
 
 // Dynamic imports for non-critical components (code splitting)
@@ -69,9 +70,40 @@ export const metadata: Metadata = {
   },
 };
 
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Henan Laotie Steel Structure Engineering Co., Ltd.",
+  description: "CE & ISO certified steel structure manufacturer in China. 5 production lines, 5,000T/month capacity. Serving 30+ countries with factory-direct pricing.",
+  url: "https://www.laotie-steel.com",
+  telephone: "+86-166-5073-5555",
+  priceRange: "$$",
+  image: "https://www.laotie-steel.com/images/factory-workshop.webp",
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "China",
+    addressRegion: "Henan",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "34.7466",
+    longitude: "113.6253",
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    opens: "08:00",
+    closes: "18:00",
+  },
+  sameAs: [
+    "https://www.linkedin.com/company/laotie-steel",
+  ],
+};
+
 export default function Home() {
   return (
     <>
+      <JsonLd data={localBusinessSchema} />
       <Header />
       <main>
         <Hero />
