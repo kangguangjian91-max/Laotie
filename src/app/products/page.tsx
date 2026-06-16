@@ -20,7 +20,15 @@ export const metadata = {
     description: "Portal frame buildings, floor deck systems, space frames, and enclosure cladding.",
     images: ["/images/product-steel-building.webp"],
   },
-};
+
+
+    alternates: {
+
+      canonical: "https://www.laotie-steel.com/products",
+
+    },
+
+  };
 
 const productSchemas = products.map((p, i) => ({
   "@context": "https://schema.org",

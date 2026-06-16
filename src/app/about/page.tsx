@@ -79,7 +79,15 @@ export const metadata = {
     description: "Trusted steel manufacturer since 2009. 5 production lines, 5,000T/month. Serving 30+ countries.",
     images: ["/images/factory-workshop.webp"],
   },
-};
+
+
+    alternates: {
+
+      canonical: "https://www.laotie-steel.com/about",
+
+    },
+
+  };
 
 export default function AboutPage() {
   return (

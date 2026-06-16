@@ -23,7 +23,15 @@ export const metadata: Metadata = {
     description: "Steel structure quotations, technical support, factory visits. Respond within 2 hours.",
     images: ["/images/og-image.webp"],
   },
-};
+
+
+    alternates: {
+
+      canonical: "https://www.laotie-steel.com/contact",
+
+    },
+
+  };
 
 export default function ContactPage() {
   const localBusinessSchema = {

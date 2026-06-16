@@ -19,7 +19,15 @@ export const metadata = {
     description: "Expert articles on steel structure design, cost, importing from China, certifications, and factory production.",
     images: ["/images/og-image.webp"],
   },
-};
+
+
+    alternates: {
+
+      canonical: "https://www.laotie-steel.com/blog",
+
+    },
+
+  };
 
 export default function BlogPage() {
   const posts = getAllPosts();

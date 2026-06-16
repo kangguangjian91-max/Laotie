@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     "Nigeria steel factory",
     "Philippines steel building",
   ],
+  alternates: {
+    canonical: "https://www.laotie-steel.com/portfolio",
+  },
 };
 
 const regionMap: Record<string, { label: string; emoji: string }> = {

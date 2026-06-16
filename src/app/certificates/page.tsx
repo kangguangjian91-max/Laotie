@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     url: "https://www.laotie-steel.com/certificates",
     type: "website",
   },
+  alternates: {
+    canonical: "https://www.laotie-steel.com/certificates",
+  },
 };
 
 export default function CertificatesPage() {

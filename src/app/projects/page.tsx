@@ -136,7 +136,15 @@ export const metadata = {
     description: "Industrial warehouses, factory complexes, shopping malls — delivered to 30+ countries worldwide.",
     images: ["/images/projects/project-01.webp"],
   },
-};
+
+
+    alternates: {
+
+      canonical: "https://www.laotie-steel.com/projects",
+
+    },
+
+  };
 
 const projectProductLinks: Record<string, string> = {
   "Industrial Warehouse Complex (120×60m)": "/products/steel-structure-building",

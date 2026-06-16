@@ -111,6 +111,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: post.description,
       images: ["/images/og-image.webp"],
     },
+    alternates: {
+      canonical: `https://www.laotie-steel.com/blog/${post.slug}`,
+    },
   };
 }
 

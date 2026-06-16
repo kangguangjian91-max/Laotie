@@ -22,7 +22,15 @@ export const metadata: Metadata = {
     description: "Terms covering website use, product info, quotations, and intellectual property.",
     images: ["/images/og-image.webp"],
   },
-};
+
+
+    alternates: {
+
+      canonical: "https://www.laotie-steel.com/terms",
+
+    },
+
+  };
 
 export default function TermsPage() {
   return (

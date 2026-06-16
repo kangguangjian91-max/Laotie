@@ -132,6 +132,9 @@ export const metadata: Metadata = {
     url: "https://www.laotie-steel.com/faq",
     type: "website",
   },
+  alternates: {
+    canonical: "https://www.laotie-steel.com/faq",
+  },
 };
 
 export default function FAQPage() {

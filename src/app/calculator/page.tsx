@@ -36,6 +36,9 @@ export const metadata: Metadata = {
     title: "Steel Structure Cost Calculator 2026",
     description: "Free online tool to estimate steel building construction cost.",
   },
+  alternates: {
+    canonical: "https://www.laotie-steel.com/calculator",
+  },
 };
 
 const jsonLd = {

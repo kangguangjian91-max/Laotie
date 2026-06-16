@@ -38,6 +38,9 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
       description: product.description,
       images: [product.image],
     },
+    alternates: {
+      canonical: `https://www.laotie-steel.com/products/${slug}`,
+    },
   };
 }
 

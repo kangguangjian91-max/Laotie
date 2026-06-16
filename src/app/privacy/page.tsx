@@ -22,7 +22,15 @@ export const metadata: Metadata = {
     description: "How we collect, use, and protect your personal data. GDPR & CCPA compliant.",
     images: ["/images/og-image.webp"],
   },
-};
+
+
+    alternates: {
+
+      canonical: "https://www.laotie-steel.com/privacy",
+
+    },
+
+  };
 
 const sections = [
   { id: "collect", icon: Eye, title: "Information We Collect" },
