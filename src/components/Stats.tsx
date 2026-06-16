@@ -1,8 +1,6 @@
-'use client';
-
+// Server Component - no 'use client' to ensure static HTML renders correct values
 import { Factory, Globe, Award, TrendingUp } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
 
 const stats = [
   {
@@ -39,45 +37,6 @@ const stats = [
   },
 ];
 
-function CountUp({ end, duration = 2000 }: { end: string; duration?: number }) {
-  const [count, setCount] = useState("0");
-  const ref = useRef<HTMLSpanElement>(null);
-  const hasAnimated = useRef(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated.current) {
-          hasAnimated.current = true;
-          const numericValue = parseInt(end.replace(/[^0-9]/g, ""));
-          const suffix = end.replace(/[0-9]/g, "");
-          const startTime = Date.now();
-
-          const updateCount = () => {
-            const now = Date.now();
-            const progress = Math.min((now - startTime) / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
-            const current = Math.floor(eased * numericValue);
-            setCount(current + suffix);
-
-            if (progress < 1) {
-              requestAnimationFrame(updateCount);
-            }
-          };
-
-          requestAnimationFrame(updateCount);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [end, duration]);
-
-  return <span ref={ref}>{count}</span>;
-}
-
 export default function Stats() {
   return (
     <section className="bg-[#1B3A6B] border-b border-white/10">
@@ -103,12 +62,12 @@ export default function Stats() {
                 <stat.icon className={`w-8 h-8 ${stat.color}`} />
               </div>
 
-              {/* Value with CountUp animation */}
+              {/* Value - static render for SEO, no flash of "0" */}
               <div
                 className="text-4xl sm:text-5xl font-bold text-white mb-2"
                 style={{ animationDelay: `${i * 0.2}s` }}
               >
-                <CountUp end={stat.value} />
+                {stat.value}
               </div>
 
               {/* Label */}
