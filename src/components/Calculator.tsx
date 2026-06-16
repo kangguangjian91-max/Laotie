@@ -274,6 +274,104 @@ export default function Calculator() {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  // Social media share functions
+  const shareToWhatsApp = () => {
+    const params = new URLSearchParams({
+      buildingType,
+      location,
+      length: String(length),
+      width: String(width),
+      height: String(height),
+      crane: crane.toUpperCase(),
+    });
+    const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
+    const buildingTypeLabel = {
+      warehouse: "Warehouse/Logistics",
+      factory: "Factory (with crane)",
+      hangar: "Aircraft Hangar",
+      logistics: "Logistics Center",
+    }[buildingType] || buildingType;
+    const locationLabel = {
+      australia: "Australia",
+      china: "China",
+      nigeria: "Nigeria",
+      philippines: "Philippines",
+      uae: "UAE/Dubai",
+      indonesia: "Indonesia",
+    }[location] || location;
+    const text = `Steel Structure Cost Estimate:%0A%0A• Building: ${buildingTypeLabel}%0A• Location: ${locationLabel}%0A• Size: ${length}×${width}×${height}m%0A• Crane: ${crane.toUpperCase()}%0A%0AGet your estimate: ${url}`;
+    window.open(`https://wa.me/?text=${text}`, "_blank");
+  };
+
+  const shareToEmail = () => {
+    const params = new URLSearchParams({
+      buildingType,
+      location,
+      length: String(length),
+      width: String(width),
+      height: String(height),
+      crane: crane.toUpperCase(),
+    });
+    const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
+    const buildingTypeLabel = {
+      warehouse: "Warehouse/Logistics",
+      factory: "Factory (with crane)",
+      hangar: "Aircraft Hangar",
+      logistics: "Logistics Center",
+    }[buildingType] || buildingType;
+    const locationLabel = {
+      australia: "Australia",
+      china: "China",
+      nigeria: "Nigeria",
+      philippines: "Philippines",
+      uae: "UAE/Dubai",
+      indonesia: "Indonesia",
+    }[location] || location;
+    const subject = `Steel Structure Cost Estimate - ${buildingTypeLabel} in ${locationLabel}`;
+    const body = `Hello,%0A%0AI calculated a steel structure cost estimate and wanted to share it with you.%0A%0AProject Details:%0A- Building Type: ${buildingTypeLabel}%0A- Location: ${locationLabel}%0A- Dimensions: ${length}m × ${width}m × ${height}m%0A- Overhead Crane: ${crane.toUpperCase()}%0A%0AView the full estimate: ${url}%0A%0ABest regards`;
+    window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${body}`;
+  };
+
+  const shareToTwitter = () => {
+    const params = new URLSearchParams({
+      buildingType,
+      location,
+      length: String(length),
+      width: String(width),
+      height: String(height),
+      crane: crane.toUpperCase(),
+    });
+    const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
+    const text = `Get an instant steel structure cost estimate for your project. Free online calculator with regional pricing.`;
+    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, "_blank");
+  };
+
+  const shareToLinkedIn = () => {
+    const params = new URLSearchParams({
+      buildingType,
+      location,
+      length: String(length),
+      width: String(width),
+      height: String(height),
+      crane: crane.toUpperCase(),
+    });
+    const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, "_blank");
+  };
+
+  const shareToFacebook = () => {
+    const params = new URLSearchParams({
+      buildingType,
+      location,
+      length: String(length),
+      width: String(width),
+      height: String(height),
+      crane: crane.toUpperCase(),
+    });
+    const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
+    window.open(`https://www.facebook.com/sharer.php?u=${encodeURIComponent(url)}`, "_blank");
+  };
+
   const pct = result
     ? [
         result.costSteel,
@@ -495,14 +593,47 @@ export default function Calculator() {
             conditions. Contact our engineering team for a detailed quotation.
           </div>
 
-          {/* Share Button */}
-          <div className="mt-6 flex gap-3">
-            <button
-              onClick={generateShareUrl}
-              className="flex-1 border-2 border-steel text-steel py-3 px-6 rounded-lg font-semibold hover:bg-steel hover:text-white transition flex items-center justify-center gap-2"
-            >
-              {copied ? "✓ Copied!" : "📋 Share This Estimate"}
-            </button>
+          {/* Share Buttons */}
+          <div className="mt-6">
+            <div className="text-sm font-medium text-gray-700 mb-3">Share This Estimate</div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <button
+                onClick={shareToWhatsApp}
+                className="flex items-center justify-center gap-2 py-3 px-4 border-2 border-green-600 text-green-600 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition"
+              >
+                <span>💬</span> WhatsApp
+              </button>
+              <button
+                onClick={shareToEmail}
+                className="flex items-center justify-center gap-2 py-3 px-4 border-2 border-gray-600 text-gray-600 rounded-lg font-semibold hover:bg-gray-600 hover:text-white transition"
+              >
+                <span>📧</span> Email
+              </button>
+              <button
+                onClick={shareToTwitter}
+                className="flex items-center justify-center gap-2 py-3 px-4 border-2 border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition"
+              >
+                <span>🐦</span> Twitter
+              </button>
+              <button
+                onClick={shareToLinkedIn}
+                className="flex items-center justify-center gap-2 py-3 px-4 border-2 border-blue-700 text-blue-700 rounded-lg font-semibold hover:bg-blue-700 hover:text-white transition"
+              >
+                <span>💼</span> LinkedIn
+              </button>
+              <button
+                onClick={shareToFacebook}
+                className="flex items-center justify-center gap-2 py-3 px-4 border-2 border-blue-900 text-blue-900 rounded-lg font-semibold hover:bg-blue-900 hover:text-white transition"
+              >
+                <span>👥</span> Facebook
+              </button>
+              <button
+                onClick={generateShareUrl}
+                className="flex items-center justify-center gap-2 py-3 px-4 border-2 border-steel text-steel rounded-lg font-semibold hover:bg-steel hover:text-white transition"
+              >
+                {copied ? "✓ Copied!" : "📋 Copy Link"}
+              </button>
+            </div>
           </div>
 
           <a
