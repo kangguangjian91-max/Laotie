@@ -1,9 +1,11 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 import { ArrowLeft, MapPin, Building, Ruler, Calendar } from "lucide-react";
 
 interface Project {
   name: string;
+  slug?: string;
   location: string;
   type: string;
   size: string;
@@ -16,6 +18,7 @@ interface Project {
 const projects: Project[] = [
   {
     name: "Industrial Warehouse Complex (120×60m)",
+    slug: "industrial-warehouse-sydney",
     location: "Sydney, Australia",
     type: "Portal Frame Steel Building",
     size: "7,200 sqm",
@@ -32,6 +35,7 @@ const projects: Project[] = [
   },
   {
     name: "Factory Complex — Phase II Expansion",
+    slug: "factory-complex-lagos",
     location: "Lagos, Nigeria",
     type: "Multi-Span Steel Structure",
     size: "15,000 sqm",
@@ -48,6 +52,7 @@ const projects: Project[] = [
   },
   {
     name: "Shopping Mall Dome Roof",
+    slug: "shopping-mall-dome-roof-manila",
     location: "Manila, Philippines",
     type: "Space Frame Structure",
     size: "3,200 sqm",
@@ -64,6 +69,7 @@ const projects: Project[] = [
   },
   {
     name: "Logistics Distribution Center",
+    slug: "logistics-center-dubai",
     location: "Dubai, UAE",
     type: "Steel Building + Mezzanine",
     size: "22,000 sqm",
@@ -80,6 +86,7 @@ const projects: Project[] = [
   },
   {
     name: "Agricultural Processing Plant",
+    slug: "perth-agricultural-processing-plant",
     location: "Perth, Australia",
     type: "Portal Frame + Crane System",
     size: "5,600 sqm",
@@ -96,6 +103,7 @@ const projects: Project[] = [
   },
   {
     name: "Aircraft Maintenance Hangar",
+    slug: "aircraft-hangar-jakarta",
     location: "Jakarta, Indonesia",
     type: "Large-Span Space Frame",
     size: "4,800 sqm",
@@ -261,6 +269,14 @@ export default function ProjectsPage() {
                         className="inline-flex items-center text-sm text-gray-400 hover:text-steel-accent transition-colors"
                       >
                         View Related Product →
+                      </a>
+                    )}
+                    {project.slug && (
+                      <a
+                        href={`/projects/${project.slug}`}
+                        className="inline-flex items-center text-sm font-semibold text-steel hover:text-steel-light transition-colors ml-auto"
+                      >
+                        View Project →
                       </a>
                     )}
                   </div>
