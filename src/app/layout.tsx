@@ -143,6 +143,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Hreflang tags for international SEO */}
+        <link rel="alternate" hrefLang="en" href="https://www.laotie-steel.com" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.laotie-steel.com" />
+        {/* Add more hreflang when country pages are created:
+        <link rel="alternate" hrefLang="en-AU" href="https://www.laotie-steel.com/australia" />
+        <link rel="alternate" hrefLang="en-NG" href="https://www.laotie-steel.com/nigeria" />
+        */}
         {/* Google Consent Mode v2 — GA4 lazy loads to reduce render blocking */}
         <Script
           id="ga4-consent-mode"

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.laotie-steel.com/</loc>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/factory-building.webp</image:loc>
+      <image:title>Laotie Steel Structure Factory Building</image:title>
+      <image:caption>CE & ISO certified steel structure manufacturing facility in China</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/factory-workshop.webp</image:loc>
+      <image:title>Steel Structure Manufacturing Workshop</image:title>
+    </image:image>
+  </url>
+
+  <!-- Products Page -->
+  <url>
+    <loc>https://www.laotie-steel.com/products</loc>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/products/product-steel-building.webp</image:loc>
+      <image:title>Steel Structure Building</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/products/product-floor-deck.webp</image:loc>
+      <image:title>Floor Deck</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/products/product-space-frame.webp</image:loc>
+      <image:title>Space Frame Truss</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/products/product-cladding.webp</image:loc>
+      <image:title>Cladding System</image:title>
+    </image:image>
+  </url>
+
+  <!-- Projects Page -->
+  <url>
+    <loc>https://www.laotie-steel.com/projects</loc>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/projects/project-01.webp</image:loc>
+      <image:title>Industrial Warehouse Sydney Australia</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/projects/project-02.webp</image:loc>
+      <image:title>Factory Complex Lagos Nigeria</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/projects/project-03.webp</image:loc>
+      <image:title>Shopping Mall Roof Manila Philippines</image:title>
+    </image:image>
+  </url>
+
+  <!-- Factory Page -->
+  <url>
+    <loc>https://www.laotie-steel.com/about</loc>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/factory/01-h-beam-warehouse.webp</image:loc>
+      <image:title>H-Beam Warehouse Fabrication</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/factory/02-tekla-modeling.webp</image:loc>
+      <image:title>Tekla 3D Modeling for Steel Structures</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/factory/03-steel-fabrication.webp</image:loc>
+      <image:title>Steel Fabrication Process</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/factory/04-welding-work.webp</image:loc>
+      <image:title>Welding Work for Steel Structures</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/factory/05-shot-blasting.webp</image:loc>
+      <image:title>Shot Blasting & Painting Process</image:title>
+    </image:image>
+  </url>
+
+  <!-- Certificates -->
+  <url>
+    <loc>https://www.laotie-steel.com/certificates</loc>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/certificates/ce-cert.webp</image:loc>
+      <image:title>CE Certification</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/certificates/iso-9001.webp</image:loc>
+      <image:title>ISO 9001 Certification</image:title>
+    </image:image>
+  </url>
+</urlset>

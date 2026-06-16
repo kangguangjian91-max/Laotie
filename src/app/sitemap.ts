@@ -52,3 +52,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...staticEntries, ...productEntries, ...blogEntries];
 }
+
+// Image sitemap reference for robots.txt
+export const imageSitemap = `${siteUrl}/image-sitemap.xml`;
