@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
+import ProjectCarousel from "@/components/ProjectCarousel";
 
 export const metadata: Metadata = {
   title: "Steel Structure Philippines | Warehouse & Factory Construction",
@@ -272,173 +273,73 @@ export default function PhilippinesLandingPage() {
         </div>
       </section>
 
-      {/* Project Cases */}
-      <section id="projects" className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Recent Projects in Philippines
-          </h2>
-          <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-            We have completed 500+ steel structure projects across Philippines. Here are some of our
-            recent works.
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Project 1 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-              <img
-                src="/images/philippines/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp"
-                alt="Warehouse project in Manila, Philippines"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="font-bold text-lg mb-2">Manila Warehouse Complex</h3>
-                <p className="text-gray-600 text-sm mb-2">
-                  5,000 sqm steel structure warehouse with office annex. Built for logistics company in
-                  Caloocan.
-                </p>
-                <div className="flex gap-2 flex-wrap">
-                  <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
-                    Warehouse
-                  </span>
-                  <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-                    Manila
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Project 2 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-              <img
-                src="/images/philippines/5704819281f8e9ad3038915e967864ad.webp"
-                alt="Factory building in Cebu, Philippines"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="font-bold text-lg mb-2">Cebu Manufacturing Plant</h3>
-                <p className="text-gray-600 text-sm mb-2">
-                  3,000 sqm steel structure factory with 5-ton crane system. Food processing facility.
-                </p>
-                <div className="flex gap-2 flex-wrap">
-                  <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
-                    Factory
-                  </span>
-                  <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-                    Cebu
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Project 3 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-              <img
-                src="/images/philippines/688e07390f62e21cbb8bd1a1ba455959.webp"
-                alt="Industrial building in Davao, Philippines"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="font-bold text-lg mb-2">Davao Logistics Center</h3>
-                <p className="text-gray-600 text-sm mb-2">
-                  8,000 sqm distribution center with mezzanine floor. 40x80m clear span design.
-                </p>
-                <div className="flex gap-2 flex-wrap">
-                  <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
-                    Logistics
-                  </span>
-                  <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-                    Davao
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Project 4 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-              <img
-                src="/images/philippines/1a3e5a019b4c71eda2da853679708074.webp"
-                alt="Industrial facility in Baguio, Philippines"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="font-bold text-lg mb-2">Baguio Agricultural Facility</h3>
-                <p className="text-gray-600 text-sm mb-2">
-                  2,500 sqm steel structure for cold storage and processing. High insulation
-                  requirements.
-                </p>
-                <div className="flex gap-2 flex-wrap">
-                  <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
-                    Agricultural
-                  </span>
-                  <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-                    Baguio
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Project 5 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-              <img
-                src="/images/philippines/3c827b0a462391a3e3486e39a5ae25d4.webp"
-                alt="Commercial building in Iloilo, Philippines"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="font-bold text-lg mb-2">Iloilo Showroom & Warehouse</h3>
-                <p className="text-gray-600 text-sm mb-2">
-                  1,800 sqm combined showroom and warehouse. Two-story design with office space.
-                </p>
-                <div className="flex gap-2 flex-wrap">
-                  <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
-                    Commercial
-                  </span>
-                  <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-                    Iloilo
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Project 6 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-              <img
-                src="/images/philippines/967a25ac2c3ec808229a990e27529ba2.webp"
-                alt="Factory building in Laguna, Philippines"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="font-bold text-lg mb-2">Laguna Electronics Factory</h3>
-                <p className="text-gray-600 text-sm mb-2">
-                  4,200 sqm steel structure factory with clean room requirements. ESD flooring and
-                  temperature control.
-                </p>
-                <div className="flex gap-2 flex-wrap">
-                  <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
-                    Factory
-                  </span>
-                  <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-                    Laguna
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="mt-8 text-center">
-            <a
-              href="/projects"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-            >
-              View All Projects
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
+      {/* Project Cases - Carousel */}
+      <ProjectCarousel
+        title="Recent Projects in Philippines"
+        subtitle="We have completed 500+ steel structure projects across Philippines. Here are some of our recent works."
+        projects={[
+          {
+            image: "/images/philippines/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp",
+            alt: "Warehouse project in Manila, Philippines",
+            title: "Manila Warehouse Complex",
+            description: "5,000 sqm steel structure warehouse with office annex. Built for logistics company in Caloocan.",
+            tags: [
+              { label: "Warehouse", color: "bg-blue-100 text-blue-800" },
+              { label: "Manila", color: "bg-gray-100 text-gray-800" },
+            ],
+          },
+          {
+            image: "/images/philippines/5704819281f8e9ad3038915e967864ad.webp",
+            alt: "Factory building in Cebu, Philippines",
+            title: "Cebu Manufacturing Plant",
+            description: "3,000 sqm steel structure factory with 5-ton crane system. Food processing facility.",
+            tags: [
+              { label: "Factory", color: "bg-blue-100 text-blue-800" },
+              { label: "Cebu", color: "bg-gray-100 text-gray-800" },
+            ],
+          },
+          {
+            image: "/images/philippines/688e07390f62e21cbb8bd1a1ba455959.webp",
+            alt: "Industrial building in Davao, Philippines",
+            title: "Davao Logistics Center",
+            description: "8,000 sqm distribution center with mezzanine floor. 40x80m clear span design.",
+            tags: [
+              { label: "Logistics", color: "bg-blue-100 text-blue-800" },
+              { label: "Davao", color: "bg-gray-100 text-gray-800" },
+            ],
+          },
+          {
+            image: "/images/philippines/1a3e5a019b4c71eda2da853679708074.webp",
+            alt: "Agricultural facility in Baguio, Philippines",
+            title: "Baguio Agricultural Facility",
+            description: "2,500 sqm steel structure for cold storage and processing. High insulation requirements.",
+            tags: [
+              { label: "Agricultural", color: "bg-blue-100 text-blue-800" },
+              { label: "Baguio", color: "bg-gray-100 text-gray-800" },
+            ],
+          },
+          {
+            image: "/images/philippines/3c827b0a462391a3e3486e39a5ae25d4.webp",
+            alt: "Commercial building in Iloilo, Philippines",
+            title: "Iloilo Showroom & Warehouse",
+            description: "1,800 sqm combined showroom and warehouse. Two-story design with office space.",
+            tags: [
+              { label: "Commercial", color: "bg-blue-100 text-blue-800" },
+              { label: "Iloilo", color: "bg-gray-100 text-gray-800" },
+            ],
+          },
+          {
+            image: "/images/philippines/967a25ac2c3ec808229a990e27529ba2.webp",
+            alt: "Factory building in Laguna, Philippines",
+            title: "Laguna Electronics Factory",
+            description: "4,200 sqm steel structure factory with clean room requirements. ESD flooring and temperature control.",
+            tags: [
+              { label: "Factory", color: "bg-blue-100 text-blue-800" },
+              { label: "Laguna", color: "bg-gray-100 text-gray-800" },
+            ],
+          },
+        ]}
+      />      {/* Services */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">

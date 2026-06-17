@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
+import ProjectCarousel from "@/components/ProjectCarousel";
 
 export const metadata: Metadata = {
   title: "Steel Structure Vietnam | Warehouse & Factory Construction",
@@ -348,88 +349,43 @@ export default function VietnamLandingPage() {
         </div>
       </section>
 
-      {/* Project Cases */}
-      <section id="projects" className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Project Cases in Vietnam
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <img
-                src="/images/vietnam/3c827b0a462391a3e3486e39a5ae25d4.webp"
-                alt="Warehouse Complex in Hanoi"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Hanoi Warehouse Complex</h3>
-                <p className="text-gray-600 mb-4">
-                  5,000 sqm steel structure warehouse for logistics company in Hanoi.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">
-                    Warehouse
-                  </span>
-                  <span className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">
-                    5,000 sqm
-                  </span>
-                  <span className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">
-                    2025
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <img
-                src="/images/vietnam/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp"
-                alt="Manufacturing Plant in Ho Chi Minh City"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Ho Chi Minh Manufacturing Plant</h3>
-                <p className="text-gray-600 mb-4">
-                  8,000 sqm factory building for electronics manufacturer in Thu Duc.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">
-                    Factory
-                  </span>
-                  <span className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">
-                    8,000 sqm
-                  </span>
-                  <span className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">
-                    2024
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <img
-                src="/images/vietnam/5704819281f8e9ad3038915e967864ad.webp"
-                alt="Logistics Center in Da Nang"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Da Nang Logistics Center</h3>
-                <p className="text-gray-600 mb-4">
-                  3,500 sqm warehouse with office space in Da Nang.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">
-                    Warehouse + Office
-                  </span>
-                  <span className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">
-                    3,500 sqm
-                  </span>
-                  <span className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">
-                    2025
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Project Cases - Carousel */}
+      <ProjectCarousel
+        title="Project Cases in Vietnam"
+        subtitle="We have completed 500+ steel structure projects across Vietnam. Here are some of our recent works."
+        projects={[
+          {
+            image: "/images/vietnam/3c827b0a462391a3e3486e39a5ae25d4.webp",
+            alt: "Warehouse Complex in Hanoi, Vietnam",
+            title: "Hanoi Warehouse Complex",
+            description: "5,000 sqm steel structure warehouse for logistics company in Hanoi. 2025 completion.",
+            tags: [
+              { label: "Warehouse", color: "bg-red-100 text-red-700" },
+              { label: "Hanoi", color: "bg-gray-100 text-gray-700" },
+            ],
+          },
+          {
+            image: "/images/vietnam/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp",
+            alt: "Manufacturing Plant in Ho Chi Minh City, Vietnam",
+            title: "Ho Chi Minh Manufacturing Plant",
+            description: "8,000 sqm factory building for electronics manufacturer in Thu Duc. 2024 completion.",
+            tags: [
+              { label: "Factory", color: "bg-red-100 text-red-700" },
+              { label: "Ho Chi Minh", color: "bg-gray-100 text-gray-700" },
+            ],
+          },
+          {
+            image: "/images/vietnam/5704819281f8e9ad3038915e967864ad.webp",
+            alt: "Logistics Center in Da Nang, Vietnam",
+            title: "Da Nang Logistics Center",
+            description: "3,500 sqm warehouse with office space in Da Nang. 2024 completion.",
+            tags: [
+              { label: "Warehouse", color: "bg-red-100 text-red-700" },
+              { label: "Da Nang", color: "bg-gray-100 text-gray-700" },
+            ],
+          },
+        ]}
+      />
 
       {/* Solutions */}
       <section className="py-16 bg-white">

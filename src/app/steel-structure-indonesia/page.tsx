@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import ProjectCarousel from "@/components/ProjectCarousel";
 
 export const metadata: Metadata = {
   title: "Steel Structure Indonesia | Warehouse & Factory Construction",
@@ -319,95 +321,43 @@ export default function SteelStructureIndonesia() {
         </div>
       </section>
 
-      {/* Project Cases */}
-      <section id="projects" className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-steel mb-12">
-            Recent Projects in Indonesia
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
-              <img
-                src="/images/indonesia/679234a53ccd9c56cf26658f4f072138.webp"
-                alt="Jakarta Warehouse Complex"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-steel mb-2">Jakarta Warehouse Complex</h3>
-                <p className="text-gray-600 mb-4">
-                  5,000 m² steel structure warehouse for logistics company in Jakarta. Seismic Zone
-                  6 design.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                    Warehouse
-                  </span>
-                  <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                    5,000 m²
-                  </span>
-                  <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                    Jakarta
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
-              <img
-                src="/images/indonesia/67dd07a1917aa291f1631e16ce010c88.webp"
-                alt="Surabaya Manufacturing Plant"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-steel mb-2">
-                  Surabaya Manufacturing Plant
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  3,000 m² factory building for automotive parts manufacturer. High humidity
-                  protection.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                    Factory
-                  </span>
-                  <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                    3,000 m²
-                  </span>
-                  <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                    Surabaya
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
-              <img
-                src="/images/indonesia/688e07390f62e21cbb8bd1a1ba455959.webp"
-                alt="Medan Cold Storage Facility"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-steel mb-2">
-                  Medan Cold Storage Facility
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  2,000 m² cold storage warehouse with insulated panels. Temperature control
-                  design.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                    Cold Storage
-                  </span>
-                  <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                    2,000 m²
-                  </span>
-                  <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                    Medan
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Project Cases - Carousel */}
+      <ProjectCarousel
+        title="Recent Projects in Indonesia"
+        subtitle="We have completed 500+ steel structure projects across Indonesia. Here are some of our recent works."
+        projects={[
+          {
+            image: "/images/indonesia/679234a53ccd9c56cf26658f4f072138.webp",
+            alt: "Warehouse project in Jakarta, Indonesia",
+            title: "Jakarta Warehouse Complex",
+            description: "5,000 m² steel structure warehouse for logistics company in Jakarta. Seismic Zone 6 design.",
+            tags: [
+              { label: "Warehouse", color: "bg-green-100 text-green-800" },
+              { label: "Jakarta", color: "bg-gray-100 text-gray-800" },
+            ],
+          },
+          {
+            image: "/images/indonesia/67dd07a1917aa291f1631e16ce010c88.webp",
+            alt: "Manufacturing plant in Surabaya, Indonesia",
+            title: "Surabaya Manufacturing Plant",
+            description: "3,000 m² factory building for automotive parts manufacturer. High humidity protection.",
+            tags: [
+              { label: "Factory", color: "bg-green-100 text-green-800" },
+              { label: "Surabaya", color: "bg-gray-100 text-gray-800" },
+            ],
+          },
+          {
+            image: "/images/indonesia/688e07390f62e21cbb8bd1a1ba455959.webp",
+            alt: "Cold storage facility in Medan, Indonesia",
+            title: "Medan Cold Storage Facility",
+            description: "2,000 m² cold storage warehouse with insulated panels. Temperature control design.",
+            tags: [
+              { label: "Cold Storage", color: "bg-green-100 text-green-800" },
+              { label: "Medan", color: "bg-gray-100 text-gray-800" },
+            ],
+          },
+        ]}
+      />
 
       {/* Solutions */}
       <section className="py-16 bg-gray-50">
