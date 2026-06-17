@@ -241,6 +241,7 @@ export default function PhilippinesLandingPage() {
       </section>
 
       {/* Logistics Support */}
+      <ScrollAnimator animation="fade-in">
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
@@ -290,6 +291,7 @@ export default function PhilippinesLandingPage() {
           </div>
         </div>
       </section>
+      </ScrollAnimator>
 
       {/* Project Cases - Carousel */}
       <ProjectCarousel
@@ -449,7 +451,8 @@ export default function PhilippinesLandingPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 bg-blue-50">
+      <ScrollAnimator animation="fade-in">
+<section className="py-16 bg-blue-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             What Our Clients Say
@@ -503,9 +506,11 @@ export default function PhilippinesLandingPage() {
           </div>
         </div>
       </section>
+            </ScrollAnimator>
 
       {/* FAQ */}
-      <section className="py-16 bg-white">
+      <ScrollAnimator animation="fade-in">
+<section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Frequently Asked Questions (Philippines)
@@ -576,6 +581,7 @@ export default function PhilippinesLandingPage() {
           </div>
         </div>
       </section>
+            </ScrollAnimator>
 
       {/* Contact Form */}
       <section id="contact" className="py-16 bg-gray-50">
