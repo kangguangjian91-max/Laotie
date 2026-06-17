@@ -1314,14 +1314,20 @@ export const projectDetails: Record<string, ProjectDetail> = {
     h1: "Rattan Weaving Industrial Park — 30,000㎡ Production Facility in Guo Village, Shangqiu",
     overview: `
       <p>This 30,000 m² industrial park is designed and constructed for Mr. Liu's rattan weaving production base in Guo Village, Shangqiu, Henan Province. The first phase includes 4 production buildings (15,000 m² total) for rattan furniture manufacturing.</p>
+
       <p>Each production building has a footprint of 33 meters in width and 90 meters in length. The buildings are partially 2-story, with a total building area of approximately 3,750 m² per building. The 33m span is divided by 2 intermediate columns, creating 3 production bays ideal for different stages of rattan weaving process. Total steel consumption for the first phase: 300 tons of Q355B high-strength steel.</p>
-      <div class="my-6">
+
+      <div class="my-2">
         <img src="/images/projects/rattan-weaving-industrial-park/frame_01.webp" alt="Rattan weaving industrial park construction view" class="rounded-lg shadow-md w-full" />
-        <p class="text-sm text-gray-500 mt-2 text-center">Industrial park construction overview</p>
       </div>
+
+      <div class="my-2">
+        <img src="/images/projects/rattan-weaving-industrial-park/frame_03.webp" alt="Rattan weaving factory construction progress" class="rounded-lg shadow-md w-full" />
+      </div>
+
       <p>The design accounts for 500 kg/m² floor live load (heavy load for rattan weaving equipment and materials). All structural calculations were prepared by our chartered engineering team and stamped for local building department submission. The project is currently under construction.</p>
     `,
-    challenges: `
+   challenges: `
       <p><strong>1. Heavy Floor Load Design.</strong> The client required 500 kg/m² floor live load to accommodate heavy rattan weaving equipment and material storage. This is significantly higher than standard industrial buildings (typically 150-200 kg/m²). Our design used additional reinforcement in the floor deck and beam系统设计 to meet this requirement.</p>
       <p><strong>2. Multi-Building Coordination.</strong> The industrial park includes 4 production buildings constructed simultaneously. Our project management team coordinated the fabrication and delivery schedule to ensure all 4 buildings progressed in sync, avoiding delays in any single building.</p>
       <p><strong>3. Partially 2-Story Design.</strong> The partially 2-story design required careful consideration of column loads and foundation design. Our engineering team optimized the foundation design to accommodate the varying loads from 1-story and 2-story sections.</p>

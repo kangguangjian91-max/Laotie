@@ -245,7 +245,7 @@ export default async function ProjectDetailPage(props: PageProps) {
         <section className="bg-section py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Project Photos</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {(project.galleryImages ?? [
                 { src: "/images/projects/project-05.webp", alt: `${project.h1} - project photo` },
                 { src: "/images/projects/project-05.webp", alt: `${project.h1} - project photo` },
@@ -260,7 +260,7 @@ export default async function ProjectDetailPage(props: PageProps) {
                 </div>
               ))}
             </div>
-            <p className="text-center text-sm text-gray-500 mt-6">
+            <p className="text-center text-sm text-gray-500 mt-2">
               More project photos available upon request. Contact our team for the full project gallery including factory fabrication, container loading, and on-site erection photos.
             </p>
           </div>
