@@ -5,7 +5,7 @@ export default function Footer() {
       <div className="h-1 bg-gradient-to-r from-steel-accent via-cta to-steel-accent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
@@ -66,6 +66,39 @@ export default function Footer() {
               <li><a href="/blog" className="hover:text-white transition-colors">Blog</a></li>
               <li><a href="https://hnltgjg.en.alibaba.com/" target="_blank" rel="noopener noreferrer" className="hover:text-steel-accent transition-colors">Alibaba Store ↗</a></li>
               <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+
+          {/* Regional Offices */}
+          <div>
+            <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">
+              🌍 Regional Offices
+            </h4>
+            <ul className="space-y-2.5 text-sm">
+              <li>
+                <a href="/steel-structure-philippines" className="hover:text-white transition-colors inline-flex items-center gap-1 group">
+                  <span className="w-0 group-hover:w-1 h-0.5 bg-steel-accent rounded-full transition-all" />
+                  🇵🇭 Philippines
+                </a>
+              </li>
+              <li>
+                <span className="text-gray-500 inline-flex items-center gap-1">
+                  🇻🇳 Vietnam
+                  <span className="text-xs">(Soon)</span>
+                </span>
+              </li>
+              <li>
+                <span className="text-gray-500 inline-flex items-center gap-1">
+                  🇮🇩 Indonesia
+                  <span className="text-xs">(Soon)</span>
+                </span>
+              </li>
+              <li>
+                <span className="text-gray-500 inline-flex items-center gap-1">
+                  🇳🇬 Nigeria
+                  <span className="text-xs">(Soon)</span>
+                </span>
+              </li>
             </ul>
           </div>
 

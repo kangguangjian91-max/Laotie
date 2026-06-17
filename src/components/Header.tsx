@@ -14,9 +14,17 @@ const navItems = [
   { label: "FAQ", href: "/faq" },
 ];
 
+const globalLinks = [
+  { label: "Philippines", href: "/steel-structure-philippines", flag: "🇵🇭" },
+  { label: "Vietnam", href: "#", flag: "🇻🇳", disabled: true },
+  { label: "Indonesia", href: "#", flag: "🇮🇩", disabled: true },
+  { label: "Nigeria", href: "#", flag: "🇳🇬", disabled: true },
+];
+
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [globalOpen, setGlobalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -59,6 +67,52 @@ export default function Header() {
                 <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-steel-accent rounded-full group-hover:w-4 transition-all duration-300" />
               </a>
             ))}
+            
+            {/* Global Dropdown */}
+            <div className="relative" onMouseLeave={() => setGlobalOpen(false)}>
+              <button
+                onMouseEnter={() => setGlobalOpen(true)}
+                onClick={() => setGlobalOpen(!globalOpen)}
+                className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-600 hover:text-steel rounded-lg transition-colors group"
+                aria-expanded={globalOpen}
+                aria-haspopup="true"
+              >
+                <span>🌍</span> Global
+                <svg className={`w-3.5 h-3.5 transition-transform ${globalOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              {/* Dropdown Menu */}
+              {globalOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-100 py-2 animate-fade-in"
+                  onMouseEnter={() => setGlobalOpen(true)}
+                >
+                  {globalLinks.map((link) => (
+                    <a
+                      key={link.href}
+                      href={link.disabled ? '#' : link.href}
+                      className={`flex items-center gap-2.5 px-4 py-2.5 text-sm transition-colors ${
+                        link.disabled 
+                          ? 'text-gray-400 cursor-not-allowed' 
+                          : 'text-gray-700 hover:bg-gray-50 hover:text-steel'
+                      }`}
+                      onClick={(e) => {
+                        if (link.disabled) e.preventDefault();
+                        setGlobalOpen(false);
+                      }}
+                    >
+                      <span className="text-base">{link.flag}</span>
+                      <span className="flex-1">{link.label}</span>
+                      {link.disabled && (
+                        <span className="text-xs text-gray-400">Soon</span>
+                      )}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
           </nav>
 
           {/* Right side */}
@@ -111,6 +165,35 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
+            
+            {/* Mobile Global Links */}
+            <div className="mt-2 pt-2 border-t border-gray-100">
+              <p className="px-3 py-1.5 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                🌍 Regional Pages
+              </p>
+              {globalLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.disabled ? '#' : link.href}
+                  onClick={(e) => {
+                    if (link.disabled) e.preventDefault();
+                    setOpen(false);
+                  }}
+                  className={`flex items-center gap-2 px-3 py-2.5 text-sm transition-colors ${
+                    link.disabled 
+                      ? 'text-gray-400' 
+                      : 'text-gray-600 hover:text-steel hover:bg-gray-50'
+                  }`}
+                >
+                  <span>{link.flag}</span>
+                  <span className="flex-1">{link.label}</span>
+                  {link.disabled && (
+                    <span className="text-xs text-gray-400">Soon</span>
+                  )}
+                </a>
+              ))}
+            </div>
+            
             <a
               href="https://hnltgjg.en.alibaba.com/"
               target="_blank"
