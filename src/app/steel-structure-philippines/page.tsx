@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import LandingPageTracker from "@/components/LandingPageTracker";
+import ScrollAnimator from "@/components/ScrollAnimator";
+import CountUp from "@/components/CountUp";
 
 export const metadata: Metadata = {
   title: "Steel Structure Philippines | Warehouse & Factory Construction",
@@ -137,7 +139,8 @@ export default function PhilippinesLandingPage() {
             local building codes, climate challenges, and logistics requirements.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-blue-50 rounded-xl">
+            <ScrollAnimator animation="fade-in" delay={0}>
+              <div className="text-center p-6 bg-blue-50 rounded-xl">
               <div className="text-5xl mb-4">🏗️</div>
               <h3 className="text-xl font-bold mb-2">500+ Projects in Philippines</h3>
               <p className="text-gray-600">
@@ -145,7 +148,9 @@ export default function PhilippinesLandingPage() {
                 warehouses to large industrial complexes.
               </p>
             </div>
-            <div className="text-center p-6 bg-blue-50 rounded-xl">
+            </ScrollAnimator>
+            <ScrollAnimator animation="fade-in" delay={200}>
+              <div className="text-center p-6 bg-blue-50 rounded-xl">
               <div className="text-5xl mb-4">✅</div>
               <h3 className="text-xl font-bold mb-2">CE & ISO Certified Quality</h3>
               <p className="text-gray-600">
@@ -153,7 +158,9 @@ export default function PhilippinesLandingPage() {
                 with mill test certificates.
               </p>
             </div>
-            <div className="text-center p-6 bg-blue-50 rounded-xl">
+            </ScrollAnimator>
+            <ScrollAnimator animation="fade-in" delay={400}>
+              <div className="text-center p-6 bg-blue-50 rounded-xl">
               <div className="text-5xl mb-4">⚡</div>
               <h3 className="text-xl font-bold mb-2">Fast Delivery & Installation</h3>
               <p className="text-gray-600">
@@ -161,6 +168,7 @@ export default function PhilippinesLandingPage() {
                 Manila/Cebu ports, 4-8 weeks installation.
               </p>
             </div>
+            </ScrollAnimator>
           </div>
         </div>
       </section>
@@ -172,7 +180,8 @@ export default function PhilippinesLandingPage() {
             Why Steel Structures Are Perfect for Philippines
           </h2>
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            <div>
+            <ScrollAnimator animation="slide-in-left" delay={0}>
+              <div>
               <h3 className="text-2xl font-bold mb-4">🌪️ Typhoon-Resistant Design</h3>
               <p className="text-gray-600 mb-4">
                 Philippines faces 20+ typhoons annually. Our steel structures are engineered to withstand
@@ -184,7 +193,9 @@ export default function PhilippinesLandingPage() {
                 <li>✅ Corrosion-resistant coatings for tropical climate</li>
               </ul>
             </div>
-            <div>
+            </ScrollAnimator>
+            <ScrollAnimator animation="slide-in-right" delay={100}>
+              <div>
               <h3 className="text-2xl font-bold mb-4">💰 Cost-Effective Construction</h3>
               <p className="text-gray-600 mb-4">
                 Steel structures cost 30-40% less than traditional concrete buildings in Philippines,
@@ -196,7 +207,9 @@ export default function PhilippinesLandingPage() {
                 <li>✅ Prefabricated components, fast on-site assembly</li>
               </ul>
             </div>
-            <div>
+            </ScrollAnimator>
+            <ScrollAnimator animation="slide-in-left" delay={200}>
+              <div>
               <h3 className="text-2xl font-bold mb-4">📦 Flexible & Expandable</h3>
               <p className="text-gray-600 mb-4">
                 Steel buildings can be easily expanded or modified as your business grows. Perfect for
@@ -208,7 +221,9 @@ export default function PhilippinesLandingPage() {
                 <li>✅ Mezzanine floors for extra space</li>
               </ul>
             </div>
-            <div>
+            </ScrollAnimator>
+            <ScrollAnimator animation="slide-in-right" delay={300}>
+              <div>
               <h3 className="text-2xl font-bold mb-4">🔧 Low Maintenance</h3>
               <p className="text-gray-600 mb-4">
                 Steel structures require minimal maintenance in tropical climates, saving you money over
@@ -220,6 +235,7 @@ export default function PhilippinesLandingPage() {
                 <li>✅ Fire-resistant materials</li>
               </ul>
             </div>
+            </ScrollAnimator>
           </div>
         </div>
       </section>
