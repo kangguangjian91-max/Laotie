@@ -21,6 +21,7 @@ export default function ProjectCarousel({ projects, title, subtitle }: ProjectCa
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
   const [activeIndex, setActiveIndex] = useState(0);
+  const autoScrollInterval = useRef<NodeJS.Timeout | null>(null);
 
   const updateScrollButtons = useCallback(() => {
     const container = scrollRef.current;
@@ -49,6 +50,40 @@ export default function ProjectCarousel({ projects, title, subtitle }: ProjectCa
     };
   }, [updateScrollButtons]);
 
+  // Auto scroll left animation
+  const startAutoScroll = useCallback(() => {
+    stopAutoScroll();
+    autoScrollInterval.current = setInterval(() => {
+      const container = scrollRef.current;
+      if (!container) return;
+      
+      const cardWidth = container.querySelector("div")?.clientWidth ?? 300;
+      const gap = 24;
+      const scrollAmount = cardWidth + gap;
+      const maxScrollLeft = container.scrollWidth - container.clientWidth;
+      
+      // If reached the end, scroll back to start
+      if (container.scrollLeft >= maxScrollLeft - 10) {
+        container.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      }
+    }, 3000); // Scroll every 3 seconds
+  }, []);
+
+  const stopAutoScroll = useCallback(() => {
+    if (autoScrollInterval.current) {
+      clearInterval(autoScrollInterval.current);
+      autoScrollInterval.current = null;
+    }
+  }, []);
+
+  // Start auto scroll on mount
+  useEffect(() => {
+    startAutoScroll();
+    return () => stopAutoScroll();
+  }, [startAutoScroll, stopAutoScroll]);
+
   const scroll = (direction: "left" | "right") => {
     const container = scrollRef.current;
     if (!container) return;
@@ -62,7 +97,11 @@ export default function ProjectCarousel({ projects, title, subtitle }: ProjectCa
   };
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section 
+      className="py-16 bg-gray-50"
+      onMouseEnter={stopAutoScroll}
+      onMouseLeave={startAutoScroll}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
           {title}
@@ -115,7 +154,7 @@ export default function ProjectCarousel({ projects, title, subtitle }: ProjectCa
                   alt={project.alt}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-48 object-cover"
+                  className="w-full h-56 object-cover"  // Changed from h-48 to h-56 for uniform size
                 />
                 <div className="p-5">
                   <h3 className="font-bold text-lg mb-2 text-gray-900">{project.title}</h3>
