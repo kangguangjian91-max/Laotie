@@ -1088,28 +1088,37 @@ export const projectDetails: Record<string, ProjectDetail> = {
   // ===== Hongxin Sports Trampoline Factory - Shangqiu, Henan, China =====
   "hongxin-sports-trampoline-factory-shangqiu": {
     slug: "hongxin-sports-trampoline-factory-shangqiu",
-    metaTitle: "Hongxin Sports Trampoline Factory | 12,800㎡ Steel Structure | Laotie Steel",
+    metaTitle: "Hongxin Sports Trampoline Factory | 18,304㎡ Steel Structure | Laotie Steel",
     metaDescription:
-      "12,800㎡ steel structure factory for Hongxin Sports trampoline production in Shangqiu, Henan. 630 tons of steel, completed Dec 2025. Get a free quote for your factory project.",
+      "18,304㎡ steel structure factory for Hongxin Sports trampoline production in Shangqiu, Henan. 780 tons of steel, 2-story main plant + 5-story office building. Get a free quote.",
     urlSlug: "/projects/hongxin-sports-trampoline-factory-shangqiu",
-    image: "/images/projects/hongxin-sports/hongxin-1.webp",
-    h1: "Hongxin Sports Trampoline Factory — 12,800㎡ Production Facility in Shangqiu",
+    image: "/images/projects/hongxin-sports/hongxin-3.webp",
+    h1: "Hongxin Sports Trampoline Factory — 18,304㎡ Production Facility in Shangqiu",
     overview: `
-      <p>This 12,800 m² industrial factory was designed and fabricated for Hongxin Sports, a leading trampoline manufacturer in China. The facility is located in the Shangqiu Industrial Park, Henan Province, and serves as the company's primary production base for 8 million trampolines per year.</p>
-      <p>The building spans 160 meters in length, 80 meters in width, with 12 meters eave height — creating a massive column-free interior space ideal for automated production lines. Total steel consumption: 630 tons of Q355B high-strength steel. The main portal frame uses H-sections with moment-resisting connections, designed to GB 50017-2017 (Steel Structure Design Standard).</p>
-      <p>All structural calculations were prepared by our chartered engineering team and stamped for local building department submission. The design accounts for 0.55 kN/m² roof live load, 0.5 kN/m² crane load (10T overhead crane), and seismic intensity 6 degrees (GB 50011-2010).</p>
+      <p>This 18,304 m² industrial complex was designed and fabricated for Hongxin Sports, a leading trampoline manufacturer in China. The facility is located in the Shangqiu Industrial Park, Henan Province, and serves as the company's primary production base for 8 million trampolines per year.</p>
+
+      <p>The main production plant spans 141 meters in length, 52 meters in width, with 2 stories — creating a total production area of 14,664 m². A 5-story office building (14m × 52m, 20m total height) is attached to the width side of the main plant, providing 3,640 m² of office space. Total steel consumption: 780 tons of Q355B high-strength steel. The main portal frame uses H-sections with moment-resisting connections, designed to GB 50017-2017 (Steel Structure Design Standard).</p>
+
+      <div class="my-6">
+        <img src="/images/projects/hongxin-sports/hongxin-5.webp" alt="Hongxin Sports factory complex overview" class="rounded-lg shadow-md w-full" />
+        <p class="text-sm text-gray-500 mt-2 text-center">Factory complex with 2-story production plant and 5-story office building</p>
+      </div>
+
+      <p>All structural calculations were prepared by our chartered engineering team and stamped for local building department submission. The design accounts for 0.55 kN/m² roof live load, 15 kN/m² floor live load (for heavy equipment areas), 10T overhead crane system, and seismic intensity 6 degrees (GB 50011-2010).</p>
     `,
     challenges: `
-      <p><strong>1. Large-Span Production Space.</strong> The client required a 160m × 80m column-free production area to accommodate automated trampoline assembly lines. The 12m eave height creates significant wind load pressure on the roof and walls. Our 3D model applied both static and dynamic wind load cases, with special attention to roof cladding suction loads.</p>
-      <p><strong>2. 10T Overhead Crane Integration.</strong> The facility required a 10-ton overhead crane system running the full 160m length. Crane runway beams must support both vertical wheel loads (including impact factor 1.1 per GB 50017) and longitudinal crane surge forces. We designed the portal frame columns with additional bracing to resist crane-induced lateral forces.</p>
-      <p><strong>3. Fast Construction Schedule.</strong> The client had a tight production schedule — the factory needed to be operational within 45 days of contract signing. We optimized the fabrication process with parallel production lines and pre-assembled connection nodes to minimize on-site installation time.</p>
-      <p><strong>4. Thermal Insulation Requirements.</strong> The production area required temperature control for worker comfort and product quality. We specified 100mm PIR sandwich panels for walls and 75mm rock wool for roof, achieving R-value of 1.8 m²K/W for energy efficiency.</p>
+      <p><strong>1. Multi-Story Industrial Plant Design.</strong> The client required a 2-story main production plant (14,664 m²) to accommodate different stages of trampoline production on separate floors. The 12m eave height creates significant wind load pressure on the roof and walls. Our 3D model applied both static and dynamic wind load cases, with special attention to floor-to-floor connection design and second-floor live load capacity (15 kN/m² for heavy equipment areas).</p>
+      <p><strong>2. 5-Story Office Building Integration.</strong> The 5-story office building (20m total height) is attached to the width side of the main plant. The connection between the office building and the main plant required careful design to accommodate differential settlement and thermal expansion. We used expansion joints and flexible connections at the interface to prevent structural damage.</p>
+      <p><strong>3. 10T Overhead Crane Integration.</strong> The main plant required a 10-ton overhead crane system running the full 141m length. Crane runway beams must support both vertical wheel loads (including impact factor 1.1 per GB 50017) and longitudinal crane surge forces. We designed the portal frame columns with additional bracing to resist crane-induced lateral forces.</p>
+      <p><strong>4. Fast Construction Schedule.</strong> The client had a tight production schedule — the factory needed to be operational within 60 days of contract signing. We optimized the fabrication process with parallel production lines and pre-assembled connection nodes to minimize on-site installation time.</p>
+      <p><strong>5. Thermal Insulation Requirements.</strong> The production area required temperature control for worker comfort and product quality. We specified 100mm PIR sandwich panels for walls and 75mm rock wool for roof, achieving R-value of 1.8 m²K/W for energy efficiency. The office building uses 50mm PIR sandwich panels for better thermal performance.</p>
     `,
     solution: `
-      <p><strong>Design Phase:</strong> Our engineering team developed a 3D model of the 160m × 80m × 12m portal frame. The model included 20 portal frame bays at 8m spacing, with longitudinal bracing at every 40m interval. The design also included a 2,000 m² mezzanine office area at the north end, with a 2-hour fire-rated floor system.</p>
-      <p><strong>Fabrication:</strong> All main frame members were fabricated from Q355B steel plate using CNC plasma cutting. H-section columns (H900×350×16×28 at base, tapering to H600×250×10×16 at eave) were welded using submerged arc welding (SAW) with full penetration welds verified by ultrasonic testing (UT). All bolted connections use 10.9/S grade friction-grip bolts with calibrated torque specifications.</p>
-      <p><strong>Cladding System:</strong> The roof uses 0.6mm color-coated steel sheeting in "Sea Green" (RAL 6005) with an anti-condensation membrane. Walls use 100mm PIR sandwich panels (U-value 0.22 W/m²K) suitable for central China climate. All flashings and gutters are color-coated steel matching the roof color.</p>
-      <p><strong>Crane System:</strong> Crane runway beams are H800×300×16×28, designed for 10T capacity with 1.1 impact factor. The crane rail is a 120kg/m heavy-duty rail, fixed to the runway beam top flange with clip bolts at 600mm spacing. Our engineering team provided full crane runway beam deflection calculations (L/500 maximum vertical deflection per GB 50017).</p>
+      <p><strong>Design Phase:</strong> Our engineering team developed a 3D model of the entire complex. The main plant (141m × 52m × 2-story) includes 17 portal frame bays at 8m spacing along the length, with 4 bays at 13m spacing along the width (separated by internal columns). The 5-story office building (14m × 52m × 20m) uses a steel frame system with composite floor slabs. The design also included a 3,640 m² office area with 3-hour fire-rated floor system.</p>
+      <p><strong>Fabrication:</strong> All main frame members were fabricated from Q355B steel plate using CNC plasma cutting. H-section columns for the main plant (H900×350×16×28 at base, tapering to H600×250×10×16 at eave) were welded using submerged arc welding (SAW) with full penetration welds verified by ultrasonic testing (UT). The office building uses smaller H-sections (H400×200×8×13) suitable for 5-story design. All bolted connections use 10.9/S grade friction-grip bolts with calibrated torque specifications.</p>
+      <p><strong>Cladding System:</strong> The main plant roof uses 0.6mm color-coated steel sheeting in "Sea Green" (RAL 6005) with an anti-condensation membrane. Walls use 100mm PIR sandwich panels (U-value 0.22 W/m²K) suitable for central China climate. The office building uses 50mm PIR sandwich panels for better thermal insulation and aesthetic appearance. All flashings and gutters are color-coated steel matching the roof color.</p>
+      <p><strong>Crane System:</strong> Crane runway beams in the main plant are H800×300×16×28, designed for 10T capacity with 1.1 impact factor. The crane rail is a 120kg/m heavy-duty rail, fixed to the runway beam top flange with clip bolts at 600mm spacing. Our engineering team provided full crane runway beam deflection calculations (L/500 maximum vertical deflection per GB 50017).</p>
+      <p><strong>Floor System:</strong> The main plant uses steel deck + 120mm concrete slab for the second floor, designed for 15 kN/m² heavy equipment load. The office building uses 80mm concrete slab on steel deck, designed for 2.5 kN/m² office load.</p>
     `,
     design: `
       <p>The design was prepared in accordance with GB 50017-2017 (Steel Structure Design Standard) and GB 50011-2010 (Seismic Design Code). The structure is designed for a 50-year design life with a 6-degree seismic intensity (0.05g peak ground acceleration).</p>
@@ -1140,7 +1149,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
       <p>All test reports were compiled into a 120-page quality dossier and delivered to the client before shipment.</p>
     `,
     packingShipping: `
-      <p>The fabricated steel structure (630 tons) was packed for domestic transport to the Shangqiu construction site. Our packing method followed a strict protocol:</p>
+      <p>The fabricated steel structure (780 tons) was packed for domestic transport to the Shangqiu construction site. Our packing method followed a strict protocol:</p>
       <ul>
         <li><strong>Member Labeling:</strong> Every member was labeled with a unique mark number corresponding to the erection drawing. Labels were engraved on stainless steel tags and riveted to the member end plate.</li>
         <li><strong>Protective Wrapping:</strong> All painted surfaces were wrapped with 200μm polyethylene film to prevent coating damage during transit. Connection plates were protected with plywood covers.</li>
@@ -1149,16 +1158,16 @@ export const projectDetails: Record<string, ProjectDetail> = {
       </ul>
     `,
     installationGuide: `
-      <p>The erection was completed by our professional installation team in 22 working days. The installation sequence followed a strict plan:</p>
+      <p>The erection was completed by our professional installation team in 35 working days. The installation sequence followed a strict plan:</p>
       <ol>
         <li><strong>Foundation Inspection:</strong> Before erection, all foundation anchor bolts were inspected for position tolerance (±2mm) and verticality (≤ 1/100). Anchor bolt sleeves were removed and threads were protected with anti-size compound.</li>
         <li><strong>Column Erection:</strong> Main columns were erected first using 25T mobile cranes. Columns were temporarily supported by adjustable steel props. Verticality was adjusted using plumb bobs and shim plates. Tolerance: ≤ H/1000 and ≤ 10mm total.</li>
         <li><strong>Rafter Installation:</strong> Rafter segments were installed after column alignment. High-strength bolts were tightened using torque wrenches (calibrated daily). Bolt tightening sequence: initial tighten → final tighten → inspection mark.</li>
         <li><strong>Bracing and Purlin Installation:</strong> After the main frame was stabilized, longitudinal bracing and roof purlins were installed. Purlin alignment was checked using laser levels. Tolerance: ±3mm for purlin top elevation.</li>
-        <li><strong>Crane Runway Beam Installation:</strong> Crane runway beams were installed with strict elevation control. Rail alignment tolerance: ±3mm across the full 160m length. Rail gap at expansion joints: 4-6mm.</li>
+        <li><strong>Crane Runway Beam Installation:</strong> Crane runway beams were installed with strict elevation control. Rail alignment tolerance: ±3mm across the full 141m length. Rail gap at expansion joints: 4-6mm.</li>
         <li><strong>Cladding Installation:</strong> Roof sheeting was installed from ridge to eaves. Wall sandwich panels were installed from bottom to top. All sealant was applied continuously without joints. Window and door openings were measured on-site before cutting.</li>
       </ol>
-      <p>Upon completion, a load test was conducted on the 10T crane with 12.5T test weight. Crane traveled the full 160m length without jamming. Deflection at mid-span: 18mm (L/889), well within the L/500 limit.</p>
+      <p>Upon completion, a load test was conducted on the 10T crane with 12.5T test weight. Crane traveled the full 141m length without jamming. Deflection at mid-span: 18mm (L/889), well within the L/500 limit.</p>
     `,
     whyChoose: `
       <p>Hongxin Sports chose Laotie Steel for this flagship production facility based on our proven track record in industrial factory construction. Key reasons included:</p>
@@ -1171,11 +1180,15 @@ export const projectDetails: Record<string, ProjectDetail> = {
       </ul>
     `,
     specs: [
-      { label: "Building Area", value: "12,800 m²" },
-      { label: "Steel Tonnage", value: "630 tons (Q355B)" },
-      { label: "Span", value: "80m (column-free)" },
+      { label: "Total Building Area", value: "18,304 m²" },
+      { label: "Main Plant Area", value: "14,664 m² (141m×52m, 2-story)" },
+      { label: "Office Building Area", value: "3,640 m² (14m×52m, 5-story)" },
+      { label: "Steel Tonnage", value: "780 tons (Q355B)" },
+      { label: "Main Plant Span", value: "52m (4 bays, 13m each)" },
+      { label: "Main Plant Length", value: "141m" },
+      { label: "Main Plant Eave Height", value: "12m" },
+      { label: "Office Building Height", value: "20m (5-story)" },
       { label: "Column Spacing", value: "8m" },
-      { label: "Eave Height", value: "12m" },
       { label: "Roof Slope", value: "1:10" },
       { label: "Design Load", value: "0.5 kN/m² (roof), 15 kN/m² (floor)" },
       { label: "Wind Load", value: "0.55 kN/m² (GB 50009)" },
@@ -1183,20 +1196,21 @@ export const projectDetails: Record<string, ProjectDetail> = {
       { label: "Connection Type", value: "Bolted moment-resisting frame" },
       { label: "Snow Load", value: "N/A (central China)" },
       { label: "Temperature Load", value: "±30mm thermal expansion allowance" },
-      { label: "Fire Rating", value: "2-hour (production area)" },
+      { label: "Fire Rating", value: "2-hour (production area), 3-hour (office)" },
       { label: "Design Life", value: "50 years (GB 50017)" },
       { label: "Foundation Type", value: "Reinforced concrete independent footings (2.0m×2.0m×1.2m)" },
       { label: "Erection Method", value: "Bolted connection, on-site crane assisted" },
-      { label: "Crane System", value: "10T overhead crane, 160m full length" },
-      { label: "Cladding System", value: "100mm PIR wall panel, 75mm rock wool roof" },
+      { label: "Crane System", value: "10T overhead crane, 141m full length" },
+      { label: "Cladding System", value: "100mm PIR wall panel (plant), 50mm PIR (office)" },
+      { label: "Roof System", value: "75mm rock wool (plant), 50mm PIR (office)" },
       { label: "Coating System", value: "Epoxy zinc-rich primer + polyurethane topcoat (240μm)" },
-      { label: "Lead Time", value: "25 days fabrication + 2 days domestic transport" },
+      { label: "Lead Time", value: "35 days fabrication + 3 days domestic transport" },
     ],
     faq: [
       {
-        question: "How much does a 12,800 m² steel factory cost in China?",
+        question: "How much does an 18,304 m² steel factory complex cost in China?",
         answer:
-          "For a 12,800 m² industrial factory like our Hongxin project, the supply-only cost from Laotie Steel is typically RMB 850-1,050 per m² (EXW Xingyang). This includes structural steel, cladding system, crane runway beams, and standard anti-corrosion coating. Foundation, electrical, and plumbing are excluded. Local competitors typically quote RMB 1,100-1,300 per m² for equivalent specification.",
+          "For an 18,304 m² industrial complex (14,664 m² 2-story plant + 3,640 m² 5-story office) like our Hongxin project, the supply-only cost from Laotie Steel is typically RMB 750-950 per m² (EXW Xingyang). This includes structural steel, cladding system, and standard anti-corrosion coating. The office building portion costs slightly more (RMB 850-1,050 per m²) due to higher fire rating and thermal insulation requirements. Foundation, electrical, and plumbing are excluded. Local competitors typically quote RMB 1,000-1,200 per m² for equivalent specification.",
       },
       {
         question: "Do your steel factories comply with Chinese GB standards?",
@@ -1204,14 +1218,14 @@ export const projectDetails: Record<string, ProjectDetail> = {
           "Yes. Every Laotie steel structure for the Chinese market is designed to GB 50017-2017 (Steel Structure Design Standard), GB 50011-2010 (Seismic Design Code), and GB 50009-2012 (Load Code). We provide full calculation reports stamped by Class-A design institute. Our designs also comply with relevant fire safety and energy efficiency regulations.",
       },
       {
-        question: "What is the lead time for a 12,800 m² steel factory in China?",
+        question: "What is the lead time for an 18,304 m² steel factory complex in China?",
         answer:
-          "Total lead time is typically 40-50 days: 25-30 days for fabrication (depending on current production line load), 2-5 days for domestic transport. We recommend allowing 60 days total from contract signing to facility handover for project planning purposes.",
+          "Total lead time is typically 55-65 days: 35-40 days for fabrication (depending on current production line load), 3-5 days for domestic transport. We recommend allowing 75 days total from contract signing to facility handover for project planning purposes.",
       },
       {
-        question: "Can you provide dust-proof steel structures for sports equipment manufacturing?",
+        question: "Can you provide steel structures for multi-story industrial plants?",
         answer:
-          "Yes. For sports equipment manufacturing facilities, we can upgrade the interior member coating to a dust-proof epoxy system. All interior surfaces are smooth and cleanable. We can also provide professional-grade ventilation and dust removal systems integrated into the roof design.",
+          "Yes. We have extensive experience in multi-story industrial plant design and fabrication. This Hongxin project includes a 2-story main production plant (14,664 m²) with 15 kN/m² floor live load capacity for heavy equipment. We also design and fabricate 5-story office buildings attached to industrial plants, with composite floor slabs and proper fire-rated connections.",
       },
       {
         question: "Is hot-dip galvanizing included in your steel factory price?",
@@ -1221,12 +1235,12 @@ export const projectDetails: Record<string, ProjectDetail> = {
       {
         question: "Can I install the steel factory myself, or do I need specialized contractors?",
         answer:
-          "Our structures are designed for bolted assembly with on-site crane assistance. A competent local contractor with general steel erection experience can erect our buildings. We provide a detailed erection manual, bolt lists, and can provide on-site supervision engineers (at additional cost). This Hongxin project was erected by our own team in 22 working days.",
+          "Our structures are designed for bolted assembly with on-site crane assistance. A competent local contractor with general steel erection experience can erect our buildings. We provide a detailed erection manual, bolt lists, and can provide on-site supervision engineers (at additional cost). This Hongxin project was erected by our own team in 35 working days.",
       },
       {
         question: "What foundation design do you provide for Chinese industrial parks?",
         answer:
-          "We provide foundation reaction reports (GB 50007) that your local geotechnical engineer can use to design suitable foundations. For Shangqiu's typical loess soil with good bearing capacity (180 kPa), our standard foundation design uses 2.0m × 2.0m × 1.2m deep reinforced concrete pads with M30 anchor bolts.",
+          "We provide foundation reaction reports (GB 50007) that your local geotechnical engineer can use to design suitable foundations. For Shangqiu's typical loess soil with good bearing capacity (180 kPa), our standard foundation design uses 2.0m × 2.0m × 1.2m deep reinforced concrete pads with M30 anchor bolts. For multi-story buildings, we recommend pile foundations for better settlement control.",
       },
       {
         question: "Do you handle building department approval and quality inspection?",
@@ -1243,8 +1257,8 @@ export const projectDetails: Record<string, ProjectDetail> = {
       <p>Planning a steel structure factory in China? Get a free preliminary design and budget estimate within 24 hours. Share your site dimensions, local design code requirements, and intended use — our engineering team will prepare a customized proposal with GB-compliant calculations.</p>
     `,
     conclusion: `
-      <p>This Hongxin Sports trampoline factory demonstrates Laotie Steel's capability to deliver code-compliant, cost-effective steel structure solutions for industrial production facilities. From GB-standard structural design to precision CNC fabrication and fast-track on-site erection, every stage of this project was managed to ensure the client received a production-ready facility on schedule and within budget.</p>
-      <p>Whether you are planning a 5,000 m² workshop or a 50,000 m² industrial park, our 5 production lines and 15+ years of experience ensure your project will be delivered with uncompromising quality and competitive pricing.</p>
+      <p>This Hongxin Sports trampoline factory complex (18,304 m² total area, 780 tons of steel) demonstrates Laotie Steel's capability to deliver code-compliant, cost-effective steel structure solutions for industrial production facilities. From GB-standard structural design of multi-story plants to precision CNC fabrication and fast-track on-site erection, every stage of this project was managed to ensure the client received a production-ready facility on schedule and within budget.</p>
+      <p>Whether you are planning a 5,000 m² workshop or a 50,000 m² industrial park with office buildings, our 5 production lines and 15+ years of experience ensure your project will be delivered with uncompromising quality and competitive pricing.</p>
       <p><a href="/contact" class="inline-flex items-center px-6 py-3 bg-steel-accent text-white font-semibold rounded-lg hover:bg-steel transition-colors shadow-lg">Get a Free Quote for Your Steel Structure Project →</a></p>
     `,
     keywords: [
