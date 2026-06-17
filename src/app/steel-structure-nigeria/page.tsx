@@ -199,6 +199,7 @@ export default function NigeriaLandingPage() {
             Why Steel Structures Are Perfect for Nigeria
           </h2>
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <ScrollAnimator animation="fade-in" delay={0}>
             <div>
               <h3 className="text-2xl font-bold mb-4">🌩️ Heavy Rain & Storm Protection</h3>
               <p className="text-gray-600 mb-4">
@@ -211,6 +212,8 @@ export default function NigeriaLandingPage() {
                 <li>✅ Corrosion-resistant coatings for humid climate</li>
               </ul>
             </div>
+            </ScrollAnimator>
+            <ScrollAnimator animation="fade-in" delay={200}>
             <div>
               <h3 className="text-2xl font-bold mb-4">💰 Cost-Effective Construction</h3>
               <p className="text-gray-600 mb-4">
@@ -223,6 +226,8 @@ export default function NigeriaLandingPage() {
                 <li>✅ Prefabricated components, fast on-site assembly</li>
               </ul>
             </div>
+            </ScrollAnimator>
+            <ScrollAnimator animation="fade-in" delay={400}>
             <div>
               <h3 className="text-2xl font-bold mb-4">📦 Flexible & Expandable</h3>
               <p className="text-gray-600 mb-4">
@@ -235,6 +240,8 @@ export default function NigeriaLandingPage() {
                 <li>✅ Mezzanine floors for extra space</li>
               </ul>
             </div>
+            </ScrollAnimator>
+            <ScrollAnimator animation="fade-in" delay={600}>
             <div>
               <h3 className="text-2xl font-bold mb-4">🔧 Low Maintenance</h3>
               <p className="text-gray-600 mb-4">
@@ -247,6 +254,7 @@ export default function NigeriaLandingPage() {
                 <li>✅ Fire-resistant materials</li>
               </ul>
             </div>
+            </ScrollAnimator>
           </div>
         </div>
       </section>
@@ -258,6 +266,7 @@ export default function NigeriaLandingPage() {
             Logistics & Installation Support in Nigeria
           </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <ScrollAnimator animation="fade-in" delay={0}>
             <div className="border-l-4 border-blue-600 pl-6">
               <h3 className="text-xl font-bold mb-2">🚢 Shipping to Nigeria</h3>
               <p className="text-gray-600">
@@ -265,6 +274,8 @@ export default function NigeriaLandingPage() {
                 less than container load (LCL) options available.
               </p>
             </div>
+            </ScrollAnimator>
+            <ScrollAnimator animation="fade-in" delay={200}>
             <div className="border-l-4 border-blue-600 pl-6">
               <h3 className="text-xl font-bold mb-2">📋 Customs Clearance</h3>
               <p className="text-gray-600">
@@ -272,6 +283,8 @@ export default function NigeriaLandingPage() {
                 Certificate of Origin, and Mill Test Certificates.
               </p>
             </div>
+            </ScrollAnimator>
+            <ScrollAnimator animation="fade-in" delay={400}>
             <div className="border-l-4 border-blue-600 pl-6">
               <h3 className="text-xl font-bold mb-2">🔧 Installation Support</h3>
               <p className="text-gray-600">
@@ -279,6 +292,7 @@ export default function NigeriaLandingPage() {
                 detailed installation manuals and videos.
               </p>
             </div>
+            </ScrollAnimator>
           </div>
           <div className="mt-12 text-center">
             <h3 className="text-2xl font-bold mb-4">Typical Project Timeline</h3>
