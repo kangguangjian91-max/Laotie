@@ -1,9 +1,15 @@
-# https://www.oldtie-steel.com/robots.txt
+# https://www.robotstxt.org/robotstxt.html
+# For Laotie Steel Structure website
+
 User-agent: *
 Allow: /
 
-# Disallow admin/internal paths (when they exist)
-# Disallow: /admin/
-# Disallow: /api/
+# Sitemap
+Sitemap: https://www.laotie-steel.com/sitemap.xml
 
-Sitemap: https://www.oldtie-steel.com/sitemap.xml
+# Disallow admin or private pages (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Crawl-delay (optional, for polite crawling)
+# Crawl-delay: 1
