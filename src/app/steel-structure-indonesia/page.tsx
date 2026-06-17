@@ -105,9 +105,29 @@ export default function SteelStructureIndonesia() {
     ],
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.laotie-steel.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Steel Structure Indonesia",
+        item: "https://www.laotie-steel.com/steel-structure-indonesia",
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-white">
       <LandingPageTracker country="indonesia" pageType="indonesia" />
+      <JsonLd data={breadcrumbSchema} />
       <JsonLd data={schemaData} />
       <JsonLd data={faqSchema} />
 

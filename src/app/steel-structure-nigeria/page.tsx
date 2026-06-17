@@ -88,10 +88,30 @@ const faqSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.laotie-steel.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Steel Structure Nigeria",
+      item: "https://www.laotie-steel.com/steel-structure-nigeria",
+    },
+  ],
+};
+
 export default function NigeriaLandingPage() {
   return (
     <main className="min-h-screen">
       <LandingPageTracker country="nigeria" pageType="nigeria" />
+      <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
 
