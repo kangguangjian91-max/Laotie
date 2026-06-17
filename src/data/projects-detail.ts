@@ -1104,8 +1104,13 @@ export const projectDetails: Record<string, ProjectDetail> = {
       <p>The main production plant spans 141 meters in length, 52 meters in width, with 2 stories — creating a total production area of 14,664 m². A 5-story office building (14m × 52m, 20m total height) is attached to the width side of the main plant, providing 3,640 m² of office space. Total steel consumption: 780 tons of Q355B high-strength steel. The main portal frame uses H-sections with moment-resisting connections, designed to GB 50017-2017 (Steel Structure Design Standard).</p>
 
       <div class="my-6">
-        <img src="/images/projects/hongxin-sports/hongxin-5.webp" alt="Hongxin Sports factory complex overview" class="rounded-lg shadow-md w-full" />
-        <p class="text-sm text-gray-500 mt-2 text-center">Factory complex with 2-story production plant and 5-story office building</p>
+        <img src="/images/projects/hongxin-sports/hongxin-5.webp" alt="Hongxin Sports factory main plant exterior view" class="rounded-lg shadow-md w-full" />
+        <p class="text-sm text-gray-500 mt-2 text-center">Main plant exterior view (141m × 52m, 2-story)</p>
+      </div>
+
+      <div class="my-6">
+        <img src="/images/projects/hongxin-sports/hongxin-3.webp" alt="Hongxin Sports factory 5-story office building" class="rounded-lg shadow-md w-full" />
+        <p class="text-sm text-gray-500 mt-2 text-center">5-story office building (14m × 52m, 20m height)</p>
       </div>
 
       <p>All structural calculations were prepared by our chartered engineering team and stamped for local building department submission. The design accounts for 0.55 kN/m² roof live load, 15 kN/m² floor live load (for heavy equipment areas), 10T overhead crane system, and seismic intensity 6 degrees (GB 50011-2010).</p>
@@ -1288,13 +1293,12 @@ export const projectDetails: Record<string, ProjectDetail> = {
       "factory building cost per m² China",
     ],
     galleryImages: [
-      { src: "/images/projects/hongxin-sports/hongxin-2.webp", alt: "Hongxin Sports trampoline factory steel frame erection - portal frame columns and rafters during installation" },
-      { src: "/images/projects/hongxin-sports/hongxin-4.webp", alt: "Hongxin Sports factory construction site - crane lifting steel beams into position" },
-      { src: "/images/projects/hongxin-sports/hongxin-6.webp", alt: "Hongxin Sports trampoline production facility - completed steel structure with roof cladding" },
-      { src: "/images/projects/hongxin-sports/hongxin-1.webp", alt: "Hongxin Sports factory interior view - 2-story main plant with overhead crane system" },
+      { src: "/images/projects/hongxin-sports/hongxin-1.webp", alt: "Hongxin Sports trampoline factory steel frame erection - portal frame columns and rafters during installation" },
+      { src: "/images/projects/hongxin-sports/hongxin-2.webp", alt: "Hongxin Sports factory construction site - crane lifting steel beams into position" },
       { src: "/images/projects/hongxin-sports/hongxin-3.webp", alt: "Hongxin Sports factory exterior - 5-story office building attached to main plant" },
+      { src: "/images/projects/hongxin-sports/hongxin-4.webp", alt: "Hongxin Sports factory construction site - workers installing roof purlins" },
       { src: "/images/projects/hongxin-sports/hongxin-5.webp", alt: "Hongxin Sports factory overview - 141m x 52m complex with office building" },
-      { src: "/images/projects/hongxin-sports/hongxin-7.webp", alt: "Hongxin Sports factory quality inspection - engineering team verifying structural connections" },
+      { src: "/images/projects/hongxin-sports/hongxin-6.webp", alt: "Hongxin Sports trampoline production facility - completed steel structure with roof cladding" },
     ],
     location: "Shangqiu, Henan, China",
     category: "Trampoline Factory",
