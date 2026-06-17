@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import LandingPageTracker from "@/components/LandingPageTracker";
+import ScrollAnimator from "@/components/ScrollAnimator";
 
 export const metadata: Metadata = {
   title: "Steel Structure Nigeria | Warehouse & Factory Construction",
@@ -137,6 +138,7 @@ export default function NigeriaLandingPage() {
             local building codes, climate challenges, and logistics requirements.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
+            <ScrollAnimator animation="fade-in" delay={0}>
             <div className="text-center p-6 bg-blue-50 rounded-xl">
               <div className="text-5xl mb-4">🏗️</div>
               <h3 className="text-xl font-bold mb-2">500+ Projects in Nigeria</h3>
@@ -145,6 +147,8 @@ export default function NigeriaLandingPage() {
                 warehouses to large industrial complexes.
               </p>
             </div>
+            </ScrollAnimator>
+            <ScrollAnimator animation="fade-in" delay={200}>
             <div className="text-center p-6 bg-blue-50 rounded-xl">
               <div className="text-5xl mb-4">✅</div>
               <h3 className="text-xl font-bold mb-2">CE & ISO Certified Quality</h3>
@@ -153,6 +157,8 @@ export default function NigeriaLandingPage() {
                 with mill test certificates.
               </p>
             </div>
+            </ScrollAnimator>
+            <ScrollAnimator animation="fade-in" delay={400}>
             <div className="text-center p-6 bg-blue-50 rounded-xl">
               <div className="text-5xl mb-4">⚡</div>
               <h3 className="text-xl font-bold mb-2">Fast Delivery & Installation</h3>
@@ -161,6 +167,7 @@ export default function NigeriaLandingPage() {
                 Lagos/Abuja ports, 4-8 weeks installation.
               </p>
             </div>
+            </ScrollAnimator>
           </div>
         </div>
       </section>
