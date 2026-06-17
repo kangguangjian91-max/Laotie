@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import ProjectCarousel from "@/components/ProjectCarousel";
-import { useEffect } from "react";
-import { trackLandingPageView } from "@/lib/gtag";
+import LandingPageTracker from "@/components/LandingPageTracker";
 
 export const metadata: Metadata = {
   title: "Steel Structure Vietnam | Warehouse & Factory Construction",
@@ -113,13 +112,9 @@ const faqSchema = {
 };
 
 export default function VietnamLandingPage() {
-  // Track landing page view
-  useEffect(() => {
-    trackLandingPageView("vietnam", "vietnam");
-  }, []);
-
   return (
     <main className="min-h-screen">
+      <LandingPageTracker country="vietnam" pageType="vietnam" />
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
 
@@ -389,6 +384,76 @@ export default function VietnamLandingPage() {
             tags: [
               { label: "Warehouse", color: "bg-red-100 text-red-700" },
               { label: "Da Nang", color: "bg-gray-100 text-gray-700" },
+            ],
+          },
+          {
+            image: "/images/vietnam/688e07390f62e21cbb8bd1a1ba455959.webp",
+            alt: "Industrial Building in Hai Phong, Vietnam",
+            title: "Hai Phong Industrial Park",
+            description: "6,500 sqm steel structure factory for automotive parts supplier. 2025 completion.",
+            tags: [
+              { label: "Factory", color: "bg-red-100 text-red-700" },
+              { label: "Hai Phong", color: "bg-gray-100 text-gray-700" },
+            ],
+          },
+          {
+            image: "/images/vietnam/1a3e5a019b4c71eda2da853679708074.webp",
+            alt: "Commercial Building in Can Tho, Vietnam",
+            title: "Can Tho Agricultural Facility",
+            description: "4,200 sqm steel structure for rice processing and storage. Mekong Delta region.",
+            tags: [
+              { label: "Agricultural", color: "bg-red-100 text-red-700" },
+              { label: "Can Tho", color: "bg-gray-100 text-gray-700" },
+            ],
+          },
+          {
+            image: "/images/vietnam/679234a53ccd9c56cf26658f4f072138.webp",
+            alt: "Factory in Binh Duong, Vietnam",
+            title: "Binh Duong Electronics Factory",
+            description: "7,000 sqm steel structure factory with ESD flooring. High-tech manufacturing.",
+            tags: [
+              { label: "Factory", color: "bg-red-100 text-red-700" },
+              { label: "Binh Duong", color: "bg-gray-100 text-gray-700" },
+            ],
+          },
+          {
+            image: "/images/vietnam/67dd07a1917aa291f1631e16ce010c88.webp",
+            alt: "Warehouse in Dong Nai, Vietnam",
+            title: "Dong Nai Logistics Warehouse",
+            description: "5,500 sqm distribution center near Ho Chi Minh City. Strategic location.",
+            tags: [
+              { label: "Warehouse", color: "bg-red-100 text-red-700" },
+              { label: "Dong Nai", color: "bg-gray-100 text-gray-700" },
+            ],
+          },
+          {
+            image: "/images/vietnam/7ea1821bc8fdfac59547d2c042c2f6ae.webp",
+            alt: "Workshop in Quang Ninh, Vietnam",
+            title: "Quang Ninh Mining Equipment Workshop",
+            description: "3,800 sqm heavy-duty workshop with 15-ton crane system. Coal mining region.",
+            tags: [
+              { label: "Workshop", color: "bg-red-100 text-red-700" },
+              { label: "Quang Ninh", color: "bg-gray-100 text-gray-700" },
+            ],
+          },
+          {
+            image: "/images/vietnam/967a25ac2c3ec808229a990e27529ba2.webp",
+            alt: "Processing Plant in Long An, Vietnam",
+            title: "Long An Food Processing Plant",
+            description: "4,500 sqm steel structure facility for seafood processing. Cold storage included.",
+            tags: [
+              { label: "Processing", color: "bg-red-100 text-red-700" },
+              { label: "Long An", color: "bg-gray-100 text-gray-700" },
+            ],
+          },
+          {
+            image: "/images/vietnam/bd585762b3e96733450d3660029a1ab4.webp",
+            alt: "Warehouse in Ba Ria-Vung Tau, Vietnam",
+            title: "Vung Tau Port Warehouse",
+            description: "6,000 sqm steel warehouse near Cai Mep port. Export-oriented business.",
+            tags: [
+              { label: "Warehouse", color: "bg-red-100 text-red-700" },
+              { label: "Vung Tau", color: "bg-gray-100 text-gray-700" },
             ],
           },
         ]}

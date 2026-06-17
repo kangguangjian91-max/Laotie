@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import ProjectCarousel from "@/components/ProjectCarousel";
-import { useEffect } from "react";
-import { trackLandingPageView } from "@/lib/gtag";
+import LandingPageTracker from "@/components/LandingPageTracker";
 
 export const metadata: Metadata = {
   title: "Steel Structure Indonesia | Warehouse & Factory Construction",
@@ -32,11 +31,6 @@ export const metadata: Metadata = {
 };
 
 export default function SteelStructureIndonesia() {
-  // Track landing page view
-  useEffect(() => {
-    trackLandingPageView("indonesia", "indonesia");
-  }, []);
-
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -112,6 +106,7 @@ export default function SteelStructureIndonesia() {
 
   return (
     <div className="min-h-screen bg-white">
+      <LandingPageTracker country="indonesia" pageType="indonesia" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
@@ -361,6 +356,76 @@ export default function SteelStructureIndonesia() {
             tags: [
               { label: "Cold Storage", color: "bg-green-100 text-green-800" },
               { label: "Medan", color: "bg-gray-100 text-gray-800" },
+            ],
+          },
+          {
+            image: "/images/indonesia/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp",
+            alt: "Factory in Semarang, Indonesia",
+            title: "Semarang Industrial Park",
+            description: "6,500 m² steel structure factory for textile manufacturer. Central Java region.",
+            tags: [
+              { label: "Factory", color: "bg-green-100 text-green-800" },
+              { label: "Semarang", color: "bg-gray-100 text-gray-800" },
+            ],
+          },
+          {
+            image: "/images/indonesia/3c827b0a462391a3e3486e39a5ae25d4.webp",
+            alt: "Warehouse in Makassar, Indonesia",
+            title: "Makassar Logistics Warehouse",
+            description: "4,200 m² distribution center in Makassar. Strategic location for Eastern Indonesia.",
+            tags: [
+              { label: "Warehouse", color: "bg-green-100 text-green-800" },
+              { label: "Makassar", color: "bg-gray-100 text-gray-800" },
+            ],
+          },
+          {
+            image: "/images/indonesia/5704819281f8e9ad3038915e967864ad.webp",
+            alt: "Processing plant in Palembang, Indonesia",
+            title: "Palembang Palm Oil Facility",
+            description: "5,500 m² steel structure facility for palm oil processing. Corrosion-resistant coating.",
+            tags: [
+              { label: "Processing", color: "bg-green-100 text-green-800" },
+              { label: "Palembang", color: "bg-gray-100 text-gray-800" },
+            ],
+          },
+          {
+            image: "/images/indonesia/1a3e5a019b4c71eda2da853679708074.webp",
+            alt: "Workshop in Balikpapan, Indonesia",
+            title: "Balikpapan Mining Workshop",
+            description: "3,800 m² heavy-duty workshop with 20-ton crane system. Oil & gas industry.",
+            tags: [
+              { label: "Workshop", color: "bg-green-100 text-green-800" },
+              { label: "Balikpapan", color: "bg-gray-100 text-gray-800" },
+            ],
+          },
+          {
+            image: "/images/indonesia/7ea1821bc8fdfac59547d2c042c2f6ae.webp",
+            alt: "Commercial building in Denpasar, Indonesia",
+            title: "Denpasar Showroom & Warehouse",
+            description: "2,500 m² combined showroom and warehouse. Bali tourism infrastructure.",
+            tags: [
+              { label: "Commercial", color: "bg-green-100 text-green-800" },
+              { label: "Denpasar", color: "bg-gray-100 text-gray-800" },
+            ],
+          },
+          {
+            image: "/images/indonesia/967a25ac2c3ec808229a990e27529ba2.webp",
+            alt: "Factory in Bandung, Indonesia",
+            title: "Bandung Textile Factory",
+            description: "7,000 m² steel structure factory for textile production. High roof ventilation.",
+            tags: [
+              { label: "Factory", color: "bg-green-100 text-green-800" },
+              { label: "Bandung", color: "bg-gray-100 text-gray-800" },
+            ],
+          },
+          {
+            image: "/images/indonesia/bd585762b3e96733450d3660029a1ab4.webp",
+            alt: "Warehouse in Batam, Indonesia",
+            title: "Batam Free Trade Zone Warehouse",
+            description: "4,500 m² steel warehouse in Batam FTZ. Export-oriented business.",
+            tags: [
+              { label: "Warehouse", color: "bg-green-100 text-green-800" },
+              { label: "Batam", color: "bg-gray-100 text-gray-800" },
             ],
           },
         ]}

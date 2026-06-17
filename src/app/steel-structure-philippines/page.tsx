@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import ProjectCarousel from "@/components/ProjectCarousel";
-import { useEffect } from "react";
-import { trackLandingPageView } from "@/lib/gtag";
+import LandingPageTracker from "@/components/LandingPageTracker";
 
 export const metadata: Metadata = {
   title: "Steel Structure Philippines | Warehouse & Factory Construction",
@@ -89,13 +88,9 @@ const faqSchema = {
 };
 
 export default function PhilippinesLandingPage() {
-  // Track landing page view
-  useEffect(() => {
-    trackLandingPageView("philippines", "philippines");
-  }, []);
-
   return (
     <main className="min-h-screen">
+      <LandingPageTracker country="philippines" pageType="philippines" />
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
 
@@ -343,6 +338,46 @@ export default function PhilippinesLandingPage() {
             tags: [
               { label: "Factory", color: "bg-blue-100 text-blue-800" },
               { label: "Laguna", color: "bg-gray-100 text-gray-800" },
+            ],
+          },
+          {
+            image: "/images/philippines/679234a53ccd9c56cf26658f4f072138.webp",
+            alt: "Warehouse in Pampanga, Philippines",
+            title: "Pampanga Distribution Hub",
+            description: "6,500 sqm steel warehouse with automated racking system. Strategic location near Clark Airport.",
+            tags: [
+              { label: "Warehouse", color: "bg-blue-100 text-blue-800" },
+              { label: "Pampanga", color: "bg-gray-100 text-gray-800" },
+            ],
+          },
+          {
+            image: "/images/philippines/67dd07a1917aa291f1631e16ce010c88.webp",
+            alt: "Factory in Batangas, Philippines",
+            title: "Batangas Chemical Plant",
+            description: "3,800 sqm chemical processing plant with anti-corrosion coating. Explosion-proof design.",
+            tags: [
+              { label: "Factory", color: "bg-blue-100 text-blue-800" },
+              { label: "Batangas", color: "bg-gray-100 text-gray-800" },
+            ],
+          },
+          {
+            image: "/images/philippines/7ea1821bc8fdfac59547d2c042c2f6ae.webp",
+            alt: "Workshop in Cagayan de Oro, Philippines",
+            title: "CDO Metal Fabrication Shop",
+            description: "2,200 sqm steel structure workshop with 10-ton overhead crane. Heavy-duty industrial use.",
+            tags: [
+              { label: "Workshop", color: "bg-blue-100 text-blue-800" },
+              { label: "CDO", color: "bg-gray-100 text-gray-800" },
+            ],
+          },
+          {
+            image: "/images/philippines/bd585762b3e96733450d3660029a1ab4.webp",
+            alt: "Warehouse in General Santos, Philippines",
+            title: "GenSan Tuna Processing Plant",
+            description: "4,500 sqm steel structure facility for tuna processing. Cold storage and blast freezing rooms.",
+            tags: [
+              { label: "Processing", color: "bg-blue-100 text-blue-800" },
+              { label: "GenSan", color: "bg-gray-100 text-gray-800" },
             ],
           },
         ]}
