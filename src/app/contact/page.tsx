@@ -5,11 +5,11 @@ import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact Steel Structure Manufacturer | Laotie Steel",
   description:
-    "Contact Laotie Steel Structure for steel building quotations, technical support, and factory visits. WhatsApp: +86 166-5073-5555. Email: kangguangjian91@gmail.com. Respond within 2 hours.",
+    "Contact Laotie Steel for steel structure design, fabrication, and installation. WhatsApp: +86 166 5073 5555. Get a free quote within 24 hours.",
   openGraph: {
-    title: "Contact Laotie Steel Structure | Get a Free Quote",
+    title: "Contact Laotie Steel | Get a Free Quote",
     description:
       "Reach out for steel structure quotations, technical support, or factory visits. We respond within 2 hours.",
     url: "https://www.laotie-steel.com/contact",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Laotie Steel Structure | Get a Free Quote",
+    title: "Contact Laotie Steel | Get a Free Quote",
     description: "Steel structure quotations, technical support, factory visits. Respond within 2 hours.",
     images: ["/images/og-image.webp"],
   },

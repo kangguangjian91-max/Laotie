@@ -6,17 +6,17 @@ import { products } from "@/data/products";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata = {
-  title: "Products",
-  description: "Steel structure products: portal frame buildings, floor deck, space frame, enclosure & cladding systems. CE & ISO certified.",
+  title: "Steel Structure Products | Portal Frame, Floor Deck, Space Frame",
+  description: "CE & ISO certified steel structure products: portal frame, floor deck, space frame, cladding system. 50-year design life. Request a free quote.",
   openGraph: {
-    title: "Steel Structure Products | Laotie Steel Structure",
+    title: "Steel Structure Products | Laotie Steel",
     description: "Portal frame buildings, floor deck systems, space frames, and enclosure cladding. CE & ISO certified, factory direct pricing.",
     images: [{ url: "/images/product-steel-building.webp", width: 800, height: 800 }],
     url: "https://www.laotie-steel.com/products",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Steel Structure Products | Laotie Steel Structure",
+    title: "Steel Structure Products | Laotie Steel",
     description: "Portal frame buildings, floor deck systems, space frames, and enclosure cladding.",
     images: ["/images/product-steel-building.webp"],
   },

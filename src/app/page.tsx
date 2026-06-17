@@ -51,11 +51,11 @@ const Testimonials = dynamic(() => import("@/components/Testimonials"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
 export const metadata: Metadata = {
-  title: "Steel Structure Manufacturer in China — Factory Direct Pricing | Laotie Steel Structure",
+  title: "Steel Structure Manufacturer in China | Laotie Steel",
   description:
-    "Laotie Steel Structure: 15+ years factory direct steel buildings. 5 production lines, 5,000T/month. Portal frames, space frames, floor decks, cladding. CE & ISO certified. Serving 30+ countries. Get quotation within 24 hours.",
+    "Leading steel structure manufacturer in China. 5 production lines, 5,000T/month capacity. Portal frames, floor decks, space frames. Get a free quote today.",
   openGraph: {
-    title: "Laotie Steel Structure — Trusted Steel Manufacturer in China",
+    title: "Laotie Steel — Steel Structure Manufacturer in China",
     description:
       "Factory-direct steel buildings, space frames, floor decks, cladding systems. 5 lines, 5,000T/month capacity. CE & ISO certified.",
     images: [{ 
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Laotie Steel — Factory Direct Steel Building Manufacturer",
+    title: "Laotie Steel — Steel Structure Manufacturer",
     description: "CE & ISO certified. 15+ years, 30+ countries. Get a quote in 24h.",
     images: ["/images/og-image.webp"],
   },

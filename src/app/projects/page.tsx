@@ -155,20 +155,20 @@ const projects: Project[] = [
 ];
 
 export const metadata = {
-  title: "Projects",
-  description: "Featured steel structure projects delivered to 30+ countries worldwide. Portal frame buildings, space frames, floor decks, and cladding systems — Australia, Nigeria, Philippines, UAE, Indonesia.",
+  title: "Steel Structure Project Cases | Warehouse, Factory, Sports Hall",
+  description: "View our steel structure project cases: industrial warehouse, factory building, sports hall, dome roof. 18,304㎡ factory complex. Get a customized design.",
   openGraph: {
-    title: "Steel Structure Projects | Laotie Steel Structure",
-    description: "Industrial warehouses, factory complexes, shopping malls, logistics centers — delivered to 30+ countries worldwide.",
+    title: "Steel Structure Projects | Laotie Steel",
+    description: "Steel warehouse, factory, and sports hall projects. CE & ISO certified quality.",
     url: "https://www.laotie-steel.com/projects",
     siteName: "Laotie Steel Structure",
-    images: [{ url: "/images/projects/project-01.webp", width: 800, height: 600 }],
+    images: [{ url: "/images/projects/hongxin-sports/hongxin-5.webp" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Steel Structure Projects | Laotie Steel Structure",
-    description: "Industrial warehouses, factory complexes, shopping malls — delivered to 30+ countries worldwide.",
-    images: ["/images/projects/project-01.webp"],
+    title: "Steel Structure Projects | Laotie Steel",
+    description: "Steel warehouse, factory, and sports hall projects. CE & ISO certified quality.",
+    images: ["/images/projects/hongxin-sports/hongxin-5.webp"],
   },
 
 
