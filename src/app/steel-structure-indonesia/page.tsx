@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import LandingPageTracker from "@/components/LandingPageTracker";
+import ScrollAnimator from "@/components/ScrollAnimator";
 
 export const metadata: Metadata = {
   title: "Steel Structure Indonesia | Warehouse & Factory Construction",
@@ -157,6 +158,7 @@ export default function SteelStructureIndonesia() {
             Why Choose Laotie Steel for Indonesia?
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
+            <ScrollAnimator animation="fade-in" delay={0}>
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="w-12 h-12 bg-cta/10 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">🏗️</span>
@@ -167,6 +169,8 @@ export default function SteelStructureIndonesia() {
                 building codes.
               </p>
             </div>
+            </ScrollAnimator>
+            <ScrollAnimator animation="fade-in" delay={200}>
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="w-12 h-12 bg-cta/10 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">🌴</span>
@@ -177,6 +181,8 @@ export default function SteelStructureIndonesia() {
                 anti-corrosion warranty.
               </p>
             </div>
+            </ScrollAnimator>
+            <ScrollAnimator animation="fade-in" delay={400}>
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="w-12 h-12 bg-cta/10 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">🚢</span>
@@ -187,6 +193,7 @@ export default function SteelStructureIndonesia() {
                 Fast delivery across Indonesia.
               </p>
             </div>
+            </ScrollAnimator>
           </div>
         </div>
       </section>
