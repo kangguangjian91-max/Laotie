@@ -58,7 +58,12 @@ export const metadata: Metadata = {
     title: "Laotie Steel Structure — Trusted Steel Manufacturer in China",
     description:
       "Factory-direct steel buildings, space frames, floor decks, cladding systems. 5 lines, 5,000T/month capacity. CE & ISO certified.",
-    images: [{ url: "/images/product-steel-building.webp", width: 800, height: 800 }],
+    images: [{ 
+      url: "/images/og-image.webp", 
+      width: 1200, 
+      height: 630,
+      alt: "Laotie Steel Structure factory and steel building projects"
+    }],
     url: "https://www.laotie-steel.com",
     type: "website",
   },
@@ -66,7 +71,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Laotie Steel — Factory Direct Steel Building Manufacturer",
     description: "CE & ISO certified. 15+ years, 30+ countries. Get a quote in 24h.",
-    images: ["/images/product-steel-building.webp"],
+    images: ["/images/og-image.webp"],
   },
 };
 

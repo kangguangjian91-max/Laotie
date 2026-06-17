@@ -179,6 +179,39 @@ export default function ContactPage() {
                 <h3 className="font-semibold text-gray-900 mb-1">Factory Address</h3>
                 <p className="text-sm text-gray-600">Shangqiu City, Henan Province, China</p>
               </div>
+
+              {/* Google Maps Embed - Factory Location */}
+              <div className="mt-4">
+                <h3 className="font-semibold text-gray-900 mb-2">Factory Location</h3>
+                <div className="rounded-lg overflow-hidden border border-gray-200">
+                  <iframe
+                    src="https://maps.google.com/maps?q=河南省商丘市睢阳区兴业大道&output=embed"
+                    width="100%"
+                    height="300"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="劳铁钢结构工厂位置 - 河南省商丘市睢阳区兴业大道"
+                    className="w-full"
+                  ></iframe>
+                </div>
+                
+                {/* Baidu Maps Link for Chinese users */}
+                <div className="mt-3 text-center">
+                  <a
+                    href="https://map.baidu.com/search/河南省商丘市睢阳区兴业大道"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-steel-accent hover:text-steel transition-colors"
+                  >
+                    📍 在百度地图中查看工厂位置 →
+                  </a>
+                </div>
+                
+                <p className="text-xs text-gray-500 mt-2">📍 河南省商丘市睢阳区兴业大道</p>
+              </div>
+
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Office (Shenzhen)</h3>
                 <p className="text-sm text-gray-600">Shenzhen, Guangdong, China</p>

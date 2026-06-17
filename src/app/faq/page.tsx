@@ -117,6 +117,29 @@ const faqs = [
         q: "Can you match specific steel grades or coating requirements?",
         a: "Yes, we can use specific steel grades (Q235B, Q355B, ASTM A36, A572, etc.) and coating systems (epoxy zinc-rich primer, polyurethane topcoat, hot-dip galvanizing) upon request. Please specify your requirements in the inquiry, and we will provide a tailored solution.",
       },
+      {
+        q: "What is the typical lifespan of your steel buildings?",
+        a: "With proper maintenance, our steel structures have a design life of 50 years. The anti-corrosion coating system (epoxy zinc-rich primer + polyurethane topcoat, 240μm total) provides 15+ years of protection in normal industrial environments. For coastal or high-humidity areas, we recommend hot-dip galvanizing for 25+ years of protection.",
+      },
+    ],
+  },
+  {
+    category: "Maintenance & After-Sales",
+    icon: Clock,
+    color: "from-yellow-500 to-yellow-600",
+    questions: [
+      {
+        q: "What maintenance is required for steel buildings?",
+        a: "Steel buildings require minimal maintenance: (1) Inspect coating every 3-5 years and touch up any scratches, (2) Clean gutters and drainage systems regularly, (3) Check bolt tightness after first year and after severe storms, (4) Inspect roof panels for loose fasteners. We provide a detailed maintenance guide with every project.",
+      },
+      {
+        q: "Do you provide after-sales support?",
+        a: "Yes, we provide comprehensive after-sales support: (1) 2-year free technical support for installation and maintenance questions, (2) 10-year structural warranty, (3) Spare parts supply (we keep records of all your project's components for easy replacement), (4) Regular follow-up calls to ensure your satisfaction.",
+      },
+      {
+        q: "Can you supply additional parts if needed later?",
+        a: "Absolutely. We keep all project drawings and records for 10+ years. If you need additional parts, replacement panels, or expansion of your building, we can reproduce components with exact matching specifications. Many clients come back to us for factory expansions after 3-5 years.",
+      },
     ],
   },
 ];

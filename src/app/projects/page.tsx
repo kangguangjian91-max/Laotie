@@ -135,6 +135,23 @@ const projects: Project[] = [
     ],
     image: "/images/projects/hongxin-sports/hongxin-1.webp",
   },
+  {
+    name: "Rattan Weaving Industrial Park",
+    slug: "rattan-weaving-industrial-park-guo-village-shangqiu",
+    location: "Guo Village, Shangqiu, China",
+    type: "Portal Frame Steel Building",
+    size: "30,000 sqm (Phase 1: 15,000 sqm)",
+    year: "2026 (Ongoing)",
+    description:
+      "A 30,000 m² industrial park designed and constructed for Mr. Liu's rattan weaving production base in Guo Village, Shangqiu. The first phase includes 4 production buildings (15,000 m² total) for rattan furniture manufacturing.",
+    highlights: [
+      "33m span with 2 intermediate columns (3 bays, 11m each)",
+      "Heavy floor load design — 500 kg/m² (5 kN/m²)",
+      "Partially 2-story design, 300 tons of Q355B steel (Phase 1)",
+      "Under construction — on schedule for 2026 completion",
+    ],
+    image: "/images/projects/rattan-weaving-industrial-park/frame_01.webp",
+  },
 ];
 
 export const metadata = {

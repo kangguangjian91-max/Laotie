@@ -1304,4 +1304,180 @@ export const projectDetails: Record<string, ProjectDetail> = {
     category: "Trampoline Factory",
     completedYear: "2025",
   },
+
+  "rattan-weaving-industrial-park-guo-village-shangqiu": {
+    slug: "rattan-weaving-industrial-park-guo-village-shangqiu",
+    metaTitle: "Rattan Weaving Industrial Park | 30,000㎡ Steel Structure | Laotie Steel",
+    metaDescription: "30,000㎡ steel structure industrial park for rattan weaving production in Guo Village, Shangqiu, Henan. 4 production buildings, 300 tons of steel. Get a free quote.",
+    urlSlug: "/projects/rattan-weaving-industrial-park-guo-village-shangqiu",
+    image: "/images/projects/rattan-weaving-industrial-park/frame_01.webp",
+    h1: "Rattan Weaving Industrial Park — 30,000㎡ Production Facility in Guo Village, Shangqiu",
+    overview: `
+      <p>This 30,000 m² industrial park is designed and constructed for Mr. Liu's rattan weaving production base in Guo Village, Shangqiu, Henan Province. The first phase includes 4 production buildings (15,000 m² total) for rattan furniture manufacturing.</p>
+      <p>Each production building has a footprint of 33 meters in width and 90 meters in length. The buildings are partially 2-story, with a total building area of approximately 3,750 m² per building. The 33m span is divided by 2 intermediate columns, creating 3 production bays ideal for different stages of rattan weaving process. Total steel consumption for the first phase: 300 tons of Q355B high-strength steel.</p>
+      <div class="my-6">
+        <img src="/images/projects/rattan-weaving-industrial-park/frame_01.webp" alt="Rattan weaving industrial park construction view" class="rounded-lg shadow-md w-full" />
+        <p class="text-sm text-gray-500 mt-2 text-center">Industrial park construction overview</p>
+      </div>
+      <p>The design accounts for 500 kg/m² floor live load (heavy load for rattan weaving equipment and materials). All structural calculations were prepared by our chartered engineering team and stamped for local building department submission. The project is currently under construction.</p>
+    `,
+    challenges: `
+      <p><strong>1. Heavy Floor Load Design.</strong> The client required 500 kg/m² floor live load to accommodate heavy rattan weaving equipment and material storage. This is significantly higher than standard industrial buildings (typically 150-200 kg/m²). Our design used additional reinforcement in the floor deck and beam系统设计 to meet this requirement.</p>
+      <p><strong>2. Multi-Building Coordination.</strong> The industrial park includes 4 production buildings constructed simultaneously. Our project management team coordinated the fabrication and delivery schedule to ensure all 4 buildings progressed in sync, avoiding delays in any single building.</p>
+      <p><strong>3. Partially 2-Story Design.</strong> The partially 2-story design required careful consideration of column loads and foundation design. Our engineering team optimized the foundation design to accommodate the varying loads from 1-story and 2-story sections.</p>
+    `,
+    solution: `
+      <p><strong>Design Phase:</strong> Our engineering team developed 3D models for all 4 production buildings. Each building (33m × 90m) includes portal frame design with 2 intermediate columns creating 3 bays (11m each). The partially 2-story design was optimized for the specific production process requirements.</p>
+      <p><strong>Fabrication:</strong> All steel members were fabricated from Q355B steel plate using CNC plasma cutting. H-section columns and beams were welded using submerged arc welding (SAW) with full penetration welds verified by ultrasonic testing (UT). All bolted connections use 10.9/S grade friction-grip bolts.</p>
+      <p><strong>Special Design for Heavy Load:</strong> The floor system uses steel deck + 120mm concrete slab, designed for 500 kg/m² live load. Beam and column connections were reinforced to accommodate the heavy floor load. Our engineering team provided full calculation reports stamped by Class-A design institute.</p>
+    `,
+    design: `
+      <p>The design was prepared according to GB 50017-2017 (Steel Structure Design Standard) and GB 50009-2012 (Load Code). The calculations include:</p>
+      <ul>
+        <li>Structural analysis of 33m span with 2 intermediate columns</li>
+        <li>Floor load calculation for 500 kg/m² (5 kN/m²)</li>
+        <li>Wind load analysis (0.55 kN/m², GB 50009)</li>
+        <li>Seismic analysis (Degree 6, GB 50011, 0.05g)</li>
+        <li>Connection design for bolted moment-resisting frame</li>
+        <li>Foundation design reaction reports for contractor use</li>
+      </ul>
+      <p>All calculations were reviewed and stamped by our chartered engineering team. The design was submitted to and approved by the local building department.</p>
+    `,
+    fabrication: `
+      <p>All steel fabrication was completed at our Xingyang, Zhengzhou facility (5 production lines, 5,000T/month capacity). Quality control follows ISO 9001:2015 procedures:</p>
+      <ul>
+        <li><strong>Material Preparation:</strong> Q355B steel plates were inspected for chemical composition and mechanical properties. Mill test certificates (MTC) were provided for each batch.</li>
+        <li><strong>CNC Cutting:</strong> Steel plates were cut using CNC plasma cutting machines with ±1mm tolerance. Cutting drawings were generated from our 3D model to ensure accuracy.</li>
+        <li><strong>Assembly & Welding:</strong> H-section members were assembled on jigs and welded using submerged arc welding (SAW). Full penetration welds were verified by ultrasonic testing (UT) per GB 50661.</li>
+        <li><strong>Surface Treatment:</strong> All fabricated members were shot-blasted to Sa 2.5 standard, then coated with epoxy zinc-rich primer (80μm) + polyurethane topcoat (160μm), total 240μm thickness.</li>
+        <li><strong>Packaging:</strong> Members were labeled with unique mark numbers, wrapped with polyethylene film, and loaded for domestic transport to Guo Village construction site.</li>
+      </ul>
+    `,
+    qualityControl: `
+      <p>Laotie Steel maintains ISO 9001:2015 certified quality management system. For this project, we implemented:</p>
+      <ul>
+        <li><strong>Material Inspection:</strong> 100% incoming material inspection with MTC verification.</li>
+        <li><strong>Dimensional Inspection:</strong> All fabricated members were inspected for dimensional accuracy (±2mm for length, ±1mm for hole positioning).</li>
+        <li><strong>Welding Inspection:</strong> UT inspection for all full penetration welds. Visual inspection for all fillet welds.</li>
+        <li><strong>Coating Inspection:</strong> Dry film thickness (DFT) measured for each member (240μm minimum). Adhesion test performed per ASTM D4541.</li>
+        <li><strong>Load Test:</strong> Representative connection nodes were load-tested to verify design assumptions.</li>
+      </ul>
+      <p>All inspection records are maintained for 10 years and available for client audit.</p>
+    `,
+    packingShipping: `
+      <p>The fabricated steel structure (300 tons for Phase 1) was packed for domestic transport to the Guo Village construction site. Our packing method followed a strict protocol:</p>
+      <ul>
+        <li><strong>Member Labeling:</strong> Every member was labeled with a unique mark number corresponding to the erection drawing. Labels were engraved on stainless steel tags and riveted to the member end plate.</li>
+        <li><strong>Protective Wrapping:</strong> All painted surfaces were wrapped with 200μm polyethylene film to prevent coating damage during transit. Connection plates were protected with plywood covers.</li>
+        <li><strong>Domestic Transport:</strong> From our Xingyang factory to Guo Village site: approximately 80 km by 17.5m low-bed trailer. Transit time: 2 hours. All oversized members (length > 12m) were transported with police escort.</li>
+        <li><strong>Site Storage:</strong> All members were stored on timber dunnage (200×200×1000mm) with 500mm ground clearance. Painted surfaces were covered with UV-resistant tarpaulin for up to 30 days outdoor storage.</li>
+      </ul>
+    `,
+    installationGuide: `
+      <p>The erection is being completed by our professional installation team. The installation sequence follows a strict plan:</p>
+      <ol>
+        <li><strong>Foundation Inspection:</strong> Before erection, all foundation anchor bolts were inspected for position tolerance (±2mm) and verticality (≤ 1/100). Anchor bolt sleeves were removed and threads were protected with anti-size compound.</li>
+        <li><strong>Column Erection:</strong> Main columns were erected first using 25T mobile cranes. Columns were temporarily supported by adjustable steel props. Verticality was adjusted using plumb bobs and shim plates. Tolerance: ≤ H/1000 and ≤ 10mm total.</li>
+        <li><strong>Rafter Installation:</strong> Rafter segments were installed after column alignment. High-strength bolts were tightened using torque wrenches (calibrated daily). Bolt tightening sequence: initial tighten → final tighten → inspection mark.</li>
+        <li><strong>Bracing and Purlin Installation:</strong> After the main frame was stabilized, longitudinal bracing and roof purlins were installed. Purlin alignment was checked using laser levels. Tolerance: ±3mm for purlin top elevation.</li>
+        <li><strong>Floor Deck Installation:</strong> Steel deck was installed for the 2-story sections. Concrete slab (120mm) was poured after deck installation. The floor system was designed for 500 kg/m² live load.</li>
+        <li><strong>Cladding Installation:</strong> Roof sheeting was installed from ridge to eaves. Wall sandwich panels were installed from bottom to top. All sealant was applied continuously without joints. Window and door openings were measured on-site before cutting.</li>
+      </ol>
+    `,
+    whyChoose: `
+      <p>Mr. Liu chose Laotie Steel for this industrial park project because of our:</p>
+      <ul>
+        <li><strong>Experience with Heavy Load Industrial Buildings:</strong> Our engineering team has designed multiple industrial buildings with floor loads up to 1000 kg/m². We understand the special requirements for heavy equipment foundations and floor systems.</li>
+        <li><strong>Competitive Pricing:</strong> As a factory-direct manufacturer, we provided a quote 15-20% lower than local competitors while maintaining equivalent quality and GB standard compliance.</li>
+        <li><strong>Fast Delivery:</strong> Our 5 production lines ensured the 300 tons of steel were fabricated and delivered within 30 days of contract signing.</li>
+        <li><strong>On-Site Technical Support:</strong> Our engineers provided on-site supervision during the critical erection phases to ensure theheavy load floor system was installed correctly.</li>
+      </ul>
+    `,
+    specs: [
+      { label: "Total Building Area", value: "30,000 m² (Phase 1: 15,000 m²)" },
+      { label: "Number of Buildings", value: "4 production buildings (Phase 1)" },
+      { label: "Steel Tonnage", value: "300 tons (Q355B, Phase 1)" },
+      { label: "Building Footprint", value: "33m × 90m per building" },
+      { label: "Building Area per Building", value: "≈3,750 m² (partially 2-story)" },
+      { label: "Span", value: "33m (3 bays, 11m each, with 2 intermediate columns)" },
+      { label: "Length", value: "90m" },
+      { label: "Floor Load", value: "500 kg/m² (5 kN/m²)" },
+      { label: "Column Spacing", value: "8m" },
+      { label: "Roof Slope", value: "1:10" },
+      { label: "Design Load", value: "0.5 kN/m² (roof), 5 kN/m² (floor)" },
+      { label: "Wind Load", value: "0.55 kN/m² (GB 50009)" },
+      { label: "Seismic Rating", value: "Degree 6 (GB 50011, 0.05g)" },
+      { label: "Connection Type", value: "Bolted moment-resisting frame" },
+      { label: "Fire Rating", value: "2-hour (production area)" },
+      { label: "Design Life", value: "50 years (GB 50017)" },
+      { label: "Cladding System", value: "100mm PIR wall panel, 75mm rock wool roof" },
+      { label: "Coating System", value: "Epoxy zinc-rich primer + polyurethane topcoat (240μm)" },
+      { label: "Status", value: "Under construction (Phase 1)" },
+    ],
+    faq: [
+      {
+        question: "How much does a 15,000 m² industrial park cost in China?",
+        answer: "For a 15,000 m² industrial park (4 production buildings) like our Guo Village project, the supply-only cost from Laotie Steel is typically RMB 750-950 per m² (EXW Xingyang). This includes structural steel, cladding system, and standard anti-corrosion coating. The heavy floor load design (500 kg/m²) adds approximately 10-15% to the structural cost. Foundation, electrical, and plumbing are excluded.",
+      },
+      {
+        question: "Can you design steel structures for 500 kg/m² floor load?",
+        answer: "Yes. Laotie Steel has experience designing industrial buildings for heavy floor loads up to 1000 kg/m². For 500 kg/m² (5 kN/m²), we typically use reinforced steel deck + 120mm concrete slab, with additional beam reinforcement. Our designs comply with GB 50017-2017 and include full calculation reports stamped by Class-A design institute.",
+      },
+      {
+        question: "What is the lead time for a 4-building industrial park in China?",
+        answer: "Total lead time is typically 45-60 days: 30 days for fabrication (depending on current production line load), 1-2 days for domestic transport. We recommend allowing 90 days total from contract signing to facility handover for project planning purposes. Our 5 production lines ensure fast delivery even for multi-building projects.",
+      },
+      {
+        question: "Do you provide on-site supervision for industrial park projects?",
+        answer: "Yes. For multi-building industrial park projects, we provide on-site supervision engineers to ensure correct installation. Our supervision includes foundation inspection, column erection alignment, bolt tightening verification, and floor deck installation inspection. On-site supervision is provided at additional cost but is highly recommended for heavy load buildings.",
+      },
+      {
+        question: "Can you coordinate multiple building construction simultaneously?",
+        answer: "Yes. Our project management team coordinates the fabrication and delivery schedule for multiple buildings to ensure synchronized construction. For the Guo Village project, we delivered steel for all 4 buildings in sequence, with each building's steel arriving 3-5 days before erection start. This minimized on-site storage requirements and kept the construction schedule on track.",
+      },
+    ],
+    cta: `
+      <p>Planning an industrial park with heavy floor load requirements? Get a free preliminary design and budget estimate within 24 hours. Share your site dimensions, floor load requirements, and intended use — our engineering team will prepare a customized proposal with GB-compliant calculations.</p>
+    `,
+    conclusion: `
+      <p>This Rattan Weaving Industrial Park project (30,000 m² total area, 300 tons of steel for Phase 1) demonstrates Laotie Steel's capability to deliver code-compliant, cost-effective steel structure solutions for specialized industrial applications. From heavy floor load design to multi-building project coordination, every stage of this project was managed to ensure the client received a production-ready facility on schedule and within budget.</p>
+      <p>Whether you are planning a 5,000 m² workshop or a 50,000 m² industrial park with heavy load requirements, our 5 production lines and 15+ years of experience ensure your project will be delivered with uncompromising quality and competitive pricing.</p>
+      <p><a href="/contact" class="inline-flex items-center px-6 py-3 bg-steel-accent text-white font-semibold rounded-lg hover:bg-steel transition-colors shadow-lg">Get a Free Quote for Your Steel Structure Project →</a></p>
+    `,
+    keywords: [
+      "steel structure industrial park",
+      "heavy floor load steel building",
+      "industrial steel building China",
+      "prefabricated industrial park",
+      "steel warehouse construction",
+      "portal frame industrial building",
+      "steel building supplier China",
+      "steel structure manufacturer",
+      "factory building contractor",
+      "custom steel structure",
+    ],
+    longTailKeywords: [
+      "cost of industrial park in China",
+      "steel structure industrial park construction company",
+      "heavy floor load steel building design",
+      "prefabricated industrial park supplier",
+      "steel structure for rattan weaving",
+      "industrial steel building manufacturer China",
+      "portal frame industrial building design",
+      "custom steel structure industrial park",
+      "steel structure design GB 50017",
+      "industrial park construction cost per m² China",
+    ],
+    galleryImages: [
+      { src: "/images/projects/rattan-weaving-industrial-park/frame_01.webp", alt: "Rattan weaving industrial park construction site overview" },
+      { src: "/images/projects/rattan-weaving-industrial-park/frame_02.webp", alt: "Steel structure erection for rattan weaving production building" },
+      { src: "/images/projects/rattan-weaving-industrial-park/frame_03.webp", alt: "Rattan weaving factory construction progress - portal frame installation" },
+      { src: "/images/projects/rattan-weaving-industrial-park/frame_04.webp", alt: "Industrial park construction site - steel columns and rafters" },
+      { src: "/images/projects/rattan-weaving-industrial-park/frame_05.webp", alt: "Rattan weaving production facility - construction progress view" },
+      { src: "/images/projects/rattan-weaving-industrial-park/frame_06.webp", alt: "Guo Village industrial park - steel structure construction" },
+    ],
+    location: "Guo Village, Shangqiu, Henan, China",
+    category: "Rattan Weaving Industrial Park",
+    completedYear: "2026 (Ongoing)",
+  },
 };
