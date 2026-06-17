@@ -1108,9 +1108,8 @@ export const projectDetails: Record<string, ProjectDetail> = {
         <p class="text-sm text-gray-500 mt-2 text-center">Main plant exterior view (141m × 52m, 2-story)</p>
       </div>
 
-      <div class="my-6">
-        <img src="/images/projects/hongxin-sports/hongxin-3.webp" alt="Hongxin Sports factory 5-story office building" class="rounded-lg shadow-md w-full" />
-        <p class="text-sm text-gray-500 mt-2 text-center">5-story office building (14m × 52m, 20m height)</p>
+      <div class="my-2">
+        <img src="/images/projects/hongxin-sports/hongxin-7.webp" alt="Hongxin Sports factory main entrance with steel structure gate" class="rounded-lg shadow-md w-full" />
       </div>
 
       <p>All structural calculations were prepared by our chartered engineering team and stamped for local building department submission. The design accounts for 0.55 kN/m² roof live load, 15 kN/m² floor live load (for heavy equipment areas), 10T overhead crane system, and seismic intensity 6 degrees (GB 50011-2010).</p>
@@ -1295,7 +1294,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
     galleryImages: [
       { src: "/images/projects/hongxin-sports/hongxin-1.webp", alt: "Hongxin Sports trampoline factory steel frame erection - portal frame columns and rafters during installation" },
       { src: "/images/projects/hongxin-sports/hongxin-2.webp", alt: "Hongxin Sports factory construction site - crane lifting steel beams into position" },
-      { src: "/images/projects/hongxin-sports/hongxin-3.webp", alt: "Hongxin Sports factory exterior - 5-story office building attached to main plant" },
+      { src: "/images/projects/hongxin-sports/hongxin-7.webp", alt: "Hongxin Sports factory main entrance - steel structure gate with office building facade" },
       { src: "/images/projects/hongxin-sports/hongxin-4.webp", alt: "Hongxin Sports factory construction site - workers installing roof purlins" },
       { src: "/images/projects/hongxin-sports/hongxin-5.webp", alt: "Hongxin Sports factory overview - 141m x 52m complex with office building" },
       { src: "/images/projects/hongxin-sports/hongxin-6.webp", alt: "Hongxin Sports trampoline production facility - completed steel structure with roof cladding" },
