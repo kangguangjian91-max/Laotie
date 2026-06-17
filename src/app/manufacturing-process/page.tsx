@@ -5,16 +5,16 @@ import JsonLd from "@/components/JsonLd";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Manufacturing Process — 7-Step Quality Control | Laotie Steel",
+  title: "Steel Structure Manufacturing Process | 7-Step Quality Control | Laotie Steel",
   description:
-    "Discover Laotie Steel's 7-step manufacturing process: material inspection, CNC cutting, assembly, welding, shot blasting, coating, and QC packing. ISO 9001 certified quality management.",
+    "Discover Laotie Steel's 7-step steel structure manufacturing process: material inspection, CNC cutting, assembly, welding, surface treatment, packaging, and delivery. ISO 9001 certified quality management.",
   openGraph: {
-    title: "Steel Structure Manufactring Process | Laotie Steel",
+    title: "Steel Structure Manufacturing Process | Laotie Steel",
     description:
-      "From raw material to finished steel structure — see our 7-step quality-controlled manufacturing process.",
+      "From raw material to finished steel structure — see our 7-step quality-controlled manufacturing process with real factory photos.",
     url: "https://www.laotie-steel.com/manufacturing-process",
     type: "website",
-    images: [{ url: "/images/factory-workshop.webp" }],
+    images: [{ url: "/images/manufacturing-process/01-cutting.webp" }],
   },
   alternates: {
     canonical: "https://www.laotie-steel.com/manufacturing-process",
@@ -36,7 +36,7 @@ const steps = [
       </ul>
       <p>Only material passing all checks enters our production line. Non-conforming material is quarantined and returned to the mill within 48 hours.</p>
     `,
-    image: "/images/manufacturing/step-01-material-inspection.webp",
+    image: "/images/manufacturing-process/01-cutting.webp",
     specs: [
       "EN 10204 3.1 MTC provided",
       "Spectrometer chemical analysis",
@@ -58,7 +58,7 @@ const steps = [
       </ul>
       <p>Cut parts are immediately labeled with a unique serial number that traces back to the original mill test report and the project's fabrication drawing.</p>
     `,
-    image: "/images/manufacturing/step-02-cnc-cutting.webp",
+    image: "/images/manufacturing-process/01-cutting.webp",
     specs: [
       "±1mm cutting tolerance",
       "12-head CNC plasma system",
@@ -80,7 +80,7 @@ const steps = [
       </ul>
       <p>Assembly tolerances follow ISO 13920: length ±2mm, straightness 1/1000, twist ≤3mm over full member length.</p>
     `,
-    image: "/images/manufacturing/step-03-assembly.webp",
+    image: "/images/manufacturing-process/02-assembly.webp",
     specs: [
       "ISO 13920 tolerances",
       "Precision welding tables",
@@ -102,7 +102,7 @@ const steps = [
       </ul>
       <p>All welding is performed by AWS D1.1 / ISO 3834 certified welders. Welding consumables are stored in heated cabinets to prevent moisture absorption.</p>
     `,
-    image: "/images/manufacturing/step-04-welding.webp",
+    image: "/images/manufacturing-process/03-welding.webp",
     specs: [
       "AWS D1.1 / ISO 3834 certified",
       "SAW + MAG welding processes",
@@ -124,7 +124,7 @@ const steps = [
       </ul>
       <p>Proper surface preparation is critical for coating longevity. Our SA 2.5 profile ensures coating system lifespan of 15-20 years in industrial environments.</p>
     `,
-    image: "/images/manufacturing/step-05-shot-blasting.webp",
+    image: "/images/manufacturing-process/05-surface-treatment.webp",
     specs: [
       "SA 2.5 per ISO 8501-1",
       "40-80μm anchor pattern",
@@ -146,7 +146,7 @@ const steps = [
       </ul>
       <p>For coastal or high-humidity projects, we upgrade to a 400μm DFT system with zinc-rich primer + epoxy intermediate + polyurethane topcoat + antifouling topcoat. All coating materials are batch-tracked for traceability.</p>
     `,
-    image: "/images/manufacturing/step-06-coating.webp",
+    image: "/images/manufacturing-process/06-packaging.webp",
     specs: [
       "280-320μm DFT (standard)",
       "400μm DFT (coastal upgrade)",
@@ -168,7 +168,7 @@ const steps = [
       </ul>
       <p>Each shipment includes: (1) Packing list with zone cross-reference, (2) QC report with DFT readings and photos, (3) MTC for each steel batch, (4) Coating material certificates, (5) Container loading photos for insurance purposes.</p>
     `,
-    image: "/images/manufacturing/step-07-qc-packing.webp",
+    image: "/images/manufacturing-process/07-delivery.webp",
     specs: [
       "±2mm final dimensional tolerance",
       "3D container optimization",
@@ -181,7 +181,7 @@ const steps = [
 const manufacturingSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  name: "Steel Structure Manufactring Process",
+  name: "Steel Structure Manufacturing Process",
   description:
     "Laotie Steel's 7-step manufacturing process for steel structure components, from raw material inspection to final QC and packing.",
   totalTime: "PT48H",
@@ -233,18 +233,13 @@ export default function ManufacturingProcessPage() {
                 {/* Image */}
                 <div className="flex-1 relative">
                   <div className="aspect-[4/3] relative rounded-2xl overflow-hidden bg-gray-100 border border-gray-200">
-                    {/* Placeholder - replace with actual image */}
-                    <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                      <span className="text-lg font-semibold">Step {step.step} Image</span>
-                    </div>
-                    {/* Uncomment when images are ready:
                     <Image
                       src={step.image}
-                      alt={step.title}
+                      alt={`Step ${step.step}: ${step.title} - Laotie Steel manufacturing process`}
                       fill
                       className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
-                    */}
                   </div>
                   {/* Step number badge */}
                   <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-steel-accent text-white font-bold text-xl flex items-center justify-center shadow-lg">
