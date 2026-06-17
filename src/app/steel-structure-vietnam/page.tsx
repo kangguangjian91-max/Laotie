@@ -524,6 +524,7 @@ export default function VietnamLandingPage() {
       </section>
 
       {/* Testimonials */}
+      <ScrollAnimator animation="fade-in">
       <section className="py-16 bg-red-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
@@ -563,8 +564,10 @@ export default function VietnamLandingPage() {
           </div>
         </div>
       </section>
+      </ScrollAnimator>
 
       {/* FAQ */}
+      <ScrollAnimator animation="fade-in">
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
@@ -610,6 +613,7 @@ export default function VietnamLandingPage() {
           </div>
         </div>
       </section>
+      </ScrollAnimator>
 
       {/* Contact Form */}
       <section id="contact" className="py-16 bg-gray-50">
