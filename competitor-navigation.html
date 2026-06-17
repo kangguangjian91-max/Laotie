@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>竞对网站导航 — Laotie Steel Competitive Analysis</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f5f5f5; padding: 20px; }
+    h1 { font-size: 24px; margin-bottom: 10px; color: #1e3a5f; }
+    .subtitle { color: #666; margin-bottom: 30px; font-size: 14px; }
+    
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+    
+    .card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    
+    .card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .card-icon { font-size: 32px; }
+    .card-title { font-size: 18px; font-weight: 700; color: #333; }
+    .card-url { font-size: 12px; color: #0066cc; word-break: break-all; }
+    
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .tag { padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+    .tag-advantage { background: #dcfce7; color: #166534; }
+    .tag-disadvantage { background: #fef2f2; color: #991b1b; }
+    .tag-neutral { background: #f3f4f6; color: #374151; }
+    
+    .card-body { font-size: 13px; color: #555; line-height: 1.6; margin-bottom: 16px; }
+    .card-body strong { color: #333; }
+    
+    .btn-group { display: flex; gap: 8px; }
+    .btn { flex: 1; padding: 10px; border-radius: 8px; text-align: center; font-size: 14px; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+    .btn-primary { background: #1e3a5f; color: white; }
+    .btn-primary:hover { background: #2d5a8f; }
+    .btn-secondary { background: #f3f4f6; color: #333; }
+    .btn-secondary:hover { background: #e5e7eb; }
+    
+    .summary { background: white; border-radius: 12px; padding: 20px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .summary h2 { font-size: 16px; margin-bottom: 12px; color: #333; }
+    .summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+    .summary-item { padding: 12px; background: #f9fafb; border-radius: 8px; font-size: 13px; }
+    .summary-item strong { display: block; margin-bottom: 4px; color: #1e3a5f; }
+    
+    .actions { margin-bottom: 30px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .action-btn { padding: 12px 24px; background: #1e3a5f; color: white; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; }
+    .action-btn:hover { background: #2d5a8f; }
+    .action-btn.secondary { background: white; color: #1e3a5f; border: 2px solid #1e3a5f; }
+  </style>
+</head>
+<body>
+  <h1>🔍 竞对网站导航</h1>
+  <p class="subtitle">点击"打开网站"按钮查看竞对页面，对比分析后告诉我需要改进的地方</p>
+  
+  <div class="actions">
+    <a href="javascript:void(0)" onclick="openAll()" class="action-btn">📂 一键打开所有竞对网站</a>
+    <a href="competitive-analysis-report.html" class="action-btn secondary">📊 查看分析报告</a>
+    <a href="https://www.laotie-steel.com" target="_blank" class="action-btn secondary">🏠 查看我们的网站</a>
+  </div>
+  
+  <div class="summary">
+    <h2>📋 关键差距概览</h2>
+    <div class="summary-grid">
+      <div class="summary-item">
+        <strong>⚠️ 缺失：客户评价</strong>
+        竞品HC Steel有3条客户评价，我们首页无评价展示
+      </div>
+      <div class="summary-item">
+        <strong>⚠️ 缺失：FAQ页面</strong>
+        竞品有完整FAQ，我们无常见问题解答
+      </div>
+      <div class="summary-item">
+        <strong>⚠️ 不足：博客数量</strong>
+        我们9篇，竞品30+篇，需扩充内容
+      </div>
+      <div class="summary-item">
+        <strong>✅ 优势：在线计算器</strong>
+        我们独有钢材报价计算器，竞品都没有
+      </div>
+      <div class="summary-item">
+        <strong>✅ 优势：Portfolio页面</strong>
+        我们全球项目展示系统性强，优于竞品
+      </div>
+      <div class="summary-item">
+        <strong>⚠️ 不足：信任信号</strong>
+        ISO/CE认证展示不突出，竞品有专门认证区域
+      </div>
+    </div>
+  </div>
+  
+  <div class="grid">
+    <!-- Competitor 1: HC Steel -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">🏭</div>
+        <div>
+          <div class="card-title">HC Steel Structure</div>
+          <div class="card-url">hcsteelstructure.com</div>
+        </div>
+      </div>
+      <div class="tags">
+        <span class="tag tag-advantage">✅ 客户评价</span>
+        <span class="tag tag-advantage">✅ 博客30+篇</span>
+        <span class="tag tag-advantage">✅ 详细项目案例</span>
+        <span class="tag tag-disadvantage">❌ 图片未优化</span>
+      </div>
+      <div class="card-body">
+        <strong>核心优势：</strong>有客户评价系统、FAQ完整、博客更新频繁（每月6篇）、项目案例含技术参数<br><br>
+        <strong>可借鉴：</strong>首页添加客户评价、创建FAQ页面、突出ISO/CE认证徽章
+      </div>
+      <div class="btn-group">
+        <a href="https://www.hcsteelstructure.com/" target="_blank" class="btn btn-primary">打开网站</a>
+        <a href="https://www.hcsteelstructure.com/blog/" target="_blank" class="btn btn-secondary">查看博客</a>
+      </div>
+    </div>
+    
+    <!-- Competitor 2: China Structural Steel -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">🏗️</div>
+        <div>
+          <div class="card-title">China Structural Steel</div>
+          <div class="card-url">chinastructuralsteel.com</div>
+        </div>
+      </div>
+      <div class="tags">
+        <span class="tag tag-advantage">✅ 产能数据详细</span>
+        <span class="tag tag-advantage">✅ 制造流程透明</span>
+        <span class="tag tag-advantage">✅ 技术博客高质量</span>
+        <span class="tag tag-disadvantage">❌ 设计风格老旧</span>
+      </div>
+      <div class="card-body">
+        <strong>核心优势：</strong>详细展示7步制造流程、产能数据透明（30000㎡厂区）、技术博客深度足够<br><br>
+        <strong>可借鉴：</strong>添加制造流程页面、展示产能数据、创建技术博客
+      </div>
+      <div class="btn-group">
+        <a href="https://chinastructuralsteel.com/steel-structure-buildings/" target="_blank" class="btn btn-primary">打开网站</a>
+        <a href="https://chinastructuralsteel.com/blog/" target="_blank" class="btn btn-secondary">查看博客</a>
+      </div>
+    </div>
+    
+    <!-- Competitor 3: Yunsheng Steel -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">🔩</div>
+        <div>
+          <div class="card-title">Yunsheng Steel</div>
+          <div class="card-url">yunshengsteelstructure.com</div>
+        </div>
+      </div>
+      <div class="tags">
+        <span class="tag tag-advantage">✅ OEM/ODM服务</span>
+        <span class="tag tag-advantage">✅ 多国出口经验</span>
+        <span class="tag tag-neutral">⚠️ 博客较少</span>
+      </div>
+      <div class="card-body">
+        <strong>核心优势：</strong>OEM/ODM服务、多国出口经验、CE/ISO认证齐全<br><br>
+        <strong>可借鉴：</strong>突出OEM服务能力、展示多国出口案例
+      </div>
+      <div class="btn-group">
+        <a href="https://www.yunshengsteelstructure.com/steel-structure.html" target="_blank" class="btn btn-primary">打开网站</a>
+        <a href="https://www.yunshengsteelstructure.com/blog/" target="_blank" class="btn btn-secondary">查看博客</a>
+      </div>
+    </div>
+    
+    <!-- Competitor 4: Jinggang Building -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">🏢</div>
+        <div>
+          <div class="card-title">Jinggang Building</div>
+          <div class="card-url">jinggangbuilding.com</div>
+        </div>
+      </div>
+      <div class="tags">
+        <span class="tag tag-advantage">✅ 创新预制方案</span>
+        <span class="tag tag-advantage">✅ 国际项目经验</span>
+        <span class="tag tag-neutral">⚠️ 无在线工具</span>
+      </div>
+      <div class="card-body">
+        <strong>核心优势：</strong>创新预制解决方案、国际项目经验丰富、设计能力强<br><br>
+        <strong>可借鉴：</strong>突出设计能力、展示国际项目经验
+      </div>
+      <div class="btn-group">
+        <a href="https://www.jinggangbuilding.com/" target="_blank" class="btn btn-primary">打开网站</a>
+        <a href="https://www.jinggangbuilding.com/projects/" target="_blank" class="btn btn-secondary">查看项目</a>
+      </div>
+    </div>
+    
+    <!-- Competitor 5: XTD Steel -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">⚙️</div>
+        <div>
+          <div class="card-title">XTD Steel Structure</div>
+          <div class="card-url">xtdsteel.com</div>
+        </div>
+      </div>
+      <div class="tags">
+        <span class="tag tag-advantage">✅ 一站式服务</span>
+        <span class="tag tag-advantage">✅ 设计+加工+安装</span>
+        <span class="tag tag-neutral">⚠️ 无在线计算器</span>
+      </div>
+      <div class="card-body">
+        <strong>核心优势：</strong>一站式服务、设计+加工+安装全流程、CNC精度高<br><br>
+        <strong>可借鉴：</strong>突出一站式服务能力、展示全流程解决方案
+      </div>
+      <div class="btn-group">
+        <a href="https://xtdsteel.com/" target="_blank" class="btn btn-primary">打开网站</a>
+        <a href="https://xtdsteel.com/projects/" target="_blank" class="btn btn-secondary">查看项目</a>
+      </div>
+    </div>
+    
+    <!-- Our Website: Laotie Steel -->
+    <div class="card" style="border: 2px solid #10b981;">
+      <div class="card-header">
+        <div class="card-icon">🏆</div>
+        <div>
+          <div class="card-title">Laotie Steel (我们)</div>
+          <div class="card-url">laotie-steel.com</div>
+        </div>
+      </div>
+      <div class="tags">
+        <span class="tag tag-advantage">✅ 在线计算器（独有！）</span>
+        <span class="tag tag-advantage">✅ Portfolio页面</span>
+        <span class="tag tag-advantage">✅ 图片WebP优化</span>
+        <span class="tag tag-disadvantage">❌ 无客户评价</span>
+        <span class="tag tag-disadvantage">❌ 无FAQ页面</span>
+      </div>
+      <div class="card-body">
+        <strong>我们的优势：</strong>独有在线计算器、Portfolio页面系统性强、图片WebP优化、SEO优化到位<br><br>
+        <strong>需要改进：</strong>添加客户评价、创建FAQ页面、突出ISO/CE认证、扩充博客内容
+      </div>
+      <div class="btn-group">
+        <a href="https://www.laotie-steel.com" target="_blank" class="btn btn-primary">打开我们的网站</a>
+        <a href="https://www.laotie-steel.com/calculator" target="_blank" class="btn btn-secondary">查看计算器</a>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function openAll() {
+      const urls = [
+        'https://www.hcsteelstructure.com/',
+        'https://chinastructuralsteel.com/steel-structure-buildings/',
+        'https://www.yunshengsteelstructure.com/steel-structure.html',
+        'https://www.jinggangbuilding.com/',
+        'https://xtdsteel.com/'
+      ];
+      urls.forEach((url, i) => {
+        setTimeout(() => window.open(url, '_blank'), i * 500);
+      });
+      alert('已打开5个竞对网站，请逐个查看后告诉我需要改进的地方。');
+    }
+  </script>
+</body>
+</html>
