@@ -1234,3 +1234,21 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
 export function getAllSlugs(): string[] {
   return blogPosts.map((p) => p.slug);
 }
+
+// 导入并合并新博客文章 (2026-06-17添加)
+import { newBlogPosts } from "./blog-new";
+
+// 获取所有博客文章（包括新添加的）
+export function getAllPostsIncludingNew(): BlogPost[] {
+  return [...blogPosts, ...newBlogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+// 获取所有博客slug（包括新添加的）
+export function getAllSlugsIncludingNew(): string[] {
+  return [...blogPosts, ...newBlogPosts].map((p) => p.slug);
+}
+
+// 根据slug获取博客文章（包括新添加的）
+export function getPostBySlugIncludingNew(slug: string): BlogPost | undefined {
+  return [...blogPosts, ...newBlogPosts].find((p) => p.slug === slug);
+}

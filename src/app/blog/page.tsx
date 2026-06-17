@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { getAllPosts } from "@/data/blog";
+import { getAllPostsIncludingNew } from "@/data/blog";
 import { ArrowLeft, Clock, Tag } from "lucide-react";
 
 export const metadata = {
@@ -30,7 +30,7 @@ export const metadata = {
   };
 
 export default function BlogPage() {
-  const posts = getAllPosts();
+  const posts = getAllPostsIncludingNew();
 
   return (
     <>
