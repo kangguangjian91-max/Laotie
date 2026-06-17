@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "From raw material to finished steel structure — see our 7-step quality-controlled manufacturing process with real factory photos.",
     url: "https://www.laotie-steel.com/manufacturing-process",
     type: "website",
-    images: [{ url: "/images/manufacturing-process/01-cutting.webp" }],
+    images: [{ url: "/images/manufacturing-process/02-cnc-cutting.webp" }],
   },
   alternates: {
     canonical: "https://www.laotie-steel.com/manufacturing-process",
@@ -36,7 +36,7 @@ const steps = [
       </ul>
       <p>Only material passing all checks enters our production line. Non-conforming material is quarantined and returned to the mill within 48 hours.</p>
     `,
-    image: "/images/manufacturing-process/01-cutting.webp",
+    image: "/images/manufacturing-process/01-material-inspection.webp",
     specs: [
       "EN 10204 3.1 MTC provided",
       "Spectrometer chemical analysis",
@@ -58,7 +58,7 @@ const steps = [
       </ul>
       <p>Cut parts are immediately labeled with a unique serial number that traces back to the original mill test report and the project's fabrication drawing.</p>
     `,
-    image: "/images/manufacturing-process/01-cutting.webp",
+    image: "/images/manufacturing-process/02-cnc-cutting.webp",
     specs: [
       "±1mm cutting tolerance",
       "12-head CNC plasma system",
@@ -80,7 +80,7 @@ const steps = [
       </ul>
       <p>Assembly tolerances follow ISO 13920: length ±2mm, straightness 1/1000, twist ≤3mm over full member length.</p>
     `,
-    image: "/images/manufacturing-process/02-assembly.webp",
+    image: "/images/manufacturing-process/03-assembly.webp",
     specs: [
       "ISO 13920 tolerances",
       "Precision welding tables",
@@ -102,7 +102,7 @@ const steps = [
       </ul>
       <p>All welding is performed by AWS D1.1 / ISO 3834 certified welders. Welding consumables are stored in heated cabinets to prevent moisture absorption.</p>
     `,
-    image: "/images/manufacturing-process/03-welding.webp",
+    image: "/images/manufacturing-process/04-welding.webp",
     specs: [
       "AWS D1.1 / ISO 3834 certified",
       "SAW + MAG welding processes",
