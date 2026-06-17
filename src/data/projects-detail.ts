@@ -117,6 +117,14 @@ export const projectDetails: Record<string, ProjectDetail> = {
       { label: "Surface Treatment", value: "Shot blasting SA 2.5 + 280-320μm epoxy system" },
       { label: "Project Year", value: "2025" },
       { label: "Lead Time", value: "22 days fabrication + 30 days shipping" },
+      { label: "Connection Type", value: "Bolted moment-resisting frame (10.9/S friction-grip bolts)" },
+      { label: "Seismic Rating", value: "AS 1170.4 Category 3 (moderate seismic)" },
+      { label: "Snow Load", value: "Not applicable (Sydney region)" },
+      { label: "Temperature Load", value: "±40mm thermal expansion allowance" },
+      { label: "Fire Rating", value: "2-hour (mezzanine area), intumescent paint" },
+      { label: "Design Life", value: "50 years (AS 4100)" },
+      { label: "Foundation Type", value: "Reinforced concrete pad footings (1.5m×1.5m×1.0m)" },
+      { label: "Erection Method", value: "Bolted connection, no on-site welding" },
     ],
     faq: [
       {
@@ -286,6 +294,14 @@ export const projectDetails: Record<string, ProjectDetail> = {
       { label: "Ventilation", value: "120 ridge vents, 10 air changes/hour" },
       { label: "Project Year", value: "2024" },
       { label: "Lead Time", value: "28 days fabrication + 28 days shipping" },
+      { label: "Connection Type", value: "Bolted portal frame (8.8/S hot-dip galvanized bolts)" },
+      { label: "Seismic Rating", value: "Low (Nigeria low seismic activity region)" },
+      { label: "Snow Load", value: "Not applicable (tropical region)" },
+      { label: "Temperature Load", value: "±30mm thermal expansion allowance" },
+      { label: "Fire Rating", value: "2-hour (BS 476 Part 22), rockwool sandwich panel" },
+      { label: "Design Life", value: "50 years (BS 5950)" },
+      { label: "Foundation Type", value: "Reinforced concrete pad footings (1.8m×1.8m×1.2m)" },
+      { label: "Erection Method", value: "Bolted connection, pre-galvanized members" },
     ],
     faq: [
       {
@@ -449,6 +465,14 @@ export const projectDetails: Record<string, ProjectDetail> = {
       { label: "Site Welding", value: "Zero (all bolted connections)" },
       { label: "Project Year", value: "2024" },
       { label: "Lead Time", value: "30 days fabrication + 24 days shipping" },
+      { label: "Connection Type", value: "Bolted portal frame (8.8/S hot-dip galvanized bolts)" },
+      { label: "Seismic Rating", value: "High (Philippines seismic Zone 4, near Ring of Fire)" },
+      { label: "Snow Load", value: "Not applicable (tropical region)" },
+      { label: "Temperature Load", value: "±35mm thermal expansion allowance" },
+      { label: "Fire Rating", value: "2-hour (BS 476 Part 22), rockwool sandwich panel" },
+      { label: "Design Life", value: "50 years (NSCP 2015)" },
+      { label: "Foundation Type", value: "Reinforced concrete pad footings (2.0m×2.0m×1.5m)" },
+      { label: "Erection Method", value: "Bolted connection, typhoon-resistant design" },
     ],
     faq: [
       {
@@ -619,6 +643,14 @@ export const projectDetails: Record<string, ProjectDetail> = {
       { label: "Floor Load", value: "6.0 kN/m² (40-foot container stacking)" },
       { label: "Project Year", value: "2023" },
       { label: "Lead Time", value: "32 days fabrication + 32 days shipping" },
+      { label: "Connection Type", value: "Bolted portal frame (10.9/S hot-dip galvanized bolts)" },
+      { label: "Seismic Rating", value: "Moderate (UAE seismic Zone 2A, UBCC 2017)" },
+      { label: "Snow Load", value: "Not applicable (desert region)" },
+      { label: "Temperature Load", value: "±50mm thermal expansion allowance" },
+      { label: "Fire Rating", value: "2-hour (UAE Fire Code), rockwool sandwich panel" },
+      { label: "Design Life", value: "50 years (UBCC 2017)" },
+      { label: "Foundation Type", value: "Reinforced concrete pad footings (2.0m×2.0m×1.5m)" },
+      { label: "Erection Method", value: "Bolted connection, sandstorm-resistant design" },
     ],
     faq: [
       {
@@ -782,6 +814,14 @@ export const projectDetails: Record<string, ProjectDetail> = {
       { label: "Corrosion Protection", value: "Hot-dip galvanized (85-100μm)" },
       { label: "Project Year", value: "2023" },
       { label: "Lead Time", value: "35 days fabrication + 20 days shipping" },
+      { label: "Connection Type", value: "Bolted portal frame (8.8/S hot-dip galvanized bolts)" },
+      { label: "Seismic Rating", value: "High (Indonesia seismic Zone 3, SNI 1726:2019)" },
+      { label: "Snow Load", value: "Not applicable (tropical region)" },
+      { label: "Temperature Load", value: "±35mm thermal expansion allowance" },
+      { label: "Fire Rating", value: "2-hour (SNI 1743:2014), rockwool sandwich panel" },
+      { label: "Design Life", value: "50 years (SNI 1729:2015)" },
+      { label: "Foundation Type", value: "Reinforced concrete pad footings (1.8m×1.8m×1.2m)" },
+      { label: "Erection Method", value: "Bolted connection, earthquake-resistant design" },
     ],
     faq: [
       {
@@ -954,6 +994,14 @@ export const projectDetails: Record<string, ProjectDetail> = {
       { label: "Surface Treatment", value: "Shot blasting SA 2.5 + 320μm epoxy system" },
       { label: "Project Year", value: "2025" },
       { label: "Lead Time", value: "18 days fabrication + 28 days shipping" },
+      { label: "Connection Type", value: "Bolted portal frame (10.9/S friction-grip bolts)" },
+      { label: "Seismic Rating", value: "Low (Australia seismic Zone 2, AS 1170.4)" },
+      { label: "Snow Load", value: "Not applicable (Perth region)" },
+      { label: "Temperature Load", value: "±40mm thermal expansion allowance" },
+      { label: "Fire Rating", value: "2-hour (processing area), intumescent paint" },
+      { label: "Design Life", value: "50 years (AS 4100)" },
+      { label: "Foundation Type", value: "Reinforced concrete pad footings (1.5m×1.5m×1.0m)" },
+      { label: "Erection Method", value: "Bolted connection, no on-site welding" },
     ],
     faq: [
       {
