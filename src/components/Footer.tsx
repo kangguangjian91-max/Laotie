@@ -1,3 +1,7 @@
+"use client";
+
+import { trackWhatsAppClick, trackEmailClick, trackOutboundLink, trackLandingPageView } from "@/lib/gtag";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-400">
@@ -64,7 +68,7 @@ export default function Footer() {
               <li><a href="/faq" className="hover:text-white transition-colors">FAQ</a></li>
               <li><a href="/projects" className="hover:text-white transition-colors">Projects</a></li>
               <li><a href="/blog" className="hover:text-white transition-colors">Blog</a></li>
-              <li><a href="https://hnltgjg.en.alibaba.com/" target="_blank" rel="noopener noreferrer" className="hover:text-steel-accent transition-colors">Alibaba Store ↗</a></li>
+              <li><a href="https://hnltgjg.en.alibaba.com/" target="_blank" rel="noopener noreferrer" onClick={() => trackOutboundLink("https://hnltgjg.en.alibaba.com/", "alibaba")} className="hover:text-steel-accent transition-colors">Alibaba Store ↗</a></li>
               <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
@@ -76,7 +80,11 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <a href="/steel-structure-philippines" className="hover:text-white transition-colors inline-flex items-center gap-1 group">
+                <a 
+                  href="/steel-structure-philippines" 
+                  onClick={() => trackLandingPageView("philippines", "philippines")}
+                  className="hover:text-white transition-colors inline-flex items-center gap-1 group"
+                >
                   <span className="w-0 group-hover:w-1 h-0.5 bg-steel-accent rounded-full transition-all" />
                   🇵🇭 Philippines
                 </a>
@@ -88,7 +96,11 @@ export default function Footer() {
                 </span>
               </li>
               <li>
-                <a href="/steel-structure-indonesia" className="hover:text-white transition-colors inline-flex items-center gap-1 group">
+                <a 
+                  href="/steel-structure-indonesia" 
+                  onClick={() => trackLandingPageView("indonesia", "indonesia")}
+                  className="hover:text-white transition-colors inline-flex items-center gap-1 group"
+                >
                   <span className="w-0 group-hover:w-1 h-0.5 bg-steel-accent rounded-full transition-all" />
                   🇮🇩 Indonesia
                 </a>
@@ -120,6 +132,7 @@ export default function Footer() {
                   href="https://wa.me/8616650735555"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("footer")}
                   className="hover:text-white transition-colors flex items-center gap-2"
                 >
                   <svg className="w-4 h-4 text-steel-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -132,7 +145,11 @@ export default function Footer() {
                 <svg className="w-4 h-4 text-steel-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <a href="mailto:kangguangjian91@gmail.com" className="hover:text-white transition-colors">
+                <a 
+                  href="mailto:kangguangjian91@gmail.com" 
+                  onClick={() => trackEmailClick("footer")}
+                  className="hover:text-white transition-colors"
+                >
                   kangguangjian91@gmail.com
                 </a>
               </li>

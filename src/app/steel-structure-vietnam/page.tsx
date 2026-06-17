@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import ProjectCarousel from "@/components/ProjectCarousel";
+import { useEffect } from "react";
+import { trackLandingPageView } from "@/lib/gtag";
 
 export const metadata: Metadata = {
   title: "Steel Structure Vietnam | Warehouse & Factory Construction",
@@ -111,6 +113,11 @@ const faqSchema = {
 };
 
 export default function VietnamLandingPage() {
+  // Track landing page view
+  useEffect(() => {
+    trackLandingPageView("vietnam", "vietnam");
+  }, []);
+
   return (
     <main className="min-h-screen">
       <JsonLd data={serviceSchema} />

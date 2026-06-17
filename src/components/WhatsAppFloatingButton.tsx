@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { MessageCircle, X } from 'lucide-react';
+import { trackWhatsAppClick } from '@/lib/gtag';
 
 export default function FloatingWhatsApp() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,8 @@ export default function FloatingWhatsApp() {
   const message = 'Hi Laotie! I\'m interested in your steel structure solutions. Can you send me a quote?';
 
   const handleClick = () => {
+    // Track WhatsApp click event
+    trackWhatsAppClick('floating_button');
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
 

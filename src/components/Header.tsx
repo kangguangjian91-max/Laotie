@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { trackOutboundLink, trackLandingPageView } from "@/lib/gtag";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -99,7 +100,20 @@ export default function Header() {
                           : 'text-gray-700 hover:bg-gray-50 hover:text-steel'
                       }`}
                       onClick={(e) => {
-                        if (link.disabled) e.preventDefault();
+                        if (link.disabled) {
+                          e.preventDefault();
+                        } else {
+                          // Track landing page view
+                          const countryMap: Record<string, string> = {
+                            '/steel-structure-philippines': 'philippines',
+                            '/steel-structure-vietnam': 'vietnam',
+                            '/steel-structure-indonesia': 'indonesia',
+                          };
+                          const country = countryMap[link.href];
+                          if (country) {
+                            trackLandingPageView(country, country as any);
+                          }
+                        }
                         setGlobalOpen(false);
                       }}
                     >
@@ -121,6 +135,7 @@ export default function Header() {
               href="https://hnltgjg.en.alibaba.com/"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackOutboundLink("https://hnltgjg.en.alibaba.com/", "alibaba")}
               className="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-gray-600 hover:text-steel hover:bg-gray-50 rounded-lg transition-colors"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -176,7 +191,20 @@ export default function Header() {
                   key={link.href}
                   href={link.disabled ? '#' : link.href}
                   onClick={(e) => {
-                    if (link.disabled) e.preventDefault();
+                    if (link.disabled) {
+                      e.preventDefault();
+                    } else {
+                      // Track landing page view
+                      const countryMap: Record<string, string> = {
+                        '/steel-structure-philippines': 'philippines',
+                        '/steel-structure-vietnam': 'vietnam',
+                        '/steel-structure-indonesia': 'indonesia',
+                      };
+                      const country = countryMap[link.href];
+                      if (country) {
+                        trackLandingPageView(country, country as any);
+                      }
+                    }
                     setOpen(false);
                   }}
                   className={`flex items-center gap-2 px-3 py-2.5 text-sm transition-colors ${
@@ -198,7 +226,10 @@ export default function Header() {
               href="https://hnltgjg.en.alibaba.com/"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
+              onClick={() => {
+                trackOutboundLink("https://hnltgjg.en.alibaba.com/", "alibaba");
+                setOpen(false);
+              }}
               className="block px-3 py-2.5 text-sm font-medium text-gray-600 hover:text-steel hover:bg-gray-50 rounded-lg transition-colors"
             >
               🛒 Alibaba Store

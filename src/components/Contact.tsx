@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { trackFormSubmit, trackWhatsAppClick, trackEmailClick, trackOutboundLink } from "@/lib/gtag";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -41,6 +42,9 @@ export default function Contact() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!validate()) return;
+    
+    // Track form submission
+    trackFormSubmit("contact", true);
     
     setIsSubmitting(true);
     const form = e.target as HTMLFormElement;
@@ -207,8 +211,18 @@ export default function Contact() {
                 {item.href ? (
                   <a
                     href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={item.href.startsWith("mailto:") ? undefined : "_blank"}
+                    rel={item.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+                    onClick={(e) => {
+                      // Track different types of contact clicks
+                      if (item.href.includes("wa.me")) {
+                        trackWhatsAppClick("contact_page");
+                      } else if (item.href.startsWith("mailto:")) {
+                        trackEmailClick("contact_page");
+                      } else if (item.href.includes("alibaba.com")) {
+                        trackOutboundLink(item.href, "alibaba");
+                      }
+                    }}
                     className="text-sm text-white hover:text-steel-accent transition-colors truncate block"
                   >
                     {item.text}

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import ProjectCarousel from "@/components/ProjectCarousel";
+import { useEffect } from "react";
+import { trackLandingPageView } from "@/lib/gtag";
 
 export const metadata: Metadata = {
   title: "Steel Structure Indonesia | Warehouse & Factory Construction",
@@ -30,6 +32,11 @@ export const metadata: Metadata = {
 };
 
 export default function SteelStructureIndonesia() {
+  // Track landing page view
+  useEffect(() => {
+    trackLandingPageView("indonesia", "indonesia");
+  }, []);
+
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Service",
