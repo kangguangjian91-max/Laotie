@@ -113,6 +113,8 @@ export default function ProjectCarousel({ projects, title, subtitle }: ProjectCa
                 <img
                   src={project.image}
                   alt={project.alt}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-5">
