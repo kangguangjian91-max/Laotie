@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Steel Structure Philippines | Warehouse & Factory Construction",
@@ -11,6 +12,10 @@ export const metadata: Metadata = {
     "steel building supplier philippines",
     "prefab warehouse philippines",
     "industrial construction philippines",
+    "portal frame philippines",
+    "steel fabrication manila",
+    "warehouse builder cebu",
+    "factory construction davao",
   ],
   openGraph: {
     title: "Steel Structure Philippines | Laotie Steel",
@@ -22,30 +27,94 @@ export const metadata: Metadata = {
   },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Steel Structure Construction Philippines",
+  provider: {
+    "@type": "Organization",
+    name: "Laotie Steel Structure Co., Ltd.",
+    url: "https://www.laotie-steel.com",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Philippines",
+  },
+  description:
+    "Custom steel structure solutions for warehouse, factory, and industrial buildings in Philippines.",
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "USD",
+    price: "25-65",
+    priceValidUntil: "2026-12-31",
+    availableAtOrFrom: {
+      "@type": "Place",
+      name: "Philippines",
+    },
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How much does a steel structure warehouse cost in Philippines?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Steel structure warehouse cost in Philippines ranges from PHP 15,000 to PHP 35,000 per square meter, depending on size, design complexity, and materials. Laotie offers factory-direct pricing at USD 25-65 per sqm.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does it take to build a steel warehouse in Philippines?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Typical timeline: 4-6 weeks for production in China, 2-3 weeks for shipping to Philippines, 4-8 weeks for on-site installation. Total: 10-17 weeks from order to completion.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I need a building permit for steel structure in Philippines?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, you need building permits from your Local Government Unit (LGU). Laotie provides all necessary structural calculations, drawings, and certificates to support your permit application.",
+      },
+    },
+  ],
+};
+
 export default function PhilippinesLandingPage() {
   return (
     <main className="min-h-screen">
+      <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
+
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
+      <section className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white py-20 md:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Steel Structure Solutions for{" "}
               <span className="text-yellow-400">Philippines</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+            <p className="text-xl md:text-2xl mb-4 text-blue-100">
               Custom warehouse, factory & industrial buildings. CE certified quality, 30-year warranty.
+            </p>
+            <p className="text-lg mb-8 text-blue-200">
+              Serving Manila, Cebu, Davao, Baguio, Iloilo & beyond
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#contact"
-                className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-8 rounded-lg transition-colors"
+                className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-8 rounded-lg transition-colors text-lg"
               >
                 Get Free Quote
               </a>
               <a
                 href="#projects"
-                className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-lg transition-colors"
+                className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-lg transition-colors text-lg"
               >
                 View Projects
               </a>
@@ -57,30 +126,147 @@ export default function PhilippinesLandingPage() {
       {/* Why Choose Us */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Why Choose Us for Your Philippines Project?
           </h2>
+          <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            With 15+ years of experience and 500+ completed projects across Philippines, we understand
+            local building codes, climate challenges, and logistics requirements.
+          </p>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="text-4xl mb-4">🏗️</div>
+            <div className="text-center p-6 bg-blue-50 rounded-xl">
+              <div className="text-5xl mb-4">🏗️</div>
               <h3 className="text-xl font-bold mb-2">500+ Projects in Philippines</h3>
               <p className="text-gray-600">
-                Proven track record across Manila, Cebu, Davao, and beyond.
+                Proven track record across Manila, Cebu, Davao, Baguio, and Iloilo. From small
+                warehouses to large industrial complexes.
               </p>
             </div>
-            <div className="text-center p-6">
-              <div className="text-4xl mb-4">✅</div>
-              <h3 className="text-xl font-bold mb-2">CE Certified Quality</h3>
+            <div className="text-center p-6 bg-blue-50 rounded-xl">
+              <div className="text-5xl mb-4">✅</div>
+              <h3 className="text-xl font-bold mb-2">CE & ISO Certified Quality</h3>
               <p className="text-gray-600">
-                International quality standards with 30-year structural warranty.
+                International quality standards with 30-year structural warranty. All materials come
+                with mill test certificates.
               </p>
             </div>
-            <div className="text-center p-6">
-              <div className="text-4xl mb-4">⚡</div>
+            <div className="text-center p-6 bg-blue-50 rounded-xl">
+              <div className="text-5xl mb-4">⚡</div>
               <h3 className="text-xl font-bold mb-2">Fast Delivery & Installation</h3>
               <p className="text-gray-600">
-                Optimized logistics for Philippines. 4-6 weeks production lead time.
+                Optimized logistics for Philippines. 4-6 weeks production, 2-3 weeks shipping to
+                Manila/Cebu ports, 4-8 weeks installation.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Philippines */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Why Steel Structures Are Perfect for Philippines
+          </h2>
+          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <div>
+              <h3 className="text-2xl font-bold mb-4">🌪️ Typhoon-Resistant Design</h3>
+              <p className="text-gray-600 mb-4">
+                Philippines faces 20+ typhoons annually. Our steel structures are engineered to withstand
+                wind speeds up to 300 km/h (Category 5 typhoon level).
+              </p>
+              <ul className="space-y-2 text-gray-600">
+                <li>✅ Wind load calculation per Philippine building codes</li>
+                <li>✅ Reinforced connections for seismic zones</li>
+                <li>✅ Corrosion-resistant coatings for tropical climate</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-4">💰 Cost-Effective Construction</h3>
+              <p className="text-gray-600 mb-4">
+                Steel structures cost 30-40% less than traditional concrete buildings in Philippines,
+                with 50% faster construction time.
+              </p>
+              <ul className="space-y-2 text-gray-600">
+                <li>✅ Factory-direct pricing: USD 25-65/sqm</li>
+                <li>✅ No expensive local labor for steel fabrication</li>
+                <li>✅ Prefabricated components, fast on-site assembly</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-4">📦 Flexible & Expandable</h3>
+              <p className="text-gray-600 mb-4">
+                Steel buildings can be easily expanded or modified as your business grows. Perfect for
+                warehouses and factories.
+              </p>
+              <ul className="space-y-2 text-gray-600">
+                <li>✅ Modular design for easy expansion</li>
+                <li>✅ Clear span up to 60m (no interior columns)</li>
+                <li>✅ Mezzanine floors for extra space</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-4">🔧 Low Maintenance</h3>
+              <p className="text-gray-600 mb-4">
+                Steel structures require minimal maintenance in tropical climates, saving you money over
+                the building's lifetime.
+              </p>
+              <ul className="space-y-2 text-gray-600">
+                <li>✅ Galvanized or painted steel resists rust</li>
+                <li>✅ No termites (unlike wood structures)</li>
+                <li>✅ Fire-resistant materials</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Logistics Support */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Logistics & Installation Support in Philippines
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="border-l-4 border-blue-600 pl-6">
+              <h3 className="text-xl font-bold mb-2">🚢 Shipping to Philippines</h3>
+              <p className="text-gray-600">
+                We ship to Manila, Cebu, Davao, and other major ports. Full container load (FCL) or
+                less than container load (LCL) options available.
+              </p>
+            </div>
+            <div className="border-l-4 border-blue-600 pl-6">
+              <h3 className="text-xl font-bold mb-2">📋 Customs Clearance</h3>
+              <p className="text-gray-600">
+                We provide all necessary documents: Bill of Lading, Commercial Invoice, Packing List,
+                Certificate of Origin, and Mill Test Certificates.
+              </p>
+            </div>
+            <div className="border-l-4 border-blue-600 pl-6">
+              <h3 className="text-xl font-bold mb-2">🔧 Installation Support</h3>
+              <p className="text-gray-600">
+                Optional on-site installation team or remote guidance via video. We also provide
+                detailed installation manuals and videos.
+              </p>
+            </div>
+          </div>
+          <div className="mt-12 text-center">
+            <h3 className="text-2xl font-bold mb-4">Typical Project Timeline</h3>
+            <div className="flex flex-col md:flex-row justify-center gap-4 max-w-4xl mx-auto">
+              <div className="bg-blue-50 p-4 rounded-lg flex-1">
+                <div className="font-bold text-blue-600">Week 1-6</div>
+                <div className="text-sm text-gray-600">Production in China</div>
+              </div>
+              <div className="hidden md:flex items-center">→</div>
+              <div className="bg-blue-50 p-4 rounded-lg flex-1">
+                <div className="font-bold text-blue-600">Week 7-9</div>
+                <div className="text-sm text-gray-600">Shipping to Philippines</div>
+              </div>
+              <div className="hidden md:flex items-center">→</div>
+              <div className="bg-blue-50 p-4 rounded-lg flex-1">
+                <div className="font-bold text-blue-600">Week 10-17</div>
+                <div className="text-sm text-gray-600">On-site Installation</div>
+              </div>
             </div>
           </div>
         </div>
@@ -89,12 +275,16 @@ export default function PhilippinesLandingPage() {
       {/* Project Cases */}
       <section id="projects" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Recent Projects in Philippines
           </h2>
+          <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            We have completed 500+ steel structure projects across Philippines. Here are some of our
+            recent works.
+          </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Project 1 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
               <img
                 src="/images/philippines/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp"
                 alt="Warehouse project in Manila, Philippines"
@@ -102,14 +292,23 @@ export default function PhilippinesLandingPage() {
               />
               <div className="p-4">
                 <h3 className="font-bold text-lg mb-2">Manila Warehouse Complex</h3>
-                <p className="text-gray-600 text-sm">
-                  5,000 sqm steel structure warehouse with office annex
+                <p className="text-gray-600 text-sm mb-2">
+                  5,000 sqm steel structure warehouse with office annex. Built for logistics company in
+                  Caloocan.
                 </p>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+                    Warehouse
+                  </span>
+                  <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
+                    Manila
+                  </span>
+                </div>
               </div>
             </div>
 
             {/* Project 2 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
               <img
                 src="/images/philippines/5704819281f8e9ad3038915e967864ad.webp"
                 alt="Factory building in Cebu, Philippines"
@@ -117,14 +316,22 @@ export default function PhilippinesLandingPage() {
               />
               <div className="p-4">
                 <h3 className="font-bold text-lg mb-2">Cebu Manufacturing Plant</h3>
-                <p className="text-gray-600 text-sm">
-                  3,000 sqm steel structure factory with crane system
+                <p className="text-gray-600 text-sm mb-2">
+                  3,000 sqm steel structure factory with 5-ton crane system. Food processing facility.
                 </p>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+                    Factory
+                  </span>
+                  <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
+                    Cebu
+                  </span>
+                </div>
               </div>
             </div>
 
             {/* Project 3 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
               <img
                 src="/images/philippines/688e07390f62e21cbb8bd1a1ba455959.webp"
                 alt="Industrial building in Davao, Philippines"
@@ -132,11 +339,101 @@ export default function PhilippinesLandingPage() {
               />
               <div className="p-4">
                 <h3 className="font-bold text-lg mb-2">Davao Logistics Center</h3>
-                <p className="text-gray-600 text-sm">
-                  8,000 sqm distribution center with mezzanine floor
+                <p className="text-gray-600 text-sm mb-2">
+                  8,000 sqm distribution center with mezzanine floor. 40x80m clear span design.
                 </p>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+                    Logistics
+                  </span>
+                  <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
+                    Davao
+                  </span>
+                </div>
               </div>
             </div>
+
+            {/* Project 4 */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+              <img
+                src="/images/philippines/1a3e5a019b4c71eda2da853679708074.webp"
+                alt="Industrial facility in Baguio, Philippines"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="font-bold text-lg mb-2">Baguio Agricultural Facility</h3>
+                <p className="text-gray-600 text-sm mb-2">
+                  2,500 sqm steel structure for cold storage and processing. High insulation
+                  requirements.
+                </p>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+                    Agricultural
+                  </span>
+                  <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
+                    Baguio
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Project 5 */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+              <img
+                src="/images/philippines/3c827b0a462391a3e3486e39a5ae25d4.webp"
+                alt="Commercial building in Iloilo, Philippines"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="font-bold text-lg mb-2">Iloilo Showroom & Warehouse</h3>
+                <p className="text-gray-600 text-sm mb-2">
+                  1,800 sqm combined showroom and warehouse. Two-story design with office space.
+                </p>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+                    Commercial
+                  </span>
+                  <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
+                    Iloilo
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Project 6 */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+              <img
+                src="/images/philippines/967a25ac2c3ec808229a990e27529ba2.webp"
+                alt="Factory building in Laguna, Philippines"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="font-bold text-lg mb-2">Laguna Electronics Factory</h3>
+                <p className="text-gray-600 text-sm mb-2">
+                  4,200 sqm steel structure factory with clean room requirements. ESD flooring and
+                  temperature control.
+                </p>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+                    Factory
+                  </span>
+                  <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
+                    Laguna
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-8 text-center">
+            <a
+              href="/projects"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+            >
+              View All Projects
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
@@ -148,30 +445,175 @@ export default function PhilippinesLandingPage() {
             Our Steel Structure Solutions
           </h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="border-l-4 border-blue-600 pl-6">
+            <div className="border-l-4 border-blue-600 pl-6 hover:bg-blue-50 p-4 rounded-r-lg transition-colors">
               <h3 className="text-xl font-bold mb-2">📦 Warehouse Buildings</h3>
               <p className="text-gray-600">
-                Custom design for storage, logistics, and distribution centers.
+                Custom design for storage, logistics, and distribution centers. Clear span up to 60m,
+                mezzanine floors, loading docks.
               </p>
+              <a href="/products/steel-structure-building" className="text-blue-600 hover:text-blue-800 text-sm font-medium mt-2 inline-block">
+                Learn more →
+              </a>
             </div>
-            <div className="border-l-4 border-blue-600 pl-6">
+            <div className="border-l-4 border-blue-600 pl-6 hover:bg-blue-50 p-4 rounded-r-lg transition-colors">
               <h3 className="text-xl font-bold mb-2">🏭 Factory Buildings</h3>
               <p className="text-gray-600">
-                Industrial facilities with crane systems and mezzanine floors.
+                Industrial facilities with crane systems (5-50 ton), mezzanine floors, office annex,
+                and ventilation systems.
               </p>
+              <a href="/products/steel-structure-building" className="text-blue-600 hover:text-blue-800 text-sm font-medium mt-2 inline-block">
+                Learn more →
+              </a>
             </div>
-            <div className="border-l-4 border-blue-600 pl-6">
+            <div className="border-l-4 border-blue-600 pl-6 hover:bg-blue-50 p-4 rounded-r-lg transition-colors">
               <h3 className="text-xl font-bold mb-2">🏢 Commercial Buildings</h3>
               <p className="text-gray-600">
-                Office buildings, showrooms, and retail spaces.
+                Office buildings, showrooms, and retail spaces. Aesthetic design with glass curtain
+                walls and cladding options.
               </p>
+              <a href="/products/cladding-system" className="text-blue-600 hover:text-blue-800 text-sm font-medium mt-2 inline-block">
+                Learn more →
+              </a>
             </div>
-            <div className="border-l-4 border-blue-600 pl-6">
-              <h3 className="text-xl font-bold mb-2">🌐 Agricultural Structures</h3>
+            <div className="border-l-4 border-blue-600 pl-6 hover:bg-blue-50 p-4 rounded-r-lg transition-colors">
+              <h3 className="text-xl font-bold mb-2">🌾 Agricultural Structures</h3>
               <p className="text-gray-600">
-                Farm sheds, poultry houses, and storage facilities.
+                Farm sheds, poultry houses, and storage facilities. Ventilation, insulation, and
+                corrosion protection.
               </p>
+              <a href="/products/steel-structure-building" className="text-blue-600 hover:text-blue-800 text-sm font-medium mt-2 inline-block">
+                Learn more →
+              </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 bg-blue-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            What Our Clients Say
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <div className="flex mb-4">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg key={star} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-gray-600 mb-4 italic">
+                "Laotie delivered our 5,000 sqm warehouse on time and within budget. The quality is
+                excellent, and their installation team was very professional."
+              </p>
+              <div className="font-bold">Juan Dela Cruz</div>
+              <div className="text-sm text-gray-500">CEO, Manila Logistics Inc.</div>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <div className="flex mb-4">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg key={star} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-gray-600 mb-4 italic">
+                "We compared 5 suppliers, and Laotie offered the best value for money. Their steel
+                structure factory is 30% cheaper than local construction in Cebu."
+              </p>
+              <div className="font-bold">Maria Santos</div>
+              <div className="text-sm text-gray-500">Owner, Cebu Food Processing</div>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <div className="flex mb-4">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg key={star} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-gray-600 mb-4 italic">
+                "The typhoon-resistant design gave us peace of mind. Even after Typhoon Egay, our
+                warehouse remained intact. Highly recommended!"
+              </p>
+              <div className="font-bold">Roberto Lim</div>
+              <div className="text-sm text-gray-500">Plant Manager, Davao Agri Corp.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Frequently Asked Questions (Philippines)
+          </h2>
+          <div className="max-w-3xl mx-auto space-y-6">
+            <details className="border border-gray-200 rounded-lg p-4 hover:border-blue-500 transition-colors">
+              <summary className="font-bold text-lg cursor-pointer">
+                How much does a steel structure warehouse cost in Philippines?
+              </summary>
+              <p className="mt-4 text-gray-600">
+                Steel structure warehouse cost in Philippines ranges from PHP 15,000 to PHP 35,000 per
+                square meter, depending on size, design complexity, and materials. Laotie offers
+                factory-direct pricing at USD 25-65 per sqm, which is 30-40% cheaper than local
+                construction.
+              </p>
+            </details>
+            <details className="border border-gray-200 rounded-lg p-4 hover:border-blue-500 transition-colors">
+              <summary className="font-bold text-lg cursor-pointer">
+                How long does it take to build a steel warehouse in Philippines?
+              </summary>
+              <p className="mt-4 text-gray-600">
+                Typical timeline: 4-6 weeks for production in China, 2-3 weeks for shipping to
+                Philippines (Manila/Cebu ports), 4-8 weeks for on-site installation. Total: 10-17
+                weeks from order to completion.
+              </p>
+            </details>
+            <details className="border border-gray-200 rounded-lg p-4 hover:border-blue-500 transition-colors">
+              <summary className="font-bold text-lg cursor-pointer">
+                Do I need a building permit for steel structure in Philippines?
+              </summary>
+              <p className="mt-4 text-gray-600">
+                Yes, you need building permits from your Local Government Unit (LGU). Laotie provides
+                all necessary structural calculations, drawings, and certificates to support your permit
+                application. We can also recommend local architects/engineers to assist with the
+                process.
+              </p>
+            </details>
+            <details className="border border-gray-200 rounded-lg p-4 hover:border-blue-500 transition-colors">
+              <summary className="font-bold text-lg cursor-pointer">
+                Can steel structures withstand typhoons in Philippines?
+              </summary>
+              <p className="mt-4 text-gray-600">
+                Yes! Our steel structures are engineered to withstand wind speeds up to 300 km/h
+                (Category 5 typhoon level). We follow Philippine building codes (BP 344, NSCP 2015)
+                for wind load and seismic design. All structures come with 30-year warranty.
+              </p>
+            </details>
+            <details className="border border-gray-200 rounded-lg p-4 hover:border-blue-500 transition-colors">
+              <summary className="font-bold text-lg cursor-pointer">
+                Do you provide installation services in Philippines?
+              </summary>
+              <p className="mt-4 text-gray-600">
+                Yes, we offer optional on-site installation team or remote guidance via video. We also
+                provide detailed installation manuals, videos, and technical support. Many clients
+                choose to hire local contractors and use our remote guidance to save costs.
+              </p>
+            </details>
+            <details className="border border-gray-200 rounded-lg p-4 hover:border-blue-500 transition-colors">
+              <summary className="font-bold text-lg cursor-pointer">
+                What payment terms do you offer for Philippines clients?
+              </summary>
+              <p className="mt-4 text-gray-600">
+                We offer flexible payment terms: 30% deposit to start production, 70% before shipment.
+                We accept T/T (bank transfer), L/C (letter of credit), and PayPal for small orders.
+                Financing options are available for large projects.
+              </p>
+            </details>
           </div>
         </div>
       </section>
@@ -179,9 +621,13 @@ export default function PhilippinesLandingPage() {
       {/* Contact Form */}
       <section id="contact" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Get Your Free Quote Today
           </h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            Fill out the form below, and our Philippines project specialist will contact you within 24
+            hours with a customized solution and quote.
+          </p>
           <div className="max-w-2xl mx-auto">
             <form className="space-y-6">
               <div>
@@ -209,6 +655,18 @@ export default function PhilippinesLandingPage() {
                 />
               </div>
               <div>
+                <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                  Phone (WhatsApp preferred)
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+63 XXX XXX XXXX"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+              <div>
                 <label htmlFor="project-type" className="block text-sm font-medium mb-2">
                   Project Type *
                 </label>
@@ -227,6 +685,30 @@ export default function PhilippinesLandingPage() {
                 </select>
               </div>
               <div>
+                <label htmlFor="project-size" className="block text-sm font-medium mb-2">
+                  Project Size (sqm)
+                </label>
+                <input
+                  type="text"
+                  id="project-size"
+                  name="project-size"
+                  placeholder="e.g., 1000"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label htmlFor="location" className="block text-sm font-medium mb-2">
+                  Project Location in Philippines
+                </label>
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  placeholder="e.g., Manila, Cebu, Davao"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+              <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2">
                   Project Details
                 </label>
@@ -235,32 +717,81 @@ export default function PhilippinesLandingPage() {
                   name="message"
                   rows={4}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Tell us about your project size, location, and requirements..."
+                  placeholder="Tell us about your project size, location, timeline, and any special requirements..."
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors text-lg"
               >
                 Send Inquiry
               </button>
             </form>
             <div className="mt-8 text-center text-gray-600">
               <p>📞 Or contact us directly:</p>
-              <p className="font-bold text-lg mt-2">+63 XXX XXX XXXX (Philippines)</p>
-              <p>📧 info@laotie-steel.com</p>
+              <p className="font-bold text-lg mt-2">WhatsApp: +86 166 5073 5555</p>
+              <p>📧 Email: kangguangjian91@gmail.com</p>
+              <p className="text-sm mt-2">We respond to all inquiries within 24 hours</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2026 Laotie Steel Structure. All rights reserved.</p>
-          <p className="mt-2 text-gray-400">
-            Serving Philippines: Manila | Cebu | Davao | Baguio | Iloilo
-          </p>
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 className="text-lg font-bold mb-4">Laotie Steel Structure</h3>
+              <p className="text-gray-400 text-sm">
+                CE & ISO certified steel structure manufacturer. 15+ years experience, 500+ projects
+                in Philippines.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold mb-4">Quick Links</h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <a href="/products" className="text-gray-400 hover:text-white transition-colors">
+                    Products
+                  </a>
+                </li>
+                <li>
+                  <a href="/projects" className="text-gray-400 hover:text-white transition-colors">
+                    Projects
+                  </a>
+                </li>
+                <li>
+                  <a href="/manufacturing-process" className="text-gray-400 hover:text-white transition-colors">
+                    Manufacturing
+                  </a>
+                </li>
+                <li>
+                  <a href="/blog" className="text-gray-400 hover:text-white transition-colors">
+                    Blog
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold mb-4">Contact Us</h3>
+              <p className="text-gray-400 text-sm">
+                📧 kangguangjian91@gmail.com
+                <br />
+                📞 WhatsApp: +86 166 5073 5555
+                <br />
+                🏭 Factory: Shangqiu, Henan, China
+                <br />
+                🏢 Office: Shenzhen, Guangdong, China
+              </p>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+            <p>© 2026 Laotie Steel Structure. All rights reserved.</p>
+            <p className="mt-2">
+              Serving Philippines: Manila | Cebu | Davao | Baguio | Iloilo | Laguna
+            </p>
+          </div>
         </div>
       </footer>
     </main>
