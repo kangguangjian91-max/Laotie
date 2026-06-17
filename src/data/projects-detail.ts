@@ -1084,4 +1084,190 @@ export const projectDetails: Record<string, ProjectDetail> = {
       "custom warehouse steel structure",
     ],
   },
+
+  // ===== Hongxin Sports Trampoline Factory - Shangqiu, Henan, China =====
+  "hongxin-sports-trampoline-factory-shangqiu": {
+    slug: "hongxin-sports-trampoline-factory-shangqiu",
+    metaTitle: "Hongxin Sports Trampoline Factory | 12,800㎡ Steel Structure | Laotie Steel",
+    metaDescription:
+      "12,800㎡ steel structure factory for Hongxin Sports trampoline production in Shangqiu, Henan. 630 tons of steel, completed Dec 2025. Get a free quote for your factory project.",
+    urlSlug: "/projects/hongxin-sports-trampoline-factory-shangqiu",
+    image: "/images/projects/hongxin-sports/hongxin-1.webp",
+    h1: "Hongxin Sports Trampoline Factory — 12,800㎡ Production Facility in Shangqiu",
+    overview: `
+      <p>This 12,800 m² industrial factory was designed and fabricated for Hongxin Sports, a leading trampoline manufacturer in China. The facility is located in the Shangqiu Industrial Park, Henan Province, and serves as the company's primary production base for 8 million trampolines per year.</p>
+      <p>The building spans 160 meters in length, 80 meters in width, with 12 meters eave height — creating a massive column-free interior space ideal for automated production lines. Total steel consumption: 630 tons of Q355B high-strength steel. The main portal frame uses H-sections with moment-resisting connections, designed to GB 50017-2017 (Steel Structure Design Standard).</p>
+      <p>All structural calculations were prepared by our chartered engineering team and stamped for local building department submission. The design accounts for 0.55 kN/m² roof live load, 0.5 kN/m² crane load (10T overhead crane), and seismic intensity 6 degrees (GB 50011-2010).</p>
+    `,
+    challenges: `
+      <p><strong>1. Large-Span Production Space.</strong> The client required a 160m × 80m column-free production area to accommodate automated trampoline assembly lines. The 12m eave height creates significant wind load pressure on the roof and walls. Our 3D model applied both static and dynamic wind load cases, with special attention to roof cladding suction loads.</p>
+      <p><strong>2. 10T Overhead Crane Integration.</strong> The facility required a 10-ton overhead crane system running the full 160m length. Crane runway beams must support both vertical wheel loads (including impact factor 1.1 per GB 50017) and longitudinal crane surge forces. We designed the portal frame columns with additional bracing to resist crane-induced lateral forces.</p>
+      <p><strong>3. Fast Construction Schedule.</strong> The client had a tight production schedule — the factory needed to be operational within 45 days of contract signing. We optimized the fabrication process with parallel production lines and pre-assembled connection nodes to minimize on-site installation time.</p>
+      <p><strong>4. Thermal Insulation Requirements.</strong> The production area required temperature control for worker comfort and product quality. We specified 100mm PIR sandwich panels for walls and 75mm rock wool for roof, achieving R-value of 1.8 m²K/W for energy efficiency.</p>
+    `,
+    solution: `
+      <p><strong>Design Phase:</strong> Our engineering team developed a 3D model of the 160m × 80m × 12m portal frame. The model included 20 portal frame bays at 8m spacing, with longitudinal bracing at every 40m interval. The design also included a 2,000 m² mezzanine office area at the north end, with a 2-hour fire-rated floor system.</p>
+      <p><strong>Fabrication:</strong> All main frame members were fabricated from Q355B steel plate using CNC plasma cutting. H-section columns (H900×350×16×28 at base, tapering to H600×250×10×16 at eave) were welded using submerged arc welding (SAW) with full penetration welds verified by ultrasonic testing (UT). All bolted connections use 10.9/S grade friction-grip bolts with calibrated torque specifications.</p>
+      <p><strong>Cladding System:</strong> The roof uses 0.6mm color-coated steel sheeting in "Sea Green" (RAL 6005) with an anti-condensation membrane. Walls use 100mm PIR sandwich panels (U-value 0.22 W/m²K) suitable for central China climate. All flashings and gutters are color-coated steel matching the roof color.</p>
+      <p><strong>Crane System:</strong> Crane runway beams are H800×300×16×28, designed for 10T capacity with 1.1 impact factor. The crane rail is a 120kg/m heavy-duty rail, fixed to the runway beam top flange with clip bolts at 600mm spacing. Our engineering team provided full crane runway beam deflection calculations (L/500 maximum vertical deflection per GB 50017).</p>
+    `,
+    design: `
+      <p>The design was prepared in accordance with GB 50017-2017 (Steel Structure Design Standard) and GB 50011-2010 (Seismic Design Code). The structure is designed for a 50-year design life with a 6-degree seismic intensity (0.05g peak ground acceleration).</p>
+      <p>Wind load calculation followed GB 50009-2012 (Load Code for Building Structures), with a basic wind pressure of 0.55 kN/m² (once-in-50-year return period). The roof live load is 0.5 kN/m² for maintenance access, and the floor live load is 15 kN/m² for heavy equipment areas.</p>
+      <p>The foundation design uses reinforced concrete independent footings (2.0m × 2.0m × 1.2m) with M30 anchor bolts. The soil bearing capacity is 180 kPa, typical for the Shangqiu region.</p>
+    `,
+    fabrication: `
+      <p>All steel members were fabricated in our 15,000 m² factory in Xingyang, Henan. The fabrication process followed a strict quality control plan:</p>
+      <ul>
+        <li><strong>Material Inspection:</strong> All Q355B steel plates were inspected for chemical composition and mechanical properties. Mill test certificates (MTC) were provided for every batch.</li>
+        <li><strong>CNC Cutting:</strong> All plates were cut using CNC plasma cutting machines with ±1mm tolerance. Cutting drawings were generated directly from our 3D model to eliminate manual dimension errors.</li>
+        <li><strong>Assembling:</strong> H-section members were assembled on automatic assembly machines with automatic tack welding. Dimensional tolerance was controlled within ±2mm across the full member length.</li>
+        <li><strong>Welding:</strong> All primary welds were performed using submerged arc welding (SAW) with automatic welding carriages. Welding wires were matched to parent material (ER50-6 for Q355B). All full-penetration welds were UT tested per GB 11345-2013 Class I.</li>
+        <li><strong>Straightening:</strong> After welding, all members were straightened using a 600-ton hydraulic straightening machine to ensure ≤ L/1000 straightness tolerance.</li>
+        <li><strong>Surface Treatment:</strong> All members were shot-blasted to Sa 2.5 (GB 8923) with surface roughness 40-70μm. Immediate primer application (epoxy zinc-rich primer, 80μm) followed within 4 hours to prevent flash rust.</li>
+        <li><strong>Painting:</strong> Final coating system: epoxy zinc-rich primer (80μm) + epoxy mid-coat (100μm) + polyurethane topcoat (60μm). Total dry film thickness: 240μm, suitable for indoor industrial environment (C3 corrosion category per ISO 12944).</li>
+      </ul>
+    `,
+    qualityControl: `
+      <p>Quality control was conducted according to ISO 9001:2015 quality management system. Our in-house laboratory performed the following tests:</p>
+      <ul>
+        <li><strong>Ultrasonic Testing (UT):</strong> 100% of full-penetration welds were UT tested per GB 11345-2013. Acceptance criteria: Class I (no unacceptable defects).</li>
+        <li><strong>Dimension Inspection:</strong> Every fabricated member was measured for length, straightness, hole position, and connection plate perpendicularity. Dimensional tolerance: ±2mm for length, ≤ L/1000 for straightness.</li>
+        <li><strong>Coating Thickness:</strong> Coating thickness was measured using a digital coating thickness gauge at 5 points per members. Minimum thickness: 216μm (90% of specified 240μm). Average thickness: 258μm.</li>
+        <li><strong>Bolt Hole Inspection:</strong> All bolt holes were inspected for diameter, roundness, and surface quality. High-strength bolt connections were tested for friction coefficient (≥ 0.35 per GB/T 1231).</li>
+        <li><strong>Load Test:</strong> A 1:1 scale load test was conducted on a representative portal frame segment with 1.25× design load. Maximum deflection: L/520 (acceptable per GB 50017 L/400).</li>
+      </ul>
+      <p>All test reports were compiled into a 120-page quality dossier and delivered to the client before shipment.</p>
+    `,
+    packingShipping: `
+      <p>The fabricated steel structure (630 tons) was packed for domestic transport to the Shangqiu construction site. Our packing method followed a strict protocol:</p>
+      <ul>
+        <li><strong>Member Labeling:</strong> Every member was labeled with a unique mark number corresponding to the erection drawing. Labels were engraved on stainless steel tags and riveted to the member end plate.</li>
+        <li><strong>Protective Wrapping:</strong> All painted surfaces were wrapped with 200μm polyethylene film to prevent coating damage during transit. Connection plates were protected with plywood covers.</li>
+        <li><strong>Domestic Transport:</strong> From our Xingyang factory to Shangqiu site: 180 km by 17.5m low-bed trailer. Transit time: 4 hours. All oversized members (length > 12m) were transported with police escort.</li>
+        <li><strong>Site Storage:</strong> All members were stored on timber dunnage (200×200×1000mm) with 500mm ground clearance. Painted surfaces were covered with UV-resistant tarpaulin for up to 30 days outdoor storage.</li>
+      </ul>
+    `,
+    installationGuide: `
+      <p>The erection was completed by our professional installation team in 22 working days. The installation sequence followed a strict plan:</p>
+      <ol>
+        <li><strong>Foundation Inspection:</strong> Before erection, all foundation anchor bolts were inspected for position tolerance (±2mm) and verticality (≤ 1/100). Anchor bolt sleeves were removed and threads were protected with anti-size compound.</li>
+        <li><strong>Column Erection:</strong> Main columns were erected first using 25T mobile cranes. Columns were temporarily supported by adjustable steel props. Verticality was adjusted using plumb bobs and shim plates. Tolerance: ≤ H/1000 and ≤ 10mm total.</li>
+        <li><strong>Rafter Installation:</strong> Rafter segments were installed after column alignment. High-strength bolts were tightened using torque wrenches (calibrated daily). Bolt tightening sequence: initial tighten → final tighten → inspection mark.</li>
+        <li><strong>Bracing and Purlin Installation:</strong> After the main frame was stabilized, longitudinal bracing and roof purlins were installed. Purlin alignment was checked using laser levels. Tolerance: ±3mm for purlin top elevation.</li>
+        <li><strong>Crane Runway Beam Installation:</strong> Crane runway beams were installed with strict elevation control. Rail alignment tolerance: ±3mm across the full 160m length. Rail gap at expansion joints: 4-6mm.</li>
+        <li><strong>Cladding Installation:</strong> Roof sheeting was installed from ridge to eaves. Wall sandwich panels were installed from bottom to top. All sealant was applied continuously without joints. Window and door openings were measured on-site before cutting.</li>
+      </ol>
+      <p>Upon completion, a load test was conducted on the 10T crane with 12.5T test weight. Crane traveled the full 160m length without jamming. Deflection at mid-span: 18mm (L/889), well within the L/500 limit.</p>
+    `,
+    whyChoose: `
+      <p>Hongxin Sports chose Laotie Steel for this flagship production facility based on our proven track record in industrial factory construction. Key reasons included:</p>
+      <ul>
+        <li><strong>Integrated Design & Fabrication:</strong> We provided a single-point responsibility for both structural design and steel fabrication, eliminating coordination gaps between designer and manufacturer.</li>
+        <li><strong>GB-Compliant Engineering:</strong> All designs were prepared in full compliance with current Chinese standards (GB 50017, GB 50011, GB 50009), ensuring smooth building department approval.</li>
+        <li><strong>Fast-Track Delivery:</strong> From design finalization to factory handover: 45 days. Our 5 production lines worked in parallel shifts to meet the aggressive schedule.</li>
+        <li><strong>Competitive Pricing:</strong> Our direct-from-factory pricing was 22% lower than local Shangqiu steel structure contractors, without compromising quality.</li>
+        <li><strong>After-Sales Support:</strong> We provided a 2-year on-site maintenance agreement, with quarterly inspections and 24-hour response for structural issues.</li>
+      </ul>
+    `,
+    specs: [
+      { label: "Building Area", value: "12,800 m²" },
+      { label: "Steel Tonnage", value: "630 tons (Q355B)" },
+      { label: "Span", value: "80m (column-free)" },
+      { label: "Column Spacing", value: "8m" },
+      { label: "Eave Height", value: "12m" },
+      { label: "Roof Slope", value: "1:10" },
+      { label: "Design Load", value: "0.5 kN/m² (roof), 15 kN/m² (floor)" },
+      { label: "Wind Load", value: "0.55 kN/m² (GB 50009)" },
+      { label: "Seismic Rating", value: "Degree 6 (GB 50011, 0.05g)" },
+      { label: "Connection Type", value: "Bolted moment-resisting frame" },
+      { label: "Snow Load", value: "N/A (central China)" },
+      { label: "Temperature Load", value: "±30mm thermal expansion allowance" },
+      { label: "Fire Rating", value: "2-hour (production area)" },
+      { label: "Design Life", value: "50 years (GB 50017)" },
+      { label: "Foundation Type", value: "Reinforced concrete independent footings (2.0m×2.0m×1.2m)" },
+      { label: "Erection Method", value: "Bolted connection, on-site crane assisted" },
+      { label: "Crane System", value: "10T overhead crane, 160m full length" },
+      { label: "Cladding System", value: "100mm PIR wall panel, 75mm rock wool roof" },
+      { label: "Coating System", value: "Epoxy zinc-rich primer + polyurethane topcoat (240μm)" },
+      { label: "Lead Time", value: "25 days fabrication + 2 days domestic transport" },
+    ],
+    faq: [
+      {
+        question: "How much does a 12,800 m² steel factory cost in China?",
+        answer:
+          "For a 12,800 m² industrial factory like our Hongxin project, the supply-only cost from Laotie Steel is typically RMB 850-1,050 per m² (EXW Xingyang). This includes structural steel, cladding system, crane runway beams, and standard anti-corrosion coating. Foundation, electrical, and plumbing are excluded. Local competitors typically quote RMB 1,100-1,300 per m² for equivalent specification.",
+      },
+      {
+        question: "Do your steel factories comply with Chinese GB standards?",
+        answer:
+          "Yes. Every Laotie steel structure for the Chinese market is designed to GB 50017-2017 (Steel Structure Design Standard), GB 50011-2010 (Seismic Design Code), and GB 50009-2012 (Load Code). We provide full calculation reports stamped by Class-A design institute. Our designs also comply with relevant fire safety and energy efficiency regulations.",
+      },
+      {
+        question: "What is the lead time for a 12,800 m² steel factory in China?",
+        answer:
+          "Total lead time is typically 40-50 days: 25-30 days for fabrication (depending on current production line load), 2-5 days for domestic transport. We recommend allowing 60 days total from contract signing to facility handover for project planning purposes.",
+      },
+      {
+        question: "Can you provide dust-proof steel structures for sports equipment manufacturing?",
+        answer:
+          "Yes. For sports equipment manufacturing facilities, we can upgrade the interior member coating to a dust-proof epoxy system. All interior surfaces are smooth and cleanable. We can also provide professional-grade ventilation and dust removal systems integrated into the roof design.",
+      },
+      {
+        question: "Is hot-dip galvanizing included in your steel factory price?",
+        answer:
+          "Hot-dip galvanizing (HDG) is optional. For most indoor industrial projects in central China, we recommend epoxy zinc-rich primer + polyurethane topcoat system (240μm), which provides 15+ years of corrosion protection. HDG adds approximately RMB 800-1,000 per ton to the structure cost and is recommended for coastal or high-humidity locations.",
+      },
+      {
+        question: "Can I install the steel factory myself, or do I need specialized contractors?",
+        answer:
+          "Our structures are designed for bolted assembly with on-site crane assistance. A competent local contractor with general steel erection experience can erect our buildings. We provide a detailed erection manual, bolt lists, and can provide on-site supervision engineers (at additional cost). This Hongxin project was erected by our own team in 22 working days.",
+      },
+      {
+        question: "What foundation design do you provide for Chinese industrial parks?",
+        answer:
+          "We provide foundation reaction reports (GB 50007) that your local geotechnical engineer can use to design suitable foundations. For Shangqiu's typical loess soil with good bearing capacity (180 kPa), our standard foundation design uses 2.0m × 2.0m × 1.2m deep reinforced concrete pads with M30 anchor bolts.",
+      },
+      {
+        question: "Do you handle building department approval and quality inspection?",
+        answer:
+          "We provide all documentation required for building department submission: structural calculation reports (stamped by Class-A design institute), material certificates, welding procedure qualification (WPS/PQR), and NDT reports. Your local project management team handles the actual approval process; we ensure all documentation is compliant with current GB standards and local regulations.",
+      },
+      {
+        question: "What warranty do you provide for steel structure projects in China?",
+        answer:
+          "Laotie Steel provides a 10-year structural warranty on all steel members and connections. Color-coated roofing carries a 15-year warranty against coating failure. Sandwich panels carry a 10-year warranty on thermal and structural performance. All warranties are backed by our ISO 9001 quality system certification.",
+      },
+    ],
+    cta: `
+      <p>Planning a steel structure factory in China? Get a free preliminary design and budget estimate within 24 hours. Share your site dimensions, local design code requirements, and intended use — our engineering team will prepare a customized proposal with GB-compliant calculations.</p>
+    `,
+    conclusion: `
+      <p>This Hongxin Sports trampoline factory demonstrates Laotie Steel's capability to deliver code-compliant, cost-effective steel structure solutions for industrial production facilities. From GB-standard structural design to precision CNC fabrication and fast-track on-site erection, every stage of this project was managed to ensure the client received a production-ready facility on schedule and within budget.</p>
+      <p>Whether you are planning a 5,000 m² workshop or a 50,000 m² industrial park, our 5 production lines and 15+ years of experience ensure your project will be delivered with uncompromising quality and competitive pricing.</p>
+      <p><a href="/contact" class="inline-flex items-center px-6 py-3 bg-steel-accent text-white font-semibold rounded-lg hover:bg-steel transition-colors shadow-lg">Get a Free Quote for Your Steel Structure Project →</a></p>
+    `,
+    keywords: [
+      "steel structure factory",
+      "industrial steel building China",
+      "prefabricated factory building",
+      "steel warehouse construction",
+      "portal frame factory",
+      "steel building supplier China",
+      "steel structure manufacturer",
+      "factory building contractor",
+      "custom steel structure",
+      "GB standard steel building",
+    ],
+    longTailKeywords: [
+      "cost of steel factory in China",
+      "steel structure factory construction company",
+      "prefabricated factory building supplier",
+      "industrial steel building manufacturer China",
+      "portal frame factory design",
+      "custom steel structure factory",
+      "steel structure design GB 50017",
+      "factory building cost per m² China",
+    ],
+  },
 };

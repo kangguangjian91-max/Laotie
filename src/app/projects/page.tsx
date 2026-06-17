@@ -118,6 +118,23 @@ const projects: Project[] = [
     ],
     image: "/images/projects/project-jakarta-01.webp",
   },
+  {
+    name: "Hongxin Sports Trampoline Factory",
+    slug: "hongxin-sports-trampoline-factory-shangqiu",
+    location: "Shangqiu, China",
+    type: "Portal Frame Steel Building",
+    size: "12,800 sqm",
+    year: "2025",
+    description:
+      "A 12,800 m² industrial factory designed and fabricated for Hongxin Sports, a leading trampoline manufacturer in China. The facility serves as the company's primary production base for 8 million trampolines per year.",
+    highlights: [
+      "160m × 80m column-free production area",
+      "10T overhead crane system — full 160m length",
+      "100mm PIR sandwich panels for walls, 75mm rock wool roof",
+      "Completed in 45 days from contract signing",
+    ],
+    image: "/images/projects/hongxin-sports/hongxin-1.webp",
+  },
 ];
 
 export const metadata = {

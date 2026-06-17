@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllSlugs } from "@/data/blog";
 import { getAllProductSlugs } from "@/data/products";
+import { projectDetails } from "@/data/projects-detail";
 
 // Force static generation for static export
 export const dynamic = "force-static";
@@ -52,7 +53,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticEntries, ...productEntries, ...blogEntries];
+  // Project detail pages (dynamic from projectDetails)
+  const projectSlugs = Object.keys(projectDetails);
+  const projectEntries = projectSlugs.map((slug) => ({
+    url: `${siteUrl}/projects/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticEntries, ...productEntries, ...blogEntries, ...projectEntries];
 }
 
 // Image sitemap reference for robots.txt
