@@ -16,8 +16,8 @@ const navItems = [
 
 const globalLinks = [
   { label: "Philippines", href: "/steel-structure-philippines", flag: "🇵🇭" },
-  { label: "Vietnam", href: "#", flag: "🇻🇳", disabled: true },
-  { label: "Indonesia", href: "#", flag: "🇮🇩", disabled: true },
+  { label: "Vietnam", href: "/steel-structure-vietnam", flag: "🇻🇳" },
+  { label: "Indonesia", href: "/steel-structure-indonesia", flag: "🇮🇩", disabled: true },
   { label: "Nigeria", href: "#", flag: "🇳🇬", disabled: true },
 ];
 

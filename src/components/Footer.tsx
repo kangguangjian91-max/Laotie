@@ -88,10 +88,10 @@ export default function Footer() {
                 </span>
               </li>
               <li>
-                <span className="text-gray-500 inline-flex items-center gap-1">
+                <a href="/steel-structure-indonesia" className="hover:text-white transition-colors inline-flex items-center gap-1 group">
+                  <span className="w-0 group-hover:w-1 h-0.5 bg-steel-accent rounded-full transition-all" />
                   🇮🇩 Indonesia
-                  <span className="text-xs">(Soon)</span>
-                </span>
+                </a>
               </li>
               <li>
                 <span className="text-gray-500 inline-flex items-center gap-1">
