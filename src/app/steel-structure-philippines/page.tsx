@@ -89,10 +89,30 @@ const faqSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.laotie-steel.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Steel Structure Philippines",
+      item: "https://www.laotie-steel.com/steel-structure-philippines",
+    },
+  ],
+};
+
 export default function PhilippinesLandingPage() {
   return (
     <main className="min-h-screen">
       <LandingPageTracker country="philippines" pageType="philippines" />
+      <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
 
