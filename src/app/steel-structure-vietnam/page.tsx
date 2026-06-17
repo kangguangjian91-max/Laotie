@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import LandingPageTracker from "@/components/LandingPageTracker";
+import ScrollAnimator from "@/components/ScrollAnimator";
 
 export const metadata: Metadata = {
   title: "Steel Structure Vietnam | Warehouse & Factory Construction",
@@ -158,6 +159,7 @@ export default function VietnamLandingPage() {
             Why Choose Laotie Steel?
           </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <ScrollAnimator animation="fade-in" delay={0}>
             <div className="text-center p-6 rounded-xl bg-gray-50">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🏭</span>
@@ -167,6 +169,8 @@ export default function VietnamLandingPage() {
                 Since 2009, we've manufactured steel structures for 500+ projects worldwide.
               </p>
             </div>
+            </ScrollAnimator>
+            <ScrollAnimator animation="fade-in" delay={200}>
             <div className="text-center p-6 rounded-xl bg-gray-50">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">✅</span>
@@ -176,6 +180,8 @@ export default function VietnamLandingPage() {
                 All products meet international standards. CE, ISO 9001, IAF certified.
               </p>
             </div>
+            </ScrollAnimator>
+            <ScrollAnimator animation="fade-in" delay={400}>
             <div className="text-center p-6 rounded-xl bg-gray-50">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">💰</span>
@@ -185,6 +191,7 @@ export default function VietnamLandingPage() {
                 Save 30-50% compared to local suppliers. No middleman, best value.
               </p>
             </div>
+            </ScrollAnimator>
           </div>
         </div>
       </section>
@@ -196,6 +203,7 @@ export default function VietnamLandingPage() {
             Why Steel Structures in Vietnam?
           </h2>
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <ScrollAnimator animation="slide-in-left" delay={0}>
             <div>
               <h3 className="text-2xl font-bold mb-4">🌪️ Typhoon-Resistant Design</h3>
               <p className="text-gray-600 mb-4">
@@ -216,6 +224,8 @@ export default function VietnamLandingPage() {
                 </li>
               </ul>
             </div>
+            </ScrollAnimator>
+            <ScrollAnimator animation="slide-in-right" delay={100}>
             <div>
               <h3 className="text-2xl font-bold mb-4">💵 Cost-Effective Solution</h3>
               <p className="text-gray-600 mb-4">
@@ -236,23 +246,29 @@ export default function VietnamLandingPage() {
                 </li>
               </ul>
             </div>
+            </ScrollAnimator>
+            <ScrollAnimator animation="slide-in-left" delay={200}>
             <div>
               <h3 className="text-2xl font-bold mb-4">🔧 Flexible & Expandable</h3>
               <p className="text-gray-600 mb-4">
                 As your business grows, your steel building can easily expand. Add more bays, extend the length, or relocate the entire structure if needed.
               </p>
             </div>
+            </ScrollAnimator>
+            <ScrollAnimator animation="slide-in-right" delay={300}>
             <div>
               <h3 className="text-2xl font-bold mb-4">🛡️ Low Maintenance</h3>
               <p className="text-gray-600 mb-4">
                 Our hot-dip galvanized steel requires minimal maintenance even in Vietnam's humid climate. 30-year warranty gives you peace of mind.
               </p>
             </div>
+            </ScrollAnimator>
           </div>
         </div>
       </section>
 
       {/* Logistics & Installation */}
+      <ScrollAnimator animation="fade-in">
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
@@ -350,8 +366,9 @@ export default function VietnamLandingPage() {
           </div>
         </div>
       </section>
+      </ScrollAnimator>
 
-            {/* Project Cases - Carousel */}
+      {/* Project Cases - Carousel */}
       <ProjectCarousel
         title="Project Cases in Vietnam"
         subtitle="We have completed 500+ steel structure projects across Vietnam. Here are some of our recent works."
