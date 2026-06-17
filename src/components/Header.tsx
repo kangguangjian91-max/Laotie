@@ -16,10 +16,10 @@ const navItems = [
 ];
 
 const globalLinks = [
-  { label: "Philippines", href: "/steel-structure-philippines", flag: "🇵🇭" },
-  { label: "Vietnam", href: "/steel-structure-vietnam", flag: "🇻🇳" },
-  { label: "Indonesia", href: "/steel-structure-indonesia", flag: "🇮🇩", disabled: true },
-  { label: "Nigeria", href: "#", flag: "🇳🇬", disabled: true },
+  { label: "Philippines", href: "/steel-structure-philippines", flag: "🇵🇭", disabled: false },
+  { label: "Vietnam", href: "/steel-structure-vietnam", flag: "🇻🇻", disabled: false },
+  { label: "Indonesia", href: "/steel-structure-indonesia", flag: "🇮🇩", disabled: false },
+  { label: "Nigeria", href: "/steel-structure-nigeria", flag: "🇳🇬", disabled: false },
 ];
 
 export default function Header() {
@@ -93,26 +93,19 @@ export default function Header() {
                   {globalLinks.map((link) => (
                     <a
                       key={link.href}
-                      href={link.disabled ? '#' : link.href}
-                      className={`flex items-center gap-2.5 px-4 py-2.5 text-sm transition-colors ${
-                        link.disabled 
-                          ? 'text-gray-400 cursor-not-allowed' 
-                          : 'text-gray-700 hover:bg-gray-50 hover:text-steel'
-                      }`}
+                      href={link.href}
+                      className="flex items-center gap-2.5 px-4 py-2.5 text-sm transition-colors text-gray-700 hover:bg-gray-50 hover:text-steel"
                       onClick={(e) => {
-                        if (link.disabled) {
-                          e.preventDefault();
-                        } else {
-                          // Track landing page view
-                          const countryMap: Record<string, string> = {
-                            '/steel-structure-philippines': 'philippines',
-                            '/steel-structure-vietnam': 'vietnam',
-                            '/steel-structure-indonesia': 'indonesia',
-                          };
-                          const country = countryMap[link.href];
-                          if (country) {
-                            trackLandingPageView(country, country as any);
-                          }
+                        // Track landing page view
+                        const countryMap: Record<string, string> = {
+                          '/steel-structure-philippines': 'philippines',
+                          '/steel-structure-vietnam': 'vietnam',
+                          '/steel-structure-indonesia': 'indonesia',
+                          '/steel-structure-nigeria': 'nigeria',
+                        };
+                        const country = countryMap[link.href];
+                        if (country) {
+                          trackLandingPageView(country, country as any);
                         }
                         setGlobalOpen(false);
                       }}

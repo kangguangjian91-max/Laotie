@@ -106,10 +106,14 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <span className="text-gray-500 inline-flex items-center gap-1">
+                <a 
+                  href="/steel-structure-nigeria" 
+                  onClick={() => trackLandingPageView("nigeria", "nigeria")}
+                  className="hover:text-white transition-colors inline-flex items-center gap-1 group"
+                >
+                  <span className="w-0 group-hover:w-1 h-0.5 bg-steel-accent rounded-full transition-all" />
                   🇳🇬 Nigeria
-                  <span className="text-xs">(Soon)</span>
-                </span>
+                </a>
               </li>
             </ul>
           </div>
