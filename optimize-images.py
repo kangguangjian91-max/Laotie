@@ -1,112 +1,81 @@
 #!/usr/bin/env python3
 """
-图片优化脚本 - 压缩并转换为 WebP 格式
+批量转换剩余图片为WebP格式
+优化质量：85 (平衡质量和文件大小)
 """
 import os
+from PIL import Image
 import sys
-from pathlib import Path
 
-# 尝试导入 Pillow
-try:
-    from PIL import Image
-    print("✅ Pillow 已安装")
-except ImportError:
-    print("❌ Pillow 未安装，正在安装...")
-    os.system(f"{sys.executable} -m pip install Pillow -q")
-    from PIL import Image
+# 项目路径
+project_dir = r"C:\Users\kang\WorkBuddy\2026-06-04-15-29-02\laotie-steel"
+images_dir = os.path.join(project_dir, "public", "images")
 
-# 配置
-IMAGES_DIRS = [
-    Path("public/images/factory"),
-    Path("public/images/avatars"),
-    Path("public/images/products"),
-    Path("public/images/projects"),
-]
-TARGET_MAX_SIZE_KB = 500  # 目标最大文件大小
-WEBP_QUALITY = 82  # WebP 质量 (0-100)
+# 需要转换的图片扩展名
+extensions = ['.jpg', '.jpeg', '.png']
 
-def optimize_image(image_path: Path, target_path: Path = None) -> dict:
-    """优化单个图片：压缩并转换为 WebP"""
-    if target_path is None:
-        target_path = image_path.with_suffix(".webp")
-    
-    original_size = image_path.stat().st_size / 1024  # KB
-    
-    # 打开图片
-    img = Image.open(image_path)
-    
-    # 如果是 PNG 且有透明通道，保持 RGBA 模式
-    if img.mode in ("RGBA", "LA") or (img.mode == "P" and "transparency" in img.info):
-        img = img.convert("RGBA")
-    else:
-        img = img.convert("RGB")
-    
-    # 保存为 WebP
-    img.save(target_path, "WebP", quality=WEBP_QUALITY, method=6)
-    
-    new_size = target_path.stat().st_size / 1024  # KB
-    compression_ratio = (1 - new_size / original_size) * 100
-    
-    return {
-        "original": image_path.name,
-        "original_size_kb": round(original_size, 1),
-        "new": target_path.name,
-        "new_size_kb": round(new_size, 1),
-        "compression_ratio": round(compression_ratio, 1),
-        "dimensions": img.size
-    }
+# 统计
+converted = 0
+skipped = 0
+errors = 0
 
-def main():
-    print("🚀 开始优化图片...\n")
-    
-    # 找出需要优化的图片（>500KB 或 PNG 格式）
-    images_to_optimize = []
-    for dir in IMAGES_DIRS:
-        if not dir.exists():
-            continue
-        for ext in ["*.png", "*.jpg", "*.jpeg"]:
-            for img_path in dir.glob(ext):
-                size_kb = img_path.stat().st_size / 1024
-                if size_kb > TARGET_MAX_SIZE_KB or img_path.suffix.lower() == ".png":
-                    images_to_optimize.append(img_path)
-    
-    if not images_to_optimize:
-        print("✅ 所有图片都已经优化过了！")
-        return
-    
-    print(f"📊 找到 {len(images_to_optimize)} 张图片需要优化：\n")
-    
-    # 优化每张图片
-    results = []
-    for img_path in sorted(images_to_optimize):
-        print(f"⏳ 处理: {img_path.name}...")
-        try:
-            result = optimize_image(img_path)
-            results.append(result)
-            print(f"   ✅ {result['original_size_kb']}KB → {result['new_size_kb']}KB ({result['compression_ratio']}% 压缩)")
-        except Exception as e:
-            print(f"   ❌ 错误: {e}")
-    
-    # 打印汇总报告
-    print("\n" + "="*80)
-    print("📊 优化汇总报告")
-    print("="*80)
-    print(f"{'原始文件':<35} {'原始大小':>12} {'新文件':<35} {'新大小':>12} {'压缩率':>10}")
-    print("-"*80)
-    
-    total_original = 0
-    total_new = 0
-    for r in results:
-        print(f"{r['original']:<35} {r['original_size_kb']:>10}KB  {r['new']:<35} {r['new_size_kb']:>10}KB  {r['compression_ratio']:>8}%")
-        total_original += r['original_size_kb']
-        total_new += r['new_size_kb']
-    
-    print("-"*80)
-    print(f"{'总计':<35} {total_original:>10}KB  {'':<35} {total_new:>10}KB  {(1-total_new/total_original)*100:>8.1f}%")
-    print("="*80)
-    
-    print(f"\n✅ 优化完成！节省了 {round(total_original - total_new, 1)}KB")
-    print(f"\n💡 提示：现在可以删除原始的 PNG/JPG 文件，只保留 WebP 格式。")
+print("🚀 开始批量转换图片为WebP...\n")
 
-if __name__ == "__main__":
-    main()
+# 遍历所有图片
+for root, dirs, files in os.walk(images_dir):
+    for file in files:
+        file_lower = file.lower()
+        
+        # 检查是否是需要转换的格式
+        if any(file_lower.endswith(ext) for ext in extensions):
+            # 跳过backup-old目录
+            if "backup-old" in root:
+                continue
+                
+            img_path = os.path.join(root, file)
+            
+            # 生成WebP文件名
+            webp_path = os.path.splitext(img_path)[0] + ".webp"
+            
+            # 检查WebP是否已存在
+            if os.path.exists(webp_path):
+                print(f"⏭️  跳过（WebP已存在）: {os.path.relpath(img_path, images_dir)}")
+                skipped += 1
+                continue
+            
+            try:
+                # 打开图片
+                img = Image.open(img_path)
+                
+                # 如果是PNG且有透明通道，需要特殊处理
+                if img.mode == 'RGBA':
+                    # 创建白色背景
+                    background = Image.new('RGB', img.size, (255, 255, 255))
+                    background.paste(img, mask=img.split()[3])  # 使用alpha通道作为mask
+                    img = background
+                elif img.mode != 'RGB':
+                    img = img.convert('RGB')
+                
+                # 保存为WebP（质量85）
+                img.save(webp_path, 'WEBP', quality=85, method=6)
+                
+                # 获取文件大小对比
+                original_size = os.path.getsize(img_path)
+                webp_size = os.path.getsize(webp_path)
+                savings = (1 - webp_size / original_size) * 100
+                
+                print(f"✅ {os.path.relpath(img_path, images_dir)}")
+                print(f"   {original_size/1024:.1f}KB → {webp_size/1024:.1f}KB ({savings:.1f}% 节省)")
+                
+                converted += 1
+                
+            except Exception as e:
+                print(f"❌ 错误: {os.path.relpath(img_path, images_dir)} - {str(e)}")
+                errors += 1
+
+print(f"\n{'='*60}")
+print(f"✅ 转换完成!")
+print(f"   转换: {converted} 张")
+print(f"   跳过: {skipped} 张 (WebP已存在)")
+print(f"   错误: {errors} 张")
+print(f"{'='*60}")

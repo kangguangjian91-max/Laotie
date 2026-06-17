@@ -106,16 +106,10 @@ export default function SteelStructureIndonesia() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white">
       <LandingPageTracker country="indonesia" pageType="indonesia" />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <JsonLd data={schemaData} />
+      <JsonLd data={faqSchema} />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-steel to-steel-light text-white py-20 md:py-28">
@@ -780,6 +774,6 @@ export default function SteelStructureIndonesia() {
           </div>
         </div>
       </footer>
-    </div>
+    </main>
   );
 }

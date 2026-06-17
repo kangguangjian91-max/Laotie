@@ -16,16 +16,16 @@ export const metadata: Metadata = {
     "prefab warehouse nigeria",
     "industrial construction nigeria",
     "portal frame nigeria",
-    "steel fabrication manila",
-    "warehouse builder cebu",
-    "factory construction davao",
+    "steel fabrication lagos",
+    "warehouse builder abuja",
+    "factory construction kano",
   ],
   openGraph: {
     title: "Steel Structure Nigeria | Laotie Steel",
     description:
       "Your trusted steel structure partner in Nigeria. 500+ projects completed across Lagos, Abuja, Kano.",
     images: ["/images/nigeria/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp"],
-    locale: "en_PH",
+    locale: "en_NG",
     type: "website",
   },
 };
@@ -180,15 +180,15 @@ export default function NigeriaLandingPage() {
           </h2>
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <div>
-              <h3 className="text-2xl font-bold mb-4">🌪️ Typhoon-Resistant Design</h3>
+              <h3 className="text-2xl font-bold mb-4">🌩️ Heavy Rain & Storm Protection</h3>
               <p className="text-gray-600 mb-4">
-                Nigeria faces 20+ typhoons annually. Our steel structures are engineered to withstand
-                wind speeds up to 300 km/h (Category 5 typhoon level).
+                Nigeria experiences heavy rainfall and strong storms during wet season (April-October).
+                Our steel structures are engineered to withstand wind speeds up to 150 km/h and heavy rain.
               </p>
               <ul className="space-y-2 text-gray-600">
-                <li>✅ Wind load calculation per Philippine building codes</li>
-                <li>✅ Reinforced connections for seismic zones</li>
-                <li>✅ Corrosion-resistant coatings for tropical climate</li>
+                <li>✅ Wind load calculation per Nigerian building codes</li>
+                <li>✅ Reinforced connections for storm resistance</li>
+                <li>✅ Corrosion-resistant coatings for humid climate</li>
               </ul>
             </div>
             <div>
