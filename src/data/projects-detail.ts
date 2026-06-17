@@ -20,6 +20,10 @@ export interface ProjectDetail {
   conclusion: string;
   keywords: string[];
   longTailKeywords: string[];
+  galleryImages?: { src: string; alt: string }[];
+  location?: string;
+  category?: string;
+  completedYear?: string;
 }
 
 export const projectDetails: Record<string, ProjectDetail> = {
@@ -1283,5 +1287,17 @@ export const projectDetails: Record<string, ProjectDetail> = {
       "steel structure design GB 50017",
       "factory building cost per m² China",
     ],
+    galleryImages: [
+      { src: "/images/projects/hongxin-sports/hongxin-2.webp", alt: "Hongxin Sports trampoline factory steel frame erection - portal frame columns and rafters during installation" },
+      { src: "/images/projects/hongxin-sports/hongxin-4.webp", alt: "Hongxin Sports factory construction site - crane lifting steel beams into position" },
+      { src: "/images/projects/hongxin-sports/hongxin-6.webp", alt: "Hongxin Sports trampoline production facility - completed steel structure with roof cladding" },
+      { src: "/images/projects/hongxin-sports/hongxin-1.webp", alt: "Hongxin Sports factory interior view - 2-story main plant with overhead crane system" },
+      { src: "/images/projects/hongxin-sports/hongxin-3.webp", alt: "Hongxin Sports factory exterior - 5-story office building attached to main plant" },
+      { src: "/images/projects/hongxin-sports/hongxin-5.webp", alt: "Hongxin Sports factory overview - 141m x 52m complex with office building" },
+      { src: "/images/projects/hongxin-sports/hongxin-7.webp", alt: "Hongxin Sports factory quality inspection - engineering team verifying structural connections" },
+    ],
+    location: "Shangqiu, Henan, China",
+    category: "Trampoline Factory",
+    completedYear: "2025",
   },
 };

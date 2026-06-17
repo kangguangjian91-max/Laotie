@@ -107,13 +107,13 @@ export default async function ProjectDetailPage(props: PageProps) {
             </p>
             <div className="flex flex-wrap gap-3 mt-6">
               <span className="text-xs font-bold text-steel-accent bg-steel-muted px-2.5 py-1 rounded-full">
-                Perth, Australia
+                {project.location ?? "China"}
               </span>
               <span className="text-xs text-gray-400 bg-white/10 px-2.5 py-1 rounded-full">
-                Agricultural Processing Plant
+                {project.category ?? "Steel Structure Project"}
               </span>
               <span className="text-xs text-gray-400 bg-white/10 px-2.5 py-1 rounded-full">
-                Completed 2025
+                Completed {project.completedYear ?? "2025"}
               </span>
             </div>
           </div>
@@ -246,11 +246,15 @@ export default async function ProjectDetailPage(props: PageProps) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Project Photos</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[1, 2, 3].map((i) => (
+              {(project.galleryImages ?? [
+                { src: "/images/projects/project-05.webp", alt: `${project.h1} - project photo` },
+                { src: "/images/projects/project-05.webp", alt: `${project.h1} - project photo` },
+                { src: "/images/projects/project-05.webp", alt: `${project.h1} - project photo` },
+              ]).map((img, i) => (
                 <div key={i} className="relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-200">
                   <img
-                    src="/images/projects/project-05.webp"
-                    alt={`Perth agricultural processing plant steel warehouse - view ${i}: 50m wide x 60m long portal frame structure with Colorbond roof`}
+                    src={img.src}
+                    alt={img.alt}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
