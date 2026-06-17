@@ -282,7 +282,7 @@ export default function PhilippinesLandingPage() {
         projects={[
           {
             image: "/images/philippines/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp",
-            alt: "Warehouse project in Manila, Philippines",
+            alt: "Steel structure warehouse in Manila, Philippines - 5,000 sqm prefab building",
             title: "Manila Warehouse Complex",
             description: "5,000 sqm steel structure warehouse with office annex. Built for logistics company in Caloocan.",
             tags: [
@@ -292,7 +292,7 @@ export default function PhilippinesLandingPage() {
           },
           {
             image: "/images/philippines/5704819281f8e9ad3038915e967864ad.webp",
-            alt: "Factory building in Cebu, Philippines",
+            alt: "Steel structure factory in Cebu, Philippines - 3,000 sqm manufacturing plant",
             title: "Cebu Manufacturing Plant",
             description: "3,000 sqm steel structure factory with 5-ton crane system. Food processing facility.",
             tags: [
@@ -302,7 +302,7 @@ export default function PhilippinesLandingPage() {
           },
           {
             image: "/images/philippines/688e07390f62e21cbb8bd1a1ba455959.webp",
-            alt: "Industrial building in Davao, Philippines",
+            alt: "Steel structure logistics center in Davao, Philippines - 8,000 sqm distribution warehouse",
             title: "Davao Logistics Center",
             description: "8,000 sqm distribution center with mezzanine floor. 40x80m clear span design.",
             tags: [
@@ -312,7 +312,7 @@ export default function PhilippinesLandingPage() {
           },
           {
             image: "/images/philippines/1a3e5a019b4c71eda2da853679708074.webp",
-            alt: "Agricultural facility in Baguio, Philippines",
+            alt: "Steel structure agricultural facility in Baguio, Philippines - 2,500 sqm cold storage",
             title: "Baguio Agricultural Facility",
             description: "2,500 sqm steel structure for cold storage and processing. High insulation requirements.",
             tags: [
@@ -322,7 +322,7 @@ export default function PhilippinesLandingPage() {
           },
           {
             image: "/images/philippines/3c827b0a462391a3e3486e39a5ae25d4.webp",
-            alt: "Commercial building in Iloilo, Philippines",
+            alt: "Steel structure commercial building in Iloilo, Philippines - 1,800 sqm showroom",
             title: "Iloilo Showroom & Warehouse",
             description: "1,800 sqm combined showroom and warehouse. Two-story design with office space.",
             tags: [
@@ -332,7 +332,7 @@ export default function PhilippinesLandingPage() {
           },
           {
             image: "/images/philippines/967a25ac2c3ec808229a990e27529ba2.webp",
-            alt: "Factory building in Laguna, Philippines",
+            alt: "Steel structure electronics factory in Laguna, Philippines - 4,200 sqm with clean room",
             title: "Laguna Electronics Factory",
             description: "4,200 sqm steel structure factory with clean room requirements. ESD flooring and temperature control.",
             tags: [
@@ -342,7 +342,7 @@ export default function PhilippinesLandingPage() {
           },
           {
             image: "/images/philippines/679234a53ccd9c56cf26658f4f072138.webp",
-            alt: "Warehouse in Pampanga, Philippines",
+            alt: "Steel structure warehouse in Pampanga, Philippines - 6,500 sqm distribution hub",
             title: "Pampanga Distribution Hub",
             description: "6,500 sqm steel warehouse with automated racking system. Strategic location near Clark Airport.",
             tags: [
@@ -352,7 +352,7 @@ export default function PhilippinesLandingPage() {
           },
           {
             image: "/images/philippines/67dd07a1917aa291f1631e16ce010c88.webp",
-            alt: "Factory in Batangas, Philippines",
+            alt: "Steel structure chemical plant in Batangas, Philippines - 3,800 sqm anti-corrosion",
             title: "Batangas Chemical Plant",
             description: "3,800 sqm chemical processing plant with anti-corrosion coating. Explosion-proof design.",
             tags: [
@@ -362,7 +362,7 @@ export default function PhilippinesLandingPage() {
           },
           {
             image: "/images/philippines/7ea1821bc8fdfac59547d2c042c2f6ae.webp",
-            alt: "Workshop in Cagayan de Oro, Philippines",
+            alt: "Steel structure workshop in Cagayan de Oro, Philippines - 2,200 sqm with crane",
             title: "CDO Metal Fabrication Shop",
             description: "2,200 sqm steel structure workshop with 10-ton overhead crane. Heavy-duty industrial use.",
             tags: [
@@ -372,7 +372,7 @@ export default function PhilippinesLandingPage() {
           },
           {
             image: "/images/philippines/bd585762b3e96733450d3660029a1ab4.webp",
-            alt: "Warehouse in General Santos, Philippines",
+            alt: "Steel structure tuna processing plant in General Santos, Philippines - 4,500 sqm cold storage",
             title: "GenSan Tuna Processing Plant",
             description: "4,500 sqm steel structure facility for tuna processing. Cold storage and blast freezing rooms.",
             tags: [

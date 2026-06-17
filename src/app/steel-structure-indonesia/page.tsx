@@ -330,7 +330,7 @@ export default function SteelStructureIndonesia() {
         projects={[
           {
             image: "/images/indonesia/679234a53ccd9c56cf26658f4f072138.webp",
-            alt: "Warehouse project in Jakarta, Indonesia",
+            alt: "Steel structure warehouse in Jakarta, Indonesia - 5,000 sqm prefab building with seismic design",
             title: "Jakarta Warehouse Complex",
             description: "5,000 m² steel structure warehouse for logistics company in Jakarta. Seismic Zone 6 design.",
             tags: [
@@ -340,7 +340,7 @@ export default function SteelStructureIndonesia() {
           },
           {
             image: "/images/indonesia/67dd07a1917aa291f1631e16ce010c88.webp",
-            alt: "Manufacturing plant in Surabaya, Indonesia",
+            alt: "Steel structure factory in Surabaya, Indonesia - 3,000 sqm automotive parts manufacturing",
             title: "Surabaya Manufacturing Plant",
             description: "3,000 m² factory building for automotive parts manufacturer. High humidity protection.",
             tags: [
@@ -350,7 +350,7 @@ export default function SteelStructureIndonesia() {
           },
           {
             image: "/images/indonesia/688e07390f62e21cbb8bd1a1ba455959.webp",
-            alt: "Cold storage facility in Medan, Indonesia",
+            alt: "Steel structure cold storage in Medan, Indonesia - 2,000 sqm temperature controlled warehouse",
             title: "Medan Cold Storage Facility",
             description: "2,000 m² cold storage warehouse with insulated panels. Temperature control design.",
             tags: [
@@ -360,7 +360,7 @@ export default function SteelStructureIndonesia() {
           },
           {
             image: "/images/indonesia/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp",
-            alt: "Factory in Semarang, Indonesia",
+            alt: "Steel structure factory in Semarang, Indonesia - 6,500 sqm textile manufacturing plant",
             title: "Semarang Industrial Park",
             description: "6,500 m² steel structure factory for textile manufacturer. Central Java region.",
             tags: [
@@ -370,7 +370,7 @@ export default function SteelStructureIndonesia() {
           },
           {
             image: "/images/indonesia/3c827b0a462391a3e3486e39a5ae25d4.webp",
-            alt: "Warehouse in Makassar, Indonesia",
+            alt: "Steel structure warehouse in Makassar, Indonesia - 4,200 sqm logistics distribution center",
             title: "Makassar Logistics Warehouse",
             description: "4,200 m² distribution center in Makassar. Strategic location for Eastern Indonesia.",
             tags: [
@@ -380,7 +380,7 @@ export default function SteelStructureIndonesia() {
           },
           {
             image: "/images/indonesia/5704819281f8e9ad3038915e967864ad.webp",
-            alt: "Processing plant in Palembang, Indonesia",
+            alt: "Steel structure palm oil processing plant in Palembang, Indonesia - 5,500 sqm facility",
             title: "Palembang Palm Oil Facility",
             description: "5,500 m² steel structure facility for palm oil processing. Corrosion-resistant coating.",
             tags: [
@@ -390,7 +390,7 @@ export default function SteelStructureIndonesia() {
           },
           {
             image: "/images/indonesia/1a3e5a019b4c71eda2da853679708074.webp",
-            alt: "Workshop in Balikpapan, Indonesia",
+            alt: "Steel structure mining workshop in Balikpapan, Indonesia - 3,800 sqm heavy-duty",
             title: "Balikpapan Mining Workshop",
             description: "3,800 m² heavy-duty workshop with 20-ton crane system. Oil & gas industry.",
             tags: [
@@ -400,7 +400,7 @@ export default function SteelStructureIndonesia() {
           },
           {
             image: "/images/indonesia/7ea1821bc8fdfac59547d2c042c2f6ae.webp",
-            alt: "Commercial building in Denpasar, Indonesia",
+            alt: "Steel structure commercial building in Denpasar, Indonesia - 2,500 sqm showroom",
             title: "Denpasar Showroom & Warehouse",
             description: "2,500 m² combined showroom and warehouse. Bali tourism infrastructure.",
             tags: [
@@ -410,7 +410,7 @@ export default function SteelStructureIndonesia() {
           },
           {
             image: "/images/indonesia/967a25ac2c3ec808229a990e27529ba2.webp",
-            alt: "Factory in Bandung, Indonesia",
+            alt: "Steel structure textile factory in Bandung, Indonesia - 7,000 sqm with ventilation",
             title: "Bandung Textile Factory",
             description: "7,000 m² steel structure factory for textile production. High roof ventilation.",
             tags: [
@@ -420,7 +420,7 @@ export default function SteelStructureIndonesia() {
           },
           {
             image: "/images/indonesia/bd585762b3e96733450d3660029a1ab4.webp",
-            alt: "Warehouse in Batam, Indonesia",
+            alt: "Steel structure warehouse in Batam, Indonesia - 4,500 sqm free trade zone",
             title: "Batam Free Trade Zone Warehouse",
             description: "4,500 m² steel warehouse in Batam FTZ. Export-oriented business.",
             tags: [

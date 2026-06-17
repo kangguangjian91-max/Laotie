@@ -358,7 +358,7 @@ export default function VietnamLandingPage() {
         projects={[
           {
             image: "/images/vietnam/3c827b0a462391a3e3486e39a5ae25d4.webp",
-            alt: "Warehouse Complex in Hanoi, Vietnam",
+            alt: "Steel structure warehouse in Hanoi, Vietnam - 5,000 sqm prefab logistics building",
             title: "Hanoi Warehouse Complex",
             description: "5,000 sqm steel structure warehouse for logistics company in Hanoi. 2025 completion.",
             tags: [
@@ -368,7 +368,7 @@ export default function VietnamLandingPage() {
           },
           {
             image: "/images/vietnam/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp",
-            alt: "Manufacturing Plant in Ho Chi Minh City, Vietnam",
+            alt: "Steel structure factory in Ho Chi Minh City, Vietnam - 8,000 sqm electronics plant",
             title: "Ho Chi Minh Manufacturing Plant",
             description: "8,000 sqm factory building for electronics manufacturer in Thu Duc. 2024 completion.",
             tags: [
@@ -378,7 +378,7 @@ export default function VietnamLandingPage() {
           },
           {
             image: "/images/vietnam/5704819281f8e9ad3038915e967864ad.webp",
-            alt: "Logistics Center in Da Nang, Vietnam",
+            alt: "Steel structure logistics center in Da Nang, Vietnam - 3,500 sqm warehouse",
             title: "Da Nang Logistics Center",
             description: "3,500 sqm warehouse with office space in Da Nang. 2024 completion.",
             tags: [
@@ -388,7 +388,7 @@ export default function VietnamLandingPage() {
           },
           {
             image: "/images/vietnam/688e07390f62e21cbb8bd1a1ba455959.webp",
-            alt: "Industrial Building in Hai Phong, Vietnam",
+            alt: "Steel structure industrial building in Hai Phong, Vietnam - 6,500 sqm factory",
             title: "Hai Phong Industrial Park",
             description: "6,500 sqm steel structure factory for automotive parts supplier. 2025 completion.",
             tags: [
@@ -398,7 +398,7 @@ export default function VietnamLandingPage() {
           },
           {
             image: "/images/vietnam/1a3e5a019b4c71eda2da853679708074.webp",
-            alt: "Commercial Building in Can Tho, Vietnam",
+            alt: "Steel structure agricultural facility in Can Tho, Vietnam - 4,200 sqm processing plant",
             title: "Can Tho Agricultural Facility",
             description: "4,200 sqm steel structure for rice processing and storage. Mekong Delta region.",
             tags: [
@@ -408,7 +408,7 @@ export default function VietnamLandingPage() {
           },
           {
             image: "/images/vietnam/679234a53ccd9c56cf26658f4f072138.webp",
-            alt: "Factory in Binh Duong, Vietnam",
+            alt: "Steel structure electronics factory in Binh Duong, Vietnam - 7,000 sqm with ESD flooring",
             title: "Binh Duong Electronics Factory",
             description: "7,000 sqm steel structure factory with ESD flooring. High-tech manufacturing.",
             tags: [
@@ -418,7 +418,7 @@ export default function VietnamLandingPage() {
           },
           {
             image: "/images/vietnam/67dd07a1917aa291f1631e16ce010c88.webp",
-            alt: "Warehouse in Dong Nai, Vietnam",
+            alt: "Steel structure warehouse in Dong Nai, Vietnam - 5,500 sqm logistics center",
             title: "Dong Nai Logistics Warehouse",
             description: "5,500 sqm distribution center near Ho Chi Minh City. Strategic location.",
             tags: [
@@ -428,7 +428,7 @@ export default function VietnamLandingPage() {
           },
           {
             image: "/images/vietnam/7ea1821bc8fdfac59547d2c042c2f6ae.webp",
-            alt: "Workshop in Quang Ninh, Vietnam",
+            alt: "Steel structure workshop in Quang Ninh, Vietnam - 3,800 sqm mining equipment",
             title: "Quang Ninh Mining Equipment Workshop",
             description: "3,800 sqm heavy-duty workshop with 15-ton crane system. Coal mining region.",
             tags: [
@@ -438,7 +438,7 @@ export default function VietnamLandingPage() {
           },
           {
             image: "/images/vietnam/967a25ac2c3ec808229a990e27529ba2.webp",
-            alt: "Processing Plant in Long An, Vietnam",
+            alt: "Steel structure food processing plant in Long An, Vietnam - 4,500 sqm with cold storage",
             title: "Long An Food Processing Plant",
             description: "4,500 sqm steel structure facility for seafood processing. Cold storage included.",
             tags: [
@@ -448,7 +448,7 @@ export default function VietnamLandingPage() {
           },
           {
             image: "/images/vietnam/bd585762b3e96733450d3660029a1ab4.webp",
-            alt: "Warehouse in Ba Ria-Vung Tau, Vietnam",
+            alt: "Steel structure warehouse in Ba Ria-Vung Tau, Vietnam - 6,000 sqm near Cai Mep port",
             title: "Vung Tau Port Warehouse",
             description: "6,000 sqm steel warehouse near Cai Mep port. Export-oriented business.",
             tags: [
