@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Steel Structure Nigeria | Laotie Steel",
     description:
-      "Your trusted steel structure partner in Nigeria. 500+ projects completed across Lagos, Abuja, Kano.",
+      "Your trusted steel structure partner in Nigeria. 100+ projects completed across Lagos, Abuja, Kano.",
     images: ["/images/nigeria/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp"],
     locale: "en_NG",
     type: "website",
@@ -159,14 +159,14 @@ export default function NigeriaLandingPage() {
             Why Choose Us for Your Nigeria Project?
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-            With 15+ years of experience and 500+ completed projects across Nigeria, we understand
+            With 15+ years of experience and 100+ completed projects across Nigeria, we understand
             local building codes, climate challenges, and logistics requirements.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <ScrollAnimator animation="fade-in" delay={0}>
             <div className="text-center p-6 bg-blue-50 rounded-xl">
               <div className="text-5xl mb-4">🏗️</div>
-              <h3 className="text-xl font-bold mb-2">500+ Projects in Nigeria</h3>
+              <h3 className="text-xl font-bold mb-2">100+ Projects in Nigeria</h3>
               <p className="text-gray-600">
                 Proven track record across Lagos, Abuja, Kano, Port Harcourt, and Kaduna. From small
                 warehouses to large industrial complexes.
@@ -324,7 +324,7 @@ export default function NigeriaLandingPage() {
       {/* Project Cases - Carousel */}
       <ProjectCarousel
         title="Recent Projects in Nigeria"
-        subtitle="We have completed 500+ steel structure projects across Nigeria. Here are some of our recent works."
+        subtitle="We have completed 100+ steel structure projects across Nigeria. Here are some of our recent works."
         projects={[
           {
             image: "/images/nigeria/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp",
@@ -743,7 +743,7 @@ export default function NigeriaLandingPage() {
             <div>
               <h3 className="text-lg font-bold mb-4">Laotie Steel Structure</h3>
               <p className="text-gray-400 text-sm">
-                CE & ISO certified steel structure manufacturer. 15+ years experience, 500+ projects
+                CE & ISO certified steel structure manufacturer. 15+ years experience, 100+ projects
                 in Nigeria.
               </p>
             </div>

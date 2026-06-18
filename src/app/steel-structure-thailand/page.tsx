@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Steel Structure Thailand | Laotie Steel",
     description:
-      "Your trusted steel structure partner in Thailand. 500+ projects completed across Bangkok, Chiang Mai, Phuket.",
+      "Your trusted steel structure partner in Thailand. 100+ projects completed across Bangkok, Chiang Mai, Phuket.",
     images: ["/images/thailand/hero.webp"],
     locale: "en_TH",
     type: "website",
@@ -157,7 +157,7 @@ export default function ThailandLandingPage() {
               Your Trusted Partner for Warehouse & Factory Construction
             </p>
             <p className="text-lg mb-8 text-blue-200 max-w-2xl mx-auto">
-              500+ projects completed across Bangkok, Chiang Mai, Phuket & more.
+              100+ projects completed across Bangkok, Chiang Mai, Phuket & more.
               CE certified, 30-year warranty, factory-direct pricing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -192,7 +192,7 @@ export default function ThailandLandingPage() {
               </div>
               <h3 className="text-xl font-bold mb-2">15+ Years Experience</h3>
               <p className="text-gray-600">
-                Since 2009, we've manufactured steel structures for 500+ projects worldwide.
+                Since 2009, we've manufactured steel structures for 100+ projects worldwide.
               </p>
             </div>
             </ScrollAnimator>
@@ -397,7 +397,7 @@ export default function ThailandLandingPage() {
       {/* Project Cases - Carousel */}
       <ProjectCarousel
         title="Project Cases in Thailand"
-        subtitle="We have completed 500+ steel structure projects across Thailand. Here are some of our recent works."
+        subtitle="We have completed 100+ steel structure projects across Thailand. Here are some of our recent works."
         projects={[
           {
             image: "/images/thailand/warehouse-bangkok.webp",

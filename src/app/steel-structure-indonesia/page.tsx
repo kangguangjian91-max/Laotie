@@ -353,7 +353,7 @@ export default function SteelStructureIndonesia() {
             {/* Project Cases - Carousel */}
       <ProjectCarousel
         title="Recent Projects in Indonesia"
-        subtitle="We have completed 500+ steel structure projects across Indonesia. Here are some of our recent works."
+        subtitle="We have completed 100+ steel structure projects across Indonesia. Here are some of our recent works."
         projects={[
           {
             image: "/images/indonesia/679234a53ccd9c56cf26658f4f072138.webp",
