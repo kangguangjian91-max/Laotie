@@ -5,7 +5,7 @@ import { trackLandingPageView } from "@/lib/gtag";
 
 interface LandingPageTrackerProps {
   country: string;
-  pageType: "philippines" | "vietnam" | "indonesia" | "nigeria" | "main";
+  pageType: "philippines" | "vietnam" | "indonesia" | "nigeria" | "thailand" | "main";
 }
 
 export default function LandingPageTracker({ country, pageType }: LandingPageTrackerProps) {
