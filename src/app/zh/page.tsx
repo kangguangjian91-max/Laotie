@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CheckCircle, Building, Factory, Warehouse, Truck } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import ProjectCarousel from "@/components/ProjectCarousel";
 
 export const metadata: Metadata = {
@@ -96,7 +98,9 @@ const projects = [
 
 export default function HomeZh() {
   return (
-    <main className="min-h-screen bg-white">
+    <>
+      <Header />
+      <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-steel via-steel-dark to-steel-light text-white py-20 md:py-28">
         <div className="absolute inset-0 bg-black/10" />
@@ -223,5 +227,7 @@ export default function HomeZh() {
         </div>
       </section>
     </main>
+    <Footer />
+  </>  
   );
 }
