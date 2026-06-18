@@ -147,15 +147,15 @@ export default function ProjectCarousel({ projects, title, subtitle }: ProjectCa
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="min-w-[280px] sm:min-w-[320px] md:min-w-[350px] flex-shrink-0 snap-start bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                className="min-w-[260px] sm:min-w-[300px] md:min-w-[350px] flex-shrink-0 snap-start bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="w-full h-56 bg-gray-100 flex items-center justify-center">
+                <div className="w-full aspect-[4/3] bg-gray-100 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.alt}
                   loading="lazy"
                   decoding="async"
-                  className="max-w-full max-h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
                 </div>
                 <div className="p-5">
