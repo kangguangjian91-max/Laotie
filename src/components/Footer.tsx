@@ -90,10 +90,14 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <span className="text-gray-500 inline-flex items-center gap-1">
+                <a 
+                  href="/steel-structure-vietnam" 
+                  onClick={() => trackLandingPageView("vietnam", "vietnam")}
+                  className="hover:text-white transition-colors inline-flex items-center gap-1 group"
+                >
+                  <span className="w-0 group-hover:w-1 h-0.5 bg-steel-accent rounded-full transition-all" />
                   🇻🇳 Vietnam
-                  <span className="text-xs">(Soon)</span>
-                </span>
+                </a>
               </li>
               <li>
                 <a 
@@ -113,6 +117,16 @@ export default function Footer() {
                 >
                   <span className="w-0 group-hover:w-1 h-0.5 bg-steel-accent rounded-full transition-all" />
                   🇳🇬 Nigeria
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/steel-structure-thailand" 
+                  onClick={() => trackLandingPageView("thailand", "thailand")}
+                  className="hover:text-white transition-colors inline-flex items-center gap-1 group"
+                >
+                  <span className="w-0 group-hover:w-1 h-0.5 bg-steel-accent rounded-full transition-all" />
+                  🇹🇭 Thailand
                 </a>
               </li>
             </ul>

@@ -103,6 +103,7 @@ export default function Header() {
                           '/steel-structure-vietnam': 'vietnam',
                           '/steel-structure-indonesia': 'indonesia',
                           '/steel-structure-nigeria': 'nigeria',
+                          '/steel-structure-thailand': 'thailand',
                         };
                         const country = countryMap[link.href];
                         if (country) {
@@ -193,6 +194,8 @@ export default function Header() {
                         '/steel-structure-philippines': 'philippines',
                         '/steel-structure-vietnam': 'vietnam',
                         '/steel-structure-indonesia': 'indonesia',
+                        '/steel-structure-nigeria': 'nigeria',
+                        '/steel-structure-thailand': 'thailand',
                       };
                       const country = countryMap[link.href];
                       if (country) {
