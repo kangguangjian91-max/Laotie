@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     "steel fabrication lagos",
     "warehouse builder abuja",
     "factory construction kano",
+    // Nigerian local keywords (English + Pidgin)
+    "warehouse for lease lagos",
+    "steel building price nigeria",
+    "fabrication yard lagos",
+    "industrial park nigeria",
   ],
   openGraph: {
     title: "Steel Structure Nigeria | Laotie Steel",

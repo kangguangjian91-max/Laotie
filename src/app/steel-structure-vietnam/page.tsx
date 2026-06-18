@@ -19,6 +19,12 @@ export const metadata: Metadata = {
     "steel fabrication hanoi",
     "warehouse builder ho chi minh city",
     "factory construction da nang",
+    // Vietnamese local keywords
+    "nhà xưởng tiền chế",
+    "kết cấu thép",
+    "xưởng sản xuất thép",
+    "nhà kho thép tiền chế",
+    "công ty kết cấu thép",
   ],
   openGraph: {
     title: "Steel Structure Vietnam | Laotie Steel",

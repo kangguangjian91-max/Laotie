@@ -19,6 +19,12 @@ export const metadata: Metadata = {
     "steel fabrication bangkok",
     "warehouse builder chiang mai",
     "factory construction phuket",
+    // Thai local keywords
+    "โรงงานเหล็ก",
+    "คลังสินค้าเหล็ก",
+    "โครงสร้างเหล็ก",
+    "อาคารโรงงาน",
+    "steel building bangkok price",
   ],
   openGraph: {
     title: "Steel Structure Thailand | Laotie Steel",

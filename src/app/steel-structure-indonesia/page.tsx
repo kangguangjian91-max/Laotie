@@ -19,6 +19,12 @@ export const metadata: Metadata = {
     "steel fabrication jakarta",
     "warehouse builder surabaya",
     "factory construction medan",
+    // Indonesian local keywords
+    "gudang baja",
+    "fabrikasi struktur baja",
+    "konstruksi baja",
+    "workshop prefab",
+    "pabrik baja",
   ],
   openGraph: {
     title: "Steel Structure Indonesia | Warehouse & Factory Construction",

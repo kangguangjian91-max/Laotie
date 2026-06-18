@@ -20,6 +20,11 @@ export const metadata: Metadata = {
     "steel fabrication manila",
     "warehouse builder cebu",
     "factory construction davao",
+    // Filipino/Tagalog local keywords
+    "bodega bakal",
+    "gawa ng bakal",
+    "warehouse para sa negosyo",
+    "steel building price philippines",
   ],
   openGraph: {
     title: "Steel Structure Philippines | Laotie Steel",
