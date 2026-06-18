@@ -167,6 +167,12 @@ export default function SteelStructureIndonesia() {
             >
               View Indonesia Projects
             </a>
+            <a
+              href="/calculator?location=indonesia"
+              className="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-cta bg-white/20 rounded-lg hover:bg-cta hover:text-white transition-colors"
+            >
+              📐 Try Cost Calculator
+            </a>
           </div>
         </div>
       </section>

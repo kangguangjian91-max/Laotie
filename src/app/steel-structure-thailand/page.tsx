@@ -173,6 +173,12 @@ export default function ThailandLandingPage() {
               >
                 View Projects
               </a>
+              <a
+                href="/calculator?location=thailand"
+                className="inline-block border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 hover:text-blue-900 transition-colors"
+              >
+                📐 Try Cost Calculator
+              </a>
             </div>
           </div>
         </div>

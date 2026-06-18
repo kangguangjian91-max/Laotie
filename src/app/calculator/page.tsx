@@ -6,14 +6,16 @@ import { Suspense } from "react";
 export const metadata: Metadata = {
   title: "Steel Structure Cost Calculator 2026 | Free Online Quote Tool",
   description:
-    "Free steel structure cost calculator 2026. Estimate steel building price per m² by building type, size, crane, and location (Australia, China, Nigeria, Philippines, UAE, Indonesia). Q355B steel structure pricing.",
+    "Free steel structure cost calculator 2026. Estimate steel building price per m² by building type, size, crane, and location (Australia, China, Nigeria, Philippines, Vietnam, Thailand, UAE, Indonesia). Q355B steel structure pricing.",
   keywords: [
     "steel structure cost calculator",
     "steel building price per m² 2026",
-    "warehouse construction cost Australia",
+    "warehouse construction cost calculator",
     "Q355B steel price per ton",
     "steel structure quote online",
     "prefab steel building cost calculator",
+    "vietnam steel structure price",
+    "thailand steel building cost",
   ],
   openGraph: {
     title: "Steel Structure Cost Calculator 2026 | Laotie Steel",
@@ -78,7 +80,7 @@ export default function CalculatorPage() {
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Get a preliminary quote in 1 minute. Estimate steel building price
             by building type, dimensions, crane system, and project location.
-            Covers Australia, China, Nigeria, Philippines, UAE, Indonesia.
+            Covers Australia, China, Nigeria, Philippines, Vietnam, Thailand, UAE, Indonesia.
           </p>
         </div>
       </section>
@@ -195,6 +197,16 @@ export default function CalculatorPage() {
                 <td className="border border-gray-300 px-4 py-2">Philippines</td>
                 <td className="border border-gray-300 px-4 py-2">680 – 950</td>
                 <td className="border border-gray-300 px-4 py-2">Typhoon-resistant design</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 px-4 py-2">Vietnam</td>
+                <td className="border border-gray-300 px-4 py-2">680 – 920</td>
+                <td className="border border-gray-300 px-4 py-2">Tropical climate, typhoon zone</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 px-4 py-2">Thailand</td>
+                <td className="border border-gray-300 px-4 py-2">700 – 950</td>
+                <td className="border border-gray-300 px-4 py-2">High-temp coating, Bangkok hub</td>
               </tr>
               <tr>
                 <td className="border border-gray-300 px-4 py-2">UAE (Dubai)</td>
@@ -315,7 +327,7 @@ export default function CalculatorPage() {
             design, fabrication, and installation of Q355B steel structures for
             global clients. Our production base in China has 5,000 tons/month
             capacity, with projects completed in Australia, Nigeria, Philippines,
-            UAE, Indonesia, and China.
+            UAE, Vietnam, Thailand, Indonesia, and China.
           </p>
           <p>
             All our steel structures are designed to international standards

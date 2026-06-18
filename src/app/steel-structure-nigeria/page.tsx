@@ -147,6 +147,12 @@ export default function NigeriaLandingPage() {
               >
                 View Projects
               </a>
+              <a
+                href="/calculator?location=nigeria"
+                className="bg-transparent border-2 border-yellow-400 hover:bg-yellow-400 hover:text-blue-900 font-bold py-4 px-8 rounded-lg transition-colors text-lg text-yellow-400"
+              >
+                📐 Try Cost Calculator
+              </a>
             </div>
           </div>
         </div>

@@ -41,8 +41,8 @@ const REGION_PRICES: Record<
   },
   china: {
     steel: 5800,
-    roof: 105,
-    wall: 95,
+    roof: 35,
+    wall: 28,
     shippingPerContainer: 3500,
     install: 320,
     foundation: 220,
@@ -50,7 +50,7 @@ const REGION_PRICES: Record<
     design: 3,
     contingency: 5,
     currency: "CNY",
-    symbol: "CNY",
+    symbol: "¥",
     shipDays: 8,
     installDaysBase: 10,
     tonsPerContainer: 27,
@@ -116,6 +116,38 @@ const REGION_PRICES: Record<
     currency: "USD",
     symbol: "USD",
     shipDays: 21,
+    installDaysBase: 14,
+    tonsPerContainer: 27,
+  },
+  vietnam: {
+    steel: 720,
+    roof: 21,
+    wall: 19,
+    shippingPerContainer: 2200,
+    install: 45,
+    foundation: 42,
+    doors: 7,
+    design: 4,
+    contingency: 8,
+    currency: "USD",
+    symbol: "USD",
+    shipDays: 16,
+    installDaysBase: 14,
+    tonsPerContainer: 27,
+  },
+  thailand: {
+    steel: 790,
+    roof: 24,
+    wall: 21,
+    shippingPerContainer: 2600,
+    install: 52,
+    foundation: 48,
+    doors: 8,
+    design: 5,
+    contingency: 8,
+    currency: "USD",
+    symbol: "USD",
+    shipDays: 20,
     installDaysBase: 14,
     tonsPerContainer: 27,
   },
@@ -252,9 +284,15 @@ export default function Calculator() {
   }, [searchParams]);
 
   const fmt = (n: number, sym: string) => {
-    if (n >= 1_000_000) return `${sym === "CNY" ? "¥" : "$"}${(n / 1_000_000).toFixed(2)}M`;
-    if (n >= 1_000) return `${sym === "CNY" ? "¥" : "$"}${Math.round(n / 1_000)}K`;
-    return `${sym === "CNY" ? "¥" : "$"}${Math.round(n)}`;
+    const symbolMap: Record<string, string> = {
+      CNY: "¥",
+      AUD: "A$",
+      USD: "$",
+    };
+    const displaySymbol = symbolMap[sym] || "$";
+    if (n >= 1_000_000) return `${displaySymbol}${(n / 1_000_000).toFixed(2)}M`;
+    if (n >= 1_000) return `${displaySymbol}${Math.round(n / 1_000)}K`;
+    return `${displaySymbol}${Math.round(n)}`;
   };
 
   // Generate share URL
@@ -296,6 +334,8 @@ export default function Calculator() {
       china: "China",
       nigeria: "Nigeria",
       philippines: "Philippines",
+      vietnam: "Vietnam",
+      thailand: "Thailand",
       uae: "UAE/Dubai",
       indonesia: "Indonesia",
     }[location] || location;
@@ -324,6 +364,8 @@ export default function Calculator() {
       china: "China",
       nigeria: "Nigeria",
       philippines: "Philippines",
+      vietnam: "Vietnam",
+      thailand: "Thailand",
       uae: "UAE/Dubai",
       indonesia: "Indonesia",
     }[location] || location;
@@ -421,9 +463,11 @@ export default function Calculator() {
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             >
               <option value="australia">Australia (AUD)</option>
-              <option value="china">China (CNY)</option>
+              <option value="china">China (¥ CNY)</option>
               <option value="nigeria">Nigeria (USD)</option>
               <option value="philippines">Philippines (USD)</option>
+              <option value="vietnam">Vietnam (USD)</option>
+              <option value="thailand">Thailand (USD)</option>
               <option value="uae">UAE / Dubai (USD)</option>
               <option value="indonesia">Indonesia (USD)</option>
             </select>
