@@ -149,13 +149,15 @@ export default function ProjectCarousel({ projects, title, subtitle }: ProjectCa
                 key={index}
                 className="min-w-[280px] sm:min-w-[320px] md:min-w-[350px] flex-shrink-0 snap-start bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
+                <div className="w-full h-56 bg-gray-100 flex items-center justify-center">
                 <img
                   src={project.image}
                   alt={project.alt}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-56 object-cover"  // Changed from h-48 to h-56 for uniform size
+                  className="max-w-full max-h-full object-contain"
                 />
+                </div>
                 <div className="p-5">
                   <h3 className="font-bold text-lg mb-2 text-gray-900">{project.title}</h3>
                   <p className="text-gray-600 text-sm mb-3 line-clamp-2">
