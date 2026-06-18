@@ -8,7 +8,6 @@ const navItems = [
   { label: "Products", href: "/products" },
   { label: "Projects", href: "/projects" },
   { label: "Case Studies", href: "/case-studies" },
-  { label: "Portfolio", href: "/portfolio" },
   { label: "Manufacturing", href: "/manufacturing-process" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
@@ -18,9 +17,10 @@ const navItems = [
 
 const globalLinks = [
   { label: "Philippines", href: "/steel-structure-philippines", flag: "🇵🇭", disabled: false },
-  { label: "Vietnam", href: "/steel-structure-vietnam", flag: "🇻🇻", disabled: false },
+  { label: "Vietnam", href: "/steel-structure-vietnam", flag: "🇻🇳", disabled: false },
   { label: "Indonesia", href: "/steel-structure-indonesia", flag: "🇮🇩", disabled: false },
   { label: "Nigeria", href: "/steel-structure-nigeria", flag: "🇳🇬", disabled: false },
+  { label: "Thailand", href: "/steel-structure-thailand", flag: "🇹🇭", disabled: false },
 ];
 
 export default function Header() {

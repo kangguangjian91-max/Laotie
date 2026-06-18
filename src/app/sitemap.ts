@@ -11,7 +11,6 @@ const siteUrl = "https://www.laotie-steel.com";
 const staticRoutes = [
   "",
   "/calculator",
-  "/portfolio",
   "/manufacturing-process",
   "/products",
   "/projects",
