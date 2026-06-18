@@ -613,7 +613,17 @@ export default function NigeriaLandingPage() {
             hours with a customized solution and quote.
           </p>
           <div className="max-w-2xl mx-auto">
-            <form className="space-y-6">
+            <form
+              className="space-y-6"
+              action="https://formsubmit.co/kangguangjian91@gmail.com"
+              method="POST"
+            >
+              {/* FormSubmit configuration */}
+              <input type="hidden" name="_subject" value="🇳🇬 Nigeria Inquiry — Laotie Steel Website" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://www.laotie-steel.com/thank-you" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Your Name *
@@ -646,7 +656,7 @@ export default function NigeriaLandingPage() {
                   type="tel"
                   id="phone"
                   name="phone"
-                  placeholder="+63 XXX XXX XXXX"
+                  placeholder="+234 XXX XXX XXXX"
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>

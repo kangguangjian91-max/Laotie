@@ -632,7 +632,13 @@ export default function SteelStructureIndonesia() {
           <h2 className="text-3xl font-bold text-center text-steel mb-12">
             Get a Free Quote for Indonesia
           </h2>
-          <form className="bg-white rounded-2xl p-8 shadow-sm space-y-6" id="contact-form">
+          <form className="bg-white rounded-2xl p-8 shadow-sm space-y-6" id="contact-form" action="https://formsubmit.co/kangguangjian91@gmail.com" method="POST">
+            {/* FormSubmit configuration */}
+            <input type="hidden" name="_subject" value="🇮🇩 Indonesia Inquiry — Laotie Steel Website" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://www.laotie-steel.com/thank-you" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">

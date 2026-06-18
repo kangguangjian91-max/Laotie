@@ -614,7 +614,17 @@ export default function PhilippinesLandingPage() {
             hours with a customized solution and quote.
           </p>
           <div className="max-w-2xl mx-auto">
-            <form className="space-y-6">
+            <form
+              className="space-y-6"
+              action="https://formsubmit.co/kangguangjian91@gmail.com"
+              method="POST"
+            >
+              {/* FormSubmit configuration */}
+              <input type="hidden" name="_subject" value="🇵🇭 Philippines Inquiry — Laotie Steel Website" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://www.laotie-steel.com/thank-you" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Your Name *

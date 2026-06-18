@@ -642,7 +642,13 @@ export default function VietnamLandingPage() {
             Get Free Quote for Vietnam Project
           </h2>
           <div className="max-w-2xl mx-auto">
-            <form className="space-y-6 bg-white p-8 rounded-2xl shadow-lg" action="https://formspree.io/f/your-form-id" method="POST">
+            <form className="space-y-6 bg-white p-8 rounded-2xl shadow-lg" action="https://formsubmit.co/kangguangjian91@gmail.com" method="POST">
+              {/* FormSubmit configuration */}
+              <input type="hidden" name="_subject" value="🇻🇳 Vietnam Inquiry — Laotie Steel Website" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://www.laotie-steel.com/thank-you" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   Name *
