@@ -54,6 +54,18 @@ export default function Footer() {
                   Enclosure &amp; Cladding
                 </a>
               </li>
+              <li>
+                <a href="/steel-structure-price-guide" className="hover:text-white transition-colors inline-flex items-center gap-1 group">
+                  <span className="w-0 group-hover:w-1 h-0.5 bg-steel-accent rounded-full transition-all" />
+                  Price Guide
+                </a>
+              </li>
+              <li>
+                <a href="/calculator" className="hover:text-white transition-colors inline-flex items-center gap-1 group">
+                  <span className="w-0 group-hover:w-1 h-0.5 bg-steel-accent rounded-full transition-all" />
+                  Cost Calculator
+                </a>
+              </li>
             </ul>
           </div>
 

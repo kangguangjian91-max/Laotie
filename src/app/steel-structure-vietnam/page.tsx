@@ -4,6 +4,9 @@ import ProjectCarousel from "@/components/ProjectCarousel";
 import LandingPageTracker from "@/components/LandingPageTracker";
 import ScrollAnimator from "@/components/ScrollAnimator";
 
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
 export const metadata: Metadata = {
   title: "Steel Structure Vietnam | Warehouse & Factory Construction",
   description:
@@ -139,6 +142,7 @@ const breadcrumbSchema = {
 
 export default function VietnamLandingPage() {
   return (
+    <><Header />
     <main className="min-h-screen">
       <LandingPageTracker country="vietnam" pageType="vietnam" />
       <JsonLd data={breadcrumbSchema} />
@@ -826,5 +830,7 @@ export default function VietnamLandingPage() {
         </div>
       </footer>
     </main>
+    <Footer />
+    </>
   );
 }

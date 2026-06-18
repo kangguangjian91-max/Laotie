@@ -4,6 +4,9 @@ import ProjectCarousel from "@/components/ProjectCarousel";
 import LandingPageTracker from "@/components/LandingPageTracker";
 import ScrollAnimator from "@/components/ScrollAnimator";
 
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
 export const metadata: Metadata = {
   title: "Steel Structure Nigeria | Warehouse & Factory Construction",
   description:
@@ -114,6 +117,7 @@ const breadcrumbSchema = {
 
 export default function NigeriaLandingPage() {
   return (
+    <><Header />
     <main className="min-h-screen">
       <LandingPageTracker country="nigeria" pageType="nigeria" />
       <JsonLd data={breadcrumbSchema} />
@@ -743,62 +747,9 @@ export default function NigeriaLandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h3 className="text-lg font-bold mb-4">Laotie Steel Structure</h3>
-              <p className="text-gray-400 text-sm">
-                CE & ISO certified steel structure manufacturer. 15+ years experience, 100+ projects
-                in Nigeria.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <a href="/products" className="text-gray-400 hover:text-white transition-colors">
-                    Products
-                  </a>
-                </li>
-                <li>
-                  <a href="/projects" className="text-gray-400 hover:text-white transition-colors">
-                    Projects
-                  </a>
-                </li>
-                <li>
-                  <a href="/manufacturing-process" className="text-gray-400 hover:text-white transition-colors">
-                    Manufacturing
-                  </a>
-                </li>
-                <li>
-                  <a href="/blog" className="text-gray-400 hover:text-white transition-colors">
-                    Blog
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold mb-4">Contact Us</h3>
-              <p className="text-gray-400 text-sm">
-                📧 kangguangjian91@gmail.com
-                <br />
-                📞 WhatsApp: +86 166 5073 5555
-                <br />
-                🏭 Factory: Shangqiu, Henan, China
-                <br />
-                🏢 Office: Shenzhen, Guangdong, China
-              </p>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-            <p>© 2026 Laotie Steel Structure. All rights reserved.</p>
-            <p className="mt-2">
-              Serving Nigeria: Lagos | Abuja | Kano | Port Harcourt | Kaduna | Ogun
-            </p>
-          </div>
-        </div>
-      </footer>
+      <div className="bg-steel text-white text-center py-4 text-sm">Serving Nigeria: Lagos | Abuja | Kano | Port Harcourt | Ibadan</div>
     </main>
+    <Footer />
+    </>
   );
 }

@@ -129,10 +129,19 @@
   </url>
 
   <url>
-    <loc>https://www.laotie-steel.com/case-studies</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.laotie-steel.com/steel-structure-thailand</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://www.laotie-steel.com/blog</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Price Guide -->
   <url>
     <loc>https://www.laotie-steel.com/steel-structure-price-guide</loc>
     <changefreq>monthly</changefreq>

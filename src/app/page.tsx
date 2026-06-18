@@ -46,7 +46,6 @@ const Products = dynamic(() => import("@/components/Products"), {
 const Factory = dynamic(() => import("@/components/Factory"));
 const ProductionProcess = dynamic(() => import("@/components/ProductionProcess"));
 const Projects = dynamic(() => import("@/components/Projects"));
-const ClientLogos = dynamic(() => import("@/components/ClientLogos"));
 const Testimonials = dynamic(() => import("@/components/Testimonials"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
@@ -218,7 +217,6 @@ export default function Home() {
         <Factory />
         <ProductionProcess />
         <Projects />
-        <ClientLogos />
         <Testimonials />
         <Contact />
       </main>

@@ -1,11 +1,8 @@
 import Image from 'next/image';
+import { projects } from '@/lib/projectsData';
 
-const projects = [
-  { name: "Industrial Warehouse", location: "Australia", type: "Portal Frame" },
-  { name: "Factory Complex", location: "Nigeria", type: "Steel Structure" },
-  { name: "Shopping Mall Roof", location: "Philippines", type: "Space Frame" },
-  { name: "Logistics Center", location: "UAE", type: "Steel Building" },
-];
+// Show first 4 projects on homepage
+const featuredProjects = projects.slice(0, 4);
 
 export default function Projects() {
   return (
@@ -22,10 +19,10 @@ export default function Projects() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {projects.map((project, i) => (
+          {featuredProjects.map((project, i) => (
             <a
               key={project.name}
-              href="/projects"
+              href={`/projects#${project.slug || `project-${i + 1}`}`}
               className="group block"
             >
               <div
@@ -39,7 +36,7 @@ export default function Projects() {
                 {/* Project photo */}
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src={`/images/projects/project-${String(i + 1).padStart(2, '0')}.webp`}
+                    src={project.image}
                     alt={project.name}
                     fill
                     sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"

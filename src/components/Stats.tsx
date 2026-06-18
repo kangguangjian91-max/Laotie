@@ -20,7 +20,7 @@ const stats = [
     href: "/about",
   },
   {
-    value: "35+",
+    value: "30+",
     label: "Countries Exported",
     icon: Globe,
     color: "text-white",
@@ -28,12 +28,12 @@ const stats = [
     href: "/projects",
   },
   {
-    value: "500+",
-    label: "Happy Clients",
+    value: "200+",
+    label: "Projects Completed",
     icon: Factory,
     color: "text-white",
     bg: "bg-white/10",
-    href: "/clients",
+    href: "/projects",
   },
 ];
 
