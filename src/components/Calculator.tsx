@@ -240,7 +240,7 @@ export default function Calculator() {
     const costShipping = containers * cfg.shippingPerContainer;
     const costInstall = area * cfg.install;
     const costFoundation = area * cfg.foundation;
-    const costDoors = area * (cfg.doors / 100);
+    const costDoors = area * cfg.doors;
     const costMezzanine = mezzanineArea > 0 ? mezzanineArea * cfg.steel * 0.35 : 0;
 
     const subtotal =
@@ -257,7 +257,7 @@ export default function Calculator() {
     const costContingency = (subtotal + costDesign) * (cfg.contingency / 100);
     const total = subtotal + costDesign + costContingency;
 
-    const installDays = Math.ceil(area / 500) * 7 + cfg.installDaysBase;
+    const installDays = Math.ceil(area / 500) + cfg.installDaysBase;
 
     setResult({
       area,
