@@ -651,7 +651,7 @@ export default function SteelStructureIndonesia() {
           <form className="bg-white rounded-2xl p-8 shadow-sm space-y-6" id="contact-form" action="https://formsubmit.co/kangguangjian91@gmail.com" method="POST">
             {/* FormSubmit configuration */}
             <input type="hidden" name="_subject" value="🇮🇩 Indonesia Inquiry — Laotie Steel Website" />
-            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_captcha" value="true" />
             <input type="hidden" name="_next" value="https://www.laotie-steel.com/thank-you" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
@@ -762,6 +762,19 @@ export default function SteelStructureIndonesia() {
               </button>
             </div>
           </form>
+        </div>
+      </section>
+
+      {/* Serving More Countries */}
+      <section className="bg-gray-50 py-10">
+        <div className="container mx-auto px-4">
+          <p className="text-center text-sm text-gray-500 mb-4">Also serving:</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <a href="/steel-structure-thailand" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Thailand</a>
+            <a href="/steel-structure-vietnam" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Vietnam</a>
+            <a href="/steel-structure-philippines" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Philippines</a>
+            <a href="/steel-structure-nigeria" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Nigeria</a>
+          </div>
         </div>
       </section>
 

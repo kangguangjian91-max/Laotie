@@ -160,6 +160,17 @@ const STEEL_RATE: Record<string, number> = {
   logistics: 32,
 };
 
+const STEEL_GRADE_MULTIPLIER: Record<string, number> = {
+  Q235B: 1.0,
+  Q355B: 1.15,
+};
+
+const CLADDING_MULTIPLIER: Record<string, { roof: number; wall: number }> = {
+  single: { roof: 1.0, wall: 1.0 },
+  PIR: { roof: 1.6, wall: 1.6 },
+  rockwool: { roof: 1.5, wall: 1.4 },
+};
+
 const CRANE_ADDITION: Record<string, number> = {
   none: 0,
   "5T": 3,
@@ -177,8 +188,10 @@ export default function Calculator() {
   const [height, setHeight] = useState(12);
   const [crane, setCrane] = useState("none");
   const [location, setLocation] = useState("australia");
-  const [shareUrl, setShareUrl] = useState("");
-  const [copied, setCopied] = useState(false);
+  const [steelGrade, setSteelGrade] = useState("Q355B");
+  const [claddingType, setCladdingType] = useState("PIR");
+  const [mezzanineArea, setMezzanineArea] = useState(0);
+  const shareUrlRef = useRef("");
 
   const [result, setResult] = useState<{
     area: number;
@@ -191,6 +204,7 @@ export default function Calculator() {
     costInstall: number;
     costFoundation: number;
     costDoors: number;
+    costMezzanine: number;
     subtotal: number;
     costDesign: number;
     costContingency: number;
@@ -212,19 +226,22 @@ export default function Calculator() {
     const roofArea = area;
 
     const rate = (STEEL_RATE[buildingType] || 28) + (CRANE_ADDITION[crane] || 0);
-    const steelTons = (area * rate) / 1000;
+    const gradeMultiplier = STEEL_GRADE_MULTIPLIER[steelGrade] || 1.0;
+    const claddingMul = CLADDING_MULTIPLIER[claddingType] || CLADDING_MULTIPLIER.PIR;
+    const steelTons = (area * rate * gradeMultiplier) / 1000;
 
     const cfg = REGION_PRICES[location] || REGION_PRICES.australia;
     const tonsPerContainer = cfg.tonsPerContainer || 27;
     const containers = Math.ceil(steelTons / tonsPerContainer);
 
     const costSteel = steelTons * cfg.steel;
-    const costRoof = roofArea * cfg.roof;
-    const costWall = wallArea * cfg.wall;
+    const costRoof = roofArea * cfg.roof * claddingMul.roof;
+    const costWall = wallArea * cfg.wall * claddingMul.wall;
     const costShipping = containers * cfg.shippingPerContainer;
     const costInstall = area * cfg.install;
     const costFoundation = area * cfg.foundation;
     const costDoors = area * (cfg.doors / 100);
+    const costMezzanine = mezzanineArea > 0 ? mezzanineArea * cfg.steel * 0.35 : 0;
 
     const subtotal =
       costSteel +
@@ -233,7 +250,8 @@ export default function Calculator() {
       costShipping +
       costInstall +
       costFoundation +
-      costDoors;
+      costDoors +
+      costMezzanine;
 
     const costDesign = subtotal * (cfg.design / 100);
     const costContingency = (subtotal + costDesign) * (cfg.contingency / 100);
@@ -252,6 +270,7 @@ export default function Calculator() {
       costInstall,
       costFoundation,
       costDoors,
+      costMezzanine,
       subtotal,
       costDesign,
       costContingency,
@@ -261,10 +280,10 @@ export default function Calculator() {
       shipDays: cfg.shipDays,
       installDays,
     });
-  }, [buildingType, length, width, height, crane, location]);
+  }, [buildingType, length, width, height, crane, location, steelGrade, claddingType, mezzanineArea]);
 
-  // Auto-calculate on mount
-  useEffect(() => { calc(); }, [calc]);
+  // Auto-calculate on mount and when dependencies change
+  useEffect(() => { shareUrlRef.current = ""; calc(); }, [calc]);
 
   // Read URL parameters on mount
   useEffect(() => {
@@ -280,7 +299,13 @@ export default function Calculator() {
     if (len) setLength(Number(len));
     if (wdt) setWidth(Number(wdt));
     if (hgt) setHeight(Number(hgt));
-    if (crn) setCrane(crn.toUpperCase());
+    if (crn) setCrane(crn.toLowerCase());
+    const grit = searchParams.get("steelGrade");
+    if (grit && ["Q235B", "Q355B"].includes(grit)) setSteelGrade(grit);
+    const cladding = searchParams.get("claddingType");
+    if (cladding && ["single", "PIR", "rockwool"].includes(cladding)) setCladdingType(cladding);
+    const mezz = searchParams.get("mezzanine");
+    if (mezz) setMezzanineArea(Number(mezz));
   }, [searchParams]);
 
   const fmt = (n: number, sym: string) => {
@@ -295,123 +320,67 @@ export default function Calculator() {
     return `${displaySymbol}${Math.round(n)}`;
   };
 
-  // Generate share URL
-  const generateShareUrl = () => {
+  // Share helpers
+  const buildingTypeLabel = {
+    warehouse: "Warehouse/Logistics",
+    factory: "Factory (with crane)",
+    hangar: "Aircraft Hangar",
+    logistics: "Logistics Center",
+  } as Record<string, string>;
+
+  const locationLabel = {
+    australia: "Australia",
+    china: "China",
+    nigeria: "Nigeria",
+    philippines: "Philippines",
+    vietnam: "Vietnam",
+    thailand: "Thailand",
+    uae: "UAE/Dubai",
+    indonesia: "Indonesia",
+  } as Record<string, string>;
+
+  // Generate share URL once and reuse
+  const getShareUrl = () => {
+    if (shareUrlRef.current) return shareUrlRef.current;
     const params = new URLSearchParams({
       buildingType,
       location,
       length: String(length),
       width: String(width),
       height: String(height),
-      crane: crane.toUpperCase(),
+      crane: crane,
+      steelGrade,
+      claddingType,
+      mezzanine: String(mezzanineArea),
     });
     const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
-    setShareUrl(url);
+    shareUrlRef.current = url;
+    return url;
+  };
+
+  const [copied, setCopied] = useState(false);
+
+  const copyShareLink = () => {
+    const url = getShareUrl();
     navigator.clipboard.writeText(url);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
-  // Social media share functions
-  const shareToWhatsApp = () => {
-    const params = new URLSearchParams({
-      buildingType,
-      location,
-      length: String(length),
-      width: String(width),
-      height: String(height),
-      crane: crane.toUpperCase(),
-    });
-    const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
-    const buildingTypeLabel = {
-      warehouse: "Warehouse/Logistics",
-      factory: "Factory (with crane)",
-      hangar: "Aircraft Hangar",
-      logistics: "Logistics Center",
-    }[buildingType] || buildingType;
-    const locationLabel = {
-      australia: "Australia",
-      china: "China",
-      nigeria: "Nigeria",
-      philippines: "Philippines",
-      vietnam: "Vietnam",
-      thailand: "Thailand",
-      uae: "UAE/Dubai",
-      indonesia: "Indonesia",
-    }[location] || location;
-    const text = `Steel Structure Cost Estimate:%0A%0A• Building: ${buildingTypeLabel}%0A• Location: ${locationLabel}%0A• Size: ${length}×${width}×${height}m%0A• Crane: ${crane.toUpperCase()}%0A%0AGet your estimate: ${url}`;
-    window.open(`https://wa.me/?text=${text}`, "_blank");
-  };
+  const shareTo = (channel: string) => {
+    const url = getShareUrl();
+    const bl = buildingTypeLabel[buildingType] || buildingType;
+    const ll = locationLabel[location] || location;
+    const text = `Steel Structure Estimate - ${bl} in ${ll}: ${length}×${width}×${height}m`;
 
-  const shareToEmail = () => {
-    const params = new URLSearchParams({
-      buildingType,
-      location,
-      length: String(length),
-      width: String(width),
-      height: String(height),
-      crane: crane.toUpperCase(),
-    });
-    const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
-    const buildingTypeLabel = {
-      warehouse: "Warehouse/Logistics",
-      factory: "Factory (with crane)",
-      hangar: "Aircraft Hangar",
-      logistics: "Logistics Center",
-    }[buildingType] || buildingType;
-    const locationLabel = {
-      australia: "Australia",
-      china: "China",
-      nigeria: "Nigeria",
-      philippines: "Philippines",
-      vietnam: "Vietnam",
-      thailand: "Thailand",
-      uae: "UAE/Dubai",
-      indonesia: "Indonesia",
-    }[location] || location;
-    const subject = `Steel Structure Cost Estimate - ${buildingTypeLabel} in ${locationLabel}`;
-    const body = `Hello,%0A%0AI calculated a steel structure cost estimate and wanted to share it with you.%0A%0AProject Details:%0A- Building Type: ${buildingTypeLabel}%0A- Location: ${locationLabel}%0A- Dimensions: ${length}m × ${width}m × ${height}m%0A- Overhead Crane: ${crane.toUpperCase()}%0A%0AView the full estimate: ${url}%0A%0ABest regards`;
-    window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${body}`;
-  };
-
-  const shareToTwitter = () => {
-    const params = new URLSearchParams({
-      buildingType,
-      location,
-      length: String(length),
-      width: String(width),
-      height: String(height),
-      crane: crane.toUpperCase(),
-    });
-    const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
-    const text = `Get an instant steel structure cost estimate for your project. Free online calculator with regional pricing.`;
-    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, "_blank");
-  };
-
-  const shareToLinkedIn = () => {
-    const params = new URLSearchParams({
-      buildingType,
-      location,
-      length: String(length),
-      width: String(width),
-      height: String(height),
-      crane: crane.toUpperCase(),
-    });
-    const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, "_blank");
-  };
-
-  const shareToFacebook = () => {
-    const params = new URLSearchParams({
-      buildingType,
-      location,
-      length: String(length),
-      width: String(width),
-      height: String(height),
-      crane: crane.toUpperCase(),
-    });
-    const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
-    window.open(`https://www.facebook.com/sharer.php?u=${encodeURIComponent(url)}`, "_blank");
+    const links: Record<string, string> = {
+      whatsapp: `https://wa.me/?text=${encodeURIComponent(text + " " + url)}`,
+      email: `mailto:?subject=${encodeURIComponent(text)}&body=${encodeURIComponent(`Project Details:%0A- Building: ${bl}%0A- Location: ${ll}%0A- Dimensions: ${length}m × ${width}m × ${height}m%0A- Steel Grade: ${steelGrade}%0A- Cladding: ${claddingType}%0A%0AView full estimate: ${url}`)}`,
+      twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent("Get an instant steel structure cost estimate")}&url=${encodeURIComponent(url)}`,
+      linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
+      facebook: `https://www.facebook.com/sharer.php?u=${encodeURIComponent(url)}`,
+    };
+    window.open(links[channel] || links.whatsapp, "_blank");
   };
 
   const pct = result
@@ -535,6 +504,53 @@ export default function Calculator() {
               <option value="50T">50 Ton</option>
             </select>
           </div>
+
+          {/* Steel Grade */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Steel Grade
+            </label>
+            <select
+              value={steelGrade}
+              onChange={(e) => setSteelGrade(e.target.value)}
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            >
+              <option value="Q235B">Q235B (Standard)</option>
+              <option value="Q355B">Q355B (High-strength, +15%)</option>
+            </select>
+          </div>
+
+          {/* Cladding Type */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Roof & Wall Cladding
+            </label>
+            <select
+              value={claddingType}
+              onChange={(e) => setCladdingType(e.target.value)}
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            >
+              <option value="single">Single Skin (economy)</option>
+              <option value="PIR">PIR Sandwich Panel (insulated)</option>
+              <option value="rockwool">Rock Wool Sandwich (fire-rated)</option>
+            </select>
+          </div>
+
+          {/* Mezzanine Area */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Mezzanine / Office Area (m², optional)
+            </label>
+            <input
+              type="number"
+              min={0}
+              max={5000}
+              value={mezzanineArea}
+              onChange={(e) => setMezzanineArea(Number(e.target.value))}
+              placeholder="e.g. 600"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
         </div>
 
         <button
@@ -592,6 +608,7 @@ export default function Calculator() {
               { label: "Installation Labor", value: result.costInstall, color: "bg-orange-500" },
               { label: "Foundation Work", value: result.costFoundation, color: "bg-red-500" },
               { label: "Doors & Windows (est.)", value: result.costDoors, color: "bg-pink-500" },
+              ...(result.costMezzanine > 0 ? [{ label: `Mezzanine / Office (${mezzanineArea} m²)`, value: result.costMezzanine, color: "bg-indigo-500" as const }] : []),
             ].map((item) => (
               <div key={item.label}>
                 <div className="flex justify-between text-sm mb-1">
@@ -642,37 +659,37 @@ export default function Calculator() {
             <div className="text-sm font-medium text-gray-700 mb-3">Share This Estimate</div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               <button
-                onClick={shareToWhatsApp}
+                onClick={() => shareTo("whatsapp")}
                 className="flex items-center justify-center gap-2 py-3 px-4 border-2 border-green-600 text-green-600 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition"
               >
                 <span>💬</span> WhatsApp
               </button>
               <button
-                onClick={shareToEmail}
+                onClick={() => shareTo("email")}
                 className="flex items-center justify-center gap-2 py-3 px-4 border-2 border-gray-600 text-gray-600 rounded-lg font-semibold hover:bg-gray-600 hover:text-white transition"
               >
                 <span>📧</span> Email
               </button>
               <button
-                onClick={shareToTwitter}
+                onClick={() => shareTo("twitter")}
                 className="flex items-center justify-center gap-2 py-3 px-4 border-2 border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition"
               >
                 <span>🐦</span> Twitter
               </button>
               <button
-                onClick={shareToLinkedIn}
+                onClick={() => shareTo("linkedin")}
                 className="flex items-center justify-center gap-2 py-3 px-4 border-2 border-blue-700 text-blue-700 rounded-lg font-semibold hover:bg-blue-700 hover:text-white transition"
               >
                 <span>💼</span> LinkedIn
               </button>
               <button
-                onClick={shareToFacebook}
+                onClick={() => shareTo("facebook")}
                 className="flex items-center justify-center gap-2 py-3 px-4 border-2 border-blue-900 text-blue-900 rounded-lg font-semibold hover:bg-blue-900 hover:text-white transition"
               >
                 <span>👥</span> Facebook
               </button>
               <button
-                onClick={generateShareUrl}
+                onClick={copyShareLink}
                 className="flex items-center justify-center gap-2 py-3 px-4 border-2 border-steel text-steel rounded-lg font-semibold hover:bg-steel hover:text-white transition"
               >
                 {copied ? "✓ Copied!" : "📋 Copy Link"}

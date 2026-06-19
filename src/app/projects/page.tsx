@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowLeft, MapPin, Building, Ruler, Calendar } from "lucide-react";
 import { projects, projectProductLinks } from "@/lib/projectsData";
 import type { Project } from "@/lib/projectsData";
+import ProjectImage from "@/components/ProjectImage";
 
 export const metadata = {
   title: "Steel Structure Project Cases | Warehouse, Factory, Sports Hall",
@@ -40,7 +41,7 @@ export default function ProjectsPage() {
         {/* Hero */}
         <section className="relative bg-steel overflow-hidden">
           <div className="absolute inset-0 opacity-15">
-            <img src="/images/projects/project-04.webp" alt="Completed steel structure project by Laotie Steel - industrial building construction" className="w-full h-full object-cover" />
+            <ProjectImage src="/images/projects/project-04.webp" alt="Completed steel structure project by Laotie Steel - industrial building construction" className="w-full h-full object-cover" containerClassName="w-full h-full" />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-steel via-steel/95 to-steel/80" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
@@ -102,11 +103,11 @@ export default function ProjectsPage() {
               >
                 {/* Image */}
                 <div className="lg:col-span-2 overflow-hidden rounded-2xl">
-                  <img
+                  <ProjectImage
                     src={project.image}
                     alt={project.name}
                     className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-300"
-                    loading={i > 1 ? "lazy" : "eager"}
+                    containerClassName="w-full aspect-[4/3]"
                   />
                 </div>
 

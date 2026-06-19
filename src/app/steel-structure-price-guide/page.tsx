@@ -485,7 +485,7 @@ export default function SteelStructurePriceGuide() {
             >
               <input type="hidden" name="_subject" value="💰 Price Guide Quotation Request — Laotie Steel Website" />
               <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_captcha" value="true" />
               <input type="hidden" name="_next" value="https://www.laotie-steel.com/thank-you" />
 
               <div className="grid md:grid-cols-2 gap-6">

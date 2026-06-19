@@ -28,7 +28,7 @@ const stats = [
     href: "/projects",
   },
   {
-    value: "200+",
+    value: "50+",
     label: "Projects Completed",
     icon: Factory,
     color: "text-white",

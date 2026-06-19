@@ -94,7 +94,7 @@ export default function ContactPage() {
               >
                 {/* FormSubmit configuration */}
                 <input type="hidden" name="_subject" value="New Inquiry — Laotie Steel Website" />
-                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_captcha" value="true" />
                 <input type="hidden" name="_next" value="https://www.laotie-steel.com/thank-you" />
                 <input type="hidden" name="_template" value="table" />
                 {/* Honeypot spam protection */}

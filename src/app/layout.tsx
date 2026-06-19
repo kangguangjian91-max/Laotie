@@ -46,7 +46,7 @@ const organizationSchema = {
     {
       "@type": "ContactPoint",
       contactType: "customer service",
-      email: "kangguangjian91@gmail.com",
+      email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "kangguangjian91@gmail.com",
       availableLanguage: ["English", "Chinese"],
     },
   ],
@@ -146,9 +146,12 @@ export default function RootLayout({
         {/* Hreflang tags for international SEO */}
         <link rel="alternate" hrefLang="en" href="https://www.laotie-steel.com" />
         <link rel="alternate" hrefLang="x-default" href="https://www.laotie-steel.com" />
-        {/* Add more hreflang when country pages are created:
-        <link rel="alternate" hrefLang="en-AU" href="https://www.laotie-steel.com/australia" />
-        <link rel="alternate" hrefLang="en-NG" href="https://www.laotie-steel.com/nigeria" />
+        {/* Country-specific hreflang — uncomment when ready
+        <link rel="alternate" hrefLang="en-TH" href="https://www.laotie-steel.com/steel-structure-thailand" />
+        <link rel="alternate" hrefLang="en-VN" href="https://www.laotie-steel.com/steel-structure-vietnam" />
+        <link rel="alternate" hrefLang="en-ID" href="https://www.laotie-steel.com/steel-structure-indonesia" />
+        <link rel="alternate" hrefLang="en-PH" href="https://www.laotie-steel.com/steel-structure-philippines" />
+        <link rel="alternate" hrefLang="en-NG" href="https://www.laotie-steel.com/steel-structure-nigeria" />
         */}
         {/* Microsoft Clarity — free user behavior analytics (Hotjar alternative) */}
         <Script

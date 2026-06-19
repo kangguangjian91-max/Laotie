@@ -5,6 +5,7 @@ import JsonLd from "@/components/JsonLd";
 import { getPostBySlug, getAllSlugs, getAllPostsIncludingNew, getPostBySlugIncludingNew, getAllSlugsIncludingNew, type BlogPost } from "@/data/blog";
 import { ArrowLeft, Clock, Tag, Calendar } from "lucide-react";
 import { notFound } from "next/navigation";
+import DOMPurify from "isomorphic-dompurify";
 
 export function generateStaticParams() {
   return getAllSlugsIncludingNew().map((slug) => ({ slug }));
@@ -196,7 +197,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <div className="border-t border-gray-100 pt-8">
             <div
               className="prose max-w-none"
-              dangerouslySetInnerHTML={{ __html: html }}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(html) }}
             />
           </div>
 

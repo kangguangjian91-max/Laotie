@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import Image from "next/image";
 
+import DOMPurify from "isomorphic-dompurify";
+
 export const metadata: Metadata = {
   title: "Steel Structure Manufacturing Process | 7-Step Quality Control | Laotie Steel",
   description:
@@ -255,7 +257,7 @@ export default function ManufacturingProcessPage() {
                   <h2 className="text-2xl font-bold text-steel mb-4">{step.title}</h2>
                   <div
                     className="text-gray-600 leading-relaxed space-y-3 mb-6"
-                    dangerouslySetInnerHTML={{ __html: step.description }}
+                    dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(step.description) }}
                   />
                   {/* Specs */}
                   <div className="grid grid-cols-2 gap-2">

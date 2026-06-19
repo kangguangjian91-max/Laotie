@@ -3,6 +3,8 @@
 import { useState, FormEvent } from "react";
 import { trackFormSubmit, trackWhatsAppClick, trackEmailClick, trackOutboundLink } from "@/lib/gtag";
 
+const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "kangguangjian91@gmail.com";
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -82,7 +84,7 @@ export default function Contact() {
         </div>
 
         <form
-          action="https://formsubmit.co/kangguangjian91@gmail.com"
+          action={`https://formsubmit.co/${CONTACT_EMAIL}`}
           method="POST"
           onSubmit={handleSubmit}
           noValidate
@@ -90,7 +92,7 @@ export default function Contact() {
           className="max-w-2xl mx-auto grid sm:grid-cols-3 gap-4"
         >
           <input type="hidden" name="_subject" value="Quick Inquiry — Laotie Steel Website" />
-          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_captcha" value="true" />
           <div>
             <label htmlFor="contact-name" className="sr-only">Your Name</label>
             <input
@@ -177,8 +179,8 @@ export default function Contact() {
                 </svg>
               ),
               title: "Email",
-              text: "kangguangjian91@gmail.com",
-              href: "mailto:kangguangjian91@gmail.com",
+              text: CONTACT_EMAIL,
+              href: `mailto:${CONTACT_EMAIL}`,
             },
             {
               icon: (

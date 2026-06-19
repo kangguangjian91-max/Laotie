@@ -4,6 +4,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { projectDetails, type ProjectDetail } from "@/data/projects-detail";
 import JsonLd from "@/components/JsonLd";
+import DOMPurify from "isomorphic-dompurify";
+import ProjectImage from "@/components/ProjectImage";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -89,10 +91,11 @@ export default async function ProjectDetailPage(props: PageProps) {
       <main className="bg-white">
         {/* ===== Project Hero Image ===== */}
         <section className="relative bg-steel">
-          <img
+          <ProjectImage
             src={project.image}
             alt={project.h1}
             className="w-full h-[400px] lg:h-[500px] object-cover"
+            containerClassName="w-full h-[400px] lg:h-[500px]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-steel/90 via-steel/50 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
@@ -126,7 +129,7 @@ export default async function ProjectDetailPage(props: PageProps) {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Project Overview</h2>
               <div
                 className="prose prose-lg max-w-none text-gray-700 leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: project.overview }}
+                dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(project.overview) }}
               />
             </div>
             <aside className="lg:col-span-1">
@@ -159,7 +162,7 @@ export default async function ProjectDetailPage(props: PageProps) {
             <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Project Challenges</h2>
             <div
               className="max-w-4xl mx-auto prose prose-lg max-w-none text-gray-700 leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: project.challenges }}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(project.challenges) }}
             />
           </div>
         </section>
@@ -170,7 +173,7 @@ export default async function ProjectDetailPage(props: PageProps) {
             <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Our Solution</h2>
             <div
               className="max-w-4xl mx-auto prose prose-lg max-w-none text-gray-700 leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: project.solution }}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(project.solution) }}
             />
           </div>
         </section>
@@ -181,7 +184,7 @@ export default async function ProjectDetailPage(props: PageProps) {
             <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Steel Structure Design</h2>
             <div
               className="max-w-4xl mx-auto prose prose-lg max-w-none text-gray-700 leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: project.design }}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(project.design) }}
             />
           </div>
         </section>
@@ -192,7 +195,7 @@ export default async function ProjectDetailPage(props: PageProps) {
             <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Fabrication Process</h2>
             <div
               className="max-w-4xl mx-auto prose prose-lg max-w-none text-gray-700 leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: project.fabrication }}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(project.fabrication) }}
             />
           </div>
         </section>
@@ -203,7 +206,7 @@ export default async function ProjectDetailPage(props: PageProps) {
             <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Quality Control</h2>
             <div
               className="max-w-4xl mx-auto prose prose-lg max-w-none text-gray-700 leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: project.qualityControl }}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(project.qualityControl) }}
             />
           </div>
         </section>
@@ -214,7 +217,7 @@ export default async function ProjectDetailPage(props: PageProps) {
             <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Packing & Shipping</h2>
             <div
               className="max-w-4xl mx-auto prose prose-lg max-w-none text-gray-700 leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: project.packingShipping }}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(project.packingShipping) }}
             />
           </div>
         </section>
@@ -225,7 +228,7 @@ export default async function ProjectDetailPage(props: PageProps) {
             <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Installation Guide</h2>
             <div
               className="max-w-4xl mx-auto prose prose-lg max-w-none text-gray-700 leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: project.installationGuide }}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(project.installationGuide) }}
             />
           </div>
         </section>
@@ -236,7 +239,7 @@ export default async function ProjectDetailPage(props: PageProps) {
             <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Why Choose Henan Laotie</h2>
             <div
               className="max-w-4xl mx-auto prose prose-lg max-w-none text-gray-700 leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: project.whyChoose }}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(project.whyChoose) }}
             />
           </div>
         </section>
@@ -247,15 +250,16 @@ export default async function ProjectDetailPage(props: PageProps) {
             <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Project Photos</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {(project.galleryImages ?? [
-                { src: "/images/projects/project-05.webp", alt: `${project.h1} - project photo` },
-                { src: "/images/projects/project-05.webp", alt: `${project.h1} - project photo` },
-                { src: "/images/projects/project-05.webp", alt: `${project.h1} - project photo` },
+                { src: "/images/projects/project-01.webp", alt: `${project.h1} - front view` },
+                { src: "/images/projects/project-02.webp", alt: `${project.h1} - interior view` },
+                { src: "/images/projects/project-03.webp", alt: `${project.h1} - structural detail` },
               ]).map((img, i) => (
                 <div key={i} className="relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-200">
-                  <img
+                  <ProjectImage
                     src={img.src}
                     alt={img.alt}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    containerClassName="w-full h-full"
                   />
                 </div>
               ))}
@@ -314,7 +318,7 @@ export default async function ProjectDetailPage(props: PageProps) {
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Start Your Steel Warehouse Project?</h2>
             <div
               className="max-w-2xl mx-auto text-gray-300 mb-8"
-              dangerouslySetInnerHTML={{ __html: project.cta }}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(project.cta) }}
             />
             <div className="flex flex-wrap justify-center gap-4">
               <a
@@ -342,7 +346,7 @@ export default async function ProjectDetailPage(props: PageProps) {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <a href="/projects/industrial-warehouse-sydney" className="group block bg-section rounded-2xl overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src="/images/projects/project-01.webp" alt="Industrial warehouse Sydney Australia AS/NZS compliant steel structure" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <ProjectImage src="/images/projects/project-01.webp" alt="Industrial warehouse Sydney Australia AS/NZS compliant steel structure" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" containerClassName="w-full h-full" />
                 </div>
                 <div className="p-5">
                   <p className="text-sm font-bold text-steel-accent">Sydney, Australia</p>
@@ -351,7 +355,7 @@ export default async function ProjectDetailPage(props: PageProps) {
               </a>
               <a href="/projects/aircraft-hangar-jakarta" className="group block bg-section rounded-2xl overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src="/images/projects/project-06.webp" alt="Aircraft hangar Jakarta Indonesia space frame structure" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <ProjectImage src="/images/projects/project-06.webp" alt="Aircraft hangar Jakarta Indonesia space frame structure" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" containerClassName="w-full h-full" />
                 </div>
                 <div className="p-5">
                   <p className="text-sm font-bold text-steel-accent">Jakarta, Indonesia</p>
@@ -360,7 +364,7 @@ export default async function ProjectDetailPage(props: PageProps) {
               </a>
               <a href="/projects/logistics-center-dubai" className="group block bg-section rounded-2xl overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src="/images/projects/project-04.webp" alt="Logistics center Dubai UAE steel building mezzanine" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <ProjectImage src="/images/projects/project-04.webp" alt="Logistics center Dubai UAE steel building mezzanine" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" containerClassName="w-full h-full" />
                 </div>
                 <div className="p-5">
                   <p className="text-sm font-bold text-steel-accent">Dubai, UAE</p>
@@ -376,7 +380,7 @@ export default async function ProjectDetailPage(props: PageProps) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div
               className="max-w-4xl mx-auto prose prose-lg max-w-none text-gray-700 leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: project.conclusion }}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(project.conclusion) }}
             />
           </div>
         </section>

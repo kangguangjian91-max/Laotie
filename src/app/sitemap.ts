@@ -8,6 +8,16 @@ export const dynamic = "force-static";
 
 const siteUrl = "https://www.laotie-steel.com";
 
+// Country-specific landing pages
+const countryRoutes = [
+  "/steel-structure-thailand",
+  "/steel-structure-vietnam",
+  "/steel-structure-indonesia",
+  "/steel-structure-philippines",
+  "/steel-structure-nigeria",
+  "/steel-structure-price-guide",
+];
+
 const staticRoutes = [
   "",
   "/calculator",
@@ -21,6 +31,7 @@ const staticRoutes = [
   "/privacy",
   "/terms",
   "/faq",
+  ...countryRoutes,
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

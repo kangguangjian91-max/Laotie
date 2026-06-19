@@ -176,11 +176,11 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 <a 
-                  href="mailto:kangguangjian91@gmail.com" 
+                  href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL || "kangguangjian91@gmail.com"}`}
                   onClick={() => trackEmailClick("footer")}
                   className="hover:text-white transition-colors"
                 >
-                  kangguangjian91@gmail.com
+                  {process.env.NEXT_PUBLIC_CONTACT_EMAIL || "kangguangjian91@gmail.com"}
                 </a>
               </li>
               <li className="flex items-center gap-2">

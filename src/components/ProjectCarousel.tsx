@@ -21,6 +21,7 @@ export default function ProjectCarousel({ projects, title, subtitle }: ProjectCa
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [imageErrors, setImageErrors] = useState<Set<number>>(new Set());
   const autoScrollInterval = useRef<NodeJS.Timeout | null>(null);
 
   const updateScrollButtons = useCallback(() => {
@@ -149,14 +150,24 @@ export default function ProjectCarousel({ projects, title, subtitle }: ProjectCa
                 key={index}
                 className="min-w-[260px] sm:min-w-[300px] md:min-w-[350px] flex-shrink-0 snap-start bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+                <div className="w-full aspect-[4/3] bg-gray-100 overflow-hidden relative">
+                {imageErrors.has(index) ? (
+                  <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-gray-100 text-gray-400">
+                    <svg className="w-12 h-12 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
+                    </svg>
+                    <span className="text-xs">Project Image</span>
+                  </div>
+                ) : (
                 <img
                   src={project.image}
                   alt={project.alt}
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover"
+                  onError={() => setImageErrors(prev => new Set(prev).add(index))}
                 />
+                )}
                 </div>
                 <div className="p-5">
                   <h3 className="font-bold text-lg mb-2 text-gray-900">{project.title}</h3>
