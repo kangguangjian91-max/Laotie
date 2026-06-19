@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Steel Structure Vietnam | Laotie Steel",
     description:
-      "Your trusted steel structure partner in Vietnam. 100+ projects completed across Hanoi, Ho Chi Minh City, Da Nang.",
+      "Your trusted steel structure partner in Vietnam. 50+ projects completed across Hanoi, Ho Chi Minh City, Da Nang.",
     images: ["/images/vietnam/hero.webp"],
     locale: "en_VN",
     type: "website",
@@ -161,7 +161,7 @@ export default function VietnamLandingPage() {
               Your Trusted Partner for Warehouse & Factory Construction
             </p>
             <p className="text-lg mb-8 text-red-200 max-w-2xl mx-auto">
-              100+ projects completed across Hanoi, Ho Chi Minh City, Da Nang & more.
+              50+ projects completed across Hanoi, Ho Chi Minh City, Da Nang & more.
               CE certified, 30-year warranty, factory-direct pricing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -202,7 +202,7 @@ export default function VietnamLandingPage() {
               </div>
               <h3 className="text-xl font-bold mb-2">15+ Years Experience</h3>
               <p className="text-gray-600">
-                Since 2009, we've manufactured steel structures for 100+ projects worldwide.
+                Since 2009, we've manufactured steel structures for 50+ projects worldwide.
               </p>
             </div>
             </ScrollAnimator>
@@ -407,7 +407,7 @@ export default function VietnamLandingPage() {
       {/* Project Cases - Carousel */}
       <ProjectCarousel
         title="Project Cases in Vietnam"
-        subtitle="We have completed 100+ steel structure projects across Vietnam. Here are some of our recent works."
+        subtitle="We have completed 50+ steel structure projects across Vietnam. Here are some of our recent works."
         projects={[
           {
             image: "/images/vietnam/3c827b0a462391a3e3486e39a5ae25d4.webp",
