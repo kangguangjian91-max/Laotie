@@ -28,8 +28,8 @@ const REGION_PRICES: Record<
     roof: 42,
     wall: 38,
     shippingPerContainer: 3500,
-    install: 95,
-    foundation: 68,
+    install: 55,
+    foundation: 45,
     doors: 8,
     design: 5,
     contingency: 8,
@@ -191,11 +191,16 @@ export default function Calculator() {
   const [steelGrade, setSteelGrade] = useState("Q355B");
   const [claddingType, setCladdingType] = useState("PIR");
   const [mezzanineArea, setMezzanineArea] = useState(0);
+  const [quantity, setQuantity] = useState(1);
+  const [spanType, setSpanType] = useState("clear");
+  const [supplyOnly, setSupplyOnly] = useState(false);
   const shareUrlRef = useRef("");
 
   const [result, setResult] = useState<{
     area: number;
     steelTons: number;
+    totalSteelTons: number;
+    quantity: number;
     containers: number;
     costSteel: number;
     costRoof: number;
@@ -219,28 +224,31 @@ export default function Calculator() {
     const L = Number(length) || 0;
     const W = Number(width) || 0;
     const H = Number(height) || 0;
+    const Q = Number(quantity) || 1;
     if (L <= 0 || W <= 0 || H <= 0) return;
 
     const area = L * W;
     const wallArea = 2 * (L + W) * H * 0.85; // 15% doors/windows deduction
     const roofArea = area;
 
+    const spanMultiplier = spanType === "multi" ? 0.88 : 1.0; // multi-span saves ~12% steel
     const rate = (STEEL_RATE[buildingType] || 28) + (CRANE_ADDITION[crane] || 0);
     const gradeMultiplier = STEEL_GRADE_MULTIPLIER[steelGrade] || 1.0;
     const claddingMul = CLADDING_MULTIPLIER[claddingType] || CLADDING_MULTIPLIER.PIR;
-    const steelTons = (area * rate * gradeMultiplier) / 1000;
+    const steelTons = (area * rate * gradeMultiplier * spanMultiplier) / 1000;
 
     const cfg = REGION_PRICES[location] || REGION_PRICES.australia;
     const tonsPerContainer = cfg.tonsPerContainer || 27;
-    const containers = Math.ceil(steelTons / tonsPerContainer);
+    const totalSteelTons = steelTons * Q;
+    const containers = Math.ceil(totalSteelTons / tonsPerContainer);
 
-    const costSteel = steelTons * cfg.steel;
-    const costRoof = roofArea * cfg.roof * claddingMul.roof;
-    const costWall = wallArea * cfg.wall * claddingMul.wall;
+    const costSteel = totalSteelTons * cfg.steel;
+    const costRoof = roofArea * cfg.roof * claddingMul.roof * Q;
+    const costWall = wallArea * cfg.wall * claddingMul.wall * Q;
     const costShipping = containers * cfg.shippingPerContainer;
-    const costInstall = area * cfg.install;
-    const costFoundation = area * cfg.foundation;
-    const costDoors = area * cfg.doors;
+    const costInstall = supplyOnly ? 0 : area * cfg.install * Q;
+    const costFoundation = supplyOnly ? 0 : area * cfg.foundation * Q;
+    const costDoors = area * cfg.doors * Q;
     const costMezzanine = mezzanineArea > 0 ? mezzanineArea * cfg.steel * 0.35 : 0;
 
     const subtotal =
@@ -257,11 +265,13 @@ export default function Calculator() {
     const costContingency = (subtotal + costDesign) * (cfg.contingency / 100);
     const total = subtotal + costDesign + costContingency;
 
-    const installDays = Math.ceil(area / 500) + cfg.installDaysBase;
+    const installDays = supplyOnly ? 0 : Math.ceil(area / 500) + cfg.installDaysBase;
 
     setResult({
       area,
       steelTons,
+      totalSteelTons,
+      quantity: Q,
       containers,
       costSteel,
       costRoof,
@@ -280,7 +290,7 @@ export default function Calculator() {
       shipDays: cfg.shipDays,
       installDays,
     });
-  }, [buildingType, length, width, height, crane, location, steelGrade, claddingType, mezzanineArea]);
+  }, [buildingType, length, width, height, crane, location, steelGrade, claddingType, mezzanineArea, quantity, spanType, supplyOnly]);
 
   // Auto-calculate on mount and when dependencies change
   useEffect(() => { shareUrlRef.current = ""; calc(); }, [calc]);
@@ -306,6 +316,12 @@ export default function Calculator() {
     if (cladding && ["single", "PIR", "rockwool"].includes(cladding)) setCladdingType(cladding);
     const mezz = searchParams.get("mezzanine");
     if (mezz) setMezzanineArea(Number(mezz));
+    const qty = searchParams.get("quantity");
+    if (qty) setQuantity(Math.max(1, Number(qty)));
+    const span = searchParams.get("spanType");
+    if (span && ["clear", "multi"].includes(span)) setSpanType(span);
+    const onlySupply = searchParams.get("supplyOnly");
+    if (onlySupply === "1") setSupplyOnly(true);
   }, [searchParams]);
 
   const fmt = (n: number, sym: string) => {
@@ -352,6 +368,9 @@ export default function Calculator() {
       steelGrade,
       claddingType,
       mezzanine: String(mezzanineArea),
+      quantity: String(quantity),
+      spanType,
+      supplyOnly: supplyOnly ? "1" : "0",
     });
     const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
     shareUrlRef.current = url;
@@ -551,6 +570,52 @@ export default function Calculator() {
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
+
+          {/* Quantity */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Quantity (number of identical buildings)
+            </label>
+            <input
+              type="number"
+              min={1}
+              max={50}
+              value={quantity}
+              onChange={(e) => setQuantity(Math.max(1, Number(e.target.value)))}
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+
+          {/* Span Type */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Span Configuration
+            </label>
+            <select
+              value={spanType}
+              onChange={(e) => setSpanType(e.target.value)}
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            >
+              <option value="clear">Clear Span (no interior columns)</option>
+              <option value="multi">Multi-Span (with columns, saves ~12% steel)</option>
+            </select>
+          </div>
+
+          {/* Supply Only Toggle */}
+          <div className="flex items-center">
+            <label className="flex items-center gap-3 cursor-pointer">
+              <div
+                onClick={() => setSupplyOnly(!supplyOnly)}
+                className={`relative w-12 h-6 rounded-full transition-colors ${supplyOnly ? 'bg-steel' : 'bg-gray-300'}`}
+              >
+                <div className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow transition-transform ${supplyOnly ? 'translate-x-6' : ''}`} />
+              </div>
+              <div>
+                <span className="text-sm font-medium text-gray-700">Supply Only (FOB)</span>
+                <p className="text-xs text-gray-400">Exclude installation &amp; foundation</p>
+              </div>
+            </label>
+          </div>
         </div>
 
         <button
@@ -574,25 +639,29 @@ export default function Calculator() {
                 {fmt(result.total, result.symbol)}
               </div>
               <div className="text-xs text-gray-500 mt-1">
-                {fmt(Math.round(result.total / result.area), result.symbol)}/m²
+                {fmt(Math.round(result.total / (result.area * result.quantity)), result.symbol)}/m²
+                {result.symbol !== "$" && <span className="text-gray-400 ml-1">(~${Math.round(result.total / 7.3 / (result.area * result.quantity))}/m² USD)</span>}
               </div>
             </div>
             <div className="bg-green-50 rounded-xl p-4 text-center">
               <div className="text-sm text-gray-500 mb-1">Steel Quantity</div>
               <div className="text-2xl font-bold text-green-700">
-                {Math.round(result.steelTons)} t
+                {Math.round(result.totalSteelTons)} t
               </div>
               <div className="text-xs text-gray-500 mt-1">
-                ≈ {result.containers} × 40HQ containers
+                {result.quantity > 1 ? `${Math.round(result.steelTons)}t/building × ${result.quantity}` : ""}
+                {" "}≈ {result.containers} × 40HQ containers
               </div>
             </div>
             <div className="bg-amber-50 rounded-xl p-4 text-center">
               <div className="text-sm text-gray-500 mb-1">Estimated Lead Time</div>
               <div className="text-2xl font-bold text-amber-700">
-                {result.shipDays + result.installDays} days
+                {supplyOnly ? `${result.shipDays} days` : `${result.shipDays + result.installDays} days`}
               </div>
               <div className="text-xs text-gray-500 mt-1">
-                {result.shipDays}d shipping + {result.installDays}d install
+                {supplyOnly
+                  ? `${result.shipDays}d shipping (FOB)`
+                  : `${result.shipDays}d shipping + ${result.installDays}d install`}
               </div>
             </div>
           </div>
