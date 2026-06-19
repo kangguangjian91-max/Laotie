@@ -130,6 +130,14 @@ export const projectDetails: Record<string, ProjectDetail> = {
       { label: "Foundation Type", value: "Reinforced concrete pad footings (1.5m×1.5m×1.0m)" },
       { label: "Erection Method", value: "Bolted connection, no on-site welding" },
     ],
+    galleryImages: [
+      { src: "/images/projects/yunda-bozhou/yunda-01.webp", alt: "Sydney warehouse exterior - completed building with entrance" },
+      { src: "/images/projects/yunda-bozhou/yunda-06.webp", alt: "Sydney warehouse construction - steel frame erection" },
+      { src: "/images/projects/yunda-bozhou/yunda-07.webp", alt: "Sydney warehouse exterior view - cladding installation" },
+      { src: "/images/projects/yunda-bozhou/yunda-08.webp", alt: "Sydney warehouse construction site - crane lifting steel beams" },
+      { src: "/images/projects/yunda-bozhou/yunda-15.webp", alt: "Sydney warehouse interior - steel structure with translucent roofing" },
+      { src: "/images/projects/yunda-bozhou/yunda-19.webp", alt: "Sydney warehouse overview - completed distribution facility" },
+    ],
     faq: [
       {
         question: "How much does a 120m × 60m industrial warehouse cost in Sydney?",
@@ -307,6 +315,14 @@ export const projectDetails: Record<string, ProjectDetail> = {
       { label: "Foundation Type", value: "Reinforced concrete pad footings (1.8m×1.8m×1.2m)" },
       { label: "Erection Method", value: "Bolted connection, pre-galvanized members" },
     ],
+    galleryImages: [
+      { src: "/images/projects/yunda-bozhou/yunda-02.webp", alt: "Lagos factory complex aerial view - multi-span steel structure under construction" },
+      { src: "/images/projects/yunda-bozhou/yunda-03.webp", alt: "Lagos factory complex aerial view - large industrial park development" },
+      { src: "/images/projects/yunda-bozhou/yunda-04.webp", alt: "Lagos factory complex aerial view - multiple building phases" },
+      { src: "/images/projects/yunda-bozhou/yunda-05.webp", alt: "Lagos factory complex construction - steel frame with surrounding infrastructure" },
+      { src: "/images/projects/yunda-bozhou/yunda-09.webp", alt: "Lagos factory complex - detailed steel structure fabrication" },
+      { src: "/images/projects/yunda-bozhou/yunda-10.webp", alt: "Lagos factory complex overview - completed manufacturing facility" },
+    ],
     faq: [
       {
         question: "How much does a 15,000 sqm factory cost in Nigeria?",
@@ -477,6 +493,14 @@ export const projectDetails: Record<string, ProjectDetail> = {
       { label: "Design Life", value: "50 years (NSCP 2015)" },
       { label: "Foundation Type", value: "Reinforced concrete pad footings (2.0m×2.0m×1.5m)" },
       { label: "Erection Method", value: "Bolted connection, typhoon-resistant design" },
+    ],
+    galleryImages: [
+      { src: "/images/projects/yunda-bozhou/yunda-16.webp", alt: "Manila space frame - interior steel structure with roof sheeting" },
+      { src: "/images/projects/yunda-bozhou/yunda-17.webp", alt: "Manila dome roof construction - structural steel installation" },
+      { src: "/images/projects/yunda-bozhou/yunda-18.webp", alt: "Manila shopping mall atrium - steel framework with natural lighting" },
+      { src: "/images/projects/yunda-bozhou/yunda-20.webp", alt: "Manila space frame project - steel member connection details" },
+      { src: "/images/projects/yunda-bozhou/yunda-21.webp", alt: "Manila dome roof - interior view showing long-span structure" },
+      { src: "/images/projects/yunda-bozhou/yunda-22.webp", alt: "Manila shopping mall - steel structure with mezzanine level" },
     ],
     faq: [
       {
@@ -656,6 +680,14 @@ export const projectDetails: Record<string, ProjectDetail> = {
       { label: "Foundation Type", value: "Reinforced concrete pad footings (2.0m×2.0m×1.5m)" },
       { label: "Erection Method", value: "Bolted connection, sandstorm-resistant design" },
     ],
+    galleryImages: [
+      { src: "/images/projects/yunda-bozhou/yunda-02.webp", alt: "Dubai logistics center - aerial view of large distribution complex" },
+      { src: "/images/projects/yunda-bozhou/yunda-03.webp", alt: "Dubai logistics hub - multi-building warehouse development" },
+      { src: "/images/projects/yunda-bozhou/yunda-04.webp", alt: "Dubai logistics center construction - steel structure progress" },
+      { src: "/images/projects/yunda-bozhou/yunda-05.webp", alt: "Dubai distribution facility - large-span warehouse under construction" },
+      { src: "/images/projects/yunda-bozhou/yunda-25.webp", alt: "Dubai logistics center - completed warehouse with loading area" },
+      { src: "/images/projects/yunda-bozhou/yunda-26.webp", alt: "Dubai logistics hub overview - distribution center facility" },
+    ],
     faq: [
       {
         question: "How much does a 22,000 sqm logistics center cost in Dubai?",
@@ -826,6 +858,14 @@ export const projectDetails: Record<string, ProjectDetail> = {
       { label: "Design Life", value: "50 years (SNI 1729:2015)" },
       { label: "Foundation Type", value: "Reinforced concrete pad footings (1.8m×1.8m×1.2m)" },
       { label: "Erection Method", value: "Bolted connection, earthquake-resistant design" },
+    ],
+    galleryImages: [
+      { src: "/images/projects/yunda-bozhou/yunda-16.webp", alt: "Jakarta aircraft hangar - large-span steel structure interior" },
+      { src: "/images/projects/yunda-bozhou/yunda-17.webp", alt: "Jakarta hangar construction - steel framework installation" },
+      { src: "/images/projects/yunda-bozhou/yunda-18.webp", alt: "Jakarta maintenance hangar - steel structure with natural lighting" },
+      { src: "/images/projects/yunda-bozhou/yunda-19.webp", alt: "Jakarta hangar project - completed building exterior" },
+      { src: "/images/projects/yunda-bozhou/yunda-20.webp", alt: "Jakarta aircraft hangar - structural steel connection details" },
+      { src: "/images/projects/yunda-bozhou/yunda-21.webp", alt: "Jakarta hangar interior - long-span column-free space" },
     ],
     faq: [
       {
@@ -1006,6 +1046,14 @@ export const projectDetails: Record<string, ProjectDetail> = {
       { label: "Design Life", value: "50 years (AS 4100)" },
       { label: "Foundation Type", value: "Reinforced concrete pad footings (1.5m×1.5m×1.0m)" },
       { label: "Erection Method", value: "Bolted connection, no on-site welding" },
+    ],
+    galleryImages: [
+      { src: "/images/projects/yunda-bozhou/yunda-06.webp", alt: "Perth processing plant - industrial facility with steel structure" },
+      { src: "/images/projects/yunda-bozhou/yunda-07.webp", alt: "Perth agricultural plant construction - building exterior" },
+      { src: "/images/projects/yunda-bozhou/yunda-11.webp", alt: "Perth processing plant interior - industrial workspace" },
+      { src: "/images/projects/yunda-bozhou/yunda-12.webp", alt: "Perth agricultural facility - steel building with equipment" },
+      { src: "/images/projects/yunda-bozhou/yunda-14.webp", alt: "Perth grain processing plant - construction site progress" },
+      { src: "/images/projects/yunda-bozhou/yunda-15.webp", alt: "Perth food-grade facility - steel structure with translucent panels" },
     ],
     faq: [
       {
@@ -1485,4 +1533,194 @@ export const projectDetails: Record<string, ProjectDetail> = {
     category: "Rattan Weaving Industrial Park",
     completedYear: "2026 (Ongoing)",
   },
+
+  "yunda-bozhou-modern-industrial-park": {
+    slug: "yunda-bozhou-modern-industrial-park",
+    metaTitle:
+      "Yunda Bozhou Modern Industrial Park | 50,000 sqm Logistics Hub | Laotie Steel",
+    metaDescription:
+      "Large-scale steel structure industrial park in Bozhou, Anhui. 50,000 sqm logistics distribution center with multi-span portal frame design. Get a quote for industrial park projects.",
+    urlSlug: "/projects/yunda-bozhou-modern-industrial-park",
+    image: "/images/projects/yunda-bozhou/yunda-02.webp",
+    h1: "50,000 sqm Yunda Bozhou Modern Industrial Park — Phase II Logistics Distribution Center",
+    overview: `
+      <p>This 50,000 m² modern industrial park was designed and fabricated for Yunda Express's regional logistics hub in Bozhou, Anhui Province. Phase II of the project (the F Zone) serves as a major sorting and distribution center, featuring large-span portal frame structures with high-bay racking systems for automated parcel handling equipment.</p>
+      <p>The complex comprises multiple interconnected buildings, with the main distribution center spanning 200 meters in length and 80 meters in width, with 14 meters eave height. Total steel consumption: 1,200 tons of Q355B high-strength steel. The main portal frame uses tapered H-sections with moment-resisting connections, designed to Chinese GB 50017 and GB 50009 standards.</p>
+      <p>All structural calculations were prepared by our engineering team and reviewed by a third-party consulting firm for compliance with Chinese building codes. The design accounts for Bozhou's wind and snow loads (basic wind pressure: 0.45 kN/m², basic snow pressure: 0.35 kN/m² per GB 50009), and seismic design Category 7 per GB 50011.</p>
+    `,
+    challenges: `
+      <p><strong>1. Large-Scale Multi-Building Coordination.</strong> The 50,000 m² complex includes 5 interconnected buildings, each requiring coordinated structural design to ensure expansion joint alignment, consistent eave heights, and shared utility corridors. We developed a master structural plan that unified foundation types, column grids, and roof slopes across all buildings.</p>
+      <p><strong>2. High-Bay Racking System Integration.</strong> The main sorting facility required 14-meter high-bay racking systems for automated parcel handling. The floor slab must support 8.0 kN/m² live load for heavy racking and conveyor systems. We designed the foundation with thickened slabs and additional steel reinforcement in racking zones.</p>
+      <p><strong>3. Tight Construction Schedule.</strong> The client required the entire 50,000 m² complex to be completed in 6 months. We mobilized 2 of our 5 production lines exclusively for this project, completing all 1,200 tons of steel fabrication in 35 working days.</p>
+      <p><strong>4. Logistics Operations During Construction.</strong> Parts of the existing facility remained operational during Phase II construction. Our erection sequence was carefully planned to minimize disruption to ongoing logistics operations, with temporary safety barriers and designated vehicle access routes.</p>
+    `,
+    solution: `
+      <p><strong>Design Phase:</strong> Our engineering team developed a 3D structural model of the entire 50,000 m² complex. The main sorting facility (Building A) uses a 80m clear-span portal frame with intermediate columns at 20m spacing. Buildings B through E are 40m wide multi-span structures with 10m column spacing. All buildings share a common 14m eave height for consistent material handling equipment installation.</p>
+      <p><strong>Fabrication:</strong> All main frame members were fabricated from Q355B steel plate using CNC plasma cutting. H-section columns (H700×300×14×24) and rafters (H800×300×16×28) were welded using submerged arc welding (SAW) with full penetration welds verified by ultrasonic testing (UT). Total fabrication: 1,200 tons in 35 working days — using 2 dedicated production lines.</p>
+      <p><strong>Cladding System:</strong> The roof uses 0.6mm galvanized steel sheeting with PVDF coating (RAL 9002 gray-white) and 80mm rockwool insulation (U-value 0.35 W/m²K). Walls use 100mm PIR sandwich panels with concealed fixing systems. All gutters and downpipes are hot-dip galvanized after fabrication.</p>
+      <p><strong>Construction Management:</strong> A dedicated project management team coordinated the 5-building construction sequence. Building A (core sorting facility) was prioritized for earliest completion, followed by Buildings B-E. Crane allocation was optimized with 3 mobile cranes working simultaneously during peak erection periods.</p>
+    `,
+    design: `
+      <h3>Portal Frame Design to GB 50017</h3>
+      <p>The main portal frame was designed as a moment-resisting frame with fixed-base conditions. Column base plates use 600×600×36mm thick plates with 12× M30 anchor bolts. Building A provides an 80m clear span with 14m eave height. Buildings B-E are multi-span structures (40m width divided into 2 spans of 20m each).</p>
+      <h3>Wind and Snow Load Analysis (GB 50009)</h3>
+      <p>Bozhou's basic wind pressure: 0.45 kN/m² (50-year return period, GB 50009 Table E.1.3). Basic snow pressure: 0.35 kN/m² (GB 50009 Table E.2.3). Roof live load: 0.5 kN/m² for maintenance access. The design applied load combinations per GB 50009 Section 3.2 with load factors of 1.2 (dead load) and 1.4 (live/wind/snow loads).</p>
+      <h3>Seismic Design (GB 50011)</h3>
+      <p>Bozhou is classified as Seismic Design Category 7 (design basic acceleration: 0.10g, GB 50011 Table 3.2.2). The portal frame structure was analyzed using the equivalent lateral force method (GB 50011 Section 5.2). Seismic force-resisting system: moment-resisting frames in both transverse and longitudinal directions.</p>
+      <h3>Floor Slab Design for High-Bay Racking</h3>
+      <p>The main sorting floor (20,000 m²) is designed for 8.0 kN/m² live load (high-bay racking with automated conveyor systems). Floor slab: 200mm thick reinforced concrete (C30, 30 MPa) with steel mesh reinforcement (∅12@150mm both ways). Control joints at 6m spacing to prevent shrinkage cracking.</p>
+    `,
+    fabrication: `
+      <h3>CNC Cutting & Machining</h3>
+      <p>All steel plates are CNC-cut using a 12-head plasma cutting system with ±1mm tolerance. H-section columns and rafters are welded using automated submerged arc welding (SAW) with continuous welding wires. All full-penetration welds are 100% UT (Ultrasonic Testing) inspected per GB 50661.</p>
+      <h3>Surface Treatment</h3>
+      <p>Every member passes through our 8-wheel shot-blasting machine, achieving SA 2.5 surface profile. The coating system consists of: 1×75μm epoxy zinc-rich primer, 1×125μm epoxy intermediate coat, 1×80μm polyurethane topcoat. Total DFT: 280μm for interior members. All coating thickness is verified using SSPC-PA 2 gauge.</p>
+      <h3>Production Management</h3>
+      <p>With 1,200 tons to deliver in 35 working days, we allocated 2 production lines exclusively for this project. Daily output: 35-40 tons of fabricated steel. Each member was tagged with a QR code linked to the production database for real-time tracking. Daily progress photos were shared with the client's project management team.</p>
+      <h3>Component Marking System</h3>
+      <p>Each building was assigned a unique color code: Building A (red), B (blue), C (green), D (yellow), E (orange). Every member was tagged with its building code, zone number, and member ID for efficient site sorting and erection sequencing.</p>
+    `,
+    qualityControl: `
+      <p>Laotie Steel operates an ISO 9001:2015 certified quality management system. For this Yunda project, we implemented additional QC protocols for the high-volume, tight-schedule production.</p>
+      <p><strong>Dimensional Quality Control:</strong> Pre-shipment trial assembly verified that all portal frame connections aligned within ±2mm tolerance per GB 50205. We used a 3D coordinate measuring arm to verify critical connection dimensions for every 10th frame.</p>
+      <p><strong>Welding Quality:</strong> All full-penetration welds were 100% UT inspected per GB 50661. Fillet welds were spot-checked using magnetic particle inspection (MPI) at 20% frequency. All welding procedures were qualified with welding consumables stored in heated cabinets.</p>
+      <p><strong>Coating Inspection:</strong> Dry-film thickness (DFT) measurements were taken at 5 points per member (minimum). Any reading below 90% of specified DFT (252μm) was repaired with an additional stripe coat. Adhesion testing (cross-cut method per ASTM D3359) was performed on 5% of members.</p>
+      <p><strong>Material Traceability:</strong> Each steel plate's mill test report (EN 10204 3.1 equivalent) was cross-referenced to the finished member's serial number. The client received a full material traceability dossier with photographs of each production stage.</p>
+    `,
+    packingShipping: `
+      <p>For this 1,200-ton structure destined for Bozhou (inland Anhui Province), we used domestic logistics rather than container shipping. All members were loaded onto flatbed trucks (20 trucks total) with protective tarpaulins and steel banding.</p>
+      <p><strong>Truck Loading Plan:</strong> 8 trucks for main H-sections (columns and rafters, maximum length 14m), 6 trucks for secondary members (purlins, girts, bracing, eave struts), 4 trucks for cladding system (steel sheets, sandwich panels, flashings, gutters), 2 trucks for fasteners, sealants, and erection consumables.</p>
+      <p><strong>Damage Protection:</strong> All threaded fasteners were capped with plastic end-caps. Steel sheets were interleaved with kraft paper to prevent abrasion. Sandwich panels were packed in moisture-barrier bags. Each truck load was accompanied by a detailed packing list cross-referenced to the erection drawing's zone numbers.</p>
+      <p><strong>Logistics Coordination:</strong> Laotie Steel's logistics team coordinated with the client's site manager to schedule truck arrivals in sync with the erection sequence. Building A (core sorting facility) members were loaded first to enable early erection start. Average transit time from our Henan factory to Bozhou site: 6 hours by highway.</p>
+    `,
+    installationGuide: `
+      <h3>Foundation Preparation</h3>
+      <p>The client's local contractor poured reinforced concrete foundations per our foundation reaction report. Anchor bolt cages were supplied by Laotie Steel with laser-aligned positioning. Anchor bolt tolerances: ±2mm in position, ±3mm in elevation. Foundation concrete strength: Minimum C30 (30 MPa) per GB 50010.</p>
+      <h3>Building A — Main Sorting Facility</h3>
+      <p><strong>Week 1-2:</strong> Main portal frame erection (80m span × 200m length). Each column base plate uses 12× M30 anchor bolts. Column verticality adjusted using laser plumb-bob. Rafter-to-column connections use high-strength friction-grip bolts (10.9/S grade). A 50T mobile crane used for main frame lifting.</p>
+      <h3>Buildings B through E</h3>
+      <p><strong>Week 3-4:</strong> Multi-span frame erection. Buildings B-E installed simultaneously using 2 mobile cranes. Column spacing: 10m. Portal frames connected at eave level with longitudinal beams. <strong>Week 5-8:</strong> Purlin, girt, and bracing installation across all buildings. <strong>Week 9-12:</strong> Roof and wall cladding installation.</p>
+      <h3>Erection Speed</h3>
+      <p>A 20-person erection crew (split into 2 teams) achieved 600 m² per day for the main frame and 500 m² per day for cladding. Total on-site erection time: 60 working days (12 weeks) for all 5 buildings. The client's project manager reported that our QR-code-based component marking system saved approximately 10 days in material sorting and identification.</p>
+    `,
+    whyChoose: `
+      <p><strong>1. Proven Large-Scale Project Experience.</strong> This 50,000 m² industrial park demonstrates Laotie Steel's capability to deliver multi-building complexes on tight schedules. We have delivered 20+ industrial park projects across China since 2018.</p>
+      <p><strong>2. Production Capacity Advantage.</strong> Our 5 production lines produced 1,200 tons in just 35 working days — 2 lines dedicated to this project. Our 5,000T/month total capacity ensures your project will not be delayed by capacity constraints.</p>
+      <p><strong>3. Factory-Direct Pricing.</strong> At ¥450-550/m² (supply-only), our factory-direct pricing saves 20-30% compared to local fabrication in Anhui Province. Including local foundation work and erection (¥150-200/m²), the total installed cost is approximately ¥600-750 per m².</p>
+      <p><strong>4. Comprehensive Engineering Support.</strong> Every project includes: (1) Structural calculation report (GB 50017, GB 50009, GB 50011), (2) Fabrication drawings with NC codes, (3) Erection manual with bolt lists and torque specifications, (4) Material test reports, (5) Foundation reaction reports, and (6) On-site technical support during erection.</p>
+    `,
+    specs: [
+      { label: "Project Name", value: "Yunda Bozhou Modern Industrial Park (Phase II, Zone F)" },
+      { label: "Location", value: "Bozhou, Anhui Province, China" },
+      { label: "Building Type", value: "Multi-Building Portal Frame Industrial Park" },
+      { label: "Total Area", value: "50,000 m² (5 buildings)" },
+      { label: "Main Building Dimensions", value: "200m (L) × 80m (W) × 14m (H)" },
+      { label: "Steel Consumption", value: "1,200 tons (Q355B)" },
+      { label: "Design Standard", value: "GB 50017, GB 50009, GB 50011, GB 50205" },
+      { label: "Wind Load", value: "0.45 kN/m² (GB 50009)" },
+      { label: "Snow Load", value: "0.35 kN/m² (GB 50009)" },
+      { label: "Seismic Design", value: "Category 7, 0.10g PGA (GB 50011)" },
+      { label: "Roof System", value: "0.6mm galvanized steel + 80mm rockwool" },
+      { label: "Wall System", value: "100mm PIR sandwich panel" },
+      { label: "Floor Live Load", value: "8.0 kN/m² (high-bay racking zone)" },
+      { label: "Surface Treatment", value: "Shot blasting SA 2.5 + 280μm epoxy system" },
+      { label: "Project Year", value: "2024-2025" },
+      { label: "Fabrication Time", value: "35 working days (1,200 tons)" },
+      { label: "Erection Time", value: "60 working days (all 5 buildings)" },
+      { label: "Connection Type", value: "Bolted moment-resisting frame (10.9/S bolts)" },
+      { label: "Main Building Use", value: "Logistics sorting and distribution center" },
+      { label: "Design Life", value: "50 years (GB 50017)" },
+      { label: "Foundation Type", value: "Reinforced concrete pad footings (2.0m×2.0m×1.2m)" },
+      { label: "Erection Method", value: "Bolted connection with QR code tracking" },
+    ],
+    galleryImages: [
+      { src: "/images/projects/yunda-bozhou/yunda-01.webp", alt: "Yunda Bozhou industrial park - aerial view of large warehouse construction site with steel frames and mountains in background" },
+      { src: "/images/projects/yunda-bozhou/yunda-02.webp", alt: "Yunda Bozhou project - aerial view of steel structure under construction with multiple buildings" },
+      { src: "/images/projects/yunda-bozhou/yunda-03.webp", alt: "Yunda Bozhou industrial park - completed warehouse buildings with roof and cladding" },
+      { src: "/images/projects/yunda-bozhou/yunda-04.webp", alt: "Yunda Bozhou project - construction site with steel frames in various stages" },
+      { src: "/images/projects/yunda-bozhou/yunda-05.webp", alt: "Yunda Bozhou industrial park - completed warehouse exterior with corrugated metal siding" },
+      { src: "/images/projects/yunda-bozhou/yunda-06.webp", alt: "Yunda Bozhou project - steel structure erection showing columns and rafters" },
+      { src: "/images/projects/yunda-bozhou/yunda-07.webp", alt: "Yunda Bozhou industrial park - building exterior with windows and entrance" },
+      { src: "/images/projects/yunda-bozhou/yunda-08.webp", alt: "Yunda Bozhou project - construction site with steel beams being lifted" },
+      { src: "/images/projects/yunda-bozhou/yunda-09.webp", alt: "Yunda Bozhou industrial park - interior showing steel roof structure with purlins" },
+      { src: "/images/projects/yunda-bozhou/yunda-10.webp", alt: "Yunda Bozhou project - completed building with glass entrance canopy" },
+      { src: "/images/projects/yunda-bozhou/yunda-11.webp", alt: "Yunda Bozhou industrial park - interior view with translucent roof panels and natural lighting" },
+      { src: "/images/projects/yunda-bozhou/yunda-12.webp", alt: "Yunda Bozhou project - construction site progress with steel framework" },
+      { src: "/images/projects/yunda-bozhou/yunda-13.webp", alt: "Yunda Bozhou project - long span steel structure interior" },
+      { src: "/images/projects/yunda-bozhou/yunda-14.webp", alt: "Yunda Bozhou industrial park - steel structure with equipment installation" },
+      { src: "/images/projects/yunda-bozhou/yunda-15.webp", alt: "Yunda Bozhou project - interior view showing large clear-span steel structure" },
+      { src: "/images/projects/yunda-bozhou/yunda-16.webp", alt: "Yunda Bozhou industrial park - steel framework with corrugated roof sheeting" },
+      { src: "/images/projects/yunda-bozhou/yunda-17.webp", alt: "Yunda Bozhou project - structural steel members during installation" },
+      { src: "/images/projects/yunda-bozhou/yunda-18.webp", alt: "Yunda Bozhou industrial park - building interior with purlin installation" },
+      { src: "/images/projects/yunda-bozhou/yunda-19.webp", alt: "Yunda Bozhou project - completed building corridor between warehouse sections" },
+      { src: "/images/projects/yunda-bozhou/yunda-20.webp", alt: "Yunda Bozhou industrial park - detailed steel connection work" },
+      { src: "/images/projects/yunda-bozhou/yunda-21.webp", alt: "Yunda Bozhou project - steel structure walkway and mezzanine area" },
+      { src: "/images/projects/yunda-bozhou/yunda-22.webp", alt: "Yunda Bozhou industrial park - completed warehouse with loading area" },
+      { src: "/images/projects/yunda-bozhou/yunda-23.webp", alt: "Yunda Bozhou project - construction progress with crane and equipment" },
+      { src: "/images/projects/yunda-bozhou/yunda-24.webp", alt: "Yunda Bozhou industrial park - steel members with bracing system" },
+      { src: "/images/projects/yunda-bozhou/yunda-25.webp", alt: "Yunda Bozhou project - completed warehouse with exterior wall panels" },
+      { src: "/images/projects/yunda-bozhou/yunda-26.webp", alt: "Yunda Bozhou industrial park - final building exterior view" },
+    ],
+    location: "Bozhou, Anhui Province, China",
+    category: "Industrial Park / Logistics Distribution Center",
+    completedYear: "2025",
+    faq: [
+      {
+        question: "How much does a 50,000 sqm industrial park cost in China?",
+        answer:
+          "For a 50,000 m² industrial park like our Yunda Bozhou project, the supply-only cost from Laotie Steel is typically ¥450-550 per m² (ex-works). Including local foundation work (¥80-120/m²), erection (¥150-200/m²), and ancillary works, the total installed cost is approximately ¥700-900 per m². This varies depending on building complexity, cladding specifications, and foundation requirements.",
+      },
+      {
+        question: "Do your steel structures comply with Chinese building codes?",
+        answer:
+          "Yes. Every Laotie Steel structure is designed to Chinese GB standards: GB 50017 (Steel Structure Design), GB 50009 (Load Code), GB 50011 (Seismic Design), and GB 50205 (Steel Structure Construction Quality). We provide full calculation reports that can be submitted to local building authorities for permit approval.",
+      },
+      {
+        question: "What is the typical fabrication and erection timeline for a large industrial park?",
+        answer:
+          "For a 50,000 m² complex like the Yunda Bozhou project, fabrication typically takes 35-45 working days (with dedicated production lines), and on-site erection takes 50-65 working days, depending on site conditions and crew size. Total project timeline from deposit to completion: approximately 4-5 months. We recommend allowing 6 months for comprehensive project planning.",
+      },
+      {
+        question: "Do you provide on-site erection services for domestic Chinese projects?",
+        answer:
+          "Yes. For domestic projects, we provide comprehensive on-site services including: (1) A senior engineer for erection supervision, (2) A site project manager for coordination, (3) A qualified erection crew (20+ members), and (4) All necessary lifting equipment. On-site services are quoted separately based on project complexity and duration.",
+      },
+      {
+        question: "Can you design industrial parks with multiple interconnected buildings?",
+        answer:
+          "Yes. This is one of our core specialties. The Yunda Bozhou project includes 5 interconnected buildings with coordinated structural design, expansion joints at 60m intervals, consistent eave heights, and shared utility corridors. We have delivered 20+ multi-building industrial park projects since 2018, ranging from 10,000 to 100,000 m².",
+      },
+      {
+        question: "What warranty do you provide for domestic Chinese projects?",
+        answer:
+          "Laotie Steel provides a 15-year structural warranty on all steel members and connections. Cladding systems carry a 10-15-year warranty (depending on material). The coating system is warranted for 5 years against peeling, cracking, or excessive fading. We provide 24-hour on-site response for any structural issues during the warranty period.",
+      },
+    ],
+    cta: `
+      <p>Planning an industrial park, logistics center, or manufacturing facility in China? Get a free preliminary design and budget estimate within 24 hours. Share your site dimensions, building requirements, and timeline — our engineering team will prepare a customized proposal with GB-compliant calculations.</p>
+    `,
+    conclusion: `
+      <p>This Yunda Bozhou Modern Industrial Park demonstrates Laotie Steel's capability to deliver large-scale, multi-building steel structure complexes on aggressive schedules. From the 1,200-ton fabrication completed in just 35 working days to the coordinated erection of 5 interconnected buildings, every stage of this project was managed to ensure the client received a code-compliant, cost-effective industrial facility on time.</p>
+      <p>Whether you are planning a 5,000 m² warehouse or a 100,000 m² industrial park, our 5 production lines and 15+ years of experience ensure your project will be delivered on time, on budget, and fully compliant with Chinese building codes.</p>
+      <p><a href="/contact" class="inline-flex items-center px-6 py-3 bg-steel-accent text-white font-semibold rounded-lg hover:bg-steel transition-colors shadow-lg">Get a Free Quote for Your Industrial Park Project →</a></p>
+    `,
+    keywords: [
+      "industrial park China",
+      "steel structure logistics center",
+      "Yunda Express Bozhou",
+      "portal frame warehouse",
+      "large-scale steel building China",
+      "multi-building industrial park",
+      "logistics distribution center steel structure",
+      "Chinese GB standard steel building",
+    ],
+    longTailKeywords: [
+      "50,000 sqm industrial park cost China",
+      "GB 50017 compliant steel structure",
+      "multi-building portal frame industrial park",
+      "Yunda Bozhou modern logistics park steel structure",
+      "large-scale steel structure fabrication China",
+    ],
+  },
+
 };

@@ -147,6 +147,23 @@ export const projects: Project[] = [
     ],
     image: "/images/projects/rattan-weaving-industrial-park/frame_01.webp",
   },
+  {
+    name: "Yunda Bozhou Modern Industrial Park",
+    slug: "yunda-bozhou-modern-industrial-park",
+    location: "Bozhou, Anhui, China",
+    type: "Multi-Building Portal Frame Industrial Park",
+    size: "50,000 sqm (5 buildings)",
+    year: "2025",
+    description:
+      "A 50,000 m² logistics distribution center for Yunda Express in Bozhou, Anhui. 5 interconnected buildings with 80m clear-span portal frames, 14m eave height, and high-bay racking systems for automated parcel handling.",
+    highlights: [
+      "50,000 m² — 5 interconnected buildings with coordinated design",
+      "1,200 tons fabricated in 35 working days on 2 production lines",
+      "14m eave height for automated sorting equipment installation",
+      "Seismic Category 7 design per GB 50011",
+    ],
+    image: "/images/projects/yunda-bozhou/yunda-02.webp",
+  },
 ];
 
 export const projectProductLinks: Record<string, string> = {

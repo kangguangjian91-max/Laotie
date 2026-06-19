@@ -343,7 +343,7 @@ export default async function ProjectDetailPage(props: PageProps) {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Related Projects</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <a href="/projects/industrial-warehouse-sydney" className="group block bg-section rounded-2xl overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ProjectImage src="/images/projects/project-01.webp" alt="Industrial warehouse Sydney Australia AS/NZS compliant steel structure" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" containerClassName="w-full h-full" />
@@ -369,6 +369,15 @@ export default async function ProjectDetailPage(props: PageProps) {
                 <div className="p-5">
                   <p className="text-sm font-bold text-steel-accent">Dubai, UAE</p>
                   <h3 className="font-semibold text-gray-900 mt-1">Logistics Distribution Center</h3>
+                </div>
+              </a>
+              <a href="/projects/yunda-bozhou-modern-industrial-park" className="group block bg-section rounded-2xl overflow-hidden hover:shadow-xl transition-shadow">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <ProjectImage src="/images/projects/yunda-bozhou/yunda-02.webp" alt="Yunda Bozhou modern industrial park logistics distribution center" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" containerClassName="w-full h-full" />
+                </div>
+                <div className="p-5">
+                  <p className="text-sm font-bold text-steel-accent">Bozhou, China</p>
+                  <h3 className="font-semibold text-gray-900 mt-1">Yunda Bozhou Logistics Park</h3>
                 </div>
               </a>
             </div>
