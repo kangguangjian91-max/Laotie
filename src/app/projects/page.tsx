@@ -1,39 +1,31 @@
+"use client";
+
+import { useState, useMemo } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { ArrowLeft, MapPin, Building, Ruler, Calendar } from "lucide-react";
+import { MapPin, Ruler, Building } from "lucide-react";
 import { projects, projectProductLinks } from "@/lib/projectsData";
-import type { Project } from "@/lib/projectsData";
 import ProjectImage from "@/components/ProjectImage";
 
-export const metadata = {
-  title: "Steel Structure Project Cases | Warehouse, Factory, Sports Hall",
-  description: "View our steel structure project cases: industrial warehouse, factory building, sports hall, dome roof. 18,304㎡ factory complex. Get a customized design.",
-  openGraph: {
-    title: "Steel Structure Projects | Laotie Steel",
-    description: "Steel warehouse, factory, and sports hall projects. CE & ISO certified quality.",
-    url: "https://www.laotie-steel.com/projects",
-    siteName: "Laotie Steel Structure",
-    images: [{ url: "/images/projects/hongxin-sports/hongxin-5.webp" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Steel Structure Projects | Laotie Steel",
-    description: "Steel warehouse, factory, and sports hall projects. CE & ISO certified quality.",
-    images: ["/images/projects/hongxin-sports/hongxin-5.webp"],
-  },
-
-
-    alternates: {
-
-      canonical: "https://www.laotie-steel.com/projects",
-
-    },
-
-  };
-
+// Extract unique countries and structure types from project data
+const allCountries = [...new Set(projects.map(p => p.location.split(",").pop()?.trim() || p.location))];
+const allTypes = [...new Set(projects.map(p => p.type))];
 
 export default function ProjectsPage() {
+  const [selectedCountry, setSelectedCountry] = useState("All");
+  const [selectedType, setSelectedType] = useState("All");
+
+  const filtered = useMemo(() => {
+    return projects.filter((p) => {
+      const countryMatch = selectedCountry === "All" || p.location.includes(selectedCountry);
+      const typeMatch = selectedType === "All" || p.type === selectedType;
+      return countryMatch && typeMatch;
+    });
+  }, [selectedCountry, selectedType]);
+
+  const resultCount = filtered.length;
+
   return (
     <>
       <Header />
@@ -41,27 +33,26 @@ export default function ProjectsPage() {
         {/* Hero */}
         <section className="relative bg-steel overflow-hidden">
           <div className="absolute inset-0 opacity-15">
-            <ProjectImage src="/images/projects/project-04.webp" alt="Completed steel structure project by Laotie Steel - industrial building construction" className="w-full h-full object-cover" containerClassName="w-full h-full" />
+            <ProjectImage src="/images/projects/project-04.webp" alt="Steel structure projects" className="w-full h-full object-cover" containerClassName="w-full h-full" />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-steel via-steel/95 to-steel/80" />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-            <a href="/" className="inline-flex items-center gap-1 text-sm text-steel-accent hover:text-white transition-colors mb-4">
-              <ArrowLeft className="w-4 h-4" /> Back to Home
-            </a>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">Featured Projects</h1>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+              Steel Structure Project Cases
+            </h1>
             <p className="mt-3 text-lg text-gray-300 max-w-2xl">
-              Delivered steel structures to 30+ countries across 5 continents. Each project — engineered to local codes, fabricated to international standards.
+              Delivered to 30+ countries across 5 continents. Each project engineered to local codes, fabricated to international standards.
             </p>
           </div>
         </section>
 
-        {/* Stats overview */}
-        <section className="bg-steel-muted border-b border-gray-100">
+        {/* Stats */}
+        <section className="bg-gray-50 border-b border-gray-100">
           <div className="max-w-7xl mx-auto px-4 py-8">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {[
                 { value: "30+", label: "Countries" },
-                { value: "200+", label: "Projects Completed" },
+                { value: "50+", label: "Projects Completed" },
                 { value: "100,000+", label: "Tons Fabricated" },
                 { value: "15+", label: "Years Experience" },
               ].map((s) => (
@@ -92,105 +83,160 @@ export default function ProjectsPage() {
           </div>
         </section>
 
-        {/* Project Cards */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-          <div className="space-y-12">
-            {projects.map((project, i) => (
-              <div
-                key={project.name}
-                id={`project-${i + 1}`}
-                className="group grid lg:grid-cols-5 gap-8 items-start pb-12 border-b border-gray-100 last:border-0 last:pb-0"
-              >
-                {/* Image */}
-                <div className="lg:col-span-2 overflow-hidden rounded-2xl">
-                  <ProjectImage
-                    src={project.image}
-                    alt={project.name}
-                    className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-300"
-                    containerClassName="w-full aspect-[4/3]"
-                  />
-                </div>
-
-                {/* Content */}
-                <div className="lg:col-span-3">
-                  <div className="flex flex-wrap items-center gap-3 mb-3">
-                    <span className="text-xs font-bold text-steel-accent bg-steel-muted px-2.5 py-1 rounded-full">
-                      {project.year}
-                    </span>
-                    <span className="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">
-                      {project.type}
-                    </span>
-                  </div>
-
-                  <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-steel transition-colors">
-                    {project.name}
-                  </h2>
-
-                  <p className="text-gray-600 leading-relaxed mb-5">
-                    {project.description}
-                  </p>
-
-                  {/* Meta info */}
-                  <div className="flex flex-wrap gap-4 mb-5">
-                    <div className="flex items-center gap-1.5 text-sm text-gray-500">
-                      <MapPin className="w-4 h-4 text-steel-accent shrink-0" />
-                      {project.location}
-                    </div>
-                    <div className="flex items-center gap-1.5 text-sm text-gray-500">
-                      <Ruler className="w-4 h-4 text-steel-accent shrink-0" />
-                      {project.size}
-                    </div>
-                    <div className="flex items-center gap-1.5 text-sm text-gray-500">
-                      <Building className="w-4 h-4 text-steel-accent shrink-0" />
-                      {project.type}
-                    </div>
-                  </div>
-
-                  {/* Highlights */}
-                  <div className="space-y-2">
-                    <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Project Highlights</h4>
-                    <div className="grid sm:grid-cols-2 gap-2">
-                      {project.highlights.map((h) => (
-                        <div key={h} className="flex items-start gap-2 text-sm text-gray-700">
-                          <span className="mt-1 w-1.5 h-1.5 rounded-full bg-steel-accent shrink-0" />
-                          <span className="leading-relaxed">{h}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* CTA */}
-                  <div className="flex flex-wrap items-center gap-4 mt-5">
-                    <a
-                      href="/contact"
-                      className="inline-flex items-center text-sm font-semibold text-steel-accent hover:text-steel transition-colors"
-                    >
-                      Request a similar project quote →
-                    </a>
-                    {projectProductLinks[project.name] && (
-                      <a
-                        href={projectProductLinks[project.name]}
-                        className="inline-flex items-center text-sm text-gray-400 hover:text-steel-accent transition-colors"
-                      >
-                        View Related Product →
-                      </a>
-                    )}
-                    {project.slug && (
-                      <a
-                        href={`/projects/${project.slug}`}
-                        className="inline-flex items-center text-sm font-semibold text-steel hover:text-steel-light transition-colors ml-auto"
-                      >
-                        View Project →
-                      </a>
-                    )}
-                  </div>
-                </div>
+        {/* Filters */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-4">
+          <div className="flex flex-wrap items-center gap-4">
+            {/* Country Filter */}
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-gray-500 font-medium">Country:</span>
+              <div className="flex flex-wrap gap-1.5">
+                <button
+                  onClick={() => setSelectedCountry("All")}
+                  className={`px-3 py-1.5 text-xs rounded-full border transition ${
+                    selectedCountry === "All"
+                      ? "bg-steel text-white border-steel"
+                      : "bg-white text-gray-600 border-gray-200 hover:border-steel-accent"
+                  }`}
+                >
+                  All
+                </button>
+                {allCountries.map((c) => (
+                  <button
+                    key={c}
+                    onClick={() => setSelectedCountry(c)}
+                    className={`px-3 py-1.5 text-xs rounded-full border transition ${
+                      selectedCountry === c
+                        ? "bg-steel text-white border-steel"
+                        : "bg-white text-gray-600 border-gray-200 hover:border-steel-accent"
+                    }`}
+                  >
+                    {c}
+                  </button>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
 
-          {/* Client Reviews */}
-          <section className="mt-16 mb-16">
+            {/* Type Filter */}
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-gray-500 font-medium">Type:</span>
+              <div className="flex flex-wrap gap-1.5">
+                <button
+                  onClick={() => setSelectedType("All")}
+                  className={`px-3 py-1.5 text-xs rounded-full border transition ${
+                    selectedType === "All"
+                      ? "bg-steel text-white border-steel"
+                      : "bg-white text-gray-600 border-gray-200 hover:border-steel-accent"
+                  }`}
+                >
+                  All
+                </button>
+                {allTypes.map((t) => (
+                  <button
+                    key={t}
+                    onClick={() => setSelectedType(t)}
+                    className={`px-3 py-1.5 text-xs rounded-full border transition ${
+                      selectedType === t
+                        ? "bg-steel text-white border-steel"
+                        : "bg-white text-gray-600 border-gray-200 hover:border-steel-accent"
+                    }`}
+                  >
+                    {t}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <span className="text-xs text-gray-400 ml-auto">{resultCount} project{resultCount !== 1 ? "s" : ""} found</span>
+          </div>
+        </section>
+
+        {/* Project Grid */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+          {filtered.length > 0 ? (
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filtered.map((project) => (
+                <div
+                  key={project.name}
+                  className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                >
+                  {/* Image */}
+                  <div className="aspect-[4/3] overflow-hidden bg-gray-100">
+                    <ProjectImage
+                      src={project.image}
+                      alt={project.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      containerClassName="w-full h-full"
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-5">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-[11px] font-bold text-steel-accent bg-blue-50 px-2 py-0.5 rounded-full">
+                        {project.year}
+                      </span>
+                      <span className="text-[11px] text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full">
+                        {project.type}
+                      </span>
+                    </div>
+
+                    <h3 className="text-base font-bold text-gray-900 mb-2 group-hover:text-steel transition-colors line-clamp-2">
+                      {project.name}
+                    </h3>
+
+                    <p className="text-sm text-gray-600 mb-4 line-clamp-2 leading-relaxed">
+                      {project.description}
+                    </p>
+
+                    {/* Meta */}
+                    <div className="space-y-1.5 mb-4">
+                      <div className="flex items-center gap-1.5 text-xs text-gray-500">
+                        <MapPin className="w-3.5 h-3.5 text-steel-accent shrink-0" />
+                        {project.location}
+                      </div>
+                      <div className="flex items-center gap-1.5 text-xs text-gray-500">
+                        <Ruler className="w-3.5 h-3.5 text-steel-accent shrink-0" />
+                        {project.size}
+                      </div>
+                    </div>
+
+                    {/* CTA */}
+                    <div className="flex items-center gap-3 pt-3 border-t border-gray-100">
+                      {project.slug && (
+                        <a
+                          href={`/projects/${project.slug}`}
+                          className="text-xs font-semibold text-steel hover:text-steel-accent transition-colors"
+                        >
+                          View Details →
+                        </a>
+                      )}
+                      <a
+                        href="/contact"
+                        className="text-xs font-semibold text-steel-accent hover:text-steel transition-colors ml-auto"
+                      >
+                        Get Quote →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-16">
+              <p className="text-gray-500 mb-4">No projects match your filter criteria.</p>
+              <button
+                onClick={() => { setSelectedCountry("All"); setSelectedType("All"); }}
+                className="text-sm text-steel-accent hover:underline"
+              >
+                Clear all filters
+              </button>
+            </div>
+          )}
+        </section>
+
+        {/* Client Reviews */}
+        <section className="bg-gray-50 py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-10">What Our Clients Say</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
@@ -200,7 +246,7 @@ export default function ProjectsPage() {
                 { client: "Maria Santos", company: "Manufacturing Company", location: "Manila, Philippines", review: "Excellent communication and fast response. Laotie delivered quality steel structure for our factory.", project: "6,000 sqm Factory in Manila", date: "February 2025" },
                 { client: "Somchai Tanaka", company: "Agricultural Company", location: "Bangkok, Thailand", review: "Laotie Steel provided complete solution for our processing plant. Very professional team.", project: "4,200 sqm Processing Plant in Bangkok", date: "April 2025" },
               ].map((r) => (
-                <div key={r.client} className="bg-gray-50 rounded-2xl p-6 shadow-sm">
+                <div key={r.client} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                   <div className="flex items-center gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -218,17 +264,19 @@ export default function ProjectsPage() {
                 </div>
               ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Bottom CTA */}
-          <div className="mt-16 text-center bg-gradient-to-br from-steel to-steel-light rounded-2xl p-10">
+        {/* Bottom CTA */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center bg-gradient-to-br from-steel to-blue-800 rounded-2xl p-10">
             <h2 className="text-2xl font-bold text-white mb-3">Have a Similar Project?</h2>
             <p className="text-gray-300 mb-8 max-w-lg mx-auto">
               Share your requirements and drawings — our engineering team will provide a detailed quotation with structural calculations within 24 hours.
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center px-6 py-3.5 text-base font-semibold text-white bg-gradient-to-r from-cta to-orange-600 hover:from-cta-hover hover:to-orange-700 rounded-lg transition-all shadow-lg hover:shadow-xl"
+              className="inline-flex items-center px-6 py-3.5 text-base font-semibold text-white bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 rounded-lg transition-all shadow-lg hover:shadow-xl"
             >
               Start Your Project →
             </a>
