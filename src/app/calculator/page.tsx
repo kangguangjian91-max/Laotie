@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "Laotie Steel Structure",
     images: [
       {
-        url: "https://www.laotie-steel.com/images/og-calculator.jpg",
+        url: "https://www.laotie-steel.com/images/og-image.webp",
         width: 1200,
         height: 630,
       },

@@ -336,6 +336,12 @@ export default function Calculator() {
     return `${displaySymbol}${Math.round(n)}`;
   };
 
+  // Exchange rates to USD (approximate mid-market)
+  const toUSDRate: Record<string, number> = {
+    CNY: 0.137, // 1 CNY ≈ 0.137 USD
+    AUD: 0.65,  // 1 AUD ≈ 0.65 USD
+  };
+
   // Share helpers
   const buildingTypeLabel = {
     warehouse: "Warehouse/Logistics",
@@ -640,7 +646,7 @@ export default function Calculator() {
               </div>
               <div className="text-xs text-gray-500 mt-1">
                 {fmt(Math.round(result.total / (result.area * result.quantity)), result.symbol)}/m²
-                {result.symbol !== "$" && <span className="text-gray-400 ml-1">(~${Math.round(result.total / 7.3 / (result.area * result.quantity))}/m² USD)</span>}
+                {result.currency !== "USD" && <span className="text-gray-400 ml-1">(~${Math.round(result.total * (toUSDRate[result.currency] || 0.14) / (result.area * result.quantity))}/m² USD)</span>}
               </div>
             </div>
             <div className="bg-green-50 rounded-xl p-4 text-center">
