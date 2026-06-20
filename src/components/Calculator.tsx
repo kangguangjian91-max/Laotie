@@ -292,8 +292,13 @@ export default function Calculator() {
     });
   }, [buildingType, length, width, height, crane, location, steelGrade, claddingType, mezzanineArea, quantity, spanType, supplyOnly]);
 
-  // Auto-calculate on mount and when dependencies change
-  useEffect(() => { shareUrlRef.current = ""; calc(); }, [calc]);
+  // Auto-calculate on mount and when any input changes
+  // Directly depend on state variables (not on calc) to ensure recalculation always fires
+  useEffect(() => {
+    shareUrlRef.current = "";
+    calc();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [buildingType, length, width, height, crane, location, steelGrade, claddingType, mezzanineArea, quantity, spanType, supplyOnly]);
 
   // Read URL parameters on mount
   useEffect(() => {
