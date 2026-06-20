@@ -182,7 +182,7 @@ export default function SteelStructureIndonesia() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-100+">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-steel mb-12">
             Why Choose Laotie Steel for Indonesia?
@@ -268,7 +268,7 @@ export default function SteelStructureIndonesia() {
       </section>
 
       {/* Logistics & Installation */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-100+">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-steel mb-12">
             Logistics & Installation in Indonesia
@@ -363,7 +363,7 @@ export default function SteelStructureIndonesia() {
             {/* Project Cases - Carousel */}
       <ProjectCarousel
         title="Recent Projects in Indonesia"
-        subtitle="We have completed 50+ steel structure projects across Indonesia. Here are some of our recent works."
+        subtitle="We have completed 100++ steel structure projects across Indonesia. Here are some of our recent works."
         projects={[
           {
             image: "/images/indonesia/679234a53ccd9c56cf26658f4f072138.webp",
@@ -397,9 +397,9 @@ export default function SteelStructureIndonesia() {
           },
           {
             image: "/images/indonesia/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp",
-            alt: "Steel structure factory in Semarang, Indonesia - 6,500 sqm textile manufacturing plant",
+            alt: "Steel structure factory in Semarang, Indonesia - 6,100+ sqm textile manufacturing plant",
             title: "Semarang Industrial Park",
-            description: "6,500 m² steel structure factory for textile manufacturer. Central Java region.",
+            description: "6,100+ m² steel structure factory for textile manufacturer. Central Java region.",
             tags: [
               { label: "Factory", color: "bg-green-100 text-green-800" },
               { label: "Semarang", color: "bg-gray-100 text-gray-800" },
@@ -417,9 +417,9 @@ export default function SteelStructureIndonesia() {
           },
           {
             image: "/images/indonesia/5704819281f8e9ad3038915e967864ad.webp",
-            alt: "Steel structure palm oil processing plant in Palembang, Indonesia - 5,500 sqm facility",
+            alt: "Steel structure palm oil processing plant in Palembang, Indonesia - 5,100+ sqm facility",
             title: "Palembang Palm Oil Facility",
-            description: "5,500 m² steel structure facility for palm oil processing. Corrosion-resistant coating.",
+            description: "5,100+ m² steel structure facility for palm oil processing. Corrosion-resistant coating.",
             tags: [
               { label: "Processing", color: "bg-green-100 text-green-800" },
               { label: "Palembang", color: "bg-gray-100 text-gray-800" },
@@ -437,9 +437,9 @@ export default function SteelStructureIndonesia() {
           },
           {
             image: "/images/indonesia/7ea1821bc8fdfac59547d2c042c2f6ae.webp",
-            alt: "Steel structure commercial building in Denpasar, Indonesia - 2,500 sqm showroom",
+            alt: "Steel structure commercial building in Denpasar, Indonesia - 2,100+ sqm showroom",
             title: "Denpasar Showroom & Warehouse",
-            description: "2,500 m² combined showroom and warehouse. Bali tourism infrastructure.",
+            description: "2,100+ m² combined showroom and warehouse. Bali tourism infrastructure.",
             tags: [
               { label: "Commercial", color: "bg-green-100 text-green-800" },
               { label: "Denpasar", color: "bg-gray-100 text-gray-800" },
@@ -456,10 +456,10 @@ export default function SteelStructureIndonesia() {
             ],
           },
           {
-            image: "/images/indonesia/bd585762b3e96733450d3660029a1ab4.webp",
-            alt: "Steel structure warehouse in Batam, Indonesia - 4,500 sqm free trade zone",
+            image: "/images/indonesia/bd585762b3e967334100+d3660029a1ab4.webp",
+            alt: "Steel structure warehouse in Batam, Indonesia - 4,100+ sqm free trade zone",
             title: "Batam Free Trade Zone Warehouse",
-            description: "4,500 m² steel warehouse in Batam FTZ. Export-oriented business.",
+            description: "4,100+ m² steel warehouse in Batam FTZ. Export-oriented business.",
             tags: [
               { label: "Warehouse", color: "bg-green-100 text-green-800" },
               { label: "Batam", color: "bg-gray-100 text-gray-800" },
@@ -469,7 +469,7 @@ export default function SteelStructureIndonesia() {
       />
 
       {/* Solutions */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-100+">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-steel mb-12">
             Our Solutions for Indonesia
@@ -572,7 +572,7 @@ export default function SteelStructureIndonesia() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-100+">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-steel mb-12">
             Frequently Asked Questions (Indonesia)
@@ -766,9 +766,9 @@ export default function SteelStructureIndonesia() {
       </section>
 
       {/* Serving More Countries */}
-      <section className="bg-gray-50 py-10">
+      <section className="bg-gray-100+ py-10">
         <div className="container mx-auto px-4">
-          <p className="text-center text-sm text-gray-500 mb-4">Also serving:</p>
+          <p className="text-center text-sm text-gray-100+ mb-4">Also serving:</p>
           <div className="flex flex-wrap justify-center gap-3">
             <a href="/steel-structure-thailand" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Thailand</a>
             <a href="/steel-structure-vietnam" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Vietnam</a>

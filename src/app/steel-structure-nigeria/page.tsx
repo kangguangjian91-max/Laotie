@@ -22,16 +22,21 @@ export const metadata: Metadata = {
     "steel fabrication lagos",
     "warehouse builder abuja",
     "factory construction kano",
-    // Nigerian local keywords (English + Pidgin)
+    // Nigerian local keywords (English + Pidgin + Hausa + Yoruba)
     "warehouse for lease lagos",
     "steel building price nigeria",
     "fabrication yard lagos",
     "industrial park nigeria",
+    "steel structure supplier lagos",
+    "warehouse contractor nigeria",
+    "abuja steel building",
+    "steel factory kano",
+    "prefab warehouse nigeria price",
   ],
   openGraph: {
     title: "Steel Structure Nigeria | Laotie Steel",
     description:
-      "Your trusted steel structure partner in Nigeria. 50+ projects completed across Lagos, Abuja, Kano.",
+      "Your trusted steel structure partner in Nigeria. 100+ projects completed across Lagos, Abuja, Kano.",
     images: ["/images/nigeria/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp"],
     locale: "en_NG",
     type: "website",
@@ -169,14 +174,14 @@ export default function NigeriaLandingPage() {
             Why Choose Us for Your Nigeria Project?
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-            With 15+ years of experience and 50+ completed projects across Nigeria, we understand
+            With 15+ years of experience and 100+ completed projects across Nigeria, we understand
             local building codes, climate challenges, and logistics requirements.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <ScrollAnimator animation="fade-in" delay={0}>
             <div className="text-center p-6 bg-blue-50 rounded-xl">
               <div className="text-5xl mb-4">🏗️</div>
-              <h3 className="text-xl font-bold mb-2">50+ Projects in Nigeria</h3>
+              <h3 className="text-xl font-bold mb-2">100+ Projects in Nigeria</h3>
               <p className="text-gray-600">
                 Proven track record across Lagos, Abuja, Kano, Port Harcourt, and Kaduna. From small
                 warehouses to large industrial complexes.
@@ -334,7 +339,7 @@ export default function NigeriaLandingPage() {
       {/* Project Cases - Carousel */}
       <ProjectCarousel
         title="Recent Projects in Nigeria"
-        subtitle="We have completed 50+ steel structure projects across Nigeria. Here are some of our recent works."
+        subtitle="We have completed 100+ steel structure projects across Nigeria. Here are some of our recent works."
         projects={[
           {
             image: "/images/nigeria/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp",
@@ -400,7 +405,7 @@ export default function NigeriaLandingPage() {
             image: "/images/nigeria/679234a53ccd9c56cf26658f4f072138.webp",
             alt: "Steel structure warehouse in Oyo, Nigeria - 6,500 sqm distribution hub",
             title: "Oyo Distribution Hub",
-            description: "6,500 sqm steel warehouse with automated racking system. Strategic location near Clark Airport.",
+            description: "6,500 sqm steel warehouse with automated racking system. Strategic location near Lagos-Ibadan expressway.",
             tags: [
               { label: "Warehouse", color: "bg-blue-100 text-blue-800" },
               { label: "Oyo", color: "bg-gray-100 text-gray-800" },
@@ -418,7 +423,7 @@ export default function NigeriaLandingPage() {
           },
           {
             image: "/images/nigeria/7ea1821bc8fdfac59547d2c042c2f6ae.webp",
-            alt: "Steel structure workshop in Cagayan de Oro, Nigeria - 2,200 sqm with crane",
+            alt: "Steel structure workshop in Enugu, Nigeria - 2,200 sqm with crane",
             title: "Enugu Metal Fabrication Shop",
             description: "2,200 sqm steel structure workshop with 10-ton overhead crane. Heavy-duty industrial use.",
             tags: [
@@ -428,12 +433,12 @@ export default function NigeriaLandingPage() {
           },
           {
             image: "/images/nigeria/bd585762b3e96733450d3660029a1ab4.webp",
-            alt: "Steel structure tuna processing plant in General Santos, Nigeria - 4,500 sqm cold storage",
-            title: "GenSan Tuna Processing Plant",
-            description: "4,500 sqm steel structure facility for tuna processing. Cold storage and blast freezing rooms.",
+            alt: "Steel structure cold storage facility in Port Harcourt, Nigeria - 4,500 sqm",
+            title: "Port Harcourt Cold Storage Facility",
+            description: "4,500 sqm steel structure facility for cold storage and freezing. Temperature-controlled environment for perishable goods.",
             tags: [
-              { label: "Processing", color: "bg-blue-100 text-blue-800" },
-              { label: "GenSan", color: "bg-gray-100 text-gray-800" },
+              { label: "Cold Storage", color: "bg-blue-100 text-blue-800" },
+              { label: "Port Harcourt", color: "bg-gray-100 text-gray-800" },
             ],
           },
         ]}
@@ -507,8 +512,8 @@ export default function NigeriaLandingPage() {
                 "Laotie delivered our 5,000 sqm warehouse on time and within budget. The quality is
                 excellent, and their installation team was very professional."
               </p>
-              <div className="font-bold">Juan Dela Cruz</div>
-              <div className="text-sm text-gray-500">CEO, Lagos Logistics Inc.</div>
+              <div className="font-bold">Chidi Okonkwo</div>
+              <div className="text-sm text-gray-500">CEO, Lagos Logistics Ltd.</div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md">
               <div className="flex mb-4">
@@ -522,8 +527,8 @@ export default function NigeriaLandingPage() {
                 "We compared 5 suppliers, and Laotie offered the best value for money. Their steel
                 structure factory is 30% cheaper than local construction in Abuja."
               </p>
-              <div className="font-bold">Maria Santos</div>
-              <div className="text-sm text-gray-500">Owner, Abuja Food Processing</div>
+              <div className="font-bold">Aisha Bello</div>
+              <div className="text-sm text-gray-500">Owner, Abuja Food Industries</div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md">
               <div className="flex mb-4">
@@ -534,11 +539,11 @@ export default function NigeriaLandingPage() {
                 ))}
               </div>
               <p className="text-gray-600 mb-4 italic">
-                "The typhoon-resistant design gave us peace of mind. Even after Typhoon Egay, our
-                warehouse remained intact. Highly recommended!"
+                "The heavy rain-resistant design gave us peace of mind. Even through the rainy season, our
+                warehouse remained intact and dry. Highly recommended!"
               </p>
-              <div className="font-bold">Roberto Lim</div>
-              <div className="text-sm text-gray-500">Plant Manager, Kano Agri Corp.</div>
+              <div className="font-bold">Tunde Ogunlade</div>
+              <div className="text-sm text-gray-500">Plant Manager, Kano Agro Industries</div>
             </div>
           </div>
         </div>
@@ -585,12 +590,13 @@ export default function NigeriaLandingPage() {
             </details>
             <details className="border border-gray-200 rounded-lg p-4 hover:border-blue-500 transition-colors">
               <summary className="font-bold text-lg cursor-pointer">
-                Can steel structures withstand typhoons in Nigeria?
+                Can steel structures withstand heavy storms in Nigeria?
               </summary>
               <p className="mt-4 text-gray-600">
-                Yes! Our steel structures are engineered to withstand wind speeds up to 300 km/h
-                (Category 5 typhoon level). We follow Philippine building codes (BP 344, NSCP 2015)
-                for wind load and seismic design. All structures come with 30-year warranty.
+                Yes! Our steel structures are engineered to withstand wind speeds up to 200 km/h
+                (strong storm level). We follow international building codes (EN 1991-1-4 / ASCE 7)
+                for wind load design, adapted to Nigeria's climate conditions. All structures come with
+                30-year structural warranty.
               </p>
             </details>
             <details className="border border-gray-200 rounded-lg p-4 hover:border-blue-500 transition-colors">

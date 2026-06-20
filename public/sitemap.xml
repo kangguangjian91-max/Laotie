@@ -41,6 +41,20 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Case Studies -->
+  <url>
+    <loc>https://www.laotie-steel.com/case-studies</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Thank You -->
+  <url>
+    <loc>https://www.laotie-steel.com/thank-you</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
   <!-- Projects -->
   <url>
     <loc>https://www.laotie-steel.com/projects</loc>
@@ -59,6 +73,31 @@
   </url>
   <url>
     <loc>https://www.laotie-steel.com/projects/shopping-mall-dome-roof-manila</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.laotie-steel.com/projects/logistics-center-dubai</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.laotie-steel.com/projects/perth-agricultural-processing-plant</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.laotie-steel.com/projects/aircraft-hangar-jakarta</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.laotie-steel.com/projects/hongxin-sports-trampoline-factory-shangqiu</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.laotie-steel.com/projects/rattan-weaving-industrial-park-guo-village-shangqiu</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -146,5 +185,57 @@
     <loc>https://www.laotie-steel.com/steel-structure-price-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://www.laotie-steel.com/blog/steel-structure-maintenance-guide-lifespan-corrosion</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.laotie-steel.com/blog/steel-structure-processing-techniques-cnc-welding-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.laotie-steel.com/blog/steel-structure-production-china-manufacturing-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.laotie-steel.com/blog/steel-structure-installation-guide-erection-process</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.laotie-steel.com/blog/why-choose-chinese-steel-structure-manufacturer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.laotie-steel.com/blog/portal-frame-vs-space-frame</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.laotie-steel.com/blog/steel-structure-cost-guide-2025</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.laotie-steel.com/blog/ce-iso-certified-steel-structures</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.laotie-steel.com/blog/import-steel-structures-from-china-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.laotie-steel.com/blog/factory-tour-5000-tons-monthly-production</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

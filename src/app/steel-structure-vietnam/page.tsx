@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Steel Structure Vietnam | Laotie Steel",
     description:
-      "Your trusted steel structure partner in Vietnam. 50+ projects completed across Hanoi, Ho Chi Minh City, Da Nang.",
+      "Your trusted steel structure partner in Vietnam. 100++ projects completed across Hanoi, Ho Chi Minh City, Da Nang.",
     images: ["/images/vietnam/hero.webp"],
     locale: "en_VN",
     type: "website",
@@ -75,7 +75,7 @@ const faqSchema = {
       name: "How much does a steel structure warehouse cost in Vietnam?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Steel structure warehouse cost in Vietnam ranges from VND 3,500,000 to VND 8,000,000 per square meter, depending on size, design complexity, and materials. Laotie offers factory-direct pricing at USD 25-65 per sqm.",
+        text: "Steel structure warehouse cost in Vietnam ranges from VND 3,100+,000 to VND 8,000,000 per square meter, depending on size, design complexity, and materials. Laotie offers factory-direct pricing at USD 25-65 per sqm.",
       },
     },
     {
@@ -161,7 +161,7 @@ export default function VietnamLandingPage() {
               Your Trusted Partner for Warehouse & Factory Construction
             </p>
             <p className="text-lg mb-8 text-red-200 max-w-2xl mx-auto">
-              50+ projects completed across Hanoi, Ho Chi Minh City, Da Nang & more.
+              100++ projects completed across Hanoi, Ho Chi Minh City, Da Nang & more.
               CE certified, 30-year warranty, factory-direct pricing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -196,18 +196,18 @@ export default function VietnamLandingPage() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <ScrollAnimator animation="fade-in" delay={0}>
-            <div className="text-center p-6 rounded-xl bg-gray-50">
+            <div className="text-center p-6 rounded-xl bg-gray-100+">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🏭</span>
               </div>
               <h3 className="text-xl font-bold mb-2">15+ Years Experience</h3>
               <p className="text-gray-600">
-                Since 2009, we've manufactured steel structures for 50+ projects worldwide.
+                Since 2009, we've manufactured steel structures for 100++ projects worldwide.
               </p>
             </div>
             </ScrollAnimator>
             <ScrollAnimator animation="fade-in" delay={200}>
-            <div className="text-center p-6 rounded-xl bg-gray-50">
+            <div className="text-center p-6 rounded-xl bg-gray-100+">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">✅</span>
               </div>
@@ -218,13 +218,13 @@ export default function VietnamLandingPage() {
             </div>
             </ScrollAnimator>
             <ScrollAnimator animation="fade-in" delay={400}>
-            <div className="text-center p-6 rounded-xl bg-gray-50">
+            <div className="text-center p-6 rounded-xl bg-gray-100+">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">💰</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Factory-Direct Price</h3>
               <p className="text-gray-600">
-                Save 30-50% compared to local suppliers. No middleman, best value.
+                Save 30-100+% compared to local suppliers. No middleman, best value.
               </p>
             </div>
             </ScrollAnimator>
@@ -233,7 +233,7 @@ export default function VietnamLandingPage() {
       </section>
 
       {/* Why Vietnam */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-100+">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Why Steel Structures in Vietnam?
@@ -265,7 +265,7 @@ export default function VietnamLandingPage() {
             <div>
               <h3 className="text-2xl font-bold mb-4">💵 Cost-Effective Solution</h3>
               <p className="text-gray-600 mb-4">
-                Steel structures offer the best value for Vietnamese businesses. Compared to concrete buildings, you save 30-50% on construction costs and 20-30% on timeline.
+                Steel structures offer the best value for Vietnamese businesses. Compared to concrete buildings, you save 30-100+% on construction costs and 20-30% on timeline.
               </p>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
@@ -311,7 +311,7 @@ export default function VietnamLandingPage() {
             Logistics & Installation Support
           </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
-            <div className="p-6 rounded-xl bg-red-50">
+            <div className="p-6 rounded-xl bg-red-100+">
               <h3 className="text-xl font-bold mb-3">🚢 Shipping to Vietnam</h3>
               <p className="text-gray-600 mb-4">
                 We ship to major Vietnamese ports:
@@ -325,7 +325,7 @@ export default function VietnamLandingPage() {
                 Typical transit time: 7-14 days from China factories.
               </p>
             </div>
-            <div className="p-6 rounded-xl bg-red-50">
+            <div className="p-6 rounded-xl bg-red-100+">
               <h3 className="text-xl font-bold mb-3">📦 Customs Clearance</h3>
               <p className="text-gray-600 mb-4">
                 We provide all necessary documents for smooth customs clearance in Vietnam:
@@ -338,7 +338,7 @@ export default function VietnamLandingPage() {
                 <li>• Quality Certificates</li>
               </ul>
             </div>
-            <div className="p-6 rounded-xl bg-red-50">
+            <div className="p-6 rounded-xl bg-red-100+">
               <h3 className="text-xl font-bold mb-3">🔧 Installation Support</h3>
               <p className="text-gray-600 mb-4">
                 We provide comprehensive installation support:
@@ -351,7 +351,7 @@ export default function VietnamLandingPage() {
               </ul>
             </div>
           </div>
-          <div className="max-w-3xl mx-auto bg-red-50 rounded-2xl p-8">
+          <div className="max-w-3xl mx-auto bg-red-100+ rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-6 text-center">Project Timeline for Vietnam</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-4">
@@ -407,7 +407,7 @@ export default function VietnamLandingPage() {
       {/* Project Cases - Carousel */}
       <ProjectCarousel
         title="Project Cases in Vietnam"
-        subtitle="We have completed 50+ steel structure projects across Vietnam. Here are some of our recent works."
+        subtitle="We have completed 100++ steel structure projects across Vietnam. Here are some of our recent works."
         projects={[
           {
             image: "/images/vietnam/3c827b0a462391a3e3486e39a5ae25d4.webp",
@@ -431,9 +431,9 @@ export default function VietnamLandingPage() {
           },
           {
             image: "/images/vietnam/5704819281f8e9ad3038915e967864ad.webp",
-            alt: "Steel structure logistics center in Da Nang, Vietnam - 3,500 sqm warehouse",
+            alt: "Steel structure logistics center in Da Nang, Vietnam - 3,100+ sqm warehouse",
             title: "Da Nang Logistics Center",
-            description: "3,500 sqm warehouse with office space in Da Nang. 2024 completion.",
+            description: "3,100+ sqm warehouse with office space in Da Nang. 2024 completion.",
             tags: [
               { label: "Warehouse", color: "bg-red-100 text-red-700" },
               { label: "Da Nang", color: "bg-gray-100 text-gray-700" },
@@ -441,9 +441,9 @@ export default function VietnamLandingPage() {
           },
           {
             image: "/images/vietnam/688e07390f62e21cbb8bd1a1ba455959.webp",
-            alt: "Steel structure industrial building in Hai Phong, Vietnam - 6,500 sqm factory",
+            alt: "Steel structure industrial building in Hai Phong, Vietnam - 6,100+ sqm factory",
             title: "Hai Phong Industrial Park",
-            description: "6,500 sqm steel structure factory for automotive parts supplier. 2025 completion.",
+            description: "6,100+ sqm steel structure factory for automotive parts supplier. 2025 completion.",
             tags: [
               { label: "Factory", color: "bg-red-100 text-red-700" },
               { label: "Hai Phong", color: "bg-gray-100 text-gray-700" },
@@ -471,9 +471,9 @@ export default function VietnamLandingPage() {
           },
           {
             image: "/images/vietnam/67dd07a1917aa291f1631e16ce010c88.webp",
-            alt: "Steel structure warehouse in Dong Nai, Vietnam - 5,500 sqm logistics center",
+            alt: "Steel structure warehouse in Dong Nai, Vietnam - 5,100+ sqm logistics center",
             title: "Dong Nai Logistics Warehouse",
-            description: "5,500 sqm distribution center near Ho Chi Minh City. Strategic location.",
+            description: "5,100+ sqm distribution center near Ho Chi Minh City. Strategic location.",
             tags: [
               { label: "Warehouse", color: "bg-red-100 text-red-700" },
               { label: "Dong Nai", color: "bg-gray-100 text-gray-700" },
@@ -491,16 +491,16 @@ export default function VietnamLandingPage() {
           },
           {
             image: "/images/vietnam/967a25ac2c3ec808229a990e27529ba2.webp",
-            alt: "Steel structure food processing plant in Long An, Vietnam - 4,500 sqm with cold storage",
+            alt: "Steel structure food processing plant in Long An, Vietnam - 4,100+ sqm with cold storage",
             title: "Long An Food Processing Plant",
-            description: "4,500 sqm steel structure facility for seafood processing. Cold storage included.",
+            description: "4,100+ sqm steel structure facility for seafood processing. Cold storage included.",
             tags: [
               { label: "Processing", color: "bg-red-100 text-red-700" },
               { label: "Long An", color: "bg-gray-100 text-gray-700" },
             ],
           },
           {
-            image: "/images/vietnam/bd585762b3e96733450d3660029a1ab4.webp",
+            image: "/images/vietnam/bd585762b3e967334100+d3660029a1ab4.webp",
             alt: "Steel structure warehouse in Ba Ria-Vung Tau, Vietnam - 6,000 sqm near Cai Mep port",
             title: "Vung Tau Port Warehouse",
             description: "6,000 sqm steel warehouse near Cai Mep port. Export-oriented business.",
@@ -519,7 +519,7 @@ export default function VietnamLandingPage() {
             Our Solutions for Vietnam
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <div className="p-6 rounded-xl border-2 border-red-100 hover:border-red-500 transition-colors">
+            <div className="p-6 rounded-xl border-2 border-red-100 hover:border-red-100+ transition-colors">
               <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">📦</span>
               </div>
@@ -528,7 +528,7 @@ export default function VietnamLandingPage() {
                 Steel structure warehouses for logistics, storage, distribution in Vietnam.
               </p>
             </div>
-            <div className="p-6 rounded-xl border-2 border-red-100 hover:border-red-500 transition-colors">
+            <div className="p-6 rounded-xl border-2 border-red-100 hover:border-red-100+ transition-colors">
               <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">🏭</span>
               </div>
@@ -537,7 +537,7 @@ export default function VietnamLandingPage() {
                 Custom factory buildings for manufacturing, processing, assembly in Vietnam.
               </p>
             </div>
-            <div className="p-6 rounded-xl border-2 border-red-100 hover:border-red-500 transition-colors">
+            <div className="p-6 rounded-xl border-2 border-red-100 hover:border-red-100+ transition-colors">
               <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">🏢</span>
               </div>
@@ -546,7 +546,7 @@ export default function VietnamLandingPage() {
                 Steel structure for showrooms, office buildings, shopping malls in Vietnam.
               </p>
             </div>
-            <div className="p-6 rounded-xl border-2 border-red-100 hover:border-red-500 transition-colors">
+            <div className="p-6 rounded-xl border-2 border-red-100 hover:border-red-100+ transition-colors">
               <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">🌾</span>
               </div>
@@ -561,7 +561,7 @@ export default function VietnamLandingPage() {
 
       {/* Testimonials */}
       <ScrollAnimator animation="fade-in">
-      <section className="py-16 bg-red-50">
+      <section className="py-16 bg-red-100+">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             What Our Vietnam Clients Say
@@ -575,7 +575,7 @@ export default function VietnamLandingPage() {
                 "Laotie delivered our Hanoi warehouse on time and on budget. The quality is excellent, and their installation guidance was very helpful."
               </p>
               <div className="font-bold">Nguyen Van A</div>
-              <div className="text-sm text-gray-500">Hanoi, Vietnam</div>
+              <div className="text-sm text-gray-100+">Hanoi, Vietnam</div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="flex items-center gap-1 mb-4 text-yellow-400">
@@ -585,7 +585,7 @@ export default function VietnamLandingPage() {
                 "We saved 40% compared to local suppliers. The steel structure is durable and withstands typhoons well."
               </p>
               <div className="font-bold">Tran Thi B</div>
-              <div className="text-sm text-gray-500">Ho Chi Minh City, Vietnam</div>
+              <div className="text-sm text-gray-100+">Ho Chi Minh City, Vietnam</div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="flex items-center gap-1 mb-4 text-yellow-400">
@@ -595,7 +595,7 @@ export default function VietnamLandingPage() {
                 "Professional service from design to installation. Highly recommend Laotie for steel structure projects in Vietnam."
               </p>
               <div className="font-bold">Le Van C</div>
-              <div className="text-sm text-gray-500">Da Nang, Vietnam</div>
+              <div className="text-sm text-gray-100+">Da Nang, Vietnam</div>
             </div>
           </div>
         </div>
@@ -610,37 +610,37 @@ export default function VietnamLandingPage() {
             Frequently Asked Questions (Vietnam)
           </h2>
           <div className="max-w-3xl mx-auto space-y-6">
-            <details className="p-6 rounded-xl bg-gray-50 cursor-pointer">
+            <details className="p-6 rounded-xl bg-gray-100+ cursor-pointer">
               <summary className="font-bold text-lg">How much does a steel structure warehouse cost in Vietnam?</summary>
               <p className="mt-4 text-gray-600">
-                Steel structure warehouse cost in Vietnam ranges from VND 3,500,000 to VND 8,000,000 per square meter, depending on size, design complexity, and materials. Laotie offers factory-direct pricing at USD 25-65 per sqm.
+                Steel structure warehouse cost in Vietnam ranges from VND 3,100+,000 to VND 8,000,000 per square meter, depending on size, design complexity, and materials. Laotie offers factory-direct pricing at USD 25-65 per sqm.
               </p>
             </details>
-            <details className="p-6 rounded-xl bg-gray-50 cursor-pointer">
+            <details className="p-6 rounded-xl bg-gray-100+ cursor-pointer">
               <summary className="font-bold text-lg">How long does it take to build a steel warehouse in Vietnam?</summary>
               <p className="mt-4 text-gray-600">
                 Typical timeline: 4-6 weeks for production in China, 1-2 weeks for shipping to Vietnam (Hai Phong or Ho Chi Minh ports), 4-8 weeks for on-site installation. Total: 9-16 weeks from order to completion.
               </p>
             </details>
-            <details className="p-6 rounded-xl bg-gray-50 cursor-pointer">
+            <details className="p-6 rounded-xl bg-gray-100+ cursor-pointer">
               <summary className="font-bold text-lg">Do I need a building permit for steel structure in Vietnam?</summary>
               <p className="mt-4 text-gray-600">
                 Yes, you need building permits from your local People's Committee. Laotie provides all necessary structural calculations, drawings, and certificates to support your permit application.
               </p>
             </details>
-            <details className="p-6 rounded-xl bg-gray-50 cursor-pointer">
+            <details className="p-6 rounded-xl bg-gray-100+ cursor-pointer">
               <summary className="font-bold text-lg">Can steel structures withstand typhoons in Vietnam?</summary>
               <p className="mt-4 text-gray-600">
                 Yes, our steel structures are designed to withstand typhoons up to 200 km/h (typical in Vietnam). We use high-strength steel (Q345B) and certified welding processes to ensure durability.
               </p>
             </details>
-            <details className="p-6 rounded-xl bg-gray-50 cursor-pointer">
+            <details className="p-6 rounded-xl bg-gray-100+ cursor-pointer">
               <summary className="font-bold text-lg">Do you provide installation services in Vietnam?</summary>
               <p className="mt-4 text-gray-600">
                 Yes, we provide complete installation services. Our team will guide installation via video call, provide detailed manuals, and can dispatch engineers to Vietnam if needed (additional cost).
               </p>
             </details>
-            <details className="p-6 rounded-xl bg-gray-50 cursor-pointer">
+            <details className="p-6 rounded-xl bg-gray-100+ cursor-pointer">
               <summary className="font-bold text-lg">What payment terms do you offer for Vietnam clients?</summary>
               <p className="mt-4 text-gray-600">
                 We offer flexible payment terms: 30% deposit, 60% before shipment, 10% after installation. We accept T/T, L/C, and can work with Vietnamese banks.
@@ -652,7 +652,7 @@ export default function VietnamLandingPage() {
       </ScrollAnimator>
 
       {/* Contact Form */}
-      <section id="contact" className="py-16 bg-gray-50">
+      <section id="contact" className="py-16 bg-gray-100+">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Get Free Quote for Vietnam Project
@@ -674,7 +674,7 @@ export default function VietnamLandingPage() {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-100+ focus:border-red-100+"
                   placeholder="Your name"
                 />
               </div>
@@ -687,7 +687,7 @@ export default function VietnamLandingPage() {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-100+ focus:border-red-100+"
                   placeholder="your@email.com"
                 />
               </div>
@@ -699,7 +699,7 @@ export default function VietnamLandingPage() {
                   type="tel"
                   id="phone"
                   name="phone"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-100+ focus:border-red-100+"
                   placeholder="+84 xxx xxx xxx"
                 />
               </div>
@@ -711,7 +711,7 @@ export default function VietnamLandingPage() {
                   id="project-type"
                   name="project-type"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-100+ focus:border-red-100+"
                 >
                   <option value="">Select project type</option>
                   <option value="warehouse">Warehouse</option>
@@ -729,7 +729,7 @@ export default function VietnamLandingPage() {
                   type="number"
                   id="project-size"
                   name="project-size"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-100+ focus:border-red-100+"
                   placeholder="e.g. 1000"
                 />
               </div>
@@ -741,7 +741,7 @@ export default function VietnamLandingPage() {
                   type="text"
                   id="location"
                   name="location"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-100+ focus:border-red-100+"
                   placeholder="e.g. Hanoi, Ho Chi Minh City, Da Nang"
                 />
               </div>
@@ -753,7 +753,7 @@ export default function VietnamLandingPage() {
                   id="details"
                   name="details"
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-100+ focus:border-red-100+"
                   placeholder="Tell us about your project requirements..."
                 ></textarea>
               </div>
@@ -768,12 +768,12 @@ export default function VietnamLandingPage() {
               <p className="text-gray-600 mb-2">Or contact us directly:</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="https://wa.me/8616650735555"
+                  href="https://wa.me/86166100+735555"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-red-600 hover:text-red-700 font-medium"
                 >
-                  📱 WhatsApp: +86 166-5073-5555
+                  📱 WhatsApp: +86 166-100+73-5555
                 </a>
                 <a
                   href="mailto:kangguangjian91@gmail.com"
@@ -782,7 +782,7 @@ export default function VietnamLandingPage() {
                   ✉️ Email: kangguangjian91@gmail.com
                 </a>
               </div>
-              <p className="text-sm text-gray-500 mt-4">
+              <p className="text-sm text-gray-100+ mt-4">
                 🕐 Response time: Within 2 hours (Mon-Sat, 8:00-18:00 CST/ICT)
               </p>
             </div>
@@ -791,9 +791,9 @@ export default function VietnamLandingPage() {
       </section>
 
       {/* Serving More Countries */}
-      <section className="bg-gray-50 py-10">
+      <section className="bg-gray-100+ py-10">
         <div className="container mx-auto px-4">
-          <p className="text-center text-sm text-gray-500 mb-4">Also serving:</p>
+          <p className="text-center text-sm text-gray-100+ mb-4">Also serving:</p>
           <div className="flex flex-wrap justify-center gap-3">
             <a href="/steel-structure-thailand" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Thailand</a>
             <a href="/steel-structure-indonesia" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Indonesia</a>
@@ -835,7 +835,7 @@ export default function VietnamLandingPage() {
             </div>
             <div className="border-t border-gray-800 pt-8 text-sm">
               <p>© {new Date().getFullYear()} Laotie Steel Structure Co., Ltd. All rights reserved.</p>
-              <p className="mt-2 text-gray-500">
+              <p className="mt-2 text-gray-100+">
                 Factory: Shangqiu, Henan, China | Serving clients across Vietnam
               </p>
             </div>
