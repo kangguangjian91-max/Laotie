@@ -188,6 +188,24 @@ export default function ProjectsPage() {
                       {project.description}
                     </p>
 
+                    {/* Challenge / Solution / Result */}
+                    {project.challenge && (
+                      <div className="space-y-2 mb-4 text-xs text-gray-600">
+                        <div>
+                          <span className="font-semibold text-gray-700">Challenge: </span>
+                          <span className="line-clamp-1">{project.challenge}</span>
+                        </div>
+                        <div>
+                          <span className="font-semibold text-gray-700">Solution: </span>
+                          <span className="line-clamp-1">{project.solution}</span>
+                        </div>
+                        <div>
+                          <span className="font-semibold text-gray-700">Result: </span>
+                          <span className="line-clamp-1">{project.result}</span>
+                        </div>
+                      </div>
+                    )}
+
                     {/* Meta */}
                     <div className="space-y-1.5 mb-4">
                       <div className="flex items-center gap-1.5 text-xs text-gray-500">

@@ -20,7 +20,6 @@ const countryRoutes = [
 
 const staticRoutes = [
   "",
-  "/case-studies",
   "/calculator",
   "/manufacturing-process",
   "/products",

@@ -8,6 +8,9 @@ export interface Project {
   description: string;
   highlights: string[];
   image: string;
+  challenge?: string;
+  solution?: string;
+  result?: string;
 }
 
 export const projects: Project[] = [
