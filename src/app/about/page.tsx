@@ -65,7 +65,7 @@ const factoryImages = [
 
 export const metadata = {
   title: "About Laotie Steel Structure | CE & ISO Certified Factory",
-  description: "Learn about Laotie Steel Structure — trusted steel manufacturer in Shangqiu, China since 2009. 5 production lines, 5,000T/month capacity, 200+ skilled workers, 30+ countries served.",
+  description: "Trusted steel manufacturer in Shangqiu, China since 2009. 5 production lines, 5,000T/month capacity, 200+ skilled workers, 30+ countries served.",
   openGraph: {
     title: "About Laotie Steel Structure | CE & ISO Certified Factory",
     description: "Founded 2009, 5 production lines, 5,000T/month capacity. 200+ skilled workers, 30+ countries served. Shenzhen HQ + Shangqiu factory.",

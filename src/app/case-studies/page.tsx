@@ -7,7 +7,7 @@ import { ArrowLeft, MapPin, Ruler, Building, Calendar } from "lucide-react";
 export const metadata: Metadata = {
   title: "Steel Structure Case Studies | Real Projects by Laotie Steel",
   description:
-    "Browse our steel structure case studies: industrial warehouses, factory buildings, aircraft hangars, and logistics centers delivered to 30+ countries. CE & ISO certified.",
+    "Steel structure case studies: industrial warehouses, factory buildings, aircraft hangars, and logistics centers. CE & ISO certified. Delivered to 30+ countries.",
   keywords: [
     "steel structure case studies",
     "warehouse construction case study",

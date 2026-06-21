@@ -15,13 +15,20 @@ export const metadata: Metadata = {
     locale: "zh_CN",
     images: [
       {
-        url: "https://www.laotie-steel.com/images/og-home-zh.jpg",
+        url: "https://www.laotie-steel.com/images/og-image.webp",
         width: 1200,
         height: 630,
         alt: "老铁钢结构",
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "老铁钢结构 - 专业钢结构设计、制造、安装",
+    description: "老铁钢结构，20年经验，出口20+国家。提供钢结构厂房、仓库、物流中心设计、制造、安装一站式服务。",
+    images: ["https://www.laotie-steel.com/images/og-image.webp"],
+  },
+  alternates: { canonical: "https://www.laotie-steel.com/zh" },
 };
 
 const services = [
