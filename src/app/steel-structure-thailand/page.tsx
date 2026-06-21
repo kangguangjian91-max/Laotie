@@ -38,6 +38,12 @@ export const metadata: Metadata = {
     type: "website",
   },
   alternates: { canonical: "https://www.laotie-steel.com/steel-structure-thailand" },
+  twitter: {
+    card: "summary_large_image",
+    title: "Steel Structure Thailand | Laotie Steel",
+    description: "Leading steel structure manufacturer for Thailand. CE certified, 30-year warranty.",
+    images: ["/images/thailand/hero.webp"],
+  },
 };
 
 const serviceSchema = {

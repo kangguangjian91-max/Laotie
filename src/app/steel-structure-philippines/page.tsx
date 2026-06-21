@@ -38,6 +38,12 @@ export const metadata: Metadata = {
     type: "website",
   },
   alternates: { canonical: "https://www.laotie-steel.com/steel-structure-philippines" },
+  twitter: {
+    card: "summary_large_image",
+    title: "Steel Structure Philippines | Laotie Steel",
+    description: "Your trusted steel structure partner in Philippines. 100+ projects completed.",
+    images: ["/images/philippines/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp"],
+  },
 };
 
 const serviceSchema = {

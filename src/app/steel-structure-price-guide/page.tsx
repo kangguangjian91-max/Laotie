@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  alternates: { canonical: "https://www.laotie-steel.com/steel-structure-price-guide" },
 };
 
 const priceSchema = {

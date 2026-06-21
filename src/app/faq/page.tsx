@@ -145,7 +145,7 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "FAQ",
+  title: "Steel Structure FAQ | Pricing, Production, Shipping & Support",
   description:
     "Frequently asked questions about steel structure manufacturing, pricing, payment terms, production time, shipping, installation support, and warranty. Get answers before you order.",
   openGraph: {

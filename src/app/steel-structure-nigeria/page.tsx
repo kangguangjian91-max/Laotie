@@ -42,6 +42,12 @@ export const metadata: Metadata = {
     type: "website",
   },
   alternates: { canonical: "https://www.laotie-steel.com/steel-structure-nigeria" },
+  twitter: {
+    card: "summary_large_image",
+    title: "Steel Structure Nigeria | Laotie Steel",
+    description: "Your trusted steel structure partner in Nigeria. 100+ projects completed.",
+    images: ["/images/nigeria/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp"],
+  },
 };
 
 const serviceSchema = {

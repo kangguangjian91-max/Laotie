@@ -4,7 +4,7 @@ import CertificatesClient from "./CertificatesClient";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Certificates & Certifications",
+  title: "Steel Structure Certifications | CE, ISO 9001, IAF Certified",
   description:
     "View Laotie Steel Structure's certifications: ISO 9001, CE (EN 1090), IAF, Supplier Assessment, and AWS welding certifications. Quality assured for global projects.",
   openGraph: {

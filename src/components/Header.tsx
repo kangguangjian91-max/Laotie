@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { trackOutboundLink, trackLandingPageView } from "@/lib/gtag";
 
 const navItems = [
@@ -25,6 +26,12 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [globalOpen, setGlobalOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -61,7 +68,11 @@ export default function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className="relative px-3 py-2 text-sm font-medium text-gray-600 hover:text-steel rounded-lg transition-colors group"
+                className={`relative px-3 py-2 text-sm font-medium rounded-lg transition-colors group ${
+                  isActive(item.href)
+                    ? "text-steel bg-steel/5"
+                    : "text-gray-600 hover:text-steel"
+                }`}
               >
                 {item.label}
                 <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-steel-accent rounded-full group-hover:w-4 transition-all duration-300" />
@@ -168,7 +179,11 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="block px-3 py-2.5 text-sm font-medium text-gray-600 hover:text-steel hover:bg-gray-50 rounded-lg transition-colors"
+                className={`block px-3 py-2.5 text-sm font-medium rounded-lg transition-colors ${
+                  isActive(item.href)
+                    ? "text-steel bg-gray-100"
+                    : "text-gray-600 hover:text-steel hover:bg-gray-50"
+                }`}
               >
                 {item.label}
               </a>

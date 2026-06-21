@@ -38,6 +38,12 @@ export const metadata: Metadata = {
     type: "website",
   },
   alternates: { canonical: "https://www.laotie-steel.com/steel-structure-vietnam" },
+  twitter: {
+    card: "summary_large_image",
+    title: "Steel Structure Vietnam | Laotie Steel",
+    description: "Your trusted steel structure partner in Vietnam. 100+ projects completed.",
+    images: ["/images/vietnam/hero.webp"],
+  },
 };
 
 const serviceSchema = {

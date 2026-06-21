@@ -39,6 +39,12 @@ export const metadata: Metadata = {
     type: "website",
   },
   alternates: { canonical: "https://www.laotie-steel.com/steel-structure-indonesia" },
+  twitter: {
+    card: "summary_large_image",
+    title: "Steel Structure Indonesia | Laotie Steel",
+    description: "Leading steel structure manufacturer for Indonesia. CE certified, 30-year warranty.",
+    images: ["/images/indonesia/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp"],
+  },
 };
 
 export default function SteelStructureIndonesia() {
