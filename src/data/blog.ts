@@ -677,112 +677,10 @@ Chinese steel structure manufacturers offer a compelling combination of quality,
 
 Ready to start your project? Contact Laotie Steel Structure for a free quote today.`,
   },
-  {
-    slug: "portal-frame-vs-space-frame",
-    title: "Portal Frame vs Space Frame: Which Steel Structure Is Right for Your Project?",
-    description: "A practical comparison of portal frame and space frame structures — span capacity, cost, construction speed, and ideal use cases.",
-    date: "2025-11-25",
-    category: "Technical",
-    readTime: "6 min read",
-    content: `When planning a steel structure project, one of the first technical decisions you'll face is choosing between a portal frame and a space frame. Both are proven systems, but they excel in different scenarios.
 
-## Portal Frame: The Workhorse of Industrial Buildings
-
-### What It Is
-A portal frame consists of rigid steel frames (columns and rafters) connected by purlins and bracing. It's the most common structural system for industrial buildings.
-
-### Key Specifications
-- **Span**: Typically 10m to 60m (can reach 80m with special design)
-- **Height**: Up to 20m eave height
-- **Column spacing**: 6m to 9m
-
-### Best For
-- Warehouses and logistics centers
-- Factory buildings and workshops
-- Agricultural buildings
-- Commercial showrooms
-
-### Pros
-- Lower cost per square meter
-- Faster construction (pre-fabricated components)
-- Easy to extend or modify
-- Simple maintenance
-
-### Cons
-- Limited to rectangular layouts
-- Less efficient for very large spans (>60m)
-- Requires more columns for wide buildings
-
-## Space Frame: The Solution for Large, Column-Free Spaces
-
-### What It Is
-A space frame is a three-dimensional truss system where members are connected at nodes, distributing loads in multiple directions. Think of it as a giant geometric web.
-
-### Key Specifications
-- **Span**: 20m to 120m+
-- **Shape flexibility**: Flat, curved, dome, pyramid
-- **Load distribution**: Multi-directional
-
-### Best For
-- Airport terminals and hangars
-- Sports arenas and stadiums
-- Exhibition halls and convention centers
-- Shopping mall atriums
-- Transportation hubs
-
-### Pros
-- Enormous column-free spans
-- Architectural flexibility (curves, domes)
-- Excellent seismic performance
-- Lightweight relative to span capacity
-
-### Cons
-- Higher cost per square meter
-- More complex fabrication and assembly
-- Longer design and engineering phase
-- Requires specialized installation crews
-
-## Head-to-Head Comparison
-
-| Factor | Portal Frame | Space Frame |
-|--------|-------------|-------------|
-| Cost | ¥200-400/m² | ¥400-800/m² |
-| Max span | 60m | 120m+ |
-| Construction speed | Fast (2-4 weeks) | Moderate (4-8 weeks) |
-| Design complexity | Low | High |
-| Seismic performance | Good | Excellent |
-| Architectural flexibility | Limited | High |
-| Maintenance | Easy | Moderate |
-
-## How to Decide
-
-**Choose Portal Frame if:**
-- Your building is rectangular
-- Span is under 60m
-- Budget is a primary concern
-- You need fast delivery
-- The building serves industrial/commercial purposes
-
-**Choose Space Frame if:**
-- You need large, column-free spaces
-- Architectural aesthetics matter
-- The span exceeds 60m
-- You need curved or dome structures
-- The project is a public/civic building
-
-## Can You Combine Both?
-
-Absolutely! Many large projects use portal frames for the main structure and space frames for entrance canopies, atriums, or special architectural features. This hybrid approach balances cost and design flexibility.
-
-## Laotie's Experience
-
-Laotie Steel Structure has delivered both portal frame and space frame projects across 30+ countries. Our engineering team can help you evaluate which system best fits your project requirements.
-
-Contact us with your building dimensions and requirements — we'll provide technical recommendations and a free quote.`,
-  },
   {
     slug: "steel-structure-cost-guide-2025",
-    title: "Steel Structure Cost Guide 2025: Price Per Square Meter Explained",
+    title: "Steel Structure Cost Guide 2026: Price Per Square Meter Explained",
     description: "Understand steel structure pricing factors — raw materials, design complexity, surface treatment, and shipping — with real price ranges for 2025.",
     date: "2025-11-10",
     category: "Cost & Pricing",
@@ -1360,7 +1258,9 @@ This is the #1 question from clients planning warehouse, factory, or commercial 
 
 | Building Type | Cost (EXW China) | Cost (CIF Your Port) |
 |--------------|-----------------|---------------------|
-| **Portal Frame Warehouse** | $180-350/m² | $250-450/m² |
+| **Portal Frame Warehouse (turnkey)** | $180-350/m² | $250-450/m² |
+
+*Prices above are for the **complete building** (steel structure + cladding + accessories). For steel fabrication only (FOB), see range below.*
 | **Factory (2-3 story)** | $220-400/m² | $300-500/m² |
 | **Space Frame** | $350-600/m² | $450-750/m² |
 
@@ -1406,7 +1306,7 @@ Steel tonnage directly determines material and processing costs:
 - Fabrication cost: $36,400
 - Coating: $8,400
 - Shipping: $5,000
-- **Total**: $51,300 ($25.65/m²)
+- **Total (steel fabrication FOB)**: $51,300 ($25.65/m²)
 
 ## How to Reduce Cost
 
