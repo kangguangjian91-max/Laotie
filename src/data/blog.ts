@@ -38,7 +38,7 @@ The design life of a steel structure depends on three factors:
 | Urban / light industrial (C3) | 10-20 years | 25-35 years | 40-50 years |
 | Coastal / heavy industrial (C4-C5) | 5-10 years | 15-25 years | 25-35 years |
 
-> **Note for international buyers**: OldTie ships steel structures to over 20 countries. We recommend coating specifications based on your local environment — not the Chinese climate. A warehouse in Lagos needs very different protection than one in Melbourne.
+> **Note for international buyers**: Laotie ships steel structures to over 30 countries. We recommend coating specifications based on your local environment — not the Chinese climate. A warehouse in Lagos needs very different protection than one in Melbourne.
 
 ## Annual Inspection: Your First Line of Defense
 
@@ -153,9 +153,9 @@ Spending $3,000-5,000 per year on a $100,000 steel building saves $15,000-35,000
 - After major events: earthquakes, cyclones, vehicle impacts, fires
 - Before changing building use (adding crane, heavier loads)
 
-## OldTie's Commitment to Building Longevity
+## Laotie's Commitment to Building Longevity
 
-Every OldTie steel structure ships with:
+Every Laotie steel structure ships with:
 - Complete as-built documentation — design parameters, material certificates, coating specs
 - Maintenance manual tailored to your coating system and environment
 - Touch-up paint kit — 2 liters of matching primer and topcoat
@@ -177,7 +177,7 @@ The best maintenance program starts with a well-built structure. Our factory in 
     readTime: "7 min read",
     content: `Steel structure processing is where engineering meets craftsmanship. Raw steel plates and sections are transformed into precision building components through a sequence of controlled industrial processes.
 
-At OldTie Steel Structure, our Shangqiu factory processes over 5,000 tons of steel monthly across five production lines. Here's a detailed look at the core processing techniques.
+At Laotie Steel Structure, our Shangqiu factory processes over 5,000 tons of steel monthly across five production lines. Here's a detailed look at the core processing techniques.
 
 ## CNC Cutting: The Foundation of Precision Fabrication
 
@@ -241,7 +241,7 @@ All-position welding for connections and stiffeners:
 | Magnetic Particle (MT) | Surface and near-surface cracks | Supplementary to UT |
 | Radiographic Testing (RT) | Internal defects (critical) | Full-penetration butt welds |
 
-OldTie holds EN 1090-2 EXC2 certification — verifying welding procedures meet European structural requirements.
+Laotie holds EN 1090-2 EXC2 certification — verifying welding procedures meet European structural requirements.
 
 ## Straightening: Correcting Thermal Distortion
 
@@ -282,7 +282,7 @@ For maximum protection: immersion in molten zinc at ~450°C, coating 85-200μm p
 | Substandard surface prep | Premature corrosion → 3-5× higher maintenance costs |
 | Skipped pre-assembly | Installation issues discovered on site → costly delays |
 
-At OldTie, every component passes through six inspection checkpoints before shipping.
+At Laotie, every component passes through six inspection checkpoints before shipping.
 
 ## Choosing a Processing Partner
 
@@ -295,7 +295,7 @@ When evaluating suppliers, ask:
 
 ## Get Your Steel Structure Processing Quote
 
-Whether you're building a 500m² warehouse or a 10,000m² factory complex, processing quality determines your project's success. OldTie Steel Structure combines CNC precision, certified welding, and proven surface treatment to deliver structures that last.
+Whether you're building a 500m² warehouse or a 10,000m² factory complex, processing quality determines your project's success. Laotie Steel Structure combines CNC precision, certified welding, and proven surface treatment to deliver structures that last.
 
 📱 **WhatsApp**: +86 166-5073-5555  
 🌐 **Website**: https://www.laotie-steel.com`,
@@ -415,7 +415,7 @@ At Laotie, every order goes through 6 inspection checkpoints:
 - ✅ **5,000+ tons/month** production capacity
 - ✅ **CE & ISO 9001 certified**
 - ✅ **EN 1090-2 EXC2** execution class
-- ✅ **20+ countries** exported to
+- ✅ **30+ countries** exported to
 - ✅ **24/7 WhatsApp support**: +86 166-5073-5555
 
 ## Frequently Asked Questions
@@ -439,7 +439,7 @@ Ready to start your steel structure project? Contact Laotie for a **free quote w
 
 ---
 
-*Laotie Steel Structure — Trusted by 200+ clients across 20+ countries. Factory-direct pricing, international quality standards.*`,
+*Laotie Steel Structure — Trusted by 200+ clients across 30+ countries. Factory-direct pricing, international quality standards.*`,
   },
   {
     slug: "steel-structure-installation-guide-erection-process",
@@ -450,7 +450,7 @@ Ready to start your steel structure project? Contact Laotie for a **free quote w
     readTime: "8 min read",
     content: `Proper installation is critical to the safety, durability, and performance of any steel structure building. Whether you're erecting a warehouse, factory, or commercial building, this guide walks you through the complete installation process.
 
-At Laotie Steel Structure, we have installed 200+ buildings across 20+ countries. Here's everything you need to know.
+At Laotie Steel Structure, we have installed 200+ buildings across 30+ countries. Here's everything you need to know.
 
 ## Pre-Installation Preparation
 
