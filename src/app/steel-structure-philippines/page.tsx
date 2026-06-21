@@ -32,11 +32,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Steel Structure Philippines | Laotie Steel",
     description:
-      "Your trusted steel structure partner in Philippines. 100++ projects completed across Manila, Cebu, Davao.",
+      "Your trusted steel structure partner in Philippines. 100+ projects completed across Manila, Cebu, Davao.",
     images: ["/images/philippines/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp"],
     locale: "en_PH",
     type: "website",
   },
+  alternates: { canonical: "https://www.laotie-steel.com/steel-structure-philippines" },
 };
 
 const serviceSchema = {
@@ -170,14 +171,14 @@ export default function PhilippinesLandingPage() {
             Why Choose Us for Your Philippines Project?
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-            With 15+ years of experience and 100++ completed projects across Philippines, we understand
+            With 15+ years of experience and 100+ completed projects across Philippines, we understand
             local building codes, climate challenges, and logistics requirements.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <ScrollAnimator animation="fade-in" delay={0}>
               <div className="text-center p-6 bg-blue-100+ rounded-xl">
               <div className="text-5xl mb-4">🏗️</div>
-              <h3 className="text-xl font-bold mb-2">100++ Projects in Philippines</h3>
+              <h3 className="text-xl font-bold mb-2">100+ Projects in Philippines</h3>
               <p className="text-gray-600">
                 Proven track record across Manila, Cebu, Davao, Baguio, and Iloilo. From small
                 warehouses to large industrial complexes.
@@ -331,7 +332,7 @@ export default function PhilippinesLandingPage() {
       {/* Project Cases - Carousel */}
       <ProjectCarousel
         title="Recent Projects in Philippines"
-        subtitle="We have completed 100++ steel structure projects across Philippines. Here are some of our recent works."
+        subtitle="We have completed 100+ steel structure projects across Philippines. Here are some of our recent works."
         projects={[
           {
             image: "/images/philippines/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp",

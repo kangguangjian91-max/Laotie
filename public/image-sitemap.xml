@@ -19,19 +19,19 @@
   <url>
     <loc>https://www.laotie-steel.com/products</loc>
     <image:image>
-      <image:loc>https://www.laotie-steel.com/images/products/product-steel-building.webp</image:loc>
+      <image:loc>https://www.laotie-steel.com/images/product-steel-building.webp</image:loc>
       <image:title>Steel Structure Building</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.laotie-steel.com/images/products/product-floor-deck.webp</image:loc>
+      <image:loc>https://www.laotie-steel.com/images/product-floor-deck.webp</image:loc>
       <image:title>Floor Deck</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.laotie-steel.com/images/products/product-space-frame.webp</image:loc>
+      <image:loc>https://www.laotie-steel.com/images/product-space-frame.webp</image:loc>
       <image:title>Space Frame Truss</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.laotie-steel.com/images/products/product-cladding.webp</image:loc>
+      <image:loc>https://www.laotie-steel.com/images/product-cladding.webp</image:loc>
       <image:title>Cladding System</image:title>
     </image:image>
   </url>

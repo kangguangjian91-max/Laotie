@@ -41,6 +41,7 @@ export const metadata: Metadata = {
     locale: "en_NG",
     type: "website",
   },
+  alternates: { canonical: "https://www.laotie-steel.com/steel-structure-nigeria" },
 };
 
 const serviceSchema = {

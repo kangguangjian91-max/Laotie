@@ -37,6 +37,7 @@ export const metadata: Metadata = {
     locale: "en_TH",
     type: "website",
   },
+  alternates: { canonical: "https://www.laotie-steel.com/steel-structure-thailand" },
 };
 
 const serviceSchema = {
@@ -161,7 +162,7 @@ export default function ThailandLandingPage() {
               Your Trusted Partner for Warehouse & Factory Construction
             </p>
             <p className="text-lg mb-8 text-blue-200 max-w-2xl mx-auto">
-              100++ projects completed across Bangkok, Chiang Mai, Phuket & more.
+              100+ projects completed across Bangkok, Chiang Mai, Phuket & more.
               CE certified, 30-year warranty, factory-direct pricing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -202,7 +203,7 @@ export default function ThailandLandingPage() {
               </div>
               <h3 className="text-xl font-bold mb-2">15+ Years Experience</h3>
               <p className="text-gray-600">
-                Since 2009, we've manufactured steel structures for 100++ projects worldwide.
+                Since 2009, we've manufactured steel structures for 100+ projects worldwide.
               </p>
             </div>
             </ScrollAnimator>

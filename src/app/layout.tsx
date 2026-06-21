@@ -146,13 +146,12 @@ export default function RootLayout({
         {/* Hreflang tags for international SEO */}
         <link rel="alternate" hrefLang="en" href="https://www.laotie-steel.com" />
         <link rel="alternate" hrefLang="x-default" href="https://www.laotie-steel.com" />
-        {/* Country-specific hreflang — uncomment when ready
         <link rel="alternate" hrefLang="en-TH" href="https://www.laotie-steel.com/steel-structure-thailand" />
         <link rel="alternate" hrefLang="en-VN" href="https://www.laotie-steel.com/steel-structure-vietnam" />
         <link rel="alternate" hrefLang="en-ID" href="https://www.laotie-steel.com/steel-structure-indonesia" />
         <link rel="alternate" hrefLang="en-PH" href="https://www.laotie-steel.com/steel-structure-philippines" />
         <link rel="alternate" hrefLang="en-NG" href="https://www.laotie-steel.com/steel-structure-nigeria" />
-        */}
+        <link rel="alternate" hrefLang="zh-CN" href="https://www.laotie-steel.com/zh" />
         {/* Microsoft Clarity — free user behavior analytics (Hotjar alternative) */}
         <Script
           id="microsoft-clarity"
