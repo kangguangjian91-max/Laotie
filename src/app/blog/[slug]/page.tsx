@@ -2,13 +2,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import JsonLd from "@/components/JsonLd";
-import { getPostBySlug, getAllSlugs, getAllPostsIncludingNew, getPostBySlugIncludingNew, getAllSlugsIncludingNew, type BlogPost } from "@/data/blog";
+import { getPostBySlug, getAllPosts, getAllSlugs, type BlogPost } from "@/data/blog";
 import { ArrowLeft, Clock, Tag, Calendar } from "lucide-react";
 import { notFound } from "next/navigation";
 import DOMPurify from "isomorphic-dompurify";
 
 export function generateStaticParams() {
-  return getAllSlugsIncludingNew().map((slug) => ({ slug }));
+  return getAllSlugs().map((slug) => ({ slug }));
 }
 
 function renderMarkdown(content: string): string {
@@ -83,7 +83,7 @@ function addInternalLinks(html: string): string {
 
 function getRelatedPosts(currentSlug: string): BlogPost[] {
   // Return 2 most recent posts excluding the current one
-  return getAllPostsIncludingNew()
+  return getAllPosts()
     .filter((p) => p.slug !== currentSlug)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 2);
@@ -91,7 +91,7 @@ function getRelatedPosts(currentSlug: string): BlogPost[] {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = getPostBySlugIncludingNew(slug);
+  const post = getPostBySlug(slug);
   if (!post) return { title: "Post Not Found" };
   return {
     title: `${post.title} | Laotie Blog`,
@@ -120,7 +120,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = getPostBySlugIncludingNew(slug);
+  const post = getPostBySlug(slug);
 
   if (!post) {
     notFound();
