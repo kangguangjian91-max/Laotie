@@ -6,7 +6,7 @@ import { products } from "@/data/products";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata = {
-  title: "Steel Structure Products | Portal Frame, Floor Deck, Space Frame",
+  title: "Steel Structure Products | Portal Frame, Floor Deck & More",
   description: "CE & ISO certified steel structure products: portal frame, floor deck, space frame, cladding system. 50-year design life. Request a free quote.",
   openGraph: {
     title: "Steel Structure Products | Laotie Steel",

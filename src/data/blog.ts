@@ -11,7 +11,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "steel-structure-maintenance-guide-lifespan-corrosion",
-    title: "Steel Structure Maintenance: Extend Building Lifespan to 50+ Years",
+    title: "Steel Structure Maintenance: Extend Lifespan to 50+ Years",
     description: "Learn how to maintain steel structures for maximum lifespan. Annual inspection checklists, corrosion prevention, coating repair, and maintenance schedules for warehouses and factories.",
     date: "2026-06-10",
     category: "Maintenance",
@@ -170,7 +170,7 @@ The best maintenance program starts with a well-built structure. Our factory in 
   },
   {
     slug: "steel-structure-processing-techniques-cnc-welding-guide",
-    title: "Steel Structure Processing: CNC Cutting, Welding & Surface Treatment Guide",
+    title: "Steel Structure CNC Cutting, Welding & Treatment Guide",
     description: "Master steel structure processing techniques including CNC plasma cutting, submerged arc welding, shot blasting, and surface treatment. Learn how Chinese factories achieve precision fabrication.",
     date: "2026-06-10",
     category: "Manufacturing",
@@ -302,7 +302,7 @@ Whether you're building a 500m² warehouse or a 10,000m² factory complex, proce
   },
   {
     slug: "steel-structure-production-china-manufacturing-guide",
-    title: "Steel Structure Production in China: Complete Manufacturing Guide 2026",
+    title: "Steel Structure Production in China: A Manufacturing Guide",
     description: "Learn how Chinese steel structure manufacturers produce high-quality steel buildings at competitive prices. Discover the production process, quality standards, and why China leads global steel structure manufacturing.",
     date: "2026-06-07",
     category: "Manufacturing",
@@ -443,7 +443,7 @@ Ready to start your steel structure project? Contact Laotie for a **free quote w
   },
   {
     slug: "steel-structure-installation-guide-erection-process",
-    title: "Steel Structure Installation Guide: Step-by-Step Erection Process",
+    title: "Steel Structure Installation: Step-by-Step Erection Guide",
     description: "Complete guide to steel structure installation. Learn the erection process, safety requirements, equipment needed, and timeline for steel building installation in 2026.",
     date: "2026-06-07",
     category: "Installation",
@@ -622,7 +622,7 @@ Every Laotie order includes:
   },
   {
     slug: "why-choose-chinese-steel-structure-manufacturer",
-    title: "Why Choose a Chinese Steel Structure Manufacturer: Quality, Cost, and Capacity",
+    title: "Why Choose a Chinese Steel Structure Manufacturer",
     description: "Discover why global buyers are turning to Chinese steel structure factories for their construction projects — from competitive pricing to CE/ISO certified quality.",
     date: "2025-12-10",
     category: "Buying Guide",
@@ -680,7 +680,7 @@ Ready to start your project? Contact Laotie Steel Structure for a free quote tod
 
   {
     slug: "steel-structure-cost-guide-2025",
-    title: "Steel Structure Cost Guide 2026: Price Per Square Meter Explained",
+    title: "Steel Structure Cost Guide 2026: Price Per m²",
     description: "Understand steel structure pricing factors — raw materials, design complexity, surface treatment, and shipping — with real price ranges for 2025.",
     date: "2025-11-10",
     category: "Cost & Pricing",
@@ -769,7 +769,7 @@ Contact Laotie Steel Structure with these specifications, and we'll provide a de
   },
   {
     slug: "ce-iso-certified-steel-structures",
-    title: "CE & ISO Certified Steel Structures: What Certifications Mean for Your Project",
+    title: "CE & ISO Certified Steel Structures: What They Mean",
     description: "Understand steel structure certifications — CE marking, ISO 9001, IAF, and Supplier Assessment — and why they matter for your construction project.",
     date: "2025-10-28",
     category: "Quality & Certification",
@@ -863,7 +863,7 @@ Laotie Steel Structure welcomes buyer inspections and certification audits. Cont
   },
 {
     slug: "factory-tour-5000-tons-monthly-production",
-    title: "Factory Tour: How We Produce 5,000 Tons of Steel Structures Monthly",
+    title: "Factory Tour: 5,000 Tons of Steel Structures Monthly",
     description: "Take a virtual tour of Laotie's steel structure factory — 5 production lines, a 5-step manufacturing process, and quality control at every stage.",
     date: "2025-09-20",
     category: "Company News",
@@ -986,7 +986,7 @@ Contact Laotie Steel Structure today to schedule your virtual factory tour.`,
   },
   {
     slug: "how-to-import-steel-structures-from-china-complete-guide",
-    title: "How to Import Steel Structures from China: Complete Guide 2026",
+    title: "How to Import Steel Structures from China: Guide 2026",
     description: "Step-by-step guide to importing steel structures from China. Find reliable suppliers, understand pricing, navigate shipping and customs, and avoid common pitfalls. Updated for 2026.",
     date: "2026-06-21",
     category: "Buying Guide",
@@ -1245,7 +1245,7 @@ Whether you're building a warehouse in Lagos, a factory in Manila, or a logistic
   },
   {
     slug: "steel-structure-cost-per-square-meter-2026",
-    title: "Steel Structure Cost Per Square Meter in 2026 (Complete Guide)",
+    title: "Steel Structure Cost Per Square Meter in 2026",
     description: "Learn steel structure cost per square meter in 2026: portal frame ($180-350/m²), space frame ($350-600/m²). Get factors affecting price and request free quote.",
     date: "2026-06-17",
     category: "Cost & Pricing",
@@ -1718,7 +1718,7 @@ Contact us for design consultation and free quotation.
   // ===== 第4篇博客：门式框架 vs 空间网格结构 =====
   {
     slug: "portal-frame-vs-space-frame-comparison",
-    title: "Portal Frame vs Space Frame: Which to Choose? (2026 Comparison)",
+    title: "Portal Frame vs Space Frame: 2026 Comparison",
     description: "Compare portal frame and space frame steel structures: cost, span, construction time, applications. Make informed decision for your project.",
     date: "2026-06-17",
     category: "Structural Systems",

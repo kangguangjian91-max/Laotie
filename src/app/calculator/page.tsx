@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Steel Structure Cost Calculator 2026 | Free Online Quote Tool",
+  title: "Steel Structure Cost Calculator 2026 | Free Quote Tool",
   description:
     "Free steel structure cost calculator 2026. Estimate price per m² by building type, size, crane, and location. Australia, China, Nigeria, Philippines, Vietnam, Thailand, UAE, Indonesia.",
   keywords: [

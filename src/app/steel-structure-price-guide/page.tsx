@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Steel Structure Price Guide 2026 | Cost Calculator & Quotation",
+  title: "Steel Structure Price Guide 2026 | Cost Calculator",
   description:
     "Get the latest steel structure price guide for 2026. Cost calculator for warehouse, factory, and industrial buildings. Free quotation within 24 hours. CE certified, 30-year warranty.",
   keywords: [

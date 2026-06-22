@@ -9,7 +9,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Steel Structure Philippines | Warehouse & Factory Construction",
+  title: "Steel Structure Philippines | Factory & Warehouse Builder",
   description:
     "Leading steel structure manufacturer for Philippines. Custom warehouse, factory, and industrial building solutions. CE certified, 30-year warranty. Get free quote today!",
   keywords: [

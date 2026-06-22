@@ -7,7 +7,7 @@ import Image from "next/image";
 import DOMPurify from "isomorphic-dompurify";
 
 export const metadata: Metadata = {
-  title: "Steel Structure Manufacturing Process | 7-Step Quality Control",
+  title: "Steel Structure Manufacturing: 7-Step Quality Control",
   description:
     "Laotie Steel's 7-step manufacturing process: material inspection, CNC cutting, welding, surface treatment, and packaging. ISO 9001 certified quality management.",
   openGraph: {
