@@ -81,12 +81,16 @@ function addInternalLinks(html: string): string {
     );
 }
 
-function getRelatedPosts(currentSlug: string): BlogPost[] {
-  // Return 2 most recent posts excluding the current one
-  return getAllPosts()
-    .filter((p) => p.slug !== currentSlug)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, 2);
+function getRelatedPosts(currentSlug: string, currentCategory: string): BlogPost[] {
+  const all = getAllPosts();
+  // First: same category (excluding current post)
+  const sameCategory = all.filter((p) => p.slug !== currentSlug && p.category === currentCategory);
+  // Second: other categories
+  const other = all.filter((p) => p.slug !== currentSlug && p.category !== currentCategory);
+  // Sort both by date
+  const sortByDate = (arr: BlogPost[]) => arr.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  // Take up to 2 from same category, fill with other categories if needed
+  return [...sortByDate(sameCategory).slice(0, 2), ...sortByDate(other)].slice(0, 2);
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
@@ -160,7 +164,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   };
 
   const html = addInternalLinks(renderMarkdown(post.content));
-  const relatedPosts = getRelatedPosts(slug);
+  const relatedPosts = getRelatedPosts(slug, post.category);
 
   return (
     <>
@@ -227,7 +231,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </div>
           </div>
 
-          <div className="mt-16 p-6 bg-gradient-to-r from-steel to-steel-light rounded-xl text-white text-center">
+          {/* Category browse link */}
+          {relatedPosts.filter(rp => rp.category === post.category).length > 0 && (
+            <div className="mt-6 text-center">
+              <a
+                href="/blog"
+                className="inline-flex items-center gap-1 text-sm text-steel hover:text-steel-accent transition-colors"
+              >
+                Browse more {post.category} articles →
+              </a>
+            </div>
+          )}
+
+          <div className="mt-8 p-6 bg-gradient-to-r from-steel to-steel-light rounded-xl text-white text-center">
             <h3 className="text-lg font-semibold mb-2">Need a Steel Structure?</h3>
             <p className="text-white/80 text-sm mb-4">
               Get a free quote from our engineering team. We respond within 2 hours.
