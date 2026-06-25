@@ -32,6 +32,7 @@ const staticRoutes = [
   "/privacy",
   "/terms",
   "/faq",
+  "/steel-structure-logistics-center",
   ...countryRoutes,
 ];
 
