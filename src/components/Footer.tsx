@@ -66,6 +66,12 @@ export default function Footer() {
                   Cost Calculator
                 </a>
               </li>
+              <li>
+                <a href="/steel-structure-logistics-center" className="hover:text-white transition-colors inline-flex items-center gap-1 group">
+                  <span className="w-0 group-hover:w-1 h-0.5 bg-steel-accent rounded-full transition-all" />
+                  Logistics Centers
+                </a>
+              </li>
             </ul>
           </div>
 

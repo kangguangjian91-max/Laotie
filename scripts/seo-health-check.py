@@ -16,6 +16,7 @@ PAGES = [
   "/steel-structure-thailand", "/steel-structure-vietnam",
   "/steel-structure-indonesia", "/steel-structure-philippines",
   "/steel-structure-nigeria", "/steel-structure-price-guide",
+  "/steel-structure-saudi-arabia", "/steel-structure-logistics-center",
   "/zh",
 ]
 
@@ -35,6 +36,7 @@ BLOG_SLUGS = [
   "portal-frame-vs-space-frame-comparison",
   "steel-structure-installation-process-timeline",
   "how-to-import-steel-structures-from-china-complete-guide",
+  "steel-structure-cost-saudi-arabia-2026",
 ]
 
 for s in BLOG_SLUGS:
