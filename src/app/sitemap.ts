@@ -15,6 +15,7 @@ const countryRoutes = [
   "/steel-structure-indonesia",
   "/steel-structure-philippines",
   "/steel-structure-nigeria",
+  "/steel-structure-saudi-arabia",
   "/steel-structure-price-guide",
 ];
 

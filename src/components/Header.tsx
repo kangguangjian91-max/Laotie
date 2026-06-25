@@ -20,6 +20,7 @@ const globalLinks = [
   { label: "Indonesia", href: "/steel-structure-indonesia", flag: "🇮🇩", disabled: false },
   { label: "Nigeria", href: "/steel-structure-nigeria", flag: "🇳🇬", disabled: false },
   { label: "Thailand", href: "/steel-structure-thailand", flag: "🇹🇭", disabled: false },
+  { label: "Saudi Arabia", href: "/steel-structure-saudi-arabia", flag: "🇸🇦", disabled: false },
 ];
 
 export default function Header() {

@@ -95,7 +95,7 @@ export const trackProjectClick = (
 // Track Landing Page views (with custom parameters)
 export const trackLandingPageView = (
   country: string,
-  pageType: "philippines" | "vietnam" | "indonesia" | "nigeria" | "thailand" | "main"
+  pageType: "philippines" | "vietnam" | "indonesia" | "nigeria" | "thailand" | "saudi-arabia" | "main"
 ) => {
   trackEvent("landing_page_view", {
     event_category: "page_view",
