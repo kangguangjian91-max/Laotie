@@ -224,6 +224,7 @@ export default function Footer() {
             <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
             <a href="/sitemap.xml" className="hover:text-white transition-colors">Sitemap</a>
+            <a href="https://steelstructureguide.wordpress.com/" target="_blank" rel="noopener noreferrer" className="hover:text-steel-accent transition-colors">Steel Structure Guide ↗</a>
             {/* Social — LinkedIn: create company page at linkedin.com/company/laotie-steel-structure, then uncomment below */}
             {/* <a
               href="https://www.linkedin.com/company/laotie-steel-structure"
