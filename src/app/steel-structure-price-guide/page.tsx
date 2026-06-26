@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Steel Structure Price Guide 2026 | Cost Calculator",
@@ -98,6 +99,16 @@ export default function SteelStructurePriceGuide() {
     <>
       <JsonLd data={priceSchema} />
       <JsonLd data={faqSchema} />
+      <div className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Price Guide 2026", href: "/steel-structure-price-guide" },
+            ]}
+          />
+        </div>
+      </div>
 
       <div className="min-h-screen bg-white">
         {/* Hero Section */}

@@ -5,6 +5,7 @@ import ScrollAnimator from "@/components/ScrollAnimator";
 import CountUp from "@/components/CountUp";
 
 import Header from "@/components/Header";
+import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -108,15 +109,6 @@ const faqSchema = {
   ],
 };
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.laotie-steel.com" },
-    { "@type": "ListItem", position: 2, name: "Saudi Arabia", item: "https://www.laotie-steel.com/steel-structure-saudi-arabia" },
-  ],
-};
-
 export default function SteelStructureSaudiArabia() {
   const heroImage = "/images/projects/project-dubai-01.webp";
 
@@ -125,8 +117,17 @@ export default function SteelStructureSaudiArabia() {
       <LandingPageTracker country="Saudi Arabia" pageType="saudi-arabia" />
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
-      <JsonLd data={breadcrumbSchema} />
       <Header />
+      <div className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Steel Structure Saudi Arabia", href: "/steel-structure-saudi-arabia" },
+            ]}
+          />
+        </div>
+      </div>
 
       <main className="bg-white">
         {/* ========== HERO ========== */}
@@ -136,10 +137,6 @@ export default function SteelStructureSaudiArabia() {
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-steel via-steel/95 to-steel/80" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
-            <a href="/" className="inline-flex items-center gap-1 text-sm text-steel-accent hover:text-white transition-colors mb-4">
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
-              Back to Home
-            </a>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
               Steel Structure Saudi Arabia
             </h1>
@@ -407,6 +404,22 @@ export default function SteelStructureSaudiArabia() {
             </div>
           </section>
         </ScrollAnimator>
+
+        {/* Serving More Countries */}
+        <section className="bg-gray-50 py-10">
+          <div className="max-w-7xl mx-auto px-4">
+            <p className="text-center text-sm text-gray-500 mb-4">Also serving:</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <a href="/steel-structure-thailand" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Thailand</a>
+              <a href="/steel-structure-vietnam" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Vietnam</a>
+              <a href="/steel-structure-indonesia" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Indonesia</a>
+              <a href="/steel-structure-philippines" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Philippines</a>
+              <a href="/steel-structure-nigeria" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Nigeria</a>
+              <a href="/steel-structure-logistics-center" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Logistics Center</a>
+              <a href="/steel-structure-price-guide" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Price Guide</a>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>

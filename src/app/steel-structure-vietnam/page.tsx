@@ -5,6 +5,7 @@ import LandingPageTracker from "@/components/LandingPageTracker";
 import ScrollAnimator from "@/components/ScrollAnimator";
 
 import Header from "@/components/Header";
+import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -128,31 +129,21 @@ const faqSchema = {
   ],
 };
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://www.laotie-steel.com",
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "Steel Structure Vietnam",
-      item: "https://www.laotie-steel.com/steel-structure-vietnam",
-    },
-  ],
-};
-
 export default function VietnamLandingPage() {
   return (
     <><Header />
+    <div className="bg-white border-b border-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+        <Breadcrumb
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Steel Structure Vietnam", href: "/steel-structure-vietnam" },
+          ]}
+        />
+      </div>
+    </div>
     <main className="min-h-screen">
       <LandingPageTracker country="vietnam" pageType="vietnam" />
-      <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
 
