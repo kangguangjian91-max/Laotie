@@ -83,6 +83,21 @@ const productRelatedBlogs: Record<string, string[]> = {
     "ce-iso-certified-steel-structures",
     "factory-tour-5000-tons-monthly-production",
   ],
+  "steel-warehouse": [
+    "how-to-build-steel-warehouse-step-by-step",
+    "steel-structure-warehouse-design-guide",
+    "steel-structure-cost-per-square-meter-2026",
+  ],
+  "steel-factory-building": [
+    "steel-structure-vs-concrete-building-comparison",
+    "steel-structure-production-china-manufacturing-guide",
+    "steel-structure-installation-guide-erection-process",
+  ],
+  "steel-workshop": [
+    "prefabricated-steel-building-complete-guide",
+    "steel-structure-design-guide-beginners",
+    "steel-structure-cost-guide-2025",
+  ],
 };
 
 export default async function ProductDetailPage({ params }: ProductPageProps) {

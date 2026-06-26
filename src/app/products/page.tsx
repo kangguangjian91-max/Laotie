@@ -6,8 +6,8 @@ import { products } from "@/data/products";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata = {
-  title: "Steel Structure Products | Portal Frame, Floor Deck & More",
-  description: "CE & ISO certified steel structure products: portal frame, floor deck, space frame, cladding system. 50-year design life. Request a free quote.",
+  title: "Steel Structure Products | Portal Frame, Factory, Warehouse & More",
+  description: "CE & ISO certified steel structure products: warehouse buildings, factory buildings, workshops, portal frames, floor deck, space frame, cladding system. 50-year design life. Free quote.",
   openGraph: {
     title: "Steel Structure Products | Laotie Steel",
     description: "Portal frame buildings, floor deck systems, space frames, and enclosure cladding. CE & ISO certified, factory direct pricing.",
@@ -44,8 +44,8 @@ const productSchemas = products.map((p, i) => ({
   offers: {
     "@type": "AggregateOffer",
     priceCurrency: "USD",
-    lowPrice: i === 1 ? "8" : i === 3 ? "10" : "25",
-    highPrice: i === 1 ? "15" : i === 3 ? "20" : "110",
+    lowPrice: p.schemaPriceLow,
+    highPrice: p.schemaPriceHigh,
     offerCount: "1",
     availability: "https://schema.org/InStock",
   },

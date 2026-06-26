@@ -183,6 +183,133 @@ For cold storage and food processing projects, we supply PIR-cored panels with f
     schemaPriceLow: "10",
     schemaPriceHigh: "20",
   },
+  {
+    slug: "steel-warehouse",
+    title: "Steel Warehouse Building",
+    subtitle: "Portal Frame / Clear Span",
+    description:
+      "Custom-designed steel warehouse buildings. Clear spans up to 60m, eave heights 6-15m, crane-ready. CE & ISO certified, factory-direct pricing, 30-day delivery.",
+    overview: `A well-designed steel warehouse is the backbone of efficient logistics and storage operations. Our steel warehouse buildings are engineered for maximum storage density, operational flexibility, and long-term durability — with clear spans up to 60 meters and zero interior columns.
+
+Every steel warehouse is custom-designed to your specific requirements: dimensions, bay spacing, eave height, mezzanine floors, dock doors, and crane systems. We use advanced 3D modeling and FEA analysis to optimize the structural design for your local wind, snow, and seismic conditions.
+
+All steel warehouse structures are fabricated in our 20,000 sqm factory with 5 production lines running 24/7. Typical lead time is 30 working days from design approval to shipment. Full engineering drawings, erection manual, and remote installation support included.`,
+    specifications: [
+      { label: "Clear Span", value: "Up to 60m (no interior columns)" },
+      { label: "Eave Height", value: "6m, 9m, 12m, 15m standard" },
+      { label: "Bay Spacing", value: "6m — 9m (optimized for cost)" },
+      { label: "Crane Capacity", value: "Up to 50 tons overhead crane" },
+      { label: "Roof Load", value: "0.3 — 2.0 kN/m² (snow/wind design)" },
+      { label: "Steel Grade", value: "Q355B (S355 equivalent), EN 10025" },
+      { label: "Coating System", value: "Epoxy primer + PU topcoat, custom RAL" },
+      { label: "Fire Protection", value: "Intumescent coating / sprinkler-ready" },
+      { label: "Design Life", value: "50 years with standard maintenance" },
+    ],
+    features: [
+      "Column-Free Storage — clear spans up to 60m maximize rack layout flexibility",
+      "Crane-Ready Frame — integrated crane beams and brackets for up to 50T",
+      "Fast Erection — bolted connections, 4-6 weeks on-site for 10,000 sqm",
+      "Future Expansion — bolt-on extensions without disrupting operations",
+      "Mezzanine Compatible — structural provisions for future mezzanine floors",
+      "Dock Leveler Ready — pre-designed loading bay with dock shelters",
+      "Fire-Rated Options — intumescent coating or sprinkler integration",
+    ],
+    applications: [
+      "Distribution centers & logistics hubs",
+      "E-commerce fulfillment warehouses",
+      "Cold storage & temperature-controlled facilities",
+      "Industrial storage & bulk material warehouses",
+      "Cross-dock terminals & transshipment centers",
+    ],
+    image: "/images/product-steel-building.webp",
+    badge: "Most Popular",
+    schemaPriceLow: "25",
+    schemaPriceHigh: "90",
+  },
+  {
+    slug: "steel-factory-building",
+    title: "Steel Factory Building",
+    subtitle: "Multi-Span / Industrial Production Facility",
+    description:
+      "Custom steel factory buildings for manufacturing plants, production lines, and industrial facilities. Multi-span design, crane systems, office mezzanine. CE certified, 50-year design life.",
+    overview: `Modern manufacturing requires factory buildings that are flexible, durable, and cost-effective. Our steel factory buildings are designed for production efficiency — with large uninterrupted floor areas, integrated crane systems, and the ability to accommodate heavy machinery and production lines.
+
+We design multi-span steel structures with column grids optimized for your production layout. Eave heights from 8m to 20m accommodate tall equipment and overhead cranes. Secondary steelwork supports mezzanine offices, HVAC systems, electrical trays, and process piping — all integrated into one coordinated design.
+
+Each steel factory building is engineered to your local building code (IBC, Eurocode, AS/NZS, or GB standard), with full structural calculations and stamped engineering drawings. Factory fabrication ensures consistent quality, and our experienced team provides remote installation guidance for overseas projects.`,
+    specifications: [
+      { label: "Structure Type", value: "Multi-span portal frame / rigid frame" },
+      { label: "Max Width", value: "Unlimited (multi-bay configuration)" },
+      { label: "Eave Height", value: "8m, 10m, 12m, 15m, 18m, 20m" },
+      { label: "Crane System", value: "Single/double girder, up to 100 tons" },
+      { label: "Floor Load", value: "5 — 25 kN/m² (mezzanine / ground slab)" },
+      { label: "Bay Spacing", value: "6m — 12m (customized per production line)" },
+      { label: "Roof System", value: "Insulated sandwich panel / single-skin + insulation" },
+      { label: "Ventilation", value: "Ridge ventilators, turbo vents, louver system" },
+      { label: "Fire Rating", value: "Up to 2-hour fire resistance (intumescent coating)" },
+    ],
+    features: [
+      "Production-Optimized Layout — column grid aligned with production line flow",
+      "Heavy Crane Support — up to 100 tons, with dedicated crane columns",
+      "Multi-Story Mezzanine — office, locker room, and break area integration",
+      "Process Utility Integration — pipe supports, cable trays, HVAC ducts",
+      "Natural Lighting — FRP skylight panels reduce energy costs by 20-30%",
+      "Expandable Design — future production line expansion without major modification",
+      "VOC-Compliant Coating — environmentally friendly paint systems available",
+    ],
+    applications: [
+      "Manufacturing & assembly plants",
+      "Food processing & beverage production facilities",
+      "Automotive & heavy equipment factories",
+      "Electronics & clean room manufacturing",
+      "Pharmaceutical & chemical processing plants",
+    ],
+    image: "/images/product-steel-building.webp",
+    schemaPriceLow: "30",
+    schemaPriceHigh: "100",
+  },
+  {
+    slug: "steel-workshop",
+    title: "Steel Workshop Building",
+    subtitle: "Light Industrial / Maintenance Facility",
+    description:
+      "Cost-effective steel workshop buildings for maintenance shops, repair facilities, small-scale manufacturing, and agricultural workshops. Quick delivery, simple erection, budget-friendly pricing.",
+    overview: `Steel workshop buildings are the most cost-effective solution for light industrial, maintenance, and agricultural applications. Designed for rapid deployment at minimal cost, our steel workshops use standardized components while still offering full customization for your specific needs.
+
+Workshops feature clear spans up to 30m, eave heights from 4m to 10m, and can include overhead cranes up to 10 tons, mezzanine storage, and partitioned office areas. All steelwork is pre-cut, pre-drilled, and pre-coated in our factory — arriving as a complete bolt-together kit ready for erection.
+
+Typical workshop projects ship within 20 working days and can be erected by a small crew in 2-4 weeks. Foundation requirements are minimal — a simple reinforced concrete strip footing is sufficient for most applications. Complete erection drawings and remote support included with every order.`,
+    specifications: [
+      { label: "Clear Span", value: "9m, 12m, 15m, 18m, 24m, 30m" },
+      { label: "Eave Height", value: "4m, 5m, 6m, 7.5m, 10m" },
+      { label: "Frame Type", value: "Tapered portal frame / hot-rolled section" },
+      { label: "Crane Option", value: "Underhung crane up to 5T, gantry up to 10T" },
+      { label: "Roof Cladding", value: "0.47mm profiled steel sheet + insulation" },
+      { label: "Wall Cladding", value: "0.42mm profiled steel sheet / sandwich panel" },
+      { label: "Door Options", value: "Roller shutter, sliding, sectional overhead" },
+      { label: "Foundation", value: "Simple strip footing (minimal earthworks)" },
+      { label: "Delivery Time", value: "20 working days from design approval" },
+    ],
+    features: [
+      "Budget-Friendly — standardized design reduces engineering and fabrication cost",
+      "Quick Delivery — 20 working days from design to shipment",
+      "Simple Erection — small crew can complete in 2-4 weeks",
+      "Flexible Layout — partition options for office, storage, and work areas",
+      "Crane Ready — underhung or gantry crane provisions at low cost",
+      "Minimal Foundation — lower site preparation cost than heavy industrial builds",
+      "Future Expandable — bolt-on extensions at any time",
+    ],
+    applications: [
+      "Maintenance & repair workshops",
+      "Agricultural machinery sheds & equipment storage",
+      "Small-scale manufacturing & fabrication shops",
+      "Vehicle garages & fleet maintenance facilities",
+      "Community workshops & training centers",
+    ],
+    image: "/images/product-steel-building.webp",
+    schemaPriceLow: "20",
+    schemaPriceHigh: "65",
+  },
 ];
 
 export function getProductBySlug(slug: string): Product | undefined {
