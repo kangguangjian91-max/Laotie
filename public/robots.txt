@@ -1,15 +1,28 @@
-# https://www.robotstxt.org/robotstxt.html
-# For Laotie Steel Structure website
-
 User-agent: *
 Allow: /
+Allow: /products/
+Allow: /projects/
+Allow: /blog/
+Allow: /about
+Allow: /contact
+Allow: /calculator
+Allow: /certificates
+Allow: /manufacturing-process
+Allow: /faq
+Allow: /steel-structure-thailand
+Allow: /steel-structure-vietnam
+Allow: /steel-structure-indonesia
+Allow: /steel-structure-philippines
+Allow: /steel-structure-nigeria
+Allow: /steel-structure-saudi-arabia
+Allow: /steel-structure-logistics-center
+Allow: /steel-structure-price-guide
+Allow: /case-studies
+Allow: /images/
+Allow: /sitemap.xml
 
-# Sitemap
+Disallow: /thank-you
+Disallow: /privacy
+Disallow: /terms
+
 Sitemap: https://www.laotie-steel.com/sitemap.xml
-
-# Disallow admin or private pages (if any)
-# Disallow: /admin/
-# Disallow: /private/
-
-# Crawl-delay (optional, for polite crawling)
-# Crawl-delay: 1

@@ -11,6 +11,7 @@ export interface Product {
   badge?: string;
   schemaPriceLow: string;
   schemaPriceHigh: string;
+  faq: { question: string; answer: string }[];
 }
 
 export const products: Product[] = [
@@ -56,6 +57,13 @@ A typical 3,000 sqm warehouse structure ships from our factory in 25–35 workin
     badge: "Best Seller",
     schemaPriceLow: "25",
     schemaPriceHigh: "110",
+    faq: [
+      { question: "How much does a steel structure building cost?", answer: "Steel structure building costs range from $25 to $110 per square meter depending on size, design complexity, and local code requirements." },
+      { question: "How long does it take to build a steel structure?", answer: "From design approval to site delivery, typical lead time is 30 working days. On-site erection takes 4-8 weeks depending on building size." },
+      { question: "What certifications do you have?", answer: "Our factory is CE certified (EN 1090), ISO 9001, IAF accredited, and Supplier-Assessed. All welders are AWS D1.1 certified." },
+      { question: "Can you design to my local building code?", answer: "Yes. We design to IBC, Eurocode, AS/NZS, and most national building codes. Full structural calculations included." },
+      { question: "Do you provide installation overseas?", answer: "We provide erection manuals, remote video guidance, and can dispatch supervisors for on-site installation support." },
+    ],
   },
   {
     slug: "floor-deck",
@@ -98,6 +106,13 @@ For fast-track projects where traditional concrete pouring is impractical, we al
     image: "/images/product-floor-deck.webp",
     schemaPriceLow: "8",
     schemaPriceHigh: "15",
+    faq: [
+      { question: "What is steel floor deck used for?", answer: "Steel floor deck serves as permanent formwork and bottom reinforcement for composite concrete slabs in multi-story steel buildings." },
+      { question: "What profiles do you offer?", answer: "We offer YX75-200-600, YX51-240-720, YX65-170-510, and YX60-180-540 profiles, plus custom roll-formed profiles." },
+      { question: "What is the fire rating?", answer: "Up to 2 hours with appropriate concrete cover and reinforcement. Full fire engineering data available on request." },
+      { question: "What is galvanized composite deck?", answer: "Galvanized composite deck (免浇筑承重板) is a pre-fabricated steel panel with integrated stiffeners spanning up to 6m without concrete topping." },
+      { question: "Do you provide design support?", answer: "Yes. Full composite slab design including reinforcement mesh layout and shear stud specification included." },
+    ],
   },
   {
     slug: "space-frame-truss",
@@ -140,6 +155,13 @@ For complex geometries, our engineering team provides 3D BIM models (Tekla / Rev
     image: "/images/product-space-frame.webp",
     schemaPriceLow: "30",
     schemaPriceHigh: "80",
+    faq: [
+      { question: "What is a space frame structure?", answer: "A space frame is a lightweight, three-dimensional truss structure that achieves clear spans up to 120m without intermediate columns." },
+      { question: "How much does a space frame cost?", answer: "Space frame structures cost $30-$80 per square meter depending on span and loading. Typical weight is 15-35 kg/m2." },
+      { question: "Difference between space frame and portal frame?", answer: "Space frames achieve longer spans (up to 120m) and are lighter. Portal frames are more economical for spans under 40m." },
+      { question: "Can space frames be installed without welding?", answer: "Yes. Most space frames use bolted ball-joint connections, allowing all-weather installation without site welding." },
+      { question: "Where are space frames commonly used?", answer: "Stadiums, airport terminals, exhibition halls, convention centers, and industrial bulk storage sheds." },
+    ],
   },
   {
     slug: "cladding-system",
@@ -182,6 +204,13 @@ For cold storage and food processing projects, we supply PIR-cored panels with f
     image: "/images/product-cladding.webp",
     schemaPriceLow: "10",
     schemaPriceHigh: "20",
+    faq: [
+      { question: "What types of cladding panels do you offer?", answer: "PU/PIR insulated sandwich panels, rock wool panels, EPS panels, and single-skin metal cladding. Thickness 50mm-200mm." },
+      { question: "What fire ratings are available?", answer: "Rock wool: Grade A (non-combustible). PIR: B1 (self-extinguishing). Fire resistance up to 2 hours." },
+      { question: "What colors and finishes?", answer: "Full RAL color chart. PE, SMP, HDP, and PVDF (Kynar 500) coatings available. Custom color matching." },
+      { question: "What is the U-value of PIR panels?", answer: "PIR panels achieve U-values as low as 0.18 W/m2K at 100mm thickness." },
+      { question: "How are panels installed?", answer: "Hidden fastener joints with continuous gasket seals. Bolt-on installation to steel structure. Full manual provided." },
+    ],
   },
   {
     slug: "steel-warehouse",
@@ -225,6 +254,13 @@ All steel warehouse structures are fabricated in our 20,000 sqm factory with 5 p
     badge: "Most Popular",
     schemaPriceLow: "25",
     schemaPriceHigh: "90",
+    faq: [
+      { question: "What is the maximum clear span?", answer: "Up to 60 meters with no interior columns, allowing maximum flexibility for racking and forklift movement." },
+      { question: "What eave heights are available?", answer: "Standard eave heights: 6m, 9m, 12m, 15m. Custom heights available for special requirements." },
+      { question: "Can you add a crane to the warehouse?", answer: "Yes. Our warehouse frames are crane-ready with integrated crane beams and brackets for up to 50 tons." },
+      { question: "How quickly can you deliver?", answer: "Standard lead time is 30 working days from design approval. Erection takes 4-6 weeks on site." },
+      { question: "Can the warehouse be expanded later?", answer: "Yes. Steel warehouses are designed for future expansion with bolt-on extensions." },
+    ],
   },
   {
     slug: "steel-factory-building",
@@ -267,6 +303,13 @@ Each steel factory building is engineered to your local building code (IBC, Euro
     image: "/images/product-steel-building.webp",
     schemaPriceLow: "30",
     schemaPriceHigh: "100",
+    faq: [
+      { question: "What is the maximum crane capacity?", answer: "Up to 100 tons with dedicated crane columns and heavy-duty crane beams." },
+      { question: "What eave heights do you recommend for factories?", answer: "Production facilities typically use 10-15m eave height. Heights up to 20m available for tall equipment." },
+      { question: "Can you integrate mezzanine offices?", answer: "Yes. Multi-story mezzanine offices with steel structure support are integrated into the main frame design." },
+      { question: "What ventilation options are available?", answer: "Ridge ventilators, turbo vents, louver systems, and mechanical ventilation can all be integrated." },
+      { question: "Do you design for clean rooms?", answer: "Yes. We design factory buildings suitable for clean room, pharmaceutical, and food processing environments." },
+    ],
   },
   {
     slug: "steel-workshop",
@@ -309,6 +352,13 @@ Typical workshop projects ship within 20 working days and can be erected by a sm
     image: "/images/product-steel-building.webp",
     schemaPriceLow: "20",
     schemaPriceHigh: "65",
+    faq: [
+      { question: "What is the typical span for a workshop?", answer: "Clear spans from 9m to 30m. Common sizes: 12m, 15m, 18m, 24m." },
+      { question: "How long does a workshop take to build?", answer: "From design to shipment: 20 working days. On-site erection: 2-4 weeks with a small crew." },
+      { question: "Can I add a crane later?", answer: "Yes. Underhung cranes (up to 5T) and gantry cranes (up to 10T) can be added during initial construction or later." },
+      { question: "What type of foundation is needed?", answer: "Simple reinforced concrete strip footing. Minimal earthworks compared to heavy industrial buildings." },
+      { question: "Is a workshop expandable?", answer: "Yes. Steel workshops are designed for bolt-on expansion at any time." },
+    ],
   },
   {
     slug: "hot-rolled-steel-coil",
@@ -351,6 +401,13 @@ We stock common sizes for immediate delivery and can arrange custom rolling for 
     image: "/images/product-steel-building.webp",
     schemaPriceLow: "600",
     schemaPriceHigh: "900",
+    faq: [
+      { question: "What steel grades do you supply?", answer: "Q235B (S235JR), Q355B (S355JR), Q420B, Q460C. Full MTC EN 10204 3.1 provided." },
+      { question: "Can you cut to length or slit?", answer: "Yes. Cut-to-length (开平) and slitting (纵剪) services available to your exact dimensions." },
+      { question: "What thickness range is available?", answer: "Coil: 1.5mm to 25mm. Plate: up to 100mm thickness." },
+      { question: "Do you provide third-party inspection?", answer: "Yes. SGS, BV, or Intertek inspection can be arranged at buyer's request." },
+      { question: "What is your minimum order quantity?", answer: "Standard MOQ is 25 tons per size. Lower quantities available for stock sizes." },
+    ],
   },
   {
     slug: "galvanized-cz-purlin",
@@ -394,6 +451,13 @@ All purlins are manufactured to precise tolerances on automated roll-forming lin
     badge: "High Demand",
     schemaPriceLow: "800",
     schemaPriceHigh: "1200",
+    faq: [
+      { question: "What is the difference between C and Z purlin?", answer: "C purlins are used for simple spans where lapping isn't needed. Z purlins have sleeved connections for continuous span design, reducing material weight." },
+      { question: "What zinc coating is standard?", answer: "Z275 (275g/m2) hot-dip galvanized is standard. Z350 available for coastal environments." },
+      { question: "Can you pre-punch holes?", answer: "Yes. Holes are punched per your project drawings — no site drilling needed." },
+      { question: "What steel grades are used?", answer: "Q235B, Q355B, G450, G550 depending on span and loading requirements." },
+      { question: "How long does production take?", answer: "Standard lead time: 15-20 working days for custom orders." },
+    ],
   },
   {
     slug: "prefab-container-house",
@@ -436,6 +500,13 @@ All units come complete with doors, windows, electrical pre-wiring, and floor fi
     image: "/images/product-steel-building.webp",
     schemaPriceLow: "500",
     schemaPriceHigh: "3500",
+    faq: [
+      { question: "What types of prefab houses do you offer?", answer: "Three types: prefab panel houses (活动板房), welded container houses, and flat-pack folding houses (打包箱房)." },
+      { question: "How long does assembly take?", answer: "Flat-pack houses: 30 minutes with a 4-person crew. Container houses: ready to use on delivery." },
+      { question: "Can you ship flat-pack houses in containers?", answer: "Yes. One 20ft container can carry 2-3 complete flat-pack houses, saving significantly on shipping costs." },
+      { question: "Are your houses fire rated?", answer: "Yes. Rock wool insulated units achieve Grade A fire rating. PU units are B1 self-extinguishing." },
+      { question: "Can you customize the interior layout?", answer: "Yes. Custom layouts, finishes, air conditioning, kitchen and bathroom fit-out available." },
+    ],
   },
   {
     slug: "ppgi-color-coated-steel",
@@ -477,6 +548,13 @@ Available in coil form (for roll-forming cladding profiles) or cut-to-length she
     image: "/images/product-cladding.webp",
     schemaPriceLow: "700",
     schemaPriceHigh: "1500",
+    faq: [
+      { question: "What coating types are available?", answer: "PE (polyester), SMP, HDP, and PVDF (Kynar 500). Each offers different durability and warranty periods." },
+      { question: "What colors can I choose?", answer: "Full RAL color chart plus wood grain and stone-textured finishes. Custom color matching available." },
+      { question: "What is the warranty period?", answer: "PE: 5-8 years, HDP: 10-15 years, PVDF: 20-25 years depending on coating system." },
+      { question: "What substrate do you use?", answer: "Hot-dip galvanized (Z275) or galvalume (AZ150/AZ180) steel." },
+      { question: "What is the minimum order quantity?", answer: "50 tons per color for custom production, 5 tons for stock colors." },
+    ],
   },
   {
     slug: "frp-skylight-sheet",
@@ -519,6 +597,13 @@ Available to match all common cladding profiles: corrugated, trapezoidal, and bo
     image: "/images/product-cladding.webp",
     schemaPriceLow: "10",
     schemaPriceHigh: "25",
+    faq: [
+      { question: "What is FRP skylight sheet used for?", answer: "Natural daylighting in steel buildings. Installed on roofs to replace sections of metal cladding, reducing lighting energy by 30-50%." },
+      { question: "How long does FRP last?", answer: "20-year weather resistance warranty. UV-stable gel coat prevents yellowing for the life of the product." },
+      { question: "Does it match my roof profile?", answer: "Yes. We match all common cladding profiles: corrugated, trapezoidal, and box-rib." },
+      { question: "Is it fire rated?", answer: "Yes. B1 self-extinguishing per GB/T 8624, Class 2 per AS/NZS 4256." },
+      { question: "What light transmission do you offer?", answer: "Standard 65-80%, diffused 50-60%, water-clear 85%+. Custom options available." },
+    ],
   },
   {
     slug: "insulated-sandwich-panel",
@@ -561,6 +646,13 @@ All panels feature hidden fastener joints, continuous gasket seals, and are comp
     image: "/images/product-cladding.webp",
     schemaPriceLow: "12",
     schemaPriceHigh: "35",
+    faq: [
+      { question: "What core types are available?", answer: "Rock wool (Grade A fire), PIR, PU, PUR edge-sealed rock wool, and EPS. Each suited to different applications." },
+      { question: "What thickness do I need for cold storage?", answer: "Freezer (-25C): 150-200mm. Chiller (0-5C): 100-150mm. Cool room: 80-100mm. PIR recommended for best U-value." },
+      { question: "What is PUR edge-sealed rock wool?", answer: "A hybrid panel combining fire-safe rock wool at the joints with polyurethane foam core for better thermal efficiency." },
+      { question: "What is the maximum panel length?", answer: "Up to 16 meters continuous, reducing horizontal joints and installation time." },
+      { question: "Are hidden fastener panels available?", answer: "Yes. All panel types feature hidden fastener joints with continuous gasket seals for a clean architectural finish." },
+    ],
   },
 ];
 
