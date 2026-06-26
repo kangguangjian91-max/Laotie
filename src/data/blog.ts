@@ -2439,6 +2439,525 @@ Contact Laotie Steel Structure for a free quotation tailored to your Saudi Arabi
 
 **[Get a Free Quote](/contact) →** Send us your project dimensions and we will respond within 24 hours.`,
   },
+  {
+    slug: "steel-structure-vs-concrete-building-comparison",
+    title: "Steel Structure vs Concrete Building: Cost, Speed & Durability Compared",
+    description: "Compare steel structure vs concrete building for factories and warehouses. Cost comparison, construction speed, durability, and which is better for your project. Free quote available.",
+    date: "2026-06-26",
+    category: "Buying Guide",
+    readTime: "8 min read",
+    content: `When planning a new factory, warehouse, or industrial building, the first big decision is structural material: **steel or concrete**.
+
+Both have decades of proven performance. But they serve different needs. This guide gives you an honest, data-driven comparison so you can choose the right system for your budget, timeline, and long-term requirements.
+
+## Cost Comparison: Steel vs Concrete
+
+Here is a realistic cost breakdown for a 5,000 sqm industrial building in Southeast Asia or Africa (material + fabrication + foundation, excluding land):
+
+| Cost Factor | Steel Structure | Concrete Building |
+|-------------|----------------|-------------------|
+| **Material cost per sqm** | $30-60/m² | $25-45/m² (raw materials) |
+| **Foundation cost** | Lower (lighter structure) | Higher (heavier = deeper foundations) |
+| **Fabrication / formwork** | $40-80/m² (factory fabricated) | $35-70/m² (on-site formwork) |
+| **Total structure cost** | **$70-140/m²** | **$60-115/m²** |
+| **Construction time** | 2-4 months | 6-12 months |
+| **Financing cost during build** | Lower (faster completion) | Higher (longer timeline) |
+
+> **Key insight**: Steel costs slightly more per square meter in materials, but the faster construction timeline often makes the **total project cost lower** when you factor in financing, labor, and early operation revenue.
+
+### Total Project Cost Example: 5,000 sqm Warehouse
+
+| Item | Steel | Concrete |
+|------|-------|----------|
+| Structure cost ($100/m² vs $90/m²) | $500,000 | $450,000 |
+| Foundation cost | $80,000 | $130,000 |
+| Construction management (4 mo vs 10 mo) | $40,000 | $100,000 |
+| **Total** | **$620,000** | **$680,000** |
+| **Time to operational** | **4 months** | **10 months** |
+| Revenue lost during extra 6 months | — | $180,000 (est.) |
+
+**Bottom line**: Steel can save you 15-30% on total project cost when construction speed and early operation are factored in.
+
+## Construction Speed
+
+This is where steel has its biggest advantage:
+
+| Milestone | Steel Structure | Concrete Building |
+|-----------|----------------|-------------------|
+| Design & engineering | 2-4 weeks | 3-6 weeks |
+| Foundation work | 3-4 weeks | 6-10 weeks |
+| Structure erection | 3-6 weeks | 12-20 weeks |
+| Roof & cladding | 2-3 weeks | 4-8 weeks |
+| MEP installation | 4-6 weeks | 6-10 weeks |
+| **Total project** | **14-23 weeks** | **31-54 weeks** |
+
+A steel building can be **fully operational in 3-5 months** — compared to 8-12 months for concrete. For businesses that need to start production or storage operations quickly, this speed advantage is often the deciding factor.
+
+## Durability & Lifespan
+
+| Factor | Steel Structure | Concrete Building |
+|--------|----------------|-------------------|
+| Design lifespan | 50+ years (with maintenance) | 50-100 years |
+| Earthquake resistance | Excellent (ductile, lightweight) | Good (requires reinforcement) |
+| Fire resistance | Requires fireproofing | Naturally fire-resistant |
+| Corrosion risk | Requires coating protection | Low (but rebar can rust) |
+| Maintenance | Annual inspection + coating repair | Minor (crack repair) |
+| Modification flexibility | Easy to extend or modify | Difficult and expensive |
+
+### What About Fire?
+
+Concrete has a natural advantage in fire resistance. However, modern steel structures use **fire-rated coatings**, **sprinkler systems**, and **fireproof cladding** to meet all international fire codes (IBC, Eurocode, BS). For most industrial applications, a properly fire-protected steel structure is fully code-compliant.
+
+## Design Flexibility
+
+Steel structures offer much greater design flexibility:
+
+- **Clear spans up to 60m** — no interior columns needed
+- **Eave heights from 6m to 20m+** — accommodate all equipment
+- **Future expansion** — bolt-on extensions are straightforward
+- **Crane systems** — easily integrated into the steel frame
+- **Roof penetrations** — skylights, vents, and HVAC supports are simple
+
+Concrete buildings are limited to narrower spans (typically 6-12m), require more interior columns, and are very difficult to modify or extend later.
+
+## Which Should You Choose?
+
+### Choose Steel Structure When:
+- You need the building **fast** (3-5 months)
+- You need **large clear spans** (warehouse, factory, hangar)
+- Your site has **poor soil** (steel is lighter)
+- You need **future expansion** capability
+- Your region has **seismic risk** (steel performs well)
+- You want **factory-direct quality** with CE/ISO certification
+
+### Choose Concrete When:
+- You have **very tight budget** for materials alone
+- Fire codes are extremely strict without budget for fireproofing
+- You need a **multi-story office** attached to the factory
+- Local labor is very cheap and timeline is flexible
+- You plan minimal future modifications
+
+## Get a Free Steel Structure Quote
+
+If you are leaning toward steel, Laotie Steel Structure offers custom-designed steel buildings for warehouses, factories, and industrial facilities. We serve clients in [Thailand](/steel-structure-thailand), [Vietnam](/steel-structure-vietnam), [Indonesia](/steel-structure-indonesia), [Philippines](/steel-structure-philippines), [Nigeria](/steel-structure-nigeria), and [Saudi Arabia](/steel-structure-saudi-arabia).
+
+Use our [Cost Calculator](/calculator) for a preliminary estimate, or [contact us](/contact) for a detailed quotation within 24 hours.`,
+  },
+  {
+    slug: "prefabricated-steel-building-complete-guide",
+    title: "Prefabricated Steel Building: Complete Guide to Prefab Warehouses & Factories",
+    description: "Complete guide to prefabricated steel buildings. Learn about PEB design, manufacturing process, cost savings, delivery times, and how to choose the right prefab steel building for your project.",
+    date: "2026-06-26",
+    category: "Buying Guide",
+    readTime: "10 min read",
+    content: `Prefabricated steel buildings (also called PEB — Pre-Engineered Buildings) have transformed the construction industry. What used to take 12 months of on-site labor can now be factory-fabricated in weeks and erected on-site in days.
+
+This guide covers everything you need to know about prefabricated steel buildings: what they are, how they are made, cost advantages, and how to choose the right supplier.
+
+## What Is a Prefabricated Steel Building?
+
+A prefabricated steel building is a structure whose components are **manufactured in a factory** and then shipped to the site for assembly. Unlike traditional construction where every beam is cut and welded on-site, prefab buildings arrive as ready-to-assemble kits.
+
+**Typical components of a prefab steel building:**
+
+| Component | Description | Factory-Made? |
+|-----------|-------------|---------------|
+| Primary frame | Columns and rafters (hot-rolled H-beams or built-up sections) | ✅ Fully fabricated |
+| Secondary structure | Purlins, girts, eave struts (cold-formed C/Z sections) | ✅ Pre-cut and punched |
+| Roof & wall cladding | Profiled steel sheets with insulation | ✅ Pre-rolled to length |
+| Fasteners | Bolts, screws, anchors | ✅ Pre-packaged by size |
+| Accessories | Gutters, downpipes, flashings, sealants | ✅ Pre-formed |
+
+> Only the **foundation** is built on-site — everything else arrives ready to assemble.
+
+## How Prefab Steel Buildings Are Made
+
+Understanding the manufacturing process helps you evaluate supplier quality:
+
+### Step 1: Design & Engineering (1-2 weeks)
+
+Your supplier designs the structure based on your requirements:
+- **Building dimensions**: width, length, eave height, roof slope
+- **Design loads**: wind, snow, seismic, crane, equipment
+- **Local building codes**: IBC, Eurocode, or country-specific standards
+- **Accessories**: doors, windows, skylights, ventilation
+
+At Laotie, all designs are done in-house by experienced structural engineers and checked against [CE and ISO 9001 standards](/certificates).
+
+### Step 2: Material Procurement (1 week)
+
+Steel is sourced from certified mills. Key material specifications:
+
+| Component | Typical Steel Grade | Standard |
+|-----------|-------------------|----------|
+| Primary columns & rafters | Q355B (equivalent to S355) | EN 10025 |
+| Secondary members | Q235B (equivalent to S235) | EN 10025 |
+| High-strength bolts | Grade 10.9 | ISO 898-1 |
+| Cladding | Galvalume (AZ150) / PPGI | ASTM A792 |
+
+### Step 3: Fabrication (2-4 weeks)
+
+This is where quality varies significantly between manufacturers:
+- **CNC cutting**: Plasma or laser cutting for precise dimensions
+- **Welding**: Automated submerged arc welding (SAW) for consistent quality
+- **Drilling**: CNC drilling for bolt holes — must align perfectly on-site
+- **Surface preparation**: Shot blasting to Sa 2.5 standard
+- **Coating**: Epoxy primer + polyurethane topcoat (custom color)
+
+### Step 4: Packing & Shipping (1-2 weeks)
+
+Components are bundled, labeled, and containerized for export. A good supplier provides:
+- **Packing list** with photos of each bundle
+- **Marking system** matching erection drawings
+- **Loading supervision** to prevent damage during transit
+
+### Step 5: On-Site Erection (3-6 weeks)
+
+With proper planning, erection is the fastest phase:
+1. Foundation inspection and anchor bolt setting
+2. Column erection and plumbing
+3. Rafter assembly and crane lifting
+4. Purlins and girts installation
+5. Cladding and roofing
+6. Accessories and finishing
+
+## Cost Advantages of Prefab Steel Buildings
+
+Prefabrication saves money in multiple ways:
+
+| Cost Factor | Prefab Steel | Traditional Concrete | Savings |
+|-------------|-------------|---------------------|---------|
+| Material cost per sqm | $30-60 | $25-45 | Similar |
+| **Labor cost** | **Factory labor (lower cost)** | **On-site labor (higher cost)** | **20-40%** |
+| **Construction time** | **3-5 months** | **8-12 months** | **50-60% faster** |
+| Waste material | 3-5% | 10-20% | 10-15% savings |
+| Financing cost | Lower (shorter timeline) | Higher (longer timeline) | Significant |
+| Modification cost | Easy, low cost | Difficult, expensive | Future savings |
+
+Total project savings typically range from **15-30%** compared to conventional construction.
+
+## Quality Checklist: Choosing a Prefab Steel Supplier
+
+Use this checklist when evaluating manufacturers:
+
+- ✅ **CE & ISO 9001 certification** — minimum quality baseline
+- ✅ **In-house engineering team** — not just a trading company
+- ✅ **Factory visit possible** — video tour if not in person
+- ✅ **Reference projects** — ask for similar buildings in your region
+- ✅ **Clear delivery timeline** — with penalties for delays
+- ✅ **Erection manual** — detailed step-by-step instructions
+- ✅ **After-sales support** — remote guidance for installation
+
+## Why International Buyers Choose Chinese Prefab Steel
+
+China is the world's largest steel producer, and Chinese prefab steel building manufacturers offer several advantages:
+
+| Advantage | Detail |
+|-----------|--------|
+| **Cost** | Factory-direct pricing 30-50% below local fabrication |
+| **Scale** | Monthly capacities of 5,000+ tons |
+| **Experience** | Decades of export experience to 30+ countries |
+| **Certification** | CE, ISO, TUV, SGS certified manufacturing |
+| **Customization** | Fully custom designs — no rigid standard sizes |
+
+## Prefab Steel Building Applications
+
+Prefabricated steel buildings work for virtually any industrial or commercial application:
+
+- **[Warehouses](/steel-structure-logistics-center)** and distribution centers
+- **Manufacturing factories** and production facilities
+- **Agricultural buildings** (poultry farms, grain storage)
+- **Cold storage facilities** and refrigerated warehouses
+- **Aircraft hangars** and vehicle storage
+- **Sports halls** and indoor arenas
+- **Workshops** and maintenance facilities
+
+## Get a Quote for Your Prefab Steel Building
+
+Ready to start your project? Laotie Steel Structure provides custom prefabricated steel buildings for clients worldwide. We handle everything from design to fabrication to shipping.
+
+**[Use our Cost Calculator](/calculator)** for an instant estimate, or **[contact us](/contact)** for a detailed quotation within 24 hours.`,
+  },
+  {
+    slug: "steel-structure-cold-storage-warehouse-guide",
+    title: "Steel Structure for Cold Storage Warehouse: Design, Insulation & Cost Guide",
+    description: "Complete guide to steel structure cold storage warehouses. Learn about insulated panel systems, vapor barriers, floor design, refrigeration integration, and cost per square meter.",
+    date: "2026-06-26",
+    category: "Construction Guide",
+    readTime: "9 min read",
+    content: `Cold storage warehouses are among the most technically demanding steel structure applications. They must maintain precise temperatures (-25°C to +5°C), control humidity, prevent condensation, and operate reliably for decades.
+
+This guide covers the specialized design considerations, insulation systems, and cost factors for steel structure cold storage facilities.
+
+## Why Steel for Cold Storage?
+
+Steel is the preferred structural system for cold storage for several reasons:
+
+| Advantage | Why It Matters for Cold Storage |
+|-----------|---------------------------------|
+| **Large clear spans** | Maximizes pallet racking layout — fewer columns = more storage density |
+| **Thermal break design** | Steel can be detailed to minimize thermal bridging |
+| **Speed of construction** | Cold storage facilities lose revenue during construction — faster is better |
+| **Future expansion** | Cold storage demand often grows — steel extensions are straightforward |
+| **Integration with insulated panels** | Steel frames support heavy insulated sandwich panels |
+
+## Key Design Considerations
+
+### 1. Insulated Panel System
+
+The most critical element of a cold storage building is the thermal envelope. Modern cold storage steel buildings use **PIR/PU insulated sandwich panels**:
+
+| Panel Type | Core Material | R-Value (per 100mm) | Best For |
+|-----------|--------------|---------------------|----------|
+| PIR (polyisocyanurate) | Rigid foam | 6.0-7.0 | Freezers (-25°C to -5°C) |
+| PU (polyurethane) | Rigid foam | 5.5-6.5 | Coolers (0°C to +10°C) |
+| EPS (expanded polystyrene) | Beaded foam | 3.5-4.0 | Dry storage (+10°C to +20°C) |
+| Rock wool | Mineral fiber | 3.0-3.5 | Fire-rated separations |
+
+**Typical panel thickness by temperature:**
+
+| Temperature Range | Panel Thickness |
+|-----------------|-----------------|
+| -25°C to -18°C (deep freeze) | 150-200mm |
+| -5°C to 0°C (freezer) | 120-150mm |
+| 0°C to +5°C (chiller) | 100-120mm |
+| +5°C to +12°C (cool room) | 80-100mm |
+
+### 2. Vapor Barrier
+
+Condensation is the enemy of cold storage. A proper vapor barrier must be installed on the **warm side** of the insulation to prevent moisture migration:
+
+- **Roof**: Self-adhering membrane over the steel roof deck, below the insulation
+- **Walls**: Vapor-retardant facing on the warm side of insulated panels
+- **Floor**: Heavy-duty vapor barrier (polyethylene sheet, minimum 0.3mm) below the insulated slab
+
+### 3. Floor Design
+
+The floor is the most problematic area in cold storage:
+
+| Element | Requirement |
+|---------|-------------|
+| **Insulation** | XPS (extruded polystyrene), 100-200mm thick |
+| **Vapor barrier** | Below insulation — continuous with wall vapor barrier |
+| **Heating system** | Floor heating (electric or glycol) below slab to prevent frost heave |
+| **Slab thickness** | 150-200mm reinforced concrete with fiber mesh |
+| **Joint sealant** | Flexible, low-temperature rated sealants at all joints |
+
+> **Frost heave** occurs when moisture in the soil freezes and expands, lifting the floor slab. This is why all freezer facilities require floor heating — even in warm climates.
+
+### 4. Structural Steel Detailing
+
+Cold storage requires special steel detailing to avoid thermal bridges:
+
+- **Column bases**: Thermal break pads between column base plates and foundations
+- **Roof penetrations**: Insulated curbs for all roof penetrations (pipes, ducts, lights)
+- **Door openings**: Heated door frames with heavy-duty insulated rapid roll doors
+- **Interior structure**: Galvanized or epoxy-coated steel to resist condensation corrosion
+
+## Refrigeration System Integration
+
+A steel structure for cold storage must accommodate the refrigeration system:
+
+| Component | Design Consideration |
+|-----------|---------------------|
+| **Evaporator units** | Suspended from roof structure — requires reinforced steel supports |
+| **Condenser units** | External — typically on a steel platform outside the building |
+| **Refrigerant piping** | Pre-insulated pipes running along designated pipe supports |
+| **Dock levelers** | Insulated dock shelters for loading bays |
+| **Air curtains** | Installed above all personnel and truck doors |
+
+## Cost per Square Meter
+
+Cold storage steel buildings cost significantly more than standard warehouses due to insulation and refrigeration:
+
+| Component | Standard Warehouse | Cold Storage Warehouse |
+|-----------|-------------------|----------------------|
+| Steel structure & cladding | $50-80/m² | $60-90/m² |
+| Insulated panels | — | $40-80/m² |
+| Floor system (heated) | $15-25/m² | $40-60/m² |
+| Refrigeration system | — | $80-200/m² |
+| **Total building cost** | **$80-120/m²** | **$220-430/m²** |
+| MEP & controls | $20-40/m² | $40-80/m² |
+| **Total project cost** | **$100-160/m²** | **$260-510/m²** |
+
+> Note: Refrigeration costs vary dramatically by temperature. A -25°C deep freeze costs 2-3x more per m² than a +5°C chiller.
+
+## Applications
+
+Steel structure cold storage buildings are used for:
+
+- **Food processing** — meat, dairy, seafood, prepared meals
+- **Cold chain logistics** — distribution centers for frozen and chilled goods
+- **Pharmaceutical storage** — temperature-controlled medicine and vaccine storage
+- **Agricultural cold storage** — fruit, vegetable, and flower cold rooms
+- **Beverage warehouses** — beer, wine, soft drink storage
+
+## Get a Quote for Your Cold Storage Steel Building
+
+Laotie Steel Structure designs and fabricates steel buildings for cold storage and [logistics center](/steel-structure-logistics-center) applications. We work with experienced insulated panel suppliers and refrigeration engineers to deliver complete cold storage solutions.
+
+**[Contact us](/contact)** with your project requirements, and we will provide a detailed quotation within 24 hours.`,
+  },
+  {
+    slug: "steel-structure-warehouse-design-guide",
+    title: "Steel Structure Warehouse Design: Clear Span, Crane Systems & Layout Planning",
+    description: "Expert guide to steel structure warehouse design. Learn about clear span configurations, crane systems, mezzanine floors, eave height, column spacing, and layout optimization for storage and operations.",
+    date: "2026-06-26",
+    category: "Design Guide",
+    readTime: "9 min read",
+    content: `Designing a steel structure warehouse involves more than just sizing beams and columns. The right design choices affect storage capacity, operational efficiency, expansion options, and long-term costs.
+
+This guide covers the key design decisions for steel warehouses — from structural configuration to layout planning.
+
+## Clear Span vs Multi-Span Configuration
+
+The first and most important design decision is whether to use clear span or multi-span:
+
+| Factor | Clear Span | Multi-Span |
+|--------|-----------|------------|
+| **Maximum width** | Up to 60m (single span) | Unlimited (multiple bays) |
+| **Interior columns** | None | One row every 20-30m |
+| **Cost per sqm** | Higher (larger sections needed) | Lower (lighter sections) |
+| **Storage flexibility** | Excellent — no column obstructions | Good — columns must be planned around |
+| **Best for** | Warehouses, hangars, sports halls | Factories, workshops, large distribution centers |
+
+### When to Choose Clear Span
+
+Choose clear span when:
+- You need unobstructed floor space for **racking systems** or **equipment**
+- You operate **forklifts and heavy machinery** that need clear movement paths
+- Future layout changes are expected (clear span = maximum flexibility)
+- Width requirements are under 36m (most cost-effective range)
+
+### When to Choose Multi-Span
+
+Choose multi-span when:
+- Building width exceeds 40m
+- Budget is the primary constraint
+- Column locations can be fixed (aligned with racking lanes)
+- You need a very large continuous area at lower cost
+
+## Eave Height
+
+Eave height directly determines usable storage volume. Common heights:
+
+| Eave Height | Typical Use | Storage Capacity |
+|-------------|-------------|-----------------|
+| 6-8m | Small warehouses, workshops | 2-3 pallet levels |
+| 9-12m | Standard warehouses | 4-6 pallet levels |
+| 12-15m | High-bay warehouses | 6-9 pallet levels |
+| 15-20m+ | Automated storage | 9-12+ pallet levels |
+
+**Cost impact**: Every additional meter of eave height adds approximately 5-8% to the steel structure cost. However, the added storage capacity often justifies the investment.
+
+> **Rule of thumb**: For most warehouses, 10-12m eave height offers the best balance of construction cost and storage density.
+
+## Crane Systems
+
+If your warehouse needs overhead cranes, the design changes significantly:
+
+| Crane Type | Capacity | Building Requirements |
+|-----------|----------|----------------------|
+| **Single girder** | 1-10 tons | Standard frame with crane brackets |
+| **Double girder** | 10-50 tons | Heavier columns, crane columns, stiffer frame |
+| **Underhung** | 1-5 tons | Runs on bottom flange of roof beams |
+| **Gantry** | 1-20 tons | Freestanding — does not connect to building frame |
+
+**Crane design considerations:**
+- **Crane column**: Separate column or bracket on main column — affects bay spacing
+- **Crane beam**: Rolled section or built-up plate girder
+- **Crane rail**: Must be level and aligned within tight tolerances
+- **Power supply**: Conductor bar system along the crane runway
+- **Maintenance platform**: Access walkway along the crane beam
+
+## Bay Spacing and Column Layout
+
+The distance between frame centers (bay spacing) affects both cost and functionality:
+
+| Bay Spacing | Pros | Cons |
+|-------------|------|------|
+| **6m** | Lower frame cost, simpler erection | More columns inside building |
+| **7.5m** | Good balance for most warehouses | — |
+| **8-9m** | Fewer columns, better layout flexibility | Heavier rafters and purlins |
+| **10-12m** | Maximum open space | Significantly higher frame cost |
+
+**For standard warehouses, 7.5-8m bay spacing is the sweet spot** between column cost and usable floor space.
+
+## Mezzanine Floors
+
+Mezzanines double your usable floor area without expanding the building footprint:
+
+| Mezzanine Type | Structure | Typical Load |
+|---------------|-----------|-------------|
+| **Steel grating** | Light steel beams + grating | 2.5-5 kN/m² |
+| **Concrete on metal deck** | Composite deck + concrete topping | 5-10 kN/m² |
+| **Heavy-duty** | Steel beams + precast planks | 10-25 kN/m² |
+
+Mezzanines are typically designed and installed after the main building is complete. Leave column locations flexible to accommodate future mezzanine installation.
+
+## Roof Design Options
+
+| Roof Type | Slope | Best For |
+|-----------|-------|----------|
+| **Single slope** | 5-10% | Narrow buildings (up to 30m wide) |
+| **Double slope (gable)** | 5-15% | Standard warehouses (30-80m wide) |
+| **Multi-gable** | 5-10% | Very wide buildings (80m+) |
+| **Flat (minimal slope)** | 1-3% | Urban areas with height restrictions |
+
+**Roof accessories to plan for:**
+- **Skylights** — translucent panels (FRP or polycarbonate) at 5-8% of roof area for natural lighting
+- **Ridge ventilators** — passive exhaust for hot air buildup
+- **Gutters and downpipes** — sized for local rainfall intensity
+- **Solar panel supports** — if future PV installation is planned
+
+## Dock and Door Planning
+
+Proper dock design is critical for warehouse operations:
+
+| Door Type | Size | Application |
+|-----------|------|-------------|
+| **Personnel door** | 0.9m x 2.1m | Pedestrian access |
+| **Sectional overhead door** | 3-5m x 4-6m | Truck access — most common |
+| **Dock leveler door** | 2.5m x 3m | Loading bay with dock leveler |
+| **Rapid roll door** | 2-3m x 3-5m | High-traffic areas, temperature control |
+
+**Dock planning guidelines:**
+- One dock door per 500-800 sqm of warehouse space
+- Dock height: 1.2-1.4m above grade (matches truck bed height)
+- Apron depth: minimum 30m for truck maneuvering
+- Dock shelter/seal: essential for weather and pest protection
+
+## Fire Safety Design
+
+Steel warehouses require fire protection:
+
+| Method | Application | Cost Impact |
+|--------|-------------|-------------|
+| **Intumescent coating** | Spray-on fireproofing for structural steel | $5-15/m² of steel surface |
+| **Sprinkler system** | Automatic fire suppression | $5-10/m² of floor area |
+| **Fire-rated walls** | Separate fire zones in large buildings | Varies |
+| **Smoke vents** | Automatic roof vents for smoke exhaust | $500-2,000 per vent |
+
+> Building codes vary by country. Your steel structure supplier should design to your local fire code requirements. [Laotie's certified designs](/certificates) comply with IBC, Eurocode, and most national building codes.
+
+## Design Process with Laotie Steel Structure
+
+When you work with us on a warehouse design, here is the process:
+
+1. **Requirements gathering** — dimensions, loads, crane, dock, mezzanine needs
+2. **Preliminary design** — structural layout, bay spacing, eave height, column grid
+3. **Structural calculation** — load analysis, member sizing, connection design
+4. **Shop drawings** — detailed fabrication drawings for every component
+5. **Erection drawings** — step-by-step assembly instructions
+
+We have completed [warehouse projects](/projects) across [Southeast Asia](/steel-structure-thailand), [Africa](/steel-structure-nigeria), and the [Middle East](/steel-structure-saudi-arabia).
+
+## Get Started on Your Warehouse Design
+
+Ready to design your steel warehouse? Our engineering team can help optimize your layout for maximum storage efficiency and minimum cost.
+
+**[Use our Cost Calculator](/calculator)** for a quick estimate, or **[contact us](/contact)** with your project requirements for a detailed design proposal within 24 hours.`,
+  },
 ];
 
 export function getAllPosts(): BlogPost[] {
