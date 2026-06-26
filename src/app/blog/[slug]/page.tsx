@@ -255,6 +255,37 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               Request a Quote
             </a>
           </div>
+
+          {/* Email Subscription */}
+          <div className="mt-6 p-6 bg-gray-50 border border-gray-200 rounded-xl text-center">
+            <h3 className="text-base font-semibold text-gray-900 mb-1">Stay Updated</h3>
+            <p className="text-sm text-gray-500 mb-4">
+              Get steel structure tips, cost guides, and industry insights delivered to your inbox.
+            </p>
+            <form
+              action="https://formsubmit.co/kangguangjian91@gmail.com"
+              method="POST"
+              className="max-w-md mx-auto flex gap-2"
+            >
+              <input type="hidden" name="_subject" value="Blog Newsletter Subscription" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="text" name="_honey" className="hidden" />
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="Your email address"
+                className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-cta focus:border-transparent"
+              />
+              <button
+                type="submit"
+                className="bg-cta hover:bg-cta-hover text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition-all shrink-0"
+              >
+                Subscribe
+              </button>
+            </form>
+            <p className="text-xs text-gray-400 mt-2">No spam. Unsubscribe anytime.</p>
+          </div>
         </article>
       </main>
       <Footer />

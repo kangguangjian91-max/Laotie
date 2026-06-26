@@ -405,6 +405,78 @@ export default function SteelStructureSaudiArabia() {
           </section>
         </ScrollAnimator>
 
+        {/* Inline Contact Form */}
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold text-steel">Get a Free Quote for Your Saudi Arabia Project</h2>
+              <p className="mt-3 text-lg text-gray-600">
+                Fill out the form below and our team will respond within 24 hours with a detailed quotation.
+              </p>
+            </div>
+            <form
+              action="https://formsubmit.co/kangguangjian91@gmail.com"
+              method="POST"
+              className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto"
+            >
+              <input type="hidden" name="_subject" value="Saudi Arabia Landing Page Inquiry" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="text" name="_honey" className="hidden" />
+              <input
+                type="text"
+                name="name"
+                required
+                placeholder="Your Name *"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cta focus:border-transparent text-sm"
+              />
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="Email Address *"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cta focus:border-transparent text-sm"
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="WhatsApp / Phone"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cta focus:border-transparent text-sm"
+              />
+              <select
+                name="project_type"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cta focus:border-transparent text-sm text-gray-600"
+              >
+                <option value="">Project Type</option>
+                <option value="warehouse">Warehouse</option>
+                <option value="factory">Factory / Manufacturing Plant</option>
+                <option value="logistics">Logistics Center</option>
+                <option value="agricultural">Agricultural Building</option>
+                <option value="cold-storage">Cold Storage Facility</option>
+                <option value="other">Other</option>
+              </select>
+              <div className="sm:col-span-2">
+                <textarea
+                  name="message"
+                  rows={4}
+                  placeholder="Project Details (dimensions, location, requirements)"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cta focus:border-transparent text-sm"
+                />
+              </div>
+              <div className="sm:col-span-2">
+                <button
+                  type="submit"
+                  className="w-full bg-cta hover:bg-cta-hover text-white font-bold py-4 px-8 rounded-lg transition-all text-base"
+                >
+                  Get Free Quote
+                </button>
+              </div>
+              <p className="sm:col-span-2 text-xs text-gray-400 text-center">
+                We respect your privacy. Your information is safe with us.
+              </p>
+            </form>
+          </div>
+        </section>
+
         {/* Serving More Countries */}
         <section className="bg-gray-50 py-10">
           <div className="max-w-7xl mx-auto px-4">

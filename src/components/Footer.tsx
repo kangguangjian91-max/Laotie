@@ -206,6 +206,12 @@ export default function Footer() {
                 Mon - Sat, 8:00 - 18:00 CST
               </li>
             </ul>
+            <a
+              href="/contact"
+              className="mt-4 inline-block w-full text-center bg-cta hover:bg-cta-hover text-white font-semibold py-3 px-6 rounded-lg transition-all text-sm"
+            >
+              Get a Free Quote
+            </a>
           </div>
         </div>
 
