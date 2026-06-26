@@ -6,8 +6,8 @@ import { products } from "@/data/products";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata = {
-  title: "Steel Structure Products | Portal Frame, Factory, Warehouse & More",
-  description: "CE & ISO certified steel structure products: warehouse buildings, factory buildings, workshops, portal frames, floor deck, space frame, cladding system. 50-year design life. Free quote.",
+  title: "Steel Structure Products | Warehouse, Factory, Purlin, Sandwich Panel & More",
+  description: "CE & ISO certified steel structure products: warehouse buildings, factory buildings, workshops, C&Z purlins, sandwich panels, PPGI, floor deck, space frame, cladding system. 50-year design life.",
   openGraph: {
     title: "Steel Structure Products | Laotie Steel",
     description: "Portal frame buildings, floor deck systems, space frames, and enclosure cladding. CE & ISO certified, factory direct pricing.",

@@ -98,6 +98,36 @@ const productRelatedBlogs: Record<string, string[]> = {
     "steel-structure-design-guide-beginners",
     "steel-structure-cost-guide-2025",
   ],
+  "hot-rolled-steel-coil": [
+    "steel-structure-production-china-manufacturing-guide",
+    "steel-structure-processing-techniques-cnc-welding-guide",
+    "factory-tour-5000-tons-monthly-production",
+  ],
+  "galvanized-cz-purlin": [
+    "steel-structure-warehouse-design-guide",
+    "steel-structure-installation-guide-erection-process",
+    "prefabricated-steel-building-complete-guide",
+  ],
+  "prefab-container-house": [
+    "steel-structure-vs-concrete-building-comparison",
+    "how-to-import-steel-structures-from-china-complete-guide",
+    "steel-structure-maintenance-guide-lifespan-corrosion",
+  ],
+  "ppgi-color-coated-steel": [
+    "ce-iso-certified-steel-structures",
+    "steel-structure-cost-per-square-meter-2026",
+    "steel-structure-installation-guide-erection-process",
+  ],
+  "frp-skylight-sheet": [
+    "steel-structure-warehouse-design-guide",
+    "steel-structure-cost-saudi-arabia-2026",
+    "steel-structure-installation-process-timeline",
+  ],
+  "insulated-sandwich-panel": [
+    "steel-structure-cold-storage-warehouse-guide",
+    "ce-iso-certified-steel-structures",
+    "steel-structure-vs-concrete-building-comparison",
+  ],
 };
 
 export default async function ProductDetailPage({ params }: ProductPageProps) {

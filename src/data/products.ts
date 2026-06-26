@@ -60,14 +60,14 @@ A typical 3,000 sqm warehouse structure ships from our factory in 25–35 workin
   {
     slug: "floor-deck",
     title: "Floor Deck / Steel Decking",
-    subtitle: "Composite Floor System",
+    subtitle: "Composite & Galvanized Floor System",
     description:
-      "High-strength profiled steel deck for concrete composite floors. YX75-200-600, YX51-240-720, and custom profiles. Fire resistance up to 2H. Compatible with Australia/New Zealand construction standards.",
-    overview: `Our steel floor deck systems serve as permanent formwork and tensile reinforcement for concrete composite slabs — eliminating the need for timber formwork and reducing on-site labor dramatically. The profiled steel sheet bonds with poured concrete via embossments, creating a strong composite floor diaphragm.
+      "High-strength profiled steel deck for concrete composite floors. Hot-dip galvanized (Z275), YX75-200-600, YX51-240-720, and custom profiles. Fire resistance up to 2H. Also available: galvanized composite deck (免浇筑承重板) for fast-track construction without wet concrete.",
+    overview: `Our steel floor deck systems serve as permanent formwork and tensile reinforcement for concrete composite slabs — eliminating the need for timber formwork and reducing on-site labor dramatically. The profiled steel sheet bonds with poured concrete via embossments, creating a strong composite floor diaphragm. Available in hot-dip galvanized (Z275) or galvalume (AZ150) finish.
 
 We stock standard profiles including YX75-200-600 (3W), YX51-240-720, and YX51-305-915, with custom profiles available on request. All decking is manufactured from high-strength galvanized steel coil (G550/G350) and tested to AS/NZS 2327 and BS 5950-4 standards.
 
-For large projects, we provide full composite slab design — including reinforcement mesh layout, shear stud specification, and propping schedules — as part of our engineering package. Typical lead time is 15–20 working days from order confirmation to container loading.`,
+For fast-track projects where traditional concrete pouring is impractical, we also supply **galvanized composite deck panels (热镀锌免浇筑承重板)** — prefabricated panels with integrated stiffeners that span up to 6m without concrete topping. Ideal for platform floors, mezzanines, and temporary access decks requiring dry construction.`,
     specifications: [
       { label: "Profile Types", value: "YX75-200-600 (3W), YX51-240-720, YX51-305-915" },
       { label: "Material", value: "G550 / G350 high-strength galvanized steel" },
@@ -309,6 +309,258 @@ Typical workshop projects ship within 20 working days and can be erected by a sm
     image: "/images/product-steel-building.webp",
     schemaPriceLow: "20",
     schemaPriceHigh: "65",
+  },
+  {
+    slug: "hot-rolled-steel-coil",
+    title: "Hot Rolled Steel Coil & Sheet",
+    subtitle: "Steel Coil / Plate / Cut-to-Length / Slit Coil",
+    description:
+      "Hot rolled steel coil, plate, and sheet for steel structure fabrication. Available in cut-to-length (开平) and slit coil (纵剪). Q235B, Q355B, S235, S355 grades. Mill direct pricing.",
+    overview: `Hot rolled steel coil is the foundation material for steel structure fabrication. We supply HR coil and plate in a wide range of grades, thicknesses, and widths — in standard coil form, cut-to-length sheets (开平), or slit coils (纵剪) to your exact width requirements.
+
+All material is sourced directly from major Chinese steel mills with full mill test certificates (MTC EN 10204 3.1). Available grades include Q235B (S235JR equivalent), Q355B (S355JR equivalent), and higher-strength options for specialized applications. Surface options: black (as-rolled), pickled (HRP), or shot-blasted and primed.
+
+We stock common sizes for immediate delivery and can arrange custom rolling for large-volume orders. Typical lead time: 15-25 working days for mill-direct orders. Third-party inspection (SGS, BV) available at buyer's request.`,
+    specifications: [
+      { label: "Steel Grade", value: "Q235B (S235JR), Q355B (S355JR), Q420B, Q460C" },
+      { label: "Thickness", value: "1.5mm — 25mm (coil), up to 100mm (plate)" },
+      { label: "Width", value: "600mm — 2000mm (coil / slit coil)" },
+      { label: "Length", value: "As required (cut-to-length up to 12m)" },
+      { label: "Processing", value: "Cut-to-length (开平) / Slitting (纵剪) / Leveling" },
+      { label: "Surface", value: "Black (as-rolled), Pickled (HRP), Shot-blasted + primed" },
+      { label: "Tolerance", value: "ASTM A36 / EN 10025 / GB/T 1591" },
+      { label: "Certificate", value: "MTC EN 10204 3.1, SGS/BV inspection" },
+      { label: "Packing", value: "Bare / wrapped / seaworthy export packing" },
+    ],
+    features: [
+      "Mill Direct Pricing — no middleman, best price for volume orders",
+      "Full MTC Provided — EN 10204 3.1 mill test certificate with every batch",
+      "Cut-to-Length & Slitting — precision processing to your required dimensions",
+      "Multiple Grades in Stock — Q235B, Q355B, S235, S355 ready for quick dispatch",
+      "Third-Party Inspection — SGS, BV, or Intertek inspection available",
+      "Seaworthy Packing — suitable for FCL and LCL container shipping",
+      "Bulk Discounts — tiered pricing for 100T+ orders",
+    ],
+    applications: [
+      "Steel structure fabrication (columns, beams, bracing)",
+      "Purlin & secondary steel manufacturing",
+      "Floor deck and cladding substrate",
+      "General fabrication & heavy machinery",
+      "Storage tanks, pipes, and pressure vessels",
+    ],
+    image: "/images/product-steel-building.webp",
+    schemaPriceLow: "600",
+    schemaPriceHigh: "900",
+  },
+  {
+    slug: "galvanized-cz-purlin",
+    title: "Galvanized C & Z Purlin",
+    subtitle: "Cold-Formed Steel Purlins & Girts",
+    description:
+      "Hot-dip galvanized C purlin and Z purlin for steel structure roofs and walls. C80-C300, Z100-Z350. Pre-punched, pre-cut to length. CE certified, mill direct.",
+    overview: `C and Z purlins are the backbone of steel building roof and wall systems. Our cold-formed galvanized purlins are roll-formed from high-strength structural steel with hot-dip galvanized coating (Z275 minimum) for long-term corrosion resistance — ideal for industrial, commercial, and agricultural steel buildings.
+
+C purlins are typically used for simple-span applications where lapping is not required, while Z purlins feature sleeved or overlapped connections for continuous-span design — reducing material weight and cost. Both profiles are available with pre-punched holes for swift bolted installation.
+
+All purlins are manufactured to precise tolerances on automated roll-forming lines. Custom lengths, punching patterns, and notch details can be programmed for your specific project. Standard lead time: 15-20 working days from order.`,
+    specifications: [
+      { label: "Profile Types", value: "C Purlin (C80-C300), Z Purlin (Z100-Z350)" },
+      { label: "Steel Grade", value: "Q235B, Q355B, G450, G550 (per AS/NZS 4600)" },
+      { label: "Coating", value: "Hot-dip galvanized Z275 (275g/m²), Z350 available" },
+      { label: "Thickness", value: "1.5mm — 3.0mm (16ga — 10ga)" },
+      { label: "Length", value: "Custom cut to project requirements (max 12m single piece)" },
+      { label: "Holes", value: "Pre-punched bolt holes per project drawings" },
+      { label: "Splice Option", value: "Z purlin: sleeved connection for continuous span" },
+      { label: "Standard", value: "GB/T 6725, EN 10162, AS/NZS 4600" },
+      { label: "Packing", value: "Bundled with steel strapping, FCL/LCL ready" },
+    ],
+    features: [
+      "Hot-Dip Galvanized — Z275 coating, 20+ year corrosion life",
+      "Pre-Punched & Cut — ready to bolt, no site drilling needed",
+      "Continuous Span Design — Z purlin lapping reduces steel weight by 15-25%",
+      "Roll-Formed Precision — consistent dimensions, ±1mm tolerance",
+      "Custom Patterns — hole spacing and notch details per your drawings",
+      "Fast Production — 15-20 working days for standard orders",
+      "CE & ISO 9001 — full traceability from coil to finished purlin",
+    ],
+    applications: [
+      "Steel building roof purlins & wall girts",
+      "Portal frame secondary steelwork",
+      "Industrial warehouse & factory buildings",
+      "Agricultural sheds & livestock buildings",
+      "Solar panel mounting structures",
+    ],
+    image: "/images/product-steel-building.webp",
+    badge: "High Demand",
+    schemaPriceLow: "800",
+    schemaPriceHigh: "1200",
+  },
+  {
+    slug: "prefab-container-house",
+    title: "Prefab House & Container House",
+    subtitle: "Temporary / Permanent Modular Building Solution",
+    description:
+      "Prefabricated houses, container houses, and flat-pack container houses. Ideal for worker camps, site offices, schools, and emergency housing. Quick assembly, cost-effective. CE certified.",
+    overview: `Our prefabricated housing solutions cover the full range from basic site accommodation to permanent living quarters. Three product lines: prefab panel houses (活动板房), welded container houses (集装箱房), and flat-pack folding container houses (打包箱房) — each designed for different use cases and budget levels.
+
+Activity panel houses (活动板房) are the most economical option — lightweight steel frame with sandwich panel walls and roof, suitable for construction camps and temporary facilities. Container houses (集装箱房) are welded steel box units, stackable, and ideal for longer-term site offices, dormitories, and guard houses. Flat-pack folding houses (打包箱房) collapse for shipping — one 20ft container can carry 2-3 complete units, reducing shipping costs significantly.
+
+All units come complete with doors, windows, electrical pre-wiring, and floor finishes. Customizable layouts, sizes, and interior fit-out levels available. A 4-person crew can assemble a flat-pack unit in 30 minutes without special tools.`,
+    specifications: [
+      { label: "Prefab Panel House", value: "5.6m × 3.6m module, customizable" },
+      { label: "Container House", value: "20ft (6m) / 40ft (12m) welded steel box" },
+      { label: "Flat-Pack House", value: "5.8m × 3m × 2.8m, folds to 1/3 volume" },
+      { label: "Wall / Roof Panel", value: "50-75mm PU/PIR/rock wool sandwich panel" },
+      { label: "Frame Material", value: "Galvanized steel / Corten steel" },
+      { label: "Floor Load", value: "2.0 kN/m², optional heavy-duty upgrade" },
+      { label: "Electrical", value: "Pre-wired with LED lighting, switches, outlets" },
+      { label: "Fire Rating", value: "A-grade (rock wool) / B1 (PU with fire retardant)" },
+      { label: "Packing", value: "Flat-pack: 2-3 units per 20ft container" },
+    ],
+    features: [
+      "3 Product Lines — panel house, container, flat-pack — one source for all needs",
+      "Flat-Pack Saves Shipping — 1 container carries 2-3 complete houses",
+      "30-Min Assembly — folding design, no heavy equipment needed",
+      "Stackable Container — up to 3 stories for container camp layouts",
+      "Custom Fit-Out — offices, kitchens, bathrooms, air conditioning",
+      "Wind Resistant — engineered for 120 km/h wind load",
+      "Multi-Climate — insulation options from tropical to cold regions",
+    ],
+    applications: [
+      "Construction worker camps & site offices",
+      "Remote mining & oil field accommodation",
+      "Emergency housing & disaster relief shelters",
+      "School classrooms & medical clinics",
+      "Export warehouse office annexes",
+    ],
+    image: "/images/product-steel-building.webp",
+    schemaPriceLow: "500",
+    schemaPriceHigh: "3500",
+  },
+  {
+    slug: "ppgi-color-coated-steel",
+    title: "PPGI / Color Coated Steel Sheet",
+    subtitle: "Pre-Painted Galvanized / Galvalume Steel Coil",
+    description:
+      "High-quality PPGI color coated steel sheets for roofing, wall cladding, and building envelopes. PE, SMP, HDP, PVDF coatings. RAL colors, wood grain, stone finishes. Mill direct.",
+    overview: `PPGI (Pre-Painted Galvanized Iron) is the most widely used material for steel building cladding and roofing. We supply color coated steel coils and sheets with a wide selection of coating systems, colors, and surface finishes — from standard polyester to premium PVDF (Kynar 500) for coastal and architectural applications.
+
+Our PPGI is produced on continuous coating lines with reverse roll-coating technology for uniform film thickness. The substrate is hot-dip galvanized (GI) or galvalume (GL/AZ) steel, with chemical pretreatment and primer layers before the topcoat application. This multi-layer system delivers excellent adhesion, corrosion resistance, and color retention.
+
+Available in coil form (for roll-forming cladding profiles) or cut-to-length sheets. Custom color matching per RAL or Pantone number. Minimum order quantity: 50 tons per color for factory production, or 5 tons for stock colors.`,
+    specifications: [
+      { label: "Substrate", value: "Hot-dip GI (Z275) / Galvalume AZ150 / AZ180" },
+      { label: "Coating Types", value: "PE (Polyester), SMP, HDP, PVDF (Kynar 500)" },
+      { label: "Coating Thickness", value: "PE: 20μm, HDP: 25μm, PVDF: 27μm (top side)" },
+      { label: "Color Options", value: "Full RAL chart, wood grain, stone-textured" },
+      { label: "Sheet Thickness", value: "0.3mm — 1.2mm (total)" },
+      { label: "Width", value: "Coil: 600-1250mm / Sheet: custom length" },
+      { label: "Warranty", value: "PE: 5-8 years, HDP: 10-15 years, PVDF: 20-25 years" },
+      { label: "Standard", value: "EN 10169, ASTM A755, GB/T 12754" },
+    ],
+    features: [
+      "6 Coating Systems — PE to PVDF for every budget and climate",
+      "200+ RAL Colors — exact color matching available",
+      "Wood Grain & Stone — decorative finishes for architectural projects",
+      "Salt Spray Tested — PVDF rated for 1,000+ hours (coastal grade)",
+      "Reverse Roll Coating — uniform film thickness ±2μm",
+      "Pre-Punched Option — ready for screw-fixed or hidden fastener profiles",
+      "Full Traceability — coil number tracking from steel mill to finished sheet",
+    ],
+    applications: [
+      "Steel building roof & wall cladding",
+      "Insulated sandwich panel outer skins",
+      "Fence panels, garage doors, rolling shutters",
+      "Home appliances & interior linings",
+      "Signage, billboards, and architectural facades",
+    ],
+    image: "/images/product-cladding.webp",
+    schemaPriceLow: "700",
+    schemaPriceHigh: "1500",
+  },
+  {
+    slug: "frp-skylight-sheet",
+    title: "FRP Skylight / Translucent Roofing Sheet",
+    subtitle: "Fiberglass Reinforced Plastic Daylight Panel",
+    description:
+      "FRP skylight sheets for natural daylighting in steel buildings. Compatible with all major cladding profiles. UV-stable, impact-resistant, 20-year weather warranty. Custom lengths.",
+    overview: `FRP (Fiberglass Reinforced Plastic) skylight sheets are designed to match standard metal roofing and wall cladding profiles, providing natural daylight while maintaining the building envelope. Installing FRP skylights can reduce daytime lighting energy consumption by 30-50% in warehouse and factory buildings.
+
+Our FRP sheets are manufactured from UV-stabilized polyester resin reinforced with E-glass fiber. The surface is protected with a UV-resistant gel coat (40μm minimum) that prevents yellowing and maintains light transmission for 20+ years. Light transmission rates: 65-80% (standard), 50-60% (diffused), 85%+ (water-clear).
+
+Available to match all common cladding profiles: corrugated, trapezoidal, and box-rib. Custom lengths up to 12m. Pre-drilled fixing holes available. Fire rating: B1 (self-extinguishing) per GB/T 8624, Class 2 per AS/NZS 4256.`,
+    specifications: [
+      { label: "Material", value: "E-glass fiber + UV-stabilized polyester resin" },
+      { label: "Light Transmission", value: "65-80% (standard), 50-85% (options)" },
+      { label: "UV Protection", value: "UV-resistant gel coat, 40μm minimum" },
+      { label: "Thickness", value: "1.0mm — 3.0mm" },
+      { label: "Profile Matching", value: "Corrugated, trapezoidal, box-rib, custom" },
+      { label: "Length", value: "Custom up to 12m, continuous roll available" },
+      { label: "Temperature Range", value: "-40°C to +120°C" },
+      { label: "Fire Rating", value: "B1 (self-extinguishing) / Class 2 (AS/NZS)" },
+      { label: "Warranty", value: "20-year weather resistance / 10-year light transmission" },
+    ],
+    features: [
+      "30-50% Energy Saving — natural daylight reduces lighting costs",
+      "UV-Stable Gel Coat — no yellowing, 20-year weather warranty",
+      "Profile Compatible — matches all major steel cladding profiles",
+      "Impact Resistant — 15x stronger than polycarbonate alternatives",
+      "Custom Lengths — continuous lengths up to 12m, fewer overlaps",
+      "Pre-Drilled Option — ready to install, matching screw pattern",
+      "Self-Extinguishing — B1 fire rating for code compliance",
+    ],
+    applications: [
+      "Warehouse & factory roof daylighting",
+      "Sports halls & indoor arena natural lighting",
+      "Agricultural buildings & greenhouses",
+      "Logistics center & distribution hub skylights",
+      "Canopy & walkway roofing",
+    ],
+    image: "/images/product-cladding.webp",
+    schemaPriceLow: "10",
+    schemaPriceHigh: "25",
+  },
+  {
+    slug: "insulated-sandwich-panel",
+    title: "Insulated Sandwich Panel System",
+    subtitle: "Rock Wool / PUR / PIR / EPS Fire-Rated Panel",
+    description:
+      "Complete insulated sandwich panel range: rock wool (A-grade fire), PIR/PU, EPS, and PUR edge-sealed rock wool. 50-200mm thickness for cold storage, factories, and clean rooms. CE certified.",
+    overview: `Our insulated sandwich panel range covers every fire rating, thermal performance, and budget requirement. Four core types available: rock wool (mineral fiber, A-grade non-combustible), PIR/PU (polyisocyanurate/polyurethane, best thermal efficiency), PUR edge-sealed rock wool (fire-rated edges with foam core), and EPS (economical option for dry applications).
+
+Rock wool sandwich panels are the preferred choice for fire-rated applications — achieving A-grade non-combustibility with fire resistance up to 2 hours. PUR edge-sealed rock wool panels combine the fire safety of rock wool at the panel joints with the thermal efficiency of polyurethane foam in the core area. PIR panels deliver the highest R-value per thickness, making them ideal for cold storage and temperature-controlled environments.
+
+All panels feature hidden fastener joints, continuous gasket seals, and are compatible with our complete range of trims, flashings, and accessories. Panel widths: 1000mm-1200mm standard. Custom lengths up to 16m. Lead time: 20-25 working days.`,
+    specifications: [
+      { label: "Core Types", value: "Rock wool / PIR / PUR / PUR Edge-Sealed Rock Wool / EPS" },
+      { label: "Panel Thickness", value: "50mm, 75mm, 100mm, 120mm, 150mm, 200mm" },
+      { label: "Steel Skin", value: "0.4mm — 0.7mm GI / PPGI / Stainless Steel" },
+      { label: "Fire Rating", value: "Rock wool: Grade A (non-combustible), PIR: B1, EPS: B2" },
+      { label: "U-Value (100mm)", value: "Rock wool: 0.45, PIR: 0.22, EPS: 0.35 W/m²K" },
+      { label: "Panel Width", value: "1000mm — 1200mm standard" },
+      { label: "Joint Type", value: "Hidden fastener, tongue-and-groove with gasket" },
+      { label: "Acoustic (RW)", value: "Rock wool: 30-35 dB, PIR: 25-28 dB" },
+      { label: "Max Length", value: "Up to 16m continuous panel" },
+    ],
+    features: [
+      "4 Core Types — one supplier for all fire and thermal requirements",
+      "A-Grade Fire (Rock Wool) — non-combustible, 2-hour fire resistance",
+      "PUR Edge-Sealed — fire-safe joints + foam core thermal efficiency",
+      "PIR Best U-Value — 0.22 W/m²K @100mm for cold storage",
+      "Hidden Fastener System — clean architectural appearance",
+      "Continuous Gasket — airtight joint eliminates thermal bridging",
+      "Custom Lengths — up to 16m, minimizes horizontal joints",
+    ],
+    applications: [
+      "Cold storage & refrigerated warehouses",
+      "Factory & production building envelopes",
+      "Clean rooms & pharmaceutical facilities",
+      "Commercial buildings & office partitions",
+      "Food processing plants & distribution centers",
+    ],
+    image: "/images/product-cladding.webp",
+    schemaPriceLow: "12",
+    schemaPriceHigh: "35",
   },
 ];
 
