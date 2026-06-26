@@ -87,7 +87,7 @@ const faqSchema = {
       name: "How much does a steel structure warehouse cost in Nigeria?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Steel structure warehouse cost in Nigeria ranges from NGN 15,000 to NGN 35,000 per square meter, depending on size, design complexity, and materials. Laotie offers factory-direct pricing at NGN 25-65 per sqm.",
+        text: "Steel structure warehouse cost in Nigeria ranges from NGN 15,000 to NGN 35,000 per square meter for locally fabricated structures, depending on size, design complexity, and materials. Laotie offers factory-direct pricing at $25-65 per sqm (approximately NGN 35,000-91,000 per sqm at current exchange rates).",
       },
     },
     {

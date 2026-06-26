@@ -140,7 +140,7 @@ export default function PhilippinesLandingPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#contact"
-                className="bg-yellow-100+ hover:bg-yellow-600 text-black font-bold py-4 px-8 rounded-lg transition-colors text-lg"
+                className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-4 px-8 rounded-lg transition-colors text-lg"
               >
                 Get Free Quote
               </a>
@@ -173,7 +173,7 @@ export default function PhilippinesLandingPage() {
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <ScrollAnimator animation="fade-in" delay={0}>
-              <div className="text-center p-6 bg-blue-100+ rounded-xl">
+              <div className="text-center p-6 bg-blue-50 rounded-xl">
               <div className="text-5xl mb-4">🏗️</div>
               <h3 className="text-xl font-bold mb-2">100+ Projects in Philippines</h3>
               <p className="text-gray-600">
@@ -183,7 +183,7 @@ export default function PhilippinesLandingPage() {
             </div>
             </ScrollAnimator>
             <ScrollAnimator animation="fade-in" delay={200}>
-              <div className="text-center p-6 bg-blue-100+ rounded-xl">
+              <div className="text-center p-6 bg-blue-50 rounded-xl">
               <div className="text-5xl mb-4">✅</div>
               <h3 className="text-xl font-bold mb-2">CE & ISO Certified Quality</h3>
               <p className="text-gray-600">
@@ -193,7 +193,7 @@ export default function PhilippinesLandingPage() {
             </div>
             </ScrollAnimator>
             <ScrollAnimator animation="fade-in" delay={400}>
-              <div className="text-center p-6 bg-blue-100+ rounded-xl">
+              <div className="text-center p-6 bg-blue-50 rounded-xl">
               <div className="text-5xl mb-4">⚡</div>
               <h3 className="text-xl font-bold mb-2">Fast Delivery & Installation</h3>
               <p className="text-gray-600">
@@ -207,7 +207,7 @@ export default function PhilippinesLandingPage() {
       </section>
 
       {/* Why Philippines */}
-      <section className="py-16 bg-gray-100+">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Why Steel Structures Are Perfect for Philippines
@@ -306,17 +306,17 @@ export default function PhilippinesLandingPage() {
           <div className="mt-12 text-center">
             <h3 className="text-2xl font-bold mb-4">Typical Project Timeline</h3>
             <div className="flex flex-col md:flex-row justify-center gap-4 max-w-4xl mx-auto">
-              <div className="bg-blue-100+ p-4 rounded-lg flex-1">
+              <div className="bg-blue-50 p-4 rounded-lg flex-1">
                 <div className="font-bold text-blue-600">Week 1-6</div>
                 <div className="text-sm text-gray-600">Production in China</div>
               </div>
               <div className="hidden md:flex items-center">→</div>
-              <div className="bg-blue-100+ p-4 rounded-lg flex-1">
+              <div className="bg-blue-50 p-4 rounded-lg flex-1">
                 <div className="font-bold text-blue-600">Week 7-9</div>
                 <div className="text-sm text-gray-600">Shipping to Philippines</div>
               </div>
               <div className="hidden md:flex items-center">→</div>
-              <div className="bg-blue-100+ p-4 rounded-lg flex-1">
+              <div className="bg-blue-50 p-4 rounded-lg flex-1">
                 <div className="font-bold text-blue-600">Week 10-17</div>
                 <div className="text-sm text-gray-600">On-site Installation</div>
               </div>
@@ -439,7 +439,7 @@ export default function PhilippinesLandingPage() {
             Our Steel Structure Solutions
           </h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="border-l-4 border-blue-600 pl-6 hover:bg-blue-100+ p-4 rounded-r-lg transition-colors">
+            <div className="border-l-4 border-blue-600 pl-6 hover:bg-blue-50 p-4 rounded-r-lg transition-colors">
               <h3 className="text-xl font-bold mb-2">📦 Warehouse Buildings</h3>
               <p className="text-gray-600">
                 Custom design for storage, logistics, and distribution centers. Clear span up to 60m,
@@ -449,7 +449,7 @@ export default function PhilippinesLandingPage() {
                 Learn more →
               </a>
             </div>
-            <div className="border-l-4 border-blue-600 pl-6 hover:bg-blue-100+ p-4 rounded-r-lg transition-colors">
+            <div className="border-l-4 border-blue-600 pl-6 hover:bg-blue-50 p-4 rounded-r-lg transition-colors">
               <h3 className="text-xl font-bold mb-2">🏭 Factory Buildings</h3>
               <p className="text-gray-600">
                 Industrial facilities with crane systems (5-100+ ton), mezzanine floors, office annex,
@@ -459,7 +459,7 @@ export default function PhilippinesLandingPage() {
                 Learn more →
               </a>
             </div>
-            <div className="border-l-4 border-blue-600 pl-6 hover:bg-blue-100+ p-4 rounded-r-lg transition-colors">
+            <div className="border-l-4 border-blue-600 pl-6 hover:bg-blue-50 p-4 rounded-r-lg transition-colors">
               <h3 className="text-xl font-bold mb-2">🏢 Commercial Buildings</h3>
               <p className="text-gray-600">
                 Office buildings, showrooms, and retail spaces. Aesthetic design with glass curtain
@@ -469,7 +469,7 @@ export default function PhilippinesLandingPage() {
                 Learn more →
               </a>
             </div>
-            <div className="border-l-4 border-blue-600 pl-6 hover:bg-blue-100+ p-4 rounded-r-lg transition-colors">
+            <div className="border-l-4 border-blue-600 pl-6 hover:bg-blue-50 p-4 rounded-r-lg transition-colors">
               <h3 className="text-xl font-bold mb-2">🌾 Agricultural Structures</h3>
               <p className="text-gray-600">
                 Farm sheds, poultry houses, and storage facilities. Ventilation, insulation, and
@@ -485,7 +485,7 @@ export default function PhilippinesLandingPage() {
 
       {/* Testimonials */}
       <ScrollAnimator animation="fade-in">
-<section className="py-16 bg-blue-100+">
+<section className="py-16 bg-blue-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             What Our Clients Say
@@ -504,7 +504,7 @@ export default function PhilippinesLandingPage() {
                 excellent, and their installation team was very professional."
               </p>
               <div className="font-bold">Juan Dela Cruz</div>
-              <div className="text-sm text-gray-100+">CEO, Manila Logistics Inc.</div>
+              <div className="text-sm text-gray-500">CEO, Manila Logistics Inc.</div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md">
               <div className="flex mb-4">
@@ -519,7 +519,7 @@ export default function PhilippinesLandingPage() {
                 structure factory is 30% cheaper than local construction in Cebu."
               </p>
               <div className="font-bold">Maria Santos</div>
-              <div className="text-sm text-gray-100+">Owner, Cebu Food Processing</div>
+              <div className="text-sm text-gray-500">Owner, Cebu Food Processing</div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md">
               <div className="flex mb-4">
@@ -534,7 +534,7 @@ export default function PhilippinesLandingPage() {
                 warehouse remained intact. Highly recommended!"
               </p>
               <div className="font-bold">Roberto Lim</div>
-              <div className="text-sm text-gray-100+">Plant Manager, Davao Agri Corp.</div>
+              <div className="text-sm text-gray-500">Plant Manager, Davao Agri Corp.</div>
             </div>
           </div>
         </div>
@@ -549,7 +549,7 @@ export default function PhilippinesLandingPage() {
             Frequently Asked Questions (Philippines)
           </h2>
           <div className="max-w-3xl mx-auto space-y-6">
-            <details className="border border-gray-200 rounded-lg p-4 hover:border-blue-100+ transition-colors">
+            <details className="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
               <summary className="font-bold text-lg cursor-pointer">
                 How much does a steel structure warehouse cost in Philippines?
               </summary>
@@ -560,7 +560,7 @@ export default function PhilippinesLandingPage() {
                 construction.
               </p>
             </details>
-            <details className="border border-gray-200 rounded-lg p-4 hover:border-blue-100+ transition-colors">
+            <details className="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
               <summary className="font-bold text-lg cursor-pointer">
                 How long does it take to build a steel warehouse in Philippines?
               </summary>
@@ -570,7 +570,7 @@ export default function PhilippinesLandingPage() {
                 weeks from order to completion.
               </p>
             </details>
-            <details className="border border-gray-200 rounded-lg p-4 hover:border-blue-100+ transition-colors">
+            <details className="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
               <summary className="font-bold text-lg cursor-pointer">
                 Do I need a building permit for steel structure in Philippines?
               </summary>
@@ -581,7 +581,7 @@ export default function PhilippinesLandingPage() {
                 process.
               </p>
             </details>
-            <details className="border border-gray-200 rounded-lg p-4 hover:border-blue-100+ transition-colors">
+            <details className="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
               <summary className="font-bold text-lg cursor-pointer">
                 Can steel structures withstand typhoons in Philippines?
               </summary>
@@ -591,7 +591,7 @@ export default function PhilippinesLandingPage() {
                 for wind load and seismic design. All structures come with 30-year warranty.
               </p>
             </details>
-            <details className="border border-gray-200 rounded-lg p-4 hover:border-blue-100+ transition-colors">
+            <details className="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
               <summary className="font-bold text-lg cursor-pointer">
                 Do you provide installation services in Philippines?
               </summary>
@@ -601,7 +601,7 @@ export default function PhilippinesLandingPage() {
                 choose to hire local contractors and use our remote guidance to save costs.
               </p>
             </details>
-            <details className="border border-gray-200 rounded-lg p-4 hover:border-blue-100+ transition-colors">
+            <details className="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
               <summary className="font-bold text-lg cursor-pointer">
                 What payment terms do you offer for Philippines clients?
               </summary>
@@ -617,7 +617,7 @@ export default function PhilippinesLandingPage() {
             </ScrollAnimator>
 
       {/* Contact Form */}
-      <section id="contact" className="py-16 bg-gray-100+">
+      <section id="contact" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Get Your Free Quote Today
@@ -647,7 +647,7 @@ export default function PhilippinesLandingPage() {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-100+ focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-300 focus:border-transparent"
                 />
               </div>
               <div>
@@ -659,7 +659,7 @@ export default function PhilippinesLandingPage() {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-100+ focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-300 focus:border-transparent"
                 />
               </div>
               <div>
@@ -671,7 +671,7 @@ export default function PhilippinesLandingPage() {
                   id="phone"
                   name="phone"
                   placeholder="+63 XXX XXX XXXX"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-100+ focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-300 focus:border-transparent"
                 />
               </div>
               <div>
@@ -682,7 +682,7 @@ export default function PhilippinesLandingPage() {
                   id="project-type"
                   name="project-type"
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-100+ focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-300 focus:border-transparent"
                 >
                   <option value="">Select project type</option>
                   <option value="warehouse">Warehouse</option>
@@ -701,7 +701,7 @@ export default function PhilippinesLandingPage() {
                   id="project-size"
                   name="project-size"
                   placeholder="e.g., 1000"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-100+ focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-300 focus:border-transparent"
                 />
               </div>
               <div>
@@ -713,7 +713,7 @@ export default function PhilippinesLandingPage() {
                   id="location"
                   name="location"
                   placeholder="e.g., Manila, Cebu, Davao"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-100+ focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-300 focus:border-transparent"
                 />
               </div>
               <div>
@@ -724,7 +724,7 @@ export default function PhilippinesLandingPage() {
                   id="message"
                   name="message"
                   rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-100+ focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-300 focus:border-transparent"
                   placeholder="Tell us about your project size, location, timeline, and any special requirements..."
                 ></textarea>
               </div>
@@ -737,7 +737,7 @@ export default function PhilippinesLandingPage() {
             </form>
             <div className="mt-8 text-center text-gray-600">
               <p>📞 Or contact us directly:</p>
-              <p className="font-bold text-lg mt-2">WhatsApp: +86 166 100+73 5555</p>
+              <p className="font-bold text-lg mt-2">WhatsApp: +86 166 5073 5555</p>
               <p>📧 Email: kangguangjian91@gmail.com</p>
               <p className="text-sm mt-2">We respond to all inquiries within 24 hours</p>
             </div>
@@ -746,9 +746,9 @@ export default function PhilippinesLandingPage() {
       </section>
 
       {/* Serving More Countries */}
-      <section className="bg-gray-100+ py-10">
+      <section className="bg-gray-50 py-10">
         <div className="container mx-auto px-4">
-          <p className="text-center text-sm text-gray-100+ mb-4">Also serving:</p>
+          <p className="text-center text-sm text-gray-500 mb-4">Also serving:</p>
           <div className="flex flex-wrap justify-center gap-3">
             <a href="/steel-structure-thailand" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Thailand</a>
             <a href="/steel-structure-vietnam" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Vietnam</a>

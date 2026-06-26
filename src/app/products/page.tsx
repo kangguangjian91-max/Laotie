@@ -92,7 +92,7 @@ export default function ProductsPage() {
 
           <div className="space-y-16">
             {products.map((product, i) => (
-              <div key={product.title} className={`grid lg:grid-cols-2 gap-10 items-center ${i % 2 === 1 ? "lg:direction-rtl" : ""}`}>
+              <div key={product.title} className={`grid lg:grid-cols-2 gap-10 items-center ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
                 <div className={i % 2 === 1 ? "lg:order-2" : ""}>
                   <p className="text-steel-accent font-semibold text-sm tracking-wider uppercase mb-2">{product.subtitle}</p>
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">{product.title}</h2>

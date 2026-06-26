@@ -3,7 +3,7 @@ export default function Hero() {
     <section id="home" className="relative overflow-hidden min-h-[680px] sm:min-h-[720px] lg:min-h-[780px] flex items-center" style={{ background: 'linear-gradient(135deg, #0a1628 0%, #1a365d 50%, #0d2137 100%)' }}>
       {/* ===== Animated Gradient Background ===== */}
       <div className="absolute inset-0" style={{
-        background: 'radial-gradient(ellipse at 20% 50%, rgba(55,138,221,0.15) 0%, transparent 50%), radiel-gradient(ellipse at 80% 50%, rgba(255,107,0,0.1) 0%, transparent 50%)',
+        background: 'radial-gradient(ellipse at 20% 50%, rgba(55,138,221,0.15) 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, rgba(255,107,0,0.1) 0%, transparent 50%)',
       }} />
 
       {/* ===== Grid Pattern Overlay ===== */}
