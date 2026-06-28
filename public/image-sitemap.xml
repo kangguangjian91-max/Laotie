@@ -36,6 +36,96 @@
     </image:image>
   </url>
 
+  <!-- Steel Factory Building -->
+  <url>
+    <loc>https://www.laotie-steel.com/products/steel-factory-building</loc>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/product-factory-building.webp</image:loc>
+      <image:title>Steel Factory Building</image:title>
+      <image:caption>Custom steel factory buildings for manufacturing plants and industrial facilities</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Steel Workshop -->
+  <url>
+    <loc>https://www.laotie-steel.com/products/steel-workshop</loc>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/product-workshop.webp</image:loc>
+      <image:title>Steel Workshop Building</image:title>
+      <image:caption>Cost-effective steel workshop buildings for light industrial and agricultural applications</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Hot Rolled Steel Coil & Sheet -->
+  <url>
+    <loc>https://www.laotie-steel.com/products/hot-rolled-steel-coil</loc>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/product-hr-coil.webp</image:loc>
+      <image:title>Hot Rolled Steel Coil & Sheet</image:title>
+      <image:caption>Hot rolled steel coil, plate, and sheet for steel structure fabrication</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Galvanized C & Z Purlin -->
+  <url>
+    <loc>https://www.laotie-steel.com/products/galvanized-cz-purlin</loc>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/product-cz-purlin.webp</image:loc>
+      <image:title>Galvanized C & Z Purlin</image:title>
+      <image:caption>Hot-dip galvanized C purlin and Z purlin for steel structure roofs and walls</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Prefab House & Container House -->
+  <url>
+    <loc>https://www.laotie-steel.com/products/prefab-container-house</loc>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/product-container-house.webp</image:loc>
+      <image:title>Prefab House & Container House</image:title>
+      <image:caption>Prefabricated houses, container houses, and flat-pack container houses for worker camps and modular buildings</image:caption>
+    </image:image>
+  </url>
+
+  <!-- PPGI / Color Coated Steel Sheet -->
+  <url>
+    <loc>https://www.laotie-steel.com/products/ppgi-color-coated-steel</loc>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/product-ppgi.webp</image:loc>
+      <image:title>PPGI / Color Coated Steel Sheet</image:title>
+      <image:caption>High-quality PPGI color coated steel sheets for roofing, wall cladding, and building envelopes</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Insulated Sandwich Panel System -->
+  <url>
+    <loc>https://www.laotie-steel.com/products/insulated-sandwich-panel</loc>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/product-sandwich-panel.webp</image:loc>
+      <image:title>Insulated Sandwich Panel System</image:title>
+      <image:caption>Rock wool, PIR, PUR, EPS insulated sandwich panels for cold storage, factories, and clean rooms</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Steel Structure Building -->
+  <url>
+    <loc>https://www.laotie-steel.com/products/steel-structure-building</loc>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/product-steel-structure-new.webp</image:loc>
+      <image:title>Steel Structure Building</image:title>
+      <image:caption>Custom steel structure buildings for commercial, industrial, and multi-story applications</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Steel Warehouse -->
+  <url>
+    <loc>https://www.laotie-steel.com/products/steel-warehouse</loc>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/product-warehouse-new.webp</image:loc>
+      <image:title>Steel Warehouse Building</image:title>
+      <image:caption>Large-span steel warehouse buildings for storage, logistics, and distribution centers</image:caption>
+    </image:image>
+  </url>
+
   <!-- Projects Page -->
   <url>
     <loc>https://www.laotie-steel.com/projects</loc>
@@ -88,6 +178,16 @@
     <image:image>
       <image:loc>https://www.laotie-steel.com/images/certificates/iso-9001.webp</image:loc>
       <image:title>ISO 9001 Certification</image:title>
+    </image:image>
+  </url>
+
+  <!-- FRP Skylight / Translucent Roofing Sheet -->
+  <url>
+    <loc>https://www.laotie-steel.com/products/frp-skylight-sheet</loc>
+    <image:image>
+      <image:loc>https://www.laotie-steel.com/images/product-frp-skylight.webp</image:loc>
+      <image:title>FRP Skylight / Translucent Roofing Sheet</image:title>
+      <image:caption>FRP skylight sheets for natural daylighting in steel buildings</image:caption>
     </image:image>
   </url>
 </urlset>
