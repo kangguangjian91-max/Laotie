@@ -658,8 +658,9 @@ export default function ThailandLandingPage() {
           <div className="max-w-2xl mx-auto">
             <form
               className="space-y-6 bg-white p-8 rounded-2xl shadow-lg"
-              action="https://formsubmit.co/kangguangjian91@gmail.com"
+              action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'kangguangjian91@gmail.com'}`}
               method="POST"
+              aria-label="Contact inquiry form"
             >
               {/* FormSubmit configuration */}
               <input type="hidden" name="_subject" value="🇹🇭 Thailand Inquiry — Laotie Steel Website" />
@@ -778,10 +779,10 @@ export default function ThailandLandingPage() {
                   📱 WhatsApp: +86 166-100+73-5555
                 </a>
                 <a
-                  href="mailto:kangguangjian91@gmail.com"
+                  href={process.env.NEXT_PUBLIC_CONTACT_EMAIL_LINK || 'mailto:kangguangjian91@gmail.com'}
                   className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium"
                 >
-                  ✉️ Email: kangguangjian91@gmail.com
+                  ✉️ Email: {process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'kangguangjian91@gmail.com'}
                 </a>
               </div>
               <p className="text-sm text-gray-100+ mt-4">

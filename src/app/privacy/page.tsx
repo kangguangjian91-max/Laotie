@@ -326,7 +326,7 @@ export default function PrivacyPage() {
                 <p className="mb-4">If you have questions about this Privacy Policy or wish to exercise your data rights, please contact us:</p>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <a
-                    href="mailto:kangguangjian91@gmail.com"
+                    href={process.env.NEXT_PUBLIC_CONTACT_EMAIL_LINK || 'mailto:kangguangjian91@gmail.com'}
                     className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-steel-accent transition-colors"
                   >
                     <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center">
@@ -334,7 +334,7 @@ export default function PrivacyPage() {
                     </div>
                     <div>
                       <div className="text-sm font-medium text-gray-900">Email</div>
-                      <div className="text-sm text-gray-500">kangguangjian91@gmail.com</div>
+                      <div className="text-sm text-gray-500">{process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'kangguangjian91@gmail.com'}</div>
                     </div>
                   </a>
                   <a

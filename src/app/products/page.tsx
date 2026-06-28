@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
@@ -5,7 +6,7 @@ import Image from 'next/image';
 import { products } from "@/data/products";
 import { ArrowLeft } from "lucide-react";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Steel Structure Products | Laotie Steel",
   description: "CE & ISO certified steel structure products: warehouse buildings, factory buildings, workshops, C&Z purlins, sandwich panels, PPGI, floor deck, space frame, cladding system. 50-year design life.",
   openGraph: {
@@ -124,6 +125,7 @@ export default function ProductsPage() {
                     src={product.image}
                     alt={product.title}
                     fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                     className="w-full h-full object-cover"
                   />
                 </div>

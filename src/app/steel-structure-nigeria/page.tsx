@@ -634,8 +634,9 @@ export default function NigeriaLandingPage() {
           <div className="max-w-2xl mx-auto">
             <form
               className="space-y-6"
-              action="https://formsubmit.co/kangguangjian91@gmail.com"
+              action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'kangguangjian91@gmail.com'}`}
               method="POST"
+              aria-label="Contact inquiry form"
             >
               {/* FormSubmit configuration */}
               <input type="hidden" name="_subject" value="🇳🇬 Nigeria Inquiry — Laotie Steel Website" />
@@ -743,7 +744,7 @@ export default function NigeriaLandingPage() {
             <div className="mt-8 text-center text-gray-600">
               <p>📞 Or contact us directly:</p>
               <p className="font-bold text-lg mt-2">WhatsApp: +86 166 5073 5555</p>
-              <p>📧 Email: kangguangjian91@gmail.com</p>
+              <p>📧 Email: {process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'kangguangjian91@gmail.com'}</p>
               <p className="text-sm mt-2">We respond to all inquiries within 24 hours</p>
             </div>
           </div>

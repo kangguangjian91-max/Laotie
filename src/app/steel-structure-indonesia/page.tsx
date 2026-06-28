@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import ProjectCarousel from "@/components/ProjectCarousel";
+import Image from "next/image";
 import LandingPageTracker from "@/components/LandingPageTracker";
 import ScrollAnimator from "@/components/ScrollAnimator";
 
@@ -142,10 +143,12 @@ export default function SteelStructureIndonesia() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-steel to-steel-light text-white py-20 md:py-28">
         <div className="absolute inset-0 opacity-20">
-          <img
+          <Image
             src="/images/indonesia/679234a53ccd9c56cf26658f4f072138.webp"
             alt="Steel structure warehouse in Indonesia"
-            className="w-full h-full object-cover"
+            fill
+            sizes="100vw"
+            className="object-cover"
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -646,7 +649,7 @@ export default function SteelStructureIndonesia() {
           <h2 className="text-3xl font-bold text-center text-steel mb-12">
             Get a Free Quote for Indonesia
           </h2>
-          <form className="bg-white rounded-2xl p-8 shadow-sm space-y-6" id="contact-form" action="https://formsubmit.co/kangguangjian91@gmail.com" method="POST">
+          <form className="bg-white rounded-2xl p-8 shadow-sm space-y-6" id="contact-form" action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'kangguangjian91@gmail.com'}`} method="POST" aria-label="Contact inquiry form">
             {/* FormSubmit configuration */}
             <input type="hidden" name="_subject" value="🇮🇩 Indonesia Inquiry — Laotie Steel Website" />
             <input type="hidden" name="_captcha" value="true" />

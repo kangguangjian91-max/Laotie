@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import Image from "next/image";
 
 interface Project {
   image: string;
@@ -159,12 +160,12 @@ export default function ProjectCarousel({ projects, title, subtitle }: ProjectCa
                     <span className="text-xs">Project Image</span>
                   </div>
                 ) : (
-                <img
+                <Image
                   src={project.image}
                   alt={project.alt}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                  className="object-cover"
                   onError={() => setImageErrors(prev => new Set(prev).add(index))}
                 />
                 )}

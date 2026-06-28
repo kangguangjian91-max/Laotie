@@ -83,7 +83,7 @@ export default function TermsPage() {
                 Laotie Steel Structure Co., Ltd.<br/>
                 Shangqiu, Henan, China<br/>
                 WhatsApp: <a href="https://wa.me/8616650735555" className="text-steel-accent">+86 166-5073-5555</a><br/>
-                Email: <a href="mailto:kangguangjian91@gmail.com" className="text-steel-accent">kangguangjian91@gmail.com</a>
+                Email: <a href={process.env.NEXT_PUBLIC_CONTACT_EMAIL_LINK || 'mailto:kangguangjian91@gmail.com'} className="text-steel-accent">{process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'kangguangjian91@gmail.com'}</a>
               </p>
             </section>
           </div>

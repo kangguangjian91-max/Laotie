@@ -88,7 +88,7 @@ export default function Contact() {
           method="POST"
           onSubmit={handleSubmit}
           noValidate
-          aria-label="Quick inquiry form"
+          aria-label="Contact inquiry form"
           className="max-w-2xl mx-auto grid sm:grid-cols-3 gap-4"
         >
           <input type="hidden" name="_subject" value="Quick Inquiry — Laotie Steel Website" />

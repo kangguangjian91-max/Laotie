@@ -21,11 +21,11 @@ export default function ServiceWorkerRegistration() {
         });
 
         if (registration.installing) {
-          console.log("🚀 Service Worker installing...");
+          console.debug("🚀 Service Worker installing...");
         } else if (registration.waiting) {
-          console.log("⏳ Service Worker installed, waiting to activate");
+          console.debug("⏳ Service Worker installed, waiting to activate");
         } else if (registration.active) {
-          console.log("✅ Service Worker active");
+          console.debug("✅ Service Worker active");
         }
 
         // Listen for updates
@@ -34,7 +34,7 @@ export default function ServiceWorkerRegistration() {
           if (newWorker) {
             newWorker.addEventListener("statechange", () => {
               if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
-                console.log("🔄 New Service Worker installed, refresh to update");
+                console.debug("🔄 New Service Worker installed, refresh to update");
               }
             });
           }
@@ -53,7 +53,7 @@ export default function ServiceWorkerRegistration() {
 
     // Listen for messages from Service Worker
     navigator.serviceWorker.addEventListener("message", (event) => {
-      console.log("📨 Message from SW:", event.data);
+      console.debug("📨 Message from SW:", event.data);
     });
   }, []);
 

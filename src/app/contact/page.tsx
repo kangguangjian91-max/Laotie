@@ -42,7 +42,7 @@ export default function ContactPage() {
       "CE & ISO certified steel structure manufacturer in China. 5 production lines, 5,000T/month capacity. Portal frames, floor deck, space frames, cladding.",
     url: "https://www.laotie-steel.com",
     telephone: "+86-166-5073-5555",
-    email: "mailto:kangguangjian91@gmail.com",
+    email: process.env.NEXT_PUBLIC_CONTACT_EMAIL_LINK || "mailto:kangguangjian91@gmail.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Shangqiu City, Henan Province",
@@ -88,9 +88,10 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2">
               <form
-                action="https://formsubmit.co/kangguangjian91@gmail.com"
+                action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'kangguangjian91@gmail.com'}`}
                 method="POST"
                 className="space-y-4"
+                aria-label="Contact inquiry form"
               >
                 {/* FormSubmit configuration */}
                 <input type="hidden" name="_subject" value="New Inquiry — Laotie Steel Website" />
@@ -165,8 +166,8 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                <a href="mailto:kangguangjian91@gmail.com" className="text-steel-accent hover:underline">
-                  kangguangjian91@gmail.com
+                <a href={process.env.NEXT_PUBLIC_CONTACT_EMAIL_LINK || "mailto:kangguangjian91@gmail.com"} className="text-steel-accent hover:underline">
+                  {process.env.NEXT_PUBLIC_CONTACT_EMAIL || "kangguangjian91@gmail.com"}
                 </a>
               </div>
               <div>

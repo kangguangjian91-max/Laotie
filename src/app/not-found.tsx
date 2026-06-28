@@ -1,8 +1,9 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "404 - Page Not Found | Laotie Steel Structure",
   description: "The page you are looking for could not be found. Browse our steel structure products or contact our team for assistance.",
   robots: { index: false },

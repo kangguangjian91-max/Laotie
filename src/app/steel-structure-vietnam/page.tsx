@@ -656,7 +656,7 @@ export default function VietnamLandingPage() {
             Get Free Quote for Vietnam Project
           </h2>
           <div className="max-w-2xl mx-auto">
-            <form className="space-y-6 bg-white p-8 rounded-2xl shadow-lg" action="https://formsubmit.co/kangguangjian91@gmail.com" method="POST">
+            <form className="space-y-6 bg-white p-8 rounded-2xl shadow-lg" action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'kangguangjian91@gmail.com'}`} method="POST" aria-label="Contact inquiry form">
               {/* FormSubmit configuration */}
               <input type="hidden" name="_subject" value="🇻🇳 Vietnam Inquiry — Laotie Steel Website" />
               <input type="hidden" name="_captcha" value="true" />
@@ -774,10 +774,10 @@ export default function VietnamLandingPage() {
                   📱 WhatsApp: +86 166-100+73-5555
                 </a>
                 <a
-                  href="mailto:kangguangjian91@gmail.com"
+                  href={process.env.NEXT_PUBLIC_CONTACT_EMAIL_LINK || 'mailto:kangguangjian91@gmail.com'}
                   className="inline-flex items-center gap-2 text-red-600 hover:text-red-700 font-medium"
                 >
-                  ✉️ Email: kangguangjian91@gmail.com
+                  ✉️ Email: {process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'kangguangjian91@gmail.com'}
                 </a>
               </div>
               <p className="text-sm text-gray-100+ mt-4">

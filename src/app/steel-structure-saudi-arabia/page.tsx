@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import LandingPageTracker from "@/components/LandingPageTracker";
+import Image from "next/image";
 import ScrollAnimator from "@/components/ScrollAnimator";
 import CountUp from "@/components/CountUp";
 
@@ -133,7 +134,7 @@ export default function SteelStructureSaudiArabia() {
         {/* ========== HERO ========== */}
         <section className="relative bg-steel overflow-hidden">
           <div className="absolute inset-0 opacity-15">
-            <img src={heroImage} alt="Steel structure for Saudi Arabia" className="w-full h-full object-cover" />
+            <Image src={heroImage} alt="Steel structure for Saudi Arabia" fill sizes="100vw" className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-steel via-steel/95 to-steel/80" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
@@ -415,9 +416,10 @@ export default function SteelStructureSaudiArabia() {
               </p>
             </div>
             <form
-              action="https://formsubmit.co/kangguangjian91@gmail.com"
+              action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'kangguangjian91@gmail.com'}`}
               method="POST"
               className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto"
+              aria-label="Contact inquiry form"
             >
               <input type="hidden" name="_subject" value="Saudi Arabia Landing Page Inquiry" />
               <input type="hidden" name="_template" value="table" />

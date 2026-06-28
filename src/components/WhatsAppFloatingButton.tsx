@@ -37,7 +37,11 @@ export default function FloatingWhatsApp() {
     <div className="fixed bottom-6 right-6 z-50">
       {/* Chat box popup */}
       {isOpen && (
-        <div className="mb-4 mr-2 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden animate-fade-in-up">
+        <div className="mb-4 mr-2 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden animate-fade-in-up"
+          role="dialog"
+          aria-modal="true"
+          aria-label="WhatsApp chat"
+        >
           {/* Header */}
           <div className="bg-green-500 text-white p-4 flex items-center gap-3">
             <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
@@ -86,7 +90,7 @@ export default function FloatingWhatsApp() {
       <button
         onClick={() => isOpen ? handleClick() : setIsOpen(true)}
         className="group w-16 h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center justify-center hover:scale-110"
-        aria-label="Contact us on WhatsApp"
+        aria-label="Open WhatsApp chat"
       >
         <MessageCircle className="w-8 h-8 group-hover:animate-pulse" />
       </button>

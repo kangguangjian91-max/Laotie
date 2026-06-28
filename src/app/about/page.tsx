@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from 'next/image';
@@ -63,7 +64,7 @@ const factoryImages = [
   { src: "/images/factory/10-quality-inspection.webp", alt: "Quality control inspector measuring steel beam dimensions", caption: "Quality Inspection" },
 ];
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "About Laotie Steel Structure | CE & ISO Certified Factory",
   description: "Trusted steel manufacturer in Shangqiu, China since 2009. 5 production lines, 5,000T/month capacity, 200+ skilled workers, 30+ countries served.",
   openGraph: {
@@ -97,7 +98,7 @@ export default function AboutPage() {
         {/* Hero banner */}
         <section className="relative bg-steel overflow-hidden">
           <div className="absolute inset-0 opacity-15">
-            <Image src="/images/factory-workshop.webp" alt="Laotie Steel factory workshop interior - steel structure manufacturing facility" fill className="object-cover" />
+            <Image src="/images/factory-workshop.webp" alt="Laotie Steel factory workshop interior - steel structure manufacturing facility" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-steel via-steel/95 to-steel/80" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">

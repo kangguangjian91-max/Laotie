@@ -1,8 +1,9 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { CheckCircle } from "lucide-react";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Thank You",
   description:
     "Thank you for contacting Laotie Steel Structure. We have received your inquiry and will respond within 2 hours.",

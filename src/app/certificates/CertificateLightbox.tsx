@@ -36,6 +36,9 @@ export default function CertificateLightbox({
   return (
     <div 
       className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Certificate image"
       onClick={onClose}
     >
       {/* Close button */}
@@ -70,7 +73,7 @@ export default function CertificateLightbox({
       </button>
 
       {/* Certificate image */}
-      <div className="relative w-full max-w-4xl max-h-[80vh]" onClick={(e) => e.stopPropagation()}>
+      <div className="relative w-full max-w-4xl max-h-[80vh]" onClick={(e) => e.stopPropagation()} tabIndex={-1}>
         <Image
           src={certificates[selectedIndex].image}
           alt={certificates[selectedIndex].title}

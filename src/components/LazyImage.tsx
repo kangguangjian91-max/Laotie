@@ -21,7 +21,6 @@ export default function LazyImage({
   fallbackSrc,
   blurDataURL,
   className = "",
-  onLoadingComplete,
   fill,
   ...props
 }: LazyImageProps) {
@@ -67,11 +66,7 @@ export default function LazyImage({
 
   const handleLoad = useCallback(() => {
     setIsLoaded(true);
-    if (onLoadingComplete) {
-      // Note: Next.js Image onLoadingComplete has different signature
-      // This is a simplified version
-    }
-  }, [onLoadingComplete]);
+  }, []);
 
   return (
     <div ref={containerRef} className={`relative overflow-hidden ${fill ? "w-full h-full" : ""}`}>

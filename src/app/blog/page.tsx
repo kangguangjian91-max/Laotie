@@ -1,9 +1,10 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getAllPosts } from "@/data/blog";
 import { ArrowLeft, Clock, Tag } from "lucide-react";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Blog | Steel Structure Insights & Guides",
   description: "Expert articles on steel structure design, cost, importing from China, certifications, and factory production. Stay informed with Laotie Steel Structure.",
   openGraph: {

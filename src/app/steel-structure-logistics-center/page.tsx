@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
+import Image from "next/image";
 import LandingPageTracker from "@/components/LandingPageTracker";
 import ScrollAnimator from "@/components/ScrollAnimator";
 import CountUp from "@/components/CountUp";
@@ -125,7 +126,7 @@ export default function SteelStructureLogisticsCenter() {
         {/* Hero */}
         <section className="relative bg-steel overflow-hidden">
           <div className="absolute inset-0 opacity-15">
-            <img src="/images/projects/project-dubai-01.webp" alt="Logistics center steel structure" className="w-full h-full object-cover" />
+            <Image src="/images/projects/project-dubai-01.webp" alt="Logistics center steel structure" fill sizes="100vw" className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-steel via-steel/95 to-steel/80" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24">

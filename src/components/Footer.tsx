@@ -16,7 +16,7 @@ export default function Footer() {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-steel-accent to-blue-500 flex items-center justify-center">
                 <span className="text-white font-bold text-xs">LT</span>
               </div>
-              <h3 className="text-white font-bold text-lg">LAOTIE</h3>
+              <p className="font-semibold text-gray-900">LAOTIE</p>
             </div>
             <p className="text-sm leading-relaxed">
               Professional steel structure manufacturer based in Shangqiu, Henan, China.
@@ -225,18 +225,6 @@ export default function Footer() {
             <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
             <a href="/sitemap.xml" className="hover:text-white transition-colors">Sitemap</a>
             <a href="https://steelstructureguide.wordpress.com/" target="_blank" rel="noopener noreferrer" className="hover:text-steel-accent transition-colors">Steel Structure Guide ↗</a>
-            {/* Social — LinkedIn: create company page at linkedin.com/company/laotie-steel-structure, then uncomment below */}
-            {/* <a
-              href="https://www.linkedin.com/company/laotie-steel-structure"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
-              title="Follow us on LinkedIn"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.447 20.452h-3.769v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.369 4.267 5.455v6.286zM5.337 7.433a2.18 2.18 0 01-2.182-2.18c0-1.205.977-2.182 2.182-2.182 1.205 0 2.182.977 2.182 2.182a2.18 2.18 0 01-2.182 2.18zM6.758 20.452H3.918V9h2.84v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-            </a> */}
           </div>
         </div>
       </div>

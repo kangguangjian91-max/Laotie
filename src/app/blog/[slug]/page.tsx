@@ -265,9 +265,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               Get steel structure tips, cost guides, and industry insights delivered to your inbox.
             </p>
             <form
-              action="https://formsubmit.co/kangguangjian91@gmail.com"
+              action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'kangguangjian91@gmail.com'}`}
               method="POST"
               className="max-w-md mx-auto flex gap-2"
+              aria-label="Contact inquiry form"
             >
               <input type="hidden" name="_subject" value="Blog Newsletter Subscription" />
               <input type="hidden" name="_template" value="table" />

@@ -492,8 +492,9 @@ export default function SteelStructurePriceGuide() {
 
             <form
               className="space-y-6 bg-white text-gray-900 p-8 rounded-2xl shadow-lg"
-              action="https://formsubmit.co/kangguangjian91@gmail.com"
+              action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'kangguangjian91@gmail.com'}`}
               method="POST"
+              aria-label="Contact inquiry form"
             >
               <input type="hidden" name="_subject" value="💰 Price Guide Quotation Request — Laotie Steel Website" />
               <input type="hidden" name="_template" value="table" />
