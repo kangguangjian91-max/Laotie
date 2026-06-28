@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: "Steel Structure Blog | Expert Guides & Industry Insights",
     description: "Expert articles on steel structure design, cost, importing from China, certifications, and factory production.",
-    images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
+    images: [{ url: "https://www.laotie-steel.com/images/og-image.webp", width: 1200, height: 630 }],
     url: "https://www.laotie-steel.com/blog",
     type: "website",
   },
@@ -17,7 +17,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Steel Structure Blog | Expert Guides & Industry Insights",
     description: "Expert articles on steel structure design, cost, importing from China, certifications, and factory production.",
-    images: ["/images/og-image.webp"],
+    images: ["https://www.laotie-steel.com/images/og-image.webp"],
   },
 
 

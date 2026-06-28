@@ -250,7 +250,7 @@ All steel warehouse structures are fabricated in our 20,000 sqm factory with 5 p
       "Industrial storage & bulk material warehouses",
       "Cross-dock terminals & transshipment centers",
     ],
-    image: "/images/product-steel-building.webp",
+    image: "/images/factory-building.webp",
     badge: "Most Popular",
     schemaPriceLow: "25",
     schemaPriceHigh: "90",
@@ -300,7 +300,7 @@ Each steel factory building is engineered to your local building code (IBC, Euro
       "Electronics & clean room manufacturing",
       "Pharmaceutical & chemical processing plants",
     ],
-    image: "/images/product-steel-building.webp",
+    image: "/images/factory-building.webp",
     schemaPriceLow: "30",
     schemaPriceHigh: "100",
     faq: [
@@ -349,7 +349,7 @@ Typical workshop projects ship within 20 working days and can be erected by a sm
       "Vehicle garages & fleet maintenance facilities",
       "Community workshops & training centers",
     ],
-    image: "/images/product-steel-building.webp",
+    image: "/images/factory-workshop.webp",
     schemaPriceLow: "20",
     schemaPriceHigh: "65",
     faq: [
@@ -398,7 +398,7 @@ We stock common sizes for immediate delivery and can arrange custom rolling for 
       "General fabrication & heavy machinery",
       "Storage tanks, pipes, and pressure vessels",
     ],
-    image: "/images/product-steel-building.webp",
+    image: "/images/product-cladding.webp",
     schemaPriceLow: "600",
     schemaPriceHigh: "900",
     faq: [
@@ -447,7 +447,7 @@ All purlins are manufactured to precise tolerances on automated roll-forming lin
       "Agricultural sheds & livestock buildings",
       "Solar panel mounting structures",
     ],
-    image: "/images/product-steel-building.webp",
+    image: "/images/product-space-frame.webp",
     badge: "High Demand",
     schemaPriceLow: "800",
     schemaPriceHigh: "1200",
@@ -497,7 +497,7 @@ All units come complete with doors, windows, electrical pre-wiring, and floor fi
       "School classrooms & medical clinics",
       "Export warehouse office annexes",
     ],
-    image: "/images/product-steel-building.webp",
+    image: "/images/product-space-frame.webp",
     schemaPriceLow: "500",
     schemaPriceHigh: "3500",
     faq: [

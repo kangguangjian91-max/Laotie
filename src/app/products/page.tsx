@@ -6,19 +6,19 @@ import { products } from "@/data/products";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata = {
-  title: "Steel Structure Products | Warehouse, Factory, Purlin, Sandwich Panel & More",
+  title: "Steel Structure Products | Laotie Steel",
   description: "CE & ISO certified steel structure products: warehouse buildings, factory buildings, workshops, C&Z purlins, sandwich panels, PPGI, floor deck, space frame, cladding system. 50-year design life.",
   openGraph: {
     title: "Steel Structure Products | Laotie Steel",
     description: "Portal frame buildings, floor deck systems, space frames, and enclosure cladding. CE & ISO certified, factory direct pricing.",
-    images: [{ url: "/images/product-steel-building.webp", width: 800, height: 800 }],
+    images: [{ url: "https://www.laotie-steel.com/images/product-steel-building.webp", width: 800, height: 800 }],
     url: "https://www.laotie-steel.com/products",
   },
   twitter: {
     card: "summary_large_image",
     title: "Steel Structure Products | Laotie Steel",
     description: "Portal frame buildings, floor deck systems, space frames, and enclosure cladding.",
-    images: ["/images/product-steel-building.webp"],
+    images: ["https://www.laotie-steel.com/images/product-steel-building.webp"],
   },
 
 

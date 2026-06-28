@@ -22,7 +22,7 @@ export default function Projects() {
           {featuredProjects.map((project, i) => (
             <a
               key={project.name}
-              href={`/projects#${project.slug || `project-${i + 1}`}`}
+              href="/projects"
               className="group block"
             >
               <div

@@ -7,6 +7,8 @@ import { ArrowLeft, Clock, Tag, Calendar } from "lucide-react";
 import { notFound } from "next/navigation";
 import DOMPurify from "isomorphic-dompurify";
 
+const siteUrl = "https://www.laotie-steel.com";
+
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
 }
@@ -105,7 +107,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: post.description,
       url: `https://www.laotie-steel.com/blog/${post.slug}`,
       siteName: "Laotie Steel Structure",
-      images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
+      images: [{ url: `${siteUrl}/images/og-image.webp`, width: 1200, height: 630 }],
       type: "article",
       publishedTime: post.date,
       authors: ["Laotie Steel Structure Co., Ltd."],
@@ -114,7 +116,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       card: "summary_large_image",
       title: post.title,
       description: post.description,
-      images: ["/images/og-image.webp"],
+      images: [`${siteUrl}/images/og-image.webp`],
     },
     alternates: {
       canonical: `https://www.laotie-steel.com/blog/${post.slug}`,
