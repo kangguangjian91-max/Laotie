@@ -398,7 +398,7 @@ We stock common sizes for immediate delivery and can arrange custom rolling for 
       "General fabrication & heavy machinery",
       "Storage tanks, pipes, and pressure vessels",
     ],
-    image: "/images/product-hr-coil.webp",
+    image: "/images/product-hr-coil-new.webp",
     schemaPriceLow: "600",
     schemaPriceHigh: "900",
     faq: [
