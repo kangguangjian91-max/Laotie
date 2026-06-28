@@ -2,29 +2,12 @@ import { products as productData } from "@/data/products";
 import Image from 'next/image';
 import Link from "next/link";
 
-/* Map slugs to the homepage display format */
-const products = [
-  {
-    ...productData[0],
-    href: `/products/${productData[0].slug}`,
-    desc: "Custom-designed steel factory buildings, warehouses, and workshops.",
-  },
-  {
-    ...productData[1],
-    href: `/products/${productData[1].slug}`,
-    desc: "High-strength profiled steel deck for concrete composite floors.",
-  },
-  {
-    ...productData[2],
-    href: `/products/${productData[2].slug}`,
-    desc: "Lightweight space frame systems for stadiums, airports, and halls.",
-  },
-  {
-    ...productData[3],
-    href: `/products/${productData[3].slug}`,
-    desc: "Insulated sandwich panels and single-skin metal cladding systems.",
-  },
-];
+/* Show all products on the homepage */
+const products = productData.map((p) => ({
+  ...p,
+  href: `/products/${p.slug}`,
+  desc: p.description,
+}));
 
 export default function Products() {
   return (
