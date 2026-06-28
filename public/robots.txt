@@ -17,7 +17,7 @@ Allow: /steel-structure-nigeria
 Allow: /steel-structure-saudi-arabia
 Allow: /steel-structure-logistics-center
 Allow: /steel-structure-price-guide
-Allow: /case-studies
+Allow: /manufacturing-process
 Allow: /images/
 Allow: /sitemap.xml
 
