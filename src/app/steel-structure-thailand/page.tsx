@@ -194,7 +194,7 @@ export default function ThailandLandingPage() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <ScrollAnimator animation="fade-in" delay={0}>
-            <div className="text-center p-6 rounded-xl bg-gray-100+">
+            <div className="text-center p-6 rounded-xl bg-gray-100">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🏭</span>
               </div>
@@ -205,7 +205,7 @@ export default function ThailandLandingPage() {
             </div>
             </ScrollAnimator>
             <ScrollAnimator animation="fade-in" delay={200}>
-            <div className="text-center p-6 rounded-xl bg-gray-100+">
+            <div className="text-center p-6 rounded-xl bg-gray-100">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">✅</span>
               </div>
@@ -216,7 +216,7 @@ export default function ThailandLandingPage() {
             </div>
             </ScrollAnimator>
             <ScrollAnimator animation="fade-in" delay={400}>
-            <div className="text-center p-6 rounded-xl bg-gray-100+">
+            <div className="text-center p-6 rounded-xl bg-gray-100">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">💰</span>
               </div>
@@ -231,7 +231,7 @@ export default function ThailandLandingPage() {
       </section>
 
       {/* Why Thailand */}
-      <section className="py-16 bg-gray-100+">
+      <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Why Steel Structures in Thailand?
@@ -573,7 +573,7 @@ export default function ThailandLandingPage() {
                 "Laotie delivered our Bangkok warehouse on time and on budget. The quality is excellent, and their installation guidance was very helpful."
               </p>
               <div className="font-bold">Somchai T.</div>
-              <div className="text-sm text-gray-100+">Bangkok, Thailand</div>
+              <div className="text-sm text-gray-100">Bangkok, Thailand</div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="flex items-center gap-1 mb-4 text-yellow-400">
@@ -583,7 +583,7 @@ export default function ThailandLandingPage() {
                 "We saved 40% compared to local suppliers. The steel structure is durable and resists humidity well."
               </p>
               <div className="font-bold">Malee S.</div>
-              <div className="text-sm text-gray-100+">Chiang Mai, Thailand</div>
+              <div className="text-sm text-gray-100">Chiang Mai, Thailand</div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="flex items-center gap-1 mb-4 text-yellow-400">
@@ -593,7 +593,7 @@ export default function ThailandLandingPage() {
                 "Professional service from design to installation. Highly recommend Laotie for steel structure projects in Thailand."
               </p>
               <div className="font-bold">Prasert W.</div>
-              <div className="text-sm text-gray-100+">Phuket, Thailand</div>
+              <div className="text-sm text-gray-100">Phuket, Thailand</div>
             </div>
           </div>
         </div>
@@ -608,37 +608,37 @@ export default function ThailandLandingPage() {
             Frequently Asked Questions (Thailand)
           </h2>
           <div className="max-w-3xl mx-auto space-y-6">
-            <details className="p-6 rounded-xl bg-gray-100+ cursor-pointer">
+            <details className="p-6 rounded-xl bg-gray-100 cursor-pointer">
               <summary className="font-bold text-lg">How much does a steel structure warehouse cost in Thailand?</summary>
               <p className="mt-4 text-gray-600">
                 Steel structure warehouse cost in Thailand ranges from THB 12,000 to THB 28,000 per square meter, depending on size, design complexity, and materials. Laotie offers factory-direct pricing at USD 25-65 per sqm.
               </p>
             </details>
-            <details className="p-6 rounded-xl bg-gray-100+ cursor-pointer">
+            <details className="p-6 rounded-xl bg-gray-100 cursor-pointer">
               <summary className="font-bold text-lg">How long does it take to build a steel warehouse in Thailand?</summary>
               <p className="mt-4 text-gray-600">
                 Typical timeline: 4-6 weeks for production in China, 1-2 weeks for shipping to Thailand (Laem Chabang or Bangkok ports), 4-8 weeks for on-site installation. Total: 9-16 weeks from order to completion.
               </p>
             </details>
-            <details className="p-6 rounded-xl bg-gray-100+ cursor-pointer">
+            <details className="p-6 rounded-xl bg-gray-100 cursor-pointer">
               <summary className="font-bold text-lg">Do I need a building permit for steel structure in Thailand?</summary>
               <p className="mt-4 text-gray-600">
                 Yes, you need building permits from your local municipality. Laotie provides all necessary structural calculations, drawings, and certificates to support your permit application.
               </p>
             </details>
-            <details className="p-6 rounded-xl bg-gray-100+ cursor-pointer">
+            <details className="p-6 rounded-xl bg-gray-100 cursor-pointer">
               <summary className="font-bold text-lg">Can steel structures withstand Thailand's climate?</summary>
               <p className="mt-4 text-gray-600">
                 Yes, our steel structures are designed for Thailand's tropical climate. We use hot-dip galvanized steel and anti-corrosion coatings to resist humidity, monsoon rains, and salt air (for coastal areas).
               </p>
             </details>
-            <details className="p-6 rounded-xl bg-gray-100+ cursor-pointer">
+            <details className="p-6 rounded-xl bg-gray-100 cursor-pointer">
               <summary className="font-bold text-lg">Do you provide installation services in Thailand?</summary>
               <p className="mt-4 text-gray-600">
                 Yes, we provide complete installation services. Our team will guide installation via video call, provide detailed manuals, and can dispatch engineers to Thailand if needed (additional cost).
               </p>
             </details>
-            <details className="p-6 rounded-xl bg-gray-100+ cursor-pointer">
+            <details className="p-6 rounded-xl bg-gray-100 cursor-pointer">
               <summary className="font-bold text-lg">What payment terms do you offer for Thailand clients?</summary>
               <p className="mt-4 text-gray-600">
                 We offer flexible payment terms: 30% deposit, 60% before shipment, 10% after installation. We accept T/T, L/C, and can work with Thai banks.
@@ -650,7 +650,7 @@ export default function ThailandLandingPage() {
       </ScrollAnimator>
 
       {/* Contact Form */}
-      <section id="contact" className="py-16 bg-gray-100+">
+      <section id="contact" className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Get Free Quote for Thailand Project
@@ -771,12 +771,12 @@ export default function ThailandLandingPage() {
               <p className="text-gray-600 mb-2">Or contact us directly:</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="https://wa.me/86166100+735555"
+                  href="https://wa.me/8616650735555"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium"
                 >
-                  📱 WhatsApp: +86 166-100+73-5555
+                  📱 WhatsApp: +86 166-5073-5555
                 </a>
                 <a
                   href={process.env.NEXT_PUBLIC_CONTACT_EMAIL_LINK || 'mailto:kangguangjian91@gmail.com'}
@@ -785,7 +785,7 @@ export default function ThailandLandingPage() {
                   ✉️ Email: {process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'kangguangjian91@gmail.com'}
                 </a>
               </div>
-              <p className="text-sm text-gray-100+ mt-4">
+              <p className="text-sm text-gray-100 mt-4">
                 🕐 Response time: Within 2 hours (Mon-Sat, 8:00-18:00 CST/ICT)
               </p>
             </div>
@@ -794,9 +794,9 @@ export default function ThailandLandingPage() {
       </section>
 
       {/* Serving More Countries */}
-      <section className="bg-gray-100+ py-10">
+      <section className="bg-gray-100 py-10">
         <div className="container mx-auto px-4">
-          <p className="text-center text-sm text-gray-100+ mb-4">Also serving:</p>
+          <p className="text-center text-sm text-gray-100 mb-4">Also serving:</p>
           <div className="flex flex-wrap justify-center gap-3">
             <a href="/steel-structure-vietnam" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Vietnam</a>
             <a href="/steel-structure-indonesia" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Indonesia</a>
@@ -838,7 +838,7 @@ export default function ThailandLandingPage() {
             </div>
             <div className="border-t border-gray-800 pt-8 text-sm">
               <p>© {new Date().getFullYear()} Laotie Steel Structure Co., Ltd. All rights reserved.</p>
-              <p className="mt-2 text-gray-100+">
+              <p className="mt-2 text-gray-100">
                 Factory: Shangqiu, Henan, China | Serving clients across Thailand
               </p>
             </div>

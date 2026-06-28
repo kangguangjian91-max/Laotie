@@ -93,6 +93,7 @@ export default function Contact() {
         >
           <input type="hidden" name="_subject" value="Quick Inquiry — Laotie Steel Website" />
           <input type="hidden" name="_captcha" value="true" />
+          <input type="hidden" name="_next" value="https://www.laotie-steel.com/thank-you" />
           <div>
             <label htmlFor="contact-name" className="sr-only">Your Name</label>
             <input

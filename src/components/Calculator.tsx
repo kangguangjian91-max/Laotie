@@ -404,7 +404,7 @@ export default function Calculator() {
     const text = `Steel Structure Estimate - ${bl} in ${ll}: ${length}×${width}×${height}m`;
 
     const links: Record<string, string> = {
-      whatsapp: `https://wa.me/?text=${encodeURIComponent(text + " " + url)}`,
+      whatsapp: `https://wa.me/8616650735555?text=${encodeURIComponent(text + " " + url)}`,
       email: `mailto:?subject=${encodeURIComponent(text)}&body=${encodeURIComponent(`Project Details:%0A- Building: ${bl}%0A- Location: ${ll}%0A- Dimensions: ${length}m × ${width}m × ${height}m%0A- Steel Grade: ${steelGrade}%0A- Cladding: ${claddingType}%0A%0AView full estimate: ${url}`)}`,
       twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent("Get an instant steel structure cost estimate")}&url=${encodeURIComponent(url)}`,
       linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,

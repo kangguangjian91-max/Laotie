@@ -183,7 +183,7 @@ export default function SteelStructureIndonesia() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-gray-100+">
+      <section className="py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-steel mb-12">
             Why Choose Laotie Steel for Indonesia?
@@ -269,7 +269,7 @@ export default function SteelStructureIndonesia() {
       </section>
 
       {/* Logistics & Installation */}
-      <section className="py-16 bg-gray-100+">
+      <section className="py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-steel mb-12">
             Logistics & Installation in Indonesia
@@ -470,7 +470,7 @@ export default function SteelStructureIndonesia() {
       />
 
       {/* Solutions */}
-      <section className="py-16 bg-gray-100+">
+      <section className="py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-steel mb-12">
             Our Solutions for Indonesia
@@ -573,7 +573,7 @@ export default function SteelStructureIndonesia() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-gray-100+">
+      <section className="py-16 bg-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-steel mb-12">
             Frequently Asked Questions (Indonesia)
@@ -767,9 +767,9 @@ export default function SteelStructureIndonesia() {
       </section>
 
       {/* Serving More Countries */}
-      <section className="bg-gray-100+ py-10">
+      <section className="bg-gray-100 py-10">
         <div className="container mx-auto px-4">
-          <p className="text-center text-sm text-gray-100+ mb-4">Also serving:</p>
+          <p className="text-center text-sm text-gray-100 mb-4">Also serving:</p>
           <div className="flex flex-wrap justify-center gap-3">
             <a href="/steel-structure-thailand" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Thailand</a>
             <a href="/steel-structure-vietnam" className="px-4 py-2 bg-white rounded-full text-sm text-gray-700 hover:text-blue-600 hover:shadow-sm border border-gray-200 transition-all">Vietnam</a>

@@ -424,6 +424,8 @@ export default function SteelStructureSaudiArabia() {
               <input type="hidden" name="_subject" value="Saudi Arabia Landing Page Inquiry" />
               <input type="hidden" name="_template" value="table" />
               <input type="text" name="_honey" className="hidden" />
+              <input type="hidden" name="_next" value="https://www.laotie-steel.com/thank-you" />
+              <input type="hidden" name="_captcha" value="true" />
               <input
                 type="text"
                 name="name"
