@@ -72,6 +72,7 @@ export const metadata: Metadata = {
     description: "CE & ISO certified. 15+ years, 30+ countries. Get a quote in 24h.",
     images: ["/images/og-image.webp"],
   },
+  alternates: { canonical: "https://www.laotie-steel.com" },
 };
 
 const localBusinessSchema = {

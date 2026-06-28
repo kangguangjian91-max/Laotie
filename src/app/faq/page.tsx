@@ -155,6 +155,12 @@ export const metadata: Metadata = {
     url: "https://www.laotie-steel.com/faq",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "FAQ | Laotie Steel Structure",
+    description:
+      "Everything you need to know before ordering your steel structure project. Payment terms, production time, shipping, installation support.",
+  },
   alternates: {
     canonical: "https://www.laotie-steel.com/faq",
   },

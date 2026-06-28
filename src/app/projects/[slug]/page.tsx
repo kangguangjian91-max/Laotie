@@ -32,6 +32,11 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
       url: `https://www.laotie-steel.com/projects/${slug}`,
       type: "article",
     },
+    twitter: {
+      card: "summary_large_image",
+      title: project.metaTitle,
+      description: project.metaDescription,
+    },
   };
 }
 

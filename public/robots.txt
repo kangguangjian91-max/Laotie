@@ -26,3 +26,4 @@ Disallow: /privacy
 Disallow: /terms
 
 Sitemap: https://www.laotie-steel.com/sitemap.xml
+Sitemap: https://www.laotie-steel.com/image-sitemap.xml

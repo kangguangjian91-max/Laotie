@@ -18,6 +18,13 @@ export const metadata: Metadata = {
     type: "website",
     images: [{ url: "/images/manufacturing-process/02-cnc-cutting.webp" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Steel Structure Manufacturing Process | Laotie Steel",
+    description:
+      "From raw material to finished steel structure — see our 7-step quality-controlled manufacturing process with real factory photos.",
+    images: ["/images/manufacturing-process/02-cnc-cutting.webp"],
+  },
   alternates: {
     canonical: "https://www.laotie-steel.com/manufacturing-process",
   },

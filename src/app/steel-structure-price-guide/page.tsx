@@ -33,6 +33,12 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Steel Structure Price Guide 2026 | Laotie Steel",
+    description:
+      "Get the latest steel structure price guide. Cost calculator and free quotation within 24 hours.",
+  },
   alternates: { canonical: "https://www.laotie-steel.com/steel-structure-price-guide" },
 };
 
