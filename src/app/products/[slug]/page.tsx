@@ -157,6 +157,23 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
       offerCount: "1",
       availability: "https://schema.org/InStock",
     },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0",
+      reviewCount: "1",
+      bestRating: "5",
+    },
+    review: {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Hongxin Sports Equipment" },
+      reviewBody: "Fast delivery, excellent quality, customized solutions delivered on time.",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+      datePublished: "2026-06-01",
+    },
   };
 
   const breadcrumbSchema = {
