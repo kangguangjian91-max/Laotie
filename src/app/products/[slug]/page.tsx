@@ -228,7 +228,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
                 {/* Specifications Table */}
                 <h2 id="specifications" className="text-2xl font-bold text-steel mt-12 mb-6">Technical Specifications</h2>
-                <div className="border border-gray-200 rounded-xl overflow-hidden">
+                <div className="overflow-x-auto border border-gray-200 rounded-xl">
                   <table className="w-full">
                     <tbody>
                       {product.specifications.map((spec, i) => (

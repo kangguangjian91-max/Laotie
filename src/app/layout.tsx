@@ -123,6 +123,8 @@ export const metadata: Metadata = {
     title: defaultTitle,
     description: defaultDescription,
     images: [ogImage],
+    site: "@laotie_steel",
+    creator: "@laotie_steel",
   },
 };
 
