@@ -9,7 +9,7 @@
 
 // Check if gtag is available
 const isGtagAvailable = () => {
-  return typeof window !== "undefined" && typeof window.gtag === "function";
+  return typeof window !== "undefined" && typeof (window as any).gtag === "function";
 };
 
 // Generic event tracking function
@@ -22,7 +22,7 @@ export const trackEvent = (
     return;
   }
 
-  window.gtag("event", eventName, {
+  (window as any).gtag("event", eventName, {
     ...parameters,
     // Add timestamp for debugging
     event_time: new Date().toISOString(),
