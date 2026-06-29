@@ -17,7 +17,6 @@ PAGES = [
   "/steel-structure-indonesia", "/steel-structure-philippines",
   "/steel-structure-nigeria", "/steel-structure-price-guide",
   "/steel-structure-saudi-arabia", "/steel-structure-logistics-center",
-  "/zh",
 ]
 
 # Add blog slugs
