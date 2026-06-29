@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Steel Structure Cost Calculator 2026 | Free Quote Tool",
   description:
-    "Free steel structure cost calculator 2026. Estimate price per m² by building type, size, crane, and location. Australia, China, Nigeria, Philippines, Vietnam, Thailand, UAE, Indonesia.",
+    "Free steel structure cost calculator 2026. Estimate price per m² by building type, size, crane & location. Australia, Asia, Africa & Middle East.",
   keywords: [
     "steel structure cost calculator",
     "steel building price per m² 2026",

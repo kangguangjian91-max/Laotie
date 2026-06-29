@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Steel Structure Thailand | Warehouse & Factory Construction",
   description:
-    "Leading steel structure manufacturer for Thailand. Custom warehouse, factory, and industrial building solutions. CE certified, 30-year warranty. Get free quote today!",
+    "Leading steel structure manufacturer for Thailand. Custom warehouse, factory, and industrial building solutions. CE certified, 30-year warranty. Free quote.",
   keywords: [
     "steel structure thailand",
     "warehouse construction thailand",

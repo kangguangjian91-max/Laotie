@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Steel Structure Projects | Warehouse, Factory & More",
   description:
-    "Browse our steel structure project portfolio: industrial warehouses, factory buildings, aircraft hangars, and logistics centers delivered to 30+ countries. Get inspired for your next project.",
+    "Browse steel structure projects: warehouses, factories, hangars & logistics centers delivered to 30+ countries. Get inspired for your next build.",
   keywords: [
     "steel structure projects",
     "warehouse construction examples",

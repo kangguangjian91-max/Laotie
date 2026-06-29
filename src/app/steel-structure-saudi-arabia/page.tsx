@@ -12,7 +12,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Steel Structure Saudi Arabia | Factory & Warehouse Manufacturer",
   description:
-    "Leading steel structure manufacturer serving Saudi Arabia. Custom warehouses, factories, and industrial buildings. CE & ISO certified. Free quote within 24 hours.",
+    "Leading steel structure manufacturer serving Saudi Arabia. Custom warehouses, factories, and industrial buildings. CE & ISO certified. Free quote.",
   keywords: [
     "steel structure saudi arabia",
     "warehouse construction saudi arabia",

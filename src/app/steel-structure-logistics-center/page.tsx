@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Steel Structure for Logistics Centers | Warehouse & Distribution Hub",
   description:
-    "Custom steel structures for logistics centers, distribution hubs, and warehouses. Clear spans up to 60m, 15m eave height, crane-ready, fire-rated. CE & ISO certified. Free quote within 24 hours.",
+    "Custom steel structures for logistics centers & distribution hubs. Clear spans up to 60m, 15m eave height, crane-ready, fire-rated. CE & ISO certified. Free quote.",
   keywords: [
     "steel structure for logistics center",
     "warehouse distribution center steel building",

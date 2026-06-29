@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Article Copier - Laotie Steel</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f0f2f5; padding: 20px; color: #333; }
+.container { max-width: 820px; margin: 0 auto; }
+h1 { text-align: center; margin-bottom: 30px; color: #1a1a2e; font-size: 24px; }
+.article-card { background: white; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; }
+.card-title { background: #1a1a2e; color: white; padding: 14px 20px; font-weight: 600; font-size: 15px; }
+.title-row, .content-row { padding: 12px 20px; display: flex; align-items: flex-start; gap: 12px; border-bottom: 1px solid #eee; }
+.title-row { background: #fafafa; }
+.content-row { border-bottom: none; }
+.label { font-size: 12px; font-weight: 700; color: #666; min-width: 40px; padding-top: 4px; }
+.title-text { flex: 1; font-size: 14px; color: #1a1a2e; font-weight: 600; padding: 4px 0; word-break: break-word; }
+.content-text { flex: 1; font-size: 13px; color: #444; line-height: 1.7; white-space: pre-wrap; padding: 4px 0; word-break: break-word; }
+.copy-btn { background: #f97316; color: white; border: none; padding: 6px 14px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; transition: background 0.2s; white-space: nowrap; flex-shrink: 0; }
+.copy-btn:hover { background: #ea580c; }
+.copy-btn.copied { background: #22c55e; }
+.toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #1a1a2e; color: white; padding: 12px 24px; border-radius: 8px; font-size: 14px; opacity: 0; transition: opacity 0.3s; pointer-events: none; z-index: 999; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+.toast.show { opacity: 1; }
+.status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; }
+.pending { background: #f97316; }
+.done { background: #22c55e; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>📋 WordPress 文章（标题 + 内容分开复制）</h1>
+
+  <!-- #4 -->
+  <div class="article-card">
+    <div class="card-title"><span class="status-dot pending"></span>#4 — Prefabricated Steel Warehouse Guide</div>
+    <div class="title-row">
+      <span class="label">标题</span>
+      <span class="title-text" id="t4">Prefabricated Steel Warehouse: Complete Guide to Design & Cost</span>
+      <button class="copy-btn" onclick="doCopy('t4', this)">📋 复制标题</button>
+    </div>
+    <div class="content-row">
+      <span class="label">内容</span>
+      <span class="content-text" id="c4">Prefabricated steel warehouses are the most cost-effective solution for storage, logistics, and industrial facilities. This guide covers everything you need to know.
+
+Standard Warehouse Specifications
+
+Clear span — 18m to 60m
+Eave height — 6m to 15m
+Crane capacity (optional) — 5T to 50T
+Bay spacing — 6m to 9m
+Roof slope — 5% to 15%
+
+Cost Estimate by Size
+500 sqm warehouse: $20,000 to $35,000
+1,000 sqm warehouse: $35,000 to $55,000
+3,000 sqm warehouse: $90,000 to $150,000
+5,000 sqm warehouse: $140,000 to $240,000
+
+Prices vary by local design code, steel grade, and cladding material.
+
+Design Considerations
+Wind load — Critical for coastal areas
+Snow load — Determines roof structure strength
+Fire protection — Passive fireproofing options
+Ventilation — Ridge vents, louvers, or mechanical fans
+
+For professional warehouse design and fabrication, contact Laotie Steel Structure: https://www.laotie-steel.com</span>
+      <button class="copy-btn" onclick="doCopy('c4', this)">📋 复制内容</button>
+    </div>
+  </div>
+
+  <!-- #5 -->
+  <div class="article-card">
+    <div class="card-title"><span class="status-dot pending"></span>#5 — Steel Structure Maintenance Tips</div>
+    <div class="title-row">
+      <span class="label">标题</span>
+      <span class="title-text" id="t5">Steel Structure Maintenance: Essential Tips for Long-Lasting Buildings</span>
+      <button class="copy-btn" onclick="doCopy('t5', this)">📋 复制标题</button>
+    </div>
+    <div class="content-row">
+      <span class="label">内容</span>
+      <span class="content-text" id="c5">Proper maintenance extends the service life of steel buildings to 50+ years. Here's what every owner should know.
+
+Regular Inspection Schedule
+
+Every 6 months:
+- Check for rust spots, especially at joints
+- Inspect roof for leaks or damaged panels
+- Verify bolt tightness on major connections
+
+Every 12 months:
+- Inspect coating condition (paint or galvanization)
+- Check drainage systems (gutters, downpipes)
+- Examine anchor bolts at foundation level
+
+Every 5 years:
+- Professional structural assessment
+- Coating renewal if needed
+- Replace worn sealants and gaskets
+
+Common Issues and Solutions
+
+Surface rust - Humidity exposure - Spot sanding + touch-up paint
+Loose bolts - Vibration/wind - Re-torque to specification
+Panel damage - Impact or storm - Replace damaged section
+Coating fading - UV exposure - Re-coat every 10-15 years
+
+Quality steel structures from reputable manufacturers like Laotie Steel Structure (https://www.laotie-steel.com) require minimal maintenance when properly installed.</span>
+      <button class="copy-btn" onclick="doCopy('c5', this)">📋 复制内容</button>
+    </div>
+  </div>
+
+  <!-- #6 -->
+  <div class="article-card">
+    <div class="card-title"><span class="status-dot pending"></span>#6 — How to Ship Steel Structures Overseas</div>
+    <div class="title-row">
+      <span class="label">标题</span>
+      <span class="title-text" id="t6">How to Ship Steel Structures from China: Logistics & Packaging Guide</span>
+      <button class="copy-btn" onclick="doCopy('t6', this)">📋 复制标题</button>
+    </div>
+    <div class="content-row">
+      <span class="label">内容</span>
+      <span class="content-text" id="c6">Shipping steel structures from China to overseas projects requires careful planning. This guide covers the essential steps.
+
+Shipping Methods
+
+LCL (Less Container) — Best for small projects under 20 tons — Transit 25-40 days — Per CBM
+FCL (Full Container) — Medium projects 20-26 tons per container — Transit 25-40 days — Per container
+Break Bulk — Large projects over 100 tons — Transit 30-50 days — Per ton
+RORO — Heavy machinery + steel — Transit 25-40 days — Per unit
+
+Packaging Standards
+
+1. Steel frame members are bundled with steel straps with wooden spacers between layers
+2. Small parts (bolts, brackets) are sealed in waterproof bags packed in plywood cases
+3. Cladding panels are packed in plywood crates with foam protection
+4. Each bundle is labeled with part number, weight, and installation position
+
+Documentation Required
+- Commercial invoice
+- Packing list
+- Bill of lading
+- Certificate of origin
+- Material test certificates
+- Insurance policy
+
+Laotie Steel Structure (https://www.laotie-steel.com) has shipped 5,000+ tons to 40+ countries with professional export packaging and full documentation support.</span>
+      <button class="copy-btn" onclick="doCopy('c6', this)">📋 复制内容</button>
+    </div>
+  </div>
+
+  <!-- #7 -->
+  <div class="article-card">
+    <div class="card-title"><span class="status-dot pending"></span>#7 — Top 10 Benefits of Steel Structure Buildings</div>
+    <div class="title-row">
+      <span class="label">标题</span>
+      <span class="title-text" id="t7">Top 10 Benefits of Steel Structure Buildings for Industrial Projects</span>
+      <button class="copy-btn" onclick="doCopy('t7', this)">📋 复制标题</button>
+    </div>
+    <div class="content-row">
+      <span class="label">内容</span>
+      <span class="content-text" id="c7">Steel structures have become the preferred choice for industrial buildings worldwide. Here are the top 10 benefits.
+
+1. Fast Construction
+Steel buildings erect 30-50% faster than concrete — no curing time needed.
+
+2. Cost-Effective
+Lower foundation costs, faster labor, and minimal maintenance save money long-term.
+
+3. Design Flexibility
+Clear spans up to 60m without columns for maximum usable space.
+
+4. Durability
+Properly maintained steel structures last 50+ years with minimal issues.
+
+5. Seismic Resistance
+Steel is ductile and absorbs energy during earthquakes.
+
+6. Expandable
+Steel buildings can be easily extended lengthwise or sideways.
+
+7. Sustainable
+100% recyclable material with low construction waste.
+
+8. Quality Control
+Factory fabrication ensures consistent quality regardless of weather.
+
+9. Lower Insurance
+Steel is non-combustible, reducing fire insurance premiums.
+
+10. Faster ROI
+Shorter construction time means earlier operation and quicker returns.
+
+For your next industrial project, get a free quotation from Laotie Steel Structure: https://www.laotie-steel.com</span>
+      <button class="copy-btn" onclick="doCopy('c7', this)">📋 复制内容</button>
+    </div>
+  </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+function doCopy(id, btn) {
+  const text = document.getElementById(id).textContent.trim();
+  navigator.clipboard.writeText(text);
+  const orig = btn.textContent;
+  btn.textContent = '✅ 已复制';
+  btn.classList.add('copied');
+  const toast = document.getElementById('toast');
+  toast.textContent = '✅ ' + (id.startsWith('t') ? '标题' : '内容') + '已复制，去WordPress粘贴！';
+  toast.classList.add('show');
+  setTimeout(() => {
+    btn.textContent = orig;
+    btn.classList.remove('copied');
+    toast.classList.remove('show');
+  }, 2000);
+}
+</script>
+</body>
+</html>

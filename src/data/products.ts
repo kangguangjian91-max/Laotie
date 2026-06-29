@@ -20,7 +20,7 @@ export const products: Product[] = [
     title: "Steel Structure Building",
     subtitle: "Portal Frame / Industrial Warehouse",
     description:
-      "Custom-designed steel portal frame buildings for factories, warehouses, workshops, and logistics centers. Section steel main frame, Z/C purlins, bracing system. Design in accordance with AS/NZS, BS, and Chinese GB standards.",
+      "Custom steel portal frame buildings for factories, warehouses & logistics centers. Section steel main frame, Z/C purlins. AS/NZS, BS & GB standards. CE certified.",
     overview: `Our steel structure buildings are the backbone of modern industrial construction. Using portal frame or truss systems, we deliver clear-span spaces up to 60m without internal columns — maximizing usable floor area for manufacturing, storage, and logistics operations.
 
 Each building is engineered to your local design codes (AS/NZS 1170, BS 5950, EN 1993, or GB 50017) and comes with full calculation reports, fabrication drawings, and erection manuals. Our 5 production lines output 5,000 tons per month, ensuring on-time delivery for projects of any scale.
@@ -70,7 +70,7 @@ A typical 3,000 sqm warehouse structure ships from our factory in 25–35 workin
     title: "Floor Deck / Steel Decking",
     subtitle: "Composite & Galvanized Floor System",
     description:
-      "High-strength profiled steel deck for concrete composite floors. Hot-dip galvanized (Z275), YX75-200-600, YX51-240-720, and custom profiles. Fire resistance up to 2H. Also available: galvanized composite deck (免浇筑承重板) for fast-track construction without wet concrete.",
+      "High-strength profiled steel deck for concrete composite floors. Hot-dip galvanized (Z275), YX profiles, fire resistance up to 2H. Composite & fast-track options available.",
     overview: `Our steel floor deck systems serve as permanent formwork and tensile reinforcement for concrete composite slabs — eliminating the need for timber formwork and reducing on-site labor dramatically. The profiled steel sheet bonds with poured concrete via embossments, creating a strong composite floor diaphragm. Available in hot-dip galvanized (Z275) or galvalume (AZ150) finish.
 
 We stock standard profiles including YX75-200-600 (3W), YX51-240-720, and YX51-305-915, with custom profiles available on request. All decking is manufactured from high-strength galvanized steel coil (G550/G350) and tested to AS/NZS 2327 and BS 5950-4 standards.
@@ -119,7 +119,7 @@ For fast-track projects where traditional concrete pouring is impractical, we al
     title: "Space Frame / Roof Truss",
     subtitle: "Large-Span Structure",
     description:
-      "Lightweight bolt-ball / welded space frame systems for stadiums, airports, exhibition halls, and industrial sheds. Span up to 120m without intermediate columns. PE/PVDF coating, 15-year warranty.",
+      "Lightweight bolt-ball/welded space frame systems for stadiums, airports & exhibition halls. Clear spans up to 120m, no intermediate columns. PE/PVDF coating, 15-year warranty.",
     overview: `Our space frame systems use a three-dimensional truss network of tubular steel members connected by high-strength bolt-ball joints — creating an incredibly light yet stiff structure capable of spanning 120m+ without internal support columns.
 
 Each node is precision-machined and hot-dip galvanized, while members are cut to millimeter accuracy using CNC tube-cutting lines. The system assembles entirely on-site using simple bolted connections — no site welding required. Ideal for stadiums, airport terminals, exhibition halls, and industrial buildings requiring column-free interiors.
@@ -168,7 +168,7 @@ For complex geometries, our engineering team provides 3D BIM models (Tekla / Rev
     title: "Enclosure / Cladding System",
     subtitle: "Wall & Roof Panel Solution",
     description:
-      "Insulated sandwich panels (PU/PIR/EPS) and single-skin metal cladding. 50mm-200mm thickness, fire-rated options. Compatible with steel structure buildings for complete envelope solution.",
+      "Insulated sandwich panels (PU/PIR/EPS) & single-skin metal cladding. 50-200mm thickness, fire-rated. Complete building envelope solution for steel structures.",
     overview: `A steel building is only as good as its envelope. Our cladding systems — including PIR/PU insulated sandwich panels and single-skin profiled sheets — provide thermal insulation, weatherproofing, and architectural finish in one integrated system.
 
 Sandwich panels are manufactured on continuous lamination lines with zero-ODP blowing agents. The double metal skin with injected foam core delivers U-values as low as 0.18 W/m²K, meeting energy codes worldwide. Custom colors, profiles, and fire ratings available.
@@ -217,7 +217,7 @@ For cold storage and food processing projects, we supply PIR-cored panels with f
     title: "Steel Warehouse Building",
     subtitle: "Portal Frame / Clear Span",
     description:
-      "Custom-designed steel warehouse buildings. Clear spans up to 60m, eave heights 6-15m, crane-ready. CE & ISO certified, factory-direct pricing, 30-day delivery.",
+      "Custom steel warehouse buildings with clear spans up to 60m. Eave heights 6-15m, crane-ready. CE & ISO certified, factory-direct pricing, 30-day delivery.",
     overview: `A well-designed steel warehouse is the backbone of efficient logistics and storage operations. Our steel warehouse buildings are engineered for maximum storage density, operational flexibility, and long-term durability — with clear spans up to 60 meters and zero interior columns.
 
 Every steel warehouse is custom-designed to your specific requirements: dimensions, bay spacing, eave height, mezzanine floors, dock doors, and crane systems. We use advanced 3D modeling and FEA analysis to optimize the structural design for your local wind, snow, and seismic conditions.
@@ -267,7 +267,7 @@ All steel warehouse structures are fabricated in our 20,000 sqm factory with 5 p
     title: "Steel Factory Building",
     subtitle: "Multi-Span / Industrial Production Facility",
     description:
-      "Custom steel factory buildings for manufacturing plants, production lines, and industrial facilities. Multi-span design, crane systems, office mezzanine. CE certified, 50-year design life.",
+      "Custom steel factory buildings for manufacturing plants & production lines. Multi-span design, crane systems, office mezzanine. CE certified, 50-year design life.",
     overview: `Modern manufacturing requires factory buildings that are flexible, durable, and cost-effective. Our steel factory buildings are designed for production efficiency — with large uninterrupted floor areas, integrated crane systems, and the ability to accommodate heavy machinery and production lines.
 
 We design multi-span steel structures with column grids optimized for your production layout. Eave heights from 8m to 20m accommodate tall equipment and overhead cranes. Secondary steelwork supports mezzanine offices, HVAC systems, electrical trays, and process piping — all integrated into one coordinated design.
@@ -316,7 +316,7 @@ Each steel factory building is engineered to your local building code (IBC, Euro
     title: "Steel Workshop Building",
     subtitle: "Light Industrial / Maintenance Facility",
     description:
-      "Cost-effective steel workshop buildings for maintenance shops, repair facilities, small-scale manufacturing, and agricultural workshops. Quick delivery, simple erection, budget-friendly pricing.",
+      "Cost-effective steel workshop buildings for maintenance shops, repair facilities & light manufacturing. Quick delivery, simple erection, budget-friendly pricing.",
     overview: `Steel workshop buildings are the most cost-effective solution for light industrial, maintenance, and agricultural applications. Designed for rapid deployment at minimal cost, our steel workshops use standardized components while still offering full customization for your specific needs.
 
 Workshops feature clear spans up to 30m, eave heights from 4m to 10m, and can include overhead cranes up to 10 tons, mezzanine storage, and partitioned office areas. All steelwork is pre-cut, pre-drilled, and pre-coated in our factory — arriving as a complete bolt-together kit ready for erection.
@@ -365,7 +365,7 @@ Typical workshop projects ship within 20 working days and can be erected by a sm
     title: "Hot Rolled Steel Coil & Sheet",
     subtitle: "Steel Coil / Plate / Cut-to-Length / Slit Coil",
     description:
-      "Hot rolled steel coil, plate, and sheet for steel structure fabrication. Available in cut-to-length (开平) and slit coil (纵剪). Q235B, Q355B, S235, S355 grades. Mill direct pricing.",
+      "Hot rolled steel coil, plate & sheet for steel structure fabrication. Cut-to-length & slit coil. Q235B, Q355B, S235, S355 grades. Mill direct pricing with MTC.",
     overview: `Hot rolled steel coil is the foundation material for steel structure fabrication. We supply HR coil and plate in a wide range of grades, thicknesses, and widths — in standard coil form, cut-to-length sheets (开平), or slit coils (纵剪) to your exact width requirements.
 
 All material is sourced directly from major Chinese steel mills with full mill test certificates (MTC EN 10204 3.1). Available grades include Q235B (S235JR equivalent), Q355B (S355JR equivalent), and higher-strength options for specialized applications. Surface options: black (as-rolled), pickled (HRP), or shot-blasted and primed.
@@ -414,7 +414,7 @@ We stock common sizes for immediate delivery and can arrange custom rolling for 
     title: "Galvanized C & Z Purlin",
     subtitle: "Cold-Formed Steel Purlins & Girts",
     description:
-      "Hot-dip galvanized C purlin and Z purlin for steel structure roofs and walls. C80-C300, Z100-Z350. Pre-punched, pre-cut to length. CE certified, mill direct.",
+      "Hot-dip galvanized C & Z purlins for steel roof & wall systems. C80-C300, Z100-Z350. Pre-punched, pre-cut to length. CE certified, mill direct.",
     overview: `C and Z purlins are the backbone of steel building roof and wall systems. Our cold-formed galvanized purlins are roll-formed from high-strength structural steel with hot-dip galvanized coating (Z275 minimum) for long-term corrosion resistance — ideal for industrial, commercial, and agricultural steel buildings.
 
 C purlins are typically used for simple-span applications where lapping is not required, while Z purlins feature sleeved or overlapped connections for continuous-span design — reducing material weight and cost. Both profiles are available with pre-punched holes for swift bolted installation.
@@ -464,7 +464,7 @@ All purlins are manufactured to precise tolerances on automated roll-forming lin
     title: "Prefab House & Container House",
     subtitle: "Temporary / Permanent Modular Building Solution",
     description:
-      "Prefabricated houses, container houses, and flat-pack container houses. Ideal for worker camps, site offices, schools, and emergency housing. Quick assembly, cost-effective. CE certified.",
+      "Prefabricated houses, container houses & flat-pack units for worker camps, site offices & emergency housing. Quick assembly, cost-effective, CE certified.",
     overview: `Our prefabricated housing solutions cover the full range from basic site accommodation to permanent living quarters. Three product lines: prefab panel houses (活动板房), welded container houses (集装箱房), and flat-pack folding container houses (打包箱房) — each designed for different use cases and budget levels.
 
 Activity panel houses (活动板房) are the most economical option — lightweight steel frame with sandwich panel walls and roof, suitable for construction camps and temporary facilities. Container houses (集装箱房) are welded steel box units, stackable, and ideal for longer-term site offices, dormitories, and guard houses. Flat-pack folding houses (打包箱房) collapse for shipping — one 20ft container can carry 2-3 complete units, reducing shipping costs significantly.
@@ -513,7 +513,7 @@ All units come complete with doors, windows, electrical pre-wiring, and floor fi
     title: "PPGI / Color Coated Steel Sheet",
     subtitle: "Pre-Painted Galvanized / Galvalume Steel Coil",
     description:
-      "High-quality PPGI color coated steel sheets for roofing, wall cladding, and building envelopes. PE, SMP, HDP, PVDF coatings. RAL colors, wood grain, stone finishes. Mill direct.",
+      "High-quality PPGI color coated steel sheets for roofing & wall cladding. PE, SMP, HDP, PVDF coatings. RAL colors, wood grain, stone finishes. Mill direct.",
     overview: `PPGI (Pre-Painted Galvanized Iron) is the most widely used material for steel building cladding and roofing. We supply color coated steel coils and sheets with a wide selection of coating systems, colors, and surface finishes — from standard polyester to premium PVDF (Kynar 500) for coastal and architectural applications.
 
 Our PPGI is produced on continuous coating lines with reverse roll-coating technology for uniform film thickness. The substrate is hot-dip galvanized (GI) or galvalume (GL/AZ) steel, with chemical pretreatment and primer layers before the topcoat application. This multi-layer system delivers excellent adhesion, corrosion resistance, and color retention.
@@ -561,7 +561,7 @@ Available in coil form (for roll-forming cladding profiles) or cut-to-length she
     title: "FRP Skylight / Translucent Roofing Sheet",
     subtitle: "Fiberglass Reinforced Plastic Daylight Panel",
     description:
-      "FRP skylight sheets for natural daylighting in steel buildings. Compatible with all major cladding profiles. UV-stable, impact-resistant, 20-year weather warranty. Custom lengths.",
+      "FRP skylight sheets for natural daylighting in steel buildings. Compatible with all major cladding profiles. UV-stable, impact-resistant, 20-year warranty.",
     overview: `FRP (Fiberglass Reinforced Plastic) skylight sheets are designed to match standard metal roofing and wall cladding profiles, providing natural daylight while maintaining the building envelope. Installing FRP skylights can reduce daytime lighting energy consumption by 30-50% in warehouse and factory buildings.
 
 Our FRP sheets are manufactured from UV-stabilized polyester resin reinforced with E-glass fiber. The surface is protected with a UV-resistant gel coat (40μm minimum) that prevents yellowing and maintains light transmission for 20+ years. Light transmission rates: 65-80% (standard), 50-60% (diffused), 85%+ (water-clear).
@@ -610,7 +610,7 @@ Available to match all common cladding profiles: corrugated, trapezoidal, and bo
     title: "Insulated Sandwich Panel System",
     subtitle: "Rock Wool / PUR / PIR / EPS Fire-Rated Panel",
     description:
-      "Complete insulated sandwich panel range: rock wool (A-grade fire), PIR/PU, EPS, and PUR edge-sealed rock wool. 50-200mm thickness for cold storage, factories, and clean rooms. CE certified.",
+      "Complete insulated sandwich panel range: rock wool (A-grade fire), PIR/PU, EPS & PUR edge-sealed rock wool. 50-200mm for cold storage & factories. CE certified.",
     overview: `Our insulated sandwich panel range covers every fire rating, thermal performance, and budget requirement. Four core types available: rock wool (mineral fiber, A-grade non-combustible), PIR/PU (polyisocyanurate/polyurethane, best thermal efficiency), PUR edge-sealed rock wool (fire-rated edges with foam core), and EPS (economical option for dry applications).
 
 Rock wool sandwich panels are the preferred choice for fire-rated applications — achieving A-grade non-combustibility with fire resistance up to 2 hours. PUR edge-sealed rock wool panels combine the fire safety of rock wool at the panel joints with the thermal efficiency of polyurethane foam in the core area. PIR panels deliver the highest R-value per thickness, making them ideal for cold storage and temperature-controlled environments.

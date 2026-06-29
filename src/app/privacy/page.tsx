@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy Policy for Laotie Steel Structure website. Learn how we collect, use, and protect your personal data (GDPR & CCPA compliant). Contact: kangguangjian91@gmail.com.",
+    "Privacy Policy for Laotie Steel Structure. How we collect, use & protect your personal data (GDPR & CCPA compliant). Contact us for details.",
   openGraph: {
     title: "Privacy Policy | Laotie Steel Structure",
     description:

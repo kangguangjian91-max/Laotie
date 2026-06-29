@@ -8,7 +8,7 @@ import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Steel Structure Products | Laotie Steel",
-  description: "CE & ISO certified steel structure products: warehouse buildings, factory buildings, workshops, C&Z purlins, sandwich panels, PPGI, floor deck, space frame, cladding system. 50-year design life.",
+  description: "CE & ISO certified steel structure products: warehouse buildings, factory buildings, floor deck, space frame, cladding, purlins & sandwich panels. 50-year design life.",
   openGraph: {
     title: "Steel Structure Products | Laotie Steel",
     description: "Portal frame buildings, floor deck systems, space frames, and enclosure cladding. CE & ISO certified, factory direct pricing.",

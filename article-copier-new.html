@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Article Copier - Laotie Steel Structure</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f0f2f5; padding: 20px; color: #333; }
+.container { max-width: 860px; margin: 0 auto; }
+h1 { text-align: center; margin-bottom: 30px; color: #1a1a2e; font-size: 24px; }
+h2 { font-size: 16px; color: #1a1a2e; margin: 16px 0 8px; }
+.article-card { background: white; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; }
+.card-title { background: #1a1a2e; color: white; padding: 14px 20px; font-weight: 600; font-size: 15px; }
+.title-row, .content-row { padding: 12px 20px; display: flex; align-items: flex-start; gap: 12px; border-bottom: 1px solid #eee; }
+.title-row { background: #fafafa; }
+.content-row { border-bottom: none; flex-direction: column; }
+.label { font-size: 12px; font-weight: 700; color: #666; min-width: 40px; padding-top: 4px; }
+.title-text { flex: 1; font-size: 14px; color: #1a1a2e; font-weight: 600; padding: 4px 0; word-break: break-word; }
+.content-text { flex: 1; font-size: 13px; color: #444; line-height: 1.7; white-space: pre-wrap; padding: 4px 0; word-break: break-word; width: 100%; }
+.copy-btn { background: #f97316; color: white; border: none; padding: 6px 14px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; transition: background 0.2s; white-space: nowrap; flex-shrink: 0; }
+.copy-btn:hover { background: #ea580c; }
+.copy-btn.copied { background: #22c55e; }
+.btn-row { display: flex; justify-content: flex-end; margin-bottom: 8px; }
+.toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #1a1a2e; color: white; padding: 12px 24px; border-radius: 8px; font-size: 14px; opacity: 0; transition: opacity 0.3s; pointer-events: none; z-index: 999; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+.toast.show { opacity: 1; }
+.instructions { background: #e8f5e9; border: 1px solid #c8e6c9; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; font-size: 14px; line-height: 1.6; color: #2e7d32; }
+.instructions strong { color: #1b5e20; }
+.instructions ol { margin-left: 20px; margin-top: 6px; }
+.instructions li { margin-bottom: 4px; }
+.status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; }
+.topic-1 { background: #22c55e; }
+.topic-2 { background: #f97316; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>📋 WordPress Article Copier — steelstructureguide.wordpress.com</h1>
+
+  <div class="instructions">
+    <strong>📌 How to publish:</strong>
+    <ol>
+      <li>Click <strong>"Copy Title"</strong> → Go to WordPress editor → <strong>Paste the title</strong></li>
+      <li>Click <strong>"Copy Content"</strong> → Go to WordPress editor → <strong>Paste the body text</strong></li>
+      <li>Add a featured image, set category, and click <strong>Publish</strong></li>
+    </ol>
+  </div>
+
+  <!-- #1 — Steel Structure for Cold Storage Warehouses (already published) -->
+  <div class="article-card">
+    <div class="card-title"><span class="status-dot topic-1"></span>#1 — Steel Structure for Cold Storage Warehouses <span style="font-weight:400;font-size:12px;opacity:0.7;">(published)</span></div>
+    <div class="title-row">
+      <span class="label">Title</span>
+      <span class="title-text" id="t1">Steel Structure for Cold Storage Warehouses: Design, Insulation & Cost Guide</span>
+      <button class="copy-btn" onclick="doCopy('t1', this)">📋 Copy Title</button>
+    </div>
+    <div class="content-row">
+      <div class="btn-row"><button class="copy-btn" onclick="doCopy('c1', this)">📋 Copy Content</button></div>
+      <span class="content-text" id="c1">Cold storage warehouses require specialized structural design to maintain precise temperature control while supporting heavy refrigeration equipment and insulated panels. Steel structures are the preferred choice for these facilities due to their clear-span capability, thermal break compatibility, and fast construction timeline.
+
+Key Design Considerations for Cold Storage Steel Buildings
+
+1. Thermal Bridge Prevention
+Thermal bridging is the #1 enemy of cold storage. Steel is a highly conductive material, so all structural penetrations must include thermal break elements. Common solutions include:
+- Fiberglass-reinforced plastic (FRP) thermal break pads between steel columns and foundation
+- Thermally isolated purlin and girt connections
+- Insulated sandwich panel systems with factory-sealed joints
+- Double-sealed vapor barriers at all panel junctions
+
+2. Insulation Requirements
+Cold storage insulation is measured by its U-value (thermal transmittance). Typical requirements by temperature range:
+
+Storage Type | Target Temp | Recommended Insulation | U-Value Target
+Cool Storage | 0°C to 10°C | 100-150mm PIR panel | ≤0.30 W/m²K
+Freezer | -18°C to 0°C | 150-200mm PIR panel | ≤0.20 W/m²K
+Deep Freeze | -30°C to -18°C | 200-250mm PIR/PU panel | ≤0.15 W/m²K
+
+PIR (polyisocyanurate) and PU (polyurethane) sandwich panels are the industry standard, offering excellent fire resistance combined with superior thermal performance.
+
+3. Structural Steel Specifications
+Cold storage buildings typically use:
+- Primary frame: Q355B or higher-grade structural steel with heavy-duty corrosion protection
+- Column spacing: 6m to 12m depending on pallet racking layout
+- Clear height: 8m to 15m to accommodate multi-level racking systems
+- Roof slope: Minimum 3% for condensation drainage
+- Floor slab: Reinforced concrete with integral vapor barrier and heating elements to prevent frost heave
+
+4. Refrigeration Load & Building Envelope
+The steel structure must minimize air infiltration to reduce refrigeration load. Key envelope features include:
+- High-speed rapid doors at loading bays (open/close in under 3 seconds)
+- Dock levelers with insulated seals
+- Pressure relief vents to balance air exchange during door operation
+- Continuous vapor barrier on the warm side of the insulation
+
+5. Foundation Considerations
+Cold storage foundations must address frost heave — the upward expansion of frozen ground. Solutions include:
+- Heated slab systems with embedded hydronic or electric heating
+- Insulated perimeter foundations extending below frost line
+- Ventilated crawl spaces for freezer buildings
+- Geothermal heat exchange loops under floor slabs
+
+Cost Estimate
+
+Cold storage steel buildings cost 30-50% more than standard warehouses due to insulation, vapor barriers, and specialized equipment:
+
+Small cold store (500 sqm, 0°C): $45,000-$70,000
+Medium freezer (1,500 sqm, -18°C): $120,000-$180,000
+Large deep freeze (3,000 sqm, -25°C): $280,000-$400,000
+
+Prices vary by insulation grade, refrigeration system, and local labor costs.
+
+For professional cold storage steel structure design and fabrication, visit:
+Visit Laotie Steel Structure: https://www.laotie-steel.com</span>
+    </div>
+  </div>
+
+  <!-- #2 — Portal Frame vs Truss Structure Comparison (current) -->
+  <div class="article-card">
+    <div class="card-title"><span class="status-dot topic-2"></span>#2 — Portal Frame vs Truss Structure Comparison <span style="font-weight:400;font-size:12px;opacity:0.7;">(current)</span></div>
+    <div class="title-row">
+      <span class="label">Title</span>
+      <span class="title-text" id="t2">Portal Frame vs Truss Structure: Key Differences for Steel Building Design</span>
+      <button class="copy-btn" onclick="doCopy('t2', this)">📋 Copy Title</button>
+    </div>
+    <div class="content-row">
+      <div class="btn-row"><button class="copy-btn" onclick="doCopy('c2', this)">📋 Copy Content</button></div>
+      <span class="content-text" id="c2">Choosing between a portal frame and a truss structure is one of the most important decisions in steel building design. Each system has distinct advantages depending on span length, load requirements, budget, and intended use. This guide breaks down the key differences to help you make the right choice.
+
+What Is a Portal Frame?
+
+A portal frame is a rigid steel structure consisting of columns and rafters connected by moment-resisting joints. The frame transfers loads through rigid connections, creating a self-stable system without requiring bracing. Portal frames are the most common structural system for single-story industrial buildings worldwide.
+
+Typical applications:
+- Warehouses and distribution centers
+- Factory and workshop buildings
+- Aircraft hangars
+- Agricultural buildings (barns, livestock shelters)
+- Retail warehouses and showrooms
+
+Span range: 12m to 60m (most common: 18m-36m)
+Eave height: 4m to 20m
+Frame spacing: 6m to 9m
+
+What Is a Truss Structure?
+
+A truss structure uses a network of interconnected triangular elements to distribute loads. The triangular geometry ensures that each member primarily carries axial tension or compression, making trusses exceptionally efficient for long-span applications. Trusses can be used as roof structures, bridges, or tower frameworks.
+
+Typical applications:
+- Large-span roofs (stadiums, exhibition halls, convention centers)
+- Airport terminals and railway stations
+- Heavy industrial buildings with overhead cranes
+- Bridges and gantry structures
+- Dome and curved-roof structures
+
+Span range: 20m to 100m+ (trusses excel beyond 40m)
+Eave height: 6m to 30m+
+Frame spacing: 6m to 18m
+
+Portal Frame vs Truss Structure: Comparison Table
+
+Aspect | Portal Frame | Truss Structure
+Structural principle | Rigid moment-resisting connections | Triangular truss network (axial forces)
+Load transfer | Bending moments in columns and rafters | Axial tension/compression in members
+Span capability | 12m-60m (economic: 18m-36m) | 20m-100m+ (economic: 30m-80m)
+Steel consumption (per sqm) | 25-40 kg/m² (18-30m span) | 35-55 kg/m² (30-50m span)
+Fabrication complexity | Moderate — standardized connections | High — more welded/cut joints
+Erection speed | Fast — fewer components to assemble | Slow — many individual members
+Internal clear space | Excellent — no diagonal bracing inside | Moderate — web members may obstruct
+Crane compatibility | Good (up to 20-ton single girder) | Excellent (30-ton+ EOT cranes)
+Roof versatility | Single/multi-span, minimal slope | Curved, domed, sawtooth, complex shapes
+Maintenance cost | Lower — simpler connections | Higher — more joints to inspect
+Initial cost (per sqm) | $30-$65 | $50-$100
+
+When to Choose Portal Frame
+
+Portal frames are the better choice when:
+- You need fast construction — fewer components mean faster erection
+- Clear internal space is critical — no diagonal members to interfere with racking or workflow
+- Budget is a primary concern — portal frames are 20-40% cheaper per square meter for standard spans
+- Your span is under 40m — within this range, portal frames offer the best cost-to-performance ratio
+- The building is single-story with simple roof geometry — portal frames are optimized for rectangular layouts
+
+When to Choose Truss Structure
+
+Truss structures are superior when:
+- Your building requires very long spans (40m+) — trusses efficiently handle spans beyond portal frame limits
+- Heavy overhead cranes are needed — trusses can support 30-ton+ EOT cranes with less deflection
+- You need complex or curved roof shapes — trusses adapt to domes, arches, and irregular profiles
+- Large point loads are expected — truss members distribute concentrated loads more effectively
+- Esthetic architectural design matters — exposed trusses create striking visual patterns
+
+Hybrid Approach: Combining Both Systems
+
+Many modern steel buildings use a hybrid approach — trusses for the roof structure supported by portal frame columns. This combines the span efficiency of trusses with the simplicity and cost-effectiveness of portal columns.
+
+Example: A 50m-wide warehouse with mezzanine office space might use:
+- Roof: Truss system spanning 50m with pipe-truss or lattice-truss design
+- Columns: Portal frame columns with moment-resisting bases
+- Bracing: Cross-bracing in the vertical plane for wind load resistance
+
+This hybrid design reduces steel weight by 10-15% compared to a pure truss solution while maintaining the long-span capability.
+
+Cost Comparison Summary
+
+Span 20m: Portal frame $35/m² — Truss $50/m² → Portal saves 30%
+Span 30m: Portal frame $45/m² — Truss $65/m² → Portal saves 31%
+Span 40m: Portal frame $60/m² — Truss $75/m² → Portal saves 20%
+Span 50m: Portal frame impracticable — Truss $85/m²
+
+For spans under 40m, portal frames are clearly more economical. Above 40m, trusses become the only viable option, and their efficiency improves as spans approach 60-80m.
+
+Conclusion
+
+Both portal frames and truss structures have their place in steel construction. For standard industrial and commercial buildings under 40m span, portal frames deliver the best value with faster construction. For long-span facilities, heavy crane loads, or complex roof geometries, truss structures are indispensable.
+
+No matter which system you choose, working with an experienced steel structure manufacturer ensures your building is designed and fabricated to the highest standards.
+
+Visit Laotie Steel Structure: https://www.laotie-steel.com</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+function doCopy(id, btn) {
+  const text = document.getElementById(id).textContent.trim();
+  navigator.clipboard.writeText(text).catch(function(err) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+  });
+  const orig = btn.textContent;
+  btn.textContent = '✅ Copied!';
+  btn.classList.add('copied');
+  const toast = document.getElementById('toast');
+  toast.textContent = '✅ ' + (id.startsWith('t') ? 'Title' : 'Content') + ' copied! Go paste it in WordPress.';
+  toast.classList.add('show');
+  setTimeout(() => {
+    btn.textContent = orig;
+    btn.classList.remove('copied');
+    toast.classList.remove('show');
+  }, 2000);
+}
+</script>
+</body>
+</html>
