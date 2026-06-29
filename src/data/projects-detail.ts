@@ -1539,7 +1539,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
     metaTitle:
       "Yunda Bozhou Modern Industrial Park | 50,000 sqm Logistics Hub | Laotie Steel",
     metaDescription:
-      "Large-scale steel structure industrial park in Bozhou, Anhui. 50,000 sqm logistics distribution center with multi-span portal frame design. Get a quote for industrial park projects.",
+      "Large-scale steel structure industrial park in Bozhou, Anhui. 50,000 sqm logistics center with multi-span portal frame design. Get a quote.",
     urlSlug: "/projects/yunda-bozhou-modern-industrial-park",
     image: "/images/projects/yunda-bozhou/yunda-02.webp",
     h1: "50,000 sqm Yunda Bozhou Modern Industrial Park — Phase II Logistics Distribution Center",

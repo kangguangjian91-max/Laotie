@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: defaultTitle,
-    template: `%s | ${siteName}`,
+    template: `%s - Laotie Steel`,
   },
   description: defaultDescription,
   keywords: [

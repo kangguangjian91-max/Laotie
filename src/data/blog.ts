@@ -12,7 +12,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "steel-structure-maintenance-guide-lifespan-corrosion",
     title: "Steel Structure Maintenance: Extend Lifespan to 50+ Years",
-    description: "Learn how to maintain steel structures for maximum lifespan. Annual inspection checklists, corrosion prevention, coating repair, and maintenance schedules for warehouses and factories.",
+    description: "Learn to maintain steel structures for max lifespan. Annual inspection checklists, corrosion prevention, coating repair, and maintenance schedules for warehouses.",
     date: "2026-06-10",
     category: "Maintenance",
     readTime: "8 min read",
@@ -171,7 +171,7 @@ The best maintenance program starts with a well-built structure. Our factory in 
   {
     slug: "steel-structure-processing-techniques-cnc-welding-guide",
     title: "Steel Structure CNC Cutting, Welding & Treatment Guide",
-    description: "Master steel structure processing techniques including CNC plasma cutting, submerged arc welding, shot blasting, and surface treatment. Learn how Chinese factories achieve precision fabrication.",
+    description: "Master steel structure processing: CNC plasma cutting, submerged arc welding, shot blasting, and surface treatment. How Chinese factories achieve precision fabrication.",
     date: "2026-06-10",
     category: "Manufacturing",
     readTime: "7 min read",
@@ -303,7 +303,7 @@ Whether you're building a 500m² warehouse or a 10,000m² factory complex, proce
   {
     slug: "steel-structure-production-china-manufacturing-guide",
     title: "Steel Structure Production in China: A Manufacturing Guide",
-    description: "Learn how Chinese steel structure manufacturers produce high-quality steel buildings at competitive prices. Discover the production process, quality standards, and why China leads global steel structure manufacturing.",
+    description: "How Chinese manufacturers produce quality steel buildings at competitive prices. Production process, quality standards, and why China leads steel structure manufacturing.",
     date: "2026-06-07",
     category: "Manufacturing",
     readTime: "7 min read",
@@ -987,7 +987,7 @@ Contact Laotie Steel Structure today to schedule your virtual factory tour.`,
   {
     slug: "how-to-import-steel-structures-from-china-complete-guide",
     title: "How to Import Steel Structures from China: Guide 2026",
-    description: "Step-by-step guide to importing steel structures from China. Find reliable suppliers, understand pricing, navigate shipping and customs, and avoid common pitfalls. Updated for 2026.",
+    description: "Step-by-step guide to importing steel structures from China. Find reliable suppliers, understand pricing, navigate shipping & customs. Updated for 2026.",
     date: "2026-06-21",
     category: "Buying Guide",
     readTime: "10 min read",
@@ -2225,7 +2225,7 @@ Contact us today:
   {
     slug: "steel-structure-cost-saudi-arabia-2026",
     title: "Steel Structure Cost in Saudi Arabia 2026: A Complete Guide",
-    description: "Complete guide to steel structure costs in Saudi Arabia 2026. Get FOB prices from China, shipping to Dammam & Jeddah, import duties, installation costs, and total turnkey pricing.",
+    description: "Guide to steel structure costs in Saudi Arabia 2026. FOB prices from China, shipping to Dammam & Jeddah, import duties, installation costs & turnkey pricing.",
     date: "2026-06-25",
     category: "Cost & Pricing",
     readTime: "9 min read",

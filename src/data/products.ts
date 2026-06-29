@@ -70,7 +70,7 @@ A typical 3,000 sqm warehouse structure ships from our factory in 25–35 workin
     title: "Floor Deck / Steel Decking",
     subtitle: "Composite & Galvanized Floor System",
     description:
-      "High-strength profiled steel deck for concrete composite floors. Hot-dip galvanized (Z275), YX profiles, fire resistance up to 2H. Composite & fast-track options available.",
+      "Profiled steel deck for concrete composite floors. Hot-dip galvanized (Z275), YX profiles, fire resistance up to 2H. Composite & fast-track options available.",
     overview: `Our steel floor deck systems serve as permanent formwork and tensile reinforcement for concrete composite slabs — eliminating the need for timber formwork and reducing on-site labor dramatically. The profiled steel sheet bonds with poured concrete via embossments, creating a strong composite floor diaphragm. Available in hot-dip galvanized (Z275) or galvalume (AZ150) finish.
 
 We stock standard profiles including YX75-200-600 (3W), YX51-240-720, and YX51-305-915, with custom profiles available on request. All decking is manufactured from high-strength galvanized steel coil (G550/G350) and tested to AS/NZS 2327 and BS 5950-4 standards.
@@ -119,7 +119,7 @@ For fast-track projects where traditional concrete pouring is impractical, we al
     title: "Space Frame / Roof Truss",
     subtitle: "Large-Span Structure",
     description:
-      "Lightweight bolt-ball/welded space frame systems for stadiums, airports & exhibition halls. Clear spans up to 120m, no intermediate columns. PE/PVDF coating, 15-year warranty.",
+      "Bolt-ball/welded space frames for stadiums, airports & exhibition halls. Spans up to 120m, no interior columns. PE/PVDF coating, 15-year warranty.",
     overview: `Our space frame systems use a three-dimensional truss network of tubular steel members connected by high-strength bolt-ball joints — creating an incredibly light yet stiff structure capable of spanning 120m+ without internal support columns.
 
 Each node is precision-machined and hot-dip galvanized, while members are cut to millimeter accuracy using CNC tube-cutting lines. The system assembles entirely on-site using simple bolted connections — no site welding required. Ideal for stadiums, airport terminals, exhibition halls, and industrial buildings requiring column-free interiors.
