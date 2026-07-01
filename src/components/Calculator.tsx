@@ -364,7 +364,10 @@ export default function Calculator() {
     installDays: number;
   } | null>(null);
 
-  const calc = useCallback(() => {
+  const prevCalcKey = useRef("");
+
+  // Auto-calculate whenever any input changes
+  useEffect(() => {
     const L = Number(length) || 0;
     const W = Number(width) || 0;
     const H = Number(height) || 0;
@@ -407,6 +410,8 @@ export default function Calculator() {
       ? 0
       : (Math.ceil(area / 500) + cfg.installDaysBase) * Math.ceil(Q / 2);
 
+    shareUrlRef.current = "";
+
     setResult({
       area, steelTons, totalSteelTons, quantity: Q, containers,
       costSteel, costRoof, costWall, costShipping,
@@ -416,8 +421,10 @@ export default function Calculator() {
       shipDays: cfg.shipDays, installDays,
     });
 
-    // GA4 event tracking
-    if (typeof window !== "undefined" && "gtag" in window) {
+    // GA4 event tracking (throttle: same inputs = skip)
+    const calcKey = `${buildingType}|${location}|${L}|${W}|${H}|${crane}|${steelGrade}|${claddingType}|${mezzanineArea}|${Q}|${spanType}|${supplyOnly}`;
+    if (calcKey !== prevCalcKey.current && typeof window !== "undefined" && "gtag" in window) {
+      prevCalcKey.current = calcKey;
       const gtag = (window as any).gtag;
       if (typeof gtag === "function") {
         gtag("event", "calculator_estimate", {
@@ -429,12 +436,7 @@ export default function Calculator() {
         });
       }
     }
-  }, [buildingType, length, width, height, crane, location, steelGrade, claddingType, mezzanineArea, quantity, spanType, supplyOnly]);
 
-  // Auto-calculate on mount and when any input changes
-  useEffect(() => {
-    shareUrlRef.current = "";
-    calc();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [buildingType, length, width, height, crane, location, steelGrade, claddingType, mezzanineArea, quantity, spanType, supplyOnly]);
 
