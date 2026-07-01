@@ -6,6 +6,16 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact Steel Structure Manufacturer | Laotie Steel",
+  keywords: [
+    "contact steel manufacturer",
+    "steel structure quote",
+    "steel building inquiry",
+    "get steel structure price",
+    "steel warehouse quotation",
+    "China steel factory contact",
+    "steel structure supplier contact",
+    "steel building estimate",
+  ],
   description:
     "Contact Laotie Steel for steel structure design, fabrication, and installation. WhatsApp: +86 166 5073 5555. Get a free quote within 24 hours.",
   openGraph: {

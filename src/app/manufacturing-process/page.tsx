@@ -8,6 +8,18 @@ import DOMPurify from "isomorphic-dompurify";
 
 export const metadata: Metadata = {
   title: "Steel Structure Manufacturing: 7-Step Quality Control",
+  keywords: [
+    "steel structure manufacturing",
+    "steel fabrication process",
+    "steel structure factory China",
+    "steel building production",
+    "CNC steel cutting",
+    "steel welding process",
+    "shot blasting steel",
+    "steel structure quality control",
+    "steel surface treatment",
+    "steel structure packaging shipping",
+  ],
   description:
     "Laotie Steel's 7-step manufacturing process: material inspection, CNC cutting, welding, surface treatment, and packaging. ISO 9001 certified quality management.",
   openGraph: {

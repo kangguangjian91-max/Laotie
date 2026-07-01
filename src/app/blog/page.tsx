@@ -6,6 +6,17 @@ import { ArrowLeft, Clock, Tag } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Blog | Steel Structure Insights & Guides",
+  keywords: [
+    "steel structure blog",
+    "steel building guide",
+    "steel construction articles",
+    "steel structure design guide",
+    "import steel building blog",
+    "steel warehouse blog",
+    "steel fabrication guide",
+    "prefab steel building tips",
+    "steel structure industry insights",
+  ],
   description: "Expert articles on steel structure design, cost, importing from China, certifications, and factory production. Stay informed with Laotie Steel Structure.",
   openGraph: {
     title: "Steel Structure Blog | Expert Guides & Industry Insights",

@@ -146,6 +146,18 @@ const faqs = [
 
 export const metadata: Metadata = {
   title: "Steel Structure FAQ | Pricing, Production & Shipping",
+  keywords: [
+    "steel structure FAQ",
+    "steel building cost questions",
+    "steel structure pricing FAQ",
+    "steel warehouse price FAQ",
+    "import steel structure from China",
+    "steel building shipping cost",
+    "prefab building FAQ",
+    "steel structure lead time",
+    "steel building payment terms",
+    "steel structure warranty",
+  ],
   description:
     "FAQs on steel structure pricing, payment, production time, shipping, installation, and warranty. Get answers before you order.",
   openGraph: {

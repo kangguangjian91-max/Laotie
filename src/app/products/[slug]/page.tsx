@@ -25,6 +25,14 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   return {
     title: product.title,
     description: product.description,
+    keywords: [
+      product.title.toLowerCase(),
+      "steel structure",
+      "laotie steel",
+      "prefab steel building",
+      "steel structure manufacturer China",
+      "CE certified steel",
+    ],
       openGraph: {
       title: `${product.title} — Laotie Steel Structure`,
       description: product.description,

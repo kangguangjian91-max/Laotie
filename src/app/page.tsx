@@ -51,6 +51,18 @@ const Contact = dynamic(() => import("@/components/Contact"));
 
 export const metadata: Metadata = {
   title: "Steel Structure Manufacturer in China | Laotie Steel",
+  keywords: [
+    "steel structure manufacturer China",
+    "steel building manufacturer",
+    "prefabricated steel structures",
+    "steel structure factory",
+    "portal frame manufacturer",
+    "steel warehouse manufacturer",
+    "pre engineered steel buildings",
+    "steel construction company China",
+    "steel frame building supplier",
+    "industrial steel buildings",
+  ],
   description:
     "Leading steel structure manufacturer in China. 5 production lines, 5,000T/month capacity. Portal frames, floor decks, space frames. Get a free quote today.",
   openGraph: {

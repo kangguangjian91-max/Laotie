@@ -66,6 +66,17 @@ const factoryImages = [
 
 export const metadata: Metadata = {
   title: "About Laotie Steel Structure | CE & ISO Certified Factory",
+  keywords: [
+    "steel structure company China",
+    "steel fabrication factory",
+    "CE certified steel manufacturer",
+    "EN 1090 steel fabricator",
+    "ISO 9001 steel factory",
+    "steel structure fabrication China",
+    "steel manufacturing company",
+    "China steel structure exporter",
+    "prefab steel building factory",
+  ],
   description: "Trusted steel manufacturer in Shangqiu, China since 2009. 5 production lines, 5,000T/month capacity, 200+ skilled workers, 30+ countries served.",
   openGraph: {
     title: "About Laotie Steel Structure | CE & ISO Certified Factory",
