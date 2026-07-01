@@ -1,17 +1,14 @@
 export default function Hero() {
-  // Replace with your actual factory/project video URL
-  // 👇 Replace this YouTube ID with your factory tour / project showcase video
-  // Recommended: factory production line tour, completed project reel, or 3D steel building walkthrough
   const videoId = "XQZuDgAT8JA";
 
   return (
     <section id="home" className="relative overflow-hidden min-h-[680px] sm:min-h-[720px] lg:min-h-[780px] flex items-center" style={{ background: 'linear-gradient(135deg, #0a1628 0%, #1a365d 50%, #0d2137 100%)' }}>
-      {/* ===== Animated Gradient Background ===== */}
+      {/* Animated Background */}
       <div className="absolute inset-0" style={{
         background: 'radial-gradient(ellipse at 20% 50%, rgba(55,138,221,0.15) 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, rgba(255,107,0,0.1) 0%, transparent 50%)',
       }} />
 
-      {/* ===== Grid Pattern Overlay ===== */}
+      {/* Grid Pattern */}
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
@@ -21,19 +18,20 @@ export default function Hero() {
         }}
       />
 
-      {/* ===== Bottom Gradient (transition to white) ===== */}
+      {/* Bottom Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white via-white/95 to-transparent pointer-events-none" />
 
-      {/* ===== Main Content ===== */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28 lg:py-36 w-full">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-          {/* ===== Left: Text Content ===== */}
-          <div className="lg:col-span-7">
+      {/* Main Content */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-32 w-full">
+        <div className="grid lg:grid-cols-12 gap-8 items-center">
+
+          {/* ===== Left: Text (5 cols) ===== */}
+          <div className="lg:col-span-5">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] mb-8">
-              <span className="relative flex h-2.5 w-2.5">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] mb-5">
+              <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-badge opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-badge shadow-[0_0_6px_rgba(29,158,117,0.5)]"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-badge shadow-[0_0_6px_rgba(29,158,117,0.5)]"></span>
               </span>
               <p className="text-[#7dd3fc] font-semibold text-xs tracking-[0.15em] uppercase">
                 CE & ISO Certified Manufacturer
@@ -41,75 +39,70 @@ export default function Hero() {
             </div>
 
             {/* Headline */}
-            <h1
-              className="text-[2.5rem] sm:text-4xl lg:text-[3.75rem] xl:text-[4.25rem] font-bold leading-[1.08] mb-6 text-white"
-            >
+            <h1 className="text-[2rem] sm:text-[2.75rem] lg:text-[3rem] xl:text-[3.25rem] font-bold leading-[1.12] mb-5 text-white">
               <span className="block">Custom Steel Structures</span>
               <span className="block mt-1 bg-gradient-to-r from-[#7dd3fc] via-[#38bdf8] to-[#FF6B00] bg-clip-text text-transparent">
                 Delivered Globally in 30 Days
               </span>
-              <span className="block mt-1 text-gray-300 text-[0.65em] font-semibold">Factory Direct Pricing — Get a Free Quote in 24h</span>
+              <span className="block mt-1 text-gray-300 text-[0.65em] font-semibold">Factory Direct — Free Quote in 24h</span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg sm:text-xl text-gray-300/90 mb-10 leading-relaxed font-light max-w-lg">
-              5,000T/Month Production Capacity &middot; 15+ Years Experience &middot; CE & ISO Certified
+            <p className="text-base sm:text-lg text-gray-300/90 mb-7 leading-relaxed font-light">
+              5,000T/Month Capacity · CE & ISO Certified · 30+ Countries Served
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 mb-8">
+            <div className="flex flex-wrap gap-3 mb-6">
               <a
                 href="/contact"
-                className="group inline-flex items-center px-10 py-5 text-lg font-bold text-white bg-[#FF6B00] hover:bg-[#e55a00] rounded-xl transition-all duration-300 shadow-[0_8px_32px_rgba(255,107,0,0.4)] hover:shadow-[0_12px_48px_rgba(255,107,0,0.6)] hover:-translate-y-1"
+                className="group inline-flex items-center px-9 py-4 text-base lg:text-lg font-bold text-white bg-[#FF6B00] hover:bg-[#e55a00] rounded-xl transition-all duration-300 shadow-[0_8px_32px_rgba(255,107,0,0.4)] hover:shadow-[0_12px_48px_rgba(255,107,0,0.6)] hover:-translate-y-1"
               >
                 Request a Free Quote
-                <svg className="ml-3 w-6 h-6 group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
                   <path strokeLinecap="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </a>
               <a
                 href="/products"
-                className="inline-flex items-center px-8 py-4 text-base font-semibold text-white/90 border-2 border-white/30 hover:border-white/50 hover:bg-white/10 rounded-xl transition-all duration-300 backdrop-blur-sm"
+                className="inline-flex items-center px-6 py-3 text-sm lg:text-base font-semibold text-white/90 border-2 border-white/30 hover:border-white/50 hover:bg-white/10 rounded-xl transition-all duration-300 backdrop-blur-sm"
               >
-                Explore Products
-                <svg className="ml-2 w-5 h-5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                Products
+                <svg className="ml-1.5 w-4 h-4 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                   <path strokeLinecap="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </a>
             </div>
 
-            {/* Trust Indicators */}
-            <div className="mt-8">
-              <p className="text-xs text-gray-400 mb-3 uppercase tracking-wider">Trusted & Certified By</p>
-              <div className="flex items-center gap-6">
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
-                  <span className="text-white font-bold text-sm">CE</span>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
-                  <span className="text-white font-bold text-sm">ISO 9001</span>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
-                  <span className="text-white font-bold text-sm">SGS</span>
-                </div>
+            {/* Trust Indicators - Compact */}
+            <div className="flex items-center gap-3">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-1.5 border border-white/10">
+                <span className="text-white font-bold text-xs">CE</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-1.5 border border-white/10">
+                <span className="text-white font-bold text-xs">ISO 9001</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-1.5 border border-white/10">
+                <span className="text-white font-bold text-xs">SGS</span>
               </div>
             </div>
 
-            {/* Social Proof */}
-            <div className="mt-6">
-              <p className="text-sm text-gray-400">
-                <span className="inline-block w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-                <span className="text-green-400 font-semibold">12+</span> companies requested quotes this month
-              </p>
-              <p className="text-xs text-gray-500 mt-1">Usually reply within 24 hours</p>
-            </div>
+            {/* Social Proof - Compact */}
+            <p className="mt-4 text-xs text-gray-400">
+              <span className="inline-block w-1.5 h-1.5 bg-green-400 rounded-full mr-1.5 animate-pulse align-middle"></span>
+              <span className="text-green-400 font-semibold text-xs">12+</span> quotes requested this month
+            </p>
           </div>
 
-          {/* ===== Right: Video Display ===== */}
-          <div className="lg:col-span-5 mt-10 lg:mt-0">
+          {/* ===== Right: Video (7 cols) ===== */}
+          <div className="lg:col-span-7 mt-8 lg:mt-0 relative">
             <div className="relative">
+              {/* Glow effect behind video */}
+              <div className="absolute -inset-4 bg-gradient-to-br from-blue-500/10 to-orange-500/10 rounded-3xl blur-xl" />
+
               {/* Video Container */}
-              <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.5)] border border-white/10 bg-black/40">
-                <div className="aspect-[16/10] relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-[0_24px_70px_rgba(0,0,0,0.45)] border-2 border-white/15 bg-black/60">
+                <div className="aspect-video relative">
                   <iframe
                     src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&rel=0&showinfo=0&controls=1&modestbranding=1`}
                     title="Laotie Steel Structure Factory Tour"
@@ -122,18 +115,18 @@ export default function Hero() {
               </div>
 
               {/* Video Caption */}
-              <div className="mt-4 flex items-center gap-3 text-white/60">
-                <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+              <div className="mt-3 flex items-center justify-center gap-2 text-white/50 px-4">
+                <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
                 </svg>
-                <span className="text-xs sm:text-sm">Watch our factory tour — 5 production lines in action</span>
+                <span className="text-xs">Factory Tour — 5 Production Lines in Action</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* ===== Decorative bottom line ===== */}
+      {/* Bottom Line */}
       <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#378ADD]/40 to-transparent" />
     </section>
   )
