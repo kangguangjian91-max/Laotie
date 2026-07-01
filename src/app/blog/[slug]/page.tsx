@@ -6,6 +6,7 @@ import { getPostBySlug, getAllPosts, getAllSlugs, type BlogPost } from "@/data/b
 import { ArrowLeft, Clock, Tag, Calendar } from "lucide-react";
 import { notFound } from "next/navigation";
 import DOMPurify from "isomorphic-dompurify";
+import Image from "next/image";
 
 const siteUrl = "https://www.laotie-steel.com";
 
@@ -107,7 +108,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: post.description,
       url: `https://www.laotie-steel.com/blog/${post.slug}`,
       siteName: "Laotie Steel Structure",
-      images: [{ url: `${siteUrl}/images/og-image.webp`, width: 1200, height: 630 }],
+      images: [{ url: `${siteUrl}${post.image}`, width: 1024, height: 576, alt: post.title }],
       type: "article",
       publishedTime: post.date,
       authors: ["Laotie Steel Structure Co., Ltd."],
@@ -116,7 +117,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       card: "summary_large_image",
       title: post.title,
       description: post.description,
-      images: [`${siteUrl}/images/og-image.webp`],
+      images: [`${siteUrl}${post.image}`],
     },
     alternates: {
       canonical: `https://www.laotie-steel.com/blog/${post.slug}`,
@@ -199,6 +200,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
           <h1 className="text-3xl font-bold text-steel mb-2">{post.title}</h1>
           <p className="text-lg text-gray-500 mb-8 leading-relaxed">{post.description}</p>
+
+          <div className="relative aspect-[16/9] rounded-xl overflow-hidden mb-10 -mx-4 sm:mx-0">
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              sizes="(max-width: 768px) 100vw, 768px"
+              priority
+              className="object-cover"
+            />
+          </div>
 
           <div className="border-t border-gray-100 pt-8">
             <div

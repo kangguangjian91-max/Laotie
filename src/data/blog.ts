@@ -6,6 +6,7 @@ export interface BlogPost {
   category: string;
   readTime: string;
   content: string;
+  image: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -16,6 +17,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-06-10",
     category: "Maintenance",
     readTime: "8 min read",
+    image: "/images/blog/blog-maintenance-guide.webp",
     content: `A well-designed steel structure should last 50 years or more — but only with proper maintenance. Unlike concrete or timber buildings, steel structures have predictable deterioration patterns. When you know what to watch for and when to act, maintenance becomes a manageable annual routine rather than an emergency response.
 
 This guide covers everything building owners and facility managers need to maintain their steel structures — from routine inspections to major coating renewal.
@@ -175,6 +177,7 @@ The best maintenance program starts with a well-built structure. Our factory in 
     date: "2026-06-10",
     category: "Manufacturing",
     readTime: "7 min read",
+    image: "/images/blog/blog-cnc-welding-guide.webp",
     content: `Steel structure processing is where engineering meets craftsmanship. Raw steel plates and sections are transformed into precision building components through a sequence of controlled industrial processes.
 
 At Laotie Steel Structure, our Shangqiu factory processes over 5,000 tons of steel monthly across five production lines. Here's a detailed look at the core processing techniques.
@@ -307,6 +310,7 @@ Whether you're building a 500m² warehouse or a 10,000m² factory complex, proce
     date: "2026-06-07",
     category: "Manufacturing",
     readTime: "7 min read",
+    image: "/images/blog/blog-production-china.webp",
     content: `China has become the world's leading hub for steel structure production, accounting for over 55% of global steel production capacity. For international buyers seeking quality steel buildings at competitive prices, understanding how Chinese manufacturers operate is essential.
 
 In this guide, we take you inside a modern Chinese steel structure factory — from raw steel to finished building components ready for global shipping.
@@ -448,6 +452,7 @@ Ready to start your steel structure project? Contact Laotie for a **free quote w
     date: "2026-06-07",
     category: "Installation",
     readTime: "8 min read",
+    image: "/images/blog/blog-installation-guide.webp",
     content: `Proper installation is critical to the safety, durability, and performance of any steel structure building. Whether you're erecting a warehouse, factory, or commercial building, this guide walks you through the complete installation process.
 
 At Laotie Steel Structure, we have installed 200+ buildings across 30+ countries. Here's everything you need to know.
@@ -627,6 +632,7 @@ Every Laotie order includes:
     date: "2025-12-10",
     category: "Buying Guide",
     readTime: "5 min read",
+    image: "/images/blog/blog-why-chinese-manufacturer.webp",
     content: `Choosing the right steel structure manufacturer is one of the most critical decisions in any construction project. In recent years, an increasing number of international buyers — from Australia to Africa, from the Middle East to Southeast Asia — have turned to Chinese manufacturers. Here's why.
 
 ## 1. Cost Competitiveness Without Sacrificing Quality
@@ -685,6 +691,7 @@ Ready to start your project? Contact Laotie Steel Structure for a free quote tod
     date: "2025-11-10",
     category: "Cost & Pricing",
     readTime: "5 min read",
+    image: "/images/blog/blog-cost-guide.webp",
     content: `"How much does a steel structure cost?" is usually the first question buyers ask. The honest answer: it depends. But this guide will give you realistic price ranges and explain what drives costs.
 
 ## Price Ranges (2025, FOB China)
@@ -774,6 +781,7 @@ Contact Laotie Steel Structure with these specifications, and we'll provide a de
     date: "2025-10-28",
     category: "Quality & Certification",
     readTime: "4 min read",
+    image: "/images/blog/blog-ce-iso-certification.webp",
     content: `When sourcing steel structures internationally, certifications aren't just paperwork — they're a guarantee of quality, safety, and reliability. Here's what each certification means and why you should care.
 
 ## CE Marking (European Conformity)
@@ -868,6 +876,7 @@ Laotie Steel Structure welcomes buyer inspections and certification audits. Cont
     date: "2025-09-20",
     category: "Company News",
     readTime: "5 min read",
+    image: "/images/blog/blog-factory-tour.webp",
     content: `Welcome to Laotie Steel Structure's manufacturing facility in Shangqiu, Henan Province — one of China's key steel production hubs. With 5 production lines and 5,000 tons of monthly capacity, here's how we turn raw steel into finished structures.
 
 ## Factory Overview
@@ -991,6 +1000,7 @@ Contact Laotie Steel Structure today to schedule your virtual factory tour.`,
     date: "2026-06-21",
     category: "Buying Guide",
     readTime: "10 min read",
+    image: "/images/blog/blog-import-guide-new.webp",
     content: `Importing steel structures from China can save 30-50% compared to local construction in many markets — but only if you know the process. This guide covers everything from finding suppliers to final delivery, based on Laotie Steel's 15+ years of export experience to 30+ countries.
 
 ## Why Import Steel Structures from China?
@@ -1250,6 +1260,7 @@ Whether you're building a warehouse in Lagos, a factory in Manila, or a logistic
     date: "2026-06-17",
     category: "Cost & Pricing",
     readTime: "10 min read",
+    image: "/images/blog/blog-cost-per-sqm.webp",
     content: `How much does a steel structure cost per square meter in 2026?
 
 This is the #1 question from clients planning warehouse, factory, or commercial building projects. The answer depends on multiple factors: building type, steel grade, span, crane system, and coating specification.
@@ -1352,6 +1363,7 @@ Contact us today for accurate pricing for your project.
     date: "2026-06-17",
     category: "Construction Guide",
     readTime: "12 min read",
+    image: "/images/blog/blog-build-warehouse.webp",
     content: `Building a steel warehouse is a major investment. This step-by-step guide covers the entire process from planning to commissioning.
 
 ## Step 1: Planning and Permits (Weeks 1-4)
@@ -1551,6 +1563,7 @@ Contact us today for complete warehouse solutions.
     date: "2026-06-17",
     category: "Design & Engineering",
     readTime: "11 min read",
+    image: "/images/blog/blog-design-guide.webp",
     content: `Steel structure design is both an art and a science. This guide covers the fundamentals for beginners — whether you're a building owner, architect, or junior engineer.
 
 ## What is Steel Structure Design?
@@ -1723,6 +1736,7 @@ Contact us for design consultation and free quotation.
     date: "2026-06-17",
     category: "Structural Systems",
     readTime: "9 min read",
+    image: "/images/blog/blog-portal-vs-spaceframe.webp",
     content: `Choosing between portal frame and space frame is one of the first decisions in steel structure design. This comparison helps you make the right choice.
 
 ## Quick Comparison
@@ -1930,6 +1944,7 @@ We provide both systems with complete design, fabrication, and erection support.
     date: "2026-06-17",
     category: "Construction Guide",
     readTime: "10 min read",
+    image: "/images/blog/blog-installation-timeline.webp",
     content: `Steel structure installation (erection) is where your building comes to life. This guide covers the entire process — from site preparation to final inspection.
 
 ## Installation Timeline Overview
@@ -2229,6 +2244,7 @@ Contact us today:
     date: "2026-06-25",
     category: "Cost & Pricing",
     readTime: "9 min read",
+    image: "/images/blog/blog-cost-saudi-arabia.webp",
     content: `Saudi Arabia's Vision 2030 has triggered a construction boom unlike anything the Kingdom has seen. From NEOM and Red Sea Project to industrial cities in Riyadh, Jeddah, and Dammam — the demand for cost-effective steel structures is soaring.
 
 If you're planning to import a steel structure to Saudi Arabia, you need to understand the full cost picture. This guide covers everything from FOB prices in China to final installed cost in Saudi Arabia.
@@ -2446,6 +2462,7 @@ Contact Laotie Steel Structure for a free quotation tailored to your Saudi Arabi
     date: "2026-06-26",
     category: "Buying Guide",
     readTime: "8 min read",
+    image: "/images/blog/blog-steel-vs-concrete.webp",
     content: `When planning a new factory, warehouse, or industrial building, the first big decision is structural material: **steel or concrete**.
 
 Both have decades of proven performance. But they serve different needs. This guide gives you an honest, data-driven comparison so you can choose the right system for your budget, timeline, and long-term requirements.
@@ -2550,6 +2567,7 @@ Use our [Cost Calculator](/calculator) for a preliminary estimate, or [contact u
     date: "2026-06-26",
     category: "Buying Guide",
     readTime: "10 min read",
+    image: "/images/blog/blog-prefab-steel-building.webp",
     content: `Prefabricated steel buildings (also called PEB — Pre-Engineered Buildings) have transformed the construction industry. What used to take 12 months of on-site labor can now be factory-fabricated in weeks and erected on-site in days.
 
 This guide covers everything you need to know about prefabricated steel buildings: what they are, how they are made, cost advantages, and how to choose the right supplier.
@@ -2685,6 +2703,7 @@ Ready to start your project? Laotie Steel Structure provides custom prefabricate
     date: "2026-06-26",
     category: "Construction Guide",
     readTime: "9 min read",
+    image: "/images/blog/blog-cold-storage-warehouse.webp",
     content: `Cold storage warehouses are among the most technically demanding steel structure applications. They must maintain precise temperatures (-25°C to +5°C), control humidity, prevent condensation, and operate reliably for decades.
 
 This guide covers the specialized design considerations, insulation systems, and cost factors for steel structure cold storage facilities.
@@ -2805,6 +2824,7 @@ Laotie Steel Structure designs and fabricates steel buildings for cold storage a
     date: "2026-06-26",
     category: "Design Guide",
     readTime: "9 min read",
+    image: "/images/blog/blog-warehouse-design-layout.webp",
     content: `Designing a steel structure warehouse involves more than just sizing beams and columns. The right design choices affect storage capacity, operational efficiency, expansion options, and long-term costs.
 
 This guide covers the key design decisions for steel warehouses — from structural configuration to layout planning.
@@ -2965,6 +2985,7 @@ Ready to design your steel warehouse? Our engineering team can help optimize you
     date: "2026-06-27",
     category: "Chinese Fabrication",
     readTime: "8 min read",
+    image: "/images/blog/blog-chinese-fabrication-quality.webp",
     content: `China has produced more than half of the world's steel for more than a decade. What began as a domestic supply industry has matured into a global export ecosystem serving construction projects across Asia, Africa, the Middle East, Australia, and the Americas. For international buyers, the question is no longer whether Chinese steel fabrication is capable, but how to identify the **steel structure manufacturer China** partners that consistently deliver international-quality work.
 
 At OldTie Steel Structure, our factory in Shangqiu, Henan, ships prefabricated steel buildings to buyers in more than 30 countries. This article explains how modern **Chinese steel structure supplier** factories combine scale, automation, and certified quality control to compete on the global stage.
@@ -3091,6 +3112,7 @@ Chinese steel fabrication has evolved from a low-cost alternative into a high-ca
     date: "2026-06-27",
     category: "Case Study",
     readTime: "9 min read",
+    image: "/images/blog/blog-kenya-case-study.webp",
     content: `When a Nairobi-based logistics company needed a new distribution center in 2025, they faced the same decision many African buyers face: build locally or import a prefabricated steel building from a **steel structure manufacturer China** supplier. This case study walks through the complete **steel warehouse project**, from initial inquiry to final handover, with a transparent cost breakdown.
 
 The project is a 3,000 m² clear-span warehouse with an attached 400 m² office mezzanine. It was delivered as a complete prefabricated kit from OldTie Steel Structure and erected on site in Kenya over six weeks.
@@ -3210,6 +3232,7 @@ This Kenya warehouse demonstrates that a well-managed **steel warehouse project*
     date: "2026-06-28",
     category: "Cost Guide",
     readTime: "8 min read",
+    image: "/images/blog/blog-vs-concrete-cost.webp",
     content: `Every project manager faces the same decision: build with a steel structure or go with traditional reinforced concrete. Both have their place. This guide compares them head-to-head using real project data.
 
 ## Cost Comparison: Steel vs Concrete
@@ -3246,6 +3269,7 @@ Steel outperforms concrete for:
     date: "2026-06-28",
     category: "Import Guide",
     readTime: "10 min read",
+    image: "/images/blog/blog-import-from-china-2026.webp",
     content: `China is the world's leading source of prefabricated steel buildings. This guide walks through every step of importing — from finding a reliable manufacturer to customs clearance.
 
 ## Why Import from China?
@@ -3281,6 +3305,7 @@ Required documents: Bill of lading, commercial invoice, packing list, certificat
     date: "2026-06-28",
     category: "Design Guide",
     readTime: "9 min read",
+    image: "/images/blog/blog-warehouse-design-spans.webp",
     content: `Designing a steel warehouse involves more than just choosing a size. The right design decisions directly impact your building's functionality and cost.
 
 ## Span Configuration
@@ -3320,6 +3345,7 @@ Use high-strength steel (Q355B instead of Q235B) to save 10–15% in weight. Opt
     date: "2026-06-28",
     category: "Technical Guide",
     readTime: "8 min read",
+    image: "/images/blog/blog-foundation-guide.webp",
     content: `The foundation is the most critical part of any steel structure building. A well-designed foundation ensures your building stays level, resists wind loads, and lasts its design life.
 
 ## Foundation Types
@@ -3357,6 +3383,7 @@ Foundation construction takes 4–6 weeks. Steel erection can begin once concret
     date: "2026-07-01",
     category: "Buying Guide",
     readTime: "9 min read",
+    image: "/images/blog/blog-lifetime-cost-comparison.webp",
     content: `When planning a warehouse, factory, or commercial building, one of the earliest decisions is the structural material: steel or reinforced concrete. Both have been used for decades, but the cost equation has shifted significantly in 2026 — and steel is winning more projects than ever.
 
 This article compares the two building methods across five dimensions that matter to B2B buyers: initial cost, construction speed, maintenance, design flexibility, and total lifetime cost. If you're sourcing a steel structure manufacturer China for an upcoming project, this analysis will help you make a data-driven case.
@@ -3474,6 +3501,7 @@ Contact OldTie Steel Structure for a free quote within 24 hours.
     date: "2026-07-01",
     category: "Quality & Certification",
     readTime: "10 min read",
+    image: "/images/blog/blog-factory-inspection-qc.webp",
     content: `Importing a steel structure from overseas is a six-figure decision. The single most important thing you can do to protect that investment — beyond choosing a certified supplier — is a thorough factory inspection before your steel leaves China.
 
 This guide covers what to check, when to inspect, and how to verify that your steel structure quality control standards are being met.

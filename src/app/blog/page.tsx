@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getAllPosts } from "@/data/blog";
 import { ArrowLeft, Clock, Tag } from "lucide-react";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Blog | Steel Structure Insights & Guides",
@@ -62,8 +63,18 @@ export default function BlogPage() {
               <a
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="block group p-6 rounded-xl border border-gray-100 hover:border-steel-accent/30 hover:shadow-md transition-all"
+                className="block group rounded-xl border border-gray-100 hover:border-steel-accent/30 hover:shadow-md transition-all overflow-hidden"
               >
+                <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 768px"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
                 <div className="flex items-center gap-3 text-xs text-gray-400 mb-2">
                   <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-steel-accent/10 text-steel text-xs font-medium">
                     <Tag className="w-3 h-3" /> {post.category}
@@ -81,6 +92,7 @@ export default function BlogPage() {
                   <span className="text-steel-accent text-sm font-medium group-hover:underline">
                     Read Article →
                   </span>
+                </div>
                 </div>
               </a>
             ))}
