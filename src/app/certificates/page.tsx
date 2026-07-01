@@ -21,7 +21,15 @@ export const metadata: Metadata = {
     title: "Certificates & Certifications | Laotie",
     description:
       "ISO 9001, CE, IAF, Supplier Assessment, AWS Certified Welders. Quality assured for your steel structure project.",
+    images: [
+      {
+        url: "https://www.laotie-steel.com/images/og-image.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
     url: "https://www.laotie-steel.com/certificates",
+    siteName: "Laotie Steel Structure",
     type: "website",
   },
   twitter: {
@@ -29,6 +37,7 @@ export const metadata: Metadata = {
     title: "Certificates & Certifications | Laotie",
     description:
       "ISO 9001, CE, IAF, Supplier Assessment, AWS Certified Welders. Quality assured for your steel structure project.",
+    images: ["https://www.laotie-steel.com/images/og-image.webp"],
   },
   alternates: {
     canonical: "https://www.laotie-steel.com/certificates",

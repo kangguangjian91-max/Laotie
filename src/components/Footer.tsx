@@ -157,6 +157,16 @@ export default function Footer() {
                   🇹🇭 Thailand
                 </a>
               </li>
+              <li>
+                <a 
+                  href="/steel-structure-australia" 
+                  onClick={() => trackLandingPageView("australia", "australia")}
+                  className="hover:text-white transition-colors inline-flex items-center gap-1 group"
+                >
+                  <span className="w-0 group-hover:w-1 h-0.5 bg-steel-accent rounded-full transition-all" />
+                  🇦🇺 Australia
+                </a>
+              </li>
             </ul>
           </div>
 

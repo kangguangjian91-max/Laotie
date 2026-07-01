@@ -5,6 +5,18 @@ export const metadata: Metadata = {
   title: "Blog | Steel Structure Insights & Guides",
   description:
     "Expert articles on steel structure design, cost, importing from China, certifications, and factory production. Stay informed with Laotie Steel Structure.",
+  keywords: [
+    "steel structure blog",
+    "steel structure cost guide",
+    "warehouse construction guide",
+    "steel building design",
+    "import steel from China",
+    "steel structure installation",
+    "portal frame design",
+    "steel structure maintenance",
+    "steel structure vs concrete",
+    "factory building guide",
+  ],
   openGraph: {
     title: "Steel Structure Blog | Expert Guides & Industry Insights",
     description:

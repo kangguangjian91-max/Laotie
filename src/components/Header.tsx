@@ -22,6 +22,7 @@ const globalLinks = [
   { label: "Nigeria", href: "/steel-structure-nigeria", flag: "🇳🇬", disabled: false },
   { label: "Thailand", href: "/steel-structure-thailand", flag: "🇹🇭", disabled: false },
   { label: "Saudi Arabia", href: "/steel-structure-saudi-arabia", flag: "🇸🇦", disabled: false },
+  { label: "Australia", href: "/steel-structure-australia", flag: "🇦🇺", disabled: false },
 ];
 
 export default function Header() {
@@ -115,6 +116,7 @@ export default function Header() {
                           '/steel-structure-indonesia': 'indonesia',
                           '/steel-structure-nigeria': 'nigeria',
                           '/steel-structure-thailand': 'thailand',
+                          '/steel-structure-australia': 'australia',
                         };
                         const country = countryMap[link.href];
                         if (country) {
@@ -211,6 +213,7 @@ export default function Header() {
                         '/steel-structure-indonesia': 'indonesia',
                         '/steel-structure-nigeria': 'nigeria',
                         '/steel-structure-thailand': 'thailand',
+                        '/steel-structure-australia': 'australia',
                       };
                       const country = countryMap[link.href];
                       if (country) {
