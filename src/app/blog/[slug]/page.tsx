@@ -20,6 +20,11 @@ function renderMarkdown(content: string): string {
     .replace(/^### (.+)$/gm, '<h3 class="text-lg font-semibold text-gray-900 mt-8 mb-3">$1</h3>')
     .replace(/^## (.+)$/gm, '<h2 class="text-xl font-bold text-steel mt-10 mb-4">$1</h2>')
     .replace(/^# (.+)$/gm, '<h1 class="text-2xl font-bold text-steel mt-10 mb-4">$1</h1>')
+    // Images (must be before links to avoid conflict)
+    .replace(
+      /!\[([^\]]*)\]\(([^)]+)\)/g,
+      '<figure class="my-8 -mx-4 sm:mx-0"><img src="$2" alt="$1" class="w-full rounded-xl shadow-sm" loading="lazy" /><figcaption class="text-center text-xs text-gray-400 mt-2">$1</figcaption></figure>'
+    )
     // Bold
     .replace(/\*\*(.+?)\*\*/g, '<strong class="font-semibold text-gray-900">$1</strong>')
     // Links
