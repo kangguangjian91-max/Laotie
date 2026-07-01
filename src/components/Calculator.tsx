@@ -403,7 +403,9 @@ export default function Calculator() {
     const costContingency = (subtotal + costDesign) * (cfg.contingency / 100);
     const total = subtotal + costDesign + costContingency;
 
-    const installDays = supplyOnly ? 0 : Math.ceil(area / 500) + cfg.installDaysBase;
+    const installDays = supplyOnly
+      ? 0
+      : (Math.ceil(area / 500) + cfg.installDaysBase) * Math.ceil(Q / 2);
 
     setResult({
       area, steelTons, totalSteelTons, quantity: Q, containers,
@@ -711,8 +713,19 @@ export default function Calculator() {
               type="number"
               min={1}
               max={50}
-              value={quantity}
-              onChange={(e) => setQuantity(Math.max(1, Number(e.target.value)))}
+              value={quantity || ""}
+              onChange={(e) => {
+                const raw = e.target.value;
+                if (raw === "") {
+                  setQuantity(0);
+                  return;
+                }
+                const n = Number(raw);
+                if (!isNaN(n)) setQuantity(Math.max(0, n));
+              }}
+              onBlur={() => {
+                if (quantity < 1) setQuantity(1);
+              }}
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
@@ -792,6 +805,7 @@ export default function Calculator() {
                 {supplyOnly
                   ? `${result.shipDays}d shipping (FOB)`
                   : `${result.shipDays}d shipping + ${result.installDays}d install`}
+                {result.quantity > 1 && <span className="text-gray-400"> ({result.quantity} buildings)</span>}
               </div>
             </div>
           </div>
