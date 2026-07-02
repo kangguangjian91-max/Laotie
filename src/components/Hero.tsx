@@ -104,7 +104,7 @@ export default function Hero() {
               <div className="relative rounded-2xl overflow-hidden shadow-[0_24px_70px_rgba(0,0,0,0.45)] border-2 border-white/15 bg-black/60">
                 <div className="aspect-video relative">
                   <iframe
-                    src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&rel=0&showinfo=0&controls=1&modestbranding=1`}
+                    src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&rel=0&showinfo=0&controls=1&modestbranding=1`}
                     title="Laotie Steel Structure Factory Tour"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen

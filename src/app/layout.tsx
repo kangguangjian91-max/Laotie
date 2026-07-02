@@ -206,9 +206,9 @@ export default function RootLayout({
         {/* Performance: preconnect to external domains */}
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.youtube.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.youtube-nocookie.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://i.ytimg.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://www.youtube.com" />
+        <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
         <link rel="dns-prefetch" href="https://i.ytimg.com" />
         {/* Critical CSS for instant FCP - minimal above-the-fold styles */}
         <style dangerouslySetInnerHTML={{
