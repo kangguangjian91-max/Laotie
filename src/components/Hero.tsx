@@ -109,7 +109,7 @@ export default function Hero() {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     className="absolute inset-0 w-full h-full"
-                    loading="eager" />
+                    loading="lazy" />
                 </div>
               </div>
 

@@ -2,21 +2,28 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { getAllPosts } from "@/data/blog";
+import type { BlogPostMeta } from "@/data/blog";
 import { ArrowLeft, Clock, Tag, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { useSearchParams, useRouter } from "next/navigation";
-import { useState, useMemo, Suspense } from "react";
+import { useState, useMemo, useEffect, Suspense } from "react";
 
 function BlogContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const activeCategory = searchParams.get("category") || "";
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [posts, setPosts] = useState<BlogPostMeta[]>([]);
 
-  const posts = useMemo(() => getAllPosts(), []);
+  useEffect(() => {
+    fetch("/data/blog/blog-list.json")
+      .then(r => r.json())
+      .then(data => setPosts(data.sort((a: BlogPostMeta, b: BlogPostMeta) => new Date(b.date).getTime() - new Date(a.date).getTime())))
+      .catch(() => {});
+  }, []);
 
   const categories = useMemo(() => {
+    if (!posts.length) return [];
     const counts: Record<string, number> = {};
     posts.forEach((p) => {
       counts[p.category] = (counts[p.category] || 0) + 1;

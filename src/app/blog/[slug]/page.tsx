@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import JsonLd from "@/components/JsonLd";
-import { getPostBySlug, getAllPosts, getAllSlugs, type BlogPost } from "@/data/blog";
+import { getPostBySlug, getAllPosts, getAllSlugs, type BlogPost, type BlogPostMeta } from "@/data/blog";
 import { ArrowLeft, Clock, Tag, Calendar } from "lucide-react";
 import { notFound } from "next/navigation";
 import DOMPurify from "isomorphic-dompurify";
@@ -89,14 +89,14 @@ function addInternalLinks(html: string): string {
     );
 }
 
-function getRelatedPosts(currentSlug: string, currentCategory: string): BlogPost[] {
+function getRelatedPosts(currentSlug: string, currentCategory: string): BlogPostMeta[] {
   const all = getAllPosts();
   // First: same category (excluding current post)
   const sameCategory = all.filter((p) => p.slug !== currentSlug && p.category === currentCategory);
   // Second: other categories
   const other = all.filter((p) => p.slug !== currentSlug && p.category !== currentCategory);
   // Sort both by date
-  const sortByDate = (arr: BlogPost[]) => arr.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const sortByDate = (arr: BlogPostMeta[]) => arr.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   // Take up to 2 from same category, fill with other categories if needed
   return [...sortByDate(sameCategory).slice(0, 2), ...sortByDate(other)].slice(0, 2);
 }

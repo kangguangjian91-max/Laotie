@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import JsonLd from "@/components/JsonLd";
 import { products, getAllProductSlugs, getProductBySlug } from "@/data/products";
-import { blogPosts } from "@/data/blog";
+import { getAllPosts } from "@/data/blog";
 import { ArrowLeft, CheckCircle, Ruler, Shield, Zap, Globe } from "lucide-react";
 
 interface ProductPageProps {
@@ -439,9 +439,10 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         {/* Related Blog Posts */}
         {(() => {
           const relatedSlugs = productRelatedBlogs[slug] || [];
+          const allBlogPosts = getAllPosts();
           const relatedPosts = relatedSlugs
-            .map((s) => blogPosts.find((bp) => bp.slug === s))
-            .filter(Boolean) as typeof blogPosts;
+            .map((s) => (allBlogPosts as Array<{ slug: string; title: string; description: string; image: string; readTime: string; date: string; category: string }>).find((bp) => bp.slug === s))
+            .filter((p): p is NonNullable<typeof p> => p != null);
           if (relatedPosts.length === 0) return null;
           return (
             <section className="py-16 bg-section">
