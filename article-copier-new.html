@@ -31,7 +31,8 @@ h2 { font-size: 16px; color: #1a1a2e; margin: 16px 0 8px; }
 .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; }
 .topic-1 { background: #22c55e; }
 .topic-2 { background: #22c55e; }
-.topic-3 { background: #f97316; }
+.topic-3 { background: #22c55e; }
+.topic-4 { background: #f97316; }
 </style>
 </head>
 <body>
@@ -220,121 +221,110 @@ Visit Laotie Steel Structure: https://www.laotie-steel.com</span>
     </div>
   </div>
 
-  <!-- #3 — Steel Structure Foundation Requirements Guide (current) -->
+  <!-- #4 — How to Read Steel Structure Design Drawings (current) -->
   <div class="article-card">
-    <div class="card-title"><span class="status-dot topic-3"></span>#3 — Steel Structure Foundation Requirements Guide <span style="font-weight:400;font-size:12px;opacity:0.7;">(current)</span></div>
+    <div class="card-title"><span class="status-dot topic-4"></span>#4 — How to Read Steel Structure Design Drawings <span style="font-weight:400;font-size:12px;opacity:0.7;">(current)</span></div>
     <div class="title-row">
       <span class="label">Title</span>
-      <span class="title-text" id="t3">Steel Structure Foundation Requirements: A Complete Engineering Guide</span>
-      <button class="copy-btn" onclick="doCopy('t3', this)">📋 Copy Title</button>
+      <span class="title-text" id="t4">How to Read Steel Structure Design Drawings: A Beginner's Guide for Engineers & Contractors</span>
+      <button class="copy-btn" onclick="doCopy('t4', this)">📋 Copy Title</button>
     </div>
     <div class="content-row">
-      <div class="btn-row"><button class="copy-btn" onclick="doCopy('c3', this)">📋 Copy Content</button></div>
-      <span class="content-text" id="c3">The foundation is the most critical component of any steel structure building. A poorly designed foundation can lead to settlement cracks, column misalignment, and even structural failure. This guide covers the essential requirements for steel structure foundations, including soil investigation, foundation types, design loads, and construction best practices.
+      <div class="btn-row"><button class="copy-btn" onclick="doCopy('c4', this)">📋 Copy Content</button></div>
+      <span class="content-text" id="c4">Steel structure design drawings are the universal language of construction — they tell engineers, fabricators, and site crews exactly how a building goes together. But if you are new to the field, those lines, symbols, and abbreviations can look like an alien code. This guide breaks down everything you need to know to read and understand steel structure drawings with confidence.
 
-Why Foundation Design Matters for Steel Buildings
+What Types of Drawings Make Up a Steel Structure Set?
 
-Steel structures are lighter than concrete buildings but transmit concentrated point loads to the ground through column base plates. Unlike residential foundations that distribute load evenly across a slab, steel building foundations must precisely anchor each column while resisting uplift from wind, lateral forces from seismic events, and vertical compression from roof and snow loads.
+A complete steel structure drawing package typically includes five types of drawings:
 
-A proper foundation design ensures:
-- Uniform load transfer to the bearing soil without excessive settlement
-- Reliable anchorage against wind uplift (critical in hurricane-prone regions)
-- Resistance to lateral forces from seismic or wind events
-- Durability against moisture ingress and freeze-thaw cycles
-- Compatibility with the steel frame erection sequence
+General Arrangement Drawings (GA): Show the overall layout — column positions, bay spacing, overall dimensions, and building elevations. These are the roadmap for the entire project.
 
-Soil Investigation: The First Step
+Foundation & Anchor Bolt Plans: Detail the concrete foundation layout, anchor bolt positions, bolt diameters, projection lengths, and base plate details. Every column has a corresponding foundation mark.
 
-Every foundation design begins with a geotechnical investigation. The soil report must provide:
+Fabrication Drawings (Shop Drawings): Provide piece-by-piece instructions for the steel fabricator. Each steel member (column, beam, rafter, purlin, brace) is drawn separately with exact dimensions, hole locations, weld symbols, and material grades.
 
-Parameter | Required Value Range | Purpose
-Bearing capacity | ≥ 150 kPa (minimum for light buildings) | Determines footing size
-Groundwater level | Below foundation base / permanently drained | Prevents heave & corrosion
-Soil type classification | Gravel, sand, clay, or rock (USCS system) | Affects foundation type selection
-Frost depth | Local code-defined depth | Sets minimum footing depth
-Settlement potential | Total ≤ 25mm, differential ≤ 15mm | Limits structural distortion
+Erection Drawings: Show the assembly sequence on site. They indicate lifting points, temporary bracing requirements, and connection sequences.
 
-Common Foundation Types for Steel Structures
+Connection Details: Zoom in on critical joints — moment connections, shear connections, bolted splices, and base plate connections — with specific bolt sizes, weld thicknesses, and stiffener plate requirements.
 
-1. Isolated Spread Footings
-Used for single-column supports in mild soil conditions.
-- Simple rectangular or stepped concrete pads under each column
-- Typical size: 1.5m x 1.5m to 3.0m x 3.0m depending on load and soil
-- Reinforcement: Steel rebar mesh top and bottom per structural design
-- Best for: Small to medium buildings with good soil (bearing ≥ 200 kPa)
-- Cost: $80-$150 per footing
+Key Symbols and Abbreviations You Must Know
 
-2. Strip Footings
-Continuous concrete strips supporting multiple columns or wall panels.
-- Used along perimeter walls and between closely spaced columns
-- Distributes load over a larger area than isolated footings
-- Best for: Long-span buildings with closely spaced columns
-- Cost: $60-$120 per linear meter
+Mastering these common symbols will unlock 80% of any steel drawing:
 
-3. Mat (Raft) Foundation
-A single large concrete slab supporting the entire building footprint.
-- Evenly distributes all column loads across the full area
-- Ideal for poor soil conditions (bearing 100-150 kPa)
-- Integrates with the floor slab for combined function
-- Best for: Large warehouses, cold storage, or weak soil sites
-- Cost: $50-$90 per square meter
+Symbol | Meaning
+⌀ or Ø | Diameter (e.g., ⌀20 = 20mm diameter hole or bolt)
+CL | Center line — reference axis for alignment
+NTS | Not to scale — dimension values are authoritative, not the drawn length
+PL | Plate (e.g., PL 10mm = 10mm thick steel plate)
+UB / UC | Universal Beam / Universal Column (standard rolled sections)
+RHS / SHS | Rectangular / Square Hollow Section
+MB / MC | Medium-duty Beam / Column sections
+W (W-shape) | Wide-flange beam (North American standard)
+H (H-shape) | H-section column (European/Asian standard)
+MIG / TIG | Welding processes (Metal Inert Gas / Tungsten Inert Gas)
+TYP | Typical — the detail shown applies to all similar locations
 
-4. Pile Foundations
-Deep foundations transferring loads to stable strata below weak surface soil.
-- Driven steel H-piles, precast concrete piles, or cast-in-situ bored piles
-- Required when surface soil bearing capacity is below 100 kPa
-- Pile cap beams connect pile groups to steel columns
-- Best for: Coastal areas, soft clay sites, high-rise steel frames
-- Cost: $150-$400 per linear meter of pile
+Understanding Steel Section Notations
 
-Design Loads for Steel Structure Foundations
+Steel members are described by their cross-sectional shape and dimensions. Here is how to read them:
 
-Foundation engineers must consider these load combinations:
+European standard: IPE 300 — 300mm deep I-section beam
+Equivalent US standard: W12×22 — 12-inch deep wide flange, 22 lb/ft
+Square hollow section: SHS 100×100×6 — 100mm square, 6mm wall thickness
+Channel section: C 200×75×6 — 200mm deep channel, 75mm flange, 6mm web
 
-Dead Load: Self-weight of steel frame, roof panels, wall cladding — typically 0.5-1.5 kN/m²
-Live Load: Occupancy, equipment, movable loads — 0.5-5.0 kN/m² depending on use
-Wind Load: Uplift and lateral forces — highly site-dependent (basic wind speed 33-55 m/s in many regions)
-Snow Load: Roof snow accumulation — 0.5-3.0 kN/m² per local code
-Seismic Load: Lateral forces per seismic zone classification
-Crane Load: Vertical and horizontal loads from overhead cranes (adds 20-50% to column loads near crane runways)
+The drawing title block always specifies the standard used (EN, ASTM, GB, or AS). Always check this before interpreting section labels.
 
-The foundation must also resist overturning moment caused by wind/seismic loads. A common rule: the foundation weight should be at least 1.5 times the maximum uplift force at each column.
+How to Read Connection Details
 
-Anchor Bolts and Base Plates
+Connections are where most of the complexity lives. Here is the step-by-step approach:
 
-Anchor bolts are the critical interface between steel columns and concrete foundations. Key requirements:
+Step 1: Identify the connection type. Look at the detail title — is it a beam-to-column moment connection, a simple shear tab, or a column splice?
 
-- Bolt grade: Typically ASTM F1554 Grade 36 or Grade 55 for standard buildings
-- Bolt diameter: M20 to M36 (3/4" to 1-1/4") depending on column load
-- Embedment depth: Minimum 12x bolt diameter into concrete
-- Projection tolerance: ±6mm for nut engagement
-- Grouting: Non-shrink cementitious grout between base plate and foundation top (25-50mm gap)
+Step 2: Count the bolts. The bolt circle notation shows bolt diameter, grade, and quantity. Example: 4-M20 Gr. 8.8 means four bolts of 20mm diameter, Grade 8.8 strength.
 
-All anchor bolts must be set using a template to ensure precise positioning. Even a 10mm misalignment can cause significant problems during steel erection.
+Step 3: Read the weld symbols. A triangle (fillet weld) with a number tells you the weld leg length. Example: 6mm fillet weld on both sides of the plate.
 
-Construction Best Practices
+Step 4: Check for stiffeners. If the detail shows small triangular plates at the web-flange junction, those are stiffeners preventing web buckling under high loads.
 
-1. Concrete Grade: Minimum C25/30 (30 MPa compressive strength at 28 days) for structural foundations
-2. Reinforcement Cover: Minimum 50mm clear cover to rebar for corrosion protection
-3. Waterproofing: Damp-proof membrane under all slabs and bituminous coating on exposed foundation faces
-4. Curing: Wet curing for minimum 7 days, or use curing compound
-5. Backfill: Compact granular material in 150mm layers at 95% proctor density
-6. Testing: Concrete cylinder tests at 7 and 28 days; soil compaction tests during backfill
+Step 5: Verify clearances. Note the gap between connected members — typically 10-20mm for bolted connections and 2-5mm for welded connections.
 
-Quality Control Checklist
+Common Mistakes When Reading Steel Drawings
 
-Item | Check Method | Acceptable Limit
-Concrete compressive strength | Cylinder compression test | ≥ Design strength at 28 days
-Anchor bolt positioning | Template check + survey | ±3mm plan, ±6mm projection
-Foundation level tolerance | Optical level survey | ±5mm across building length
-Rebar cover | Cover meter scan | Minimum 50mm to ground face
-Curing duration | Logbook record | Minimum 7 days wet curing
+Mistake | Consequence | How to Avoid
+Ignoring NTS notes | Taking scaled measurements instead of reading dimension values causes fabrication errors | Always use dimension numbers — never scale the drawing
+Mixing up left-hand vs right-hand parts | Symmetrical members installed on the wrong side | Check the part mark suffix (L/R) before fabrication
+Overlooking camber notes | Beams without specified camber deflect under load | Look for "CAMBER XXmm" in beam details
+Missing erection sequence notes | Incorrect assembly order causes instability | Read the erection drawing legend first
+Confusing welding and bolting symbols | Wrong connection method at critical joints | Refer to the connection schedule table
+
+Checklist for Reviewing Steel Structure Drawings
+
+Before approving or fabricating from any set of steel drawings, run through this checklist:
+
+1. General: Are all dimensions clear? Is the drawing scale stated? Are all sheets present?
+2. Columns: Are column center lines aligned with grid lines? Are base plate sizes correct for the foundation design?
+3. Beams: Are beam camber values specified for spans over 12m? Are connection details shown at every beam-to-column joint?
+4. Bracing: Is lateral bracing provided in both directions? Are brace connection capacities verified?
+5. Bolts: Are bolt grades, diameters, and tightening torques specified? Are washer and nut types confirmed?
+6. Welds: Are weld symbols complete with size, length, and process? Are NDT (non-destructive testing) requirements noted?
+7. Coating: Are corrosion protection specifications clear? Is the surface preparation standard (e.g., Sa 2.5) stated?
+
+Digital Tools for Reading Steel Drawings
+
+Most modern steel structure drawings are provided in one of these formats:
+- PDF — universal viewing, use for markup and annotation
+- DWG/DXF — editable CAD format, requires AutoCAD, DraftSight, or free alternatives like LibreCAD
+- IFC/BIM — 3D building information models, open in Tekla BIMsight, Solibri, or Trimble Connect
+- NC1 files — numerical control files for automated drilling and cutting machines
+
+For PDF drawings, a tablet with a stylus is highly recommended — you can zoom into details and make handwritten markups during site inspections.
 
 Conclusion
 
-Steel structure foundations require careful geotechnical analysis, precise engineering design, and strict quality control during construction. The foundation type must match the soil conditions, building loads, and local environmental factors. Investing in proper foundation design prevents costly structural problems years later.
+Reading steel structure design drawings is a skill that improves with practice. Start by studying the title block and general arrangement drawings, then work your way into connection details and fabrication notes. Cross-reference every dimension and symbol against the project specification. Use the checklist above to catch common errors before they reach the workshop floor.
 
-For professional steel structure design and foundation engineering support, consult an experienced manufacturer.
+If you need professional steel structure design, fabrication, or drawing review services, an experienced manufacturer can save you time and prevent costly mistakes.
 
 Visit Laotie Steel Structure: https://www.laotie-steel.com</span>
     </div>
