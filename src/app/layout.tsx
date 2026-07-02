@@ -206,12 +206,15 @@ export default function RootLayout({
         {/* Performance: preconnect to external domains */}
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.youtube.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://i.ytimg.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.youtube.com" />
+        <link rel="dns-prefetch" href="https://i.ytimg.com" />
         {/* Critical CSS for instant FCP - minimal above-the-fold styles */}
         <style dangerouslySetInnerHTML={{
           __html: `
             *,*::before,*::after{box-sizing:border-box}
             body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#1a202c;-webkit-text-size-adjust:100%}
-            .bg-steel{background-color:#1a365d}.text-white{color:#fff}
             img{max-width:100%;height:auto}
           `
         }} />

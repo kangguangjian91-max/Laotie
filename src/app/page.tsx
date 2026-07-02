@@ -153,7 +153,7 @@ export default function Home() {
           </div>
         </section>
         {/* ===== Certification Badges ===== */}
-        <section className="bg-white border-y border-gray-100">
+        <section className="bg-white border-y border-gray-100" style={{ contentVisibility: "auto" }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             <p className="text-center text-sm text-gray-500 mb-6 font-medium tracking-wide uppercase">
               Trusted Worldwide — Certified Quality
@@ -236,7 +236,7 @@ export default function Home() {
         </section>
 
         {/* ===== Calculator CTA ===== */}
-        <section className="bg-blue-50 py-12">
+        <section className="bg-blue-50 py-12" style={{ contentVisibility: "auto" }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl lg:text-3xl font-bold text-steel mb-4">
               Get a Preliminary Quote in 1 Minute
@@ -259,7 +259,7 @@ export default function Home() {
         <ProductionProcess />
         <Projects />
         {/* ===== Why Choose Laotie — Summary ===== */}
-        <section className="bg-white py-16">
+        <section className="bg-white py-16" style={{ contentVisibility: "auto" }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-steel mb-4">Why Laotie Steel?</h2>
             <p className="text-center text-gray-500 mb-12 max-w-2xl mx-auto">

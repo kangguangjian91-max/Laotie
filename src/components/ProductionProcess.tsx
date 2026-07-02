@@ -87,7 +87,7 @@ export default function ProductionProcess() {
 
                 {/* Arrow connector for desktop */}
                 {i < steps.length - 1 && (
-                  <div className="hidden md:flex absolute top-1/2 -right-5 translate-y--1/2 items-center process-connector">
+                  <div className="hidden md:flex absolute top-1/2 -right-5 -translate-y-1/2 items-center process-connector">
                     <ChevronRight className="w-4 h-4 text-steel-accent/50" style={{ animationDelay: `${i * 0.3}s` }} />
                   </div>
                 )}
