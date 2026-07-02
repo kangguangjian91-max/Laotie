@@ -103,7 +103,7 @@ For fast-track projects where traditional concrete pouring is impractical, we al
       "Mezzanine floors in industrial buildings",
       "Bridge deck formwork",
     ],
-    image: "/images/product-floor-deck-new.png",
+    image: "/images/product-floor-deck-new.webp",
     schemaPriceLow: "8",
     schemaPriceHigh: "15",
     faq: [
