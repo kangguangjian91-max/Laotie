@@ -1,5 +1,17 @@
+"use client";
+
+import { useState, useCallback, useRef } from "react";
+import Image from "next/image";
+
 export default function Hero() {
   const videoId = "XQZuDgAT8JA";
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Load video on click — converts thumbnail to YouTube iframe
+  const loadVideo = useCallback(() => {
+    setIsVideoLoaded(true);
+  }, []);
 
   return (
     <section id="home" className="relative overflow-hidden min-h-[680px] sm:min-h-[720px] lg:min-h-[780px] flex items-center" style={{ background: 'linear-gradient(135deg, #0a1628 0%, #1a365d 50%, #0d2137 100%)' }}>
@@ -94,22 +106,55 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* ===== Right: Video (7 cols) ===== */}
+          {/* ===== Right: Video / Thumbnail (7 cols) ===== */}
           <div className="lg:col-span-7 mt-8 lg:mt-0 relative">
             <div className="relative">
               {/* Glow effect behind video */}
               <div className="absolute -inset-4 bg-gradient-to-br from-blue-500/10 to-orange-500/10 rounded-3xl blur-xl" />
 
               {/* Video Container */}
-              <div className="relative rounded-2xl overflow-hidden shadow-[0_24px_70px_rgba(0,0,0,0.45)] border-2 border-white/15 bg-black/60">
+              <div ref={containerRef} className="relative rounded-2xl overflow-hidden shadow-[0_24px_70px_rgba(0,0,0,0.45)] border-2 border-white/15 bg-black/60">
                 <div className="aspect-video relative">
-                  <iframe
-                    src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&rel=0&showinfo=0&controls=1&modestbranding=1`}
-                    title="Laotie Steel Structure Factory Tour"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="absolute inset-0 w-full h-full"
-                    loading="lazy" />
+
+                  {!isVideoLoaded ? (
+                    /* Thumbnail with Play Button - LCP optimized */
+                    <>
+                      {/* YouTube thumbnail as LCP image - priority preloaded */}
+                      <Image
+                        src={`https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`}
+                        alt="Laotie Steel Structure Factory Tour Video"
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 58vw"
+                        priority
+                        className="object-cover"
+                      />
+                      {/* Play button overlay */}
+                      <button
+                        onClick={loadVideo}
+                        className="absolute inset-0 flex items-center justify-center group cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-orange-500/50 rounded-sm"
+                        aria-label="Play factory tour video"
+                      >
+                        <div className="w-20 h-20 bg-[#FF6B00]/90 rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(255,107,0,0.5)] group-hover:bg-[#FF6B00] group-hover:scale-110 transition-all duration-300 group-active:scale-95">
+                          <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                        {/* Hover hint */}
+                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/80 text-xs font-medium bg-black/40 px-3 py-1.5 rounded-full backdrop-blur-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+                          Watch Factory Tour
+                        </div>
+                      </button>
+                    </>
+                  ) : (
+                    /* Actual YouTube iframe - loads only after user clicks */
+                    <iframe
+                      src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&rel=0&showinfo=0&controls=1&modestbranding=1`}
+                      title="Laotie Steel Structure Factory Tour"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    />
+                  )}
                 </div>
               </div>
 
@@ -128,5 +173,5 @@ export default function Hero() {
       {/* Bottom Line */}
       <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#378ADD]/40 to-transparent" />
     </section>
-  )
+  );
 }
