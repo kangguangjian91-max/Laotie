@@ -121,7 +121,7 @@ export default function Hero() {
                     <>
                       {/* YouTube thumbnail as LCP image - priority preloaded */}
                       <Image
-                        src={`https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`}
+                        src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
                         alt="Laotie Steel Structure Factory Tour Video"
                         fill
                         sizes="(max-width: 1024px) 100vw, 58vw"

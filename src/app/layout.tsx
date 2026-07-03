@@ -210,6 +210,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://i.ytimg.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
         <link rel="dns-prefetch" href="https://i.ytimg.com" />
+        {/* Preload LCP image: YouTube thumbnail for Hero section */}
+        <link rel="preload" href="https://i.ytimg.com/vi/XQZuDgAT8JA/hqdefault.jpg" as="image" crossOrigin="anonymous" />
         {/* Critical CSS for instant FCP - minimal above-the-fold styles */}
         <style dangerouslySetInnerHTML={{
           __html: `
