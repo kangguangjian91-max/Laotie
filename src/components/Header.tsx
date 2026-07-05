@@ -19,10 +19,13 @@ const globalLinks = [
   { label: "Philippines", href: "/steel-structure-philippines", flag: "🇵🇭", disabled: false },
   { label: "Vietnam", href: "/steel-structure-vietnam", flag: "🇻🇳", disabled: false },
   { label: "Indonesia", href: "/steel-structure-indonesia", flag: "🇮🇩", disabled: false },
-  { label: "Nigeria", href: "/steel-structure-nigeria", flag: "🇳🇬", disabled: false },
   { label: "Thailand", href: "/steel-structure-thailand", flag: "🇹🇭", disabled: false },
+  { label: "India", href: "/steel-structure-india", flag: "🇮🇳", disabled: false },
   { label: "Saudi Arabia", href: "/steel-structure-saudi-arabia", flag: "🇸🇦", disabled: false },
+  { label: "UAE", href: "/steel-structure-uae", flag: "🇦🇪", disabled: false },
+  { label: "Nigeria", href: "/steel-structure-nigeria", flag: "🇳🇬", disabled: false },
   { label: "Australia", href: "/steel-structure-australia", flag: "🇦🇺", disabled: false },
+  { label: "Brazil", href: "/steel-structure-brazil", flag: "🇧🇷", disabled: false },
 ];
 
 export default function Header() {
@@ -110,19 +113,22 @@ export default function Header() {
                       className="flex items-center gap-2.5 px-4 py-2.5 text-sm transition-colors text-gray-700 hover:bg-gray-50 hover:text-steel"
                       onClick={(e) => {
                         // Track landing page view
-                        const countryMap: Record<string, string> = {
-                          '/steel-structure-philippines': 'philippines',
-                          '/steel-structure-vietnam': 'vietnam',
-                          '/steel-structure-indonesia': 'indonesia',
-                          '/steel-structure-nigeria': 'nigeria',
-                          '/steel-structure-thailand': 'thailand',
-                          '/steel-structure-australia': 'australia',
-                        };
-                        const country = countryMap[link.href];
-                        if (country) {
-                          trackLandingPageView(country, country as any);
-                        }
-                        setGlobalOpen(false);
+                      const countryMap: Record<string, string> = {
+                        '/steel-structure-philippines': 'philippines',
+                        '/steel-structure-vietnam': 'vietnam',
+                        '/steel-structure-indonesia': 'indonesia',
+                        '/steel-structure-nigeria': 'nigeria',
+                        '/steel-structure-thailand': 'thailand',
+                        '/steel-structure-australia': 'australia',
+                        '/steel-structure-india': 'india',
+                        '/steel-structure-uae': 'uae',
+                        '/steel-structure-brazil': 'brazil',
+                      };
+                      const country = countryMap[link.href];
+                      if (country) {
+                        trackLandingPageView(country, country as any);
+                      }
+                      setGlobalOpen(false);
                       }}
                     >
                       <span className="text-base">{link.flag}</span>
@@ -214,6 +220,9 @@ export default function Header() {
                         '/steel-structure-nigeria': 'nigeria',
                         '/steel-structure-thailand': 'thailand',
                         '/steel-structure-australia': 'australia',
+                        '/steel-structure-india': 'india',
+                        '/steel-structure-uae': 'uae',
+                        '/steel-structure-brazil': 'brazil',
                       };
                       const country = countryMap[link.href];
                       if (country) {

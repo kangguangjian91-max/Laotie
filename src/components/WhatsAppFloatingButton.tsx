@@ -34,7 +34,7 @@ export default function FloatingWhatsApp() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-50">
       {/* Chat box popup */}
       {isOpen && (
         <div className="mb-4 mr-2 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden animate-fade-in-up"
@@ -97,7 +97,7 @@ export default function FloatingWhatsApp() {
 
       {/* Tooltip */}
       {!isOpen && (
-        <div className="absolute bottom-20 right-0 bg-gray-900 text-white text-sm py-2 px-3 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+        <div className="absolute bottom-full mb-2 right-0 bg-gray-900 text-white text-sm py-2 px-3 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
           💬 Get Free Quote
         </div>
       )}

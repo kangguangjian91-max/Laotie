@@ -258,11 +258,11 @@ export default function ProjectsClient() {
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-10">What Our Clients Say</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { client: "Nguyen Van A", company: "Logistics Company", location: "Hanoi, Vietnam", review: "Laotie Steel provided excellent service. Their warehouse quality is outstanding. Highly recommended!", project: "5,000 sqm Warehouse in Hanoi", date: "March 2025" },
-                { client: "Budi Santoso", company: "Electronics Manufacturer", location: "Jakarta, Indonesia", review: "We are very satisfied with Laotie's factory building. The quality is excellent and installation guidance was very helpful.", project: "8,000 sqm Factory in Jakarta", date: "December 2024" },
-                { client: "Mohammed Bello", company: "Logistics Company", location: "Lagos, Nigeria", review: "Laotie Steel understands Nigerian climate. Their warehouse design is perfect for heavy rain protection.", project: "3,500 sqm Warehouse in Lagos", date: "January 2025" },
-                { client: "Maria Santos", company: "Manufacturing Company", location: "Manila, Philippines", review: "Excellent communication and fast response. Laotie delivered quality steel structure for our factory.", project: "6,000 sqm Factory in Manila", date: "February 2025" },
-                { client: "Somchai Tanaka", company: "Agricultural Company", location: "Bangkok, Thailand", review: "Laotie Steel provided complete solution for our processing plant. Very professional team.", project: "4,200 sqm Processing Plant in Bangkok", date: "April 2025" },
+                { client: "Mr. Nguyen V.", company: "Logistics Company", location: "Hanoi, Vietnam", review: "Laotie Steel provided excellent service. Their warehouse quality is outstanding. Highly recommended!", project: "5,000 sqm Warehouse in Hanoi", date: "March 2025" },
+                { client: "Mr. Budi S.", company: "Electronics Manufacturer", location: "Jakarta, Indonesia", review: "We are very satisfied with Laotie's factory building. The quality is excellent and installation guidance was very helpful.", project: "8,000 sqm Factory in Jakarta", date: "December 2024" },
+                { client: "Mr. Mohammed B.", company: "Logistics Company", location: "Lagos, Nigeria", review: "Laotie Steel understands Nigerian climate. Their warehouse design is perfect for heavy rain protection.", project: "3,500 sqm Warehouse in Lagos", date: "January 2025" },
+                { client: "Ms. Maria S.", company: "Manufacturing Company", location: "Manila, Philippines", review: "Excellent communication and fast response. Laotie delivered quality steel structure for our factory.", project: "6,000 sqm Factory in Manila", date: "February 2025" },
+                { client: "Mr. Somchai T.", company: "Agricultural Company", location: "Bangkok, Thailand", review: "Laotie Steel provided complete solution for our processing plant. Very professional team.", project: "4,200 sqm Processing Plant in Bangkok", date: "April 2025" },
               ].map((r) => (
                 <div key={r.client} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                   <div className="flex items-center gap-1 mb-4">

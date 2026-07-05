@@ -119,9 +119,9 @@ export default function Hero() {
                   {!isVideoLoaded ? (
                     /* Thumbnail with Play Button - LCP optimized */
                     <>
-                      {/* YouTube thumbnail as LCP image - priority preloaded */}
+                      {/* Local poster image as LCP - priority preloaded (was YouTube CDN, now local for stability) */}
                       <Image
-                        src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
+                        src="/images/hero-poster.jpg"
                         alt="Laotie Steel Structure Factory Tour Video"
                         fill
                         sizes="(max-width: 1024px) 100vw, 58vw"

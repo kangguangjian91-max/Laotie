@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     locale: "en_VN",
     type: "website",
   },
-  alternates: { canonical: "https://www.laotie-steel.com/steel-structure-vietnam" },
+  alternates: { canonical: "https://www.laotie-steel.com/steel-structure-vietnam", languages: { "en-VN": "https://www.laotie-steel.com/steel-structure-vietnam" } },
   twitter: {
     card: "summary_large_image",
     title: "Steel Structure Vietnam | Laotie Steel",

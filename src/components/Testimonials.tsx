@@ -85,11 +85,6 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
-
-        {/* Note to user: replace with real testimonials */}
-        <p className="text-center text-xs text-gray-400 mt-8">
-          📝 Have a client review? Send it to us and we'll add it here!
-        </p>
       </div>
     </section>
   );

@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     locale: "en_NG",
     type: "website",
   },
-  alternates: { canonical: "https://www.laotie-steel.com/steel-structure-nigeria" },
+  alternates: { canonical: "https://www.laotie-steel.com/steel-structure-nigeria", languages: { "en-NG": "https://www.laotie-steel.com/steel-structure-nigeria" } },
   twitter: {
     card: "summary_large_image",
     title: "Steel Structure Nigeria | Laotie Steel",

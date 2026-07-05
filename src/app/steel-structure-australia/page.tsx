@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     locale: "en_AU",
     type: "website",
   },
-  alternates: { canonical: "https://www.laotie-steel.com/steel-structure-australia" },
+  alternates: { canonical: "https://www.laotie-steel.com/steel-structure-australia", languages: { "en-AU": "https://www.laotie-steel.com/steel-structure-australia" } },
   twitter: {
     card: "summary_large_image",
     title: "Steel Structure Australia | Laotie Steel",

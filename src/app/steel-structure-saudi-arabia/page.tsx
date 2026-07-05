@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     locale: "en_SA",
     type: "website",
   },
-  alternates: { canonical: "https://www.laotie-steel.com/steel-structure-saudi-arabia" },
+  alternates: { canonical: "https://www.laotie-steel.com/steel-structure-saudi-arabia", languages: { "en-SA": "https://www.laotie-steel.com/steel-structure-saudi-arabia" } },
   twitter: {
     card: "summary_large_image",
     title: "Steel Structure Saudi Arabia | Laotie Steel",

@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     locale: "en_ID",
     type: "website",
   },
-  alternates: { canonical: "https://www.laotie-steel.com/steel-structure-indonesia" },
+  alternates: { canonical: "https://www.laotie-steel.com/steel-structure-indonesia", languages: { "en-ID": "https://www.laotie-steel.com/steel-structure-indonesia" } },
   twitter: {
     card: "summary_large_image",
     title: "Steel Structure Indonesia | Laotie Steel",

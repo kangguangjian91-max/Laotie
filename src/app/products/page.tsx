@@ -52,6 +52,10 @@ const productSchemas = products.map((p, i) => ({
   description: p.description,
   image: `https://www.laotie-steel.com${p.image}`,
   category: "Steel Structure",
+  brand: {
+    "@type": "Brand",
+    name: "Laotie Steel",
+  },
   manufacturer: {
     "@type": "Organization",
     name: "Laotie Steel Structure Co., Ltd.",
@@ -63,23 +67,6 @@ const productSchemas = products.map((p, i) => ({
     highPrice: p.schemaPriceHigh,
     offerCount: "1",
     availability: "https://schema.org/InStock",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "1",
-    bestRating: "5",
-  },
-  review: {
-    "@type": "Review",
-    author: { "@type": "Person", name: "Hongxin Sports Equipment" },
-    reviewBody: "Fast delivery, excellent quality, customized solutions delivered on time.",
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: "5",
-      bestRating: "5",
-    },
-    datePublished: "2026-06-01",
   },
 }));
 

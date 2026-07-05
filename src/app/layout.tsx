@@ -145,19 +145,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Hreflang tags for international SEO */}
+        {/* Hreflang tags — only global en + x-default here.
+            Country-specific hreflang is declared in each landing page's metadata to avoid
+            incorrectly telling Google that /about, /contact etc. have Thai/Vietnamese versions. */}
         <link rel="alternate" hrefLang="en" href="https://www.laotie-steel.com" />
         <link rel="alternate" hrefLang="x-default" href="https://www.laotie-steel.com" />
-        <link rel="alternate" hrefLang="en-TH" href="https://www.laotie-steel.com/steel-structure-thailand" />
-        <link rel="alternate" hrefLang="en-VN" href="https://www.laotie-steel.com/steel-structure-vietnam" />
-        <link rel="alternate" hrefLang="en-ID" href="https://www.laotie-steel.com/steel-structure-indonesia" />
-        <link rel="alternate" hrefLang="en-PH" href="https://www.laotie-steel.com/steel-structure-philippines" />
-        <link rel="alternate" hrefLang="en-NG" href="https://www.laotie-steel.com/steel-structure-nigeria" />
-        <link rel="alternate" hrefLang="en-SA" href="https://www.laotie-steel.com/steel-structure-saudi-arabia" />
-        <link rel="alternate" hrefLang="en-AU" href="https://www.laotie-steel.com/steel-structure-australia" />
-        <link rel="alternate" hrefLang="en-IN" href="https://www.laotie-steel.com/steel-structure-india" />
-        <link rel="alternate" hrefLang="en-AE" href="https://www.laotie-steel.com/steel-structure-uae" />
-        <link rel="alternate" hrefLang="pt-BR" href="https://www.laotie-steel.com/steel-structure-brazil" />
         {/* Microsoft Clarity — free user behavior analytics (Hotjar alternative) */}
         <Script
           id="microsoft-clarity"
@@ -211,11 +203,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.youtube-nocookie.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://i.ytimg.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
-        <link rel="dns-prefetch" href="https://i.ytimg.com" />
-        {/* Preload LCP image: YouTube thumbnail for Hero section */}
-        <link rel="preload" href="https://i.ytimg.com/vi/XQZuDgAT8JA/hqdefault.jpg" as="image" crossOrigin="anonymous" />
+        {/* Preload LCP image: local poster for Hero section (was YouTube CDN, now local for CORS stability) */}
+        <link rel="preload" href="/images/hero-poster.jpg" as="image" />
         {/* Critical CSS for instant FCP - minimal above-the-fold styles */}
         <style dangerouslySetInnerHTML={{
           __html: `
@@ -231,7 +221,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         <ServiceWorkerRegistration />
-        <main id="main-content">
+        <main id="main-content" className="pb-20 md:pb-0">
         {children}
         </main>
         <CookieConsent />

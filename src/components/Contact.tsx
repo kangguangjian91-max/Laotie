@@ -9,6 +9,8 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     contact: "",
+    country: "",
+    projectType: "",
     message: "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -16,13 +18,13 @@ export default function Contact() {
 
   const validate = () => {
     const newErrors: Record<string, string> = {};
-    
+
     if (!formData.name.trim()) {
       newErrors.name = "Name is required";
     } else if (formData.name.trim().length < 2) {
       newErrors.name = "Name must be at least 2 characters";
     }
-    
+
     if (!formData.contact.trim()) {
       newErrors.contact = "Email or WhatsApp is required";
     } else {
@@ -32,11 +34,11 @@ export default function Contact() {
         newErrors.contact = "Please enter a valid email or WhatsApp number";
       }
     }
-    
+
     if (formData.message && formData.message.trim().length < 10) {
       newErrors.message = "Message must be at least 10 characters";
     }
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -89,7 +91,7 @@ export default function Contact() {
           onSubmit={handleSubmit}
           noValidate
           aria-label="Contact inquiry form"
-          className="max-w-2xl mx-auto grid sm:grid-cols-3 gap-4"
+          className="max-w-2xl mx-auto grid sm:grid-cols-2 gap-4"
         >
           <input type="hidden" name="_subject" value="Quick Inquiry — Laotie Steel Website" />
           <input type="hidden" name="_captcha" value="true" />
@@ -132,16 +134,37 @@ export default function Contact() {
               <p className="text-red-400 text-xs mt-1 ml-1">{errors.contact}</p>
             )}
           </div>
-          <button
-            type="submit"
-            disabled={hasErrors || isSubmitting}
-            className={`px-6 py-3.5 rounded-xl bg-gradient-to-r from-cta to-orange-600 hover:from-cta-hover hover:to-orange-700 text-white font-semibold text-sm transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 ${
-              (hasErrors || isSubmitting) ? "opacity-50 cursor-not-allowed" : ""
-            }`}
-          >
-            {isSubmitting ? "Sending..." : "Send Inquiry"}
-          </button>
-          <div className="sm:col-span-3">
+          <div>
+            <label htmlFor="contact-country" className="sr-only">Country</label>
+            <input
+              id="contact-country"
+              type="text"
+              name="country"
+              placeholder="Country / Region"
+              value={formData.country}
+              onChange={(e) => handleChange("country", e.target.value)}
+              className="px-5 py-3.5 rounded-xl bg-white/[0.07] backdrop-blur border border-white/[0.12] focus:border-steel-accent text-white placeholder:text-gray-400 focus:outline-none focus:bg-white/[0.1] text-sm transition-all w-full"
+            />
+          </div>
+          <div>
+            <label htmlFor="contact-project-type" className="sr-only">Project Type</label>
+            <select
+              id="contact-project-type"
+              name="projectType"
+              value={formData.projectType}
+              onChange={(e) => handleChange("projectType", e.target.value)}
+              className="px-5 py-3.5 rounded-xl bg-white/[0.07] backdrop-blur border border-white/[0.12] focus:border-steel-accent text-white focus:outline-none focus:bg-white/[0.1] text-sm transition-all w-full appearance-none cursor-pointer"
+            >
+              <option value="" className="bg-steel text-gray-300">Project Type (optional)</option>
+              <option value="Warehouse" className="bg-steel">Warehouse / Logistics</option>
+              <option value="Factory" className="bg-steel">Factory / Manufacturing</option>
+              <option value="Hangar" className="bg-steel">Aircraft Hangar</option>
+              <option value="Agricultural" className="bg-steel">Agricultural / Storage</option>
+              <option value="Commercial" className="bg-steel">Commercial Building</option>
+              <option value="Other" className="bg-steel">Other</option>
+            </select>
+          </div>
+          <div className="sm:col-span-2">
             <label htmlFor="contact-message" className="sr-only">Project Description</label>
             <textarea
               id="contact-message"
@@ -157,6 +180,17 @@ export default function Contact() {
             {errors.message && (
               <p className="text-red-400 text-xs mt-1 ml-1">{errors.message}</p>
             )}
+          </div>
+          <div className="sm:col-span-2">
+            <button
+              type="submit"
+              disabled={hasErrors || isSubmitting}
+              className={`w-full sm:w-auto sm:px-12 px-6 py-3.5 rounded-xl bg-gradient-to-r from-cta to-orange-600 hover:from-cta-hover hover:to-orange-700 text-white font-semibold text-sm transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 mx-auto block ${
+                (hasErrors || isSubmitting) ? "opacity-50 cursor-not-allowed" : ""
+              }`}
+            >
+              {isSubmitting ? "Sending..." : "Send Inquiry"}
+            </button>
           </div>
         </form>
 
