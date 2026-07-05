@@ -24,16 +24,17 @@ const DESIGN_PERCENT = 1; // 1%
 const CONTINGENCY_PERCENT = 3; // 3%
 
 // 货币选择
+// 注意：CNY 用 "RMB "（带空格）而非 "¥"，避免 Chrome 翻译引擎把 ¥ 误识别为日元
 const CURRENCIES: Record<
   string,
   { rate: number; symbol: string; label: string }
 > = {
-  CNY: { rate: 1.0, symbol: "¥", label: "China (¥ CNY)" },
+  CNY: { rate: 1.0, symbol: "RMB ", label: "China (RMB)" },
   USD: { rate: 1 / 7.25, symbol: "$", label: "International (USD)" },
   AUD: { rate: 1 / 4.75, symbol: "A$", label: "Australia (AUD)" },
 };
 
-const EXCHANGE_RATE_NOTE = "1 USD = 7.25 CNY | 1 AUD = 4.75 CNY (July 2026)";
+const EXCHANGE_RATE_NOTE = "1 USD = 7.25 RMB | 1 AUD = 4.75 RMB (July 2026)";
 
 const STEEL_RATE: Record<string, number> = {
   warehouse: 28,
@@ -126,15 +127,16 @@ export default function Calculator() {
   const searchParams = useSearchParams();
 
   const [buildingType, setBuildingType] = useState("warehouse");
-  const [length, setLength] = useState(120);
-  const [width, setWidth] = useState(60);
-  const [height, setHeight] = useState(12);
+  // 用 string state 存储输入，避免 Number("")=0 触发验证冻结导致吨位"卡住"
+  const [length, setLength] = useState<string>("120");
+  const [width, setWidth] = useState<string>("60");
+  const [height, setHeight] = useState<string>("12");
   const [crane, setCrane] = useState("none");
   const [currency, setCurrency] = useState("CNY");
   const [steelGrade, setSteelGrade] = useState("Q355B");
   const [claddingType, setCladdingType] = useState("PIR");
-  const [mezzanineArea, setMezzanineArea] = useState(0);
-  const [quantity, setQuantity] = useState(1);
+  const [mezzanineArea, setMezzanineArea] = useState<string>("0");
+  const [quantity, setQuantity] = useState<string>("1");
   const [spanType, setSpanType] = useState("clear");
   const [inputError, setInputError] = useState(false);
   const shareUrlRef = useRef("");
@@ -163,20 +165,22 @@ export default function Calculator() {
 
   // Auto-calculate whenever any input changes
   useEffect(() => {
-    const L = Number(length);
-    const W = Number(width);
-    const H = Number(height);
-    const Q = Number(quantity) || 1;
+    // 解析输入：空字符串 → NaN，避免 Number("")=0 触发验证冻结
+    const parseNum = (s: string) => {
+      const trimmed = (s ?? "").toString().trim();
+      if (trimmed === "") return NaN;
+      const n = Number(trimmed);
+      return isNaN(n) ? NaN : n;
+    };
 
-    // P1: 输入验证 — 无效时保留上一次 result，不消失
-    if (
-      isNaN(L) ||
-      isNaN(W) ||
-      isNaN(H) ||
-      L <= 0 ||
-      W <= 0 ||
-      H <= 0
-    ) {
+    const L = parseNum(length);
+    const W = parseNum(width);
+    const H = parseNum(height);
+    const Q = parseNum(quantity) || 1;
+    const mezArea = parseNum(mezzanineArea) || 0;
+
+    // 输入验证 — 无效时保留上一次 result，不消失
+    if (isNaN(L) || isNaN(W) || isNaN(H) || L <= 0 || W <= 0 || H <= 0) {
       setInputError(true);
       return;
     }
@@ -204,8 +208,8 @@ export default function Calculator() {
     const costWall = wallArea * claddingPrice * Q;
     const costDoors = area * BASE_PRICES.doors * Q;
     const costMezzanine =
-      mezzanineArea > 0
-        ? mezzanineArea *
+      mezArea > 0
+        ? mezArea *
           BASE_PRICES.mezzanineSteelRate *
           BASE_PRICES.steel *
           Q
@@ -246,7 +250,7 @@ export default function Calculator() {
     });
 
     // GA4 event tracking (throttle: same inputs = skip)
-    const calcKey = `${buildingType}|${currency}|${L}|${W}|${H}|${crane}|${steelGrade}|${claddingType}|${mezzanineArea}|${Q}|${spanType}`;
+    const calcKey = `${buildingType}|${currency}|${L}|${W}|${H}|${crane}|${steelGrade}|${claddingType}|${mezArea}|${Q}|${spanType}`;
     if (
       calcKey !== prevCalcKey.current &&
       typeof window !== "undefined" &&
@@ -293,9 +297,9 @@ export default function Calculator() {
     )
       setBuildingType(bt);
     if (cur && CURRENCIES[cur]) setCurrency(cur);
-    if (len) setLength(Number(len));
-    if (wdt) setWidth(Number(wdt));
-    if (hgt) setHeight(Number(hgt));
+    if (len) setLength(len);
+    if (wdt) setWidth(wdt);
+    if (hgt) setHeight(hgt);
     if (crn) setCrane(crn.toLowerCase());
     const grit = searchParams.get("steelGrade");
     if (grit && ["Q235B", "Q355B"].includes(grit)) setSteelGrade(grit);
@@ -303,9 +307,9 @@ export default function Calculator() {
     if (cladding && ["single", "PIR", "rockwool"].includes(cladding))
       setCladdingType(cladding);
     const mezz = searchParams.get("mezzanine");
-    if (mezz) setMezzanineArea(Number(mezz));
+    if (mezz) setMezzanineArea(mezz);
     const qty = searchParams.get("quantity");
-    if (qty) setQuantity(Math.max(1, Number(qty)));
+    if (qty) setQuantity(qty);
     const span = searchParams.get("spanType");
     if (span && ["clear", "multi"].includes(span)) setSpanType(span);
   }, [searchParams]);
@@ -493,8 +497,10 @@ export default function Calculator() {
                 min={10}
                 max={200}
                 value={length}
-                onChange={(e) => setLength(Number(e.target.value))}
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 pr-12 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                onChange={(e) => setLength(e.target.value)}
+                className={`w-full border rounded-lg px-4 py-3 pr-12 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
+                  inputError ? "border-red-400" : "border-gray-300"
+                }`}
               />
               <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm pointer-events-none">
                 m
@@ -514,8 +520,10 @@ export default function Calculator() {
                 min={10}
                 max={150}
                 value={width}
-                onChange={(e) => setWidth(Number(e.target.value))}
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 pr-12 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                onChange={(e) => setWidth(e.target.value)}
+                className={`w-full border rounded-lg px-4 py-3 pr-12 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
+                  inputError ? "border-red-400" : "border-gray-300"
+                }`}
               />
               <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm pointer-events-none">
                 m
@@ -535,8 +543,10 @@ export default function Calculator() {
                 min={6}
                 max={20}
                 value={height}
-                onChange={(e) => setHeight(Number(e.target.value))}
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 pr-12 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                onChange={(e) => setHeight(e.target.value)}
+                className={`w-full border rounded-lg px-4 py-3 pr-12 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
+                  inputError ? "border-red-400" : "border-gray-300"
+                }`}
               />
               <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm pointer-events-none">
                 m
@@ -610,7 +620,7 @@ export default function Calculator() {
                 min={0}
                 max={5000}
                 value={mezzanineArea}
-                onChange={(e) => setMezzanineArea(Number(e.target.value))}
+                onChange={(e) => setMezzanineArea(e.target.value)}
                 placeholder="e.g. 600"
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 pr-12 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
@@ -629,18 +639,11 @@ export default function Calculator() {
               type="number"
               min={1}
               max={50}
-              value={quantity || ""}
-              onChange={(e) => {
-                const raw = e.target.value;
-                if (raw === "") {
-                  setQuantity(0);
-                  return;
-                }
-                const n = Number(raw);
-                if (!isNaN(n)) setQuantity(Math.max(0, n));
-              }}
+              value={quantity}
+              onChange={(e) => setQuantity(e.target.value)}
               onBlur={() => {
-                if (quantity < 1) setQuantity(1);
+                const n = Number(quantity);
+                if (isNaN(n) || n < 1) setQuantity("1");
               }}
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
@@ -665,7 +668,8 @@ export default function Calculator() {
         {/* P1: 输入验证提示 */}
         {inputError && (
           <p className="mt-4 text-sm text-red-600 text-center">
-            Please enter valid dimensions
+            Please enter valid dimensions (Length, Width, Height must be
+            greater than 0) — estimate will refresh once inputs are valid
           </p>
         )}
 
