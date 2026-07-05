@@ -1,223 +1,39 @@
 "use client";
 
-import { useState, useCallback, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 
 const PRICE_UPDATE = "July 2026";
 
-// Region-specific prices (local currency per unit)
-const REGION_PRICES: Record<
-  string,
-  {
-    steel: number;
-    roof: number;
-    wall: number;
-    shippingPerContainer: number;
-    install: number;
-    foundation: number;
-    doors: number;
-    design: number;
-    contingency: number;
-    currency: string;
-    symbol: string;
-    shipDays: number;
-    installDaysBase: number;
-    tonsPerContainer: number;
-  }
-> = {
-  australia: {
-    steel: 1350,
-    roof: 42,
-    wall: 38,
-    shippingPerContainer: 3500,
-    install: 120,
-    foundation: 150,
-    doors: 8,
-    design: 5,
-    contingency: 8,
-    currency: "AUD",
-    symbol: "AUD",
-    shipDays: 30,
-    installDaysBase: 14,
-    tonsPerContainer: 27,
-  },
-  china: {
-    steel: 5800,
-    roof: 35,
-    wall: 28,
-    shippingPerContainer: 500,
-    install: 320,
-    foundation: 220,
-    doors: 6,
-    design: 3,
-    contingency: 5,
-    currency: "CNY",
-    symbol: "CNY",
-    shipDays: 8,
-    installDaysBase: 10,
-    tonsPerContainer: 27,
-  },
-  nigeria: {
-    steel: 800,
-    roof: 25,
-    wall: 22,
-    shippingPerContainer: 4800,
-    install: 55,
-    foundation: 45,
-    doors: 8,
-    design: 5,
-    contingency: 10,
-    currency: "USD",
-    symbol: "USD",
-    shipDays: 42,
-    installDaysBase: 21,
-    tonsPerContainer: 27,
-  },
-  philippines: {
-    steel: 800,
-    roof: 22,
-    wall: 20,
-    shippingPerContainer: 2800,
-    install: 50,
-    foundation: 40,
-    doors: 7,
-    design: 4,
-    contingency: 8,
-    currency: "USD",
-    symbol: "USD",
-    shipDays: 18,
-    installDaysBase: 14,
-    tonsPerContainer: 27,
-  },
-  uae: {
-    steel: 820,
-    roof: 28,
-    wall: 25,
-    shippingPerContainer: 2200,
-    install: 60,
-    foundation: 55,
-    doors: 9,
-    design: 5,
-    contingency: 8,
-    currency: "USD",
-    symbol: "USD",
-    shipDays: 24,
-    installDaysBase: 14,
-    tonsPerContainer: 27,
-  },
-  indonesia: {
-    steel: 780,
-    roof: 20,
-    wall: 18,
-    shippingPerContainer: 2400,
-    install: 48,
-    foundation: 38,
-    doors: 7,
-    design: 4,
-    contingency: 8,
-    currency: "USD",
-    symbol: "USD",
-    shipDays: 21,
-    installDaysBase: 14,
-    tonsPerContainer: 27,
-  },
-  vietnam: {
-    steel: 720,
-    roof: 21,
-    wall: 19,
-    shippingPerContainer: 2200,
-    install: 45,
-    foundation: 42,
-    doors: 7,
-    design: 4,
-    contingency: 8,
-    currency: "USD",
-    symbol: "USD",
-    shipDays: 16,
-    installDaysBase: 14,
-    tonsPerContainer: 27,
-  },
-  thailand: {
-    steel: 790,
-    roof: 24,
-    wall: 21,
-    shippingPerContainer: 2600,
-    install: 52,
-    foundation: 48,
-    doors: 8,
-    design: 5,
-    contingency: 8,
-    currency: "USD",
-    symbol: "USD",
-    shipDays: 20,
-    installDaysBase: 14,
-    tonsPerContainer: 27,
-  },
-  usa: {
-    steel: 950,
-    roof: 32,
-    wall: 28,
-    shippingPerContainer: 3500,
-    install: 85,
-    foundation: 90,
-    doors: 10,
-    design: 6,
-    contingency: 10,
-    currency: "USD",
-    symbol: "USD",
-    shipDays: 28,
-    installDaysBase: 14,
-    tonsPerContainer: 27,
-  },
-  uk: {
-    steel: 820,
-    roof: 35,
-    wall: 30,
-    shippingPerContainer: 2800,
-    install: 90,
-    foundation: 95,
-    doors: 10,
-    design: 6,
-    contingency: 10,
-    currency: "USD",
-    symbol: "USD",
-    shipDays: 30,
-    installDaysBase: 14,
-    tonsPerContainer: 27,
-  },
-  kenya: {
-    steel: 850,
-    roof: 26,
-    wall: 23,
-    shippingPerContainer: 4200,
-    install: 45,
-    foundation: 38,
-    doors: 8,
-    design: 5,
-    contingency: 10,
-    currency: "USD",
-    symbol: "USD",
-    shipDays: 35,
-    installDaysBase: 21,
-    tonsPerContainer: 27,
-  },
-  "south-africa": {
-    steel: 820,
-    roof: 28,
-    wall: 24,
-    shippingPerContainer: 3800,
-    install: 55,
-    foundation: 50,
-    doors: 9,
-    design: 5,
-    contingency: 10,
-    currency: "USD",
-    symbol: "USD",
-    shipDays: 32,
-    installDaysBase: 18,
-    tonsPerContainer: 27,
-  },
+// 统一出厂价（CNY）
+const BASE_PRICES = {
+  steel: 4480, // CNY/吨
+  doors: 6, // CNY/m²（按建筑面积）
+  mezzanineSteelRate: 0.35, // 吨/m²（夹层用钢量）
 };
+
+// 围护板统一价（CNY/m²，屋面墙面同价）
+const CLADDING_PRICE: Record<string, number> = {
+  single: 19, // 单板
+  PIR: 32, // PIR夹芯板
+  rockwool: 44, // 岩棉夹芯板
+};
+
+// 设计和应急
+const DESIGN_PERCENT = 1; // 1%
+const CONTINGENCY_PERCENT = 3; // 3%
+
+// 货币选择
+const CURRENCIES: Record<
+  string,
+  { rate: number; symbol: string; label: string }
+> = {
+  CNY: { rate: 1.0, symbol: "¥", label: "China (¥ CNY)" },
+  USD: { rate: 1 / 7.25, symbol: "$", label: "International (USD)" },
+  AUD: { rate: 1 / 4.75, symbol: "A$", label: "Australia (AUD)" },
+};
+
+const EXCHANGE_RATE_NOTE = "1 USD = 7.25 CNY | 1 AUD = 4.75 CNY (July 2026)";
 
 const STEEL_RATE: Record<string, number> = {
   warehouse: 28,
@@ -229,12 +45,6 @@ const STEEL_RATE: Record<string, number> = {
 const STEEL_GRADE_MULTIPLIER: Record<string, number> = {
   Q235B: 1.0,
   Q355B: 1.15,
-};
-
-const CLADDING_MULTIPLIER: Record<string, { roof: number; wall: number }> = {
-  single: { roof: 1.0, wall: 1.0 },
-  PIR: { roof: 1.6, wall: 1.6 },
-  rockwool: { roof: 1.5, wall: 1.4 },
 };
 
 const CRANE_ADDITION: Record<string, number> = {
@@ -249,32 +59,14 @@ const CHART_COLORS = [
   { bg: "bg-blue-500", hex: "#3B82F6", label: "Steel Fabrication" },
   { bg: "bg-green-500", hex: "#22C55E", label: "Roof Panels" },
   { bg: "bg-teal-500", hex: "#14B8A6", label: "Wall Panels" },
-  { bg: "bg-purple-500", hex: "#A855F7", label: "Ocean Freight" },
-  { bg: "bg-orange-500", hex: "#F97316", label: "Installation" },
-  { bg: "bg-red-500", hex: "#EF4444", label: "Foundation" },
   { bg: "bg-pink-500", hex: "#EC4899", label: "Doors & Windows" },
+  { bg: "bg-purple-500", hex: "#A855F7", label: "Mezzanine" },
 ];
 
-// Exchange rates to USD (approximate mid-market)
-const toUSDRate: Record<string, number> = {
-  CNY: 0.137,
-  AUD: 0.65,
-};
-
-const locationOptions = [
-  { value: "usa", label: "USA (USD)" },
-  { value: "uk", label: "United Kingdom (USD)" },
-  { value: "australia", label: "Australia (AUD)" },
-  { value: "nigeria", label: "Nigeria (USD)" },
-  { value: "kenya", label: "Kenya (USD)" },
-  { value: "south-africa", label: "South Africa (USD)" },
-  { value: "philippines", label: "Philippines (USD)" },
-  { value: "vietnam", label: "Vietnam (USD)" },
-  { value: "thailand", label: "Thailand (USD)" },
-  { value: "uae", label: "UAE / Dubai (USD)" },
-  { value: "indonesia", label: "Indonesia (USD)" },
-  { value: "china", label: "China (¥ CNY)" },
-];
+const currencyOptions = Object.entries(CURRENCIES).map(([value, c]) => ({
+  value,
+  label: c.label,
+}));
 
 // SVG share icons
 const ShareIcon = ({ type }: { type: string }) => {
@@ -312,7 +104,15 @@ const ShareIcon = ({ type }: { type: string }) => {
       );
     case "copy":
       return (
-        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          className={cls}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
           <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
         </svg>
@@ -324,20 +124,19 @@ const ShareIcon = ({ type }: { type: string }) => {
 
 export default function Calculator() {
   const searchParams = useSearchParams();
-  const hasTracked = useRef(false);
 
   const [buildingType, setBuildingType] = useState("warehouse");
   const [length, setLength] = useState(120);
   const [width, setWidth] = useState(60);
   const [height, setHeight] = useState(12);
   const [crane, setCrane] = useState("none");
-  const [location, setLocation] = useState("australia");
+  const [currency, setCurrency] = useState("CNY");
   const [steelGrade, setSteelGrade] = useState("Q355B");
   const [claddingType, setCladdingType] = useState("PIR");
   const [mezzanineArea, setMezzanineArea] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [spanType, setSpanType] = useState("clear");
-  const [supplyOnly, setSupplyOnly] = useState(false);
+  const [inputError, setInputError] = useState(false);
   const shareUrlRef = useRef("");
 
   const [result, setResult] = useState<{
@@ -349,9 +148,6 @@ export default function Calculator() {
     costSteel: number;
     costRoof: number;
     costWall: number;
-    costShipping: number;
-    costInstall: number;
-    costFoundation: number;
     costDoors: number;
     costMezzanine: number;
     subtotal: number;
@@ -360,97 +156,143 @@ export default function Calculator() {
     total: number;
     currency: string;
     symbol: string;
-    shipDays: number;
-    installDays: number;
+    productionDays: number;
   } | null>(null);
 
   const prevCalcKey = useRef("");
 
   // Auto-calculate whenever any input changes
   useEffect(() => {
-    const L = Number(length) || 0;
-    const W = Number(width) || 0;
-    const H = Number(height) || 0;
+    const L = Number(length);
+    const W = Number(width);
+    const H = Number(height);
     const Q = Number(quantity) || 1;
-    if (L <= 0 || W <= 0 || H <= 0) return;
+
+    // P1: 输入验证 — 无效时保留上一次 result，不消失
+    if (
+      isNaN(L) ||
+      isNaN(W) ||
+      isNaN(H) ||
+      L <= 0 ||
+      W <= 0 ||
+      H <= 0
+    ) {
+      setInputError(true);
+      return;
+    }
+    setInputError(false);
 
     const area = L * W;
     const wallArea = 2 * (L + W) * H * 0.85;
     const roofArea = area;
 
     const spanMultiplier = spanType === "multi" ? 0.88 : 1.0;
-    const rate = (STEEL_RATE[buildingType] || 28) + (CRANE_ADDITION[crane] || 0);
+    const rate =
+      (STEEL_RATE[buildingType] || 28) + (CRANE_ADDITION[crane] || 0);
     const gradeMultiplier = STEEL_GRADE_MULTIPLIER[steelGrade] || 1.0;
-    const claddingMul = CLADDING_MULTIPLIER[claddingType] || CLADDING_MULTIPLIER.PIR;
-    const steelTons = (area * rate * gradeMultiplier * spanMultiplier) / 1000;
+    const steelTons =
+      (area * rate * gradeMultiplier * spanMultiplier) / 1000;
 
-    const cfg = REGION_PRICES[location] || REGION_PRICES.australia;
-    const tonsPerContainer = cfg.tonsPerContainer || 27;
     const totalSteelTons = steelTons * Q;
-    const containers = Math.ceil(totalSteelTons / tonsPerContainer);
+    // 仅供展示：约多少个 40HQ 柜（不计入成本）
+    const containers = Math.ceil(totalSteelTons / 27);
 
-    const costSteel = totalSteelTons * cfg.steel;
-    const costRoof = roofArea * cfg.roof * claddingMul.roof * Q;
-    const costWall = wallArea * cfg.wall * claddingMul.wall * Q;
-    const costShipping = containers * cfg.shippingPerContainer;
-    const costInstall = supplyOnly ? 0 : area * cfg.install * Q;
-    const costFoundation = supplyOnly ? 0 : area * cfg.foundation * Q;
-    const costDoors = area * cfg.doors * Q;
-    const costMezzanine = mezzanineArea > 0 ? mezzanineArea * cfg.steel * 0.35 : 0;
+    const claddingPrice = CLADDING_PRICE[claddingType] || CLADDING_PRICE.PI;
+
+    const costSteel = totalSteelTons * BASE_PRICES.steel;
+    const costRoof = roofArea * claddingPrice * Q;
+    const costWall = wallArea * claddingPrice * Q;
+    const costDoors = area * BASE_PRICES.doors * Q;
+    const costMezzanine =
+      mezzanineArea > 0
+        ? mezzanineArea *
+          BASE_PRICES.mezzanineSteelRate *
+          BASE_PRICES.steel *
+          Q
+        : 0;
 
     const subtotal =
-      costSteel + costRoof + costWall + costShipping +
-      costInstall + costFoundation + costDoors + costMezzanine;
-
-    const costDesign = subtotal * (cfg.design / 100);
-    const costContingency = (subtotal + costDesign) * (cfg.contingency / 100);
+      costSteel + costRoof + costWall + costDoors + costMezzanine;
+    const costDesign = subtotal * (DESIGN_PERCENT / 100);
+    const costContingency =
+      (subtotal + costDesign) * (CONTINGENCY_PERCENT / 100);
     const total = subtotal + costDesign + costContingency;
 
-    const installDays = supplyOnly
-      ? 0
-      : (Math.ceil(area / 500) + cfg.installDaysBase) * Math.ceil(Q / 2);
+    // Lead Time: 纯生产时间
+    const productionDays = 30 + Math.ceil(area / 1000) * 3;
 
     shareUrlRef.current = "";
 
+    const cur = CURRENCIES[currency] || CURRENCIES.CNY;
+
     setResult({
-      area, steelTons, totalSteelTons, quantity: Q, containers,
-      costSteel, costRoof, costWall, costShipping,
-      costInstall, costFoundation, costDoors, costMezzanine,
-      subtotal, costDesign, costContingency, total,
-      currency: cfg.currency, symbol: cfg.symbol,
-      shipDays: cfg.shipDays, installDays,
+      area,
+      steelTons,
+      totalSteelTons,
+      quantity: Q,
+      containers,
+      costSteel,
+      costRoof,
+      costWall,
+      costDoors,
+      costMezzanine,
+      subtotal,
+      costDesign,
+      costContingency,
+      total,
+      currency,
+      symbol: cur.symbol,
+      productionDays,
     });
 
     // GA4 event tracking (throttle: same inputs = skip)
-    const calcKey = `${buildingType}|${location}|${L}|${W}|${H}|${crane}|${steelGrade}|${claddingType}|${mezzanineArea}|${Q}|${spanType}|${supplyOnly}`;
-    if (calcKey !== prevCalcKey.current && typeof window !== "undefined" && "gtag" in window) {
+    const calcKey = `${buildingType}|${currency}|${L}|${W}|${H}|${crane}|${steelGrade}|${claddingType}|${mezzanineArea}|${Q}|${spanType}`;
+    if (
+      calcKey !== prevCalcKey.current &&
+      typeof window !== "undefined" &&
+      "gtag" in window
+    ) {
       prevCalcKey.current = calcKey;
       const gtag = (window as any).gtag;
       if (typeof gtag === "function") {
         gtag("event", "calculator_estimate", {
           building_type: buildingType,
-          location,
+          currency,
           total_estimate: total,
-          currency: cfg.currency,
           area_sqm: area * Q,
         });
       }
     }
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [buildingType, length, width, height, crane, location, steelGrade, claddingType, mezzanineArea, quantity, spanType, supplyOnly]);
+  }, [
+    buildingType,
+    length,
+    width,
+    height,
+    crane,
+    currency,
+    steelGrade,
+    claddingType,
+    mezzanineArea,
+    quantity,
+    spanType,
+  ]);
 
-  // Read URL parameters on mount
+  // Read URL parameters on mount (location 参数改为 currency)
   useEffect(() => {
     const bt = searchParams.get("buildingType");
-    const loc = searchParams.get("location");
+    const cur = searchParams.get("currency");
     const len = searchParams.get("length");
     const wdt = searchParams.get("width");
     const hgt = searchParams.get("height");
     const crn = searchParams.get("crane");
 
-    if (bt && ["warehouse", "factory", "hangar", "logistics"].includes(bt)) setBuildingType(bt);
-    if (loc && REGION_PRICES[loc]) setLocation(loc);
+    if (
+      bt &&
+      ["warehouse", "factory", "hangar", "logistics"].includes(bt)
+    )
+      setBuildingType(bt);
+    if (cur && CURRENCIES[cur]) setCurrency(cur);
     if (len) setLength(Number(len));
     if (wdt) setWidth(Number(wdt));
     if (hgt) setHeight(Number(hgt));
@@ -458,25 +300,20 @@ export default function Calculator() {
     const grit = searchParams.get("steelGrade");
     if (grit && ["Q235B", "Q355B"].includes(grit)) setSteelGrade(grit);
     const cladding = searchParams.get("claddingType");
-    if (cladding && ["single", "PIR", "rockwool"].includes(cladding)) setCladdingType(cladding);
+    if (cladding && ["single", "PIR", "rockwool"].includes(cladding))
+      setCladdingType(cladding);
     const mezz = searchParams.get("mezzanine");
     if (mezz) setMezzanineArea(Number(mezz));
     const qty = searchParams.get("quantity");
     if (qty) setQuantity(Math.max(1, Number(qty)));
     const span = searchParams.get("spanType");
     if (span && ["clear", "multi"].includes(span)) setSpanType(span);
-    const onlySupply = searchParams.get("supplyOnly");
-    if (onlySupply === "1") setSupplyOnly(true);
   }, [searchParams]);
 
   const fmt = (n: number, sym: string) => {
-    const symbolMap: Record<string, string> = {
-      CNY: "¥", AUD: "A$", USD: "$",
-    };
-    const displaySymbol = symbolMap[sym] || "$";
-    if (n >= 1_000_000) return `${displaySymbol}${(n / 1_000_000).toFixed(2)}M`;
-    if (n >= 1_000) return `${displaySymbol}${Math.round(n / 1_000)}K`;
-    return `${displaySymbol}${Math.round(n)}`;
+    if (n >= 1_000_000) return `${sym}${(n / 1_000_000).toFixed(2)}M`;
+    if (n >= 1_000) return `${sym}${Math.round(n / 1_000)}K`;
+    return `${sym}${Math.round(n)}`;
   };
 
   // Share helpers
@@ -487,21 +324,20 @@ export default function Calculator() {
     logistics: "Logistics Center",
   };
 
-  const locationLabel: Record<string, string> = {
-    australia: "Australia", china: "China", nigeria: "Nigeria",
-    philippines: "Philippines", vietnam: "Vietnam", thailand: "Thailand",
-    uae: "UAE/Dubai", indonesia: "Indonesia",
-    usa: "USA", uk: "United Kingdom", kenya: "Kenya", "south-africa": "South Africa",
-  };
-
   const getShareUrl = () => {
     if (shareUrlRef.current) return shareUrlRef.current;
     const params = new URLSearchParams({
-      buildingType, location,
-      length: String(length), width: String(width), height: String(height),
-      crane, steelGrade, claddingType,
-      mezzanine: String(mezzanineArea), quantity: String(quantity),
-      spanType, supplyOnly: supplyOnly ? "1" : "0",
+      buildingType,
+      currency,
+      length: String(length),
+      width: String(width),
+      height: String(height),
+      crane,
+      steelGrade,
+      claddingType,
+      mezzanine: String(mezzanineArea),
+      quantity: String(quantity),
+      spanType,
     });
     const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
     shareUrlRef.current = url;
@@ -519,54 +355,87 @@ export default function Calculator() {
   const shareTo = (channel: string) => {
     const url = getShareUrl();
     const bl = buildingTypeLabel[buildingType] || buildingType;
-    const ll = locationLabel[location] || location;
-    const text = `Steel Structure Estimate - ${bl} in ${ll}: ${length}×${width}×${height}m`;
+    const cur = CURRENCIES[currency] || CURRENCIES.CNY;
+    const text = `Steel Structure Estimate (FOB China) - ${bl}: ${length}×${width}×${height}m`;
 
     const links: Record<string, string> = {
-      whatsapp: `https://wa.me/8616650735555?text=${encodeURIComponent(text + " " + url)}`,
-      email: `mailto:?subject=${encodeURIComponent(text)}&body=${encodeURIComponent(`Project Details:%0A- Building: ${bl}%0A- Location: ${ll}%0A- Dimensions: ${length}m × ${width}m × ${height}m%0A- Steel Grade: ${steelGrade}%0A- Cladding: ${claddingType}%0A%0AView full estimate: ${url}`)}`,
-      twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent("Get an instant steel structure cost estimate")}&url=${encodeURIComponent(url)}`,
-      linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
-      facebook: `https://www.facebook.com/sharer.php?u=${encodeURIComponent(url)}`,
+      whatsapp: `https://wa.me/?text=${encodeURIComponent(text + " " + url)}`,
+      email: `mailto:?subject=${encodeURIComponent(
+        text
+      )}&body=${encodeURIComponent(
+        `Project Details:%0A- Building: ${bl}%0A- Currency: ${cur.label}%0A- Dimensions: ${length}m × ${width}m × ${height}m%0A- Steel Grade: ${steelGrade}%0A- Cladding: ${claddingType}%0A%0AView full estimate: ${url}`
+      )}`,
+      twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+        "Get an instant steel structure cost estimate"
+      )}&url=${encodeURIComponent(url)}`,
+      linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+        url
+      )}`,
+      facebook: `https://www.facebook.com/sharer.php?u=${encodeURIComponent(
+        url
+      )}`,
     };
     window.open(links[channel] || links.whatsapp, "_blank");
   };
 
-  // Build donut chart data
+  // Build donut chart data — 包含 Mezzanine（当 costMezzanine > 0 时）
   const chartItems = result
     ? [
-        { label: "Steel Fabrication", value: result.costSteel, color: CHART_COLORS[0].hex },
+        {
+          label: "Steel Fabrication",
+          value: result.costSteel,
+          color: CHART_COLORS[0].hex,
+        },
         { label: "Roof Panels", value: result.costRoof, color: CHART_COLORS[1].hex },
         { label: "Wall Panels", value: result.costWall, color: CHART_COLORS[2].hex },
-        { label: "Ocean Freight", value: result.costShipping, color: CHART_COLORS[3].hex },
-        { label: "Installation Labor", value: result.costInstall, color: CHART_COLORS[4].hex },
-        { label: "Foundation Work", value: result.costFoundation, color: CHART_COLORS[5].hex },
-        { label: "Doors & Windows", value: result.costDoors, color: CHART_COLORS[6].hex },
+        {
+          label: "Doors & Windows",
+          value: result.costDoors,
+          color: CHART_COLORS[3].hex,
+        },
+        ...(result.costMezzanine > 0
+          ? [
+              {
+                label: "Mezzanine",
+                value: result.costMezzanine,
+                color: CHART_COLORS[4].hex,
+              },
+            ]
+          : []),
       ].filter((i) => i.value > 0)
     : [];
 
-  const chartTotal = chartItems.reduce((s, i) => s + i.value, 0);
+  // P0: 百分比基于 total（不是 chartTotal）计算
+  const conicGradient =
+    chartItems.length > 0 && result
+      ? (() => {
+          let cumulative = 0;
+          const stops = chartItems.map((item) => {
+            const pct = (item.value / result.total) * 100;
+            const start = cumulative;
+            cumulative += pct;
+            return `${item.color} ${start}% ${cumulative}%`;
+          });
+          return `conic-gradient(${stops.join(", ")})`;
+        })()
+      : "conic-gradient(#e5e7eb 0% 100%)";
 
-  // Build conic-gradient string
-  const conicGradient = chartItems.length > 0
-    ? (() => {
-        let cumulative = 0;
-        const stops = chartItems.map((item) => {
-          const pct = (item.value / chartTotal) * 100;
-          const start = cumulative;
-          cumulative += pct;
-          return `${item.color} ${start}% ${cumulative}%`;
-        });
-        return `conic-gradient(${stops.join(", ")})`;
-      })()
-    : "conic-gradient(#e5e7eb 0% 100%)";
+  const maxChartValue =
+    chartItems.length > 0
+      ? Math.max(...chartItems.map((i) => i.value))
+      : 1;
+
+  // Factory + Crane 提示
+  const showCraneHint = buildingType === "factory";
 
   return (
     <div className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden">
       {/* Input Panel */}
       <div className="p-6 lg:p-8 bg-gray-50 border-b border-gray-200">
         <div className="flex items-center justify-between mb-6">
-          <h3 className="text-xl font-bold text-steel">Project Parameters</h3>
+          <h3 className="text-xl font-bold text-steel">
+            Project Parameters
+          </h3>
           <span className="text-xs text-gray-400 bg-white px-2.5 py-1 rounded-full border border-gray-200">
             Prices updated {PRICE_UPDATE}
           </span>
@@ -575,10 +444,16 @@ export default function Calculator() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Building Type */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Building Type</label>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Building Type
+            </label>
             <select
               value={buildingType}
-              onChange={(e) => setBuildingType(e.target.value)}
+              onChange={(e) => {
+                setBuildingType(e.target.value);
+                // P2: Factory+Crane — factory 默认 none
+                if (e.target.value === "factory") setCrane("none");
+              }}
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             >
               <option value="warehouse">Warehouse / Logistics</option>
@@ -588,16 +463,20 @@ export default function Calculator() {
             </select>
           </div>
 
-          {/* Location */}
+          {/* Currency */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Project Location</label>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Display Currency
+            </label>
             <select
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
+              value={currency}
+              onChange={(e) => setCurrency(e.target.value)}
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             >
-              {locationOptions.map((opt) => (
-                <option key={opt.value} value={opt.value}>{opt.label}</option>
+              {currencyOptions.map((opt) => (
+                <option key={opt.value} value={opt.value}>
+                  {opt.label}
+                </option>
               ))}
             </select>
           </div>
@@ -605,51 +484,71 @@ export default function Calculator() {
           {/* Length */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Length (m) <span className="text-gray-400 font-normal">10–200</span>
+              Length{" "}
+              <span className="text-gray-400 font-normal">10–200 m</span>
             </label>
-            <input
-              type="number"
-              min={10}
-              max={200}
-              value={length}
-              onChange={(e) => setLength(Number(e.target.value))}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            />
+            <div className="relative">
+              <input
+                type="number"
+                min={10}
+                max={200}
+                value={length}
+                onChange={(e) => setLength(Number(e.target.value))}
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 pr-12 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              />
+              <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm pointer-events-none">
+                m
+              </span>
+            </div>
           </div>
 
           {/* Width */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Width (m) <span className="text-gray-400 font-normal">10–150</span>
+              Width{" "}
+              <span className="text-gray-400 font-normal">10–150 m</span>
             </label>
-            <input
-              type="number"
-              min={10}
-              max={150}
-              value={width}
-              onChange={(e) => setWidth(Number(e.target.value))}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            />
+            <div className="relative">
+              <input
+                type="number"
+                min={10}
+                max={150}
+                value={width}
+                onChange={(e) => setWidth(Number(e.target.value))}
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 pr-12 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              />
+              <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm pointer-events-none">
+                m
+              </span>
+            </div>
           </div>
 
           {/* Height */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Eave Height (m) <span className="text-gray-400 font-normal">6–20</span>
+              Eave Height{" "}
+              <span className="text-gray-400 font-normal">6–20 m</span>
             </label>
-            <input
-              type="number"
-              min={6}
-              max={20}
-              value={height}
-              onChange={(e) => setHeight(Number(e.target.value))}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            />
+            <div className="relative">
+              <input
+                type="number"
+                min={6}
+                max={20}
+                value={height}
+                onChange={(e) => setHeight(Number(e.target.value))}
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 pr-12 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              />
+              <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm pointer-events-none">
+                m
+              </span>
+            </div>
           </div>
 
           {/* Crane */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Overhead Crane</label>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Overhead Crane
+            </label>
             <select
               value={crane}
               onChange={(e) => setCrane(e.target.value)}
@@ -661,11 +560,18 @@ export default function Calculator() {
               <option value="20T">20 Ton</option>
               <option value="50T">50 Ton</option>
             </select>
+            {showCraneHint && (
+              <p className="mt-1 text-xs text-gray-500">
+                (factory already includes crane load)
+              </p>
+            )}
           </div>
 
           {/* Steel Grade */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Steel Grade</label>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Steel Grade
+            </label>
             <select
               value={steelGrade}
               onChange={(e) => setSteelGrade(e.target.value)}
@@ -678,7 +584,9 @@ export default function Calculator() {
 
           {/* Cladding Type */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Roof & Wall Cladding</label>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Roof & Wall Cladding
+            </label>
             <select
               value={claddingType}
               onChange={(e) => setCladdingType(e.target.value)}
@@ -693,17 +601,23 @@ export default function Calculator() {
           {/* Mezzanine Area */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Mezzanine / Office (m²) <span className="text-gray-400 font-normal">optional</span>
+              Mezzanine / Office{" "}
+              <span className="text-gray-400 font-normal">optional</span>
             </label>
-            <input
-              type="number"
-              min={0}
-              max={5000}
-              value={mezzanineArea}
-              onChange={(e) => setMezzanineArea(Number(e.target.value))}
-              placeholder="e.g. 600"
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            />
+            <div className="relative">
+              <input
+                type="number"
+                min={0}
+                max={5000}
+                value={mezzanineArea}
+                onChange={(e) => setMezzanineArea(Number(e.target.value))}
+                placeholder="e.g. 600"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 pr-12 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              />
+              <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm pointer-events-none">
+                m²
+              </span>
+            </div>
           </div>
 
           {/* Quantity */}
@@ -734,7 +648,9 @@ export default function Calculator() {
 
           {/* Span Type */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Span Configuration</label>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Span Configuration
+            </label>
             <select
               value={spanType}
               onChange={(e) => setSpanType(e.target.value)}
@@ -744,23 +660,14 @@ export default function Calculator() {
               <option value="multi">Multi-Span (saves ~12% steel)</option>
             </select>
           </div>
-
-          {/* Supply Only Toggle */}
-          <div className="flex items-center">
-            <label className="flex items-center gap-3 cursor-pointer">
-              <div
-                onClick={() => setSupplyOnly(!supplyOnly)}
-                className={`relative w-12 h-6 rounded-full transition-colors ${supplyOnly ? 'bg-steel' : 'bg-gray-300'}`}
-              >
-                <div className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow transition-transform ${supplyOnly ? 'translate-x-6' : ''}`} />
-              </div>
-              <div>
-                <span className="text-sm font-medium text-gray-700">Supply Only (FOB)</span>
-                <p className="text-xs text-gray-400">Exclude installation & foundation</p>
-              </div>
-            </label>
-          </div>
         </div>
+
+        {/* P1: 输入验证提示 */}
+        {inputError && (
+          <p className="mt-4 text-sm text-red-600 text-center">
+            Please enter valid dimensions
+          </p>
+        )}
 
         <p className="mt-4 text-xs text-gray-400 text-center">
           Estimate updates automatically as you type &mdash; no button needed
@@ -770,44 +677,73 @@ export default function Calculator() {
       {/* Result Panel */}
       {result && (
         <div className="p-6 lg:p-8">
-          <h3 className="text-xl font-bold text-steel mb-6">Your Estimate</h3>
+          {/* P1: 标题标注 FOB Ex-Works China */}
+          <div className="flex items-center justify-between mb-6">
+            <h3 className="text-xl font-bold text-steel">
+              Your Estimate — FOB Ex-Works China
+            </h3>
+          </div>
 
-          {/* Summary Cards */}
+          {/* 新增：汇率说明 */}
+          <div className="mb-6 p-3 bg-blue-50 border border-blue-100 rounded-lg text-sm text-blue-800">
+            Exchange Rate: {EXCHANGE_RATE_NOTE}
+          </div>
+
+          {/* Summary Cards — 3 个 */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
             <div className="bg-blue-50 rounded-xl p-4 text-center">
-              <div className="text-sm text-gray-500 mb-1">Total Estimated Price</div>
+              <div className="text-sm text-gray-500 mb-1">
+                Total FOB Price
+              </div>
               <div className="text-2xl font-bold text-steel">
-                {fmt(result.total, result.symbol)}
+                {fmt(
+                  result.total *
+                    (CURRENCIES[result.currency]?.rate || 1),
+                  result.symbol
+                )}
               </div>
               <div className="text-xs text-gray-500 mt-1">
-                {fmt(Math.round(result.total / (result.area * result.quantity)), result.symbol)}/m²
-                {result.currency !== "USD" && (
-                  <span className="text-gray-400 ml-1">
-                    (~${Math.round(result.total * (toUSDRate[result.currency] || 0.14) / (result.area * result.quantity))}/m² USD)
-                  </span>
+                {fmt(
+                  Math.round(
+                    (result.total *
+                      (CURRENCIES[result.currency]?.rate || 1)) /
+                      (result.area * result.quantity)
+                  ),
+                  result.symbol
                 )}
+                /m²
               </div>
             </div>
             <div className="bg-green-50 rounded-xl p-4 text-center">
-              <div className="text-sm text-gray-500 mb-1">Steel Quantity</div>
+              <div className="text-sm text-gray-500 mb-1">
+                Steel Quantity
+              </div>
               <div className="text-2xl font-bold text-green-700">
                 {Math.round(result.totalSteelTons)} t
               </div>
               <div className="text-xs text-gray-500 mt-1">
-                {result.quantity > 1 ? `${Math.round(result.steelTons)}t/building × ${result.quantity}` : ""}
-                {" "}≈ {result.containers} × 40HQ containers
+                {result.quantity > 1
+                  ? `${Math.round(result.steelTons)}t/building × ${result.quantity}`
+                  : ""}
+                {result.quantity > 1 ? " · " : ""}
+                ≈ {result.containers} × 40HQ containers
               </div>
             </div>
             <div className="bg-amber-50 rounded-xl p-4 text-center">
-              <div className="text-sm text-gray-500 mb-1">Estimated Lead Time</div>
+              <div className="text-sm text-gray-500 mb-1">
+                Production Time
+              </div>
               <div className="text-2xl font-bold text-amber-700">
-                {supplyOnly ? `${result.shipDays} days` : `${result.shipDays + result.installDays} days`}
+                {result.productionDays} days
               </div>
               <div className="text-xs text-gray-500 mt-1">
-                {supplyOnly
-                  ? `${result.shipDays}d shipping (FOB)`
-                  : `${result.shipDays}d shipping + ${result.installDays}d install`}
-                {result.quantity > 1 && <span className="text-gray-400"> ({result.quantity} buildings)</span>}
+                Production: {result.productionDays} days (FOB China)
+                {result.quantity > 1 && (
+                  <span className="text-gray-400">
+                    {" "}
+                    ({result.quantity} buildings)
+                  </span>
+                )}
               </div>
             </div>
           </div>
@@ -825,7 +761,11 @@ export default function Calculator() {
                   <div className="text-center">
                     <div className="text-xs text-gray-400">Total</div>
                     <div className="text-lg font-bold text-steel">
-                      {fmt(result.total, result.symbol)}
+                      {fmt(
+                        result.total *
+                          (CURRENCIES[result.currency]?.rate || 1),
+                        result.symbol
+                      )}
                     </div>
                   </div>
                 </div>
@@ -835,23 +775,40 @@ export default function Calculator() {
             {/* Legend + Bar List */}
             <div className="space-y-2">
               {chartItems.map((item) => {
-                const pct = ((item.value / chartTotal) * 100).toFixed(1);
+                // P0: 百分比基于 total 计算
+                const pct = (
+                  (item.value / result.total) *
+                  100
+                ).toFixed(1);
                 return (
-                  <div key={item.label} className="flex items-center gap-3">
+                  <div
+                    key={item.label}
+                    className="flex items-center gap-3"
+                  >
                     <span
                       className="w-3 h-3 rounded-full shrink-0"
                       style={{ backgroundColor: item.color }}
                     />
-                    <span className="text-sm text-gray-600 flex-1 truncate">{item.label}</span>
-                    <span className="text-sm font-semibold text-gray-900 w-20 text-right">
-                      {fmt(item.value, result.symbol)}
+                    <span className="text-sm text-gray-600 flex-1 truncate">
+                      {item.label}
                     </span>
-                    <span className="text-xs text-gray-400 w-10 text-right">{pct}%</span>
-                    <div className="w-16 bg-gray-100 rounded-full h-2">
+                    <span className="text-sm font-semibold text-gray-900 w-20 text-right">
+                      {fmt(
+                        item.value *
+                          (CURRENCIES[result.currency]?.rate || 1),
+                        result.symbol
+                      )}
+                    </span>
+                    {/* P2: 移动端隐藏百分比 */}
+                    <span className="text-xs text-gray-400 w-10 text-right hidden sm:block">
+                      {pct}%
+                    </span>
+                    {/* P2: 移动端隐藏 bar 列 */}
+                    <div className="w-16 bg-gray-100 rounded-full h-2 hidden sm:block">
                       <div
                         className="h-2 rounded-full"
                         style={{
-                          width: `${(item.value / Math.max(...chartItems.map((i) => i.value))) * 100}%`,
+                          width: `${(item.value / maxChartValue) * 100}%`,
                           backgroundColor: item.color,
                         }}
                       />
@@ -860,21 +817,43 @@ export default function Calculator() {
                 );
               })}
 
-              {/* Design & Contingency */}
+              {/* P0: Design 和 Contingency 百分比动态显示 */}
               <div className="pt-3 mt-3 border-t border-gray-200 space-y-1">
                 <div className="flex justify-between text-sm text-gray-500">
-                  <span>Design & Engineering (5%)</span>
-                  <span>{fmt(result.costDesign, result.symbol)}</span>
+                  <span>
+                    Design & Engineering ({DESIGN_PERCENT}%)
+                  </span>
+                  <span>
+                    {fmt(
+                      result.costDesign *
+                        (CURRENCIES[result.currency]?.rate || 1),
+                      result.symbol
+                    )}
+                  </span>
                 </div>
                 <div className="flex justify-between text-sm text-gray-500">
-                  <span>Contingency Buffer (8%)</span>
-                  <span>{fmt(result.costContingency, result.symbol)}</span>
+                  <span>
+                    Contingency Buffer ({CONTINGENCY_PERCENT}%)
+                  </span>
+                  <span>
+                    {fmt(
+                      result.costContingency *
+                        (CURRENCIES[result.currency]?.rate || 1),
+                      result.symbol
+                    )}
+                  </span>
                 </div>
               </div>
 
               <div className="pt-2 border-t border-gray-300 flex justify-between font-bold text-base">
                 <span>Total Estimate</span>
-                <span>{fmt(result.total, result.symbol)}</span>
+                <span>
+                  {fmt(
+                    result.total *
+                      (CURRENCIES[result.currency]?.rate || 1),
+                    result.symbol
+                  )}
+                </span>
               </div>
             </div>
           </div>
@@ -882,33 +861,78 @@ export default function Calculator() {
           {/* Clear Span vs Multi-Span note */}
           {spanType === "clear" && (
             <div className="mb-6 p-3 bg-blue-50 border border-blue-100 rounded-lg text-sm text-blue-800">
-              💡 <strong>Tip:</strong> Switching to <strong>Multi-Span</strong> configuration could save approximately{" "}
-              <strong>{fmt(Math.round(result.costSteel * 0.12), result.symbol)}</strong> on steel cost.
+              💡 <strong>Tip:</strong> Switching to <strong>Multi-Span</strong>{" "}
+              configuration could save approximately{" "}
+              <strong>
+                {fmt(
+                  Math.round(
+                    result.costSteel *
+                      0.12 *
+                      (CURRENCIES[result.currency]?.rate || 1)
+                  ),
+                  result.symbol
+                )}
+              </strong>{" "}
+              on steel cost.
             </div>
           )}
 
           <div className="p-4 bg-gray-50 rounded-lg text-sm text-gray-600">
-            <strong>Disclaimer:</strong> This is a preliminary estimate (±15–20% accuracy).
-            Prices current as of {PRICE_UPDATE}. Actual price depends on final design,
-            steel market fluctuation, and site conditions. Contact our engineering team for
-            a detailed quotation.
+            <strong>Disclaimer:</strong> This is a preliminary estimate
+            (±15–20% accuracy). Prices current as of {PRICE_UPDATE}. Actual
+            price depends on final design, steel market fluctuation, and site
+            conditions. Contact our engineering team for a detailed quotation.
+          </div>
+
+          {/* 新增：FOB Ex-Works China 底部声明 */}
+          <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-lg text-sm text-amber-800">
+            ⚠️ FOB Ex-Works China — excludes ocean freight, installation, and
+            foundation
           </div>
 
           {/* Share Buttons */}
           <div className="mt-6">
-            <div className="text-sm font-medium text-gray-700 mb-3">Share This Estimate</div>
+            <div className="text-sm font-medium text-gray-700 mb-3">
+              Share This Estimate
+            </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {[
-                { key: "whatsapp", label: "WhatsApp", color: "border-green-600 text-green-600 hover:bg-green-600" },
-                { key: "email", label: "Email", color: "border-gray-600 text-gray-600 hover:bg-gray-600" },
-                { key: "twitter", label: "Twitter", color: "border-blue-400 text-blue-400 hover:bg-blue-400" },
-                { key: "linkedin", label: "LinkedIn", color: "border-blue-700 text-blue-700 hover:bg-blue-700" },
-                { key: "facebook", label: "Facebook", color: "border-blue-900 text-blue-900 hover:bg-blue-900" },
-                { key: "copy", label: copied ? "Copied!" : "Copy Link", color: "border-steel text-steel hover:bg-steel" },
+                {
+                  key: "whatsapp",
+                  label: "WhatsApp",
+                  color: "border-green-600 text-green-600 hover:bg-green-600",
+                },
+                {
+                  key: "email",
+                  label: "Email",
+                  color: "border-gray-600 text-gray-600 hover:bg-gray-600",
+                },
+                {
+                  key: "twitter",
+                  label: "Twitter",
+                  color: "border-blue-400 text-blue-400 hover:bg-blue-400",
+                },
+                {
+                  key: "linkedin",
+                  label: "LinkedIn",
+                  color: "border-blue-700 text-blue-700 hover:bg-blue-700",
+                },
+                {
+                  key: "facebook",
+                  label: "Facebook",
+                  color: "border-blue-900 text-blue-900 hover:bg-blue-900",
+                },
+                {
+                  key: "copy",
+                  label: copied ? "Copied!" : "Copy Link",
+                  color: "border-steel text-steel hover:bg-steel",
+                },
               ].map((btn) => (
                 <button
                   key={btn.key}
-                  onClick={() => btn.key === "copy" ? copyShareLink() : shareTo(btn.key)}
+                  onClick={() =>
+                    btn.key === "copy" ? copyShareLink() : shareTo(btn.key)
+                  }
                   className={`flex items-center justify-center gap-2 py-3 px-4 border-2 rounded-lg font-semibold transition ${btn.color} hover:text-white`}
                 >
                   <ShareIcon type={btn.key} />
@@ -918,9 +942,10 @@ export default function Calculator() {
             </div>
           </div>
 
+          {/* P1: CTA 按钮改成橙色 */}
           <a
             href="/contact"
-            className="mt-6 block w-full text-center bg-steel text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-900 transition"
+            className="mt-6 block w-full text-center bg-orange-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-orange-700 transition"
           >
             Get Detailed Quote with Engineering →
           </a>

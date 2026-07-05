@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Steel Structure Cost Calculator 2026 | Free Quote Tool",
   description:
-    "Free steel structure cost calculator 2026. Estimate price per m² by building type, size, crane & location. Australia, Asia, Africa & Middle East.",
+    "Free steel structure cost calculator 2026. Estimate FOB factory price per m² by building type, size, crane & cladding. Q355B steel pricing.",
   keywords: [
     "steel structure cost calculator",
     "steel building price per m² 2026",
@@ -56,17 +56,12 @@ const jsonLd = {
   offers: {
     "@type": "Offer",
     price: "0",
-    priceCurrency: "USD",
+    priceCurrency: "CNY",
   },
   author: {
     "@type": "Organization",
     name: "Laotie Steel Structure Co., Ltd.",
     url: "https://www.laotie-steel.com",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.8",
-    ratingCount: "126",
   },
 };
 
