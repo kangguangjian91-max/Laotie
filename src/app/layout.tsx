@@ -155,6 +155,9 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="en-NG" href="https://www.laotie-steel.com/steel-structure-nigeria" />
         <link rel="alternate" hrefLang="en-SA" href="https://www.laotie-steel.com/steel-structure-saudi-arabia" />
         <link rel="alternate" hrefLang="en-AU" href="https://www.laotie-steel.com/steel-structure-australia" />
+        <link rel="alternate" hrefLang="en-IN" href="https://www.laotie-steel.com/steel-structure-india" />
+        <link rel="alternate" hrefLang="en-AE" href="https://www.laotie-steel.com/steel-structure-uae" />
+        <link rel="alternate" hrefLang="pt-BR" href="https://www.laotie-steel.com/steel-structure-brazil" />
         {/* Microsoft Clarity — free user behavior analytics (Hotjar alternative) */}
         <Script
           id="microsoft-clarity"

@@ -1,5 +1,77 @@
 [
   {
+    "slug": "crane-beam-design-guide-steel-structure",
+    "title": "Crane Beam Design Guide for Steel Structures: Load, Span & Cost",
+    "description": "Complete guide to crane beam design for steel structures. Learn overhead crane types, wheel load calculation, span design, connection details, and cost factors.",
+    "date": "2026-07-05",
+    "category": "Technical Guide",
+    "readTime": "10 min read",
+    "image": "/images/blog/blog-crane-beam-cover.webp"
+  },
+  {
+    "slug": "pre-engineered-building-specifications-standards",
+    "title": "Pre-Engineered Building: Complete Specs & Standards Guide",
+    "description": "Learn PEB specifications, MBMA/AISC standards, steel grades, coating systems, and design parameters for pre-engineered buildings. Compare PEB vs conventional construction.",
+    "date": "2026-07-05",
+    "category": "Buyer Guide",
+    "readTime": "11 min read",
+    "image": "/images/blog/blog-peb-specs-cover.webp"
+  },
+  {
+    "slug": "steel-mezzanine-floor-design-load-span-cost",
+    "title": "Steel Mezzanine Floor Design: Load, Span & Cost Guide",
+    "description": "Complete guide to steel mezzanine floor design. Learn load requirements, span design, composite vs non-composite systems, vibration control, and cost per square meter.",
+    "date": "2026-07-05",
+    "category": "Design Guide",
+    "readTime": "9 min read",
+    "image": "/images/blog/blog-mezzanine-floor-cover.webp"
+  },
+  {
+    "slug": "steel-structure-wind-load-calculation-design",
+    "title": "Steel Structure Wind Load Calculation: Complete Design Guide",
+    "description": "Learn wind load calculation for steel structures. Compare ASCE 7, Eurocode 1, GB 50009 and AS/NZS 1170. Includes exposure categories, gust factors, and design examples.",
+    "date": "2026-07-05",
+    "category": "Technical Guide",
+    "readTime": "10 min read",
+    "image": "/images/blog/blog-wind-load-cover.webp"
+  },
+  {
+    "slug": "steel-staircase-design-guide-types-codes-cost",
+    "title": "Steel Staircase Design Guide: Types, Codes & Cost",
+    "description": "Complete steel staircase design guide. Learn types (straight, L-shaped, spiral), IBC/OSHA/Eurocode 3 requirements, riser/tread dimensions, stringer design, and cost per flight.",
+    "date": "2026-07-05",
+    "category": "Design Guide",
+    "readTime": "9 min read",
+    "image": "/images/blog/blog-staircase-cover.webp"
+  },
+  {
+    "slug": "steel-roof-pitch-design-guide-minimum-optimal",
+    "title": "Steel Roof Pitch Guide: Minimum, Optimal & Design Rules",
+    "description": "Learn steel roof pitch design rules. Compare minimum pitch by roof type (corrugated, sandwich panel, standing seam), optimal pitch by climate, and cost impact.",
+    "date": "2026-07-05",
+    "category": "Design Guide",
+    "readTime": "8 min read",
+    "image": "/images/blog/blog-roof-pitch-cover.webp"
+  },
+  {
+    "slug": "steel-structure-corrosion-protection-c1-c5-guide",
+    "title": "Steel Structure Corrosion Protection: C1 to C5 Guide",
+    "description": "Complete guide to steel structure corrosion protection. Learn ISO 12944 C1-C5 classification, coating system selection, galvanized vs painted vs duplex, and cost comparison.",
+    "date": "2026-07-05",
+    "category": "Technical Guide",
+    "readTime": "10 min read",
+    "image": "/images/blog/blog-corrosion-protection-cover.webp"
+  },
+  {
+    "slug": "bolted-vs-welded-connections-steel-structures",
+    "title": "Bolted vs Welded Connections in Steel Structures",
+    "description": "Compare bolted vs welded connections in steel structures. Learn bolt grades, weld types, design strength, erection speed, cost, and when to use each connection method.",
+    "date": "2026-07-05",
+    "category": "Technical Guide",
+    "readTime": "10 min read",
+    "image": "/images/blog/blog-connections-cover.webp"
+  },
+  {
     "slug": "steel-structure-agricultural-buildings-complete-guide",
     "title": "Agricultural Steel Buildings: Complete Guide to Types, Costs & Design",
     "description": "Compare steel farm buildings for grain storage, livestock, machinery & poultry. Learn costs per square meter, design considerations, and why steel outperforms wood and concrete for agricultural structures.",
