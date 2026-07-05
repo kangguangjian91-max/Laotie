@@ -1,5 +1,19 @@
 import type { Metadata } from "next";
 import ProjectsClient from "./ProjectsClient";
+import JsonLd from "@/components/JsonLd";
+
+const projectsSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Steel Structure Project Cases | Laotie Steel",
+  description: "50+ steel structure projects delivered to 30+ countries. Warehouses, factories, hangars, dome roofs, and logistics centers.",
+  url: "https://www.laotie-steel.com/projects",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Laotie Steel Structure",
+    url: "https://www.laotie-steel.com",
+  },
+};
 
 export const metadata: Metadata = {
   title: "Steel Structure Project Cases | Warehouse, Factory, Sports Hall",
@@ -34,5 +48,10 @@ export const metadata: Metadata = {
 };
 
 export default function ProjectsPage() {
-  return <ProjectsClient />;
+  return (
+    <>
+      <JsonLd data={projectsSchema} />
+      <ProjectsClient />
+    </>
+  );
 }

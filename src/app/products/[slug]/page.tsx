@@ -78,12 +78,12 @@ const productRelatedBlogs: Record<string, string[]> = {
   ],
   "floor-deck": [
     "steel-structure-cost-guide-2025",
-    "how-to-import-steel-structures-from-china",
+    "how-to-import-steel-structures-from-china-complete-guide",
     "steel-structure-production-china-manufacturing-guide",
   ],
   "space-frame-truss": [
-    "portal-frame-vs-space-frame",
-    "how-to-import-steel-structures-from-china",
+    "portal-frame-vs-space-frame-comparison",
+    "how-to-import-steel-structures-from-china-complete-guide",
     "factory-tour-5000-tons-monthly-production",
   ],
   "cladding-system": [

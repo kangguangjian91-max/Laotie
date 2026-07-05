@@ -3,7 +3,29 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from 'next/image';
 import ImageCarousel from "@/components/ImageCarousel";
+import JsonLd from "@/components/JsonLd";
 import { ArrowLeft, Wrench, Factory, Shield, Globe, Users, Award } from "lucide-react";
+
+const aboutPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  name: "About Laotie Steel Structure Engineering Co., Ltd.",
+  description: "CE & ISO certified steel structure manufacturer in China. 20,000+ sqm factory, 5 production lines, 5,000T/month capacity, serving 30+ countries.",
+  url: "https://www.laotie-steel.com/about",
+  mainEntity: {
+    "@type": "Organization",
+    name: "Laotie Steel Structure Engineering Co., Ltd.",
+    foundingDate: "2009",
+    foundingLocation: "Shangqiu, Henan, China",
+    numberOfEmployees: "200+",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Shangqiu",
+      addressRegion: "Henan",
+      addressCountry: "CN",
+    },
+  },
+};
 
 const milestones = [
   { year: "2009", text: "Company founded in Shangqiu, Henan Province" },
@@ -104,6 +126,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={aboutPageSchema} />
       <Header />
       <main className="bg-white">
         {/* Hero banner */}

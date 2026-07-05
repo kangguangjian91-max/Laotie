@@ -1,7 +1,23 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CertificatesClient from "./CertificatesClient";
+import JsonLd from "@/components/JsonLd";
 import type { Metadata } from "next";
+
+const certificatesSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Steel Structure Certifications",
+  description: "Laotie Steel certifications: ISO 9001, CE (EN 1090), IAF, Supplier Assessment, and AWS welding.",
+  url: "https://www.laotie-steel.com/certificates",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "ISO 9001:2015 Quality Management" },
+    { "@type": "ListItem", position: 2, name: "CE EN 1090-1 Structural Steel Certification" },
+    { "@type": "ListItem", position: 3, name: "IAF International Accreditation Forum" },
+    { "@type": "ListItem", position: 4, name: "AWS D1.1 Certified Welders" },
+    { "@type": "ListItem", position: 5, name: "Supplier Assessment (3rd Party Verified)" },
+  ],
+};
 
 export const metadata: Metadata = {
   title: "Steel Structure Certifications | CE, ISO 9001, IAF Certified",
@@ -47,6 +63,7 @@ export const metadata: Metadata = {
 export default function CertificatesPage() {
   return (
     <>
+      <JsonLd data={certificatesSchema} />
       <Header />
       <CertificatesClient />
       <Footer />

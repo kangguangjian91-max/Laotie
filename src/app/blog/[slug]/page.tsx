@@ -108,6 +108,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: post.title,
     description: post.description,
+    keywords: [
+      post.title.toLowerCase().split(":")[0].split("—")[0].trim(),
+      post.category.toLowerCase(),
+      "steel structure",
+      "laotie steel",
+      "steel structure guide",
+      "steel building",
+    ],
     openGraph: {
       title: post.title,
       description: post.description,

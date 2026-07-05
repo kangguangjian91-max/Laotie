@@ -1,5 +1,19 @@
 import type { Metadata } from "next";
 import BlogClient from "./BlogClient";
+import JsonLd from "@/components/JsonLd";
+
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: "Steel Structure Insights & Guides",
+  description: "Expert articles on steel structure design, cost, importing from China, certifications, and factory production.",
+  url: "https://www.laotie-steel.com/blog",
+  publisher: {
+    "@type": "Organization",
+    name: "Laotie Steel Structure Co., Ltd.",
+    url: "https://www.laotie-steel.com",
+  },
+};
 
 export const metadata: Metadata = {
   title: "Blog | Steel Structure Insights & Guides",
@@ -44,5 +58,10 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  return <BlogClient />;
+  return (
+    <>
+      <JsonLd data={blogSchema} />
+      <BlogClient />
+    </>
+  );
 }

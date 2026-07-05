@@ -16,6 +16,7 @@ const countryRoutes = [
   "/steel-structure-philippines",
   "/steel-structure-nigeria",
   "/steel-structure-saudi-arabia",
+  "/steel-structure-australia",
   "/steel-structure-price-guide",
 ];
 
@@ -76,6 +77,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...staticEntries, ...productEntries, ...blogEntries, ...projectEntries];
 }
-
-// Image sitemap reference for robots.txt
-export const imageSitemap = `${siteUrl}/image-sitemap.xml`;
