@@ -1,29 +1,16 @@
-User-agent: *
+User-Agent: *
 Allow: /
-Allow: /products/
-Allow: /projects/
-Allow: /blog/
-Allow: /about
-Allow: /contact
-Allow: /calculator
-Allow: /certificates
-Allow: /manufacturing-process
-Allow: /faq
-Allow: /steel-structure-thailand
-Allow: /steel-structure-vietnam
-Allow: /steel-structure-indonesia
-Allow: /steel-structure-philippines
-Allow: /steel-structure-nigeria
-Allow: /steel-structure-saudi-arabia
-Allow: /steel-structure-logistics-center
-Allow: /steel-structure-price-guide
-Allow: /manufacturing-process
-Allow: /images/
-Allow: /sitemap.xml
+Disallow: /api/
+Disallow: /private/
+Disallow: /thank-you/
 
-Disallow: /thank-you
-Disallow: /privacy
-Disallow: /terms
+User-Agent: GPTBot
+Disallow: /
+
+User-Agent: ChatGPT-User
+Disallow: /
+
+User-Agent: CCBot
+Disallow: /
 
 Sitemap: https://www.laotie-steel.com/sitemap.xml
-Sitemap: https://www.laotie-steel.com/image-sitemap.xml

@@ -1,337 +1,549 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Main Pages -->
-  <url>
-    <loc>https://www.laotie-steel.com/</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- About -->
-  <url>
-    <loc>https://www.laotie-steel.com/about</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Products -->
-  <url>
-    <loc>https://www.laotie-steel.com/products</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/products/steel-structure-building</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/products/steel-warehouse</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/products/steel-factory-building</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/products/steel-workshop</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/products/floor-deck</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/products/space-frame-truss</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/products/cladding-system</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/products/hot-rolled-steel-coil</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/products/galvanized-cz-purlin</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/products/prefab-container-house</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/products/ppgi-color-coated-steel</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/products/frp-skylight-sheet</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/products/insulated-sandwich-panel</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Projects -->
-  <url>
-    <loc>https://www.laotie-steel.com/projects</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/projects/industrial-warehouse-sydney</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/projects/factory-complex-lagos</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/projects/shopping-mall-dome-roof-manila</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/projects/logistics-center-dubai</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/projects/perth-agricultural-processing-plant</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/projects/aircraft-hangar-jakarta</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/projects/hongxin-sports-trampoline-factory-shangqiu</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/projects/rattan-weaving-industrial-park-guo-village-shangqiu</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Landing Pages (Country-specific SEO) -->
-  <url>
-    <loc>https://www.laotie-steel.com/steel-structure-philippines</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/steel-structure-saudi-arabia</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/steel-structure-logistics-center</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/steel-structure-vietnam</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/steel-structure-indonesia</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/steel-structure-nigeria</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/steel-structure-thailand</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Other Pages -->
-  <url>
-    <loc>https://www.laotie-steel.com/contact</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/faq</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/calculator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/certificates</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/manufacturing-process</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/privacy</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/terms</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/thank-you</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <!-- Blog -->
-  <url>
-    <loc>https://www.laotie-steel.com/blog</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Price Guide -->
-  <url>
-    <loc>https://www.laotie-steel.com/steel-structure-price-guide</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Blog Articles -->
-  <url>
-    <loc>https://www.laotie-steel.com/blog/steel-structure-production-china-manufacturing-guide</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/blog/steel-structure-installation-guide-erection-process</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/blog/steel-structure-processing-techniques-cnc-welding-guide</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/blog/steel-structure-maintenance-guide-lifespan-corrosion</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/blog/chinese-steel-fabrication-global-quality-guide</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/blog/steel-warehouse-kenya-case-study-2026</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/blog/steel-structure-vs-concrete-cost-comparison</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/blog/import-steel-structures-from-china-2026-guide</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/blog/steel-warehouse-design-guide-spans-cranes</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.laotie-steel.com/blog/steel-structure-foundation-guide-types-cost</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-  <!-- Projects Detail -->
-  <url>
-    <loc>https://www.laotie-steel.com/projects/yunda-bozhou-modern-industrial-park</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+<url>
+<loc>https://www.laotie-steel.com</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/calculator</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/manufacturing-process</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/products</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/projects</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/about</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/contact</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/certificates</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/privacy</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/terms</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/faq</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/steel-structure-logistics-center</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/steel-structure-thailand</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/steel-structure-vietnam</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/steel-structure-indonesia</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/steel-structure-philippines</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/steel-structure-nigeria</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/steel-structure-saudi-arabia</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/steel-structure-australia</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/steel-structure-india</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/steel-structure-uae</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/steel-structure-brazil</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/steel-structure-price-guide</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/products/steel-structure-building</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/products/floor-deck</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/products/space-frame-truss</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/products/cladding-system</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/products/steel-warehouse</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/products/steel-factory-building</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/products/steel-workshop</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/products/hot-rolled-steel-coil</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/products/galvanized-cz-purlin</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/products/prefab-container-house</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/products/ppgi-color-coated-steel</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/products/frp-skylight-sheet</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/products/insulated-sandwich-panel</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/crane-beam-design-guide-steel-structure</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/pre-engineered-building-specifications-standards</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-mezzanine-floor-design-load-span-cost</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-wind-load-calculation-design</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-staircase-design-guide-types-codes-cost</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-roof-pitch-design-guide-minimum-optimal</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-corrosion-protection-c1-c5-guide</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/bolted-vs-welded-connections-steel-structures</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-agricultural-buildings-complete-guide</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/how-to-get-steel-structure-quote-rfq-process</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-fire-protection-requirements-materials-costs</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/multi-story-steel-structure-buildings-design-cost-benefits</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/7-common-mistakes-importing-steel-structures-china</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-shipping-logistics-international-buyers-guide</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/how-to-choose-reliable-steel-structure-manufacturer-checklist</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-building-codes-standards-global-comparison</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-maintenance-guide-lifespan-corrosion</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-processing-techniques-cnc-welding-guide</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-production-china-manufacturing-guide</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-installation-guide-erection-process</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/why-choose-chinese-steel-structure-manufacturer</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-cost-guide-2025</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/ce-iso-certified-steel-structures</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/factory-tour-5000-tons-monthly-production</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/how-to-import-steel-structures-from-china-complete-guide</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-cost-per-square-meter-2026</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/how-to-build-steel-warehouse-step-by-step</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-design-guide-beginners</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/portal-frame-vs-space-frame-comparison</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-installation-process-timeline</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-cost-saudi-arabia-2026</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-vs-concrete-building-comparison</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/prefabricated-steel-building-complete-guide</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-cold-storage-warehouse-guide</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-warehouse-design-guide</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/chinese-steel-fabrication-global-quality-guide</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-warehouse-kenya-case-study-2026</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-vs-concrete-cost-comparison</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/import-steel-structures-from-china-2026-guide</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-warehouse-design-guide-spans-cranes</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-foundation-guide-types-cost</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-vs-concrete-lifetime-cost-comparison-2026</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/steel-structure-factory-inspection-qc-checklist-2026</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/clear-span-steel-building-complete-guide</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/blog/aircraft-hangar-cost-steel-structure-guide</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/projects/industrial-warehouse-sydney</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/projects/factory-complex-lagos</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/projects/shopping-mall-dome-roof-manila</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/projects/logistics-center-dubai</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/projects/aircraft-hangar-jakarta</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/projects/perth-agricultural-processing-plant</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/projects/hongxin-sports-trampoline-factory-shangqiu</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/projects/rattan-weaving-industrial-park-guo-village-shangqiu</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.laotie-steel.com/projects/yunda-bozhou-modern-industrial-park</loc>
+<lastmod>2026-07-07T05:33:12.562Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 </urlset>

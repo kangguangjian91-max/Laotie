@@ -3,360 +3,241 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Article Copier - Laotie Steel Structure</title>
+<title>Copy Blog Article — Prefab Steel Building Cost Factors</title>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f0f2f5; padding: 20px; color: #333; }
-.container { max-width: 860px; margin: 0 auto; }
-h1 { text-align: center; margin-bottom: 30px; color: #1a1a2e; font-size: 24px; }
-h2 { font-size: 16px; color: #1a1a2e; margin: 16px 0 8px; }
-.article-card { background: white; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; }
-.card-title { background: #1a1a2e; color: white; padding: 14px 20px; font-weight: 600; font-size: 15px; }
-.title-row, .content-row { padding: 12px 20px; display: flex; align-items: flex-start; gap: 12px; border-bottom: 1px solid #eee; }
-.title-row { background: #fafafa; }
-.content-row { border-bottom: none; flex-direction: column; }
-.label { font-size: 12px; font-weight: 700; color: #666; min-width: 40px; padding-top: 4px; }
-.title-text { flex: 1; font-size: 14px; color: #1a1a2e; font-weight: 600; padding: 4px 0; word-break: break-word; }
-.content-text { flex: 1; font-size: 13px; color: #444; line-height: 1.7; white-space: pre-wrap; padding: 4px 0; word-break: break-word; width: 100%; }
-.copy-btn { background: #f97316; color: white; border: none; padding: 6px 14px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; transition: background 0.2s; white-space: nowrap; flex-shrink: 0; }
-.copy-btn:hover { background: #ea580c; }
-.copy-btn.copied { background: #22c55e; }
-.btn-row { display: flex; justify-content: flex-end; margin-bottom: 8px; }
-.toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #1a1a2e; color: white; padding: 12px 24px; border-radius: 8px; font-size: 14px; opacity: 0; transition: opacity 0.3s; pointer-events: none; z-index: 999; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-.toast.show { opacity: 1; }
-.instructions { background: #e8f5e9; border: 1px solid #c8e6c9; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; font-size: 14px; line-height: 1.6; color: #2e7d32; }
-.instructions strong { color: #1b5e20; }
-.instructions ol { margin-left: 20px; margin-top: 6px; }
-.instructions li { margin-bottom: 4px; }
-.status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; }
-.topic-1 { background: #22c55e; }
-.topic-2 { background: #22c55e; }
-.topic-3 { background: #22c55e; }
-.topic-4 { background: #f97316; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f7fa; color: #1a1a2e; padding: 24px; }
+  .container { max-width: 820px; margin: 0 auto; }
+  h1 { font-size: 20px; margin-bottom: 16px; color: #16213e; }
+  .section { background: #fff; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 20px; overflow: hidden; }
+  .section-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #16213e; color: #fff; }
+  .section-header h2 { font-size: 15px; font-weight: 600; }
+  .copy-btn { background: #0f3460; color: #fff; border: none; padding: 7px 18px; border-radius: 6px; font-size: 13px; cursor: pointer; transition: background .2s; }
+  .copy-btn:hover { background: #1a5276; }
+  .copy-btn.copied { background: #27ae60; }
+  .content { padding: 20px; }
+  .content h3 { font-size: 16px; margin: 18px 0 8px; color: #16213e; }
+  .content h3:first-child { margin-top: 0; }
+  .content p { margin-bottom: 12px; line-height: 1.65; font-size: 14.5px; }
+  .content ul, .content ol { margin: 8px 0 14px 22px; }
+  .content li { margin-bottom: 5px; line-height: 1.6; font-size: 14.5px; }
+  .content table { width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 14px; }
+  .content th, .content td { border: 1px solid #dde1e7; padding: 8px 12px; text-align: left; }
+  .content th { background: #eef1f6; font-weight: 600; }
+  .content a { color: #0f3460; text-decoration: underline; }
+  .note { background: #fff3cd; border: 1px solid #ffeeba; border-radius: 8px; padding: 12px 16px; margin: 20px 0; font-size: 13.5px; color: #856404; }
+  .note strong { color: #533f03; }
 </style>
 </head>
 <body>
 <div class="container">
-  <h1>📋 WordPress Article Copier — steelstructureguide.wordpress.com</h1>
 
-  <div class="instructions">
-    <strong>📌 How to publish:</strong>
-    <ol>
-      <li>Click <strong>"Copy Title"</strong> → Go to WordPress editor → <strong>Paste the title</strong></li>
-      <li>Click <strong>"Copy Content"</strong> → Go to WordPress editor → <strong>Paste the body text</strong></li>
-      <li>Add a featured image, set category, and click <strong>Publish</strong></li>
-    </ol>
+<h1>📋 Copy &amp; Paste to WordPress</h1>
+
+<div class="note">
+  <strong>🧭 Workflow:</strong>
+  点「复制标题」→ 去 WordPress 粘贴标题 →
+  点「复制内容」→ 粘贴正文 →
+  <strong>记得在末尾添加 "Visit Laotie Steel Structure: https://www.laotie-steel.com"</strong>
+  （链接已包含在正文末尾）
+</div>
+
+<!-- ============ TITLE SECTION ============ -->
+<div class="section">
+  <div class="section-header">
+    <h2>📌 Blog Title</h2>
+    <button class="copy-btn" id="copyTitleBtn">📋 复制标题</button>
   </div>
-
-  <!-- #1 — Steel Structure for Cold Storage Warehouses (already published) -->
-  <div class="article-card">
-    <div class="card-title"><span class="status-dot topic-1"></span>#1 — Steel Structure for Cold Storage Warehouses <span style="font-weight:400;font-size:12px;opacity:0.7;">(published)</span></div>
-    <div class="title-row">
-      <span class="label">Title</span>
-      <span class="title-text" id="t1">Steel Structure for Cold Storage Warehouses: Design, Insulation & Cost Guide</span>
-      <button class="copy-btn" onclick="doCopy('t1', this)">📋 Copy Title</button>
-    </div>
-    <div class="content-row">
-      <div class="btn-row"><button class="copy-btn" onclick="doCopy('c1', this)">📋 Copy Content</button></div>
-      <span class="content-text" id="c1">Cold storage warehouses require specialized structural design to maintain precise temperature control while supporting heavy refrigeration equipment and insulated panels. Steel structures are the preferred choice for these facilities due to their clear-span capability, thermal break compatibility, and fast construction timeline.
-
-Key Design Considerations for Cold Storage Steel Buildings
-
-1. Thermal Bridge Prevention
-Thermal bridging is the #1 enemy of cold storage. Steel is a highly conductive material, so all structural penetrations must include thermal break elements. Common solutions include:
-- Fiberglass-reinforced plastic (FRP) thermal break pads between steel columns and foundation
-- Thermally isolated purlin and girt connections
-- Insulated sandwich panel systems with factory-sealed joints
-- Double-sealed vapor barriers at all panel junctions
-
-2. Insulation Requirements
-Cold storage insulation is measured by its U-value (thermal transmittance). Typical requirements by temperature range:
-
-Storage Type | Target Temp | Recommended Insulation | U-Value Target
-Cool Storage | 0°C to 10°C | 100-150mm PIR panel | ≤0.30 W/m²K
-Freezer | -18°C to 0°C | 150-200mm PIR panel | ≤0.20 W/m²K
-Deep Freeze | -30°C to -18°C | 200-250mm PIR/PU panel | ≤0.15 W/m²K
-
-PIR (polyisocyanurate) and PU (polyurethane) sandwich panels are the industry standard, offering excellent fire resistance combined with superior thermal performance.
-
-3. Structural Steel Specifications
-Cold storage buildings typically use:
-- Primary frame: Q355B or higher-grade structural steel with heavy-duty corrosion protection
-- Column spacing: 6m to 12m depending on pallet racking layout
-- Clear height: 8m to 15m to accommodate multi-level racking systems
-- Roof slope: Minimum 3% for condensation drainage
-- Floor slab: Reinforced concrete with integral vapor barrier and heating elements to prevent frost heave
-
-4. Refrigeration Load & Building Envelope
-The steel structure must minimize air infiltration to reduce refrigeration load. Key envelope features include:
-- High-speed rapid doors at loading bays (open/close in under 3 seconds)
-- Dock levelers with insulated seals
-- Pressure relief vents to balance air exchange during door operation
-- Continuous vapor barrier on the warm side of the insulation
-
-5. Foundation Considerations
-Cold storage foundations must address frost heave — the upward expansion of frozen ground. Solutions include:
-- Heated slab systems with embedded hydronic or electric heating
-- Insulated perimeter foundations extending below frost line
-- Ventilated crawl spaces for freezer buildings
-- Geothermal heat exchange loops under floor slabs
-
-Cost Estimate
-
-Cold storage steel buildings cost 30-50% more than standard warehouses due to insulation, vapor barriers, and specialized equipment:
-
-Small cold store (500 sqm, 0°C): $45,000-$70,000
-Medium freezer (1,500 sqm, -18°C): $120,000-$180,000
-Large deep freeze (3,000 sqm, -25°C): $280,000-$400,000
-
-Prices vary by insulation grade, refrigeration system, and local labor costs.
-
-For professional cold storage steel structure design and fabrication, visit:
-Visit Laotie Steel Structure: https://www.laotie-steel.com</span>
-    </div>
+  <div class="content">
+    <p id="blogTitle" style="font-size:17px; font-weight:600; color:#16213e;">
+      Prefab Steel Building Cost Factors: A Complete Breakdown for Smart Buyers
+    </p>
   </div>
+</div>
 
-  <!-- #2 — Portal Frame vs Truss Structure Comparison (current) -->
-  <div class="article-card">
-    <div class="card-title"><span class="status-dot topic-2"></span>#2 — Portal Frame vs Truss Structure Comparison <span style="font-weight:400;font-size:12px;opacity:0.7;">(published)</span></div>
-    <div class="title-row">
-      <span class="label">Title</span>
-      <span class="title-text" id="t2">Portal Frame vs Truss Structure: Key Differences for Steel Building Design</span>
-      <button class="copy-btn" onclick="doCopy('t2', this)">📋 Copy Title</button>
-    </div>
-    <div class="content-row">
-      <div class="btn-row"><button class="copy-btn" onclick="doCopy('c2', this)">📋 Copy Content</button></div>
-      <span class="content-text" id="c2">Choosing between a portal frame and a truss structure is one of the most important decisions in steel building design. Each system has distinct advantages depending on span length, load requirements, budget, and intended use. This guide breaks down the key differences to help you make the right choice.
-
-What Is a Portal Frame?
-
-A portal frame is a rigid steel structure consisting of columns and rafters connected by moment-resisting joints. The frame transfers loads through rigid connections, creating a self-stable system without requiring bracing. Portal frames are the most common structural system for single-story industrial buildings worldwide.
-
-Typical applications:
-- Warehouses and distribution centers
-- Factory and workshop buildings
-- Aircraft hangars
-- Agricultural buildings (barns, livestock shelters)
-- Retail warehouses and showrooms
-
-Span range: 12m to 60m (most common: 18m-36m)
-Eave height: 4m to 20m
-Frame spacing: 6m to 9m
-
-What Is a Truss Structure?
-
-A truss structure uses a network of interconnected triangular elements to distribute loads. The triangular geometry ensures that each member primarily carries axial tension or compression, making trusses exceptionally efficient for long-span applications. Trusses can be used as roof structures, bridges, or tower frameworks.
-
-Typical applications:
-- Large-span roofs (stadiums, exhibition halls, convention centers)
-- Airport terminals and railway stations
-- Heavy industrial buildings with overhead cranes
-- Bridges and gantry structures
-- Dome and curved-roof structures
-
-Span range: 20m to 100m+ (trusses excel beyond 40m)
-Eave height: 6m to 30m+
-Frame spacing: 6m to 18m
-
-Portal Frame vs Truss Structure: Comparison Table
-
-Aspect | Portal Frame | Truss Structure
-Structural principle | Rigid moment-resisting connections | Triangular truss network (axial forces)
-Load transfer | Bending moments in columns and rafters | Axial tension/compression in members
-Span capability | 12m-60m (economic: 18m-36m) | 20m-100m+ (economic: 30m-80m)
-Steel consumption (per sqm) | 25-40 kg/m² (18-30m span) | 35-55 kg/m² (30-50m span)
-Fabrication complexity | Moderate — standardized connections | High — more welded/cut joints
-Erection speed | Fast — fewer components to assemble | Slow — many individual members
-Internal clear space | Excellent — no diagonal bracing inside | Moderate — web members may obstruct
-Crane compatibility | Good (up to 20-ton single girder) | Excellent (30-ton+ EOT cranes)
-Roof versatility | Single/multi-span, minimal slope | Curved, domed, sawtooth, complex shapes
-Maintenance cost | Lower — simpler connections | Higher — more joints to inspect
-Initial cost (per sqm) | $30-$65 | $50-$100
-
-When to Choose Portal Frame
-
-Portal frames are the better choice when:
-- You need fast construction — fewer components mean faster erection
-- Clear internal space is critical — no diagonal members to interfere with racking or workflow
-- Budget is a primary concern — portal frames are 20-40% cheaper per square meter for standard spans
-- Your span is under 40m — within this range, portal frames offer the best cost-to-performance ratio
-- The building is single-story with simple roof geometry — portal frames are optimized for rectangular layouts
-
-When to Choose Truss Structure
-
-Truss structures are superior when:
-- Your building requires very long spans (40m+) — trusses efficiently handle spans beyond portal frame limits
-- Heavy overhead cranes are needed — trusses can support 30-ton+ EOT cranes with less deflection
-- You need complex or curved roof shapes — trusses adapt to domes, arches, and irregular profiles
-- Large point loads are expected — truss members distribute concentrated loads more effectively
-- Esthetic architectural design matters — exposed trusses create striking visual patterns
-
-Hybrid Approach: Combining Both Systems
-
-Many modern steel buildings use a hybrid approach — trusses for the roof structure supported by portal frame columns. This combines the span efficiency of trusses with the simplicity and cost-effectiveness of portal columns.
-
-Example: A 50m-wide warehouse with mezzanine office space might use:
-- Roof: Truss system spanning 50m with pipe-truss or lattice-truss design
-- Columns: Portal frame columns with moment-resisting bases
-- Bracing: Cross-bracing in the vertical plane for wind load resistance
-
-This hybrid design reduces steel weight by 10-15% compared to a pure truss solution while maintaining the long-span capability.
-
-Cost Comparison Summary
-
-Span 20m: Portal frame $35/m² — Truss $50/m² → Portal saves 30%
-Span 30m: Portal frame $45/m² — Truss $65/m² → Portal saves 31%
-Span 40m: Portal frame $60/m² — Truss $75/m² → Portal saves 20%
-Span 50m: Portal frame impracticable — Truss $85/m²
-
-For spans under 40m, portal frames are clearly more economical. Above 40m, trusses become the only viable option, and their efficiency improves as spans approach 60-80m.
-
-Conclusion
-
-Both portal frames and truss structures have their place in steel construction. For standard industrial and commercial buildings under 40m span, portal frames deliver the best value with faster construction. For long-span facilities, heavy crane loads, or complex roof geometries, truss structures are indispensable.
-
-No matter which system you choose, working with an experienced steel structure manufacturer ensures your building is designed and fabricated to the highest standards.
-
-Visit Laotie Steel Structure: https://www.laotie-steel.com</span>
-    </div>
+<!-- ============ CONTENT SECTION ============ -->
+<div class="section">
+  <div class="section-header">
+    <h2>📝 Blog Content</h2>
+    <button class="copy-btn" id="copyContentBtn">📋 复制内容</button>
   </div>
+  <div class="content" id="blogContent">
 
-  <!-- #4 — How to Read Steel Structure Design Drawings (current) -->
-  <div class="article-card">
-    <div class="card-title"><span class="status-dot topic-4"></span>#4 — How to Read Steel Structure Design Drawings <span style="font-weight:400;font-size:12px;opacity:0.7;">(current)</span></div>
-    <div class="title-row">
-      <span class="label">Title</span>
-      <span class="title-text" id="t4">How to Read Steel Structure Design Drawings: A Beginner's Guide for Engineers & Contractors</span>
-      <button class="copy-btn" onclick="doCopy('t4', this)">📋 Copy Title</button>
-    </div>
-    <div class="content-row">
-      <div class="btn-row"><button class="copy-btn" onclick="doCopy('c4', this)">📋 Copy Content</button></div>
-      <span class="content-text" id="c4">Steel structure design drawings are the universal language of construction — they tell engineers, fabricators, and site crews exactly how a building goes together. But if you are new to the field, those lines, symbols, and abbreviations can look like an alien code. This guide breaks down everything you need to know to read and understand steel structure drawings with confidence.
+<h3>Introduction</h3>
+<p>
+When planning a prefab steel building project, understanding the cost structure is essential for budgeting accurately. Unlike traditional construction, prefab metal buildings offer significant savings — but the final price tag depends on several variables. This article breaks down the key cost factors of prefab steel buildings so you can make an informed purchasing decision.
+</p>
 
-What Types of Drawings Make Up a Steel Structure Set?
+<h3>1. Building Size and Dimensions</h3>
+<p>
+The most obvious cost driver is the physical size of the structure — width, length, and eave height. Larger buildings require more steel, larger foundations, and longer erection times. Generally, the cost per square meter decreases as the building gets larger because fixed costs (design, mobilization) are spread over a bigger area.
+</p>
+<ul>
+  <li><strong>Width (span):</strong> Wider clear-span designs require heavier frames and increase cost.</li>
+  <li><strong>Length:</strong> Adding length is relatively cost-efficient since bay spacing stays the same.</li>
+  <li><strong>Eave height:</strong> Taller walls need longer columns and more bracing, raising material costs.</li>
+</ul>
 
-A complete steel structure drawing package typically includes five types of drawings:
+<h3>2. Steel Grade and Material Costs</h3>
+<p>
+The price of raw steel fluctuates with global market conditions. In addition, the grade of steel used (e.g., Q355 vs Q235) affects both strength and cost. High-strength steel may cost more per ton but allows lighter sections, potentially offsetting the price premium. Your provider should specify the steel grade in their quotation.
+</p>
 
-General Arrangement Drawings (GA): Show the overall layout — column positions, bay spacing, overall dimensions, and building elevations. These are the roadmap for the entire project.
+<h3>3. Design Complexity and Load Requirements</h3>
+<p>
+Buildings designed to withstand heavy snow loads, high wind speeds, or seismic activity require additional steel bracing, thicker sections, and more engineering hours. For example, a building designed for Australia's cyclone-prone regions will cost significantly more than a standard shed in a mild climate.
+</p>
 
-Foundation & Anchor Bolt Plans: Detail the concrete foundation layout, anchor bolt positions, bolt diameters, projection lengths, and base plate details. Every column has a corresponding foundation mark.
+<table>
+  <tr>
+    <th>Load Factor</th>
+    <th>Cost Impact</th>
+    <th>Example Region</th>
+  </tr>
+  <tr>
+    <td>Snow load &gt; 1.0 kN/m²</td>
+    <td>+10–15%</td>
+    <td>Northern Europe, Canada</td>
+  </tr>
+  <tr>
+    <td>Wind load &gt; 50 m/s</td>
+    <td>+15–25%</td>
+    <td>Coastal areas, cyclone zones</td>
+  </tr>
+  <tr>
+    <td>Seismic design (Ductility)</td>
+    <td>+20–30%</td>
+    <td>Japan, Chile, New Zealand</td>
+  </tr>
+</table>
 
-Fabrication Drawings (Shop Drawings): Provide piece-by-piece instructions for the steel fabricator. Each steel member (column, beam, rafter, purlin, brace) is drawn separately with exact dimensions, hole locations, weld symbols, and material grades.
+<h3>4. Roof Profile and Cladding</h3>
+<p>
+Single-skin roofs are the most economical option. Insulated panels, standing seam metal roofs, or specialty cladding (e.g., stone-coated steel tiles) increase both material and labor costs. For warehouse or workshop applications, a standard single-skin or sandwich panel roof usually provides the best value.
+</p>
 
-Erection Drawings: Show the assembly sequence on site. They indicate lifting points, temporary bracing requirements, and connection sequences.
+<h3>5. Accessories and Openings</h3>
+<p>
+Overhead doors, personnel doors, windows, skylights, ventilation systems, and gutter/downpipe sets all add to the total. Each opening requires additional framing and sealant work. A building with multiple large roll-up doors will cost noticeably more than one with minimal openings.
+</p>
 
-Connection Details: Zoom in on critical joints — moment connections, shear connections, bolted splices, and base plate connections — with specific bolt sizes, weld thicknesses, and stiffener plate requirements.
+<h3>6. Foundation and Site Conditions</h3>
+<p>
+Prefab steel buildings are lighter than concrete structures, but they still require proper foundations. Site preparation — including soil testing, grading, and concrete footings — varies widely by location. Poor soil conditions (clay, loose sand) may require deep foundations or piling, which can add thousands to the project cost.
+</p>
 
-Key Symbols and Abbreviations You Must Know
+<h3>7. Transportation and Logistics</h3>
+<p>
+Steel structures are shipped in prefabricated components. The distance from the factory to the project site directly affects freight costs. International shipping, customs clearance, and inland trucking can represent 5–15% of the total budget. Choosing a supplier near a major port can help reduce these costs.
+</p>
 
-Mastering these common symbols will unlock 80% of any steel drawing:
+<h3>8. Certification and Compliance</h3>
+<p>
+If your project requires third-party certifications such as CE (EN 1090), ISO, or local building permits, the associated inspection and documentation fees add to the overall cost. While these are non-negotiable for regulated markets, working with a certified manufacturer (like Laotie Steel) ensures compliance without hidden surprises.
+</p>
 
-Symbol | Meaning
-⌀ or Ø | Diameter (e.g., ⌀20 = 20mm diameter hole or bolt)
-CL | Center line — reference axis for alignment
-NTS | Not to scale — dimension values are authoritative, not the drawn length
-PL | Plate (e.g., PL 10mm = 10mm thick steel plate)
-UB / UC | Universal Beam / Universal Column (standard rolled sections)
-RHS / SHS | Rectangular / Square Hollow Section
-MB / MC | Medium-duty Beam / Column sections
-W (W-shape) | Wide-flange beam (North American standard)
-H (H-shape) | H-section column (European/Asian standard)
-MIG / TIG | Welding processes (Metal Inert Gas / Tungsten Inert Gas)
-TYP | Typical — the detail shown applies to all similar locations
+<h3>Cost Comparison Table</h3>
+<table>
+  <tr>
+    <th>Factor</th>
+    <th>Low-End</th>
+    <th>Mid-Range</th>
+    <th>High-End</th>
+  </tr>
+  <tr>
+    <td>Building size</td>
+    <td>Small shed (200 m²)</td>
+    <td>Medium warehouse (1000 m²)</td>
+    <td>Large industrial (5000 m²+)</td>
+  </tr>
+  <tr>
+    <td>Steel grade</td>
+    <td>Q235</td>
+    <td>Q355</td>
+    <td>Q420 / high-strength</td>
+  </tr>
+  <tr>
+    <td>Cladding</td>
+    <td>Single-skin</td>
+    <td>Sandwich panel 50mm</td>
+    <td>Sandwich panel 100mm+</td>
+  </tr>
+  <tr>
+    <td>Load design</td>
+    <td>Standard</td>
+    <td>Moderate wind/snow</td>
+    <td>Cyclone / seismic</td>
+  </tr>
+  <tr>
+    <td>Accessories</td>
+    <td>Minimal (1 door)</td>
+    <td>Moderate (3–5 openings)</td>
+    <td>Full (multiple doors, windows, vents)</td>
+  </tr>
+</table>
 
-Understanding Steel Section Notations
+<h3>Conclusion</h3>
+<p>
+Understanding these cost factors helps you evaluate quotes from different suppliers and avoid unexpected expenses. The cheapest quote is rarely the best — look for a balance of material quality, engineering capability, and transparent pricing. Whether you need a small workshop or a large industrial facility, working with an experienced manufacturer ensures you get the right structure at a fair price.
+</p>
+<p>
+<strong>Visit <a href="https://www.laotie-steel.com" target="_blank">Laotie Steel Structure</a>: <a href="https://www.laotie-steel.com" target="_blank">https://www.laotie-steel.com</a></strong>
+</p>
 
-Steel members are described by their cross-sectional shape and dimensions. Here is how to read them:
-
-European standard: IPE 300 — 300mm deep I-section beam
-Equivalent US standard: W12×22 — 12-inch deep wide flange, 22 lb/ft
-Square hollow section: SHS 100×100×6 — 100mm square, 6mm wall thickness
-Channel section: C 200×75×6 — 200mm deep channel, 75mm flange, 6mm web
-
-The drawing title block always specifies the standard used (EN, ASTM, GB, or AS). Always check this before interpreting section labels.
-
-How to Read Connection Details
-
-Connections are where most of the complexity lives. Here is the step-by-step approach:
-
-Step 1: Identify the connection type. Look at the detail title — is it a beam-to-column moment connection, a simple shear tab, or a column splice?
-
-Step 2: Count the bolts. The bolt circle notation shows bolt diameter, grade, and quantity. Example: 4-M20 Gr. 8.8 means four bolts of 20mm diameter, Grade 8.8 strength.
-
-Step 3: Read the weld symbols. A triangle (fillet weld) with a number tells you the weld leg length. Example: 6mm fillet weld on both sides of the plate.
-
-Step 4: Check for stiffeners. If the detail shows small triangular plates at the web-flange junction, those are stiffeners preventing web buckling under high loads.
-
-Step 5: Verify clearances. Note the gap between connected members — typically 10-20mm for bolted connections and 2-5mm for welded connections.
-
-Common Mistakes When Reading Steel Drawings
-
-Mistake | Consequence | How to Avoid
-Ignoring NTS notes | Taking scaled measurements instead of reading dimension values causes fabrication errors | Always use dimension numbers — never scale the drawing
-Mixing up left-hand vs right-hand parts | Symmetrical members installed on the wrong side | Check the part mark suffix (L/R) before fabrication
-Overlooking camber notes | Beams without specified camber deflect under load | Look for "CAMBER XXmm" in beam details
-Missing erection sequence notes | Incorrect assembly order causes instability | Read the erection drawing legend first
-Confusing welding and bolting symbols | Wrong connection method at critical joints | Refer to the connection schedule table
-
-Checklist for Reviewing Steel Structure Drawings
-
-Before approving or fabricating from any set of steel drawings, run through this checklist:
-
-1. General: Are all dimensions clear? Is the drawing scale stated? Are all sheets present?
-2. Columns: Are column center lines aligned with grid lines? Are base plate sizes correct for the foundation design?
-3. Beams: Are beam camber values specified for spans over 12m? Are connection details shown at every beam-to-column joint?
-4. Bracing: Is lateral bracing provided in both directions? Are brace connection capacities verified?
-5. Bolts: Are bolt grades, diameters, and tightening torques specified? Are washer and nut types confirmed?
-6. Welds: Are weld symbols complete with size, length, and process? Are NDT (non-destructive testing) requirements noted?
-7. Coating: Are corrosion protection specifications clear? Is the surface preparation standard (e.g., Sa 2.5) stated?
-
-Digital Tools for Reading Steel Drawings
-
-Most modern steel structure drawings are provided in one of these formats:
-- PDF — universal viewing, use for markup and annotation
-- DWG/DXF — editable CAD format, requires AutoCAD, DraftSight, or free alternatives like LibreCAD
-- IFC/BIM — 3D building information models, open in Tekla BIMsight, Solibri, or Trimble Connect
-- NC1 files — numerical control files for automated drilling and cutting machines
-
-For PDF drawings, a tablet with a stylus is highly recommended — you can zoom into details and make handwritten markups during site inspections.
-
-Conclusion
-
-Reading steel structure design drawings is a skill that improves with practice. Start by studying the title block and general arrangement drawings, then work your way into connection details and fabrication notes. Cross-reference every dimension and symbol against the project specification. Use the checklist above to catch common errors before they reach the workshop floor.
-
-If you need professional steel structure design, fabrication, or drawing review services, an experienced manufacturer can save you time and prevent costly mistakes.
-
-Visit Laotie Steel Structure: https://www.laotie-steel.com</span>
-    </div>
   </div>
+</div>
 
 </div>
 
-<div class="toast" id="toast"></div>
-
 <script>
-function doCopy(id, btn) {
-  const text = document.getElementById(id).textContent.trim();
-  navigator.clipboard.writeText(text).catch(function(err) {
-    const textarea = document.createElement('textarea');
-    textarea.value = text;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textarea);
-  });
-  const orig = btn.textContent;
-  btn.textContent = '✅ Copied!';
-  btn.classList.add('copied');
-  const toast = document.getElementById('toast');
-  toast.textContent = '✅ ' + (id.startsWith('t') ? 'Title' : 'Content') + ' copied! Go paste it in WordPress.';
-  toast.classList.add('show');
-  setTimeout(() => {
-    btn.textContent = orig;
-    btn.classList.remove('copied');
-    toast.classList.remove('show');
-  }, 2000);
-}
+(function() {
+  function setupCopy(btnId, sourceId) {
+    const btn = document.getElementById(btnId);
+    const source = document.getElementById(sourceId);
+
+    function getText() {
+      if (sourceId === 'blogTitle') {
+        return source.textContent.trim();
+      }
+      // For content: use innerHTML but strip the last paragraph's link from the copied text
+      // Actually let's just copy innerText which is cleaner
+      return source.innerText.trim();
+    }
+
+    btn.addEventListener('click', async function() {
+      const text = getText();
+      try {
+        await navigator.clipboard.writeText(text);
+        btn.textContent = '✅ 已复制';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = '📋 复制内容';
+          btn.classList.remove('copied');
+        }, 2000);
+      } catch (err) {
+        // Fallback
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = '✅ 已复制';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = '📋 复制内容';
+          btn.classList.remove('copied');
+        }, 2000);
+      }
+    });
+  }
+
+  setupCopy('copyTitleBtn', 'blogTitle');
+  setupCopy('copyContentBtn', 'blogContent');
+})();
 </script>
+
 </body>
 </html>
