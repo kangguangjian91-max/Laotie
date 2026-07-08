@@ -176,12 +176,20 @@ export default function Footer() {
               Contact
             </h4>
             <ul className="space-y-2.5 text-sm">
-              <li className="flex items-start gap-2">
-                <svg className="w-4 h-4 mt-0.5 text-steel-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <li className="flex items-center gap-2">
+                <svg className="w-4 h-4 text-steel-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                Shangqiu, Henan, China
+                <a 
+                  href="https://www.google.com/maps/search/Henan+Laotie+Steel+Structure+Engineering+Co.+Ltd" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={() => trackOutboundLink("https://www.google.com/maps/search/Henan+Laotie+Steel+Structure+Engineering+Co.+Ltd", "other")} 
+                  className="hover:text-white transition-colors"
+                >
+                  View on Google Maps
+                </a>
               </li>
               <li>
                 <a
