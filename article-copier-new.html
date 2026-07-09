@@ -3,241 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Copy Blog Article — Prefab Steel Building Cost Factors</title>
+<title>Copy Article - Steel Structure for Cold Storage Warehouses</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f7fa; color: #1a1a2e; padding: 24px; }
-  .container { max-width: 820px; margin: 0 auto; }
-  h1 { font-size: 20px; margin-bottom: 16px; color: #16213e; }
-  .section { background: #fff; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 20px; overflow: hidden; }
-  .section-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #16213e; color: #fff; }
-  .section-header h2 { font-size: 15px; font-weight: 600; }
-  .copy-btn { background: #0f3460; color: #fff; border: none; padding: 7px 18px; border-radius: 6px; font-size: 13px; cursor: pointer; transition: background .2s; }
-  .copy-btn:hover { background: #1a5276; }
-  .copy-btn.copied { background: #27ae60; }
-  .content { padding: 20px; }
-  .content h3 { font-size: 16px; margin: 18px 0 8px; color: #16213e; }
-  .content h3:first-child { margin-top: 0; }
-  .content p { margin-bottom: 12px; line-height: 1.65; font-size: 14.5px; }
-  .content ul, .content ol { margin: 8px 0 14px 22px; }
-  .content li { margin-bottom: 5px; line-height: 1.6; font-size: 14.5px; }
-  .content table { width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 14px; }
-  .content th, .content td { border: 1px solid #dde1e7; padding: 8px 12px; text-align: left; }
-  .content th { background: #eef1f6; font-weight: 600; }
-  .content a { color: #0f3460; text-decoration: underline; }
-  .note { background: #fff3cd; border: 1px solid #ffeeba; border-radius: 8px; padding: 12px 16px; margin: 20px 0; font-size: 13.5px; color: #856404; }
-  .note strong { color: #533f03; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f7fa; color: #1a1a2e; padding: 30px 20px; }
+  .container { max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 22px; margin-bottom: 20px; color: #16213e; }
+  .section { background: #fff; border-radius: 12px; padding: 24px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+  .section-header h2 { font-size: 16px; color: #0f3460; }
+  .btn { padding: 6px 18px; border: none; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 600; transition: all .2s; }
+  .btn-copy { background: #0f3460; color: #fff; }
+  .btn-copy:hover { background: #1a5276; }
+  .btn-copied { background: #27ae60; color: #fff; }
+  .content-box { background: #f8f9fc; border: 1px solid #e8ecf1; border-radius: 8px; padding: 18px; font-size: 14px; line-height: 1.7; white-space: pre-wrap; word-wrap: break-word; }
+  .title-box { background: #f8f9fc; border: 1px solid #e8ecf1; border-radius: 8px; padding: 14px 18px; font-size: 15px; font-weight: 600; line-height: 1.5; }
+  .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #27ae60; color: #fff; padding: 10px 24px; border-radius: 8px; font-size: 14px; opacity: 0; transition: opacity .3s; pointer-events: none; }
+  .toast.show { opacity: 1; }
+  .instructions { background: #eef5ff; border-left: 4px solid #0f3460; padding: 14px 18px; border-radius: 8px; font-size: 13px; color: #2c3e50; margin-bottom: 20px; line-height: 1.6; }
+  @media (max-width: 600px) { body { padding: 16px; } .section { padding: 16px; } .content-box { font-size: 13px; padding: 12px; } }
 </style>
 </head>
 <body>
 <div class="container">
 
-<h1>📋 Copy &amp; Paste to WordPress</h1>
+<h1>📄 Steel Structure for Cold Storage Warehouses</h1>
 
-<div class="note">
-  <strong>🧭 Workflow:</strong>
-  点「复制标题」→ 去 WordPress 粘贴标题 →
-  点「复制内容」→ 粘贴正文 →
-  <strong>记得在末尾添加 "Visit Laotie Steel Structure: https://www.laotie-steel.com"</strong>
-  （链接已包含在正文末尾）
+<div class="instructions">
+<strong>📋 操作步骤：</strong><br>
+1. 点击下方 <strong>「复制标题」</strong>按钮<br>
+2. 去 WordPress 粘贴标题<br>
+3. 点击 <strong>「复制内容」</strong>按钮<br>
+4. 去 WordPress 粘贴正文<br>
+5. 检查格式后发布
 </div>
 
-<!-- ============ TITLE SECTION ============ -->
+<!-- Title Section -->
 <div class="section">
   <div class="section-header">
     <h2>📌 Blog Title</h2>
-    <button class="copy-btn" id="copyTitleBtn">📋 复制标题</button>
+    <button class="btn btn-copy" id="copyTitleBtn" onclick="copyTitle()">复制标题</button>
   </div>
-  <div class="content">
-    <p id="blogTitle" style="font-size:17px; font-weight:600; color:#16213e;">
-      Prefab Steel Building Cost Factors: A Complete Breakdown for Smart Buyers
-    </p>
-  </div>
+  <div class="title-box" id="titleText">Why Steel Structure Is the Best Choice for Cold Storage Warehouses</div>
 </div>
 
-<!-- ============ CONTENT SECTION ============ -->
+<!-- Content Section -->
 <div class="section">
   <div class="section-header">
     <h2>📝 Blog Content</h2>
-    <button class="copy-btn" id="copyContentBtn">📋 复制内容</button>
+    <button class="btn btn-copy" id="copyContentBtn" onclick="copyContent()">复制内容</button>
   </div>
-  <div class="content" id="blogContent">
+  <div class="content-box" id="contentText">Cold storage warehouses play a critical role in the global food supply chain, pharmaceutical logistics, and temperature-sensitive manufacturing. When it comes to choosing a structural system for these facilities, steel structures have emerged as the dominant solution. This article explains why steel is the superior choice for cold storage warehouses and what key design considerations matter most.
 
-<h3>Introduction</h3>
-<p>
-When planning a prefab steel building project, understanding the cost structure is essential for budgeting accurately. Unlike traditional construction, prefab metal buildings offer significant savings — but the final price tag depends on several variables. This article breaks down the key cost factors of prefab steel buildings so you can make an informed purchasing decision.
-</p>
+**Why Steel for Cold Storage?**
 
-<h3>1. Building Size and Dimensions</h3>
-<p>
-The most obvious cost driver is the physical size of the structure — width, length, and eave height. Larger buildings require more steel, larger foundations, and longer erection times. Generally, the cost per square meter decreases as the building gets larger because fixed costs (design, mobilization) are spread over a bigger area.
-</p>
-<ul>
-  <li><strong>Width (span):</strong> Wider clear-span designs require heavier frames and increase cost.</li>
-  <li><strong>Length:</strong> Adding length is relatively cost-efficient since bay spacing stays the same.</li>
-  <li><strong>Eave height:</strong> Taller walls need longer columns and more bracing, raising material costs.</li>
-</ul>
+Cold storage buildings must maintain consistent internal temperatures — often as low as -25°C (-13°F) — while preventing thermal bridging, condensation, and structural degradation. Steel structures excel in these conditions for several reasons:
 
-<h3>2. Steel Grade and Material Costs</h3>
-<p>
-The price of raw steel fluctuates with global market conditions. In addition, the grade of steel used (e.g., Q355 vs Q235) affects both strength and cost. High-strength steel may cost more per ton but allows lighter sections, potentially offsetting the price premium. Your provider should specify the steel grade in their quotation.
-</p>
+1. **Thermal Efficiency**: Steel framing allows for continuous insulation envelopes. With proper insulated panels (PIR/PUR), steel buildings achieve U-values as low as 0.15 W/m²K, meeting and exceeding cold storage energy standards.
 
-<h3>3. Design Complexity and Load Requirements</h3>
-<p>
-Buildings designed to withstand heavy snow loads, high wind speeds, or seismic activity require additional steel bracing, thicker sections, and more engineering hours. For example, a building designed for Australia's cyclone-prone regions will cost significantly more than a standard shed in a mild climate.
-</p>
+2. **Moisture Resistance**: Unlike timber, steel does not rot, warp, or absorb moisture. This eliminates the risk of mold growth inside insulated cavities — a critical advantage in cold environments where condensation is a persistent risk.
 
-<table>
-  <tr>
-    <th>Load Factor</th>
-    <th>Cost Impact</th>
-    <th>Example Region</th>
-  </tr>
-  <tr>
-    <td>Snow load &gt; 1.0 kN/m²</td>
-    <td>+10–15%</td>
-    <td>Northern Europe, Canada</td>
-  </tr>
-  <tr>
-    <td>Wind load &gt; 50 m/s</td>
-    <td>+15–25%</td>
-    <td>Coastal areas, cyclone zones</td>
-  </tr>
-  <tr>
-    <td>Seismic design (Ductility)</td>
-    <td>+20–30%</td>
-    <td>Japan, Chile, New Zealand</td>
-  </tr>
-</table>
+3. **Long Span Capability**: Cold storage warehouses often require clear, unobstructed floor space for racking systems. Steel portal frames can achieve spans of 30-60 meters without intermediate columns, maximizing usable storage volume.
 
-<h3>4. Roof Profile and Cladding</h3>
-<p>
-Single-skin roofs are the most economical option. Insulated panels, standing seam metal roofs, or specialty cladding (e.g., stone-coated steel tiles) increase both material and labor costs. For warehouse or workshop applications, a standard single-skin or sandwich panel roof usually provides the best value.
-</p>
+4. **Speed of Construction**: Prefabricated steel components are manufactured off-site and assembled quickly on-site. A typical cold storage warehouse of 3,000-5,000 m² can be erected in 4-6 weeks, significantly reducing project timelines.
 
-<h3>5. Accessories and Openings</h3>
-<p>
-Overhead doors, personnel doors, windows, skylights, ventilation systems, and gutter/downpipe sets all add to the total. Each opening requires additional framing and sealant work. A building with multiple large roll-up doors will cost noticeably more than one with minimal openings.
-</p>
+5. **Durability and Lifecycle Cost**: Steel structures, when properly coated and maintained, have a service life exceeding 50 years. The total cost of ownership is lower than concrete alternatives when factoring in maintenance, energy efficiency, and adaptability.
 
-<h3>6. Foundation and Site Conditions</h3>
-<p>
-Prefab steel buildings are lighter than concrete structures, but they still require proper foundations. Site preparation — including soil testing, grading, and concrete footings — varies widely by location. Poor soil conditions (clay, loose sand) may require deep foundations or piling, which can add thousands to the project cost.
-</p>
+**Key Design Considerations**
 
-<h3>7. Transportation and Logistics</h3>
-<p>
-Steel structures are shipped in prefabricated components. The distance from the factory to the project site directly affects freight costs. International shipping, customs clearance, and inland trucking can represent 5–15% of the total budget. Choosing a supplier near a major port can help reduce these costs.
-</p>
+Building a cold storage warehouse with steel requires attention to several structural details:
 
-<h3>8. Certification and Compliance</h3>
-<p>
-If your project requires third-party certifications such as CE (EN 1090), ISO, or local building permits, the associated inspection and documentation fees add to the overall cost. While these are non-negotiable for regulated markets, working with a certified manufacturer (like Laotie Steel) ensures compliance without hidden surprises.
-</p>
+| Consideration | Requirement | Why It Matters |
+|---------------|-------------|----------------|
+| Vapor Barrier | Continuous vapor retarder on warm side of insulation | Prevents condensation within the building envelope |
+| Thermal Break | Insulated pads at column bases and connections | Eliminates thermal bridging through steel members |
+| Fire Protection | Passive fireproofing (intumescent coating or board) | Cold storage often requires 60-120 minute fire ratings |
+| Floor Flatness | Superflat floor specification (FF/FL 50+) | Supports narrow-aisle racking systems at height |
+| Crane Provisions | Optional integrated crane girders | Enables heavy goods movement within the facility |
 
-<h3>Cost Comparison Table</h3>
-<table>
-  <tr>
-    <th>Factor</th>
-    <th>Low-End</th>
-    <th>Mid-Range</th>
-    <th>High-End</th>
-  </tr>
-  <tr>
-    <td>Building size</td>
-    <td>Small shed (200 m²)</td>
-    <td>Medium warehouse (1000 m²)</td>
-    <td>Large industrial (5000 m²+)</td>
-  </tr>
-  <tr>
-    <td>Steel grade</td>
-    <td>Q235</td>
-    <td>Q355</td>
-    <td>Q420 / high-strength</td>
-  </tr>
-  <tr>
-    <td>Cladding</td>
-    <td>Single-skin</td>
-    <td>Sandwich panel 50mm</td>
-    <td>Sandwich panel 100mm+</td>
-  </tr>
-  <tr>
-    <td>Load design</td>
-    <td>Standard</td>
-    <td>Moderate wind/snow</td>
-    <td>Cyclone / seismic</td>
-  </tr>
-  <tr>
-    <td>Accessories</td>
-    <td>Minimal (1 door)</td>
-    <td>Moderate (3–5 openings)</td>
-    <td>Full (multiple doors, windows, vents)</td>
-  </tr>
-</table>
+**Foundation Requirements**
 
-<h3>Conclusion</h3>
-<p>
-Understanding these cost factors helps you evaluate quotes from different suppliers and avoid unexpected expenses. The cheapest quote is rarely the best — look for a balance of material quality, engineering capability, and transparent pricing. Whether you need a small workshop or a large industrial facility, working with an experienced manufacturer ensures you get the right structure at a fair price.
-</p>
-<p>
-<strong>Visit <a href="https://www.laotie-steel.com" target="_blank">Laotie Steel Structure</a>: <a href="https://www.laotie-steel.com" target="_blank">https://www.laotie-steel.com</a></strong>
-</p>
+Cold storage steel buildings require specialized foundations. The freeze-thaw cycle in ground soil must be considered, and insulation is often extended below the slab perimeter. Typical foundation types include:
 
-  </div>
+- **Isolated pad footings** — for standard portal frame columns
+- **Strip footings** — for long runs of wall columns
+- **Raft slab** — the preferred option for cold storage, integrating the floor slab with foundations and under-slab insulation
+
+**Why Professional Design Matters**
+
+A steel structure for cold storage is not a one-size-fits-all solution. The interaction between the structural frame, insulation system, vapor control layer, and refrigeration equipment requires careful coordination. Each project needs a tailored design that accounts for local climate conditions, building dimensions, and operational requirements.
+
+Experienced steel structure manufacturers can provide detailed shop drawings, connection designs, and erection plans specifically for cold storage applications. This ensures the building performs as intended from day one.
+
+**Conclusion**
+
+Steel structures offer unmatched advantages for cold storage warehouses: thermal performance, moisture resistance, long spans, fast construction, and long-term durability. When designed correctly with attention to insulation, vapor barriers, and thermal breaks, a steel cold storage facility can operate efficiently for decades.
+
+For professional cold storage steel building solutions, visit Laotie Steel Structure: https://www.laotie-steel.com</div>
 </div>
 
 </div>
+
+<div class="toast" id="toast">✓ Copied!</div>
 
 <script>
-(function() {
-  function setupCopy(btnId, sourceId) {
-    const btn = document.getElementById(btnId);
-    const source = document.getElementById(sourceId);
+function copyTitle() {
+  const text = document.getElementById('titleText').textContent.trim();
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById('copyTitleBtn');
+    btn.textContent = '✓ 已复制';
+    btn.classList.add('btn-copied');
+    showToast('✓ Title copied!');
+    setTimeout(() => { btn.textContent = '复制标题'; btn.classList.remove('btn-copied'); }, 2000);
+  }).catch(() => {
+    fallbackCopy(text, 'copyTitleBtn');
+  });
+}
 
-    function getText() {
-      if (sourceId === 'blogTitle') {
-        return source.textContent.trim();
-      }
-      // For content: use innerHTML but strip the last paragraph's link from the copied text
-      // Actually let's just copy innerText which is cleaner
-      return source.innerText.trim();
-    }
+function copyContent() {
+  const text = document.getElementById('contentText').textContent.trim();
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById('copyContentBtn');
+    btn.textContent = '✓ 已复制';
+    btn.classList.add('btn-copied');
+    showToast('✓ Content copied!');
+    setTimeout(() => { btn.textContent = '复制内容'; btn.classList.remove('btn-copied'); }, 2000);
+  }).catch(() => {
+    fallbackCopy(text, 'copyContentBtn');
+  });
+}
 
-    btn.addEventListener('click', async function() {
-      const text = getText();
-      try {
-        await navigator.clipboard.writeText(text);
-        btn.textContent = '✅ 已复制';
-        btn.classList.add('copied');
-        setTimeout(() => {
-          btn.textContent = '📋 复制内容';
-          btn.classList.remove('copied');
-        }, 2000);
-      } catch (err) {
-        // Fallback
-        const ta = document.createElement('textarea');
-        ta.value = text;
-        ta.style.position = 'fixed';
-        ta.style.left = '-9999px';
-        document.body.appendChild(ta);
-        ta.select();
-        document.execCommand('copy');
-        document.body.removeChild(ta);
-        btn.textContent = '✅ 已复制';
-        btn.classList.add('copied');
-        setTimeout(() => {
-          btn.textContent = '📋 复制内容';
-          btn.classList.remove('copied');
-        }, 2000);
-      }
-    });
-  }
+function fallbackCopy(text, btnId) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed'; ta.style.left = '-9999px';
+  document.body.appendChild(ta);
+  ta.select();
+  document.execCommand('copy');
+  document.body.removeChild(ta);
+  const btn = document.getElementById(btnId);
+  btn.textContent = '✓ 已复制';
+  btn.classList.add('btn-copied');
+  showToast('✓ Copied!');
+  setTimeout(() => { btn.textContent = btnId === 'copyTitleBtn' ? '复制标题' : '复制内容'; btn.classList.remove('btn-copied'); }, 2000);
+}
 
-  setupCopy('copyTitleBtn', 'blogTitle');
-  setupCopy('copyContentBtn', 'blogContent');
-})();
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 1500);
+}
 </script>
-
 </body>
 </html>

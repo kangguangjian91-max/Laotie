@@ -70,6 +70,14 @@ function getFeatureIcon(feature: string): React.ReactNode {
   return iconMap.default;
 }
 
+function getPriceUnit(product: { slug: string }): string {
+  const perTonSlugs = ['hot-rolled-steel-coil', 'galvanized-cz-purlin', 'ppgi-color-coated-steel'];
+  const perUnitSlugs = ['prefab-container-house'];
+  if (perTonSlugs.includes(product.slug)) return 'ton';
+  if (perUnitSlugs.includes(product.slug)) return 'unit';
+  return 'm²';
+}
+
 const productRelatedBlogs: Record<string, string[]> = {
   "steel-structure-building": [
     "steel-structure-production-china-manufacturing-guide",
@@ -222,6 +230,18 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             </h1>
             <p className="text-lg text-steel-accent font-semibold mb-4">{product.subtitle}</p>
             <p className="text-gray-300 max-w-2xl text-lg">{product.description}</p>
+            <div className="mt-6 flex flex-wrap items-center gap-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20">
+                <span className="text-sm text-gray-300">Price range:</span>
+                <span className="text-xl font-bold text-white">${product.schemaPriceLow}–${product.schemaPriceHigh}</span>
+                <span className="text-sm text-steel-accent">/{getPriceUnit(product)}</span>
+                <span className="text-xs text-gray-400">FOB China</span>
+              </div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-green-500/20 border border-green-400/30">
+                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                <span className="text-sm text-green-300">In production — 30-day lead time</span>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -358,13 +378,118 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           </div>
         </section>
 
+        {/* Delivery Timeline */}
+        <section className="py-12 bg-gray-50 border-y border-gray-100">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-steel mb-2 text-center">Typical Delivery Timeline</h2>
+            <p className="text-gray-500 text-sm text-center mb-8">From design approval to site delivery</p>
+            <div className="flex flex-col sm:flex-row items-stretch gap-2">
+              <div className="flex-1 flex flex-col items-center text-center p-4 bg-white rounded-xl border border-gray-200 relative">
+                <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mb-2">
+                  <Ruler className="w-5 h-5 text-blue-600" />
+                </div>
+                <h3 className="text-sm font-bold text-steel">Engineering Design</h3>
+                <p className="text-xs text-gray-500 mt-1">Calculation reports, shop drawings, erection manual</p>
+                <span className="mt-2 inline-block px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700">1–2 weeks</span>
+              </div>
+              <div className="hidden sm:flex items-center px-1">
+                <svg className="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+              </div>
+              <div className="flex-1 flex flex-col items-center text-center p-4 bg-white rounded-xl border border-gray-200">
+                <div className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center mb-2">
+                  <Zap className="w-5 h-5 text-amber-600" />
+                </div>
+                <h3 className="text-sm font-bold text-steel">Fabrication</h3>
+                <p className="text-xs text-gray-500 mt-1">CNC cutting, welding, shot blasting, coating</p>
+                <span className="mt-2 inline-block px-3 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-700">4–6 weeks</span>
+              </div>
+              <div className="hidden sm:flex items-center px-1">
+                <svg className="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+              </div>
+              <div className="flex-1 flex flex-col items-center text-center p-4 bg-white rounded-xl border border-gray-200">
+                <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mb-2">
+                  <Globe className="w-5 h-5 text-teal-600" />
+                </div>
+                <h3 className="text-sm font-bold text-steel">Shipping</h3>
+                <p className="text-xs text-gray-500 mt-1">Container loading, ocean freight to your port</p>
+                <span className="mt-2 inline-block px-3 py-1 rounded-full text-xs font-semibold bg-teal-100 text-teal-700">2–4 weeks</span>
+              </div>
+              <div className="hidden sm:flex items-center px-1">
+                <svg className="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+              </div>
+              <div className="flex-1 flex flex-col items-center text-center p-4 bg-white rounded-xl border border-gray-200">
+                <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mb-2">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                </div>
+                <h3 className="text-sm font-bold text-steel">Site Erection</h3>
+                <p className="text-xs text-gray-500 mt-1">Bolt-together assembly with remote guidance</p>
+                <span className="mt-2 inline-block px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700">4–8 weeks</span>
+              </div>
+            </div>
+            <p className="text-center text-xs text-gray-400 mt-6">Total project timeline: 11–20 weeks from design approval to completed installation. Rush production available.</p>
+          </div>
+        </section>
+
+        {/* Why Choose Laotie */}
+        <section className="py-16 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-steel mb-2 text-center">Why Choose Laotie Steel?</h2>
+            <p className="text-gray-500 text-sm text-center mb-10">15 years of manufacturing excellence, trusted by buyers in 30+ countries</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="p-6 rounded-2xl border border-gray-200 hover:border-steel-accent hover:shadow-md transition-all">
+                <div className="w-12 h-12 rounded-xl bg-steel-muted flex items-center justify-center mb-4">
+                  <Shield className="w-6 h-6 text-steel-accent" />
+                </div>
+                <h3 className="font-bold text-steel mb-2">CE & ISO 9001 Certified</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">Every product meets EN 1090-1 and ISO 9001:2015 standards. Full mill test certificates (EN 10204 3.1) provided with every shipment. IAF accredited and Made-in-China Supplier Assessed.</p>
+              </div>
+              <div className="p-6 rounded-2xl border border-gray-200 hover:border-steel-accent hover:shadow-md transition-all">
+                <div className="w-12 h-12 rounded-xl bg-steel-muted flex items-center justify-center mb-4">
+                  <Zap className="w-6 h-6 text-steel-accent" />
+                </div>
+                <h3 className="font-bold text-steel mb-2">5,000 Tons Monthly Capacity</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">20,000 m² factory with 5 automated production lines. 200+ skilled workers operating 24/7. Whether you need a 500 m² workshop or a 50,000 m² industrial complex, we deliver on time.</p>
+              </div>
+              <div className="p-6 rounded-2xl border border-gray-200 hover:border-steel-accent hover:shadow-md transition-all">
+                <div className="w-12 h-12 rounded-xl bg-steel-muted flex items-center justify-center mb-4">
+                  <Globe className="w-6 h-6 text-steel-accent" />
+                </div>
+                <h3 className="font-bold text-steel mb-2">30+ Countries Served</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">Export experience across Southeast Asia, Middle East, Africa, Australia, and South America. We design to your local building code: AS/NZS, BS 5950, EN 1993, AISC, or GB 50017.</p>
+              </div>
+              <div className="p-6 rounded-2xl border border-gray-200 hover:border-steel-accent hover:shadow-md transition-all">
+                <div className="w-12 h-12 rounded-xl bg-steel-muted flex items-center justify-center mb-4">
+                  <Ruler className="w-6 h-6 text-steel-accent" />
+                </div>
+                <h3 className="font-bold text-steel mb-2">Full Engineering Package</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">Structural calculation reports, detailed shop drawings, and erection manuals included with every order. Our engineers use Tekla, SAP2000, and STAAD.Pro for precision design.</p>
+              </div>
+              <div className="p-6 rounded-2xl border border-gray-200 hover:border-steel-accent hover:shadow-md transition-all">
+                <div className="w-12 h-12 rounded-xl bg-steel-muted flex items-center justify-center mb-4">
+                  <CheckCircle className="w-6 h-6 text-steel-accent" />
+                </div>
+                <h3 className="font-bold text-steel mb-2">Factory-Direct Pricing</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">No middleman markup. You buy directly from the manufacturer. Typical savings of 30–50% compared to local fabrication, even after shipping and duties.</p>
+              </div>
+              <div className="p-6 rounded-2xl border border-gray-200 hover:border-steel-accent hover:shadow-md transition-all">
+                <div className="w-12 h-12 rounded-xl bg-steel-muted flex items-center justify-center mb-4">
+                  <Shield className="w-6 h-6 text-steel-accent" />
+                </div>
+                <h3 className="font-bold text-steel mb-2">15-Year Track Record</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">Founded in 2009 in Shangqiu, Henan — China's steel manufacturing hub. 500+ completed projects worldwide. Every bolt, plate, and member is labeled and match-marked for rapid assembly.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Related Products */}
         <section className="py-16 bg-white border-t border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-steel mb-8 text-center">Related Products</h2>
-            <div className="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {products
                 .filter((p) => p.slug !== slug)
+                .slice(0, 4)
                 .map((relatedProduct) => (
                   <a
                     key={relatedProduct.slug}
