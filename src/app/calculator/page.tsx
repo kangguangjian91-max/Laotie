@@ -6,18 +6,19 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Steel Structure Cost Calculator 2026 | Free Quote Tool",
-  description:
-    "Free steel structure cost calculator 2026. Estimate FOB factory price per m² by building type, size, crane & cladding. Q355B steel pricing.",
+  title: "Steel Structure Cost Calculator 2026 — Estimate Price Per m² Instantly",
+  description: "Calculate steel structure cost per square meter. Free online tool for warehouse, factory, hangar & workshop pricing. Q355B steel, FOB China. Get instant estimate.",
   keywords: [
     "steel structure cost calculator",
     "steel building price per m² 2026",
     "warehouse construction cost calculator",
-    "Q355B steel price per ton",
-    "steel structure quote online",
+    "steel structure estimate tool",
+    "steel building cost estimator",
     "prefab steel building cost calculator",
-    "vietnam steel structure price",
-    "thailand steel building cost",
+    "Q355B steel price per ton",
+    "FOB steel structure price",
+    "steel warehouse cost per square meter",
+    "steel factory building cost calculator",
   ],
   openGraph: {
     title: "Steel Structure Cost Calculator 2026 | Laotie Steel",
