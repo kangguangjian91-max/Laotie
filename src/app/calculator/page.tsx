@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import Calculator from "@/components/Calculator";
 import Script from "next/script";
-import { Suspense } from "react";
+import SteelEstimator from "@/components/SteelEstimator";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Steel Structure Cost Calculator 2026 — Estimate Price Per m² Instantly",
-  description: "Calculate steel structure cost per square meter. Free online tool for warehouse, factory, hangar & workshop pricing. Q355B steel, FOB China. Get instant estimate.",
+  title: "Steel Structure Material Estimator — Calculate Tonnage & Cost",
+  description: "Engineering-grade steel tonnage calculator. Estimate portal frame building weight, purlins, bolts & enclosure. Real-time RMB pricing, FOB China. Free tool for importers & builders.",
   keywords: [
     "steel structure cost calculator",
     "steel building price per m² 2026",
@@ -75,22 +74,20 @@ export default function CalculatorPage() {
       <section className="bg-steel text-white py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl lg:text-4xl font-bold mb-4">
-            Steel Structure Cost Calculator 2026
+            Steel Structure Material Estimator
           </h1>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Get a preliminary quote in 1 minute. Estimate steel building price
-            by building type, dimensions, crane system, and project location.
-            Covers Australia, China, Nigeria, Philippines, Vietnam, Thailand, UAE, Indonesia.
+            Engineering-grade tonnage calculator for portal frame steel buildings.
+            Enter dimensions, get precise steel weight, purlin specs, bolt counts,
+            and enclosure area — with real-time price estimation in RMB.
           </p>
         </div>
       </section>
 
-      {/* ===== Calculator Component (Client-side) ===== */}
-      <section className="py-12 lg:py-16">
+      {/* ===== Steel Estimator Component ===== */}
+      <section className="py-8 lg:py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Suspense fallback={<div className="p-8 text-center">Loading calculator...</div>}>
-            <Calculator />
-          </Suspense>
+          <SteelEstimator />
         </div>
       </section>
 

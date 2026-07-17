@@ -1,0 +1,13 @@
+# Disavow file for laotie-steel.com
+# Generated: 2026-07-16
+# Moz detected 3 spam backlink domains
+# Submit at: https://search.google.com/search-console/disavow-links
+
+# Spam real estate site
+domain:lydiaroyrealestate.com
+
+# Spam marketing site
+domain:plumeriamarketing.com
+
+# Spam gambling/other site
+domain:m98ufa.com

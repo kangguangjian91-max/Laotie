@@ -3,181 +3,274 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Copy Article - Portal Frame vs Truss Structure Comparison</title>
+<title>Copy Article - SteelStructureGuide</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f7fa; color: #1a1a2e; padding: 30px 20px; }
-  .container { max-width: 900px; margin: 0 auto; }
-  h1 { font-size: 22px; margin-bottom: 20px; color: #16213e; }
-  .section { background: #fff; border-radius: 12px; padding: 24px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-  .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
-  .section-header h2 { font-size: 16px; color: #0f3460; }
-  .btn { padding: 6px 18px; border: none; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 600; transition: all .2s; }
-  .btn-copy { background: #0f3460; color: #fff; }
-  .btn-copy:hover { background: #1a5276; }
-  .btn-copied { background: #27ae60; color: #fff; }
-  .content-box { background: #f8f9fc; border: 1px solid #e8ecf1; border-radius: 8px; padding: 18px; font-size: 14px; line-height: 1.7; white-space: pre-wrap; word-wrap: break-word; }
-  .title-box { background: #f8f9fc; border: 1px solid #e8ecf1; border-radius: 8px; padding: 14px 18px; font-size: 15px; font-weight: 600; line-height: 1.5; }
-  .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #27ae60; color: #fff; padding: 10px 24px; border-radius: 8px; font-size: 14px; opacity: 0; transition: opacity .3s; pointer-events: none; }
-  .toast.show { opacity: 1; }
-  .instructions { background: #eef5ff; border-left: 4px solid #0f3460; padding: 14px 18px; border-radius: 8px; font-size: 13px; color: #2c3e50; margin-bottom: 20px; line-height: 1.6; }
-  @media (max-width: 600px) { body { padding: 16px; } .section { padding: 16px; } .content-box { font-size: 13px; padding: 12px; } }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f7fa; color: #222; padding: 30px 20px; }
+  .container { max-width: 820px; margin: 0 auto; }
+  .card { background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 24px; margin-bottom: 24px; }
+  .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid #e8ecf1; }
+  .card-header h2 { font-size: 16px; color: #333; font-weight: 600; }
+  .btn-copy { display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px; border: none; border-radius: 6px; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; background: #2563eb; color: #fff; }
+  .btn-copy:hover { background: #1d4ed8; }
+  .btn-copy:active { transform: scale(0.96); }
+  .btn-copy.copied { background: #16a34a; }
+  .btn-copy svg { width: 16px; height: 16px; fill: currentColor; }
+  #titleDisplay { font-size: 26px; font-weight: 700; color: #111; line-height: 1.3; }
+  #contentDisplay { font-size: 15px; line-height: 1.75; color: #333; }
+  #contentDisplay h3 { font-size: 18px; font-weight: 600; margin-top: 20px; margin-bottom: 8px; color: #111; }
+  #contentDisplay table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 14px; }
+  #contentDisplay th, #contentDisplay td { border: 1px solid #d1d5db; padding: 8px 12px; text-align: left; }
+  #contentDisplay th { background: #f3f4f6; font-weight: 600; }
+  #contentDisplay ul, #contentDisplay ol { padding-left: 20px; margin: 8px 0; }
+  #contentDisplay li { margin-bottom: 4px; }
+  .toast { visibility: hidden; min-width: 160px; background: #222; color: #fff; text-align: center; border-radius: 8px; padding: 10px 20px; position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); font-size: 14px; z-index: 999; opacity: 0; transition: opacity 0.3s, visibility 0.3s; }
+  .toast.show { visibility: visible; opacity: 1; }
+  .step-hint { background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 12px 16px; font-size: 13px; color: #92400e; margin-bottom: 20px; line-height: 1.6; }
+  .step-hint strong { color: #78350f; }
+  .step-hint span { background: #2563eb; color: #fff; display: inline-block; border-radius: 50%; width: 20px; height: 20px; text-align: center; line-height: 20px; font-size: 12px; margin-right: 4px; }
 </style>
 </head>
 <body>
 <div class="container">
-
-<h1>📄 Portal Frame vs Truss Structure Comparison</h1>
-
-<div class="instructions">
-<strong>📋 Steps:</strong><br>
-1. Click <strong>"Copy Title"</strong> below<br>
-2. Go to WordPress & paste the title<br>
-3. Click <strong>"Copy Content"</strong><br>
-4. Go to WordPress & paste the article body<br>
-5. Review formatting and publish
-</div>
-
-<!-- Title Section -->
-<div class="section">
-  <div class="section-header">
-    <h2>📌 Blog Title</h2>
-    <button class="btn btn-copy" id="copyTitleBtn" onclick="copyTitle()">Copy Title</button>
+  <div class="step-hint">
+    <strong>📋 操作步骤：</strong><br>
+    <span>1</span> 点「<strong>复制标题</strong>」→ 去 WordPress 粘贴到标题栏 →<br>
+    <span>2</span> 点「<strong>复制内容</strong>」→ 去 WordPress 粘贴到正文区 →<br>
+    <span>3</span> 检查格式后发布 ✅
   </div>
-  <div class="title-box" id="titleText">Portal Frame vs Truss Structure: Which Steel Building System Is Right for Your Project?</div>
-</div>
 
-<!-- Content Section -->
-<div class="section">
-  <div class="section-header">
-    <h2>📝 Blog Content</h2>
-    <button class="btn btn-copy" id="copyContentBtn" onclick="copyContent()">Copy Content</button>
+  <div class="card">
+    <div class="card-header">
+      <h2>📰 Title</h2>
+      <button class="btn-copy" id="copyTitleBtn" onclick="copyTitle()">
+        <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+        Copy Title
+      </button>
+    </div>
+    <div id="titleDisplay">Steel Structure Fire Protection Methods — A Complete Guide for Safe Design</div>
   </div>
-  <div class="content-box" id="contentText">When planning a steel building project, one of the most important decisions is choosing the right structural system. Two of the most widely used options are portal frames and truss structures. While both are made of steel and offer excellent strength, they serve different purposes and excel in different applications. This article compares portal frame and truss structures across key factors to help you make an informed choice.
 
-**What Is a Portal Frame?**
-
-A portal frame is a structural system consisting of columns and rafters connected by rigid joints. The frame resists loads through moment connections, creating a continuous load path from the roof to the foundation. Portal frames are the most common structural system for industrial and commercial buildings worldwide.
-
-Key characteristics:
-- Rigid moment connections between columns and rafters
-- Simple, clean interior with no bracing or truss members
-- Typically spans 15-60 meters
-- Economical for rectangular, single-volume buildings
-- Easy to expand or modify in the future
-
-**What Is a Truss Structure?**
-
-A truss structure uses a framework of triangular units connected at pin joints. Each member carries either tension or compression — never bending. Trusses can achieve much longer spans than portal frames and are commonly used for roofs, bridges, and large-span facilities.
-
-Key characteristics:
-- Triangular web configuration with top and bottom chords
-- Pin-connected members carrying axial loads only
-- Capable of spans exceeding 100 meters
-- Greater depth allows for heavier load capacities
-- More complex fabrication and erection process
-
-**Head-to-Head Comparison**
-
-The table below summarizes the key differences between the two systems:
-
-| Factor | Portal Frame | Truss Structure |
-|--------|-------------|-----------------|
-| Typical Span | 15-60 m | 30-120 m+ |
-| Structure Depth | Shallow (economical) | Deep (greater material use) |
-| Interior Space | Clear, unobstructed | Diagonal bracing may intrude |
-| Fabrication Cost | Lower — simpler welding | Higher — more cuts, welds, connections |
-| Erection Speed | Faster — fewer components | Slower — more members to assemble |
-| Load Capacity | Moderate to high | Very high (heavy roofs, cranes, snow) |
-| Aesthetics | Clean, modern look | Industrial, technical look |
-| Modification Ease | Easy to extend or alter | Difficult to modify |
-| Best For | Warehouses, workshops, hangars, showrooms | Stadiums, exhibition halls, bridges, heavy industrial |
-
-**When to Choose a Portal Frame**
-
-Portal frames are the go-to choice for most standard steel buildings. Choose a portal frame when:
-
-1. **You need clear interior space.** Portal frames have no diagonal members inside the building volume, making them ideal for warehouses, production floors, and storage facilities where space utilization matters.
-2. **Budget is a primary concern.** For spans under 60 meters, portal frames are significantly more cost-effective due to simpler fabrication and faster erection.
-3. **You want fast construction.** A typical portal frame building can be erected in 3-6 weeks, whereas a truss structure of the same span may take 8-12 weeks.
-4. **Future expansion is planned.** Portal frames are easier to extend laterally because additional bays can be added to either end of the building.
-
-**When to Choose a Truss Structure**
-
-Truss structures become the superior choice in specific scenarios:
-
-1. **Ultra-long spans are required.** When a building needs a clear span beyond 60 meters — such as an exhibition hall, sports stadium, or aircraft hangar — trusses are the proven solution.
-2. **Heavy loads must be supported.** Trusses can carry significantly heavier roof loads, including suspended crane systems, heavy HVAC equipment, or deep snow loads in cold regions.
-3. **Unique architectural shapes are needed.** Trusses can be designed in a wide variety of geometric configurations — curved, pitched, flat, sawtooth — offering more design flexibility for complex roof profiles.
-
-**Cost Considerations**
-
-For a typical 30-meter span building:
-- Portal frame: approximately $30-45 per square meter (fabricated & erected)
-- Truss structure: approximately $45-70 per square meter (fabricated & erected)
-
-The cost gap narrows as span increases. At spans above 60 meters, truss structures often become the only viable option, making the cost comparison moot.
-
-**Conclusion**
-
-Both portal frames and truss structures are reliable, proven steel building systems. The right choice depends on your project's specific requirements — span, loads, budget, timeline, and future needs. For most industrial and commercial buildings, portal frames offer the best balance of cost, speed, and functionality. For very long spans or heavy load conditions, truss structures remain the engineering standard.
-
-Whichever system you choose, working with an experienced steel structure manufacturer ensures your building is designed and fabricated to the highest standards.
-
-For professional steel structure design and fabrication services, visit Laotie Steel Structure: https://www.laotie-steel.com</div>
+  <div class="card">
+    <div class="card-header">
+      <h2>📝 Content</h2>
+      <button class="btn-copy" id="copyContentBtn" onclick="copyContent()">
+        <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+        Copy Content
+      </button>
+    </div>
+    <div id="contentDisplay"></div>
+  </div>
 </div>
 
-</div>
-
-<div class="toast" id="toast">✓ Copied!</div>
+<div id="toast" class="toast">Copied to clipboard!</div>
 
 <script>
+const articleContent = `Steel is non-combustible, but it loses strength rapidly when exposed to high temperatures. At around 540°C (1000°F), structural steel can lose over 50% of its yield strength — enough to cause catastrophic collapse in a fire. That is why fire protection is a mandatory consideration in any steel structure design.
+
+This guide covers the most common fire protection methods for steel buildings, their advantages, and how to choose the right approach for your project.
+
+1. Understanding Fire Ratings for Steel Structures
+
+Building codes typically require structural steel to maintain its load-bearing capacity for a specified period during a fire — commonly 60, 90, or 120 minutes. This is known as the Fire Resistance Level (FRL) or fire rating.
+
+Fire Rating	Typical Application	Required Protection
+R 30 (30 min)	Storage sheds, small workshops	Minimal — intumescent coating often sufficient
+R 60 (60 min)	Warehouses, commercial buildings	Standard — board or spray protection common
+R 90 (90 min)	Multi-story buildings, schools	Moderate — thicker coatings or dual systems
+R 120 (120 min)	High-rise, critical infrastructure	Heavy — concrete encasement or composite
+
+2. Intumescent Coatings (Thin-Film)
+
+Intumescent paint is the most popular fire protection method for visible steelwork. When exposed to heat, it expands to up to 50 times its original thickness, forming a char layer that insulates the steel.
+
+● Advantages: Aesthetic — you can still see the steel profile; lightweight; easy to apply on site.
+● Disadvantages: Higher cost per square metre; requires proper surface preparation; limited durability in outdoor or high-humidity environments.
+● Best suited for: Exposed steel in office buildings, shopping centers, and architectural structures.
+
+3. Spray-Applied Fireproofing (SFRM)
+
+Sprayed Fire-Resistive Material (SFRM) — often called "fireproofing spray" — is a cementitious or mineral-fiber coating applied directly to steel surfaces.
+
+● Advantages: Cost-effective for large areas; fast application; excellent thermal insulation.
+● Disadvantages: Rough texture, not visually appealing; can produce dust during application; adds noticeable thickness.
+● Best suited for: Concealed steelwork — roof trusses, ceiling cavities, industrial plant structures.
+
+4. Board Systems (Fire-Rated Cladding)
+
+Fire-rated boards — such as calcium silicate or gypsum-based panels — are fixed around steel members to create a protective enclosure.
+
+● Advantages: Dry installation, no curing time; predictable thickness per fire rating; clean finish.
+● Disadvantages: Labour-intensive for complex connections; adds dead load; takes up space around columns and beams.
+● Best suited for: Columns and beams in enclosed spaces, stairwells, and lift shafts.
+
+5. Concrete Encasement and Composite Systems
+
+Full concrete encasement provides the highest level of fire protection. The concrete mass absorbs heat and delays temperature rise in the steel.
+
+● Advantages: Very high fire resistance (up to 240 minutes); durable and impact-resistant; no maintenance required.
+● Disadvantages: Heavy — adds significant dead load; hides the steel completely; labour and formwork costs are high.
+● Best suited for: Basement columns, fire-rated walls in multi-story buildings, critical infrastructure.
+
+6. Intumescent wraps, blankets, and mats
+
+For irregularly shaped members or retrofit projects, flexible fire-protective wraps and ceramic fiber blankets offer a practical alternative.
+
+● Advantages: Flexible — wraps around complex geometries; no surface preparation needed; removable for inspection.
+● Disadvantages: Less aesthetically pleasing; lower impact resistance; may require mechanical fastening.
+● Best suited for: Cable trays, pipe supports, bracing in existing buildings.
+
+How to Choose the Right Method
+
+Consider these factors when selecting a fire protection system:
+
+● Fire rating required by local code — this is the primary constraint.
+● Visibility of the steel — exposed steel needs aesthetics (intumescent); concealed steel can use spray or boards.
+● Budget — intumescent is premium; SFRM is budget-friendly for large areas.
+● Construction timeline — spray and intumescent need curing time; boards are dry-install.
+● Environmental conditions — outdoor or corrosive environments require tested systems with topcoats.
+
+Conclusion
+
+Fire protection is not optional — it is a critical safety and compliance requirement for every steel building. The right method depends on your project's fire rating target, budget, and aesthetic needs. Consulting a structural engineer early in the design phase ensures you select a system that is both effective and cost-efficient.
+
+Visit Laotie Steel Structure: https://www.laotie-steel.com`;
+
+// Convert plain text with simple formatting to HTML
+function renderContent(text) {
+  const blocks = text.split(/\n\n+/);
+  let html = '';
+  for (const block of blocks) {
+    const trimmed = block.trim();
+    if (!trimmed) continue;
+
+    // Check if it's a table (has tab characters as separators)
+    if (trimmed.includes('\t') && trimmed.split('\n').length >= 2) {
+      const rows = trimmed.split('\n');
+      let tableHtml = '<table>\n';
+      for (let i = 0; i < rows.length; i++) {
+        const cells = rows[i].split('\t');
+        const tag = i === 0 ? 'th' : 'td';
+        tableHtml += '<tr>';
+        for (const cell of cells) {
+          tableHtml += `<${tag}>${cell.trim()}</${tag}>`;
+        }
+        tableHtml += '</tr>\n';
+      }
+      tableHtml += '</table>';
+      html += tableHtml + '\n';
+      continue;
+    }
+
+    // Check for numbered list heading (lines starting with digit. followed by text on same line)
+    if (/^\d+[\.\)]\s+/.test(trimmed) && !trimmed.includes('\n')) {
+      const match = trimmed.match(/^(\d+[\.\)])\s+(.*)/);
+      if (match) {
+        html += `<h3>${match[1]} ${match[2]}</h3>\n`;
+        continue;
+      }
+    }
+    // Check for heading (lines starting with digit. followed by text)
+    if (/^\d+[\.\)]\s+[A-Z]/.test(trimmed) && !trimmed.includes('\n')) {
+      const match = trimmed.match(/^(\d+[\.\)])\s+(.*)/);
+      if (match) {
+        html += `<h3>${match[1]} ${match[2]}</h3>\n`;
+        continue;
+      }
+    }
+
+    // Check for bullet list
+    if (/^[●\-•]\s/.test(trimmed)) {
+      const lines = trimmed.split('\n');
+      let listHtml = '<ul>\n';
+      for (const line of lines) {
+        const clean = line.replace(/^[●\-•\s]+/, '');
+        if (clean.includes('→')) {
+          const parts = clean.split('→');
+          listHtml += `<li><strong>${parts[0].trim()}</strong> → ${parts[1].trim()}</li>\n`;
+        } else {
+          listHtml += `<li>${clean}</li>\n`;
+        }
+      }
+      listHtml += '</ul>';
+      html += listHtml + '\n';
+      continue;
+    }
+
+    // Check for long numbered list (multi-line, starts with digit.)
+    if (/^\d+[\.\)]\s/.test(trimmed)) {
+      const lines = trimmed.split('\n');
+      const allLinesAreItems = lines.every(l => /^\s*\d+[\.\)]\s/.test(l) || /^[●\-•]\s/.test(l) || /^\s*$/.test(l));
+      if (allLinesAreItems) {
+        let listHtml = '<ol>\n';
+        for (const line of lines) {
+          if (/^\s*$/.test(line)) continue;
+          const clean = line.replace(/^\d+[\.\)]\s*/, '').replace(/^[●\-•\s]+/, '');
+          listHtml += `<li>${clean}</li>\n`;
+        }
+        listHtml += '</ol>';
+        html += listHtml + '\n';
+        continue;
+      }
+    }
+
+    // Regular paragraph with bold text
+    const formatted = trimmed.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    html += `<p>${formatted}</p>\n`;
+  }
+  return html;
+}
+
+document.getElementById('contentDisplay').innerHTML = renderContent(articleContent);
+
 function copyTitle() {
-  const text = document.getElementById('titleText').textContent.trim();
-  navigator.clipboard.writeText(text).then(() => {
-    const btn = document.getElementById('copyTitleBtn');
-    btn.textContent = '✓ Copied';
-    btn.classList.add('btn-copied');
-    showToast('✓ Title copied!');
-    setTimeout(() => { btn.textContent = 'Copy Title'; btn.classList.remove('btn-copied'); }, 2000);
-  }).catch(() => {
-    fallbackCopy(text, 'copyTitleBtn');
-  });
+  const title = document.getElementById('titleDisplay').textContent.trim();
+  navigator.clipboard.writeText(title).then(() => {
+    showToast('✅ Title copied!');
+    flashBtn('copyTitleBtn');
+  }).catch(() => fallbackCopy(title, 'copyTitleBtn', '✅ Title copied!'));
 }
 
 function copyContent() {
-  const text = document.getElementById('contentText').textContent.trim();
+  const text = articleContent.trim();
   navigator.clipboard.writeText(text).then(() => {
-    const btn = document.getElementById('copyContentBtn');
-    btn.textContent = '✓ Copied';
-    btn.classList.add('btn-copied');
-    showToast('✓ Content copied!');
-    setTimeout(() => { btn.textContent = 'Copy Content'; btn.classList.remove('btn-copied'); }, 2000);
-  }).catch(() => {
-    fallbackCopy(text, 'copyContentBtn');
-  });
+    showToast('✅ Content copied!');
+    flashBtn('copyContentBtn');
+  }).catch(() => fallbackCopy(text, 'copyContentBtn', '✅ Content copied!'));
 }
 
-function fallbackCopy(text, btnId) {
-  const ta = document.createElement('textarea');
-  ta.value = text;
-  ta.style.position = 'fixed'; ta.style.left = '-9999px';
-  document.body.appendChild(ta);
-  ta.select();
-  document.execCommand('copy');
-  document.body.removeChild(ta);
-  const btn = document.getElementById(btnId);
-  btn.textContent = '✓ Copied';
-  btn.classList.add('btn-copied');
-  showToast('✓ Copied!');
-  setTimeout(() => { btn.textContent = btnId === 'copyTitleBtn' ? 'Copy Title' : 'Copy Content'; btn.classList.remove('btn-copied'); }, 2000);
+function flashBtn(id) {
+  const btn = document.getElementById(id);
+  btn.classList.add('copied');
+  btn.textContent = '✓ Copied!';
+  setTimeout(() => {
+    btn.classList.remove('copied');
+    btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg> Copy ' + (id === 'copyTitleBtn' ? 'Title' : 'Content');
+  }, 2000);
 }
 
 function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 1500);
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2000);
+}
+
+function fallbackCopy(text, btnId, successMsg) {
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  textarea.style.position = 'fixed';
+  textarea.style.left = '-9999px';
+  document.body.appendChild(textarea);
+  textarea.select();
+  try {
+    document.execCommand('copy');
+    showToast(successMsg);
+    flashBtn(btnId);
+  } catch {
+    showToast('❌ Copy failed, please select text manually');
+  }
+  document.body.removeChild(textarea);
 }
 </script>
 </body>
