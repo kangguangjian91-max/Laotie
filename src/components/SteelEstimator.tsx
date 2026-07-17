@@ -3,8 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Ruler, ChevronDown, ChevronUp, Zap, Calculator, Info } from "lucide-react";
 import Link from "next/link";
-
-const engine = require("@/lib/steel-engine");
+import * as engine from "@/lib/steel-engine";
 
 const PRICES = {
   mainSteel: 5100,    // RMB/t - welded H-section

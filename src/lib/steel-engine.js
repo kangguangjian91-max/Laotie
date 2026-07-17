@@ -7,7 +7,7 @@
 // ========== 通用：焊接H型钢计算 ==========
 
 /** 等截面焊接H型钢 (柱) */
-function weldedSection(H, B, tw, tf) {
+export function weldedSection(H, B, tw, tf) {
   const A = 2 * B * tf + (H - 2 * tf) * tw;
   return {
     spec: `H${H}×${B}×${tw}×${tf}`,
@@ -16,7 +16,7 @@ function weldedSection(H, B, tw, tf) {
 }
 
 /** 变截面焊接H型钢 (梁): H(膝深~屋脊深)×B×tw×tf, 腹板线性渐变, 翼缘不变 */
-function weldedTapered(Hk, Hr, B, tw, tf) {
+export function weldedTapered(Hk, Hr, B, tw, tf) {
   const Ak = 2 * B * tf + (Hk - 2 * tf) * tw;
   const Ar = 2 * B * tf + (Hr - 2 * tf) * tw;
   const weight = (Ak + Ar) / 2 * 7.85 / 1000;
@@ -30,7 +30,7 @@ function weldedTapered(Hk, Hr, B, tw, tf) {
 const STEEL_COEFF = 1.05;
 
 // ========== 檩条查表：按跨度选C型钢截面 (简支均布, 1.5m檩距) ==========
-function lookupRoofPurlin(span) {
+export function lookupRoofPurlin(span) {
   if (span <= 4.5) return { spec: 'C120×50×20×2.0', weight: 3.42, factor: 1.00 };
   if (span <= 6)   return { spec: 'C160×60×20×2.5', weight: 5.72, factor: 1.00 };
   if (span <= 7.5) return { spec: 'C180×70×20×2.5', weight: 6.59, factor: 1.00 };
@@ -38,7 +38,7 @@ function lookupRoofPurlin(span) {
   return { spec: 'C250×75×20×2.5', weight: 9.57, factor: 1.00 };
 }
 
-function lookupWallPurlin(span) {
+export function lookupWallPurlin(span) {
   if (span <= 4.5) return { spec: 'C100×50×20×2.0', weight: 2.95, factor: 1.00 };
   if (span <= 6)   return { spec: 'C120×50×20×2.2', weight: 3.95, factor: 1.00 };
   if (span <= 7.5) return { spec: 'C140×50×20×2.2', weight: 4.52, factor: 1.00 };
@@ -47,7 +47,7 @@ function lookupWallPurlin(span) {
 }
 
 // ========== 钢柱：檐高定截面 (GB/T 33814 焊接H型钢) ==========
-function lookupColumn(H) {
+export function lookupColumn(H) {
   if (H <= 5)  return weldedSection(250, 200, 6, 10);
   if (H <= 7)  return weldedSection(300, 200, 8, 12);
   if (H <= 10) return weldedSection(350, 250, 8, 14);
@@ -55,7 +55,7 @@ function lookupColumn(H) {
 }
 
 // ========== 屋面梁：单跨跨度定截面 (GB/T 33814 变截面焊接H型钢) ==========
-function lookupBeam(S, tapered) {
+export function lookupBeam(S, tapered) {
   if (S <= 10)
     return tapered ? weldedTapered(300, 200, 180, 6, 8)
                    : weldedSection(300, 200, 6, 10);
@@ -73,7 +73,7 @@ function lookupBeam(S, tapered) {
 }
 
 // ========== 主结构计算 ==========
-function calcMainStructure(params) {
+export function calcMainStructure(params) {
   const { length, width, height, hasMiddleColumn, isTapered, columnSpacing } = params;
   const L = length / 1000, W = width / 1000, H = height / 1000;
   const cs = columnSpacing ? columnSpacing / 1000 : 6;
@@ -109,7 +109,7 @@ function calcMainStructure(params) {
 }
 
 // ========== 檩条 ==========
-function calcRoofPurlins(params) {
+export function calcRoofPurlins(params) {
   const { length, width, roofPurlinSpacing, columnSpacing, hasMiddleColumn } = params;
   const L = length / 1000, W = width / 1000;
   const rps = roofPurlinSpacing / 1000;
@@ -126,7 +126,7 @@ function calcRoofPurlins(params) {
   };
 }
 
-function calcWallPurlins(params) {
+export function calcWallPurlins(params) {
   const { length, width, wallPurlinSpacing, height, columnSpacing } = params;
   const L = length / 1000, W = width / 1000, H = height / 1000;
   const wps = wallPurlinSpacing / 1000;
@@ -145,7 +145,7 @@ function calcWallPurlins(params) {
 // ========== 女儿墙 (HN200×100 统一型号) ==========
 const PARAPET_COLUMN = weldedSection(200, 100, 5.5, 8);  // HN200×100×5.5×8
 
-function calcParapet(params, main) {
+export function calcParapet(params, main) {
   const { hasParapet, parapetHeight, length, width, columnSpacing } = params;
   if (!hasParapet) return { steelIncrement: 0, enclosureIncrement: 0, gutterLength: 0, colExt: 0, topPurlin: 0, acc: 0 };
 
@@ -172,7 +172,7 @@ function calcParapet(params, main) {
 
 // ========== 次构件 ==========
 
-function calcSecondary(params, main, rp, wp) {
+export function calcSecondary(params, main, rp, wp) {
   const L = params.length / 1000;
 
   // 系杆 φ114×4 圆管, 10.85 kg/m
@@ -191,7 +191,7 @@ function calcSecondary(params, main, rp, wp) {
 
 // ========== 螺栓 ==========
 
-function calcBolts(params, main, rp, wp, sec, mz1, mz2) {
+export function calcBolts(params, main, rp, wp, sec, mz1, mz2) {
   const W = params.width / 1000;
   const H = params.height / 1000;
   const cs = params.columnSpacing ? params.columnSpacing / 1000 : 6;
@@ -249,7 +249,7 @@ function calcBolts(params, main, rp, wp, sec, mz1, mz2) {
 
 // ========== 维护系统 ==========
 
-function calcMaintenance(params, parapet, windows, main) {
+export function calcMaintenance(params, parapet, windows, main) {
   const L = params.length / 1000, W = params.width / 1000, H = params.height / 1000;
   const roofArea = L * W * 1.02;
 
@@ -285,7 +285,7 @@ function calcMaintenance(params, parapet, windows, main) {
 }
 
 // ========== 门窗 ==========
-function calcWindows(params) {
+export function calcWindows(params) {
   const { windowScheme, winWidth, winHeight, count, columnSpacing } = params;
   if (!count || count <= 0) return { totalArea: 0, extraPurlin: 0, count: 0 };
 
@@ -300,7 +300,7 @@ function calcWindows(params) {
 }
 
 // ========== 围护面积 ==========
-function calcEnclosure(params, parapet, windows) {
+export function calcEnclosure(params, parapet, windows) {
   const { length, width, height } = params;
   const L = length / 1000, W = width / 1000, H = height / 1000;
   return {
@@ -312,7 +312,7 @@ function calcEnclosure(params, parapet, windows) {
 
 // ========== 夹层 ==========
 // HW宽翼缘 (GB/T 11263) / HN窄翼缘 (GB/T 11263)
-function lookupMezzColumn(loadArea) {
+export function lookupMezzColumn(loadArea) {
   if (loadArea <= 20) return weldedSection(200, 200, 8, 12);
   if (loadArea <= 25) return weldedSection(250, 250, 9, 14);
   if (loadArea <= 35) return weldedSection(300, 300, 10, 15);
@@ -320,7 +320,7 @@ function lookupMezzColumn(loadArea) {
 }
 
 // 夹层主梁 (焊接H型钢，按跨度和荷载选截面)
-function lookupMezzBeam(span, use) {
+export function lookupMezzBeam(span, use) {
   const factor = use === 'storage' ? 1.4 : 1.0;
   if (span * factor <= 4) return weldedSection(300, 150, 6.5, 9);
   if (span * factor <= 6) return weldedSection(350, 175, 7, 11);
@@ -329,13 +329,13 @@ function lookupMezzBeam(span, use) {
 }
 
 // 焊接H次梁 (按跨度选截面，间距2.5m)
-function lookupMezzSubBeam(span) {
+export function lookupMezzSubBeam(span) {
   if (span <= 3) return weldedSection(200, 100, 5.5, 8);
   if (span <= 4) return weldedSection(250, 125, 6, 9);
   return weldedSection(300, 150, 6.5, 9);
 }
 
-function calcMezzanine(params, level) {
+export function calcMezzanine(params, level) {
   const ratioKey = level === 2 ? 'mezz2Ratio' : 'mezzRatio';
   const useKey = level === 2 ? 'mezz2Use' : 'mezzUse';
   const hasKey = level === 2 ? 'hasMezzanine2' : 'hasMezzanine';
@@ -418,7 +418,7 @@ function calcMezzanine(params, level) {
 }
 
 // ========== 汇总 ==========
-function calculateAll(params) {
+export function calculateAll(params) {
   const main = calcMainStructure(params);
   const rp = calcRoofPurlins(params);
   const wp = calcWallPurlins(params);
@@ -477,6 +477,7 @@ function calculateAll(params) {
   };
 }
 
+// ========== ESM exports ==========
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = {
     calculateAll,
@@ -490,5 +491,11 @@ if (typeof module !== 'undefined' && module.exports) {
     calcWindows,
     calcEnclosure,
     calcMezzanine,
+    weldedSection,
+    weldedTapered,
+    lookupRoofPurlin,
+    lookupWallPurlin,
+    lookupColumn,
+    lookupBeam,
   };
 }
