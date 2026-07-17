@@ -199,11 +199,11 @@ export default function SteelEstimator() {
           <div className="grid grid-cols-3 gap-4 mt-4 pt-4 border-t border-gray-100">
             <div>
               <label className={labelCls}>Column Spacing (m) <span className="text-gray-400">4.5–9</span></label>
-              <select className={selectCls} value={p.columnSpacing} onChange={e => update("columnSpacing", Number(e.target.value))}>
-                <option value={4500}>4.5m (dense)</option>
-                <option value={6000}>6.0m (standard, recommended)</option>
-                <option value={7500}>7.5m (economical)</option>
-                <option value={9000}>9.0m (wide)</option>
+              <select className={selectCls} value={String(p.columnSpacing)} onChange={e => update("columnSpacing", Number(e.target.value))}>
+                <option value="4500">4.5m (dense)</option>
+                <option value="6000">6.0m (standard, recommended)</option>
+                <option value="7500">7.5m (economical)</option>
+                <option value="9000">9.0m (wide)</option>
               </select>
             </div>
             <div>
@@ -222,18 +222,18 @@ export default function SteelEstimator() {
             </div>
             <div>
               <label className={labelCls}>Roof Purlin Spacing (mm)</label>
-              <select className={selectCls} value={p.roofPurlinSpacing} onChange={e => update("roofPurlinSpacing", Number(e.target.value))}>
-                <option value={1200}>1,200mm</option>
-                <option value={1500}>1,500mm (recommended)</option>
-                <option value={1800}>1,800mm</option>
+              <select className={selectCls} value={String(p.roofPurlinSpacing)} onChange={e => update("roofPurlinSpacing", Number(e.target.value))}>
+                <option value="1200">1,200mm</option>
+                <option value="1500">1,500mm (recommended)</option>
+                <option value="1800">1,800mm</option>
               </select>
             </div>
             <div>
               <label className={labelCls}>Wall Purlin Spacing (mm)</label>
-              <select className={selectCls} value={p.wallPurlinSpacing} onChange={e => update("wallPurlinSpacing", Number(e.target.value))}>
-                <option value={1200}>1,200mm</option>
-                <option value={1500}>1,500mm (recommended)</option>
-                <option value={1800}>1,800mm</option>
+              <select className={selectCls} value={String(p.wallPurlinSpacing)} onChange={e => update("wallPurlinSpacing", Number(e.target.value))}>
+                <option value="1200">1,200mm</option>
+                <option value="1500">1,500mm (recommended)</option>
+                <option value="1800">1,800mm</option>
               </select>
             </div>
           </div>
