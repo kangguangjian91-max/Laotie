@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { trackOutboundLink, trackLandingPageView } from "@/lib/gtag";
 
@@ -33,6 +33,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [globalOpen, setGlobalOpen] = useState(false);
   const pathname = usePathname();
+  const globalRef = useRef<HTMLDivElement>(null);
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
@@ -44,6 +45,23 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (globalRef.current && !globalRef.current.contains(event.target as Node)) {
+        setGlobalOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  // Close dropdown on route change
+  useEffect(() => {
+    setGlobalOpen(false);
+    setOpen(false);
+  }, [pathname]);
 
   return (
     <header
@@ -86,7 +104,7 @@ export default function Header() {
             ))}
             
             {/* Global Dropdown */}
-            <div className="relative" onMouseLeave={() => setGlobalOpen(false)}>
+            <div className="relative" ref={globalRef} onMouseLeave={() => setGlobalOpen(false)}>
               <button
                 onMouseEnter={() => setGlobalOpen(true)}
                 onClick={() => setGlobalOpen(!globalOpen)}
