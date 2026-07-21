@@ -8,6 +8,7 @@ import JsonLd from "@/components/JsonLd";
 import { products, getAllProductSlugs, getProductBySlug } from "@/data/products";
 import { getAllPosts } from "@/data/blog";
 import { ArrowLeft, CheckCircle, Ruler, Shield, Zap, Globe } from "lucide-react";
+import InlineQuoteForm from "@/components/InlineQuoteForm";
 
 interface ProductPageProps {
   params: Promise<{ slug: string }>;
@@ -318,19 +319,8 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                     />
                   </div>
 
-                  {/* CTA Card */}
-                  <div className="bg-gradient-to-br from-steel to-steel-light rounded-2xl p-6 text-white">
-                    <h3 className="text-lg font-bold mb-2">Interested in this product?</h3>
-                    <p className="text-gray-300 text-sm mb-5">
-                      Get a free quotation within 24 hours. We ship to 30+ countries worldwide.
-                    </p>
-                    <a
-                      href="/contact"
-                      className="block text-center w-full px-5 py-3 text-sm font-semibold text-white bg-gradient-to-r from-cta to-orange-600 hover:from-cta-hover hover:to-orange-700 rounded-lg transition-all shadow-lg"
-                    >
-                      Request a Quote
-                    </a>
-                  </div>
+                  {/* Inline Quote Form */}
+                  <InlineQuoteForm productName={product.title} productSlug={slug} />
 
                   {/* Quick Specs */}
                   <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
