@@ -123,7 +123,7 @@ export const trackFileDownload = (
 // Track Outbound links (to Alibaba, etc.)
 export const trackOutboundLink = (
   destination: string,
-  linkType: "alibaba" | "supplier" | "partner" | "other"
+  linkType: "alibaba" | "supplier" | "partner" | "other" | "whatsapp_header" | "whatsapp_mobile" | "whatsapp_footer" | "whatsapp_hero"
 ) => {
   trackEvent("outbound_link", {
     event_category: "engagement",
