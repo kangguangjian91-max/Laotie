@@ -142,6 +142,52 @@ const faqs = [
       },
     ],
   },
+  {
+    category: "Cost & Estimation",
+    icon: DollarSign,
+    color: "from-teal-500 to-teal-600",
+    questions: [
+      {
+        q: "How much does a steel structure cost per square meter?",
+        a: "Steel structure costs range from $25-110/m² FOB China depending on building type: light portal frame warehouses ($25-40/m²), heavy industrial buildings with cranes ($40-70/m²), aircraft hangars ($55-110/m²), and agricultural buildings ($20-35/m²). Use our free cost calculator for an instant estimate based on your dimensions.",
+      },
+      {
+        q: "What is included in the FOB price?",
+        a: "Our FOB price includes: all structural steel fabrication, primer painting or galvanizing, purlins and girts, bolts and fasteners, erection drawings and manuals, packing, and loading onto the vessel at a Chinese port. It does NOT include: ocean freight, marine insurance, import duties, local taxes, foundation work, or on-site installation.",
+      },
+      {
+        q: "How accurate is your online cost calculator?",
+        a: "Our engineering-grade calculator estimates steel tonnage within ±10-15% accuracy based on portal frame design standards. It calculates primary steel (columns + rafters), purlins, secondary steel, and bolts separately. For a firm quotation, our engineers review your specific wind/snow/seismic requirements — this typically adjusts the estimate by ±10%.",
+      },
+      {
+        q: "What factors affect the final steel structure price the most?",
+        a: "The biggest price drivers are: (1) Overhead crane capacity — a 20T crane can double column steel weight, (2) Wind/snow load requirements — cyclone zones add 15-30% to steel tonnage, (3) Seismic zone — adds bracing and heavier connections, (4) Span width — clear spans over 40m require heavier rafters, (5) Surface treatment — hot-dip galvanizing adds ~$200/ton vs. primer paint.",
+      },
+    ],
+  },
+  {
+    category: "Import & Logistics",
+    icon: Truck,
+    color: "from-indigo-500 to-indigo-600",
+    questions: [
+      {
+        q: "How do I import steel structures from China?",
+        a: "The process is: (1) Confirm design and sign contract, (2) We fabricate and send you loading photos, (3) You arrange freight forwarder or we recommend one, (4) We ship FOB from Qingdao/Shanghai port, (5) Your forwarder handles customs clearance, (6) Delivery to your site. We provide all export documents: commercial invoice, packing list, bill of lading, and certificate of origin.",
+      },
+      {
+        q: "How many containers do I need for my building?",
+        a: "A typical 1,000m² warehouse fits in 2-3 × 40HQ containers. Rough estimate: 1 × 40HQ container holds approximately 20-25 tons of steel or 400-500m² of building. Our packing team optimizes container loading to minimize freight costs — we send you the loading plan before shipment for confirmation.",
+      },
+      {
+        q: "What are the common mistakes when importing steel structures?",
+        a: "Top mistakes to avoid: (1) Ordering before confirming local building code requirements, (2) Not checking bolt grade specifications for your wind zone, (3) Skipping third-party inspection for large orders, (4) Not verifying container loading photos before shipment, (5) Assuming the Chinese foundation design fits your soil conditions — always have a local engineer review it.",
+      },
+      {
+        q: "Can you help with customs clearance in my country?",
+        a: "We provide all required export documents and HS codes (typically 7308.90 for steel structures). For most countries, your local customs broker handles clearance — we can recommend experienced freight forwarders in Southeast Asia, Middle East, Africa, and Australia who have handled our shipments before. Import duty on steel structures is typically 0-15% depending on your country.",
+      },
+    ],
+  },
 ];
 
 export const metadata: Metadata = {

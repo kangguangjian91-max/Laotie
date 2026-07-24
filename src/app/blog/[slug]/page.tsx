@@ -72,21 +72,49 @@ function renderMarkdown(content: string): string {
     .replace(/<p class="text-gray-600 leading-relaxed mb-4">\s*$/, '');
 }
 
-function addInternalLinks(html: string): string {
-  // Add links to internal pages for key phrases
-  return html
-    .replace(
-      /(certified|CE certified|ISO 9001|quality management system)/gi,
-      '<a href="/certificates" class="text-steel-accent hover:underline">$1</a>'
-    )
-    .replace(
-      /(our factory|manufacturing plant|production facility|factory in Shangqiu)/gi,
-      '<a href="/about" class="text-steel-accent hover:underline">$1</a>'
-    )
-    .replace(
-      /(contact us|get a quote|free quote|get in touch)/gi,
-      '<a href="/contact" class="text-steel-accent hover:underline">$1</a>'
-    );
+function addInternalLinks(markdown: string): string {
+  // Product & tool keyword → URL map (long phrases first to avoid partial matches)
+  const patterns: [RegExp, string][] = [
+    [/\bsteel warehouse building\b/i, "/products/steel-warehouse"],
+    [/\bsteel factory building\b/i, "/products/steel-factory-building"],
+    [/\bsteel workshop\b/i, "/products/steel-workshop"],
+    [/\bsteel warehouse\b/i, "/products/steel-warehouse"],
+    [/\bportal frame building\b/i, "/products/steel-structure-building"],
+    [/\bfloor deck(ing)?\b/i, "/products/floor-deck"],
+    [/\bspace frame\b/i, "/products/space-frame-truss"],
+    [/\bsandwich panels?\b/i, "/products/insulated-sandwich-panel"],
+    [/\b(C|Z)[ -]?purlins?\b/i, "/products/galvanized-cz-purlin"],
+    [/\bPPGI\b|\bcolor coated steel\b/i, "/products/ppgi-color-coated-steel"],
+    [/\bcontainer houses?\b|\bprefab houses?\b/i, "/products/prefab-container-house"],
+    [/\bFRP (skylight|daylight)\b/i, "/products/frp-skylight-sheet"],
+    [/\bhot rolled steel coil\b|\bHR coil\b/i, "/products/hot-rolled-steel-coil"],
+    [/\bhot[- ]dip galvaniz(ed|ing)\b/i, "/products/galvanized-cz-purlin"],
+    [/\bcost calculator\b|\bmaterial estimator\b|\bsteel cost estimator\b/i, "/calculator"],
+    [/\bprice guide\b/i, "/steel-structure-price-guide"],
+    // Existing trust/contact patterns
+    [/\bCE certified\b|\bISO 9001\b/i, "/certificates"],
+    [/\bour factory\b|\bmanufacturing plant\b|\bfactory in Shangqiu\b/i, "/about"],
+  ];
+
+  let md = markdown;
+  for (const [regex, href] of patterns) {
+    // Split by markdown image/link syntax to avoid replacing inside them
+    const parts = md.split(/(!?\[[^\]]*\]\([^)]*\))/g);
+    let replaced = false;
+    md = parts
+      .map((part, i) => {
+        if (i % 2 === 1) return part; // skip existing link/image syntax
+        if (replaced) return part;
+        const m = part.match(regex);
+        if (m) {
+          replaced = true;
+          return part.replace(regex, `[${m[0]}](${href})`);
+        }
+        return part;
+      })
+      .join("");
+  }
+  return md;
 }
 
 function getRelatedPosts(currentSlug: string, currentCategory: string): BlogPostMeta[] {
@@ -179,7 +207,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     ],
   };
 
-  const html = addInternalLinks(renderMarkdown(post.content));
+  const html = renderMarkdown(addInternalLinks(post.content));
   const relatedPosts = getRelatedPosts(slug, post.category);
 
   return (
