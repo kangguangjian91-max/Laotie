@@ -326,6 +326,87 @@ export default function SteelStructureSaudiArabia() {
           </section>
         </ScrollAnimator>
 
+        {/* ========== SHIPPING & INSTALLATION ========== */}
+        <ScrollAnimator>
+          <section className="bg-gray-50 border-t border-gray-100">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                Shipping &amp; Installation Support for Saudi Arabia
+              </h2>
+              <p className="text-gray-600 mb-8 max-w-2xl">
+                We deliver complete steel building kits to Dammam and Jeddah ports with full export documentation, and support your installation team remotely or on-site.
+              </p>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-white rounded-xl border border-gray-100 p-6">
+                  <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+                    <svg className="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-3">Shipping to Saudi Ports</h3>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li className="flex gap-2">• <strong>Dammam (King Abdulaziz Port)</strong> — 22-28 days from Qingdao</li>
+                    <li className="flex gap-2">• <strong>Jeddah Islamic Port</strong> — 24-30 days from Qingdao</li>
+                    <li className="flex gap-2">• 40HQ containers, FCL recommended for full building kits</li>
+                    <li className="flex gap-2">• Every member match-marked and labeled per erection drawings</li>
+                    <li className="flex gap-2">• Photos of loaded containers sent before vessel departure</li>
+                  </ul>
+                </div>
+                <div className="bg-white rounded-xl border border-gray-100 p-6">
+                  <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center mb-4">
+                    <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-3">Customs &amp; Documentation</h3>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li className="flex gap-2">• Commercial invoice, packing list, bill of lading</li>
+                    <li className="flex gap-2">• Certificate of origin (China Council for the Promotion of International Trade)</li>
+                    <li className="flex gap-2">• Mill test certificates (EN 10204 3.1) for all steel</li>
+                    <li className="flex gap-2">• Saudi customs duty on steel structures: typically 5%</li>
+                    <li className="flex gap-2">• VAT 15% applies on CIF value + duty</li>
+                  </ul>
+                </div>
+                <div className="bg-white rounded-xl border border-gray-100 p-6">
+                  <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mb-4">
+                    <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-3">Installation Support</h3>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li className="flex gap-2">• Detailed erection manual with step-by-step drawings</li>
+                    <li className="flex gap-2">• Remote video guidance via WhatsApp/WeChat during erection</li>
+                    <li className="flex gap-2">• On-site supervisor dispatch available (2-4 weeks)</li>
+                    <li className="flex gap-2">• Local erection contractor recommendations in Riyadh/Jeddah/Dammam</li>
+                    <li className="flex gap-2">• Typical erection: 500-800 m²/day with 5-person crew</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Timeline bar */}
+              <div className="mt-10 bg-white rounded-xl border border-gray-100 p-6">
+                <h3 className="font-bold text-gray-900 mb-4 text-center">Typical Project Timeline to Saudi Arabia</h3>
+                <div className="flex flex-col sm:flex-row items-stretch gap-2">
+                  {[
+                    { stage: "Engineering Design", time: "1-2 weeks", color: "bg-blue-100 text-blue-700" },
+                    { stage: "Fabrication", time: "4-6 weeks", color: "bg-amber-100 text-amber-700" },
+                    { stage: "Ocean Freight", time: "3-4 weeks", color: "bg-teal-100 text-teal-700" },
+                    { stage: "Customs Clearance", time: "1 week", color: "bg-purple-100 text-purple-700" },
+                    { stage: "Site Erection", time: "4-8 weeks", color: "bg-green-100 text-green-700" },
+                  ].map((item, i) => (
+                    <div key={i} className="flex-1 flex flex-col items-center text-center p-3 rounded-lg border border-gray-100">
+                      <span className="text-xs font-semibold text-gray-900">{item.stage}</span>
+                      <span className={`mt-2 inline-block px-3 py-1 rounded-full text-xs font-semibold ${item.color}`}>{item.time}</span>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-center text-xs text-gray-400 mt-4">Total: 13-21 weeks from design approval to completed installation</p>
+              </div>
+            </div>
+          </section>
+        </ScrollAnimator>
+
         {/* ========== FAQ ========== */}
         <ScrollAnimator>
           <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
