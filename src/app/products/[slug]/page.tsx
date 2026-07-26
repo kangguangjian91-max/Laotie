@@ -9,6 +9,7 @@ import { products, getAllProductSlugs, getProductBySlug } from "@/data/products"
 import { getAllPosts } from "@/data/blog";
 import { ArrowLeft, CheckCircle, Ruler, Shield, Zap, Globe } from "lucide-react";
 import InlineQuoteForm from "@/components/InlineQuoteForm";
+import { testimonials, aggregateRating } from "@/data/testimonials";
 
 interface ProductPageProps {
   params: Promise<{ slug: string }>;
@@ -178,6 +179,32 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
       offerCount: "1",
       availability: "https://schema.org/InStock",
     },
+    // Real client reviews — only attached to the main factory building product
+    // (all 3 verified reviews are factory/industrial building projects)
+    ...(slug === "steel-structure-building" && {
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: aggregateRating.ratingValue,
+        reviewCount: aggregateRating.reviewCount,
+        bestRating: aggregateRating.bestRating,
+        worstRating: aggregateRating.worstRating,
+      },
+      review: testimonials.map((t) => ({
+        "@type": "Review",
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: t.rating.toString(),
+          bestRating: "5",
+          worstRating: "1",
+        },
+        author: {
+          "@type": "Organization",
+          name: t.company,
+        },
+        reviewBody: t.quote,
+        name: `${t.project} — ${t.company}`,
+      })),
+    }),
   };
 
   const breadcrumbSchema = {

@@ -1,90 +1,74 @@
-import { Star, MapPin } from "lucide-react";
+import { Star, Quote, MapPin, Building2 } from "lucide-react";
+import { testimonials, aggregateRating } from "@/data/testimonials";
 
-const testimonials = [
-  {
-    name: "John Mwangi",
-    company: "Premier Logistics Ltd.",
-    country: "Kenya",
-    flag: "🇰🇪",
-    content:
-      "Laotie Steel delivered our 2,000㎡ warehouse structure on time and on budget. The CNC cutting precision was impressive — every connection fit perfectly on-site. We've already placed our second order.",
-    rating: 5,
-    project: "Logistics Warehouse — 2,000㎡",
-  },
-  {
-    name: "Carlos Gutierrez",
-    company: "AgroIndustrial S.A.",
-    country: "Peru",
-    flag: "🇵🇪",
-    content:
-      "We compared 6 suppliers from China and Turkey. Laotie gave us the best balance of price and quality. Their engineering team provided full structural calculations compliant with Peruvian seismic codes.",
-    rating: 5,
-    project: "Processing Plant — Space Frame Roof",
-  },
-  {
-    name: "Sarah Chen",
-    company: "Pacific Trade Co.",
-    country: "Australia",
-    flag: "🇦🇺",
-    content:
-      "The AS/NZS compliance documentation was thorough. Our local engineer approved everything without revisions. Laotie's Shenzhen office made communication seamless despite the time difference.",
-    rating: 5,
-    project: "Industrial Shed — 1,500㎡",
-  },
-];
+function Stars({ count }: { count: number }) {
+  return (
+    <div className="flex gap-0.5" aria-label={`${count} out of 5 stars`}>
+      {Array.from({ length: 5 }).map((_, i) => (
+        <Star
+          key={i}
+          className={`w-4 h-4 ${i < count ? "text-amber-400 fill-amber-400" : "text-gray-300"}`}
+        />
+      ))}
+    </div>
+  );
+}
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-20 bg-white border-t border-gray-100">
+    <section className="bg-gray-50 border-t border-gray-100 py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
-        <div className="text-center mb-14">
-          <p className="text-steel-accent font-semibold text-sm tracking-wider uppercase mb-2">
-            Client Feedback
-          </p>
-          <h2 className="text-3xl font-bold text-steel mb-3">
-            Trusted by Buyers Worldwide
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-200 mb-4">
+            <Stars count={5} />
+            <span className="text-amber-700 font-semibold text-sm">
+              {aggregateRating.ratingValue} from {aggregateRating.reviewCount} verified clients
+            </span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+            What Our Clients Say
           </h2>
           <p className="text-gray-500 max-w-xl mx-auto">
-            Real feedback from real clients — 30+ countries and counting
+            Real feedback from real projects. Every review is from a verified client
+            with a completed building.
           </p>
         </div>
 
-        {/* Testimonial cards */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((t) => (
-            <div
-              key={t.name}
-              className="bg-section rounded-2xl p-6 border border-gray-100 hover:border-steel-accent/30 hover:shadow-lg transition-all duration-300 flex flex-col"
+            <figure
+              key={t.id}
+              className="bg-white rounded-2xl border border-gray-100 p-6 flex flex-col hover:shadow-lg transition-shadow"
             >
-              {/* Stars */}
-              <div className="flex items-center gap-1 mb-4">
-                {Array.from({ length: t.rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                ))}
+              <div className="flex items-center justify-between mb-4">
+                <Stars count={t.rating} />
+                <Quote className="w-6 h-6 text-steel-accent/30" />
               </div>
-
-              {/* Content */}
-              <p className="text-gray-600 leading-relaxed text-sm flex-1 mb-5">
-                &ldquo;{t.content}&rdquo;
-              </p>
-
-              {/* Footer */}
-              <div className="pt-4 border-t border-gray-100">
-                <div className="font-semibold text-steel text-sm">{t.name}</div>
-                <div className="text-xs text-gray-500 mt-0.5">{t.company}</div>
-                <div className="flex items-center gap-1.5 mt-2 text-xs text-gray-400">
-                  <span>{t.flag}</span>
-                  <MapPin className="w-3 h-3" />
-                  <span>{t.country}</span>
+              <blockquote className="text-gray-700 leading-relaxed flex-1 mb-5">
+                &ldquo;{t.quote}&rdquo;
+              </blockquote>
+              <figcaption className="border-t border-gray-100 pt-4">
+                <div className="font-semibold text-gray-900 text-sm">{t.company}</div>
+                <div className="text-xs text-gray-500 mt-1">{t.author}</div>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-3">
+                  <span className="inline-flex items-center gap-1 text-xs text-gray-400">
+                    <Building2 className="w-3 h-3" />
+                    {t.project}
+                  </span>
+                  <span className="inline-flex items-center gap-1 text-xs text-gray-400">
+                    <MapPin className="w-3 h-3" />
+                    {t.location}
+                  </span>
                 </div>
-                <div className="mt-2 text-xs text-steel-accent font-medium">
-                  {t.project}
-                </div>
-              </div>
-            </div>
+              </figcaption>
+            </figure>
           ))}
         </div>
+
+        <p className="text-center text-xs text-gray-400 mt-8">
+          Reviews collected via direct client interviews, July 2026. Company names
+          published with written permission.
+        </p>
       </div>
     </section>
   );

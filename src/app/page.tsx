@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import type { Metadata } from "next";
+import { testimonials, aggregateRating } from "@/data/testimonials";
 
 // Dynamic imports for non-critical components (code splitting)
 const Stats = dynamic(() => import("@/components/Stats"), {
@@ -115,6 +116,28 @@ const localBusinessSchema = {
   sameAs: [
     "https://www.linkedin.com/company/laotie-steel",
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: aggregateRating.ratingValue,
+    reviewCount: aggregateRating.reviewCount,
+    bestRating: aggregateRating.bestRating,
+    worstRating: aggregateRating.worstRating,
+  },
+  review: testimonials.map((t) => ({
+    "@type": "Review",
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: t.rating.toString(),
+      bestRating: "5",
+      worstRating: "1",
+    },
+    author: {
+      "@type": "Organization",
+      name: t.company,
+    },
+    reviewBody: t.quote,
+    name: `${t.project} — ${t.company}`,
+  })),
 };
 
 const videoSchema = {
