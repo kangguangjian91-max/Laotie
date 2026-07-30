@@ -239,8 +239,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </span>
           </div>
 
-          <h1 className="text-3xl font-bold text-steel mb-2">{post.title}</h1>
-          <p className="text-lg text-gray-500 mb-8 leading-relaxed">{post.description}</p>
+          <h1 className="text-3xl font-bold text-steel mb-4">{post.title}</h1>
+
+          {/* Quick Answer block — optimized for AI citations & Featured Snippets */}
+          <div className="mb-8 rounded-xl border-l-4 border-steel-accent bg-steel-muted/60 p-5">
+            <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-steel-accent mb-2">
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              Quick Answer
+            </div>
+            <p className="text-base text-gray-800 leading-relaxed">{post.description}</p>
+          </div>
 
           <div className="relative aspect-[16/9] rounded-xl overflow-hidden mb-10 -mx-4 sm:mx-0">
             <Image
