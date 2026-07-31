@@ -48,5 +48,17 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/case-studies",
+      "destination": "/projects",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/:path*",
+      "destination": "/projects",
+      "permanent": true
+    }
   ]
 }
