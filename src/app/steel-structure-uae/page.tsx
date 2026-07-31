@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Steel Structure Supplier in UAE & Dubai | Laotie Steel",
   description:
-    "Leading steel structure supplier for UAE & Dubai. Custom warehouse, factory, and industrial buildings engineered for high-temperature C4 corrosion environment. CE & ISO certified. Free AED/USD quote.",
+    "Leading steel structure supplier for UAE & Dubai. Custom warehouse, factory & industrial buildings for C4 corrosion environment. CE & ISO certified. Free AED/USD quote.",
   keywords: [
     "steel structure UAE",
     "steel building Dubai",

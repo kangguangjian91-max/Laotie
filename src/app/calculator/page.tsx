@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Steel Structure Material Estimator — Calculate Tonnage & Cost",
-  description: "Engineering-grade steel tonnage calculator. Estimate portal frame building weight, purlins, bolts & enclosure. Real-time RMB pricing, FOB China. Free tool for importers & builders.",
+  description: "Engineering-grade steel tonnage calculator. Estimate portal frame weight, purlins, bolts & enclosure. Real-time RMB pricing, FOB China. Free for importers.",
   keywords: [
     "steel structure cost calculator",
     "steel building price per m² 2026",

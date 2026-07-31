@@ -40,6 +40,9 @@ export default function Header() {
     return pathname.startsWith(href);
   };
 
+  // Global dropdown is active when on any geo landing page
+  const isGlobalActive = pathname.startsWith("/steel-structure-");
+
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -108,7 +111,9 @@ export default function Header() {
               <button
                 onMouseEnter={() => setGlobalOpen(true)}
                 onClick={() => setGlobalOpen(!globalOpen)}
-                className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-600 hover:text-steel rounded-lg transition-colors group"
+                className={`relative flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-lg transition-colors group ${
+                  isGlobalActive ? "text-steel bg-steel/5" : "text-gray-600 hover:text-steel"
+                }`}
                 aria-expanded={globalOpen}
                 aria-haspopup="true"
               >
@@ -116,6 +121,7 @@ export default function Header() {
                 <svg className={`w-3.5 h-3.5 transition-transform ${globalOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
+                <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-steel-accent rounded-full transition-all duration-300 ${isGlobalActive ? 'w-4' : 'w-0 group-hover:w-4'}`} />
               </button>
               
               {/* Dropdown Menu */}
@@ -128,7 +134,11 @@ export default function Header() {
                     <a
                       key={link.href}
                       href={link.href}
-                      className="flex items-center gap-2.5 px-4 py-2.5 text-sm transition-colors text-gray-700 hover:bg-gray-50 hover:text-steel"
+                      className={`flex items-center gap-2.5 px-4 py-2.5 text-sm transition-colors ${
+                        pathname === link.href
+                          ? "text-steel bg-steel/5 font-medium"
+                          : "text-gray-700 hover:bg-gray-50 hover:text-steel"
+                      }`}
                       onClick={(e) => {
                         // Track landing page view
                       const countryMap: Record<string, string> = {
@@ -260,7 +270,9 @@ export default function Header() {
                   className={`flex items-center gap-2 px-3 py-2.5 text-sm transition-colors ${
                     link.disabled 
                       ? 'text-gray-400' 
-                      : 'text-gray-600 hover:text-steel hover:bg-gray-50'
+                      : pathname === link.href
+                        ? 'text-steel bg-gray-100 font-medium'
+                        : 'text-gray-600 hover:text-steel hover:bg-gray-50'
                   }`}
                 >
                   <span>{link.flag}</span>

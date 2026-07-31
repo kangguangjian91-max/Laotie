@@ -18,7 +18,7 @@ const projectsSchema = {
 export const metadata: Metadata = {
   title: "Steel Structure Project Cases | Warehouse, Factory, Sports Hall",
   description:
-    "View our global steel structure project cases: industrial warehouses, factory buildings, aircraft hangars, dome roofs, and logistics centers. 50+ projects delivered across 30+ countries.",
+    "View our global steel structure project cases: warehouses, factories, hangars, dome roofs & logistics centers. 50+ projects across 30+ countries.",
   keywords: [
     "steel structure projects",
     "steel building case studies",

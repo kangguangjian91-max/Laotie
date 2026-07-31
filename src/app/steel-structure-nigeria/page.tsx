@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Steel Structure Nigeria | Warehouse & Factory Construction",
   description:
-    "Leading steel structure manufacturer for Nigeria. Custom warehouse, factory, and industrial building solutions. CE certified, 30-year warranty. Get free quote today!",
+    "Leading steel structure manufacturer for Nigeria. Custom warehouse, factory & industrial building solutions. CE certified, 30-year warranty. Free quote.",
   keywords: [
     "steel structure nigeria",
     "warehouse construction nigeria",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "Steel Structure Nigeria | Laotie Steel",
     description:
       "Your trusted steel structure partner in Nigeria. 100+ projects completed across Lagos, Abuja, Kano.",
-    images: ["/images/nigeria/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp"],
+    images: ["/images/geo-shared/geo-project-01.webp"],
     locale: "en_NG",
     type: "website",
   },
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Steel Structure Nigeria | Laotie Steel",
     description: "Your trusted steel structure partner in Nigeria. 100+ projects completed.",
-    images: ["/images/nigeria/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp"],
+    images: ["/images/geo-shared/geo-project-01.webp"],
   },
 };
 
@@ -340,7 +340,7 @@ export default function NigeriaLandingPage() {
         subtitle="We have completed 100+ steel structure projects across Nigeria. Here are some of our recent works."
         projects={[
           {
-            image: "/images/nigeria/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp",
+            image: "/images/geo-shared/geo-project-01.webp",
             alt: "Steel structure warehouse in Lagos, Nigeria - 5,000 sqm prefab building",
             title: "Lagos Warehouse Complex",
             description: "5,000 sqm steel structure warehouse with office annex. Built for logistics company in Lagos Mainland.",
@@ -350,7 +350,7 @@ export default function NigeriaLandingPage() {
             ],
           },
           {
-            image: "/images/nigeria/5704819281f8e9ad3038915e967864ad.webp",
+            image: "/images/geo-shared/geo-project-04.webp",
             alt: "Steel structure factory in Abuja, Nigeria - 3,000 sqm manufacturing plant",
             title: "Abuja Manufacturing Plant",
             description: "3,000 sqm steel structure factory with 5-ton crane system. Food processing facility.",
@@ -360,7 +360,7 @@ export default function NigeriaLandingPage() {
             ],
           },
           {
-            image: "/images/nigeria/688e07390f62e21cbb8bd1a1ba455959.webp",
+            image: "/images/geo-shared/geo-project-07.webp",
             alt: "Steel structure logistics center in Kano, Nigeria - 8,000 sqm distribution warehouse",
             title: "Kano Logistics Center",
             description: "8,000 sqm distribution center with mezzanine floor. 40x80m clear span design.",
@@ -370,7 +370,7 @@ export default function NigeriaLandingPage() {
             ],
           },
           {
-            image: "/images/nigeria/1a3e5a019b4c71eda2da853679708074.webp",
+            image: "/images/geo-shared/geo-project-02.webp",
             alt: "Steel structure agricultural facility in Port Harcourt, Nigeria - 2,500 sqm cold storage",
             title: "Port Harcourt Agricultural Facility",
             description: "2,500 sqm steel structure for cold storage and processing. High insulation requirements.",
@@ -380,7 +380,7 @@ export default function NigeriaLandingPage() {
             ],
           },
           {
-            image: "/images/nigeria/3c827b0a462391a3e3486e39a5ae25d4.webp",
+            image: "/images/geo-shared/geo-project-03.webp",
             alt: "Steel structure commercial building in Kaduna, Nigeria - 1,800 sqm showroom",
             title: "Kaduna Showroom & Warehouse",
             description: "1,800 sqm combined showroom and warehouse. Two-story design with office space.",
@@ -390,7 +390,7 @@ export default function NigeriaLandingPage() {
             ],
           },
           {
-            image: "/images/nigeria/967a25ac2c3ec808229a990e27529ba2.webp",
+            image: "/images/geo-shared/geo-project-09.webp",
             alt: "Steel structure electronics factory in Ogun, Nigeria - 4,200 sqm with clean room",
             title: "Ogun Electronics Factory",
             description: "4,200 sqm steel structure factory with clean room requirements. ESD flooring and temperature control.",
@@ -400,7 +400,7 @@ export default function NigeriaLandingPage() {
             ],
           },
           {
-            image: "/images/nigeria/679234a53ccd9c56cf26658f4f072138.webp",
+            image: "/images/geo-shared/geo-project-05.webp",
             alt: "Steel structure warehouse in Oyo, Nigeria - 6,500 sqm distribution hub",
             title: "Oyo Distribution Hub",
             description: "6,500 sqm steel warehouse with automated racking system. Strategic location near Lagos-Ibadan expressway.",
@@ -410,7 +410,7 @@ export default function NigeriaLandingPage() {
             ],
           },
           {
-            image: "/images/nigeria/67dd07a1917aa291f1631e16ce010c88.webp",
+            image: "/images/geo-shared/geo-project-06.webp",
             alt: "Steel structure chemical plant in Rivers, Nigeria - 3,800 sqm anti-corrosion",
             title: "Rivers Chemical Plant",
             description: "3,800 sqm chemical processing plant with anti-corrosion coating. Explosion-proof design.",
@@ -420,7 +420,7 @@ export default function NigeriaLandingPage() {
             ],
           },
           {
-            image: "/images/nigeria/7ea1821bc8fdfac59547d2c042c2f6ae.webp",
+            image: "/images/geo-shared/geo-project-08.webp",
             alt: "Steel structure workshop in Enugu, Nigeria - 2,200 sqm with crane",
             title: "Enugu Metal Fabrication Shop",
             description: "2,200 sqm steel structure workshop with 10-ton overhead crane. Heavy-duty industrial use.",
@@ -430,7 +430,7 @@ export default function NigeriaLandingPage() {
             ],
           },
           {
-            image: "/images/nigeria/bd585762b3e96733450d3660029a1ab4.webp",
+            image: "/images/geo-shared/geo-project-10.webp",
             alt: "Steel structure cold storage facility in Port Harcourt, Nigeria - 4,500 sqm",
             title: "Port Harcourt Cold Storage Facility",
             description: "4,500 sqm steel structure facility for cold storage and freezing. Temperature-controlled environment for perishable goods.",

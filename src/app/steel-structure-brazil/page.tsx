@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Steel Structure Manufacturer for Brazil | Laotie Steel",
   description:
-    "Trusted steel structure manufacturer for Brazil. Custom warehouse, factory, and agricultural buildings engineered to NBR 8800. CE & ISO certified. Free BRL/USD quote.",
+    "Trusted steel structure manufacturer for Brazil. Custom warehouse, factory & agricultural buildings to NBR 8800. CE & ISO certified. Free BRL/USD quote.",
   keywords: [
     "steel structure Brazil",
     "steel building Brazil",

@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Steel Structure Vietnam | Warehouse & Factory Construction",
   description:
-    "Leading steel structure manufacturer for Vietnam. Custom warehouse, factory, and industrial building solutions. CE certified, 30-year warranty. Get free quote today!",
+    "Leading steel structure manufacturer for Vietnam. Custom warehouse, factory & industrial building solutions. CE certified, 30-year warranty. Free quote.",
   keywords: [
     "steel structure vietnam",
     "warehouse construction vietnam",
@@ -408,7 +408,7 @@ export default function VietnamLandingPage() {
         subtitle="We have completed 100+ steel structure projects across Vietnam. Here are some of our recent works."
         projects={[
           {
-            image: "/images/vietnam/3c827b0a462391a3e3486e39a5ae25d4.webp",
+            image: "/images/geo-shared/geo-project-03.webp",
             alt: "Steel structure warehouse in Hanoi, Vietnam - 5,000 sqm prefab logistics building",
             title: "Hanoi Warehouse Complex",
             description: "5,000 sqm steel structure warehouse for logistics company in Hanoi. 2025 completion.",
@@ -418,7 +418,7 @@ export default function VietnamLandingPage() {
             ],
           },
           {
-            image: "/images/vietnam/0e25f79a69e0c6f3787bdf7e1e7f9ee7.webp",
+            image: "/images/geo-shared/geo-project-01.webp",
             alt: "Steel structure factory in Ho Chi Minh City, Vietnam - 8,000 sqm electronics plant",
             title: "Ho Chi Minh Manufacturing Plant",
             description: "8,000 sqm factory building for electronics manufacturer in Thu Duc. 2024 completion.",
@@ -428,7 +428,7 @@ export default function VietnamLandingPage() {
             ],
           },
           {
-            image: "/images/vietnam/5704819281f8e9ad3038915e967864ad.webp",
+            image: "/images/geo-shared/geo-project-04.webp",
             alt: "Steel structure logistics center in Da Nang, Vietnam - 3,100+ sqm warehouse",
             title: "Da Nang Logistics Center",
             description: "3,100+ sqm warehouse with office space in Da Nang. 2024 completion.",
@@ -438,7 +438,7 @@ export default function VietnamLandingPage() {
             ],
           },
           {
-            image: "/images/vietnam/688e07390f62e21cbb8bd1a1ba455959.webp",
+            image: "/images/geo-shared/geo-project-07.webp",
             alt: "Steel structure industrial building in Hai Phong, Vietnam - 6,100+ sqm factory",
             title: "Hai Phong Industrial Park",
             description: "6,100+ sqm steel structure factory for automotive parts supplier. 2025 completion.",
@@ -448,7 +448,7 @@ export default function VietnamLandingPage() {
             ],
           },
           {
-            image: "/images/vietnam/1a3e5a019b4c71eda2da853679708074.webp",
+            image: "/images/geo-shared/geo-project-02.webp",
             alt: "Steel structure agricultural facility in Can Tho, Vietnam - 4,200 sqm processing plant",
             title: "Can Tho Agricultural Facility",
             description: "4,200 sqm steel structure for rice processing and storage. Mekong Delta region.",
@@ -458,7 +458,7 @@ export default function VietnamLandingPage() {
             ],
           },
           {
-            image: "/images/vietnam/679234a53ccd9c56cf26658f4f072138.webp",
+            image: "/images/geo-shared/geo-project-05.webp",
             alt: "Steel structure electronics factory in Binh Duong, Vietnam - 7,000 sqm with ESD flooring",
             title: "Binh Duong Electronics Factory",
             description: "7,000 sqm steel structure factory with ESD flooring. High-tech manufacturing.",
@@ -468,7 +468,7 @@ export default function VietnamLandingPage() {
             ],
           },
           {
-            image: "/images/vietnam/67dd07a1917aa291f1631e16ce010c88.webp",
+            image: "/images/geo-shared/geo-project-06.webp",
             alt: "Steel structure warehouse in Dong Nai, Vietnam - 5,100+ sqm logistics center",
             title: "Dong Nai Logistics Warehouse",
             description: "5,100+ sqm distribution center near Ho Chi Minh City. Strategic location.",
@@ -478,7 +478,7 @@ export default function VietnamLandingPage() {
             ],
           },
           {
-            image: "/images/vietnam/7ea1821bc8fdfac59547d2c042c2f6ae.webp",
+            image: "/images/geo-shared/geo-project-08.webp",
             alt: "Steel structure workshop in Quang Ninh, Vietnam - 3,800 sqm mining equipment",
             title: "Quang Ninh Mining Equipment Workshop",
             description: "3,800 sqm heavy-duty workshop with 15-ton crane system. Coal mining region.",
@@ -488,7 +488,7 @@ export default function VietnamLandingPage() {
             ],
           },
           {
-            image: "/images/vietnam/967a25ac2c3ec808229a990e27529ba2.webp",
+            image: "/images/geo-shared/geo-project-09.webp",
             alt: "Steel structure food processing plant in Long An, Vietnam - 4,100+ sqm with cold storage",
             title: "Long An Food Processing Plant",
             description: "4,100+ sqm steel structure facility for seafood processing. Cold storage included.",

@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Steel Structure Australia | Warehouse & Factory Construction",
   description:
-    "Leading steel structure manufacturer for Australia. Custom warehouse, factory, and industrial buildings engineered to NCC/BCA. CE & ISO certified. Free AUD quote.",
+    "Leading steel structure manufacturer for Australia. Custom warehouse, factory & industrial buildings to NCC/BCA. CE & ISO certified. Free AUD quote.",
   keywords: [
     "steel structure Australia",
     "warehouse builder Sydney",

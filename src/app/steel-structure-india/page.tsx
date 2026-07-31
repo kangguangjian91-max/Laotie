@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Steel Structure Manufacturer in India | Laotie Steel",
   description:
-    "Trusted steel structure manufacturer for India. Custom warehouse, factory, and industrial buildings engineered to IS 800. CE & ISO certified. Free INR/USD quote.",
+    "Trusted steel structure manufacturer for India. Custom warehouse, factory & industrial buildings to IS 800. CE & ISO certified. Free INR/USD quote.",
   keywords: [
     "steel structure India",
     "steel building India",
