@@ -152,7 +152,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       images: [{ url: `${siteUrl}${post.image}`, width: 1024, height: 576, alt: post.title }],
       type: "article",
       publishedTime: post.date,
-      authors: ["Laotie Steel Structure Co., Ltd."],
+      authors: ["James Kang"],
     },
     twitter: {
       card: "summary_large_image",
@@ -182,14 +182,30 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     datePublished: post.date,
     dateModified: post.date,
     author: {
-      "@type": "Organization",
-      name: "Laotie Steel Structure Co., Ltd.",
-      url: "https://www.laotie-steel.com",
+      "@type": "Person",
+      "name": "James Kang",
+      "jobTitle": "Senior Structural Engineer",
+      "url": "https://www.laotie-steel.com/about",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Laotie Steel Structure Co., Ltd.",
+        "url": "https://www.laotie-steel.com",
+      },
     },
     publisher: {
       "@type": "Organization",
-      name: "Laotie Steel Structure Co., Ltd.",
-      url: "https://www.laotie-steel.com",
+      "name": "Laotie Steel Structure Co., Ltd.",
+      "url": "https://www.laotie-steel.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.laotie-steel.com/images/logo.png",
+      },
+    },
+    image: {
+      "@type": "ImageObject",
+      "url": `https://www.laotie-steel.com${post.image}`,
+      "width": 1024,
+      "height": 576,
     },
     mainEntityOfPage: {
       "@type": "WebPage",

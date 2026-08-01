@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Steel Structure Supplier in UAE & Dubai | Laotie Steel",
   description:
-    "Leading steel structure supplier for UAE & Dubai. Custom warehouse, factory & industrial buildings for C4 corrosion environment. CE & ISO certified. Free AED/USD quote.",
+    "Leading steel structure supplier for UAE & Dubai. Custom warehouse, factory & industrial buildings for C4 corrosion environments. Free AED/USD quote.",
   keywords: [
     "steel structure UAE",
     "steel building Dubai",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Steel Structure Supplier in UAE & Dubai | Laotie Steel",
     description:
-      "Custom steel structure solutions for warehouses, factories, and industrial buildings across UAE & Dubai. High-temperature and C4 corrosion environment compliant, delivered worldwide.",
+      "Custom steel structure solutions for warehouses, factories, and industrial buildings across UAE & Dubai. C4 corrosion compliant, delivered worldwide.",
     images: ["/images/uae/hero.webp"],
     locale: "en_AE",
     type: "website",
@@ -65,7 +65,7 @@ const serviceSchema = {
     name: "United Arab Emirates",
   },
   description:
-    "Custom steel structure solutions for warehouse, factory, and industrial buildings in UAE. Dubai Municipality code compliant design and fabrication for high-temperature C4 corrosion environments.",
+    "Custom steel structure solutions for warehouse, factory, and industrial buildings in UAE. Dubai Municipality compliant design for C4 corrosion environments.",
   offers: {
     "@type": "Offer",
     priceCurrency: "AED",

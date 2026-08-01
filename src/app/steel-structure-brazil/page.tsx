@@ -65,7 +65,7 @@ const serviceSchema = {
     name: "Brazil",
   },
   description:
-    "Custom steel structure solutions for warehouse, factory, and agricultural buildings in Brazil. NBR 8800 compliant design and fabrication for tropical climate and industrial applications.",
+    "Custom steel structure solutions for warehouse, factory, and agricultural buildings in Brazil. NBR 8800 compliant, tropical climate ready.",
   offers: {
     "@type": "Offer",
     priceCurrency: "BRL",

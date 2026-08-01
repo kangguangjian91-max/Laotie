@@ -145,7 +145,7 @@ const videoSchema = {
   "@type": "VideoObject",
   name: "Prefabricated Steel Structure Workshop | Steel Building Construction China",
   description:
-    "Factory tour of Laotie Steel Structure workshop in Shangqiu, China. See prefabricated steel portal frame fabrication, welding, and assembly for global construction projects.",
+    "Factory tour of Laotie Steel Structure in Shangqiu, China. See steel portal frame fabrication, welding, and assembly for global projects.",
   thumbnailUrl: "https://img.youtube.com/vi/XQZuDgAT8JA/maxresdefault.jpg",
   embedUrl: "https://www.youtube.com/embed/XQZuDgAT8JA",
   contentUrl: "https://www.youtube.com/watch?v=XQZuDgAT8JA",

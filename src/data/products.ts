@@ -20,7 +20,7 @@ export const products: Product[] = [
     title: "Steel Structure Building",
     subtitle: "Portal Frame / Industrial Warehouse",
     description:
-      "Custom steel portal frame buildings for factories, warehouses & logistics centers. Section steel main frame, Z/C purlins. AS/NZS, BS & GB standards. CE certified.",
+      "Custom steel portal frame buildings for factories, warehouses & logistics. Z/C purlins, AS/NZS, BS & GB standards. CE certified.",
     overview: `Our steel structure buildings are the backbone of modern industrial construction. Using portal frame or truss systems, we deliver clear-span spaces up to 60m without internal columns — maximizing usable floor area for manufacturing, storage, and logistics operations.
 
 Each building is engineered to your local design codes (AS/NZS 1170, BS 5950, EN 1993, or GB 50017) and comes with full calculation reports, fabrication drawings, and erection manuals. Our 5 production lines output 5,000 tons per month, ensuring on-time delivery for projects of any scale.
@@ -267,7 +267,7 @@ All steel warehouse structures are fabricated in our 20,000 sqm factory with 5 p
     title: "Steel Factory Building",
     subtitle: "Multi-Span / Industrial Production Facility",
     description:
-      "Custom steel factory buildings for manufacturing plants & production lines. Multi-span design, crane systems, office mezzanine. CE certified, 50-year design life.",
+      "Custom steel factory buildings for manufacturing plants & production lines. Multi-span, crane systems, mezzanine. CE certified.",
     overview: `Modern manufacturing requires factory buildings that are flexible, durable, and cost-effective. Our steel factory buildings are designed for production efficiency — with large uninterrupted floor areas, integrated crane systems, and the ability to accommodate heavy machinery and production lines.
 
 We design multi-span steel structures with column grids optimized for your production layout. Eave heights from 8m to 20m accommodate tall equipment and overhead cranes. Secondary steelwork supports mezzanine offices, HVAC systems, electrical trays, and process piping — all integrated into one coordinated design.
@@ -316,7 +316,7 @@ Each steel factory building is engineered to your local building code (IBC, Euro
     title: "Steel Workshop Building",
     subtitle: "Light Industrial / Maintenance Facility",
     description:
-      "Cost-effective steel workshop buildings for maintenance shops, repair facilities & light manufacturing. Quick delivery, simple erection, budget-friendly pricing.",
+      "Cost-effective steel workshop buildings for maintenance shops, repair facilities & light manufacturing. Quick delivery, easy erection.",
     overview: `Steel workshop buildings are the most cost-effective solution for light industrial, maintenance, and agricultural applications. Designed for rapid deployment at minimal cost, our steel workshops use standardized components while still offering full customization for your specific needs.
 
 Workshops feature clear spans up to 30m, eave heights from 4m to 10m, and can include overhead cranes up to 10 tons, mezzanine storage, and partitioned office areas. All steelwork is pre-cut, pre-drilled, and pre-coated in our factory — arriving as a complete bolt-together kit ready for erection.

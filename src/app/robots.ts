@@ -19,15 +19,33 @@ export default function robots(): MetadataRoute.Robots {
       },
       {
         userAgent: "GPTBot",
-        disallow: ["/"],
+        allow: "/",
+        disallow: ["/api/", "/private/", "/thank-you/"],
       },
       {
         userAgent: "ChatGPT-User",
-        disallow: ["/"],
+        allow: "/",
+        disallow: ["/api/", "/private/", "/thank-you/"],
       },
       {
         userAgent: "CCBot",
-        disallow: ["/"],
+        allow: "/",
+        disallow: ["/api/", "/private/", "/thank-you/"],
+      },
+      {
+        userAgent: "Google-Extended",
+        allow: "/",
+        disallow: ["/api/", "/private/", "/thank-you/"],
+      },
+      {
+        userAgent: "PerplexityBot",
+        allow: "/",
+        disallow: ["/api/", "/private/", "/thank-you/"],
+      },
+      {
+        userAgent: "ClaudeBot",
+        allow: "/",
+        disallow: ["/api/", "/private/", "/thank-you/"],
       },
     ],
     sitemap: `${siteUrl}/sitemap.xml`,
