@@ -75,6 +75,18 @@ function renderMarkdown(content: string): string {
 function addInternalLinks(markdown: string): string {
   // Product & tool keyword → URL map (long phrases first to avoid partial matches)
   const patterns: [RegExp, string][] = [
+    // Geo page links — country-specific landing pages (first priority)
+    [/\bsteel structure (in |for |supplier |manufacturer )?Philippines\b/i, "/steel-structure-philippines"],
+    [/\bsteel structure (in |for |supplier |manufacturer )?Vietnam\b/i, "/steel-structure-vietnam"],
+    [/\bsteel structure (in |for |supplier |manufacturer )?Indonesia\b/i, "/steel-structure-indonesia"],
+    [/\bsteel structure (in |for |supplier |manufacturer )?Thailand\b/i, "/steel-structure-thailand"],
+    [/\bsteel structure (in |for |supplier |manufacturer )?Nigeria\b/i, "/steel-structure-nigeria"],
+    [/\bsteel structure (in |for |supplier |manufacturer )?(Saudi Arabia|KSA)\b/i, "/steel-structure-saudi-arabia"],
+    [/\bsteel structure (in |for |supplier |manufacturer )?Australia\b/i, "/steel-structure-australia"],
+    [/\bsteel structure (in |for |supplier |manufacturer )?India\b/i, "/steel-structure-india"],
+    [/\bsteel structure (in |for |supplier |manufacturer )?UAE\b/i, "/steel-structure-uae"],
+    [/\bsteel structure (in |for |supplier |manufacturer )?Brazil\b/i, "/steel-structure-brazil"],
+    // Product links
     [/\bsteel warehouse building\b/i, "/products/steel-warehouse"],
     [/\bsteel factory building\b/i, "/products/steel-factory-building"],
     [/\bsteel workshop\b/i, "/products/steel-workshop"],
@@ -161,8 +173,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       images: [`${siteUrl}${post.image}`],
     },
     alternates: {
-      canonical: `https://www.laotie-steel.com/blog/${post.slug}`,
+      canonical: post.canonicalUrl || `https://www.laotie-steel.com/blog/${post.slug}`,
     },
+    ...(post.canonicalUrl && {
+      robots: { index: false, follow: true },
+    }),
   };
 }
 

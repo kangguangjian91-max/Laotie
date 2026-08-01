@@ -8,6 +8,10 @@ export const dynamic = "force-static";
 
 const siteUrl = "https://www.laotie-steel.com";
 
+// Fixed lastModified date — avoids every build showing "just modified"
+// which causes Google to potentially ignore lastModified signals
+const lastModified = new Date("2026-07-31");
+
 // Country-specific landing pages
 const countryRoutes = [
   "/steel-structure-thailand",
@@ -41,12 +45,10 @@ const staticRoutes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-
   // Static routes
   const staticEntries = staticRoutes.map((route) => ({
     url: `${siteUrl}${route}`,
-    lastModified: now,
+    lastModified,
     changeFrequency: route === "" ? ("weekly" as const) : ("monthly" as const),
     priority: route === "" ? 1.0 : route === "/products" || route === "/contact" ? 0.9 : 0.8,
   }));
@@ -55,7 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const productSlugs = getAllProductSlugs();
   const productEntries = productSlugs.map((slug) => ({
     url: `${siteUrl}/products/${slug}`,
-    lastModified: now,
+    lastModified,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
@@ -64,7 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogSlugs = getAllSlugs();
   const blogEntries = blogSlugs.map((slug) => ({
     url: `${siteUrl}/blog/${slug}`,
-    lastModified: now,
+    lastModified,
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
@@ -73,7 +75,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const projectSlugs = Object.keys(projectDetails);
   const projectEntries = projectSlugs.map((slug) => ({
     url: `${siteUrl}/projects/${slug}`,
-    lastModified: now,
+    lastModified,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));

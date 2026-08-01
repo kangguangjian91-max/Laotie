@@ -16,6 +16,7 @@ export interface BlogPost {
   readTime: string;
   content: string;
   image: string;
+  canonicalUrl?: string; // Optional: if set, this article canonicalizes to another URL
 }
 
 export interface BlogPostMeta {
