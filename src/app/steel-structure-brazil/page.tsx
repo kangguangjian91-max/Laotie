@@ -322,7 +322,7 @@ export default function BrazilLandingPage() {
                   ],
                 },
                 {
-                  image: "/images/projects/project-perth-01.webp",
+                  image: "/images/projects/project-01.webp",
                   alt: "Industrial factory building in Rio de Janeiro, Brazil - 5,200 sqm manufacturing facility",
                   title: "Rio de Janeiro Manufacturing Facility",
                   description: "5,200 sqm factory building with mezzanine office floor. Designed for tropical climate with high-humidity coatings and 5T crane system.",
@@ -332,7 +332,7 @@ export default function BrazilLandingPage() {
                   ],
                 },
                 {
-                  image: "/images/projects/project-perth-01.webp",
+                  image: "/images/projects/project-02.webp",
                   alt: "Steel structure mining facility in Belo Horizonte, Brazil - 6,800 sqm",
                   title: "Belo Horizonte Mining Facility",
                   description: "6,800 sqm multi-span industrial facility for mining equipment storage and maintenance. 14m eave height with 20T cranes across two bays.",
@@ -342,7 +342,7 @@ export default function BrazilLandingPage() {
                   ],
                 },
                 {
-                  image: "/images/projects/project-perth-01.webp",
+                  image: "/images/projects/project-03.webp",
                   alt: "Agricultural storage shed in Paraná, Brazil - 4,000 sqm steel building",
                   title: "Paraná Agricultural Storage Shed",
                   description: "4,000 sqm galvanized steel storage shed for grain and agricultural produce. Natural ventilation design with ridge monitors for tropical humidity control.",
@@ -352,7 +352,7 @@ export default function BrazilLandingPage() {
                   ],
                 },
                 {
-                  image: "/images/projects/project-perth-01.webp",
+                  image: "/images/projects/project-04.webp",
                   alt: "Cold storage facility in Itajaí, Brazil - 3,500 sqm insulated steel building",
                   title: "Itajaí Cold Storage Facility",
                   description: "3,500 sqm insulated warehouse with 150mm PIR panels. Maintains -25°C for frozen food storage, located near Itajaí port for export logistics.",
@@ -362,7 +362,7 @@ export default function BrazilLandingPage() {
                   ],
                 },
                 {
-                  image: "/images/projects/project-perth-01.webp",
+                  image: "/images/projects/project-05.webp",
                   alt: "Distribution center in Suape, Brazil - 9,200 sqm steel structure",
                   title: "Suape Distribution Center",
                   description: "9,200 sqm multi-bay distribution center with 16m eave height. Located in Suape Industrial Complex with 15T cranes and mezzanine office floor.",
@@ -372,7 +372,7 @@ export default function BrazilLandingPage() {
                   ],
                 },
                 {
-                  image: "/images/projects/project-perth-01.webp",
+                  image: "/images/projects/project-06.webp",
                   alt: "Sugar cane processing facility in Mato Grosso, Brazil - 5,800 sqm steel building",
                   title: "Mato Grosso Sugar Cane Facility",
                   description: "5,800 sqm agro-industrial facility for sugar cane processing. Galvanized steel frame with anti-corrosion coating for high-humidity processing environment.",
