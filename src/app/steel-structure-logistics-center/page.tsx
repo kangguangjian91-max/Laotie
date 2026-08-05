@@ -65,51 +65,12 @@ const serviceSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much does a steel logistics center cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Steel structure costs for logistics centers range from $25-65/m² FOB China depending on span, height, crane requirements, and cladding specification. A typical 10,000m² distribution hub costs $300,000-650,000 for the steel structure. Complete turnkey (including foundation, installation, cladding) ranges from $180-350/m².",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to build a steel logistics center?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Typical timeline: 4-6 weeks design and engineering, 4-6 weeks fabrication in China, 3-5 weeks shipping, 4-8 weeks on-site installation. Total: 15-25 weeks from order to completion.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What span can a steel logistics center achieve?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Portal frame steel structures for logistics centers can achieve clear spans of 15-60m. For wider spans (60m+), space frame systems are recommended. Multi-span designs with intermediate columns are the most cost-effective for large logistics parks.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What floor load capacity can you design for?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We design logistics center floor slabs for live loads from 5 kN/m² (standard warehouse) to 25 kN/m² (heavy industrial storage). High-bay racking systems with point loads up to 50 tons can be accommodated with proper foundation design.",
-      },
-    },
-  ],
-};
 
 export default function SteelStructureLogisticsCenter() {
   return (
     <>
       <LandingPageTracker country="Global" pageType="main" />
       <JsonLd data={serviceSchema} />
-      <JsonLd data={faqSchema} />
       <Header />
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">

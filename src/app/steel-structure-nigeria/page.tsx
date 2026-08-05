@@ -78,36 +78,6 @@ const serviceSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much does a steel structure warehouse cost in Nigeria?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Steel structure warehouse cost in Nigeria ranges from NGN 15,000 to NGN 35,000 per square meter for locally fabricated structures, depending on size, design complexity, and materials. Laotie offers factory-direct pricing at $25-65 per sqm (approximately NGN 35,000-91,000 per sqm at current exchange rates).",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to build a steel warehouse in Nigeria?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Typical timeline: 4-6 weeks for production in China, 2-3 weeks for shipping to Nigeria, 4-8 weeks for on-site installation. Total: 10-17 weeks from order to completion.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I need a building permit for steel structure in Nigeria?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, you need building permits from your Local Government Unit (LGU). Laotie provides all necessary structural calculations, drawings, and certificates to support your permit application.",
-      },
-    },
-  ],
-};
 
 export default function NigeriaLandingPage() {
   return (
@@ -125,7 +95,6 @@ export default function NigeriaLandingPage() {
     <main className="min-h-screen">
       <LandingPageTracker country="nigeria" pageType="nigeria" />
       <JsonLd data={serviceSchema} />
-      <JsonLd data={faqSchema} />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white py-20 md:py-28">

@@ -73,60 +73,6 @@ const serviceSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much does a steel structure warehouse cost in Australia?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Steel structure warehouse cost in Australia ranges from AUD 350 to AUD 650 per square meter, depending on size, design complexity, cladding type, and crane requirements. Laotie offers factory-direct pricing with shipping and installation. Use our free online calculator for an instant estimate.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does Laotie Steel comply with Australian building codes (NCC/BCA)?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. All our steel structures are engineered to meet the National Construction Code (NCC) and Building Code of Australia (BCA) requirements. We provide full structural calculations, shop drawings, and certification documents to support your development application (DA) and building permit process.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to import a steel building from China to Australia?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Typical timeline: 4-6 weeks for fabrication in China, 4-5 weeks for sea freight to Australian ports (Sydney, Melbourne, Brisbane, Perth, Adelaide), 4-8 weeks for on-site installation. Total: 12-19 weeks from order to handover.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you design for Australian cyclone and bushfire zones?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely. We design for all Australian climate zones including Cyclone Regions C and D (wind loads up to 3.0 kPa), Bushfire Attack Levels (BAL) up to BAL-40/FZ, and high-temperature ratings for Northern Australia. All designs comply with AS/NZS 1170 and AS 1530.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What shipping ports do you deliver to in Australia?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We ship to all major Australian ports: Sydney (Port Botany), Melbourne, Brisbane, Fremantle (Perth), and Adelaide. Container shipping typically takes 4-5 weeks from China. We handle all customs clearance documentation including Certificate of Origin and Australian import permits.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you provide on-site installation in Australia?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, we offer both supply-only (FOB) and full installation services. Our Australian installation partners are experienced with local WHS requirements and hold all necessary licenses. We also provide remote installation supervision and detailed erection manuals for self-install projects.",
-      },
-    },
-  ],
-};
 
 export default function AustraliaLandingPage() {
   return (
@@ -145,7 +91,6 @@ export default function AustraliaLandingPage() {
       <main className="min-h-screen">
         <LandingPageTracker country="australia" pageType="australia" />
         <JsonLd data={serviceSchema} />
-        <JsonLd data={faqSchema} />
 
         {/* ===== Hero Section ===== */}
         <section className="relative bg-gradient-to-r from-amber-900 via-amber-800 to-yellow-700 text-white py-20 md:py-28">

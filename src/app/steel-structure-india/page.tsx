@@ -78,52 +78,6 @@ const serviceSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much does a steel structure warehouse cost in India?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Steel structure warehouse cost in India ranges from INR 2,200 to INR 4,200 per square meter (approx. USD 26-50/sqm), depending on size, design complexity, cladding type, and crane requirements. Laotie offers factory-direct pricing with shipping and installation. Use our free online calculator for an instant estimate.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does Laotie Steel comply with Indian building codes (IS 800)?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. All our steel structures are engineered to meet IS 800 (General Construction in Steel), IS 1893 (Earthquake Resistant Design), IS 875 (Wind Loads), and IS 808 (Structural Steel Sections). We provide full structural calculations, shop drawings, and certification documents to support your local municipal approvals and Structural Stability Certificate (SSC).",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to import a steel building from China to India?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Typical timeline: 4-6 weeks for fabrication in China, 2-4 weeks for sea freight to Indian ports (Mumbai/Nhava Sheva, Chennai, Mundra, Kolkata), 3-6 weeks for on-site installation. Total: 9-16 weeks from order to handover.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you design for India's monsoon climate and seismic zones?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely. We design for all Indian climatic zones including high-rainfall monsoon regions (rainfall up to 4,000mm), Seismic Zones IV and V (as per IS 1893), and coastal high-wind regions. Roof slopes, drainage, and anti-corrosion coatings are customized to local conditions. All designs comply with IS 875 and IS 1893.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the import duty on steel structures from China to India?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Steel structures (HS 7308) imported into India typically attract a Basic Customs Duty (BCD) of 7.5-15%, plus Social Welfare Surcharge of 10% on BCD, and 18% GST (input credit available). Actual rates depend on classification and end-use. We provide full customs documentation including Certificate of Origin and assist with BIS certification requirements where applicable.",
-      },
-    },
-  ],
-};
 
 export default function IndiaLandingPage() {
   return (
@@ -142,7 +96,6 @@ export default function IndiaLandingPage() {
       <main className="min-h-screen">
         <LandingPageTracker country="india" pageType="india" />
         <JsonLd data={serviceSchema} />
-        <JsonLd data={faqSchema} />
 
         {/* ===== Hero Section ===== */}
         <section className="relative bg-gradient-to-r from-orange-700 via-orange-600 to-green-700 text-white py-20 md:py-28">

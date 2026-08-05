@@ -61,50 +61,11 @@ const priceSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much does a steel structure warehouse cost per square meter?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Steel structure warehouse typically costs $25-$80 per square meter for the steel framework only. Complete building with cladding, insulation, and accessories ranges from $60-$150 per square meter.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What factors affect steel structure pricing?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Main factors: 1) Building size (economies of scale), 2) Steel grade and thickness, 3) Design complexity, 4) Location (shipping cost), 5) Accessories (crane, insulation, etc.)",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to get a quotation?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We provide preliminary quotations within 24 hours. Detailed engineering quotations with shop drawings take 3-5 working days.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you offer installation services?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, we offer installation services in Vietnam, Indonesia, Nigeria, Philippines, and Thailand. We also provide installation manuals and remote video guidance for DIY projects.",
-      },
-    },
-  ],
-};
 
 export default function SteelStructurePriceGuide() {
   return (
     <>
       <JsonLd data={priceSchema} />
-      <JsonLd data={faqSchema} />
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <Breadcrumb

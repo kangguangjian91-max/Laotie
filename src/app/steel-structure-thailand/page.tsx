@@ -74,60 +74,6 @@ const serviceSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much does a steel structure warehouse cost in Thailand?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Steel structure warehouse cost in Thailand ranges from THB 12,000 to THB 28,000 per square meter, depending on size, design complexity, and materials. Laotie offers factory-direct pricing at USD 25-65 per sqm.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to build a steel warehouse in Thailand?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Typical timeline: 4-6 weeks for production in China, 1-2 weeks for shipping to Thailand (Laem Chabang or Bangkok ports), 4-8 weeks for on-site installation. Total: 9-16 weeks from order to completion.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I need a building permit for steel structure in Thailand?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, you need building permits from your local municipality. Laotie provides all necessary structural calculations, drawings, and certificates to support your permit application.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can steel structures withstand Thailand's climate?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, our steel structures are designed for Thailand's tropical climate. We use hot-dip galvanized steel and anti-corrosion coatings to resist humidity, monsoon rains, and salt air (for coastal areas).",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you provide installation services in Thailand?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, we provide complete installation services. Our team will guide installation via video call, provide detailed manuals, and can dispatch engineers to Thailand if needed (additional cost).",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What payment terms do you offer for Thailand clients?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We offer flexible payment terms: 30% deposit, 60% before shipment, 10% after installation. We accept T/T, L/C, and can work with Thai banks.",
-      },
-    },
-  ],
-};
 
 export default function ThailandLandingPage() {
   return (
@@ -145,7 +91,6 @@ export default function ThailandLandingPage() {
     <main className="min-h-screen">
       <LandingPageTracker country="thailand" pageType="thailand" />
       <JsonLd data={serviceSchema} />
-      <JsonLd data={faqSchema} />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white py-20 md:py-28">

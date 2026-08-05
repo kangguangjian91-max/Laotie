@@ -71,44 +71,6 @@ const serviceSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much does a steel structure cost in Saudi Arabia?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Steel structure costs in Saudi Arabia range from SAR 90-240 per m² ($25-65/m²) FOB from China. With shipping to Dammam or Jeddah ports, expect SAR 130-300 per m² ($35-80/m²). Complete turnkey pricing (including installation) typically ranges from SAR 650-2,000 per m² depending on building complexity.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to build a steel warehouse in Saudi Arabia?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Typical timeline: 4-6 weeks for production in China, 3-4 weeks for shipping to Saudi ports (Dammam or Jeddah), 4-8 weeks for on-site installation. Total: 11-18 weeks from order to completion.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do Chinese steel structures meet Saudi Building Code?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Laotie Steel designs structures to SBC 301 (Saudi Building Code) and international standards including Eurocode 3, BS 5950, and AISC. We adapt designs to local wind, sand, and temperature conditions per Saudi code requirements.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What steel grade is best for Saudi Arabia's climate?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "For Saudi Arabia's hot, arid, and coastal environment, we recommend Q355B steel with an enhanced anti-corrosion coating system (epoxy zinc-rich primer + micaceous iron oxide intermediate + polyurethane topcoat, minimum 280μm DFT). For coastal areas like Jeddah and Dammam, hot-dip galvanizing is recommended.",
-      },
-    },
-  ],
-};
 
 export default function SteelStructureSaudiArabia() {
   const heroImage = "/images/projects/project-dubai-01.webp";
@@ -117,7 +79,6 @@ export default function SteelStructureSaudiArabia() {
     <>
       <LandingPageTracker country="Saudi Arabia" pageType="saudi-arabia" />
       <JsonLd data={serviceSchema} />
-      <JsonLd data={faqSchema} />
       <Header />
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">

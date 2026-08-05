@@ -74,36 +74,6 @@ const serviceSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much does a steel structure warehouse cost in Philippines?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Steel structure warehouse cost in Philippines ranges from PHP 15,000 to PHP 35,000 per square meter, depending on size, design complexity, and materials. Laotie offers factory-direct pricing at USD 25-65 per sqm.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to build a steel warehouse in Philippines?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Typical timeline: 4-6 weeks for production in China, 2-3 weeks for shipping to Philippines, 4-8 weeks for on-site installation. Total: 10-17 weeks from order to completion.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I need a building permit for steel structure in Philippines?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, you need building permits from your Local Government Unit (LGU). Laotie provides all necessary structural calculations, drawings, and certificates to support your permit application.",
-      },
-    },
-  ],
-};
 
 export default function PhilippinesLandingPage() {
   return (
@@ -121,7 +91,6 @@ export default function PhilippinesLandingPage() {
     <main className="min-h-screen">
       <LandingPageTracker country="philippines" pageType="philippines" />
       <JsonLd data={serviceSchema} />
-      <JsonLd data={faqSchema} />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white py-20 md:py-28">

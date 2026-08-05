@@ -539,20 +539,6 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
               <h2 className="text-2xl font-bold text-steel mb-2 text-center">Frequently Asked Questions</h2>
               <p className="text-gray-500 text-sm text-center mb-8">Common questions about {product.title.toLowerCase()}</p>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    mainEntity: product.faq.map((f) => ({
-                      "@type": "Question",
-                      name: f.question,
-                      acceptedAnswer: { "@type": "Answer", text: f.answer },
-                    })),
-                  }),
-                }}
-              />
               <div className="space-y-4">
                 {product.faq.map((f, i) => (
                   <details key={i} className="border border-gray-200 rounded-lg p-4 hover:border-gray-300 transition-colors">

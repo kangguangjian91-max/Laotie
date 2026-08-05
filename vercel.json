@@ -36,7 +36,8 @@
         { "key": "Cache-Control", "value": "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400" },
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://www.youtube.com https://clarity.ms 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://www.youtube.com https://c.bing.com https://www.clarity.ms; connect-src 'self' https://www.google-analytics.com https://clarity.ms https://region1.google-analytics.com; font-src 'self'; frame-src https://www.youtube.com https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co; upgrade-insecure-requests;" }
       ]
     },
     {
@@ -45,7 +46,8 @@
         { "key": "Cache-Control", "value": "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400" },
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://www.youtube.com https://clarity.ms 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://www.youtube.com https://c.bing.com https://www.clarity.ms; connect-src 'self' https://www.google-analytics.com https://clarity.ms https://region1.google-analytics.com; font-src 'self'; frame-src https://www.youtube.com https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co; upgrade-insecure-requests;" }
       ]
     }
   ],
@@ -58,6 +60,16 @@
     {
       "source": "/case-studies/:path*",
       "destination": "/projects",
+      "permanent": true
+    },
+    {
+      "source": "/blog/steel-structure-vs-concrete-cost-comparison",
+      "destination": "/blog/steel-vs-concrete-lifetime-cost-comparison-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/steel-structure-vs-concrete-building-comparison",
+      "destination": "/blog/steel-vs-concrete-lifetime-cost-comparison-2026",
       "permanent": true
     }
   ]

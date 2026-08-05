@@ -68,61 +68,6 @@ export default function SteelStructureIndonesia() {
       "Custom steel structure solutions for Indonesian market: warehouses, factories, commercial buildings with earthquake and tsunami resistance.",
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "How much does a steel structure warehouse cost in Indonesia?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "A basic 1,000 m² warehouse costs USD 45-70 per m² (IDR 700,000-1,100,000 per m²) including materials and installation. Final price depends on seismic zone, wind load, and customization.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How long does it take to build a steel structure in Indonesia?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Typical timeline: Design & permitting (2-3 weeks), Fabrication in China (3-4 weeks), Shipping to Indonesia (1-2 weeks), Installation in Indonesia (2-4 weeks). Total: 8-13 weeks.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do you handle Indonesian building permits (IMB)?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, we provide technical drawings and structural calculations that comply with Indonesian building codes (SNI). We can work with your local consultant to obtain IMB (Izin Mendirikan Bangunan).",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Can your structures withstand earthquakes and tsunamis?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Absolutely. We design structures to withstand Indonesia's seismic zones (up to Zone 8). We also consider tsunami risk for coastal areas. All designs are engineered for local conditions.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do you provide installation services in Indonesia?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, we have experienced installation teams that can travel to Jakarta, Surabaya, Medan, and other cities. We also provide remote guidance and training for local teams.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What are your payment terms for Indonesian clients?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "We accept T/T (bank transfer), L/C (letter of credit), and can work with Indonesian banks. Typical terms: 30% deposit, 60% before shipping, 10% after installation.",
-        },
-      },
-    ],
-  };
-
   return (
     <><Header />
     <div className="bg-white border-b border-gray-100">
@@ -138,7 +83,6 @@ export default function SteelStructureIndonesia() {
     <main className="min-h-screen bg-white">
       <LandingPageTracker country="indonesia" pageType="indonesia" />
       <JsonLd data={schemaData} />
-      <JsonLd data={faqSchema} />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-steel to-steel-light text-white py-20 md:py-28">

@@ -58,19 +58,6 @@ export default async function ProjectDetailPage(props: PageProps) {
     dateCreated: "2025",
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: project.faq.map((f) => ({
-      "@type": "Question",
-      name: f.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: f.answer,
-      },
-    })),
-  };
-
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -89,7 +76,6 @@ export default async function ProjectDetailPage(props: PageProps) {
   return (
     <>
       <JsonLd data={projectSchema} />
-      <JsonLd data={faqSchema} />
       <JsonLd data={organizationSchema} />
       <Header />
 

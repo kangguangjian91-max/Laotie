@@ -74,60 +74,6 @@ const serviceSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much does a steel structure warehouse cost in Vietnam?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Steel structure warehouse cost in Vietnam ranges from VND 3,100+,000 to VND 8,000,000 per square meter, depending on size, design complexity, and materials. Laotie offers factory-direct pricing at USD 25-65 per sqm.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to build a steel warehouse in Vietnam?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Typical timeline: 4-6 weeks for production in China, 1-2 weeks for shipping to Vietnam (Hai Phong or Ho Chi Minh ports), 4-8 weeks for on-site installation. Total: 9-16 weeks from order to completion.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I need a building permit for steel structure in Vietnam?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, you need building permits from your local People's Committee. Laotie provides all necessary structural calculations, drawings, and certificates to support your permit application.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can steel structures withstand typhoons in Vietnam?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, our steel structures are designed to withstand typhoons up to 200 km/h (typical in Vietnam). We use high-strength steel (Q345B) and certified welding processes to ensure durability.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you provide installation services in Vietnam?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, we provide complete installation services. Our team will guide installation via video call, provide detailed manuals, and can dispatch engineers to Vietnam if needed (additional cost).",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What payment terms do you offer for Vietnam clients?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We offer flexible payment terms: 30% deposit, 60% before shipment, 10% after installation. We accept T/T, L/C, and can work with Vietnamese banks.",
-      },
-    },
-  ],
-};
 
 export default function VietnamLandingPage() {
   return (
@@ -145,7 +91,6 @@ export default function VietnamLandingPage() {
     <main className="min-h-screen">
       <LandingPageTracker country="vietnam" pageType="vietnam" />
       <JsonLd data={serviceSchema} />
-      <JsonLd data={faqSchema} />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-red-900 via-red-800 to-yellow-700 text-white py-20 md:py-28">

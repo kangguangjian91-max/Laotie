@@ -78,52 +78,6 @@ const serviceSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much does a steel structure warehouse cost in Brazil?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Steel structure warehouse cost in Brazil ranges from BRL 180 to BRL 380 per square meter (approx. USD 36-76/sqm), depending on size, design complexity, cladding type, and crane requirements. Laotie offers factory-direct pricing with shipping and installation. Use our free online calculator for an instant estimate.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does Laotie Steel comply with Brazilian building codes (NBR 8800)?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. All our steel structures are engineered to meet NBR 8800 (Steel Buildings Design), NBR 6123 (Wind Loads), NBR 15421 (Seismic Design), and NBR 14762 (Cold-Formed Steel). We provide full structural calculations, shop drawings, and certification documents to support your local Prefeitura (city hall) approvals and ART (Anotação de Responsabilidade Técnica) requirements.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to import a steel building from China to Brazil?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Typical timeline: 4-6 weeks for fabrication in China, 4-6 weeks for sea freight to Brazilian ports (Santos, Itaguaí, Itajaí, Paranaguá, Suape), 4-8 weeks for on-site installation. Total: 12-20 weeks from order to handover.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you design for Brazil's tropical climate and agricultural applications?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely. We design for all Brazilian climatic zones including tropical high-rainfall regions (Amazon, Northeast), high-humidity coastal environments, and high-altitude temperate zones in the South. Galvanized and pre-painted coatings resist corrosion. Common applications include agricultural storage, grain silos, livestock housing, and agro-industrial facilities. All designs comply with NBR 6123 wind load requirements.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the import duty on steel structures from China to Brazil?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Steel structures (NCM 7308) imported into Brazil typically attract 14-18% Import Duty (II), plus IPI (Industrialized Products Tax) of 5-15%, PIS/COFINS (federal contributions) of 11.75-16.16%, and 18% ICMS (state VAT). Licença de Importação (LI) may be required for certain products. Actual rates depend on classification and end-use. We provide full customs documentation including Certificate of Origin and assist with Santos Port clearance via our logistics partners.",
-      },
-    },
-  ],
-};
 
 export default function BrazilLandingPage() {
   return (
@@ -142,7 +96,6 @@ export default function BrazilLandingPage() {
       <main className="min-h-screen">
         <LandingPageTracker country="brazil" pageType="brazil" />
         <JsonLd data={serviceSchema} />
-        <JsonLd data={faqSchema} />
 
         {/* ===== Hero Section ===== */}
         <section className="relative bg-gradient-to-r from-green-700 via-green-600 to-yellow-500 text-white py-20 md:py-28">

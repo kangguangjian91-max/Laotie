@@ -78,52 +78,6 @@ const serviceSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much does a steel structure warehouse cost in UAE?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Steel structure warehouse cost in UAE ranges from AED 1,200 to AED 2,400 per square meter (approx. USD 325-650/sqm), depending on size, design complexity, cladding type, and crane requirements. High-temperature and C4 corrosion-resistant coatings add 10-15% to base cost. Laotie offers factory-direct pricing with shipping and installation. Use our free online calculator for an instant estimate.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does Laotie Steel comply with UAE and Dubai building codes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. All our steel structures are engineered to meet Dubai Municipality Code, Abu Dhabi International Building Code (ADIBC), UAE Fire & Life Safety Code of Practice, and local Trakhees/DAFZA requirements. We provide full structural calculations, shop drawings, and certification documents to support your municipality approvals and Civil Defense submissions.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to import a steel building from China to UAE?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Typical timeline: 4-6 weeks for fabrication in China, 2-3 weeks for sea freight to UAE ports (Jebel Ali, Khalifa Port, Sharjah Port), 3-6 weeks for on-site installation. Total: 9-15 weeks from order to handover. Air freight option available for urgent projects.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you design for UAE's high-temperature and C4 corrosion environment?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely. We design for UAE's extreme conditions including ambient temperatures up to 50°C, high humidity, and C4 (high) corrosive environment per ISO 12944. Our coating systems include 3-layer marine-grade paint (350+ microns DFT), hot-dip galvanizing, and PIR insulated panels with UV-resistant finish. All designs comply with Dubai Municipality wind load requirements.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the import duty on steel structures from China to UAE?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Steel structures (HS 7308) imported into UAE attract 5% Customs Duty on CIF value (standard GCC rate), plus 5% VAT. Free Zone jurisdictions (Jebel Ali Free Zone, DAFZA, etc.) offer duty-free import for re-export or in-zone use. We provide full customs documentation including Certificate of Origin and assist with Jebel Ali Port clearance via our logistics partners.",
-      },
-    },
-  ],
-};
 
 export default function UAELandingPage() {
   return (
@@ -142,7 +96,6 @@ export default function UAELandingPage() {
       <main className="min-h-screen">
         <LandingPageTracker country="uae" pageType="uae" />
         <JsonLd data={serviceSchema} />
-        <JsonLd data={faqSchema} />
 
         {/* ===== Hero Section ===== */}
         <section className="relative bg-gradient-to-r from-emerald-800 via-emerald-700 to-red-800 text-white py-20 md:py-28">
