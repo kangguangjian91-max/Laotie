@@ -27,6 +27,37 @@ const aboutPageSchema = {
   },
 };
 
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Henan Laotie Steel Structure Engineering Co., Ltd.",
+  description: "CE & ISO certified steel structure manufacturer in China. 5 production lines, 5,000T/month capacity. Serving 30+ countries with factory-direct pricing.",
+  url: "https://www.laotie-steel.com/about",
+  telephone: "+86-166-5073-5555",
+  priceRange: "$$",
+  image: "https://www.laotie-steel.com/images/factory-workshop.webp",
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "China",
+    addressRegion: "Henan",
+    addressLocality: "Shangqiu",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "34.7466",
+    longitude: "113.6253",
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    opens: "08:00",
+    closes: "18:00",
+  },
+  sameAs: [
+    "https://www.linkedin.com/company/laotie-steel",
+  ],
+};
+
 const milestones = [
   { year: "2009", text: "Company founded in Shangqiu, Henan Province" },
   { year: "2012", text: "First export order — 800T portal frame warehouse shipped to Lagos, Nigeria" },
@@ -127,6 +158,7 @@ export default function AboutPage() {
   return (
     <>
       <JsonLd data={aboutPageSchema} />
+      <JsonLd data={localBusinessSchema} />
       <Header />
       <main className="bg-white">
         {/* Hero banner */}
