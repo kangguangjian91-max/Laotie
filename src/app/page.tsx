@@ -51,7 +51,7 @@ const Testimonials = dynamic(() => import("@/components/Testimonials"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
 export const metadata: Metadata = {
-  title: "Steel Structure Manufacturer in China | Laotie Steel",
+  title: "Steel Structures at Factory Price | CE & ISO Certified Manufacturer",
   keywords: [
     "steel structure manufacturer China",
     "steel building manufacturer",
@@ -65,11 +65,11 @@ export const metadata: Metadata = {
     "industrial steel buildings",
   ],
   description:
-    "Leading steel structure manufacturer in China. 5 production lines, 5,000T/month capacity. Portal frames, floor decks, space frames. Get a free quote today.",
+    "Save 30-50% on steel structures vs local suppliers. 15+ years, 30+ countries served. 5 production lines, 5,000T/month. Portal frames, floor decks, space frames. Free quote in 24h.",
   openGraph: {
-    title: "Laotie Steel — Steel Structure Manufacturer in China",
+    title: "Steel Structures at Factory Price — Laotie Steel",
     description:
-      "Factory-direct steel buildings, space frames, floor decks, cladding systems. 5 lines, 5,000T/month capacity. CE & ISO certified.",
+      "Save 30-50% on steel structures. CE & ISO certified, 15+ years, 30+ countries. Portal frames, floor decks, space frames. Free quote in 24h.",
     images: [{ 
       url: "/images/og-image.webp", 
       width: 1200, 
@@ -81,8 +81,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Laotie Steel — Steel Structure Manufacturer",
-    description: "CE & ISO certified. 15+ years, 30+ countries. Get a quote in 24h.",
+    title: "Steel Structures at Factory Price — Laotie Steel",
+    description: "Save 30-50%. CE & ISO certified. 15+ years, 30+ countries. Free quote in 24h.",
     images: ["/images/og-image.webp"],
   },
   alternates: { canonical: "https://www.laotie-steel.com" },

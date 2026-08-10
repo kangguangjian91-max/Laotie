@@ -59,14 +59,14 @@ const websiteSchema = {
   name: "Laotie Steel Structure",
   url: "https://www.laotie-steel.com",
   description:
-    "CE & ISO certified steel structure manufacturer. Factory direct pricing, 5,000T/month capacity. Export to 30+ countries.",
+    "Save 30-50% on steel structures vs local suppliers. CE & ISO certified, 15+ years, 30+ countries. Factory-direct pricing.",
 };
 
 const siteUrl = "https://www.laotie-steel.com";
 const siteName = "Laotie Steel Structure";
-const defaultTitle = "Trusted Steel Structure Manufacturer in China — Factory Direct";
+const defaultTitle = "Steel Structures at Factory Price | CE & ISO Certified Manufacturer";
 const defaultDescription =
-  "CE & ISO certified steel manufacturer in China. 5 production lines, 5,000T/month. Portal frames, floor deck, space frames & cladding. Factory direct pricing.";
+  "Save 30-50% on steel structures vs local suppliers. 15+ years, 30+ countries served. Portal frames, floor decks, space frames. Free quote in 24h.";
 const ogImage = `${siteUrl}/images/og-image.webp`;
 
 export const metadata: Metadata = {
