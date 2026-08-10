@@ -10,13 +10,17 @@ import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Steel Structure Saudi Arabia | Factory & Warehouse Manufacturer",
+  title: "Steel Structure Saudi Arabia (KSA) | Light Gauge, Warehouse & Factory Manufacturer",
   description:
-    "Leading steel structure manufacturer serving Saudi Arabia. Custom warehouses, factories, and industrial buildings. CE & ISO certified. Free quote.",
+    "Steel structure company in Saudi Arabia. Light gauge steel buildings, canopies, warehouses & factories for KSA. SBC 301 compliant. CE & ISO certified. Ship to Dammam & Jeddah ports.",
   keywords: [
     "steel structure saudi arabia",
+    "light gauge steel building ksa",
+    "steel structure company in saudi arabia",
+    "structural steel suppliers in saudi arabia",
+    "steel structure canopies ksa",
+    "steel structure companies in riyadh",
     "warehouse construction saudi arabia",
-    "factory building saudi arabia",
     "steel building supplier saudi arabia",
     "prefab warehouse saudi arabia",
     "industrial building saudi arabia",
@@ -28,9 +32,9 @@ export const metadata: Metadata = {
     "steel structure dammam",
   ],
   openGraph: {
-    title: "Steel Structure Saudi Arabia | Laotie Steel",
+    title: "Steel Structure Saudi Arabia (KSA) | Light Gauge Steel Manufacturer",
     description:
-      "Your trusted steel structure partner in Saudi Arabia. 100+ projects completed. CE & ISO certified. Free quote.",
+      "Your trusted steel structure supplier in Saudi Arabia. Light gauge steel, canopies, warehouses & factories. SBC 301 compliant. Free quote in 24h.",
     images: ["/images/projects/project-dubai-01.webp"],
     locale: "en_SA",
     type: "website",
@@ -38,8 +42,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.laotie-steel.com/steel-structure-saudi-arabia", languages: { "en-SA": "https://www.laotie-steel.com/steel-structure-saudi-arabia" } },
   twitter: {
     card: "summary_large_image",
-    title: "Steel Structure Saudi Arabia | Laotie Steel",
-    description: "Your trusted steel structure partner in Saudi Arabia. 100+ projects completed.",
+    title: "Steel Structure Saudi Arabia (KSA) | Laotie Steel",
+    description: "Steel structure supplier in KSA. Light gauge steel, canopies, warehouses & factories. Free quote in 24h.",
     images: ["/images/projects/project-dubai-01.webp"],
   },
 };
@@ -100,10 +104,10 @@ export default function SteelStructureSaudiArabia() {
           <div className="absolute inset-0 bg-gradient-to-r from-steel via-steel/95 to-steel/80" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-              Steel Structure Saudi Arabia
+              Steel Structure Saudi Arabia (KSA)
             </h1>
             <p className="mt-3 text-lg text-gray-300 max-w-2xl">
-              Custom steel buildings for Saudi Arabia&apos;s Vision 2030 projects. Warehouses, factories, logistics centers.
+              Light gauge steel buildings, structural steel canopies, warehouses &amp; factories for Vision 2030 projects. Engineered to SBC 301. Ship to Dammam &amp; Jeddah.
             </p>
           </div>
         </section>
@@ -158,6 +162,77 @@ export default function SteelStructureSaudiArabia() {
                   <div className="text-xs text-gray-500">{item.label}</div>
                 </div>
               ))}
+            </div>
+          </section>
+        </ScrollAnimator>
+
+        {/* ========== LIGHT GAUGE STEEL & CANOPIES ========== */}
+        <ScrollAnimator>
+          <section className="bg-gray-50 border-t border-gray-100">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+              <div className="grid lg:grid-cols-2 gap-10">
+                {/* Light Gauge Steel */}
+                <div>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                    Light Gauge Steel Buildings — KSA
+                  </h2>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Light gauge steel (LGS) is the fastest-growing construction method in Saudi Arabia, ideal for villas, low-rise commercial buildings, labor camps, and modular housing under Vision 2030. Our LGS systems offer 40% lighter structural weight than hot-rolled steel while maintaining full SBC 301 compliance.
+                  </p>
+                  <div className="grid grid-cols-2 gap-3 mb-6">
+                    <div className="bg-white rounded-lg border border-gray-100 p-4">
+                      <div className="text-sm font-semibold text-gray-900">Wall Thickness</div>
+                      <div className="text-xs text-gray-500">0.75–2.5mm galvanized steel</div>
+                    </div>
+                    <div className="bg-white rounded-lg border border-gray-100 p-4">
+                      <div className="text-sm font-semibold text-gray-900">Fast Assembly</div>
+                      <div className="text-xs text-gray-500">500–800 m²/day with 4-person crew</div>
+                    </div>
+                    <div className="bg-white rounded-lg border border-gray-100 p-4">
+                      <div className="text-sm font-semibold text-gray-900">Applications</div>
+                      <div className="text-xs text-gray-500">Villas, camps, schools, clinics</div>
+                    </div>
+                    <div className="bg-white rounded-lg border border-gray-100 p-4">
+                      <div className="text-sm font-semibold text-gray-900">Corrosion Rating</div>
+                      <div className="text-xs text-gray-500">Z275–Z350 galvanizing for KSA climate</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Steel Structure Canopies */}
+                <div>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                    Steel Structure Canopies — KSA
+                  </h2>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Steel structure canopies are in high demand across Saudi Arabia for fuel stations, mosque courtyards, car parking shades, school assembly areas, and outdoor retail spaces. Designed to withstand 50°C ambient heat with sand-proof membrane roofing and anti-corrosion coatings.
+                  </p>
+                  <div className="grid grid-cols-2 gap-3 mb-6">
+                    <div className="bg-white rounded-lg border border-gray-100 p-4">
+                      <div className="text-sm font-semibold text-gray-900">Span Range</div>
+                      <div className="text-xs text-gray-500">6m–30m clear spans</div>
+                    </div>
+                    <div className="bg-white rounded-lg border border-gray-100 p-4">
+                      <div className="text-sm font-semibold text-gray-900">Canopy Types</div>
+                      <div className="text-xs text-gray-500">Cantilever, tension membrane, truss</div>
+                    </div>
+                    <div className="bg-white rounded-lg border border-gray-100 p-4">
+                      <div className="text-sm font-semibold text-gray-900">Roof Options</div>
+                      <div className="text-xs text-gray-500">PVDF membrane, insulated sandwich, polycarbonate</div>
+                    </div>
+                    <div className="bg-white rounded-lg border border-gray-100 p-4">
+                      <div className="text-sm font-semibold text-gray-900">Compliance</div>
+                      <div className="text-xs text-gray-500">SBC 301 wind load for all Saudi regions</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 p-5 bg-steel/5 rounded-xl border border-steel/10">
+                <p className="text-sm text-gray-700">
+                  <strong className="text-steel">Why choose Laotie for KSA light gauge steel and canopies?</strong> We manufacture both LGS framing and structural steel components in-house, cutting your logistics cost by consolidating into fewer containers. For developers building mixed-use projects (warehouse + office + canopy parking), we deliver the complete steel package in one shipment to Dammam or Jeddah.
+                </p>
+              </div>
             </div>
           </section>
         </ScrollAnimator>
