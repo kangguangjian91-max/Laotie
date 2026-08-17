@@ -51,7 +51,7 @@ const Testimonials = dynamic(() => import("@/components/Testimonials"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
 export const metadata: Metadata = {
-  title: "Steel Structures at Factory Price | CE & ISO Certified Manufacturer",
+  title: "Steel Structures Factory Price | CE & ISO Certified Manufacturer",
   keywords: [
     "steel structure manufacturer China",
     "steel building manufacturer",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     "industrial steel buildings",
   ],
   description:
-    "Save 30-50% on steel structures vs local suppliers. 15+ years, 30+ countries served. 5 production lines, 5,000T/month. Portal frames, floor decks, space frames. Free quote in 24h.",
+    "Save 30-50% on steel structures vs local suppliers. 15+ years, 30+ countries. 5 production lines, 5,000T/month. Portal frames, floor decks, space frames. Free quote in 24h.",
   openGraph: {
     title: "Steel Structures at Factory Price — Laotie Steel",
     description:

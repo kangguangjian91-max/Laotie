@@ -6,6 +6,7 @@ import json
 import time
 import re
 import sys
+import os
 from datetime import datetime
 
 SITE = "https://www.laotie-steel.com"
@@ -19,24 +20,32 @@ PAGES = [
   "/steel-structure-saudi-arabia", "/steel-structure-logistics-center",
 ]
 
-# Add blog slugs
-BLOG_SLUGS = [
-  "steel-structure-maintenance-guide-lifespan-corrosion",
-  "steel-structure-processing-techniques-cnc-welding-guide",
-  "steel-structure-production-china-manufacturing-guide",
-  "steel-structure-installation-guide-erection-process",
-  "why-choose-chinese-steel-structure-manufacturer",
-  "steel-structure-cost-guide-2025",
-  "ce-iso-certified-steel-structures",
-  "factory-tour-5000-tons-monthly-production",
-  "steel-structure-cost-per-square-meter-2026",
-  "how-to-build-steel-warehouse-step-by-step",
-  "steel-structure-design-guide-beginners",
-  "portal-frame-vs-space-frame-comparison",
-  "steel-structure-installation-process-timeline",
-  "how-to-import-steel-structures-from-china-complete-guide",
-  "steel-structure-cost-saudi-arabia-2026",
-]
+# Add blog slugs (read from blog-list.json when available, fallback to hardcoded list)
+BLOG_DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                             "public", "data", "blog")
+BLOG_SLUGS = []
+try:
+    with open(os.path.join(BLOG_DATA_DIR, "blog-list.json"), "r", encoding="utf-8") as f:
+        for post in json.load(f):
+            BLOG_SLUGS.append(post["slug"])
+except Exception:
+    BLOG_SLUGS = [
+      "steel-structure-maintenance-guide-lifespan-corrosion",
+      "steel-structure-processing-techniques-cnc-welding-guide",
+      "steel-structure-production-china-manufacturing-guide",
+      "steel-structure-installation-guide-erection-process",
+      "why-choose-chinese-steel-structure-manufacturer",
+      "steel-structure-cost-guide-2025",
+      "ce-iso-certified-steel-structures",
+      "factory-tour-5000-tons-monthly-production",
+      "steel-structure-cost-per-square-meter-2026",
+      "how-to-build-steel-warehouse-step-by-step",
+      "steel-structure-design-guide-beginners",
+      "portal-frame-vs-space-frame-comparison",
+      "steel-structure-installation-process-timeline",
+      "how-to-import-steel-structures-from-china-complete-guide",
+      "steel-structure-cost-saudi-arabia-2026",
+    ]
 
 for s in BLOG_SLUGS:
     PAGES.append(f"/blog/{s}")
@@ -98,17 +107,32 @@ def check_metadata(html, url):
 def check_pagespeed():
     api = ("https://www.googleapis.com/pagespeedonline/v5/runPagespeed"
            "?url=https://www.laotie-steel.com&strategy=mobile")
-    try:
-        req = urllib.request.Request(api, headers={"User-Agent": "Mozilla/5.0"})
-        resp = urllib.request.urlopen(req, timeout=30)
-        data = json.loads(resp.read())
-        score = data["lighthouseResult"]["categories"]["performance"]["score"] * 100
-        lcp = data["lighthouseResult"]["audits"]["largest-contentful-paint"]["numericValue"]
-        cls = data["lighthouseResult"]["audits"]["cumulative-layout-shift"]["numericValue"]
-        tbt = data["lighthouseResult"]["audits"]["total-blocking-time"]["numericValue"]
-        return score, lcp, cls, tbt
-    except Exception as e:
-        return None, None, None, str(e)
+    # Optional API key improves quota (no-key quota is very low and returns 429)
+    key = os.environ.get("GOOGLE_PAGESPEED_API_KEY", "")
+    if key:
+        api += f"&key={key}"
+    # Retry up to 3 times with backoff — the no-key API rate-limit (429) is transient
+    for attempt in range(3):
+        try:
+            req = urllib.request.Request(api, headers={"User-Agent": "Mozilla/5.0"})
+            resp = urllib.request.urlopen(req, timeout=60)
+            data = json.loads(resp.read())
+            score = data["lighthouseResult"]["categories"]["performance"]["score"] * 100
+            lcp = data["lighthouseResult"]["audits"]["largest-contentful-paint"]["numericValue"]
+            cls = data["lighthouseResult"]["audits"]["cumulative-layout-shift"]["numericValue"]
+            tbt = data["lighthouseResult"]["audits"]["total-blocking-time"]["numericValue"]
+            return score, lcp, cls, tbt
+        except urllib.error.HTTPError as e:
+            err = f"HTTP {e.code}: {e.reason}"
+            if e.code == 429 and attempt < 2:
+                wait = 30 * (attempt + 1)
+                print(f"  (PageSpeed rate limited, retrying in {wait}s...)")
+                time.sleep(wait)
+                continue
+            return None, None, None, err
+        except Exception as e:
+            return None, None, None, str(e)
+    return None, None, None, "max retries exceeded"
 
 print(f"=== SEO Health Check Report ===")
 print(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
@@ -157,7 +181,7 @@ if score is not None:
     if tbt > 200:
         ISSUES.append(f"TBT {tbt:.0f}ms — target <200ms")
 else:
-    print(f"  ❌ PageSpeed check failed: {lcp}")
+    print(f"  ❌ PageSpeed check failed: {tbt}")
 
 # 3. Check for broken internal links on homepage
 print("\n--- Homepage Internal Links ---")

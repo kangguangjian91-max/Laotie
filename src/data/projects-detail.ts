@@ -30,7 +30,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   "industrial-warehouse-sydney": {
     slug: "industrial-warehouse-sydney",
     metaTitle:
-      "120×60m Industrial Warehouse Sydney | AS/NZS Steel Structure | Laotie Steel",
+      "120×60m Industrial Warehouse Sydney | AS/NZS Steel Structure",
     metaDescription:
       "Custom 120m×60m industrial warehouse in Sydney, Australia. 7,200 sqm portal frame design, AS/NZS 1170 compliant, 12m eave height, 20T crane ready. Get a quote.",
     urlSlug: "/projects/industrial-warehouse-sydney",
@@ -221,7 +221,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   "factory-complex-lagos": {
     slug: "factory-complex-lagos",
     metaTitle:
-      "15,000 sqm Factory Complex Lagos | Steel Structure Nigeria | Laotie Steel",
+      "15,000 sqm Factory Complex Lagos | Steel Structure Nigeria",
     metaDescription:
       "Custom 15,000 sqm factory complex in Lagos, Nigeria. Multi-span steel structure, tropical climate design, 30m×3 continuous spans. Get a quote for West Africa projects.",
     urlSlug: "/projects/factory-complex-lagos",
@@ -395,7 +395,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   "shopping-mall-dome-roof-manila": {
     slug: "shopping-mall-dome-roof-manila",
     metaTitle:
-      "80×40m Space Frame Dome Roof Manila | Shopping Mall | Laotie Steel",
+      "80×40m Space Frame Dome Roof Manila | Shopping Mall",
     metaDescription:
       "Custom 80m×40m space frame dome roof for Manila shopping mall. Bolt-ball system, zero site welding, seismic design per NSCP 2015. Get a quote for space frame projects.",
     urlSlug: "/projects/shopping-mall-dome-roof-manila",
@@ -584,7 +584,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   "logistics-center-dubai": {
     slug: "logistics-center-dubai",
     metaTitle:
-      "22,000 sqm Logistics Center Dubai | Steel Warehouse UAE | Laotie Steel",
+      "22,000 sqm Logistics Center Dubai | Steel Warehouse UAE",
     metaDescription:
       "Custom 22,000 sqm logistics center in Dubai South, UAE. Steel building + mezzanine, 50m clear-span, fire-rated, designed for 50°C. Get a quote for Middle East projects.",
     urlSlug: "/projects/logistics-center-dubai",
@@ -760,7 +760,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   "aircraft-hangar-jakarta": {
     slug: "aircraft-hangar-jakarta",
     metaTitle:
-      "80×60m Aircraft Hangar Jakarta | Space Frame | Laotie Steel",
+      "80×60m Aircraft Hangar Jakarta | Space Frame",
     metaDescription:
       "Custom 80m×60m aircraft maintenance hangar in Jakarta, Indonesia. Space frame roof, 80m clear span, SNI 1727 compliant, tropical cyclone design. Get a quote.",
     urlSlug: "/projects/aircraft-hangar-jakarta",
@@ -949,7 +949,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   "perth-agricultural-processing-plant": {
     slug: "perth-agricultural-processing-plant",
     metaTitle:
-      "Steel Warehouse Perth | 50×60m Agricultural Processing Plant | Laotie Steel",
+      "Steel Warehouse Perth | 50×60m Agricultural Processing Plant",
     metaDescription:
       "Custom 50m×60m steel warehouse in Perth, Australia. AS/NZS compliant design, 120-ton Q355B structure, Colorbond roof & sandwich panel walls. Get a quote today.",
     urlSlug: "/projects/perth-agricultural-processing-plant",
@@ -1140,7 +1140,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   // ===== Hongxin Sports Trampoline Factory - Shangqiu, Henan, China =====
   "hongxin-sports-trampoline-factory-shangqiu": {
     slug: "hongxin-sports-trampoline-factory-shangqiu",
-    metaTitle: "Hongxin Sports Trampoline Factory | 18,304㎡ Steel Structure | Laotie Steel",
+    metaTitle: "Hongxin Sports Trampoline Factory | 18,304㎡ Steel Structure",
     metaDescription:
       "18,304㎡ steel structure factory for Hongxin Sports trampoline production in Shangqiu, Henan. 780 tons of steel, 2-story main plant + 5-story office building. Get a free quote.",
     urlSlug: "/projects/hongxin-sports-trampoline-factory-shangqiu",
@@ -1354,7 +1354,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
 
   "rattan-weaving-industrial-park-guo-village-shangqiu": {
     slug: "rattan-weaving-industrial-park-guo-village-shangqiu",
-    metaTitle: "Rattan Weaving Industrial Park | 30,000㎡ Steel Structure | Laotie Steel",
+    metaTitle: "Rattan Weaving Industrial Park | 30,000㎡ Steel Structure",
     metaDescription: "30,000㎡ steel structure industrial park for rattan weaving production in Guo Village, Shangqiu, Henan. 4 production buildings, 300 tons of steel. Get a free quote.",
     urlSlug: "/projects/rattan-weaving-industrial-park-guo-village-shangqiu",
     image: "/images/projects/rattan-weaving-industrial-park/frame_01.webp",
@@ -1537,7 +1537,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   "yunda-bozhou-modern-industrial-park": {
     slug: "yunda-bozhou-modern-industrial-park",
     metaTitle:
-      "Yunda Bozhou Modern Industrial Park | 50,000 sqm Logistics Hub | Laotie Steel",
+      "Yunda Bozhou Modern Industrial Park | 50,000 sqm Logistics Hub",
     metaDescription:
       "Large-scale steel structure industrial park in Bozhou, Anhui. 50,000 sqm logistics center with multi-span portal frame design. Get a quote.",
     urlSlug: "/projects/yunda-bozhou-modern-industrial-park",

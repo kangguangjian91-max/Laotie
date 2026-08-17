@@ -64,17 +64,16 @@ const websiteSchema = {
 
 const siteUrl = "https://www.laotie-steel.com";
 const siteName = "Laotie Steel Structure";
-const defaultTitle = "Steel Structures at Factory Price | CE & ISO Certified Manufacturer";
+const defaultTitle = "Steel Structures Factory Price | CE & ISO Certified Manufacturer";
 const defaultDescription =
   "Save 30-50% on steel structures vs local suppliers. 15+ years, 30+ countries served. Portal frames, floor decks, space frames. Free quote in 24h.";
 const ogImage = `${siteUrl}/images/og-image.webp`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: {
-    default: defaultTitle,
-    template: `%s - Laotie Steel`,
-  },
+  // Plain string = default title; child pages override with their own <title>
+  // without any template suffix (brand name stays in description/og/schema).
+  title: defaultTitle,
   description: defaultDescription,
   keywords: [
     "steel structure manufacturer China",

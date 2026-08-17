@@ -21,7 +21,7 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
   if (!project) return {};
 
   return {
-    title: project.metaTitle,
+    title: { absolute: project.metaTitle },
     description: project.metaDescription,
     alternates: {
       canonical: `https://www.laotie-steel.com/projects/${slug}`,

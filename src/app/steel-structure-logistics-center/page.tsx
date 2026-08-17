@@ -9,7 +9,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Steel Structure for Logistics Centers | Warehouse & Distribution Hub",
+  title: "Steel Structure for Logistics Centers | Warehouse Hub",
   description:
     "Custom steel structures for logistics centers & distribution hubs. Clear spans up to 60m, crane-ready, fire-rated. CE & ISO certified. Free quote.",
   keywords: [

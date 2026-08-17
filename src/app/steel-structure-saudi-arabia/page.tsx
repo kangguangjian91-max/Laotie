@@ -10,9 +10,9 @@ import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Steel Structure Saudi Arabia (KSA) | Light Gauge, Warehouse & Factory Manufacturer",
+  title: "Steel Structure Saudi Arabia | LGS & Warehouse",
   description:
-    "Steel structure company in Saudi Arabia. Light gauge steel buildings, canopies, warehouses & factories for KSA. SBC 301 compliant. CE & ISO certified. Ship to Dammam & Jeddah ports.",
+    "Steel structure supplier for Saudi Arabia. LGS buildings, canopies, warehouses & factories. SBC 301 compliant. CE & ISO certified. Ship to Dammam & Jeddah.",
   keywords: [
     "steel structure saudi arabia",
     "light gauge steel building ksa",
