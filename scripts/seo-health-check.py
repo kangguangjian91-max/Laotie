@@ -150,6 +150,10 @@ for page in PAGES:
         ok += 1
         meta_issues = check_metadata(html, url)
         status_str = "✅"
+        # Collect metadata issues into ISSUES so the summary reports them
+        # (and exits non-zero) instead of silently printing "All checks passed".
+        for mi in meta_issues:
+            ISSUES.append(f"{page or '/'} {mi.strip()}")
     elif status == 0:
         fail += 1
         status_str = f"❌ ({html})"
@@ -182,6 +186,7 @@ if score is not None:
         ISSUES.append(f"TBT {tbt:.0f}ms — target <200ms")
 else:
     print(f"  ❌ PageSpeed check failed: {tbt}")
+    ISSUES.append(f"PageSpeed check failed: {tbt}")
 
 # 3. Check for broken internal links on homepage
 print("\n--- Homepage Internal Links ---")
