@@ -3,11 +3,13 @@ import JsonLd from "@/components/JsonLd";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Steel Structure Price Guide 2026 | Cost Calculator",
+  title: "Steel Structure Price Guide 2026 | Steel Tonnage Price & Cost Calculator",
   description:
-    "Get the 2026 steel structure price guide. Cost calculator for warehouse, factory & industrial buildings. Free quotation within 24 hours. CE certified.",
+    "Get the 2026 steel structure price guide and steel tonnage price. Cost calculator for warehouse, factory & industrial buildings. Free quotation within 24 hours. CE certified.",
   keywords: [
     "steel structure price",
+    "steel tonnage price",
+    "structural steel price per ton",
     "steel building cost",
     "warehouse construction cost",
     "factory building price",
@@ -25,9 +27,9 @@ export const metadata: Metadata = {
     "steel building bangkok price",
   ],
   openGraph: {
-    title: "Steel Structure Price Guide 2026 | Laotie Steel",
+    title: "Steel Structure Price Guide 2026 | Steel Tonnage Price | Laotie Steel",
     description:
-      "Get the latest steel structure price guide. Cost calculator and free quotation within 24 hours.",
+      "Get the latest steel structure price guide and steel tonnage price. Cost calculator and free quotation within 24 hours.",
     url: "https://www.laotie-steel.com/steel-structure-price-guide",
     siteName: "Laotie Steel Structure",
     locale: "en_US",
@@ -35,9 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Steel Structure Price Guide 2026 | Laotie Steel",
+    title: "Steel Structure Price Guide 2026 | Steel Tonnage Price | Laotie Steel",
     description:
-      "Get the latest steel structure price guide. Cost calculator and free quotation within 24 hours.",
+      "Get the latest steel structure price guide and steel tonnage price. Cost calculator and free quotation within 24 hours.",
   },
   alternates: { canonical: "https://www.laotie-steel.com/steel-structure-price-guide" },
 };
@@ -388,6 +390,111 @@ export default function SteelStructurePriceGuide() {
           </div>
         </section>
 
+        {/* Steel Tonnage Price */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-6">
+              Steel Tonnage Price: 2026 Global Reference
+            </h2>
+            <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12">
+              Structural steel is quoted by weight. These are the 2026 reference steel tonnage prices
+              for raw material and fabricated sections, so you can estimate your project budget before
+              requesting a detailed quotation.
+            </p>
+
+            <div className="overflow-x-auto mb-12">
+              <table className="w-full bg-white rounded-lg shadow-lg overflow-hidden">
+                <thead className="bg-blue-900 text-white">
+                  <tr>
+                    <th className="px-6 py-4 text-left">Region / Market</th>
+                    <th className="px-6 py-4 text-left">Raw Hot-Rolled Steel ($/ton)</th>
+                    <th className="px-6 py-4 text-left">Fabricated Steel Sections ($/ton)</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  <tr className="hover:bg-gray-50">
+                    <td className="px-6 py-4 font-medium">🇺🇸 North America</td>
+                    <td className="px-6 py-4">$650 - $850</td>
+                    <td className="px-6 py-4">$1,100 - $1,500</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="px-6 py-4 font-medium">🇪🇺 Europe</td>
+                    <td className="px-6 py-4">$600 - $780</td>
+                    <td className="px-6 py-4">$1,050 - $1,450</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="px-6 py-4 font-medium">🇨🇳 China (FOB export)</td>
+                    <td className="px-6 py-4">$520 - $680</td>
+                    <td className="px-6 py-4">$900 - $1,200</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="px-6 py-4 font-medium">🇦🇺 Australia / Middle East</td>
+                    <td className="px-6 py-4">$680 - $900</td>
+                    <td className="px-6 py-4">$1,150 - $1,550</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="px-6 py-4 font-medium">🌏 Southeast Asia</td>
+                    <td className="px-6 py-4">$550 - $720</td>
+                    <td className="px-6 py-4">$950 - $1,300</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-bold mb-4 text-blue-900">Tonnage Price vs. Per Square Meter</h3>
+                <p className="text-gray-700 mb-4">
+                  A typical single-storey steel warehouse uses <strong>25-40 kg of structural steel per m²</strong>.
+                  Convert a tonnage price to a floor-area price using this formula:
+                </p>
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 font-mono text-sm">
+                  Cost per m² ≈ Steel weight (kg/m²) × Tonnage price ($/ton) ÷ 1000
+                </div>
+                <p className="text-gray-700 mt-4">
+                  Example: 30 kg/m² × $1,000/ton ÷ 1000 = <strong>$30/m²</strong> for the steel frame only.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-bold mb-4 text-blue-900">Typical Steel Weight by Building Type</h3>
+                <table className="w-full text-sm">
+                  <tbody className="divide-y divide-gray-200">
+                    <tr>
+                      <td className="py-2 font-medium">Warehouse / Workshop (≤30m span)</td>
+                      <td className="py-2 text-right">25-35 kg/m²</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 font-medium">Industrial factory with crane</td>
+                      <td className="py-2 text-right">40-60 kg/m²</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 font-medium">Mezzanine / multi-storey</td>
+                      <td className="py-2 text-right">50-80 kg/m²</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 font-medium">Space frame roof (60m+ span)</td>
+                      <td className="py-2 text-right">30-55 kg/m²</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div className="bg-orange-50 border-l-4 border-orange-500 rounded-r-lg p-6 max-w-4xl mx-auto">
+              <h3 className="text-lg font-bold mb-2 text-orange-900">
+                What's included in fabricated steel pricing?
+              </h3>
+              <p className="text-gray-700">
+                Fabricated tonnage price covers cutting, drilling, welding, shot blasting and painting,
+                plus shop drawings and connection bolts. It does <strong>not</strong> include shipping,
+                foundations, cladding or installation. Raw hot-rolled steel is for reference only — most
+                suppliers quote fabricated sections by tonnage.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Factors Affecting Price */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -587,6 +694,18 @@ export default function SteelStructurePriceGuide() {
             </h2>
 
             <div className="space-y-6">
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <h3 className="text-lg font-bold mb-2">
+                  What is the steel tonnage price in 2026?
+                </h3>
+                <p className="text-gray-700">
+                  In 2026, raw hot-rolled structural steel ranges from <strong>$520-$900 per ton</strong> depending
+                  on region, while fabricated steel sections (cut, drilled, welded and painted) typically cost
+                  <strong> $900-$1,550 per ton</strong>. China FOB export prices are the most competitive at
+                  $520-$680/ton for raw steel and $900-$1,200/ton fabricated.
+                </p>
+              </div>
+
               <div className="bg-white rounded-lg p-6 shadow-sm">
                 <h3 className="text-lg font-bold mb-2">
                   How much does a steel structure warehouse cost per square meter?

@@ -410,7 +410,7 @@ export default function AustraliaLandingPage() {
                   icon: "✈️",
                   title: "Aircraft Hangar",
                   desc: "Large-span hangars 30-100m wide. Sliding doors, maintenance pits, and Category 5 cyclone-rated design available.",
-                  link: "/products/space-frame",
+                  link: "/products/space-frame-truss",
                 },
                 {
                   icon: "🏗️",

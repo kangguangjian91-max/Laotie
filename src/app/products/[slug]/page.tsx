@@ -92,7 +92,7 @@ const productRelatedBlogs: Record<string, string[]> = {
     "steel-structure-production-china-manufacturing-guide",
   ],
   "space-frame-truss": [
-    "portal-frame-vs-space-frame-comparison",
+    "steel-space-frame-roof-design-span-cost-2026",
     "how-to-import-steel-structures-from-china-complete-guide",
     "factory-tour-5000-tons-monthly-production",
   ],

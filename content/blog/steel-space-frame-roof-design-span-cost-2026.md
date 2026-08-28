@@ -1,15 +1,15 @@
 ---
 title: "Steel Space Frame Roof: Design, Span & Cost Guide 2026"
-description: "Complete guide to steel space frame roof structures. Learn about design parameters, span capabilities, load capacity, applications, and cost per square meter for 2026."
+description: "A steel spaceframe roof covers 30-200m spans with no interior columns. Complete 2026 guide to space frame design, span capabilities, steel tonnage, load capacity, applications, and cost per square meter."
 date: "2026-07-11"
 slug: "steel-space-frame-roof-design-span-cost-2026"
-keywords: ["space frame structure", "space frame roof design", "space frame truss cost", "steel structure manufacturer China", "Chinese steel structure supplier"]
+keywords: ["steel spaceframe", "space frame structure", "space frame roof design", "space frame truss cost", "steel structure manufacturer China", "Chinese steel structure supplier"]
 image: "/images/blog/blog-space-frame-cover.webp"
 ---
 
 # Steel Space Frame Roof: Design, Span & Cost Guide 2026
 
-When you need to cover a large area without interior columns, a **steel space frame roof** is often the best structural solution. Space frames can span 60 to 200+ meters while supporting heavy roof loads — making them ideal for airports, exhibition halls, stadiums, and large industrial facilities.
+A **steel spaceframe** (space frame) is a three-dimensional truss structure that spans 60 to 200+ meters using a network of interlocking steel tubes — with no interior columns. This makes it the best structural solution for airports, exhibition halls, stadiums, and large industrial facilities that need column-free interiors. This guide covers everything you need to know about space frame design, from basic geometry to cost per square meter in 2026.
 
 At **OldTie Steel Structure**, we design and manufacture bolted space frame systems for clients worldwide. This guide covers everything you need to know about space frame design, from basic geometry to cost per square meter in 2026.
 
