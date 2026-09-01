@@ -1,6 +1,6 @@
 ---
 title: "How to Estimate Structural Steel: A Step-by-Step Guide for 2026"
-description: "How to estimate structural steel for a warehouse or industrial building in 6 steps: calculate floor area, apply steel tonnage factors, convert tonnage price to cost per m², and add fabrication, shipping and erection."
+description: "How to estimate structural steel in 6 steps: calculate floor area, apply tonnage factors, convert price to cost per m2, add fabrication, shipping and erection."
 date: "2026-08-28"
 slug: "how-to-estimate-structural-steel-2026"
 keywords: ["how to estimate structural steel", "structural steel estimation", "steel tonnage calculation", "structural steel weight calculator", "steel structure cost estimation", "how to calculate steel quantity for warehouse"]

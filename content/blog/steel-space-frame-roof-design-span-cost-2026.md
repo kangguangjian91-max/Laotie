@@ -1,6 +1,6 @@
 ---
 title: "Steel Space Frame Roof: Design, Span & Cost Guide 2026"
-description: "A steel spaceframe roof covers 30-200m spans with no interior columns. Complete 2026 guide to space frame design, span capabilities, steel tonnage, load capacity, applications, and cost per square meter."
+description: "Steel space frame roofs cover 30-200m spans with no interior columns. 2026 guide to design, span, tonnage, load capacity and cost per m2."
 date: "2026-07-11"
 slug: "steel-space-frame-roof-design-span-cost-2026"
 keywords: ["steel spaceframe", "space frame structure", "space frame roof design", "space frame truss cost", "steel structure manufacturer China", "Chinese steel structure supplier"]
