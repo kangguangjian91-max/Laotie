@@ -5,8 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Steel Structure Material Estimator — Calculate Tonnage & Cost",
-  description: "Engineering-grade steel tonnage calculator. Estimate portal frame weight, purlins, bolts & enclosure. Real-time RMB pricing, FOB China. Free for importers.",
+  title: "Steel Structure Cost Calculator | Free 60-Second Estimate",
+  description: "Free steel structure cost calculator: get tonnage and full cost per m² in 60 seconds. Warehouse, factory, hangar. FOB China prices, no signup, engineer-verified.",
   keywords: [
     "steel structure cost calculator",
     "steel building price per m² 2026",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "steel factory building cost calculator",
   ],
   openGraph: {
-    title: "Steel Structure Cost Calculator 2026 | Laotie Steel",
+    title: "Steel Structure Cost Calculator | Free 60-Second Estimate",
     description:
       "Get instant steel structure cost estimate. Free online calculator for warehouse, factory, hangar, logistics center.",
     url: "https://www.laotie-steel.com/calculator",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Steel Structure Cost Calculator 2026",
+    title: "Steel Structure Cost Calculator | Free 60-Second Estimate",
     description: "Free online tool to estimate steel building construction cost.",
   },
   alternates: {
@@ -74,12 +74,12 @@ export default function CalculatorPage() {
       <section className="bg-steel text-white py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl lg:text-4xl font-bold mb-4">
-            Steel Structure Material Estimator
+            Steel Structure Cost Calculator
           </h1>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Engineering-grade tonnage calculator for portal frame steel buildings.
+            Free online steel building cost estimator for portal frame structures.
             Enter dimensions, get precise steel weight, purlin specs, bolt counts,
-            and enclosure area — with real-time price estimation in RMB.
+            and enclosure area — with an instant FOB cost estimate.
           </p>
         </div>
       </section>

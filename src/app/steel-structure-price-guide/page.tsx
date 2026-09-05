@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Steel Structure Price Guide 2026 | Steel Tonnage Price",
   description:
-    "Steel structure price guide 2026: tonnage price, cost calculator for warehouse, factory & industrial buildings. Free quotation within 24 hours. CE certified.",
+    "2026 steel structure prices: $/ton rates by region, cost per kg, and cost per m² for warehouse, factory and industrial buildings. Free quote in 24 hours.",
   keywords: [
     "steel structure price",
     "steel tonnage price",

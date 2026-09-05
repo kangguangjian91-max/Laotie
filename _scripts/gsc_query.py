@@ -114,11 +114,18 @@ def main():
     print(f"Using property: {site_url}")
     print()
 
-    end_date = "2026-08-08"
-    start_date = "2026-06-01"
+    # Dynamic dates: GSC has ~2-3 day lag, so end = today - 3 days
+    from datetime import timedelta
+    end_dt = datetime.now() - timedelta(days=3)
+    end_date = end_dt.strftime("%Y-%m-%d")
+    start_date = (end_dt - timedelta(days=90)).strftime("%Y-%m-%d")
+    week_end = end_date
+    week_start = (end_dt - timedelta(days=7)).strftime("%Y-%m-%d")
+    prev_week_start = (end_dt - timedelta(days=14)).strftime("%Y-%m-%d")
+    print(f"Data range: {start_date} to {end_date}")
 
     # 1. Site totals
-    print("=== 1. Site Totals (6/1 - 8/8) ===")
+    print(f"=== 1. Site Totals (last 90 days: {start_date} ~ {end_date}) ===")
     totals = query_gsc(creds, site_url, start_date, end_date)
     if totals and totals.get("rows"):
         row = totals["rows"][0]
@@ -176,23 +183,24 @@ def main():
     print()
 
     # 5. Recent trend
-    print("=== 5. Recent Trend (8/1-8/8 vs 7/24-7/31) ===")
-    recent_totals = query_gsc(creds, site_url, "2026-08-01", "2026-08-08")
-    prior_totals = query_gsc(creds, site_url, "2026-07-24", "2026-07-31")
+    print(f"=== 5. Recent Trend ({week_start}~{week_end} vs prior week) ===")
+    recent_totals = query_gsc(creds, site_url, week_start, week_end)
+    prior_totals = query_gsc(creds, site_url, prev_week_start, week_start)
     if recent_totals and prior_totals and recent_totals.get("rows") and prior_totals.get("rows"):
         r = recent_totals["rows"][0]
         p = prior_totals["rows"][0]
-        print(f"  Prior week (7/24-7/31): {p.get('impressions',0):.0f} imp, {p.get('clicks',0):.0f} clk, "
+        prior_dt = end_dt - timedelta(days=14)
+        print(f"  Prior week ({prev_week_start}~{week_start}): {p.get('impressions',0):.0f} imp, {p.get('clicks',0):.0f} clk, "
               f"CTR {p.get('ctr',0)*100:.1f}%, Pos {p.get('position',0):.1f}")
-        print(f"  Recent week (8/1-8/8): {r.get('impressions',0):.0f} imp, {r.get('clicks',0):.0f} clk, "
+        print(f"  Recent week ({week_start}~{week_end}): {r.get('impressions',0):.0f} imp, {r.get('clicks',0):.0f} clk, "
               f"CTR {r.get('ctr',0)*100:.1f}%, Pos {r.get('position',0):.1f}")
         imp_change = r.get("impressions", 0) - p.get("impressions", 0)
         clk_change = r.get("clicks", 0) - p.get("clicks", 0)
         print(f"  Change: {imp_change:+.0f} imp, {clk_change:+.0f} clk")
 
         # Pages with declining impressions
-        recent_pg = query_gsc(creds, site_url, "2026-08-01", "2026-08-08", dimensions=["page"])
-        prior_pg = query_gsc(creds, site_url, "2026-07-24", "2026-07-31", dimensions=["page"])
+        recent_pg = query_gsc(creds, site_url, week_start, week_end, dimensions=["page"])
+        prior_pg = query_gsc(creds, site_url, prev_week_start, week_start, dimensions=["page"])
         if recent_pg and prior_pg:
             recent_dict = {r["keys"][0]: r.get("impressions", 0) for r in recent_pg.get("rows", [])}
             prior_dict = {r["keys"][0]: r.get("impressions", 0) for r in prior_pg.get("rows", [])}
@@ -214,11 +222,13 @@ def main():
 
     # 6. Monthly trend
     print("=== 6. Monthly Trend ===")
-    months = [
-        ("June", "2026-06-01", "2026-06-30"),
-        ("July", "2026-07-01", "2026-07-31"),
-        ("Aug (partial)", "2026-08-01", "2026-08-08"),
-    ]
+    months = []
+    cur = end_dt
+    for _ in range(4):
+        m_start = cur.strftime("%Y-%m-01")
+        months.append((m_start[:7], m_start, cur.strftime("%Y-%m-%d")))
+        # move to last day of previous month
+        cur = datetime(cur.year, cur.month, 1) - timedelta(days=1)
     for label, sd, ed in months:
         m = query_gsc(creds, site_url, sd, ed)
         if m and m.get("rows"):

@@ -10,9 +10,9 @@ import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Steel Structure Indonesia | Warehouse & Factory Construction",
+  title: "Steel Structure Indonesia | Bali Prices & Seismic Design",
   description:
-    "Leading steel structure manufacturer for Indonesia. CE certified, 30-year warranty. Custom warehouse, factory, and commercial buildings. Free quote!",
+    "Steel structures for Indonesia and Bali: seismic-resistant design, CE certified, 30-year warranty. 2026 price list, warehouse and factory projects. Free quote.",
   keywords: [
     "steel structure indonesia",
     "warehouse construction indonesia",
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     "pabrik baja",
   ],
   openGraph: {
-    title: "Steel Structure Indonesia | Warehouse & Factory Construction",
+    title: "Steel Structure Indonesia | Bali Prices & Seismic Design",
     description:
-      "Leading steel structure manufacturer for Indonesia. CE certified, 30-year warranty. Custom warehouse, factory, and commercial buildings.",
+      "Steel structures for Indonesia and Bali: seismic-resistant design, CE certified, 30-year warranty. 2026 price list and free quote.",
     url: "https://www.laotie-steel.com/steel-structure-indonesia",
     siteName: "Laotie Steel Structure",
     locale: "en_ID",
