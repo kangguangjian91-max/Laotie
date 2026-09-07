@@ -50,7 +50,10 @@ const organizationSchema = {
       availableLanguage: ["English", "Chinese"],
     },
   ],
-  sameAs: ["https://hnltgjg.en.alibaba.com/"],
+  sameAs: [
+    "https://hnltgjg.en.alibaba.com/",
+    "https://www.linkedin.com/company/laotie-steel",
+  ],
 };
 
 const websiteSchema = {

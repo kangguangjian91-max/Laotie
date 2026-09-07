@@ -90,6 +90,9 @@ export default function SteelStructurePriceGuide() {
               Get accurate pricing for your steel warehouse, factory, or industrial building.
               Free quotation within 24 hours.
             </p>
+            <p className="text-sm text-gray-400">
+              Last updated: September 2026 · Tonnage &amp; freight benchmarks reviewed monthly
+            </p>
             <a
               href="#quotation-form"
               className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-block"

@@ -94,7 +94,7 @@ def wait_and_push(device_code):
 if __name__ == "__main__":
     if len(sys.argv) >= 2 and sys.argv[1] == "code":
         get_code()
-    elif len(sys.argv) >= 4 and sys.argv[1] == "wait":
-        wait_and_push(sys.argv[3])
+    elif len(sys.argv) >= 3 and sys.argv[1] == "wait":
+        wait_and_push(sys.argv[2])
     else:
         print(__doc__)

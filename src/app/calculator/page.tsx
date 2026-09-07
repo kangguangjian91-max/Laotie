@@ -81,6 +81,9 @@ export default function CalculatorPage() {
             Enter dimensions, get precise steel weight, purlin specs, bolt counts,
             and enclosure area — with an instant FOB cost estimate.
           </p>
+          <p className="mt-3 text-sm text-gray-400">
+            Last updated: September 2026 · Price benchmarks reviewed monthly against FOB market data
+          </p>
         </div>
       </section>
 

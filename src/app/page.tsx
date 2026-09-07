@@ -115,6 +115,7 @@ const localBusinessSchema = {
   },
   sameAs: [
     "https://www.linkedin.com/company/laotie-steel",
+    "https://hnltgjg.en.alibaba.com/",
   ],
   aggregateRating: {
     "@type": "AggregateRating",
