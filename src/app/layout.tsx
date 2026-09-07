@@ -53,6 +53,7 @@ const organizationSchema = {
   sameAs: [
     "https://hnltgjg.en.alibaba.com/",
     "https://www.linkedin.com/company/laotie-steel",
+    "https://www.youtube.com/@LaotieSteelStructure",
   ],
 };
 

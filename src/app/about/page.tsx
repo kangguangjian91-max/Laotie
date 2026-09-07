@@ -56,6 +56,7 @@ const localBusinessSchema = {
   sameAs: [
     "https://www.linkedin.com/company/laotie-steel",
     "https://hnltgjg.en.alibaba.com/",
+    "https://www.youtube.com/@LaotieSteelStructure",
   ],
 };
 
