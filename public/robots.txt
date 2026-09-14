@@ -4,13 +4,122 @@ Disallow: /api/
 Disallow: /private/
 Disallow: /thank-you/
 
+# ============================================================
+# AI Search & Assistant Crawlers — Fully Allowed (2026-09-14)
+# Goal: maximize AI search visibility, citations and referral traffic.
+# Each group repeats the sensitive-path rules because a specific
+# user-agent group overrides the "*" group entirely.
+# ============================================================
+
+# OpenAI / ChatGPT
 User-Agent: GPTBot
-Disallow: /
+Allow: /
+Disallow: /api/
+Disallow: /private/
+Disallow: /thank-you/
+
+User-Agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+Disallow: /private/
+Disallow: /thank-you/
 
 User-Agent: ChatGPT-User
-Disallow: /
+Allow: /
+Disallow: /api/
+Disallow: /private/
+Disallow: /thank-you/
 
+# Anthropic / Claude
+User-Agent: ClaudeBot
+Allow: /
+Disallow: /api/
+Disallow: /private/
+Disallow: /thank-you/
+
+User-Agent: Claude-Web
+Allow: /
+Disallow: /api/
+Disallow: /private/
+Disallow: /thank-you/
+
+User-Agent: anthropic-ai
+Allow: /
+Disallow: /api/
+Disallow: /private/
+Disallow: /thank-you/
+
+# Perplexity
+User-Agent: PerplexityBot
+Allow: /
+Disallow: /api/
+Disallow: /private/
+Disallow: /thank-you/
+
+# Google AI & Vertex
+User-Agent: Google-Extended
+Allow: /
+Disallow: /api/
+Disallow: /private/
+Disallow: /thank-you/
+
+User-Agent: Google-CloudVertexBot
+Allow: /
+Disallow: /api/
+Disallow: /private/
+Disallow: /thank-you/
+
+# Apple
+User-Agent: Applebot
+Allow: /
+Disallow: /api/
+Disallow: /private/
+Disallow: /thank-you/
+
+User-Agent: Applebot-Extended
+Allow: /
+Disallow: /api/
+Disallow: /private/
+Disallow: /thank-you/
+
+# Amazon
+User-Agent: Amazonbot
+Allow: /
+Disallow: /api/
+Disallow: /private/
+Disallow: /thank-you/
+
+# DuckDuckGo AI
+User-Agent: DuckAssistBot
+Allow: /
+Disallow: /api/
+Disallow: /private/
+Disallow: /thank-you/
+
+# ByteDance / Douyin AI
+User-Agent: Bytespider
+Allow: /
+Disallow: /api/
+Disallow: /private/
+Disallow: /thank-you/
+
+# Others
 User-Agent: CCBot
-Disallow: /
+Allow: /
+Disallow: /api/
+Disallow: /private/
+Disallow: /thank-you/
+
+User-Agent: cohere-ai
+Allow: /
+Disallow: /api/
+Disallow: /private/
+Disallow: /thank-you/
+
+User-Agent: Meta-ExternalAgent
+Allow: /
+Disallow: /api/
+Disallow: /private/
+Disallow: /thank-you/
 
 Sitemap: https://www.laotie-steel.com/sitemap.xml
