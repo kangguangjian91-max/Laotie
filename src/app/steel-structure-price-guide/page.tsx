@@ -102,6 +102,33 @@ export default function SteelStructurePriceGuide() {
           </div>
         </section>
 
+        {/* Quick Answer (self-contained price block for AI citation) */}
+        <section className="bg-gray-50 border-b border-gray-200">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div className="bg-amber-50 border-l-4 border-amber-500 rounded-r-xl p-6">
+              <h2 className="text-lg font-bold text-gray-900 mb-3">
+                Quick Answer: Steel Structure Prices in China (2026)
+              </h2>
+              <p className="text-gray-700 leading-relaxed">
+                Steel structure buildings from China in 2026 cost $25–45 per m²
+                for the steel framework only, $60–90 per m² for a complete
+                building envelope with roof and wall cladding, doors, and
+                gutters, and $90–150 per m² for a turnkey package that adds
+                insulation, an optional crane beam, and installation support. A
+                typical clear-span warehouse uses 26–32 kg of structural steel
+                per m² of floor area, so a 1,000 m² warehouse lands around
+                $25,000–45,000 FOB China for the frame. Ocean freight adds
+                roughly $1,500–2,800 per 40HQ container, each carrying about 27
+                tonnes of fabricated steel, plus duties at destination. Prices
+                assume Q235B/Q355B steel, portal frame design, and 6–12 m eave
+                height; overhead cranes, snow loads, and cyclonic wind zones
+                push costs toward the upper end. Request a formal quotation
+                below — delivered within 24 hours.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Price Overview */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

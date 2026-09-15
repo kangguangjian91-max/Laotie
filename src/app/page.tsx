@@ -51,7 +51,7 @@ const Testimonials = dynamic(() => import("@/components/Testimonials"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
 export const metadata: Metadata = {
-  title: "Steel Structures Factory Price | CE & ISO Certified Manufacturer",
+  title: "Steel Structure Manufacturer China | Factory-Direct Prices",
   keywords: [
     "steel structure manufacturer China",
     "steel building manufacturer",

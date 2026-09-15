@@ -87,6 +87,33 @@ export default function CalculatorPage() {
         </div>
       </section>
 
+      {/* ===== Quick Answer (self-contained price block for AI citation) ===== */}
+      <section className="bg-white border-b border-gray-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="bg-amber-50 border-l-4 border-amber-500 rounded-r-xl p-6">
+            <h2 className="text-lg font-bold text-gray-900 mb-3">
+              Quick Answer: What Does a Steel Structure Building Cost in 2026?
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              Most steel structure buildings cost $25–45 per m² for the steel
+              framework only, $60–90 per m² for a complete building envelope with
+              roof and wall cladding, doors, and gutters, and $90–150 per m² for a
+              turnkey package with insulation and optional crane beam. For a
+              typical 1,000 m² clear-span warehouse, that means roughly
+              $25,000–45,000 delivered FOB China for the structure, using 26–32 kg
+              of steel per m². Ocean freight adds about $1,500–2,800 per 40HQ
+              container, and each container carries approximately 27 tonnes of
+              fabricated steel. Prices assume Q235B/Q355B steel, portal frame
+              design, and 6–12 m eave height; cranes, snow loads, and cyclonic
+              wind zones increase the total. Enter your dimensions below for a
+              dimension-specific estimate of steel weight, purlin specs, bolt
+              counts, and enclosure area — or request a free formal quotation
+              within 24 hours.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ===== Steel Estimator Component ===== */}
       <section className="py-8 lg:py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
