@@ -19,13 +19,56 @@ export async function generateStaticParams() {
   return getAllProductSlugs().map((slug) => ({ slug }));
 }
 
+// Build a descriptive <title> that stays within Google's ~66-character render
+// width. "&" is escaped to "&amp;", so it costs 5 characters, not 1.
+const TITLE_MAX_CHARS = 66;
+
+function buildMetaTitle(title: string, subtitle?: string): string {
+  const rendered = (s: string) => s.length + (s.match(/&/g)?.length ?? 0) * 4;
+  const fits = (s: string) => rendered(s) <= TITLE_MAX_CHARS;
+
+  if (!subtitle) return title;
+
+  const full = `${title} | ${subtitle}`;
+  if (fits(full)) return full;
+
+  // The subtitle is too long to append in full — keep the longest leading
+  // fragment that still fits, cutting on word boundaries.
+  const wordsOf = (s: string) =>
+    s.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
+  const titleWords = new Set(wordsOf(title));
+  const isDangling = (w: string) =>
+    /^[/,&|+~-]$/.test(w) || /^(and|of|for|the|with|to|a|in|on)$/i.test(w);
+
+  const words = subtitle
+    .split(/\s+/)
+    .filter(Boolean)
+    // Drop anything the title already covers ("Steel Coil | Steel Coil").
+    .filter((w) => {
+      const parts = wordsOf(w);
+      return parts.length === 0 || !parts.every((p) => titleWords.has(p));
+    });
+
+  while (words.length && isDangling(words[0])) words.shift();
+
+  for (let n = words.length; n >= 2; n--) {
+    const tail = words.slice(0, n);
+    while (tail.length && isDangling(tail[tail.length - 1])) tail.pop();
+    if (tail.length < 2) break;
+    const candidate = `${title} | ${tail.join(" ")}`;
+    if (fits(candidate)) return candidate;
+  }
+
+  return title;
+}
+
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const { slug } = await params;
   const product = getProductBySlug(slug);
   if (!product) return { title: "Product Not Found" };
 
   return {
-    title: product.title,
+    title: buildMetaTitle(product.title, product.subtitle),
     description: product.description,
     keywords: [
       product.title.toLowerCase(),
