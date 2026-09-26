@@ -9,9 +9,16 @@ export interface Product {
   applications: string[];
   image: string;
   badge?: string;
+  family?: string;
   schemaPriceLow: string;
   schemaPriceHigh: string;
   faq: { question: string; answer: string }[];
+  profileTables?: {
+    title: string;
+    headers: string[];
+    rows: string[][];
+    note?: string;
+  }[];
 }
 
 export const products: Product[] = [
@@ -104,14 +111,291 @@ For fast-track projects where traditional concrete pouring is impractical, we al
       "Bridge deck formwork",
     ],
     image: "/images/product-floor-deck-new.webp",
+    family: "steel-deck",
+    profileTables: [
+      {
+        title: "Available Open-Profile Deck Sections",
+        headers: [
+          "Profile",
+          "Rib Height",
+          "Rib Pitch",
+          "Effective Width",
+          "Thickness (BMT)",
+          "Unpropped Span*",
+        ],
+        rows: [
+          ["YX51-200-600", "51 mm", "200 mm", "600 mm", "0.8 – 1.2 mm", "2.0 – 2.8 m"],
+          ["YX51-240-720", "51 mm", "240 mm", "720 mm", "0.8 – 1.2 mm", "2.2 – 3.0 m"],
+          ["YX51-305-915", "51 mm", "305 mm", "915 mm", "0.8 – 1.2 mm", "2.4 – 3.2 m"],
+          ["YX65-170-510", "65 mm", "170 mm", "510 mm", "0.9 – 1.2 mm", "2.6 – 3.4 m"],
+          ["YX65-185-555", "65 mm", "185 mm", "555 mm", "0.9 – 1.2 mm", "2.8 – 3.6 m"],
+          ["YX75-200-600 (3W)", "75 mm", "200 mm", "600 mm", "1.0 – 1.2 mm", "3.0 – 4.0 m"],
+          ["YX76-305-915", "76 mm", "305 mm", "915 mm", "1.0 – 1.2 mm", "3.2 – 4.2 m"],
+        ],
+        note:
+          "* Indicative unpropped spans for a 120 mm composite slab under 2.0 kN/m² live load. Final spans must be verified against project-specific slab design.",
+      },
+      {
+        title: "International Profile Cross-Reference",
+        headers: ["Our Profile", "Closest International Equivalent", "Main Markets"],
+        rows: [
+          ["YX51-305-915", "ComFlor 51 / Ribdeck 51", "UK, Ireland, Middle East"],
+          ["YX51-240-720", "Bondek-style 51 mm deck / Condeck HP", "Australia, New Zealand"],
+          ["YX65-170-510", "ComFlor 60 / Ribdeck 60", "UK, Europe, Singapore"],
+          ["YX65-185-555", "SMD 60 / Holorib-style 60 mm", "UK, Europe, UAE"],
+          ["YX75-200-600 (3W)", "ASC 3\" composite deck / 3W-style", "USA, Canada, Australia"],
+          ["YX76-305-915", "ComFlor 80 / Ribdeck 80", "UK, Europe, Ireland"],
+        ],
+        note:
+          "Cross-reference is indicative only — rib geometry and embossment patterns differ between manufacturers. Design must follow local load tables or project-specific structural calculations.",
+      },
+    ],
     schemaPriceLow: "8",
     schemaPriceHigh: "15",
     faq: [
       { question: "What is steel floor deck used for?", answer: "Steel floor deck serves as permanent formwork and bottom reinforcement for composite concrete slabs in multi-story steel buildings." },
-      { question: "What profiles do you offer?", answer: "We offer YX75-200-600, YX51-240-720, YX65-170-510, and YX60-180-540 profiles, plus custom roll-formed profiles." },
+      { question: "What profiles do you offer?", answer: "Seven standard open profiles: YX51-200-600, YX51-240-720, YX51-305-915, YX65-170-510, YX65-185-555, YX75-200-600 (3W) and YX76-305-915 — plus custom roll-formed sections. Closed-rib and steel truss deck are available as separate systems." },
       { question: "What is the fire rating?", answer: "Up to 2 hours with appropriate concrete cover and reinforcement. Full fire engineering data available on request." },
       { question: "What is galvanized composite deck?", answer: "Galvanized composite deck (免浇筑承重板) is a pre-fabricated steel panel with integrated stiffeners spanning up to 6m without concrete topping." },
       { question: "Do you provide design support?", answer: "Yes. Full composite slab design including reinforcement mesh layout and shear stud specification included." },
+    ],
+  },
+  {
+    slug: "closed-rib-deck",
+    title: "Closed Rib Floor Deck",
+    subtitle: "Closed-Profile Composite Decking",
+    description:
+      "Closed rib composite floor deck, 51–65mm ribs. Lower concrete volume and cleaner soffit than open profiles. Z275 galvanized, UK/EU profile equivalents.",
+    overview: `Closed rib floor deck uses a re-entrant, dovetail rib geometry that closes the top of each rib — so the concrete sits in a flat-topped trough instead of an open channel. Against an open profile of the same depth, closed deck gives a smoother soffit, better fire performance from the enclosed rib, and lower concrete consumption because the ribs displace less concrete while still developing full composite action through their embossed sides.
+
+Our closed profiles are roll-formed from G550 high-strength galvanized coil at Z275 (275 g/m²) minimum, with Z350 available for coastal and high-humidity sites. Standard effective widths of 688–915 mm cover the common 1,200 mm and 1,500 mm structural bay grids with minimal trimming waste.
+
+Closed deck is the default specification for UK, Irish and Gulf projects where the soffit stays exposed or where a 60–120 minute fire rating must be met without added fire protection. Sheets are cut to length up to 13.5 m, match-marked and bundled by floor level for direct crane lift.
+
+If your project is better served by the more widely available open profile, or by a concrete-free dry deck, both systems are manufactured in the same factory and can ship in one container — see the other deck systems linked below.`,
+    specifications: [
+      { label: "Profile Types", value: "YX51-254-762, YX51-305-915, YX65-254-762, YX65-305-915, YX65-344-688" },
+      { label: "Material", value: "G550 high-strength galvanized steel" },
+      { label: "Thickness", value: "0.9mm, 1.0mm, 1.2mm (BMT)" },
+      { label: "Zinc Coating", value: "Z275 standard, Z350 for coastal & high-humidity sites" },
+      { label: "Fire Rating", value: "60 – 120 minutes (enclosed rib, no additional protection)" },
+      { label: "Span Capability", value: "Single span 2.4m – 4.0m (unpropped)" },
+      { label: "Slab Thickness", value: "110mm – 200mm composite slab" },
+      { label: "Design Standards", value: "AS/NZS 2327, BS 5950-4, EN 1994-1-1" },
+      { label: "Sheet Length", value: "Cut-to-length, up to 13.5m per sheet" },
+    ],
+    features: [
+      "Closed Rib Geometry — dovetail profile delivers a flat soffit and better fire performance",
+      "Lower Concrete Volume — enclosed ribs displace less concrete than open channels",
+      "Higher Shear Bond — re-entrant rib sides plus embossments develop strong composite action",
+      "Coastal-Grade Coating — Z275 standard, Z350 available for salt-laden sites",
+      "Fire-Rated Without Extra Treatment — 60–120 min ratings from the profile itself",
+      "Cut to Length — sheets produced to bay width, minimising site waste",
+    ],
+    applications: [
+      "Multi-storey office and commercial towers",
+      "Car park decks and podium slabs",
+      "Healthcare and education buildings with fire-rated soffits",
+      "Mezzanine floors with exposed ceilings",
+      "High-rise steel-framed residential buildings",
+    ],
+    image: "/images/product-deck-closed-rib.webp",
+    family: "steel-deck",
+    profileTables: [
+      {
+        title: "Closed-Profile Deck Sections",
+        headers: ["Profile", "Rib Height", "Rib Pitch", "Effective Width", "Thickness (BMT)", "Unpropped Span*"],
+        rows: [
+          ["YX51-254-762", "51 mm", "254 mm", "762 mm", "0.9 – 1.2 mm", "2.4 – 3.2 m"],
+          ["YX51-305-915", "51 mm", "305 mm", "915 mm", "0.9 – 1.2 mm", "2.6 – 3.4 m"],
+          ["YX65-254-762", "65 mm", "254 mm", "762 mm", "1.0 – 1.2 mm", "2.8 – 3.6 m"],
+          ["YX65-305-915", "65 mm", "305 mm", "915 mm", "1.0 – 1.2 mm", "3.0 – 4.0 m"],
+          ["YX65-344-688", "65 mm", "344 mm", "688 mm", "1.0 – 1.2 mm", "3.0 – 3.8 m"],
+        ],
+        note:
+          "* Indicative unpropped spans for a 130 mm composite slab under 2.0 kN/m² live load. Closed ribs generally permit longer spans than open profiles of the same depth — final spans must be verified against project-specific slab design.",
+      },
+      {
+        title: "International Cross-Reference — Closed Profiles",
+        headers: ["Our Profile", "Closest International Equivalent", "Main Markets"],
+        rows: [
+          ["YX65-254-762", "Holorib RF55 / ComFlor 60 closed", "UK, Ireland, Middle East"],
+          ["YX65-305-915", "Ribdeck AL / ComFlor 80", "UK, Europe, Gulf"],
+          ["YX51-254-762", "ComFlor 51 closed / SMD TR51", "UK, UAE, Singapore"],
+          ["YX51-305-915", "Closed-variant Bondek 51", "Australia, New Zealand, SE Asia"],
+          ["YX65-344-688", "SMD 60 closed / Holorib-style 60 mm", "Europe, Gulf"],
+        ],
+        note:
+          "Cross-reference is indicative only — rib geometry and embossment patterns differ between manufacturers. Final design must follow local load tables or project-specific structural calculations.",
+      },
+    ],
+    schemaPriceLow: "10",
+    schemaPriceHigh: "18",
+    faq: [
+      { question: "What is closed rib floor deck?", answer: "Closed rib floor deck (also called closed profile or dovetail deck) is a profiled steel sheet whose rib tops are folded closed, creating an enclosed trough for the concrete. It acts as permanent formwork and bottom reinforcement in a composite slab." },
+      { question: "Is closed deck better than open deck?", answer: "It depends on the project. Closed deck gives a cleaner flat soffit, better fire performance and slightly lower concrete volume. Open deck is more widely available, easier to inspect and usually cheaper per square meter. For fire-rated or exposed-soffit buildings, closed deck is normally the better choice." },
+      { question: "What is the fire rating?", answer: "60 to 120 minutes depending on slab thickness, mesh and rib depth — achieved by the enclosed rib itself, without additional fire protection." },
+      { question: "Which international profiles does it replace?", answer: "Our closed profiles are closest to Holorib RF55, ComFlor 51/60/80 and Ribdeck AL. Cross-reference is indicative — final design follows local load tables or project calculations." },
+      { question: "Do you also supply open profiles and dry deck?", answer: "Yes. We manufacture open composite profiles (YX51/65/75 series) and concrete-free load-bearing deck panels in the same factory, so a project can mix deck systems and ship them in one container." },
+    ],
+  },
+  {
+    slug: "steel-truss-deck",
+    title: "Steel Truss Deck",
+    subtitle: "Rebar Truss Composite Decking",
+    description:
+      "Rebar truss deck with an integrated welded steel truss — no bottom reinforcement to fix on site. Spans to 5m unpropped. Z275 base sheet, TD1–TD5 models.",
+    overview: `Steel truss deck (rebar truss deck, 钢筋桁架楼承板) is a thin galvanized base sheet with a factory-welded triangular steel truss running along every rib. The truss is designed as the bottom reinforcement of the finished slab, so instead of tying a mesh layer on site, the crew simply lays the panels, adds top mesh and pours.
+
+This removes the single most labour-intensive step of a conventional composite floor. Site labour drops sharply, the construction sequence shortens, and the reinforcement position is fixed by the panel geometry — not by how carefully a worker tied chairs on a windy deck.
+
+Panels are roll-formed and truss-welded from G550 galvanized coil with a Z275 coating, then cut to length per bay. Five standard truss heights cover slabs from 100 mm to 220 mm, with unpropped spans reaching 5.0 m — enough to clear most structural grids without temporary propping.
+
+Steel truss deck costs more per square meter than a plain open composite profile, but on fast-track or labour-constrained projects the saving in site labour and programme time usually outweighs the material premium. Both systems are produced in our factory and can be combined on one project.`,
+    specifications: [
+      { label: "Models", value: "TD1-70, TD2-90, TD3-100, TD4-120, TD5-150" },
+      { label: "Base Sheet", value: "G550 galvanized steel, Z275 coating" },
+      { label: "Base Sheet Thickness", value: "0.4mm – 0.8mm (BMT)" },
+      { label: "Truss Height", value: "70mm – 150mm" },
+      { label: "Slab Thickness", value: "100mm – 220mm" },
+      { label: "Max Unpropped Span", value: "up to 5.0m" },
+      { label: "Truss Welding", value: "Automatic resistance welding, factory-controlled" },
+      { label: "Design Standards", value: "AS/NZS 2327, BS 5950-4, EN 1994-1-1, JGJ 400" },
+      { label: "Sheet Length", value: "Cut-to-length, up to 13.5m per sheet" },
+    ],
+    features: [
+      "Integrated Bottom Reinforcement — welded truss replaces site-tied mesh",
+      "Fewest Site Operations — lay panels, add top mesh, pour",
+      "Long Unpropped Spans — up to 5.0m without temporary props",
+      "Consistent Cover — rebar position fixed by panel geometry, not site workmanship",
+      "Faster Programme — shorter floor cycles on multi-storey frames",
+      "Factory Welded — resistance-welded truss with controlled weld quality",
+    ],
+    applications: [
+      "Multi-storey residential and commercial towers",
+      "Fast-track projects with limited site labour",
+      "Buildings where propping is impractical (over roads, plant, water)",
+      "Industrial floors and heavy-duty mezzanines",
+      "Bridges and infrastructure deck slabs",
+    ],
+    image: "/images/product-deck-steel-truss.webp",
+    family: "steel-deck",
+    profileTables: [
+      {
+        title: "Steel Truss Deck Models (TD Series)",
+        headers: ["Model", "Truss Height", "Base Sheet Thickness", "Slab Thickness", "Max Unpropped Span"],
+        rows: [
+          ["TD1-70", "70 mm", "0.4 – 0.6 mm", "100 – 120 mm", "2.4 – 3.0 m"],
+          ["TD2-90", "90 mm", "0.4 – 0.6 mm", "120 – 140 mm", "3.0 – 3.6 m"],
+          ["TD3-100", "100 mm", "0.5 – 0.7 mm", "130 – 160 mm", "3.2 – 4.0 m"],
+          ["TD4-120", "120 mm", "0.5 – 0.8 mm", "150 – 180 mm", "3.6 – 4.5 m"],
+          ["TD5-150", "150 mm", "0.6 – 0.8 mm", "180 – 220 mm", "4.0 – 5.0 m"],
+        ],
+        note:
+          "TD models are designated by truss height. The welded truss replaces the bottom reinforcement layer of a conventional composite slab — top mesh and negative-moment bars over supports are still required.",
+      },
+      {
+        title: "Truss Deck vs Open Composite Deck — Selection Guide",
+        headers: ["Criterion", "Steel Truss Deck", "Open Composite Deck"],
+        rows: [
+          ["Bottom reinforcement", "Built into the welded truss", "Mesh layer fixed on site"],
+          ["Max unpropped span", "3.0 – 5.0 m", "2.0 – 4.0 m"],
+          ["Site labour", "Lowest — lay and pour", "Higher — mesh tying required"],
+          ["Unit material cost", "Higher per m²", "Lower per m²"],
+          ["Programme", "Fastest floor cycle", "Standard floor cycle"],
+          ["Best for", "Fast-track, labour-constrained projects", "Cost-driven projects with available labour"],
+        ],
+        note:
+          "Selection should be based on total installed cost — including site labour and programme — not material price alone.",
+      },
+    ],
+    schemaPriceLow: "12",
+    schemaPriceHigh: "22",
+    faq: [
+      { question: "What is steel truss deck?", answer: "Steel truss deck is a galvanized profiled base sheet with a factory-welded triangular steel truss along each rib. The truss acts as the bottom reinforcement of the composite slab, so no mesh layer has to be tied on site." },
+      { question: "Do I still need rebar with truss deck?", answer: "You no longer need a bottom reinforcement layer — that is built into the truss. Top mesh and negative-moment reinforcement over supports are still required, and are normally supplied and cut to length with the order." },
+      { question: "What is the maximum span?", answer: "Up to 5.0 m unpropped with the TD5-150 model. Shorter truss heights suit shorter spans — for example TD1-70 covers 2.4 to 3.0 m. Final spans depend on slab thickness, imposed load and concrete grade." },
+      { question: "Is truss deck more expensive than open deck?", answer: "The material cost per square meter is higher, but the installed cost is often lower on fast-track projects because the bottom reinforcement comes pre-fixed and the floor cycle is shorter. We quote both systems for comparison on request." },
+      { question: "What standards does it comply with?", answer: "Truss deck is designed to AS/NZS 2327, BS 5950-4, EN 1994-1-1 and Chinese standard JGJ 400, with factory-controlled resistance welding of the truss to the base sheet." },
+    ],
+  },
+  {
+    slug: "load-bearing-deck",
+    title: "Load-Bearing Deck (No Concrete)",
+    subtitle: "Dry Galvanized Load-Bearing Panels",
+    description:
+      "Concrete-free load-bearing deck panels spanning up to 6m. Dry construction for mezzanines, platforms and access floors. Z275 galvanized, no curing time.",
+    overview: `Load-bearing deck (also called dry deck or non-composite deck) is a self-supporting galvanized steel panel that carries its load with no concrete topping at all. Instead of relying on composite action with a poured slab, the panel itself is deep-formed with integrated longitudinal stiffeners, so it spans between supports in a single dry operation.
+
+The result is a floor that is walkable the moment it is fixed. There is no formwork, no reinforcement, no pour, no curing period and no weather dependency — which makes it the fastest way to build a mezzanine, a plant access platform, a walkway or a temporary deck.
+
+Panels are roll-formed from galvanized steel at Z275 minimum, in four standard depths from 100 mm to 250 mm, reaching spans of 6.0 m. Interlocking side laps transfer load between adjacent panels and give a continuous working surface without site welding.
+
+Dry deck is deliberately not a substitute for a composite structural floor: its distributed load capacity is moderate compared with a reinforced concrete slab. It is the right answer for mezzanines, platforms and access floors where a wet trade would add weeks to the programme — and our composite deck systems cover the heavy structural cases.`,
+    specifications: [
+      { label: "Panel Models", value: "LB-100, LB-150, LB-200, LB-250" },
+      { label: "Section Depth", value: "100mm – 250mm" },
+      { label: "Material", value: "Galvanized steel, Z275 minimum" },
+      { label: "Thickness", value: "1.5mm – 3.0mm (BMT)" },
+      { label: "Max Span", value: "up to 6.0m" },
+      { label: "Concrete Required", value: "None — dry construction" },
+      { label: "Side Joint", value: "Interlocking lap, no site welding" },
+      { label: "Surface Options", value: "Anti-slip embossed, perforated, plain" },
+      { label: "Design Standards", value: "AS/NZS 4600, EN 1993-1-3, AISI S100" },
+    ],
+    features: [
+      "No Concrete — eliminates pour, curing and weather delays entirely",
+      "Walkable Immediately — panels are working platforms as soon as they are fixed",
+      "Long Spans — up to 6.0m between supports without intermediate propping",
+      "Integrated Stiffeners — deep-formed ribs carry load without a topping slab",
+      "Interlocking Laps — continuous surface without site welding",
+      "Anti-Slip Options — embossed or perforated finishes for walkways and platforms",
+    ],
+    applications: [
+      "Industrial mezzanine floors",
+      "Plant access and maintenance platforms",
+      "Catwalks, walkways and stair landings",
+      "Temporary and relocation-friendly access decks",
+      "Warehouse storage platforms",
+    ],
+    image: "/images/product-deck-load-bearing.webp",
+    family: "steel-deck",
+    profileTables: [
+      {
+        title: "Load-Bearing Deck Panel Range",
+        headers: ["Panel Model", "Section Depth", "Thickness (BMT)", "Max Span", "Typical Application"],
+        rows: [
+          ["LB-100", "100 mm", "1.5 – 2.0 mm", "3.0 – 4.0 m", "Mezzanine & walkway floors"],
+          ["LB-150", "150 mm", "1.8 – 2.5 mm", "4.0 – 5.0 m", "Plant access platforms"],
+          ["LB-200", "200 mm", "2.0 – 2.8 mm", "5.0 – 6.0 m", "Heavy-duty dry platforms"],
+          ["LB-250", "250 mm", "2.5 – 3.0 mm", "6.0 m", "Warehouse mezzanine decks"],
+        ],
+        note:
+          "Panels are supplied with integrated longitudinal stiffeners and interlocking side laps. Spans shown are indicative for a 2.5 kN/m² distributed load with a 1.5 kN concentrated load — project-specific verification is required.",
+      },
+      {
+        title: "Dry Deck vs Composite Deck — When to Use Which",
+        headers: ["Criterion", "Load-Bearing Deck (Dry)", "Composite Deck (Concrete)"],
+        rows: [
+          ["Concrete pour", "Not required", "Required on site"],
+          ["Curing time", "None — walkable immediately", "7 – 28 days before full load"],
+          ["Max span", "up to 6.0 m", "up to 4.0 m unpropped"],
+          ["Load capacity", "Moderate — distributed loads", "High — heavy industrial loads"],
+          ["Weather dependency", "None", "Pouring affected by rain and temperature"],
+          ["Best for", "Mezzanines, platforms, access decks", "Permanent structural floors"],
+        ],
+        note:
+          "The two systems are complementary. Where a project needs both a fast dry platform and permanent concrete floors, they can be manufactured and shipped together.",
+      },
+    ],
+    schemaPriceLow: "14",
+    schemaPriceHigh: "28",
+    faq: [
+      { question: "What is a load-bearing deck panel?", answer: "A load-bearing deck panel is a deep-formed galvanized steel sheet that supports floor loads on its own, without any concrete topping. Integrated stiffeners give it the spanning capability that a flat sheet would not have." },
+      { question: "Does it need concrete?", answer: "No. Load-bearing deck is a dry system — no concrete, no reinforcement, no formwork and no curing period. That is exactly why it suits mezzanines and platforms where a wet trade would delay the programme." },
+      { question: "What loads can it carry?", answer: "The standard range is rated for moderate distributed loads, typically around 2.5 kN/m² with a 1.5 kN concentrated load, with spans from 3.0 m to 6.0 m depending on panel depth and thickness. Heavier loads should be verified by our engineers against your specific layout." },
+      { question: "What is it used for?", answer: "Industrial mezzanines, plant access and maintenance platforms, catwalks and walkways, stair landings, warehouse storage platforms and temporary access decks." },
+      { question: "Can it be used outdoors?", answer: "Yes, in Z275 galvanized finish, with a higher coating weight or an additional paint system recommended for coastal or highly humid sites. Outdoor use should always be checked for drainage and slip resistance." },
     ],
   },
   {

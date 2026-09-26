@@ -10,16 +10,23 @@ import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Steel Structure Saudi Arabia | LGS & Warehouse",
+  title: "Steel Structure Company in Saudi Arabia | LGS & Canopies",
   description:
-    "Steel structure supplier for Saudi Arabia. LGS buildings, canopies, warehouses & factories. SBC 301 compliant. CE & ISO certified. Ship to Dammam & Jeddah.",
+    "Steel structure company in Saudi Arabia (KSA). Light gauge steel buildings, canopies, warehouses & factories. SBC 301 compliant, CE & ISO. Dammam & Jeddah.",
   keywords: [
     "steel structure saudi arabia",
     "light gauge steel building ksa",
+    "light gauge steel ksa",
+    "light gauge steel structures ksa",
+    "light gauge steel frame ksa",
+    "steel structure company",
     "steel structure company in saudi arabia",
     "structural steel suppliers in saudi arabia",
+    "saudi arabia prefabricated building and structural steel market",
     "steel structure canopies ksa",
     "steel structure companies in riyadh",
+    "lattice girders saudi arabia",
+    "steel structure design saudi arabia",
     "warehouse construction saudi arabia",
     "steel building supplier saudi arabia",
     "prefab warehouse saudi arabia",
@@ -32,7 +39,7 @@ export const metadata: Metadata = {
     "steel structure dammam",
   ],
   openGraph: {
-    title: "Steel Structure Saudi Arabia (KSA) | Light Gauge Steel Manufacturer",
+    title: "Steel Structure Company in Saudi Arabia | LGS & Canopies",
     description:
       "Your trusted steel structure supplier in Saudi Arabia. Light gauge steel, canopies, warehouses & factories. SBC 301 compliant. Free quote in 24h.",
     images: ["/images/projects/project-dubai-01.webp"],
@@ -237,6 +244,114 @@ export default function SteelStructureSaudiArabia() {
           </section>
         </ScrollAnimator>
 
+        {/* ========== LGS & CANOPY SPECIFICATION TABLES (KSA) ========== */}
+        <ScrollAnimator>
+          <section className="bg-white border-t border-gray-100">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                Light Gauge Steel &amp; Canopy Specifications — KSA
+              </h2>
+              <p className="text-gray-600 mb-8 max-w-3xl">
+                Reference sections for our two most requested KSA product lines. All light gauge steel
+                (LGS) members are roll-formed from galvanized coil and cut to length from approved shop
+                drawings; canopy systems are engineered for Saudi wind and sand loading per SBC 301.
+              </p>
+
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Light Gauge Steel (LGS) Framing Sections
+              </h3>
+              <div className="overflow-x-auto border border-gray-200 rounded-xl mb-4">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="bg-steel text-white">
+                      <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">Component</th>
+                      <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">Section Range</th>
+                      <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">Steel Grade</th>
+                      <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">Coating</th>
+                      <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">Typical KSA Use</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      ["Wall stud", "C75 – C200", "G550 / S350GD", "Z275 – Z350", "Villa & labour camp walls"],
+                      ["Floor joist", "C150 – C300", "G550", "Z275", "Light steel floors, mezzanines"],
+                      ["Roof truss", "C100 – C200 + gusset plates", "G550", "Z275", "Villa, school & clinic roofs"],
+                      ["Track / runner", "U75 – U200", "G350", "Z275", "Stud framing base & head track"],
+                      ["Lateral bracing strap", "30 × 1.0 – 50 × 1.2 mm", "G550", "Z275", "Racking & lateral stability"],
+                      ["Sheathing rail", "C100 – C150", "G350", "Z275", "Board & cladding fixing"],
+                    ].map((row, i) => (
+                      <tr key={i} className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                        {row.map((cell, j) => (
+                          <td
+                            key={j}
+                            className={
+                              j === 0
+                                ? "px-4 py-3 font-medium text-steel whitespace-nowrap"
+                                : "px-4 py-3 text-gray-600 whitespace-nowrap"
+                            }
+                          >
+                            {cell}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-xs text-gray-400 mb-12">
+                Section designations follow AS 4600 / AISI S100 practice. LGS frame design for KSA
+                projects is verified against SBC 301 load combinations; truss and joist spans depend on
+                member gauge, spacing, and imposed floor load.
+              </p>
+
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Steel Canopy Systems — Configuration &amp; Span
+              </h3>
+              <div className="overflow-x-auto border border-gray-200 rounded-xl mb-4">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="bg-steel text-white">
+                      <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">Canopy Type</th>
+                      <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">Clear Span</th>
+                      <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">Roof Material</th>
+                      <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">Best For</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      ["Cantilever canopy", "3 – 6 m", "PVDF tensile membrane", "Entrances, walkways, drive-through"],
+                      ["Single-slope steel canopy", "6 – 12 m", "Profiled sheet / sandwich panel", "Car parking, plant & equipment shade"],
+                      ["Double-slope (ridge) canopy", "12 – 24 m", "Insulated sandwich panel", "Mosque courtyards, school assembly areas"],
+                      ["Tension membrane canopy", "10 – 30 m", "PVDF / PTFE fabric", "Fuel stations, stadium walkways"],
+                      ["Space frame canopy", "20 – 40 m", "Glass / polycarbonate / membrane", "Plazas, transport hubs, public spaces"],
+                      ["Multi-bay car park shade", "5 – 6 m per bay", "Galvanized steel + membrane", "Labour camps, malls, airports"],
+                    ].map((row, i) => (
+                      <tr key={i} className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                        {row.map((cell, j) => (
+                          <td
+                            key={j}
+                            className={
+                              j === 0
+                                ? "px-4 py-3 font-medium text-steel whitespace-nowrap"
+                                : "px-4 py-3 text-gray-600 whitespace-nowrap"
+                            }
+                          >
+                            {cell}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-xs text-gray-400">
+                Canopy structures are supplied with hot-dip galvanized or epoxy-coated steelwork.
+                Membrane roofing is specified at 900–1,100 g/m² PVDF for Saudi UV and sand exposure.
+              </p>
+            </div>
+          </section>
+        </ScrollAnimator>
+
         {/* ========== STEEL STRUCTURE TYPES ========== */}
         <ScrollAnimator>
           <section className="bg-gray-50 border-t border-gray-100">
@@ -294,6 +409,87 @@ export default function SteelStructureSaudiArabia() {
                       ))}
                     </ul>
                   </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </ScrollAnimator>
+
+        {/* ========== KSA PRICE REFERENCE ========== */}
+        <ScrollAnimator>
+          <section className="bg-white border-t border-gray-100">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                Steel Structure Price in Saudi Arabia — 2026 Reference
+              </h2>
+              <p className="text-gray-600 mb-8 max-w-3xl">
+                Indicative structure-only pricing for KSA projects, quoted FOB China and estimated
+                delivered to Dammam or Jeddah. Figures cover the steel structure package (main frame,
+                purlins, bracing, connection plates and bolts) — cladding, foundations, civil works and
+                installation are quoted separately.
+              </p>
+              <div className="overflow-x-auto border border-gray-200 rounded-xl mb-4">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="bg-steel text-white">
+                      <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">Building Type</th>
+                      <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">Steel Weight</th>
+                      <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">Structure Price (FOB China)</th>
+                      <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">Delivered — Dammam / Jeddah</th>
+                      <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">Typical Lead Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      ["Warehouse (no crane)", "26 – 32 kg/m²", "$26 – 42 /m²", "$36 – 58 /m²", "5 – 7 weeks"],
+                      ["Factory (overhead crane)", "35 – 45 kg/m²", "$36 – 55 /m²", "$48 – 72 /m²", "6 – 9 weeks"],
+                      ["Logistics center", "30 – 38 kg/m²", "$30 – 48 /m²", "$42 – 64 /m²", "6 – 8 weeks"],
+                      ["Aircraft hangar (space frame)", "45 – 60 kg/m²", "$48 – 65 /m²", "$62 – 80 /m²", "8 – 12 weeks"],
+                      ["LGS villa / labour camp", "20 – 28 kg/m²", "$25 – 40 /m²", "$34 – 52 /m²", "4 – 6 weeks"],
+                      ["Steel canopy (car park)", "15 – 25 kg/m²", "$28 – 50 /m²", "$40 – 68 /m²", "4 – 6 weeks"],
+                    ].map((row, i) => (
+                      <tr key={i} className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                        {row.map((cell, j) => (
+                          <td
+                            key={j}
+                            className={
+                              j === 0
+                                ? "px-4 py-3 font-medium text-steel whitespace-nowrap"
+                                : "px-4 py-3 text-gray-600 whitespace-nowrap"
+                            }
+                          >
+                            {cell}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-xs text-gray-400 mb-10">
+                Reference only. Final price depends on span, eave height, crane capacity, steel grade,
+                coating system and current steel coil prices. For a firm quotation with tonnage take-off,
+                send your drawings or dimensions.
+              </p>
+
+              <h3 className="text-xl font-bold text-gray-900 mb-5">Related Products &amp; Resources</h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[
+                  { href: "/products/steel-warehouse", label: "Steel Warehouse Buildings", desc: "Clear-span portal frame warehouses up to 60m" },
+                  { href: "/products/steel-factory-building", label: "Steel Factory Buildings", desc: "Multi-span plants with overhead crane systems" },
+                  { href: "/products/steel-structure-building", label: "Portal Frame Steel Buildings", desc: "General industrial & commercial steel structures" },
+                  { href: "/products/floor-deck", label: "Steel Floor Deck", desc: "Composite decking for multi-storey KSA projects" },
+                  { href: "/products/cladding-system", label: "Roof & Wall Cladding", desc: "Sandwich panels and profiled sheeting" },
+                  { href: "/blog/steel-structure-cost-saudi-arabia-2026", label: "Steel Structure Cost in Saudi Arabia 2026", desc: "Detailed cost breakdown and pricing factors" },
+                ].map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="block bg-gray-50 rounded-xl border border-gray-100 p-5 hover:border-steel/30 hover:shadow-sm transition-all"
+                  >
+                    <div className="font-semibold text-steel mb-1">{link.label}</div>
+                    <div className="text-xs text-gray-500">{link.desc}</div>
+                  </a>
                 ))}
               </div>
             </div>
@@ -474,6 +670,14 @@ export default function SteelStructureSaudiArabia() {
                 {
                   q: "Can I visit your factory before ordering?",
                   a: "Absolutely. Our factory is in Shangqiu, Henan, China. You can fly to Shanghai Pudong or Zhengzhou airport, and we will arrange pickup. We also offer live video factory tours via WhatsApp for clients who cannot travel.",
+                },
+                {
+                  q: "What should I look for in structural steel suppliers in Saudi Arabia?",
+                  a: "Check three things: (1) whether the supplier owns a factory or only trades — ask for a live video tour of the production line; (2) whether they can design to SBC 301 and issue stamped calculation reports; and (3) whether they have exported to the GCC before, since port documentation and coating specifications for Saudi conditions differ from other markets. Laotie Steel manufactures in-house, designs to SBC 301, and has shipped to Saudi Arabia, the UAE and Qatar.",
+                },
+                {
+                  q: "Do you supply light gauge steel (LGS) buildings to Saudi Arabia?",
+                  a: "Yes. We roll-form LGS studs, tracks, joists and roof trusses from G550 / S350GD galvanized coil with Z275–Z350 coating, suited to Saudi Arabia's hot, arid and coastal climate. Typical LGS applications in KSA include villas, labour camps, schools, clinics and low-rise commercial buildings. Frames are cut to length from approved shop drawings and shipped flat-packed for fast site assembly.",
                 },
               ].map((faq, i) => (
                 <details key={i} className="bg-gray-50 rounded-xl border border-gray-100 group open:shadow-sm transition-shadow">

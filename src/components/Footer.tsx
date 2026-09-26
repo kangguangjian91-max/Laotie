@@ -37,6 +37,18 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href="/products/steel-warehouse" className="hover:text-white transition-colors inline-flex items-center gap-1 group">
+                  <span className="w-0 group-hover:w-1 h-0.5 bg-steel-accent rounded-full transition-all" />
+                  Steel Warehouse
+                </a>
+              </li>
+              <li>
+                <a href="/products/steel-factory-building" className="hover:text-white transition-colors inline-flex items-center gap-1 group">
+                  <span className="w-0 group-hover:w-1 h-0.5 bg-steel-accent rounded-full transition-all" />
+                  Steel Factory Building
+                </a>
+              </li>
+              <li>
                 <a href="/products/floor-deck" className="hover:text-white transition-colors inline-flex items-center gap-1 group">
                   <span className="w-0 group-hover:w-1 h-0.5 bg-steel-accent rounded-full transition-all" />
                   Floor Deck / Steel Decking
@@ -165,6 +177,36 @@ export default function Footer() {
                 >
                   <span className="w-0 group-hover:w-1 h-0.5 bg-steel-accent rounded-full transition-all" />
                   🇦🇺 Australia
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/steel-structure-india" 
+                  onClick={() => trackLandingPageView("india", "india")}
+                  className="hover:text-white transition-colors inline-flex items-center gap-1 group"
+                >
+                  <span className="w-0 group-hover:w-1 h-0.5 bg-steel-accent rounded-full transition-all" />
+                  🇮🇳 India
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/steel-structure-uae" 
+                  onClick={() => trackLandingPageView("uae", "uae")}
+                  className="hover:text-white transition-colors inline-flex items-center gap-1 group"
+                >
+                  <span className="w-0 group-hover:w-1 h-0.5 bg-steel-accent rounded-full transition-all" />
+                  🇦🇪 UAE
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/steel-structure-brazil" 
+                  onClick={() => trackLandingPageView("brazil", "brazil")}
+                  className="hover:text-white transition-colors inline-flex items-center gap-1 group"
+                >
+                  <span className="w-0 group-hover:w-1 h-0.5 bg-steel-accent rounded-full transition-all" />
+                  🇧🇷 Brazil
                 </a>
               </li>
             </ul>

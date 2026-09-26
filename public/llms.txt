@@ -22,7 +22,10 @@
 - [Steel Factory Building](https://www.laotie-steel.com/products/steel-factory-building): Manufacturing plant steel structures with crane systems
 - [Steel Workshop](https://www.laotie-steel.com/products/steel-workshop): Cost-effective workshop buildings for industrial use
 - [Steel Structure Building](https://www.laotie-steel.com/products/steel-structure-building): Portal frame buildings for various applications
-- [Floor Deck](https://www.laotie-steel.com/products/floor-deck): Steel floor decking for multi-story buildings
+- [Floor Deck / Steel Decking](https://www.laotie-steel.com/products/floor-deck): Open-profile composite decking for multi-storey buildings
+- [Closed Rib Floor Deck](https://www.laotie-steel.com/products/closed-rib-deck): Closed-profile (dovetail) composite deck for fire-rated and exposed soffits
+- [Steel Truss Deck](https://www.laotie-steel.com/products/steel-truss-deck): Rebar truss deck with integrated welded truss, spans to 5m unpropped
+- [Load-Bearing Deck (No Concrete)](https://www.laotie-steel.com/products/load-bearing-deck): Dry galvanized load-bearing panels for mezzanines and platforms, spans to 6m
 - [Space Frame Truss](https://www.laotie-steel.com/products/space-frame-truss): Long-span space frame roof structures
 - [Insulated Sandwich Panel](https://www.laotie-steel.com/products/insulated-sandwich-panel): EPS/PU/rockwool insulated wall and roof panels
 - [Galvanized C/Z Purlin](https://www.laotie-steel.com/products/galvanized-cz-purlin): Cold-formed steel purlins for roof and wall systems
@@ -30,7 +33,7 @@
 - [Prefab Container House](https://www.laotie-steel.com/products/prefab-container-house): Modular container houses for temporary or permanent use
 - [FRP Skylight Sheet](https://www.laotie-steel.com/products/frp-skylight-sheet): Fiberglass reinforced plastic daylighting panels
 - [Hot Rolled Steel Coil](https://www.laotie-steel.com/products/hot-rolled-steel-coil): HR steel coils for structural fabrication
-- [Crane Beam](https://www.laotie-steel.com/products/crane-beam): Overhead crane runway beams for industrial buildings
+- [Enclosure & Cladding System](https://www.laotie-steel.com/products/cladding-system): Roof and wall cladding, sandwich panels and profiled sheeting
 
 ## Regional Pages
 

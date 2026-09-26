@@ -87,9 +87,24 @@ const productRelatedBlogs: Record<string, string[]> = {
     "factory-tour-5000-tons-monthly-production",
   ],
   "floor-deck": [
-    "steel-structure-cost-guide-2025",
+    "steel-structure-floor-deck-types-load-capacity-cost-2026",
     "how-to-import-steel-structures-from-china-complete-guide",
     "steel-structure-production-china-manufacturing-guide",
+  ],
+  "closed-rib-deck": [
+    "steel-structure-floor-deck-types-load-capacity-cost-2026",
+    "steel-structure-fire-protection-requirements-materials-costs",
+    "multi-story-steel-structure-buildings-design-cost-benefits",
+  ],
+  "steel-truss-deck": [
+    "steel-structure-floor-deck-types-load-capacity-cost-2026",
+    "multi-story-steel-structure-buildings-design-cost-benefits",
+    "steel-structure-installation-guide-erection-process",
+  ],
+  "load-bearing-deck": [
+    "steel-mezzanine-floor-design-load-span-cost",
+    "steel-structure-floor-deck-types-load-capacity-cost-2026",
+    "steel-structure-installation-guide-erection-process",
   ],
   "space-frame-truss": [
     "steel-space-frame-roof-design-span-cost-2026",
@@ -155,6 +170,16 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   if (!product) {
     notFound();
   }
+
+  // Related products: same family (e.g. all deck types) first, then fall back
+  const sameFamily = product.family
+    ? products.filter((p) => p.slug !== slug && p.family === product.family)
+    : [];
+  const sameFamilySlugs = new Set(sameFamily.map((p) => p.slug));
+  const relatedProducts = [
+    ...sameFamily,
+    ...products.filter((p) => p.slug !== slug && !sameFamilySlugs.has(p.slug)),
+  ].slice(0, 4);
 
   const productSchema = {
     "@context": "https://schema.org",
@@ -302,6 +327,48 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                     </tbody>
                   </table>
                 </div>
+
+                {/* Profile Tables (optional) */}
+                {product.profileTables?.map((table) => (
+                  <div key={table.title}>
+                    <h2 className="text-2xl font-bold text-steel mt-12 mb-6">{table.title}</h2>
+                    <div className="overflow-x-auto border border-gray-200 rounded-xl">
+                      <table className="w-full text-sm">
+                        <thead>
+                          <tr className="bg-steel text-white">
+                            {table.headers.map((h) => (
+                              <th
+                                key={h}
+                                className="px-4 py-3 text-left font-semibold whitespace-nowrap"
+                              >
+                                {h}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {table.rows.map((row, i) => (
+                            <tr key={i} className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                              {row.map((cell, j) => (
+                                <td
+                                  key={j}
+                                  className={
+                                    j === 0
+                                      ? "px-4 py-3 font-medium text-steel whitespace-nowrap"
+                                      : "px-4 py-3 text-gray-600 whitespace-nowrap"
+                                  }
+                                >
+                                  {cell}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                    {table.note && <p className="text-xs text-gray-400 mt-3">{table.note}</p>}
+                  </div>
+                ))}
 
                 {/* Features */}
                 <h2 className="text-2xl font-bold text-steel mt-12 mb-6">Key Features</h2>
@@ -499,14 +566,46 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           </div>
         </section>
 
+        {/* Deck Systems Cross-Links (family) */}
+        {product.family === "steel-deck" && (
+          <section className="py-14 bg-gray-50 border-t border-gray-100">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-2xl font-bold text-steel mb-6">
+                Steel Deck Systems We Manufacture
+              </h2>
+              <p className="text-gray-600 mb-6">
+                All four deck systems below are roll-formed in our own factory, so a project can mix
+                systems and ship everything in one container.
+              </p>
+              <ul className="space-y-4">
+                {products
+                  .filter((p) => p.family === "steel-deck")
+                  .map((deck) => (
+                    <li key={deck.slug} className="bg-white rounded-xl border border-gray-100 p-5">
+                      {deck.slug === slug ? (
+                        <span className="font-bold text-gray-900">{deck.title}</span>
+                      ) : (
+                        <a
+                          href={`/products/${deck.slug}`}
+                          className="font-bold text-steel hover:underline"
+                        >
+                          {deck.title}
+                        </a>
+                      )}
+                      <span className="text-sm text-gray-500"> — {deck.subtitle}</span>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          </section>
+        )}
+
         {/* Related Products */}
         <section className="py-16 bg-white border-t border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-steel mb-8 text-center">Related Products</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              {products
-                .filter((p) => p.slug !== slug)
-                .slice(0, 4)
+              {relatedProducts
                 .map((relatedProduct) => (
                   <a
                     key={relatedProduct.slug}
