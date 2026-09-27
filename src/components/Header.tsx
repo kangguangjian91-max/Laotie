@@ -11,6 +11,7 @@ const navItems = [
   { label: "Manufacturing", href: "/manufacturing-process" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
+  { label: "Owner", href: "/meet-the-owner" },
   { label: "Certificates", href: "/certificates" },
   { label: "FAQ", href: "/faq" },
 ];

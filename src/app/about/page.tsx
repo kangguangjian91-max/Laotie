@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import Image from 'next/image';
 import ImageCarousel from "@/components/ImageCarousel";
 import JsonLd from "@/components/JsonLd";
-import { ArrowLeft, Wrench, Factory, Shield, Globe, Users, Award } from "lucide-react";
+import { ArrowLeft, ArrowRight, Wrench, Factory, Shield, Globe, Users, Award } from "lucide-react";
 
 const aboutPageSchema = {
   "@context": "https://schema.org",
@@ -220,6 +220,48 @@ export default function AboutPage() {
                 <div className="text-xs text-gray-400 mb-0.5">Certified Since</div>
                 <div className="text-lg font-bold text-steel-accent">2015</div>
                 <div className="text-xs text-gray-500">ISO 9001 + CE EN 1090-1</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Meet the Owner teaser */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 lg:pb-20">
+          <div className="grid lg:grid-cols-12 gap-8 items-center bg-steel-muted rounded-2xl border border-gray-100 p-6 lg:p-8">
+            <div className="lg:col-span-3">
+              <div className="relative w-40 lg:w-full mx-auto aspect-[4/5] rounded-xl overflow-hidden">
+                <Image
+                  src="/images/owner/kang-guangjian.webp"
+                  alt="Kang Guangjian, owner and general manager of Laotie Steel Structure"
+                  fill
+                  sizes="(max-width: 1024px) 160px, 22vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <div className="lg:col-span-9">
+              <p className="text-steel-accent font-semibold text-sm tracking-wider uppercase mb-2">Meet the Owner</p>
+              <h2 className="text-2xl font-bold text-steel mb-3">You are buying from the man who runs the factory</h2>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Kang Guangjian (康广建) owns and manages Laotie Steel Structure. He reviews every export
+                quotation himself, films the production floor in English, and answers technical questions
+                directly on WhatsApp — no call centre in between.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="/meet-the-owner"
+                  className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-steel text-white text-sm font-semibold hover:bg-steel-light transition-colors"
+                >
+                  Meet the owner <ArrowRight className="w-4 h-4" />
+                </a>
+                <a
+                  href="https://www.youtube.com/@LaotieSteelStructure"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-white border border-gray-200 text-steel text-sm font-semibold hover:border-steel-accent transition-colors"
+                >
+                  Watch factory videos
+                </a>
               </div>
             </div>
           </div>

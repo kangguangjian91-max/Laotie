@@ -94,6 +94,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
+              <li><a href="/meet-the-owner" className="hover:text-steel-accent transition-colors">Meet the Owner</a></li>
               <li><a href="/certificates" className="hover:text-white transition-colors">Certificates</a></li>
               <li><a href="/faq" className="hover:text-white transition-colors">FAQ</a></li>
               <li><a href="/projects" className="hover:text-white transition-colors">Projects</a></li>

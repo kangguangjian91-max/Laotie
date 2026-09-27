@@ -10,7 +10,7 @@ const siteUrl = "https://www.laotie-steel.com";
 
 // Fixed lastModified date — avoids every build showing "just modified"
 // which causes Google to potentially ignore lastModified signals
-const lastModified = new Date("2026-09-26");
+const lastModified = new Date("2026-09-27");
 
 // Country-specific landing pages
 const countryRoutes = [
@@ -35,6 +35,7 @@ const staticRoutes = [
   "/projects",
   "/blog",
   "/about",
+  "/meet-the-owner",
   "/contact",
   "/certificates",
   "/privacy",
