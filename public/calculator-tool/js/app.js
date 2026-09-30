@@ -3237,9 +3237,14 @@ function downloadProposalPDF(lang) {
   //   走 8789 服务时没问题，但**双击 index.html 用 file:// 打开**时会解析成
   //   file:///C:/assets/vendor/html2pdf.bundle.min.js（跑到 C 盘根目录）→ 库加载失败（ERR_FILE_NOT_FOUND）
   //   → 方案书 PDF 出不来。改成按当前页面地址解析成完整 URL，两种打开方式都能用。
+  // ⚠️ 2026-09-30：基准改用 document.baseURI（index.html 已加 <base href="/calculator-tool/">）。
+  //   原先用 location.href，在 Vercel 上会被「去斜杠 308 重定向」带到 /calculator-tool，
+  //   相对路径于是解析到站点根目录 → 404 → MIME 变 text/html → 所有 css/js 被浏览器拒执行。
+  //   document.baseURI 在有 <base> 时取其 href，无 <base> 时自动等于 location.href，
+  //   所以 file:// 打开、本地服务、线上子目录三种场景都正确。
   var _libRel = 'assets/vendor/html2pdf.bundle.min.js';
   var _libUrl = _libRel;
-  try { _libUrl = new URL(_libRel, location.href).href; } catch (e) { /* 保留相对路径兜底 */ }
+  try { _libUrl = new URL(_libRel, document.baseURI || location.href).href; } catch (e) { /* 保留相对路径兜底 */ }
   var inject = '<script src="' + _libUrl + '"><\/script>'
     + '<script>(function(){var F=' + JSON.stringify(fname) + ';'
     + 'function go(){'
