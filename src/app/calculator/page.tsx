@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import SteelEstimator from "@/components/SteelEstimator";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -114,12 +113,46 @@ export default function CalculatorPage() {
         </div>
       </section>
 
-      {/* ===== Steel Estimator Component ===== */}
+      {/* ===== Steel Structure Calculator (static tool embedded via iframe) ===== */}
       <section className="py-8 lg:py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SteelEstimator />
+          <div className="laotie-calc">
+            <div className="laotie-calc-bar">
+              <span className="laotie-calc-sub">
+                Free instant estimate — steel tonnage · purlin &amp; bolt quantities · 7 drawings
+              </span>
+              <a className="laotie-calc-open" href="/calculator-tool/" target="_blank" rel="noopener">
+                Open full screen ↗
+              </a>
+            </div>
+            <iframe
+              id="laotie-calc"
+              src="/calculator-tool/?embed=1"
+              title="Steel Structure Calculator — free instant estimate"
+              loading="lazy"
+              allow="clipboard-write"
+              style={{ width: "100%", height: 1050, border: 0, display: "block", background: "#0F1215" }}
+            />
+          </div>
         </div>
       </section>
+
+      {/* Auto-resize bridge for the embedded calculator */}
+      <Script id="laotie-calc-resize" strategy="afterInteractive">
+        {`(function () {
+  window.addEventListener('message', function (e) {
+    var d = e.data;
+    if (!d || d.type !== 'laotie-calc-height') return;
+    var f = document.getElementById('laotie-calc');
+    if (!f) return;
+    if (d.narrow) {
+      f.style.height = Math.max(700, Math.round(d.height) + 4) + "px";
+    } else {
+      f.style.height = '1050px';
+    }
+  });
+})();`}
+      </Script>
 
       {/* ===== SEO Content: How to Estimate Steel Structure Cost ===== */}
       <section className="bg-gray-50 py-12 lg:py-16">

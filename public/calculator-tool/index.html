@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steel Structure Calculator — Free Instant Estimate | Laotie Steel</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230E1114'/%3E%3Cpath d='M14 46V18h10v10h16V18h10v28H40V36H24v10z' fill='%23FFC400'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css?v=32">
+  <link rel="stylesheet" href="css/theme.css?v=31">
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="Free online steel structure calculator for portal frame buildings: instant steel tonnage, purlin and bolt quantities, enclosure area and 3D preview. Quotation within 1 business day.">
+  <link rel="stylesheet" href="css/lead.css?v=2">
+</head>
+<body>
+  <!-- ====== 顶部通栏 ====== -->
+  <header class="top-bar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <div class="brand-text">
+        <span class="brand-name">河南老铁钢构</span>
+        <span class="brand-sub">门式刚架轻钢厂房 · 专业算量工具</span>
+      </div>
+    </div>
+
+    <input type="text" class="project-name" placeholder="输入项目名称..." id="projectName">
+
+    <div class="header-actions">
+      <button class="btn-icon" id="btnCustomer" title="客户信息（自动写入报价单与方案书）">👤</button>
+      <button class="btn-icon" id="btnProjects" title="我的项目（保存 / 切换 / 导出）">📁</button>
+      <button class="btn-icon" id="btnProposal" title="生成客户方案书 PDF（直接下载，文件名=项目名+日期）">📋</button>
+      <button class="btn-icon" id="btnProposalEn" title="Export Proposal (English) — 英文方案书 PDF">🌐</button>
+      <button class="btn-icon" id="btnProposalPrint" title="方案书打印预览（可在打印对话框另存 PDF）">🖨</button>
+      <button class="btn-icon" id="btnExport" title="导出报价表">📥</button>
+      <button class="btn-icon" id="btnReset" title="重置默认" onclick="resetAll()">🔄</button>
+    </div>
+
+    <div class="disclaimer-badge">预估数值 · 仅供参考</div>
+  </header>
+  <div class="hazard-strip" aria-hidden="true"></div>
+
+  <!-- ====== 主体：左操作区 + 右预览区 ====== -->
+  <main class="main-content">
+    <!-- 左侧：操作区 -->
+    <aside class="left-panel" id="leftPanel">
+      <!-- 步骤进度条 -->
+      <div class="step-progress" id="stepProgress">
+        <div class="step done" data-step="1" id="stepDot1"><span>✓</span></div>
+        <div class="step-line" id="stepLine1"></div>
+        <div class="step active" data-step="2" id="stepDot2"><span>2</span></div>
+      </div>
+      <div class="step-labels">
+        <span class="label done" id="label1">主体尺寸</span>
+        <span class="label active" id="label2">女儿墙</span>
+      </div>
+
+      <!-- 步骤1：主体尺寸 -->
+      <section class="step-panel" id="step1Panel">
+        <div class="unit-toggle">
+          <button class="unit-btn active" data-unit="m">m</button>
+        </div>
+
+        <div class="input-group">
+          <label>厂房长度 <span class="hint">8-200m</span></label>
+          <input type="number" id="inputLength" value="30" min="8" max="200" step="1">
+          <span class="error-msg" id="errLength"></span>
+        </div>
+
+        <div class="input-group">
+          <label>厂房宽度(跨度) <span class="hint">6-70m · >24m自动加中柱</span></label>
+          <input type="number" id="inputWidth" value="15" min="6" max="70" step="1">
+          <span class="error-msg" id="errWidth"></span>
+        </div>
+
+        <div class="input-group">
+          <label>檐口高度 <span class="hint">3-12m</span></label>
+          <input type="number" id="inputHeight" value="8" min="3" max="12" step="1">
+          <span class="error-msg" id="errHeight"></span>
+        </div>
+
+        <div class="radio-group">
+          <label>结构形式 &amp; 夹层</label>
+          <div class="radio-options" id="structMezzGroup">
+            <label class="radio-option active" data-str="single" data-mezz="0">无中柱(单跨)</label>
+            <label class="radio-option" data-str="single" data-mezz="1">单跨 · 带夹层</label>
+            <label class="radio-option" data-str="double" data-mezz="0">有中柱(双跨)</label>
+            <label class="radio-option" data-str="double" data-mezz="1">双跨 · 带夹层</label>
+          </div>
+          <span class="hint-inline">💡 选带夹层后下方展开设置 · 有中柱时梁跨减半可降级截面</span>
+        </div>
+
+        <!-- 夹层设置 (mezz>=1) -->
+        <div id="mezzOptions" style="display:none;margin-top:16px">
+          <div class="radio-group">
+            <label>夹层层数</label>
+            <div class="radio-options" id="mezzLevelToggle">
+              <label class="radio-option active" data-val="1">2层 (一层夹层)</label>
+              <label class="radio-option" data-val="2">3层 (双层夹层)</label>
+            </div>
+          </div>
+          <div class="input-group">
+            <label>面积占比 <span class="hint" id="mezzRatioVal">50%</span></label>
+            <input type="range" id="mezzRatio" min="10" max="100" step="5" value="50">
+            <span class="hint-inline">两层共用 · 柱高：一层3.6m / 二层7.2m(通高)</span>
+          </div>
+          <div class="input-group">
+            <label>夹层柱距 <span class="hint">独立的夹层柱网间距</span></label>
+            <select id="mezzColSpacing">
+              <option value="3">3.0 m</option>
+              <option value="4" selected>4.0 m (默认)</option>
+              <option value="5">5.0 m</option>
+              <option value="6">6.0 m</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>一层用途</label>
+            <div class="radio-options" id="mezzUseOpts">
+              <label class="radio-option active" data-val="office">📋 办公 (2.5kN)</label>
+              <label class="radio-option" data-val="storage">📦 仓储 (5.0kN)</label>
+            </div>
+          </div>
+          <div id="mezz2Section" style="display:none">
+            <div class="input-group" style="margin-top:12px;padding-top:12px;border-top:2px dashed var(--warn)">
+              <label>二层用途</label>
+              <div class="radio-options" id="mezz2UseOpts">
+                <label class="radio-option active" data-val="office">📋 办公 (2.5kN)</label>
+                <label class="radio-option" data-val="storage">📦 仓储 (5.0kN)</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- 夹层算量预览（补全原版缺失节点） -->
+          <div class="increment-box" id="mezzPreviewBox" style="display:none">
+            <div class="increment-title">一层夹层算量</div>
+            <div class="increment-row">面积：<strong id="mezzPreviewArea">—</strong> m²</div>
+            <div class="increment-row">夹层柱：<strong id="mezzPreviewCol">—</strong></div>
+            <div class="increment-row">夹层梁：<strong id="mezzPreviewBeam">—</strong></div>
+            <div class="increment-row">用钢量：<strong id="mezzPreviewSteel">—</strong> kg</div>
+          </div>
+          <div class="increment-box" id="mezz2PreviewBox" style="display:none">
+            <div class="increment-title">二层夹层算量</div>
+            <div class="increment-row">面积：<strong id="mezz2PreviewArea">—</strong> m²</div>
+            <div class="increment-row">夹层柱：<strong id="mezz2PreviewCol">—</strong></div>
+            <div class="increment-row">夹层梁：<strong id="mezz2PreviewBeam">—</strong></div>
+            <div class="increment-row">用钢量：<strong id="mezz2PreviewSteel">—</strong> kg</div>
+          </div>
+        </div>
+
+        <details class="advanced-params">
+          <summary>高级参数 (默认行业标准)</summary>
+          <div class="advanced-content">
+            <div class="input-group">
+              <label>柱距 <span class="hint">4.5-9m</span></label>
+              <select id="columnSpacing">
+                <option value="4.5">4.5 m (密柱)</option>
+                <option value="6" selected>6.0 m (标准·厂房≤40m推荐)</option>
+                <option value="7.5">7.5 m (经济·厂房40-80m推荐)</option>
+                <option value="9">9.0 m (大柱距·厂房>80m推荐)</option>
+                <option value="custom">自定义</option>
+              </select>
+              <input type="number" id="columnSpacingCustom" value="6" min="4" max="12" step="0.5" style="display:none">
+              <span class="hint-inline">💡 输入厂房长度后自动推荐最优柱距</span>
+            </div>
+            <div class="input-group">
+              <label>截面形式</label>
+              <div class="radio-options">
+                <label class="radio-option active"><input type="radio" name="sectionType" value="tapered" checked> 变截面(推荐)</label>
+                <label class="radio-option"><input type="radio" name="sectionType" value="constant"> 等截面</label>
+              </div>
+            </div>
+            <div class="input-group">
+              <label>屋面檩条间距</label>
+              <select id="roofSpacing">
+                <option value="1.2">1.2 m</option>
+                <option value="1.5" selected>1.5 m (推荐)</option>
+                <option value="1.8">1.8 m</option>
+                <option value="custom">自定义</option>
+              </select>
+              <input type="number" id="roofSpacingCustom" value="1.5" min="0.8" max="2.5" step="0.1" style="display:none">
+            </div>
+            <div class="input-group">
+              <label>墙面檩条间距</label>
+              <select id="wallSpacing">
+                <option value="1.2">1.2 m</option>
+                <option value="1.5" selected>1.5 m (推荐)</option>
+                <option value="1.8">1.8 m</option>
+                <option value="custom">自定义</option>
+              </select>
+              <input type="number" id="wallSpacingCustom" value="1.5" min="0.8" max="2.5" step="0.1" style="display:none">
+            </div>
+            <div class="input-group">
+              <label>雪/活载 <span class="hint">kN/m²</span></label>
+              <select id="snowLoad">
+                <option value="0.3">0.3 (南方无雪)</option>
+                <option value="0.5" selected>0.5 (常规·推荐)</option>
+                <option value="0.6">0.6 (北方多雪)</option>
+                <option value="0.75">0.75 (东北/高原)</option>
+              </select>
+              <span class="hint-inline">💡 屋面荷载假定，影响梁柱最优截面选型</span>
+            </div>
+            <div class="input-group">
+              <label>基本风压 w₀ <span class="hint">kN/m²</span></label>
+              <div class="wind-pick">
+                <select id="windZone"></select>
+                <input type="number" id="windW0" value="0.45" min="0.20" max="1.50" step="0.05" title="基本风压 w₀（kN/m²，50 年一遇）">
+              </div>
+              <span class="hint-inline" id="windHint">💡 —</span>
+            </div>
+            <div class="input-group">
+              <label>行车（吊车） <span class="hint">电动单/双梁 · 5t / 10t</span></label>
+              <div class="radio-options" id="craneToggle">
+                <label class="radio-option active" data-val="0">不设行车</label>
+                <label class="radio-option" data-val="1">设行车</label>
+              </div>
+              <span class="hint-inline">💡 吊车梁跨度自动跟随柱距（6 / 7.5 / 9m）· 计入吊车梁 + 牛腿，并按吊车荷载加大柱截面</span>
+            </div>
+            <div id="craneOptions" style="display:none">
+              <div class="input-group">
+                <label>起重量</label>
+                <div class="radio-options" id="craneTonnage">
+                  <label class="radio-option active" data-val="5">5 t</label>
+                  <label class="radio-option" data-val="10">10 t</label>
+                </div>
+              </div>
+              <div class="input-group">
+                <label>工作级别</label>
+                <div class="radio-options" id="craneGrade">
+                  <label class="radio-option active" data-val="A3A5">A3~A5 轻中级</label>
+                  <label class="radio-option" data-val="A6A8">A6~A8 重级</label>
+                </div>
+              </div>
+              <div class="input-group">
+                <label>轨顶标高 <span class="hint">m · 留空自动</span></label>
+                <input type="number" id="craneRailH" min="2.5" max="11.5" step="0.1" placeholder="自动（檐高 − 净空）">
+                <span class="hint-inline" id="craneRailHint">💡 —</span>
+              </div>
+              <div class="increment-box" id="cranePreviewBox" style="display:none">
+                <div class="increment-title">行车算量</div>
+                <div class="increment-row">吊车梁：<strong id="cranePreviewBeam">—</strong></div>
+                <div class="increment-row">轮压 / 轨顶：<strong id="cranePreviewLoad">—</strong></div>
+                <div class="increment-row">牛腿：<strong id="cranePreviewCorbel">—</strong></div>
+                <div class="increment-row">主刚架柱：<strong id="cranePreviewCol">—</strong></div>
+                <div class="increment-row">行车用钢量：<strong id="cranePreviewSteel">—</strong> kg</div>
+              </div>
+            </div>
+            <div class="input-group">
+              <label>屋面采光带</label>
+              <select id="daylightCount">
+                <option value="0">不设</option>
+                <option value="1" selected>1 道 (常规·推荐)</option>
+                <option value="2">2 道</option>
+              </select>
+              <span class="hint-inline">💡 FRP采光板·每道宽1.0m·屋脊对称每坡各铺</span>
+            </div>
+          </div>
+        </details>
+
+        <div class="realtime-preview" id="step1Preview">
+          <div class="preview-item">屋面檩条 ≈ <strong id="pvRoofPurlin">—</strong> kg</div>
+          <div class="preview-item">墙面檩条 ≈ <strong id="pvWallPurlin">—</strong> kg</div>
+          <div class="preview-item">主结构 ≈ <strong id="pvMainSteel">—</strong> kg</div>
+        </div>
+      </section>
+
+      <!-- 步骤2：女儿墙 -->
+      <section class="step-panel" id="step2Panel" style="display:none">
+        <h3>女儿墙配置</h3>
+        <p class="section-desc">请选择是否设置女儿墙</p>
+
+        <div class="card-select">
+          <div class="option-card" id="cardNoParapet">
+            <div class="card-check"></div>
+            <div class="card-icon">🏠</div>
+            <div class="card-title">无女儿墙</div>
+            <div class="card-desc">檐口无上部围挡，适用于简易厂房</div>
+          </div>
+          <div class="option-card active" id="cardHasParapet">
+            <div class="card-check">✓</div>
+            <div class="card-icon">🏗</div>
+            <div class="card-title">带女儿墙</div>
+            <div class="card-desc">檐口上部设围挡，兼顾防水与美观</div>
+          </div>
+        </div>
+
+        <div class="input-group parapet-height" id="parapetHeightGroup">
+          <label>女儿墙高度 <span class="hint">0.3-2.0m</span></label>
+          <input type="number" id="inputParapetHeight" value="1.5" min="0.3" max="2.0" step="0.1">
+        </div>
+
+        <div class="increment-box" id="parapetIncrement">
+          <div class="increment-title">材料增量对比</div>
+          <div class="increment-row">增加用钢量：<strong id="incSteel">+ —</strong> kg</div>
+          <div class="increment-row">增加围护面积：<strong id="incEnclosure">+ —</strong> m²</div>
+        </div>
+      </section>
+
+      <!-- 步骤3 门窗方案已删除：门窗固定为「每个柱距正中一扇窗(宽2m·窗台1.2m·顶对齐墙梁) + 前2樘门4.5m宽」，如需调整告知开发 -->
+    </aside>
+
+    <!-- 右侧：预览区 -->
+    <section class="right-panel" id="rightPanel">
+      <!-- 3D 实时模型舞台 -->
+      <div class="stage3d" id="stage3d">
+        <canvas id="cv3d"></canvas>
+        <div class="s3d-overlay">
+          <div class="s3d-tag">实时 3D 模型</div>
+          <div class="s3d-hint" id="s3dHint">拖动旋转 · 滚轮缩放 · 右键平移</div>
+        </div>
+        <div class="s3d-tools" id="s3dTools">
+          <button class="s3d-btn" data-t3d="reset" title="重置视角">⟲</button>
+          <button class="s3d-btn active" data-t3d="purlin" title="显示/隐藏檩条">≣</button>
+          <button class="s3d-btn active" data-t3d="roof" title="显示/隐藏屋面">◤</button>
+          <button class="s3d-btn" data-t3d="clad" title="显示/隐藏墙板">▥</button>
+          <button class="s3d-btn" data-t3d="spin" title="自动旋转">◐</button>
+        </div>
+        <div class="s3d-fallback" id="s3dFallback" style="display:none">当前环境不支持 WebGL，3D 预览已停用</div>
+      </div>
+
+      <div class="preview-viewport" id="previewViewport">
+        <div class="preview-placeholder" id="previewPlaceholder">
+          <div class="placeholder-dimensions" id="placeholderDims">
+            <span class="dim-label">长: <strong class="dim-val" id="dimL">30.0</strong>m</span>
+            <span class="dim-sep">×</span>
+            <span class="dim-label">宽: <strong class="dim-val" id="dimW">15.0</strong>m</span>
+            <span class="dim-sep">×</span>
+            <span class="dim-label">高: <strong class="dim-val" id="dimH">8.0</strong>m</span>
+          </div>
+          <div class="steel-stats" id="steelStats">
+            <div class="stat-item">主结构 <strong id="statMain">—</strong></div>
+            <div class="stat-item">檩条 <strong id="statPurlin">—</strong></div>
+            <div class="stat-item">总用钢 <strong id="statTotal">—</strong></div>
+            <div class="stat-item stat-usd">≈ 人民币 <strong id="statCNY">—</strong></div>
+          </div>
+
+          <div class="preview-tip" id="previewTip">
+            按「主体尺寸 → 女儿墙」完成两步设置，点底部「生成算量报告」查看分项明细与方案对比（门窗按每柱距一扇窗 + 前2樘推拉门自动布置）
+          </div>
+
+          <!-- 结果面板（生成报告后显示） -->
+          <div class="result-panel" id="resultPanel" style="display:none">
+            <h3>算量报告</h3>
+            <div class="result-cards" id="resultCards"></div>
+            <div class="result-table-wrap">
+              <table class="result-table" id="resultTable">
+                <thead><tr><th>项目</th><th>规格</th><th>数量</th></tr></thead>
+                <tbody></tbody>
+                <tfoot><tr><td colspan="2"><strong>合计</strong></td><td id="totalSteelCell"><strong>—</strong></td></tr></tfoot>
+              </table>
+            </div>
+            <div class="result-parapet" id="resultParapet"></div>
+            <!-- 檩条/抗风柱选型依据（2026-09-27 r39） -->
+            <div class="purlin-basis" id="purlinBasis" style="display:none"></div>
+            <!-- 行车选型依据（2026-09-28 r40） -->
+            <div class="purlin-basis" id="craneBasis" style="display:none"></div>
+            <!-- 省钢量推荐 -->
+            <div class="steel-optimize" id="steelOptimize" style="display:none"></div>
+            <!-- 方案对比 -->
+            <div class="compare-section" id="compareSection">
+              <div class="compare-header" onclick="toggleCompare()">
+                <span id="compareToggle">📊 对比方案 (不带女儿墙)</span>
+                <span class="compare-arrow" id="compareArrow">▶</span>
+              </div>
+              <div class="compare-body" id="compareBody" style="display:none"></div>
+            </div>
+            <!-- 建筑图参考（自动生成平面/立面 + 参考方案图纸） -->
+            <div class="arch-ref" id="archRef" style="display:none"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 结构形式示意图 -->
+  <div class="structure-diagram" id="structureDiagram">
+    <svg viewBox="0 0 560 200" width="100%" height="100%" id="structureSvg" role="img">
+      <title>结构形式示意图</title>
+    </svg>
+  </div>
+
+  <!-- ====== 底部操作栏 ====== -->
+  <footer class="bottom-bar">
+    <button class="btn-outline" id="btnPrev" disabled>上一步</button>
+    <div class="step-indicator">
+      <span class="step-dot active" id="botDot1"></span>
+      <span class="step-dot" id="botDot2"></span>
+      <span class="step-text" id="botStepText">步骤 1 / 2</span>
+    </div>
+    <button class="btn-primary" id="btnNext">下一步</button>
+    <button class="btn-primary" id="btnGenerate" style="display:none" onclick="showDisclaimer()">生成算量报告</button>
+  </footer>
+
+  <!-- ====== 客户信息弹窗（2026-09-28 业务员版）====== -->
+  <div class="modal" id="customerModal" style="display:none">
+    <div class="modal-overlay" onclick="closeCustomer()"></div>
+    <div class="modal-dialog">
+      <h3>客户信息</h3>
+      <p class="modal-note">填一次即可，自动写入报价单与方案书；留空的项不会显示在文档上。</p>
+      <div class="cust-grid">
+        <label>客户名称<input type="text" id="custName" placeholder="如：河南XX机械有限公司"></label>
+        <label>联系人<input type="text" id="custContact" placeholder="如：张经理"></label>
+        <label>联系电话<input type="text" id="custPhone" placeholder="如：138 0000 0000"></label>
+        <label>项目地址<input type="text" id="custAddr" placeholder="如：河南省商丘市睢阳区"></label>
+        <label>报价日期<input type="date" id="custQuoteDate"></label>
+        <label>报价有效期(天)<input type="number" id="custValidDays" min="1" max="365" value="30"></label>
+      </div>
+      <div class="cust-extra">
+        <label class="cust-check"><input type="checkbox" id="custShowTerms" checked> 在报价单与方案书上打印标准条款</label>
+      </div>
+      <div class="modal-actions">
+        <button class="btn-outline" onclick="closeCustomer()">取 消</button>
+        <button class="btn-primary" onclick="saveCustomerInfo()">保 存</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 我的项目抽屉（2026-09-28 业务员版）====== -->
+  <div class="modal" id="projectsModal" style="display:none">
+    <div class="modal-overlay" onclick="closeProjects()"></div>
+    <div class="modal-dialog modal-wide">
+      <h3>我的项目</h3>
+      <p class="modal-note">把当前参数存成项目随时切回（存在本机浏览器）；导出 .json 可备份或发给同事。</p>
+      <div class="proj-actions">
+        <input type="text" id="projSaveName" placeholder="项目名称（留空则取顶部项目名）">
+        <button class="btn-primary" id="btnSaveProject">💾 保存当前</button>
+      </div>
+      <div class="proj-list" id="projList"></div>
+      <div class="modal-actions proj-foot">
+        <button class="btn-outline" onclick="exportAllProjects()">⬇ 导出全部(.json)</button>
+        <label class="btn-outline file-label">⬆ 导入(.json)<input type="file" id="projImportFile" accept=".json,application/json" style="display:none"></label>
+        <button class="btn-outline" onclick="closeProjects()">关 闭</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 免责声明弹窗 -->
+  <div class="disclaimer-modal" id="disclaimerModal" style="display:none">
+    <div class="disclaimer-overlay" onclick="closeDisclaimer()"></div>
+    <div class="disclaimer-dialog">
+      <div class="disclaimer-icon">⚠</div>
+      <h3>免责声明</h3>
+      <p>本工具输出为<strong>工程估算数值</strong>，基于门式刚架行业通用公式计算，仅供初步预算参考。</p>
+      <p>实际用量以<strong>施工图预算</strong>为准。</p>
+      <p class="disclaimer-note">依据 CECS 102:2002 · GB 50017-2017</p>
+      <div class="disclaimer-actions">
+        <button class="btn-outline" onclick="closeDisclaimer()">取 消</button>
+        <button class="btn-primary" onclick="agreeDisclaimer()">我知道了，生成报告</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 参考图纸大图查看 -->
+  <div class="dwg-lightbox" id="dwgLightbox" style="display:none">
+    <div class="dwg-lb-overlay" onclick="closeDwgView()"></div>
+    <div class="dwg-lb-body">
+      <div class="dwg-lb-bar">
+        <span id="dwgLbTitle">参考图纸</span>
+        <button class="dwg-lb-close" onclick="closeDwgView()">✕ 关闭</button>
+      </div>
+      <img id="dwgLbImg" alt="参考图纸大图">
+    </div>
+  </div>
+
+  <script src="js/engine.js?v=33"></script>
+  <script src="js/app.js?v=38"></script>
+  <script src="js/three.min.js?v=29"></script>
+  <script src="js/preview3d.js?v=33"></script>
+  <script src="js/lead.js?v=2"></script>
+
+  <!-- ====== 品牌页脚 ====== -->
+  <footer class="brand-footer">
+    <div class="bf-main">
+      <div class="bf-col">
+        <strong class="bf-name">河南老铁钢构工程有限公司</strong>
+        <p>专业门式刚架 · 轻钢厂房 · 钢结构设计施工一站式服务</p>
+      </div>
+      <div class="bf-col bf-tool-info">
+        <span>轻量化算量工具 v3.0 · 3D 实时预览</span>
+        <span>基于 CECS 102 · GB 50017</span>
+      </div>
+    </div>
+    <div class="bf-trust">
+      <div class="trust-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        CECS 102 门式刚架规范
+      </div>
+      <div class="trust-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        GB 50017 钢结构设计标准
+      </div>
+      <div class="trust-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        焊接 H 型钢 · 变截面设计
+      </div>
+    </div>
+    <div class="bf-disclaimer">
+      ※ 本工具输出为工程估算数值，实际用量以施工图预算为准
+    </div>
+  </footer>
+  </body>
+</html>

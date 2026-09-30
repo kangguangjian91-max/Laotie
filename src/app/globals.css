@@ -162,3 +162,42 @@ body {
     margin: 2cm;
   }
 }
+
+/* ===== Embedded steel calculator (/calculator-tool/) ===== */
+.laotie-calc {
+  margin: 24px 0 32px;
+}
+.laotie-calc-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  background: #14171a;
+  border: 1px solid #2a3138;
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  padding: 10px 14px;
+}
+.laotie-calc-sub {
+  font-size: 12.5px;
+  color: #a7b0bb;
+}
+.laotie-calc-open {
+  font-size: 12.5px;
+  color: #ffc400;
+  text-decoration: none;
+  font-weight: 600;
+}
+.laotie-calc-open:hover {
+  text-decoration: underline;
+}
+#laotie-calc {
+  border-radius: 0 0 10px 10px;
+  border: 1px solid #2a3138;
+}
+@media (max-width: 900px) {
+  #laotie-calc {
+    height: 900px;
+  }
+}

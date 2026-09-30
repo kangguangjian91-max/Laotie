@@ -7,9 +7,29 @@ import time
 import re
 import sys
 import os
+import subprocess
+import tempfile
+import statistics
 from datetime import datetime
 
 SITE = "https://www.laotie-steel.com"
+
+# --- Local Lighthouse fallback (used when no PageSpeed API key is configured) ---
+# Why: the anonymous PageSpeed Insights API quota is 0 requests/day, so it always
+# returns HTTP 429 regardless of retries. Running Lighthouse locally through the
+# already-installed Chrome avoids the Google API entirely.
+NODE_BIN = r"C:/Users/kang/.workbuddy/binaries/node/versions/22.22.2-3/node.exe"
+LH_CLI = r"C:/Users/kang/.workbuddy/binaries/node/workspace/node_modules/lighthouse/cli/index.js"
+CHROME_PATH = r"C:/Program Files/Google/Chrome/Application/chrome.exe"
+# Keep this EMPTY by default. Measured 2026-09-28: routing Chrome through the
+# local proxy dragged FCP between 1.30s and 4.46s across runs (score 65-98),
+# while direct connections stayed within FCP 2.97-2.99s (score 81-85). The proxy
+# node itself is the dominant noise source, so direct wins for trend tracking.
+# Set LH_PROXY=http://127.0.0.1:7897 only if direct access breaks.
+LH_PROXY = os.environ.get("LH_PROXY", "")
+# Lighthouse is a single-sample lab measurement with high run-to-run variance.
+# Median of N runs is far more stable than one shot.
+LH_RUNS = int(os.environ.get("LH_RUNS", "3"))
 PAGES = [
   "", "/calculator", "/manufacturing-process", "/products",
   "/projects", "/blog", "/about", "/contact", "/certificates",
@@ -70,16 +90,27 @@ for s in PROJECT_SLUGS:
 
 ISSUES = []
 
-def check_url(url):
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        resp = urllib.request.urlopen(req, timeout=15)
-        html = resp.read().decode("utf-8", errors="ignore")
-        return resp.status, html
-    except urllib.error.HTTPError as e:
-        return e.code, ""
-    except Exception as e:
-        return 0, str(e)
+def check_url(url, retries=2):
+    """Fetch a URL.
+
+    Network-level failures (SSL UNEXPECTED_EOF, resets, timeouts) are transient
+    and were producing false failures, so retry those. A real HTTP status code
+    is a genuine response and is returned immediately without retrying.
+    """
+    last_err = ""
+    for attempt in range(retries + 1):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            resp = urllib.request.urlopen(req, timeout=20)
+            html = resp.read().decode("utf-8", errors="ignore")
+            return resp.status, html
+        except urllib.error.HTTPError as e:
+            return e.code, ""
+        except Exception as e:  # noqa: BLE001
+            last_err = str(e)
+            if attempt < retries:
+                time.sleep(1.5)
+    return 0, last_err
 
 def check_metadata(html, url):
     title = ""
@@ -104,24 +135,109 @@ def check_metadata(html, url):
         issues.append(f"  ⚠️ Description too long ({len(desc)} chars)")
     return issues
 
+def _lh_single(run_idx):
+    """One Lighthouse pass. Returns a metric dict, or None on failure."""
+    out = os.path.join(tempfile.gettempdir(), f"lh-seo-health-{run_idx}.json")
+    if os.path.exists(out):
+        try:
+            os.remove(out)
+        except OSError:
+            pass
+
+    env = dict(os.environ)
+    env["CHROME_PATH"] = CHROME_PATH
+    env["NODE_OPTIONS"] = "--use-system-ca"
+    chrome_flags = "--headless=new --no-sandbox --disable-gpu"
+    if LH_PROXY:
+        chrome_flags += f" --proxy-server={LH_PROXY}"
+    cmd = [
+        NODE_BIN, LH_CLI, SITE,
+        "--output=json", f"--output-path={out}", "--quiet",
+        "--only-categories=performance",
+        f"--chrome-flags={chrome_flags}",
+    ]
+
+    try:
+        subprocess.run(cmd, env=env, timeout=240,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    except subprocess.TimeoutExpired:
+        return None
+    except Exception:  # noqa: BLE001
+        return None
+
+    # Lighthouse can exit non-zero while tearing down its temp Chrome profile
+    # (Windows EBUSY on 'Account Web Data'). The report is still written, so
+    # trust the file rather than the exit code.
+    if not os.path.isfile(out):
+        return None
+    try:
+        with open(out, "r", encoding="utf-8", errors="ignore") as fh:
+            data = json.load(fh)
+        audits = data["audits"]
+        return {
+            "score": data["categories"]["performance"]["score"] * 100,
+            "lcp": audits["largest-contentful-paint"]["numericValue"],
+            "cls": audits["cumulative-layout-shift"]["numericValue"],
+            "tbt": audits["total-blocking-time"]["numericValue"],
+            "fcp": audits["first-contentful-paint"]["numericValue"],
+        }
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def check_pagespeed_local():
+    """Run Lighthouse locally N times and report the median. Returns 5-tuple."""
+    if not os.path.isfile(NODE_BIN):
+        return None, None, None, None, f"node not found at {NODE_BIN}"
+    if not os.path.isfile(LH_CLI):
+        return None, None, None, None, "lighthouse not installed in node workspace"
+    if not os.path.isfile(CHROME_PATH):
+        return None, None, None, None, f"chrome not found at {CHROME_PATH}"
+
+    results = []
+    runs = max(1, LH_RUNS)
+    for i in range(runs):
+        r = _lh_single(i)
+        if r:
+            results.append(r)
+        if i < runs - 1:
+            time.sleep(3)  # let the previous headless Chrome fully release
+
+    if not results:
+        return None, None, None, None, f"lighthouse failed on all {runs} run(s)"
+
+    def med(key):
+        return statistics.median([r[key] for r in results])
+
+    return (med("score"), med("lcp"), med("cls"), med("tbt"),
+            f"OK ({len(results)}/{runs} runs, median)")
+
+
 def check_pagespeed():
-    api = ("https://www.googleapis.com/pagespeedonline/v5/runPagespeed"
-           "?url=https://www.laotie-steel.com&strategy=mobile")
-    # Optional API key improves quota (no-key quota is very low and returns 429)
+    """Prefer the official API when a key exists; otherwise run Lighthouse locally."""
     key = os.environ.get("GOOGLE_PAGESPEED_API_KEY", "")
-    if key:
-        api += f"&key={key}"
-    # Retry up to 3 times with backoff — the no-key API rate-limit (429) is transient
+    if not key:
+        # Documented quota for anonymous calls is 0/day -> guaranteed HTTP 429.
+        # Skip the wasted retries and go straight to the local Lighthouse run.
+        return check_pagespeed_local()
+    return check_pagespeed_psi(key)
+
+
+def check_pagespeed_psi(key):
+    """Official PageSpeed Insights API (requires GOOGLE_PAGESPEED_API_KEY)."""
+    api = ("https://www.googleapis.com/pagespeedonline/v5/runPagespeed"
+           f"?url={SITE}&strategy=mobile&key={key}")
     for attempt in range(3):
         try:
             req = urllib.request.Request(api, headers={"User-Agent": "Mozilla/5.0"})
-            resp = urllib.request.urlopen(req, timeout=60)
+            resp = urllib.request.urlopen(req, timeout=90)
             data = json.loads(resp.read())
-            score = data["lighthouseResult"]["categories"]["performance"]["score"] * 100
-            lcp = data["lighthouseResult"]["audits"]["largest-contentful-paint"]["numericValue"]
-            cls = data["lighthouseResult"]["audits"]["cumulative-layout-shift"]["numericValue"]
-            tbt = data["lighthouseResult"]["audits"]["total-blocking-time"]["numericValue"]
-            return score, lcp, cls, tbt
+            lh = data["lighthouseResult"]
+            score = lh["categories"]["performance"]["score"] * 100
+            lcp = lh["audits"]["largest-contentful-paint"]["numericValue"]
+            cls = lh["audits"]["cumulative-layout-shift"]["numericValue"]
+            tbt = lh["audits"]["total-blocking-time"]["numericValue"]
+            return score, lcp, cls, tbt, None
         except urllib.error.HTTPError as e:
             err = f"HTTP {e.code}: {e.reason}"
             if e.code == 429 and attempt < 2:
@@ -129,10 +245,10 @@ def check_pagespeed():
                 print(f"  (PageSpeed rate limited, retrying in {wait}s...)")
                 time.sleep(wait)
                 continue
-            return None, None, None, err
-        except Exception as e:
-            return None, None, None, str(e)
-    return None, None, None, "max retries exceeded"
+            return None, None, None, None, err
+        except Exception as e:  # noqa: BLE001
+            return None, None, None, None, str(e)[:200]
+    return None, None, None, None, "max retries exceeded"
 
 print(f"=== SEO Health Check Report ===")
 print(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
@@ -169,24 +285,45 @@ for page in PAGES:
             print(f"     {mi}")
 
 print(f"\n  {ok}/{len(PAGES)} pages OK, {fail} failed")
+# Unreachable pages must surface as issues too — otherwise the run reports
+# "All checks passed" and exits 0 while pages are actually failing.
+if fail:
+    ISSUES.append(f"{fail}/{len(PAGES)} page(s) unreachable")
 
 # 2. PageSpeed
-print("\n--- PageSpeed (Mobile) ---")
-score, lcp, cls, tbt = check_pagespeed()
+_psi_key = os.environ.get("GOOGLE_PAGESPEED_API_KEY")
+_psi_source = ("PageSpeed Insights API" if _psi_key
+               else "local Lighthouse (Chrome headless, median of runs)")
+print(f"\n--- PageSpeed (Mobile) ---")
+print(f"  source: {_psi_source}")
+score, lcp, cls, tbt, ps_note = check_pagespeed()
 if score is not None:
     print(f"  Performance: {score:.0f}/100")
     print(f"  LCP: {lcp/1000:.1f}s  CLS: {cls:.3f}  TBT: {tbt:.0f}ms")
-    if score < 80:
-        ISSUES.append(f"PageSpeed score {score:.0f}/100 — needs optimization")
-    if lcp > 2500:
-        ISSUES.append(f"LCP {lcp/1000:.1f}s — target <2.5s")
-    if cls > 0.1:
-        ISSUES.append(f"CLS {cls:.3f} — target <0.1")
-    if tbt > 200:
-        ISSUES.append(f"TBT {tbt:.0f}ms — target <200ms")
+    if ps_note:
+        print(f"  note: {ps_note}")
+    # Local runs originate in mainland China against an overseas edge, so the
+    # absolute numbers are a domestic-vantage baseline, not the visitor's real
+    # experience. Use looser thresholds there and treat the series as a trend.
+    if _psi_key:
+        lcp_limit, tbt_limit, score_limit = 2500, 200, 80
+        cls_limit = 0.1
+    else:
+        lcp_limit, tbt_limit, score_limit = 4500, 300, 70
+        cls_limit = 0.1
+        print(f"  (domestic-vantage baseline; thresholds relaxed -> LCP<{lcp_limit/1000:.1f}s, "
+              f"TBT<{tbt_limit}ms, score>={score_limit})")
+    if score < score_limit:
+        ISSUES.append(f"PageSpeed score {score:.0f}/100 — below {score_limit}")
+    if lcp > lcp_limit:
+        ISSUES.append(f"LCP {lcp/1000:.1f}s — target <{lcp_limit/1000:.1f}s")
+    if cls > cls_limit:
+        ISSUES.append(f"CLS {cls:.3f} — target <{cls_limit}")
+    if tbt > tbt_limit:
+        ISSUES.append(f"TBT {tbt:.0f}ms — target <{tbt_limit}ms")
 else:
-    print(f"  ❌ PageSpeed check failed: {tbt}")
-    ISSUES.append(f"PageSpeed check failed: {tbt}")
+    print(f"  ❌ PageSpeed check failed: {ps_note}")
+    ISSUES.append(f"PageSpeed check failed: {ps_note}")
 
 # 3. Check for broken internal links on homepage
 print("\n--- Homepage Internal Links ---")

@@ -1,0 +1,149 @@
+/* ==========================================================================
+   老铁钢构 · 独立站留资版算量页  ——  lead.css
+   ⚠️ 工具本体是「工业黑 + 警示黄」深色主题（theme.css 无条件覆盖 style.css），
+      所以留资卡也走深色，用 theme.css 已有的色板变量（带硬编码兜底，万一没加载也不崩）。
+   ========================================================================== */
+
+/* ---------------- 顶栏常驻 WhatsApp ---------------- */
+.btn-icon.lead-hd-wa {
+  display: flex; align-items: center; justify-content: center;
+  color: #25D366;
+  background: rgba(37, 211, 102, .12);
+  border-color: rgba(37, 211, 102, .45);
+}
+.btn-icon.lead-hd-wa:hover { background: rgba(37, 211, 102, .22); border-color: #25D366; }
+
+/* ---------------- 留资卡 ---------------- */
+.lead-cta {
+  margin: 16px 0 4px;
+  background: linear-gradient(180deg, rgba(255, 196, 0, .07) 0%, var(--ink-2, #1A1E23) 55%);
+  border: 1px solid var(--line, #2A3138);
+  border-left: 4px solid var(--yellow, #FFC400);
+  border-radius: 10px;
+  padding: 18px 20px 16px;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, .35);
+}
+.lead-cta .lc-head { display: flex; align-items: center; gap: 10px; margin-bottom: 7px; }
+.lead-cta h3 { font-size: 17px; color: var(--yellow, #FFC400); font-weight: 800; letter-spacing: .3px; }
+.lc-badge {
+  flex-shrink: 0; background: var(--yellow, #FFC400); color: var(--ink, #0B0D0F);
+  font-size: 10px; font-weight: 800; letter-spacing: 1px; padding: 3px 7px; border-radius: 4px;
+}
+.lc-badge-ok { background: var(--success, #3DD68C); color: #062D16; font-size: 14px; padding: 1px 8px; }
+
+.lead-cta .lc-sub {
+  font-size: 13px; color: var(--text-secondary, #A7B0BB); line-height: 1.68; margin-bottom: 14px;
+}
+
+.lead-btn {
+  display: flex; align-items: center; justify-content: center; gap: 9px;
+  width: 100%; border: none; border-radius: 8px; cursor: pointer;
+  font-size: 15px; font-weight: 700; padding: 13px 18px;
+  text-decoration: none; font-family: inherit;
+  transition: transform .08s, background .15s, border-color .15s, box-shadow .15s;
+}
+.lead-btn:active { transform: translateY(1px); }
+
+/* WhatsApp：绿色是它的品牌色，在深底上最跳 */
+.lead-wa { background: #25D366; color: #062D16; box-shadow: 0 3px 0 #128C4A; }
+.lead-wa:hover { background: #3BE07A; }
+
+.lead-mail {
+  background: transparent; color: var(--text, #E6EBF1);
+  border: 1px solid var(--line-2, #39414A); font-size: 14px; padding: 11px 16px;
+}
+.lead-mail:hover { border-color: var(--yellow, #FFC400); color: var(--yellow, #FFC400); }
+
+.lc-or {
+  display: flex; align-items: center; gap: 10px;
+  text-align: center; font-size: 12px; color: var(--text-hint, #6E7883);
+  margin: 10px 0;
+}
+.lc-or::before, .lc-or::after { content: ''; flex: 1; height: 1px; background: var(--line, #2A3138); }
+
+/* ---------------- 邮箱表单 ---------------- */
+.lead-form { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+.lead-form[hidden] { display: none !important; }   /* 必须显式写：否则 display:flex 会顶掉 [hidden] */
+.lf-title { font-size: 13px; font-weight: 700; color: var(--yellow, #FFC400); }
+.lead-form input, .lead-form textarea {
+  width: 100%; border: 1px solid var(--line, #2A3138); border-radius: 6px;
+  padding: 10px 12px; font-size: 14px; font-family: inherit;
+  color: var(--text, #E6EBF1); background: var(--bg-preview, #0F1215); resize: vertical;
+}
+.lead-form input::placeholder, .lead-form textarea::placeholder { color: var(--text-hint, #6E7883); }
+.lead-form input:focus, .lead-form textarea:focus {
+  outline: none; border-color: var(--yellow, #FFC400); box-shadow: 0 0 0 3px rgba(255, 196, 0, .14);
+}
+.lf-hp { position: absolute !important; left: -9999px !important; width: 1px !important; height: 1px !important; opacity: 0; }
+.lead-submit { background: var(--yellow, #FFC400); color: var(--ink, #0B0D0F); font-size: 14px; padding: 12px 18px; margin-top: 2px; }
+.lead-submit:hover { background: var(--yellow-2, #FFD740); }
+.lead-submit:disabled { background: #55606B; color: #B9C3CC; cursor: wait; }
+.lf-msg { font-size: 12px; line-height: 1.5; }
+.lf-msg.lf-err { color: var(--error, #FF5B5B); }
+.lf-msg.lf-ok { color: var(--success, #3DD68C); }
+
+/* ---------------- 成功态 ---------------- */
+.lead-cta.lead-ok {
+  border-left-color: var(--success, #3DD68C);
+  background: linear-gradient(180deg, rgba(61, 214, 140, .08) 0%, var(--ink-2, #1A1E23) 55%);
+}
+.lead-cta.lead-ok h3 { color: var(--success, #3DD68C); }
+.lead-dl { background: var(--yellow, #FFC400); color: var(--ink, #0B0D0F); }
+.lead-dl:hover { background: var(--yellow-2, #FFD740); }
+.lc-alt { display: flex; gap: 8px; margin-top: 8px; }
+.lead-ghost {
+  flex: 1; background: transparent; color: var(--text, #E6EBF1);
+  border: 1px solid var(--line-2, #39414A); font-size: 13px; font-weight: 600; padding: 10px 12px;
+}
+.lead-ghost:hover { border-color: var(--yellow, #FFC400); color: var(--yellow, #FFC400); }
+
+/* ---------------- 底部信任行 ---------------- */
+.lc-foot {
+  display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: center;
+  margin-top: 13px; padding-top: 11px; border-top: 1px dashed var(--line, #2A3138);
+  font-size: 11.5px; color: var(--text-hint, #6E7883);
+}
+
+/* ---------------- 留资版全局微调 ---------------- */
+html[data-lead] [id="purlinBasis"],
+html[data-lead] [id="craneBasis"],
+html[data-lead] [id="steelOptimize"],
+html[data-lead] [id="compareSection"] { display: none !important; }
+
+/* 结构形式示意图：与 3D 实时模型重复，且标注是引擎拼出来的中文字符串 → 留资版不显示
+   （客户看实时 3D + 7 张按自己参数生成的图纸，信息更足） */
+html[data-lead] .structure-diagram { display: none !important; }
+
+/* 「参考方案图纸」画廊：那是 21.2-60-9 米方案（另一个项目）的图纸，
+   放在按客户自己尺寸算量的页面上会让人误会 → 留资版不显示 */
+html[data-lead] .ar-gallery-title,
+html[data-lead] .dwg-strip { display: none !important; }
+
+/* 嵌入模式（?embed=1）：去掉品牌大页脚，给 iframe 省高度。
+   ⚠️ 顶栏瘦身必须限定在宽屏：窄屏时工具自己靠 @media(max-width:900px) 把 .top-bar
+      改成 height:auto + 换行，如果这里无条件写死 54px，窄屏就会把品牌挤出去被裁掉。 */
+html[data-embed] .brand-footer { display: none !important; }
+@media (min-width: 901px) {
+  html[data-embed] .top-bar { height: 54px; padding: 0 16px; }
+  html[data-embed] .brand-sub { display: none; }
+}
+
+/* 窄屏（手机 / 窄 iframe）：留资卡铺满，按钮更大 */
+@media (max-width: 720px) {
+  .lead-cta { padding: 15px 14px 14px; margin: 12px 0 2px; }
+  .lead-cta h3 { font-size: 16px; }
+  .lead-btn { font-size: 14.5px; padding: 13px 14px; }
+  .lc-alt { flex-direction: column; }
+
+  /* ⚠️ 工具本体的 .radio-options 是 display:flex 且不换行 —— 手机上「结构形式」4 个选项
+     会横向溢出被切掉（内网工具也有这个毛病）。留资版放行换行，客户看到的是完整的。 */
+  html[data-lead] .radio-options { flex-wrap: wrap; }
+  html[data-lead] #structMezzGroup .radio-option { flex: 1 1 44%; justify-content: center; text-align: center; }
+  html[data-lead] #mezzLevelToggle .radio-option,
+  html[data-lead] #mezzUseOpts .radio-option,
+  html[data-lead] #mezz2UseOpts .radio-option { flex: 1 1 44%; justify-content: center; }
+  /* 风压「地区 + w₀」两栏在手机上挤，改成上下两行 */
+  html[data-lead] .wind-pick { flex-wrap: wrap; }
+  html[data-lead] .wind-pick select { flex: 1 1 100%; }
+  html[data-lead] .wind-pick input { flex: 0 0 100%; width: 100%; }
+}
