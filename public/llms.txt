@@ -52,6 +52,7 @@
 
 ## Blog Index
 
+- [Light Gauge Steel Buildings Guide](https://www.laotie-steel.com/blog/light-gauge-steel-buildings-guide): LGS vs hot-rolled steel comparison, spans, galvanizing classes, and 2026 cost per m²
 - [Structural Steel Price Per Kg in 2026](https://www.laotie-steel.com/blog/structural-steel-price-per-kg-2026): Cost per kg and per tonne by product, structure type and coating, with a worked budget conversion
 - [Steel Warehouse Quotation Checklist](https://www.laotie-steel.com/blog/steel-warehouse-quotation-checklist): 10 questions to ask before ordering a steel warehouse
 - [How to Budget a Steel Structure Project](https://www.laotie-steel.com/blog/how-to-budget-steel-structure-project): Real cost breakdown with no hidden fees
