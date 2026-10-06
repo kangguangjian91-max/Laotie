@@ -3,7 +3,7 @@ title: "Light Gauge Steel Buildings: Complete 2026 Design & Cost Guide"
 description: "Light gauge steel buildings use cold-formed 1-3 mm galvanized profiles for walls, trusses and mezzanines. See LGS vs hot-rolled steel, spans, coatings and 2026 cost per m²."
 date: "2026-10-05"
 slug: "light-gauge-steel-buildings-guide"
-keywords: ["light gauge steel buildings", "light gauge steel frame", "light gauge steel structure", "cold-formed steel buildings", "light gauge steel cost", "LGS construction"]
+keywords: ["light gauge steel buildings", "light gauge steel frame", "light gauge steel structure", "cold-formed steel buildings", "light gauge steel cost", "LGS construction", "light gauge steel building ksa", "light gauge steel ksa", "light gauge steel structures ksa", "light gauge steel frame ksa"]
 image: "/images/blog/blog-light-gauge-steel-cover.webp"
 ---
 
@@ -83,7 +83,7 @@ Light gauge steel has quietly taken over the building categories where its prope
 | Agricultural buildings | Low cost, wide trussed roofs | 9–18 m spans |
 | Modular & prefab units | Factory-built volumetric boxes | Bathroom pods, site offices |
 
-Two of these drive most of our Gulf inquiries. Light gauge villa frames are now standard practice in Saudi Arabia and the wider GCC, where large housing programs reward factory precision and speed. And steel canopies are the classic entry-level light gauge project: a 12 m canopy with back-to-back C200 chords and Z purlins ships as a bolt-together kit. For Gulf projects, our [Saudi Arabia steel structure page](/steel-structure-saudi-arabia) covers local code and delivery considerations in detail.
+Two of these drive most of our Gulf inquiries, and **light gauge steel buildings in KSA** are now the single largest LGS market we serve. Light gauge villa frames are standard practice in Saudi Arabia and the wider GCC, where Vision 2030 housing programs reward factory precision and speed. And steel canopies are the classic entry-level light gauge project: a 12 m canopy with back-to-back C200 chords and Z purlins ships as a bolt-together kit. For Gulf projects, our [Saudi Arabia steel structure page](/steel-structure-saudi-arabia) covers local code (SBC 306) and CIF delivery to Dammam or Jeddah in detail.
 
 ## Design Essentials: Sections, Spans and Coatings
 
