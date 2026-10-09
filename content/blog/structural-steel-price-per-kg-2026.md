@@ -80,13 +80,13 @@ The pattern is consistent: each step up in span, load or connection density adds
 
 Converting a per kg rate into a real budget takes four steps, and most budget surprises happen because buyers stop after step two.
 
-**Step 1 — Estimate the tonnage.** Multiply the floor area by a steel weight factor for your building type. A 2,000 m² warehouse with no crane, using the 30–35 kg/m² band above, comes to 60–70 tonnes. Our [step-by-step structural steel estimating guide](/blog/how-to-estimate-structural-steel-2026) works through the weight factors in detail.
+**Step 1: Estimate the tonnage.** Multiply the floor area by a steel weight factor for your building type. A 2,000 m² warehouse with no crane, using the 30–35 kg/m² band above, comes to 60–70 tonnes. Our [step-by-step structural steel estimating guide](/blog/how-to-estimate-structural-steel-2026) works through the weight factors in detail.
 
-**Step 2 — Apply the fabricated rate.** 65 tonnes at $1,100/tonne gives **$71,500 FOB**. Dividing back gives $1.10/kg — check that against the table above before accepting it.
+**Step 2: Apply the fabricated rate.** 65 tonnes at $1,100/tonne gives **$71,500 FOB**. Dividing back gives $1.10/kg — check that against the table above before accepting it.
 
-**Step 3 — Add freight and insurance.** For a 40-foot container carrying roughly 25 tonnes of fabricated steel, ocean freight plus insurance typically adds $70–$150 per tonne depending on route and season. On 65 tonnes that is about **$4,600–$9,750**, or $0.07–$0.15/kg. This is the step where FOB and CIF quotes stop being comparable.
+**Step 3: Add freight and insurance.** For a 40-foot container carrying roughly 25 tonnes of fabricated steel, ocean freight plus insurance typically adds $70–$150 per tonne depending on route and season. On 65 tonnes that is about **$4,600–$9,750**, or $0.07–$0.15/kg. This is the step where FOB and CIF quotes stop being comparable.
 
-**Step 4 — Add everything that is not the steel frame.** Foundations, cladding, roof and wall panels, doors, ventilation, erection labour and site supervision together often match or exceed the frame cost. The frame is usually 25–40% of a finished building budget, which is why a 15% movement in the per kg rate changes the total project cost by only 4–6%.
+**Step 4: Add everything that is not the steel frame.** Foundations, cladding, roof and wall panels, doors, ventilation, erection labour and site supervision together often match or exceed the frame cost. The frame is usually 25–40% of a finished building budget, which is why a 15% movement in the per kg rate changes the total project cost by only 4–6%.
 
 > **Our finding:** Across our own export orders, buyers who request a per tonne rate alongside the area rate catch scope gaps roughly twice as often as buyers who accept a lump-sum figure. The unit rate forces both sides to name what is and is not included.
 

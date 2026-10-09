@@ -50,8 +50,8 @@ We built a free engineering-grade tool that solves these problems. Here's how to
 
 **Step 2: Choose structure type**
 
-- Single span (no center columns) — standard for warehouses
-- Double span (with center columns) — reduces beam size, but adds column count
+- Single span (no center columns), standard for warehouses
+- Double span (with center columns). Reduces beam size, but adds column count
 
 **Step 3: Add mezzanine if needed**
 

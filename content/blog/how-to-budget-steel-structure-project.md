@@ -11,7 +11,7 @@ excerpt: "Step-by-step guide to budgeting a steel structure project in 2026. Avo
 
 The #1 mistake first-time steel structure buyers make? They compare quotes based on a single number — "price per square meter" — and discover halfway through construction that their actual project cost is 30–50% higher than planned.
 
-This happens because a steel structure quotation from a fabricator typically covers **only the steel package** (frame + purlins + cladding + accessories). It does not include foundation, site preparation, freight, customs, installation labor, permits, or interior fit-out — which together represent 50–65% of total project cost.
+This happens because a steel structure quotation from a fabricator typically covers **only the steel package** (frame + purlins + cladding + accessories). It does not include foundation, site preparation, freight, customs, installation labor, permits, or interior fit-out, which together represent 50–65% of total project cost.
 
 Here's how to build a complete, realistic budget for your steel structure project in 2026.
 
@@ -23,8 +23,8 @@ Here's how to build a complete, realistic budget for your steel structure projec
 
 This is what you'll see on your supplier's quotation. It includes:
 
-- Primary steel frame (columns, rafters, beams) — hot-rolled H-section steel
-- Secondary framing (purlins, girts, bracing) — cold-formed C/Z sections
+- Primary steel frame (columns, rafters, beams), hot-rolled H-section steel
+- Secondary framing (purlins, girts, bracing), cold-formed C/Z sections
 - Connection components (bolts, nuts, washers, base plates, anchor bolts)
 - Surface treatment (primer paint or hot-dip galvanizing)
 - Engineering and fabrication drawings
@@ -150,7 +150,7 @@ If you need an overhead crane in your building — even if it's "phase 2, maybe 
 1. **Define your building**: Exact dimensions (L×W×H), intended use, local wind/snow/seismic zone
 2. **Get a geotechnical report**: Before any serious budgeting
 3. **Request a BOQ (Bill of Quantities)**: Not just a price. You need kg of steel, sqm of cladding, number of bolts
-4. **Get 3 quotes for each non-steel item**: Foundation, installation, permits — local contractors compete
+4. **Get 3 quotes for each non-steel item**: Foundation, installation, permits, local contractors compete
 5. **Apply the 10-line framework above**: Fill in every line with real numbers
 6. **Add 10% contingency**: And don't touch it unless there's a real surprise
 7. **Factor in exchange rate risk**: If paying in USD but earning in local currency, build in a 5% buffer
@@ -158,7 +158,7 @@ If you need an overhead crane in your building — even if it's "phase 2, maybe 
 ## FAQ
 
 ### What percentage should the steel package be of my total budget?
-30–35% for a standard warehouse. If a supplier tells you the steel is 60% of total, they're probably not including foundation, labor, or permits — or they're overcharging you.
+30–35% for a standard warehouse. If a supplier tells you the steel is 60% of total, they're probably not including foundation, labor, or permits, or they're overcharging you.
 
 ### How much cost difference between hot-dip galvanized and painted steel?
 Hot-dip galvanizing adds $8–$15/sqm of steel surface area. But it eliminates painting maintenance for 25–50 years. For coastal or high-humidity locations, galvanizing pays for itself within 5–7 years of avoided repainting.

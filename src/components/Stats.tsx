@@ -39,7 +39,7 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="bg-[#1B3A6B] border-b border-white/10">
+    <section className="bg-steel border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4">
           {stats.map((stat, i) => (

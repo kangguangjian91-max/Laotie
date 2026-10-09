@@ -279,7 +279,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-10 pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
           <p>&copy; {new Date().getFullYear()} Laotie Steel Structure Co., Ltd. All rights reserved.</p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             <a href="/faq" className="hover:text-white transition-colors">FAQ</a>
             <a href="/certificates" className="hover:text-white transition-colors">Certificates</a>
             <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>

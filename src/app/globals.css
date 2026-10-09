@@ -6,8 +6,10 @@
   --color-steel-light: #2a4a7f;
   --color-steel-accent: #1d65c4;
   --color-steel-muted: #EBF4FF;
-  --color-cta: #e67e22;
-  --color-cta-hover: #d35400;
+  /* 2026-10-09 统一：此前 token(#e67e22) 与全站实际用色(#ff6b00) 是两套橙，
+     页脚 CTA 与 Hero/FloatingCTA 的橙不一致。现以主流用色为准对齐 token。 */
+  --color-cta: #ff6b00;
+  --color-cta-hover: #e55a00;
   --color-green-badge: #1D9E75;
   --color-green-badge-bg: #E1F5EE;
   --color-section: #f8fafc;

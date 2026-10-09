@@ -9,7 +9,7 @@ import { testimonials, aggregateRating } from "@/data/testimonials";
 // Dynamic imports for non-critical components (code splitting)
 const Stats = dynamic(() => import("@/components/Stats"), {
   loading: () => (
-    <section className="bg-[#1B3A6B] border-b border-white/10">
+    <section className="bg-steel border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4">
           {[1, 2, 3, 4].map((i) => (

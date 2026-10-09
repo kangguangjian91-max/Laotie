@@ -24,22 +24,30 @@ for slug in sys.argv[1:]:
             fm[k] = v.strip().strip('"').strip("'").strip()
 
     out = "public/data/blog/%s.json" % slug
-    # preserve category/readTime from existing JSON if present
-    category, read_time = "Design Guide", "8 min read"
+    # ⚠️ 关键：已有 JSON 一律优先（title/description/image/date 全部保留）。
+    # 原因：md 的 frontmatter 与线上 JSON 历史上已不同步，JSON 里才是经过 SEO 校验
+    # （title ≤70 渲染字符、desc ≤175）并在用的版本。若用 md 覆盖，会把超长 title 写回线上。
+    # 重新生成 md_to_blog 的目的只是把「正文 content」同步过去，元数据不动。
+    category, read_time, image, description = "Design Guide", "8 min read", "", ""
+    title, date = "", ""
     if os.path.exists(out):
         with open(out, "r", encoding="utf-8") as f:
             existing = json.load(f)
         category = existing.get("category", category)
         read_time = existing.get("readTime", read_time)
+        image = existing.get("image", image)
+        description = existing.get("description", description)
+        title = existing.get("title", title)
+        date = existing.get("date", date)
 
     post = {
         "slug": slug,
-        "title": fm["title"],
-        "description": fm["description"],
-        "date": fm["date"],
+        "title": title or fm["title"],
+        "description": description or fm.get("description", ""),
+        "date": date or fm.get("date", ""),
         "category": category,
         "readTime": read_time,
-        "image": fm["image"],
+        "image": image or fm.get("image", ""),
         "content": content,
     }
 

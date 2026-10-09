@@ -24,7 +24,7 @@ Consider the cost of discovering quality issues after your steel arrives at site
 | Inadequate coating thickness | Premature corrosion, repaint within 3–5 years | $10,000–30,000 |
 | Wrong dimensions | Rework or re-order | $10,000–50,000+ |
 
-A $1,500–2,500 third-party inspection catches these issues before shipping — delivering a 10× to 50× return on investment. This is why experienced buyers never skip **steel structure factory inspection**.
+A $1,500–2,500 third-party inspection catches these issues before shipping. Delivering a 10× to 50× return on investment. This is why experienced buyers never skip **steel structure factory inspection**.
 
 ## When to Inspect: The 4-Stage QC Model
 
@@ -44,7 +44,7 @@ Most buyers think of inspection as a single pre-shipment event. The best practic
 **Check during active fabrication:**
 - CNC cutting accuracy on first-cut components (±1mm for critical dimensions)
 - Weld quality on first batch of H-beams (visual + UT sampling)
-- Welder qualifications — verify certificates match the workers on the line
+- Welder qualifications. Verify certificates match the workers on the line
 - Fit-up accuracy before full welding
 
 This is also when you verify that the **Chinese steel structure supplier** has allocated the production capacity promised. Walk the factory floor — are your components actually being processed on the lines assigned to your order?
@@ -119,16 +119,16 @@ For complex structures, insist on factory pre-assembly of at least one represent
 - Verify all bolt holes align without forcing
 - Check that bracing fits within adjustment range
 - Confirm base plate bolt pattern matches your foundation template
-- Photograph the trial assembly — these photos are invaluable for your site crew
+- Photograph the trial assembly. These photos are invaluable for your site crew
 
-Pre-assembly catches hole misalignment and fabrication errors that would otherwise be discovered on site — when fixing them costs 5–10× more.
+Pre-assembly catches hole misalignment and fabrication errors that would otherwise be discovered on site, when fixing them costs 5–10× more.
 
 ### 6. Marking and Documentation
 
 Every component must be clearly marked with:
-- **Piece mark** — matching the erection drawing (e.g., C1, R2A, B3)
-- **Heat number** — traceable to MTR
-- **Weight** — for lifting planning
+- **Piece mark**. Matching the erection drawing (e.g., C1, R2A, B3)
+- **Heat number**, traceable to MTR
+- **Weight**, for lifting planning
 
 Documentation to collect before release:
 - ✅ Signed-off inspection report (this checklist)
@@ -153,25 +153,25 @@ Third-party inspection is the standard for first-time buyers. Agents like SGS, B
 
 Stop the shipment if you find:
 
-1. **Steel grade mismatch** — MTR says Q355B but UT hardness test suggests Q235B
+1. **Steel grade mismatch**: MTR says Q355B but UT hardness test suggests Q235B
 2. **Systematic weld defects** — cracks, lack of fusion, or excessive porosity on >5% of tested welds
-3. **DFT below 60% of specification** — indicates rushed or skipped coating
-4. **Bolt holes misaligned** — pre-assembly reveals components don't fit
-5. **Supplier refuses inspection access** — the biggest red flag of all
+3. **DFT below 60% of specification**, indicates rushed or skipped coating
+4. **Bolt holes misaligned**, pre-assembly reveals components don't fit
+5. **Supplier refuses inspection access**. The biggest red flag of all
 
-A professional **Chinese steel structure supplier** welcomes inspection. If a factory makes excuses — "the inspector can't access the welding bay" or "we only allow inspection after packing" — walk away. No legitimate factory hides its production.
+A professional **Chinese steel structure supplier** welcomes inspection. If a factory makes excuses — "the inspector can't access the welding bay" or "we only allow inspection after packing", walk away. No legitimate factory hides its production.
 
 ## How OldTie Handles Quality Control
 
 At OldTie Steel Structure, we built our reputation on transparent quality:
 
-- **6 inspection checkpoints** — Incoming material → Cutting → Welding → Surface treatment → Pre-assembly → Final inspection
+- **6 inspection checkpoints**: Incoming material → Cutting → Welding → Surface treatment → Pre-assembly → Final inspection
 - **100% visual weld inspection** + 10% UT on critical welds
 - **SA 2.5 blast standard** on every component before coating
-- **DFT verification** on every batch with electronic gauges — recorded and shared
+- **DFT verification** on every batch with electronic gauges, recorded and shared
 - **Factory pre-assembly** available on request for complex structures
-- **Third-party inspection welcome** — we'll coordinate with SGS, BV, or your chosen agency
-- **Complete documentation package** — MTRs, NDT reports, coating records, packing list, B/L
+- **Third-party inspection welcome**. We'll coordinate with SGS, BV, or your chosen agency
+- **Complete documentation package**: MTRs, NDT reports, coating records, packing list, B/L
 
 We're a **CE ISO certified steel structure** manufacturer (EN 1090-2 EXC2, ISO 9001:2015) with 5 production lines in Shangqiu, Henan. Our factory ships 5,000+ tons monthly to buyers in 30+ countries.
 
@@ -179,11 +179,11 @@ We're a **CE ISO certified steel structure** manufacturer (EN 1090-2 EXC2, ISO 9
 
 1. **Inspection flowchart**: A visual diagram showing the 4-stage QC process with icons for each checkpoint (material, dimension, welding, coating, trial fit, documentation).
 2. **Inspector at work photo**: A quality inspector in safety gear using an ultrasonic thickness gauge on a steel H-beam, with the factory floor visible in the background.
-3. **DFT measurement close-up**: A hand-held electronic coating thickness gauge pressed against a painted steel surface, showing a reading of 245μm on the digital display — verifying the coating meets specification.
+3. **DFT measurement close-up**: A hand-held electronic coating thickness gauge pressed against a painted steel surface, showing a reading of 245μm on the digital display, verifying the coating meets specification.
 
 ## Conclusion
 
-**Steel structure quality control** is not about trust — it's about verification. A structured factory inspection catches issues that would cost 10–50× more to fix after delivery. For any project over $50,000, third-party pre-shipment inspection is not optional — it's essential.
+**Steel structure quality control** is not about trust, it's about verification. A structured factory inspection catches issues that would cost 10–50× more to fix after delivery. For any project over $50,000, third-party pre-shipment inspection is not optional, it's essential.
 
 Use this checklist as your inspection standard. If your supplier cannot meet these criteria, reconsider the partnership. The best factories — like OldTie Steel Structure — operate with the transparency and documentation that make inspection smooth and straightforward.
 
@@ -196,4 +196,4 @@ Contact OldTie Steel Structure to schedule a factory visit or third-party inspec
 📱 **WhatsApp**: +86 166-5073-5555  
 🌐 **Website**: https://oldtie-steel.netlify.app
 
-*OldTie Steel Structure — CE (EN 1090) & ISO 9001 certified. Factory-direct pricing, transparent quality. 5,000 tons/month capacity.*
+*OldTie Steel Structure: CE (EN 1090) & ISO 9001 certified. Factory-direct pricing, transparent quality. 5,000 tons/month capacity.*

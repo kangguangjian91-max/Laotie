@@ -87,7 +87,7 @@ This guide puts real 2026 numbers side by side: material costs, import duties, f
 ### 1. Wind and Seismic Engineering
 
 - **Philippines**: NSCP 2015 requires higher wind loads for coastal areas (250+ kph typhoon zones) and full seismic design. This adds 8–12% to steel tonnage vs a basic design.
-- **Indonesia**: Seismic requirements vary dramatically — Jakarta (Zone 4–5) needs full ductile design, while Kalimantan (Zone 1) is minimal.
+- **Indonesia**: Seismic requirements vary dramatically: Jakarta (Zone 4–5) needs full ductile design, while Kalimantan (Zone 1) is minimal.
 - **Vietnam**: Typhoon zones in central Vietnam (Da Nang, Quang Nam) require heavier sections, but southern Vietnam (HCMC area) is relatively mild.
 
 ### 2. Foundation Costs
@@ -101,7 +101,7 @@ This guide puts real 2026 numbers side by side: material costs, import duties, f
 
 ### 3. Customs Clearance Efficiency
 
-- **Vietnam**: Fastest — average 3–4 days clearance for steel shipments
+- **Vietnam**: Fastest. Average 3–4 days clearance for steel shipments
 - **Indonesia**: Moderate — 3–5 days, but requires a local importer of record (company NPWP)
 - **Philippines**: Slowest — 5–7 days, BOC documentation is more bureaucratic, often requires a licensed customs broker
 
@@ -143,4 +143,4 @@ Most transactions use T/T (telegraphic transfer) with 30% deposit and 70% before
 
 ---
 
-**Building across Southeast Asia?** [Contact us](/contact) for a country-specific BOQ quote with landed cost estimates for the Philippines, Indonesia, or Vietnam — typically delivered within 48 hours.
+**Building across Southeast Asia?** [Contact us](/contact) for a country-specific BOQ quote with landed cost estimates for the Philippines, Indonesia, or Vietnam, typically delivered within 48 hours.

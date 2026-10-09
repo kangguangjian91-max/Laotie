@@ -105,11 +105,11 @@ Anchor bolts are the critical connection between steel and concrete:
 
 ## Common Foundation Mistakes
 
-1. **Over-designing foundations** — Using concrete building foundation rules for steel structures leads to 30–50% oversizing
-2. **Under-designing for uplift** — Wind uplift on lightweight steel roofs can exceed gravity loads
-3. **Poor anchor bolt placement** — Free-handed bolt setting causes erection delays
-4. **Ignoring frost depth** — In cold climates, footings must extend below frost line
-5. **Inadequate drainage** — Water saturation reduces soil bearing capacity significantly
+1. **Over-designing foundations**: Using concrete building foundation rules for steel structures leads to 30–50% oversizing
+2. **Under-designing for uplift**: Wind uplift on lightweight steel roofs can exceed gravity loads
+3. **Poor anchor bolt placement**: Free-handed bolt setting causes erection delays
+4. **Ignoring frost depth**: In cold climates, footings must extend below frost line
+5. **Inadequate drainage**: Water saturation reduces soil bearing capacity significantly
 
 ## Foundation Construction Timeline
 

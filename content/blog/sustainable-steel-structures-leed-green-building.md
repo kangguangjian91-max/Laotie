@@ -9,7 +9,7 @@ image: "/images/blog/blog-sustainable-steel-cover.webp"
 
 # Sustainable Steel Structures: LEED, Green Building & Carbon Footprint Guide 2026
 
-Sustainability isn't just a buzzword in construction anymore — it's a business requirement. Building owners face pressure from investors, regulators, and tenants to reduce environmental impact. And for steel structures, the sustainability story is stronger than most people realize: steel is the most recycled material on Earth, and modern steel buildings can achieve top-tier LEED certifications while costing less than concrete alternatives.
+Sustainability isn't just a buzzword in construction anymore, it's a business requirement. Building owners face pressure from investors, regulators, and tenants to reduce environmental impact. And for steel structures, the sustainability story is stronger than most people realize: steel is the most recycled material on Earth, and modern steel buildings can achieve top-tier LEED certifications while costing less than concrete alternatives.
 
 At **OldTie Steel Structure**, we help clients worldwide achieve their green building goals. This guide explains how steel structures earn sustainability credits, reduce carbon footprint, and qualify for LEED, BREEAM, and other green certifications.
 
@@ -102,7 +102,7 @@ Less steel = lower embodied carbon. Strategies:
 
 When requesting quotes, specify: *"Structural steel from EAF production with minimum 85% recycled content."*
 
-OldTie Steel uses EAF-produced steel with **92%+ recycled content** — documented for your LEED submission.
+OldTie Steel uses EAF-produced steel with **92%+ recycled content**, documented for your LEED submission.
 
 ### 3. Design for Deconstruction
 
@@ -154,9 +154,9 @@ Green-certified buildings command:
 - **3–8% higher rental rates** (JLL, CBRE data)
 - **7–12% higher resale value**
 - **15–25% lower operating costs** (energy + water)
-- **Higher occupancy rates** — 4–8% above non-certified buildings
+- **Higher occupancy rates**, 4–8% above non-certified buildings
 
-For a 5,000 m² steel office building, LEED Gold certification typically adds $25,000–75,000 in design and documentation costs but delivers $15,000–30,000/year in energy savings — a 2–3 year payback.
+For a 5,000 m² steel office building, LEED Gold certification typically adds $25,000–75,000 in design and documentation costs but delivers $15,000–30,000/year in energy savings, a 2–3 year payback.
 
 ## Carbon Accounting: How to Measure Your Steel Building's Footprint
 
@@ -181,13 +181,13 @@ Example:
 | C1–C4: End-of-life | -180 tCO₂e* | +5 tCO₂e | Net negative |
 | **Total** | **-37 tCO₂e** | **310 tCO₂e** | **Carbon negative** |
 
-*\*Recycled steel offsets virgin steel production — effectively removing carbon from the system.*
+*\*Recycled steel offsets virgin steel production. Effectively removing carbon from the system.*
 
 ## FAQ
 
 ### Is steel really "green" when its production uses so much energy?
 
-Modern EAF (Electric Arc Furnace) steel production uses 60–75% less energy than traditional blast furnaces and runs predominantly on electricity — increasingly from renewable sources. Combined with 93%+ recycling rates, steel's lifecycle carbon is lower than any other structural material.
+Modern EAF (Electric Arc Furnace) steel production uses 60–75% less energy than traditional blast furnaces and runs predominantly on electricity, increasingly from renewable sources. Combined with 93%+ recycling rates, steel's lifecycle carbon is lower than any other structural material.
 
 ### Can a steel building achieve LEED Platinum?
 
@@ -203,7 +203,7 @@ We provide certified mill test reports showing recycled content percentage for e
 
 ### What about operational carbon — does a steel building use more energy for heating/cooling?
 
-No. Steel buildings achieve equivalent or better thermal performance when properly insulated. The lighter thermal mass of steel structures actually allows faster temperature adjustment — an advantage in intermittently occupied buildings. For continuously occupied buildings, exposed steel can be coupled with phase change materials for thermal mass.
+No. Steel buildings achieve equivalent or better thermal performance when properly insulated. The lighter thermal mass of steel structures actually allows faster temperature adjustment. An advantage in intermittently occupied buildings. For continuously occupied buildings, exposed steel can be coupled with phase change materials for thermal mass.
 
 ## Build Green with OldTie Steel
 

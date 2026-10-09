@@ -16,11 +16,11 @@ At OldTie Steel Structure, our factory in Shangqiu, Henan, ships prefabricated s
 
 The global shift toward Chinese steel structure sourcing is driven by several practical advantages:
 
-- **Integrated raw material supply** — Major steel mills, surface treatment shops, and fastener producers are clustered within a few hundred kilometers, shortening lead times and reducing material costs.
-- **Large production capacity** — Established factories commonly run 5,000+ tons per month across multiple production lines.
-- **Competitive prefabricated steel building price** — Factory-direct pricing is typically 30–50% lower than equivalent fabrication in North America, Europe, or Australia.
-- **Export experience** — Leading suppliers understand container loading, documentation, and the inspection requirements of international buyers.
-- **International certifications** — CE marking, ISO 9001, EN 1090, and AWS-qualified welding procedures are now standard at reputable factories.
+- **Integrated raw material supply**: Major steel mills, surface treatment shops, and fastener producers are clustered within a few hundred kilometers, shortening lead times and reducing material costs.
+- **Large production capacity**: Established factories commonly run 5,000+ tons per month across multiple production lines.
+- **Competitive prefabricated steel building price**: Factory-direct pricing is typically 30–50% lower than equivalent fabrication in North America, Europe, or Australia.
+- **Export experience**: Leading suppliers understand container loading, documentation, and the inspection requirements of international buyers.
+- **International certifications**: CE marking, ISO 9001, EN 1090, and AWS-qualified welding procedures are now standard at reputable factories.
 
 ## The Chinese Steel Fabrication Process
 
@@ -125,4 +125,4 @@ Chinese steel fabrication has evolved from a low-cost alternative into a high-ca
 
 **Contact OldTie for a free quote → WhatsApp: +86 166-5073-5555**
 
-*OldTie Steel Structure — CE/ISO certified steel buildings, exported from Shangqiu, Henan, China to 30+ countries.*
+*OldTie Steel Structure: CE/ISO certified steel buildings, exported from Shangqiu, Henan, China to 30+ countries.*

@@ -93,7 +93,7 @@ The steel frame is usually only **30-40% of the total project budget**. A comple
 | Shipping & customs | $5-20 /m² | Varies heavily by region |
 | Accessories (doors, gutters, insulation) | $5-25 /m² | Crane and mezzanine are the big extras |
 
-**Rule of thumb**: a complete turnkey steel warehouse typically lands at **$60-150 per m²** depending on region and specification — roughly 2.5-3.5× the bare frame cost.
+**Rule of thumb**: a complete turnkey steel warehouse typically lands at **$60-150 per m²** depending on region and specification, roughly 2.5-3.5× the bare frame cost.
 
 > **Tip**: for a full project budget with contingency rules and a complete 10-line cost framework, see our [guide to budgeting a steel structure project](/blog/how-to-budget-steel-structure-project).
 
@@ -126,12 +126,12 @@ This matches the typical turnkey range for Southeast Asia. A bare FOB frame quot
 
 ## Common Mistakes When Estimating Structural Steel
 
-1. **Ignoring secondary steel** — purlins, girts, bracing and cleats add 15-25% on top of primary frame weight. Many buyers estimate only the primary frame and under-budget by a fifth.
-2. **Using an average tonnage price for everything** — a space frame costs more per ton than a simple portal frame because of fabrication complexity. Use the structure-appropriate price.
-3. **Forgetting local additions** — foundation, erection, customs and inland transport are not part of the FOB steel price. Include them or the budget will overrun.
-4. **Not cross-checking the two methods** — if your weight-factor math and your per-m² math disagree, one of your inputs is wrong.
-5. **Underestimating wind/snow regions** — a 15 m eave or a cyclone-rated roof can raise steel weight by 10-20%.
+1. **Ignoring secondary steel**. Purlins, girts, bracing and cleats add 15-25% on top of primary frame weight. Many buyers estimate only the primary frame and under-budget by a fifth.
+2. **Using an average tonnage price for everything**. A space frame costs more per ton than a simple portal frame because of fabrication complexity. Use the structure-appropriate price.
+3. **Forgetting local additions**. Foundation, erection, customs and inland transport are not part of the FOB steel price. Include them or the budget will overrun.
+4. **Not cross-checking the two methods**. If your weight-factor math and your per-m² math disagree, one of your inputs is wrong.
+5. **Underestimating wind/snow regions**. A 15 m eave or a cyclone-rated roof can raise steel weight by 10-20%.
 
 ## Need a Detailed Estimate?
 
-Preliminary estimates are useful for budgeting, but a reliable quotation needs an engineering calculation based on your specific span, loads, and local building code. Send us your building dimensions and we'll prepare a detailed structural calculation and quotation — usually within 24 hours. Use our **steel cost estimator** or request a free quotation to get an engineer-reviewed estimate for your project.
+Preliminary estimates are useful for budgeting, but a reliable quotation needs an engineering calculation based on your specific span, loads, and local building code. Send us your building dimensions and we'll prepare a detailed structural calculation and quotation, usually within 24 hours. Use our **steel cost estimator** or request a free quotation to get an engineer-reviewed estimate for your project.

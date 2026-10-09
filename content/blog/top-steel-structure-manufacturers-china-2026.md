@@ -34,7 +34,7 @@ Most "top manufacturer" lists are written to fill a page. This one uses three fi
 
 1. **Verifiable identity** — a registered legal entity with a traceable production base, not a trading company using a rented office address.
 2. **Documented quality system** — internationally auditable certification ([EN 1090](https://en.wikipedia.org/wiki/EN_1090) / CE, AISC, ISO 9001) rather than self-declared "high quality".
-3. **Demonstrated export capability** — actually shipped internationally, with references and export documentation to prove it.
+3. **Demonstrated export capability**. Actually shipped internationally, with references and export documentation to prove it.
 
 **Full disclosure:** this guide is published by Laotie Steel Structure, which is listed at position 8. We have included our own capacity and certification figures on the same terms as every other entry so you can compare like for like — and we have deliberately ranked ourselves where our scale actually sits, not at the top. If a list put a 5,000-tonne-per-month factory above a 1.2-million-tonne group, you should distrust the list.
 
@@ -58,7 +58,7 @@ These are the companies behind China's landmark structures. They are genuinely w
 
 A subsidiary of China State Construction Engineering Corporation (CSCEC), a Fortune Global 500 company, CCSI is widely described as China's largest steel structure group. Reported annual fabrication capacity exceeds 1.2 million tonnes, with manufacturing bases across several regions and project activity in 39 countries. Its portfolio includes Beijing Daxing International Airport and multiple super high-rise towers.
 
-**Best fit:** national infrastructure, airport terminals, stadiums, projects where the client requires a Fortune 500 contractor on the signature page. **Not a fit** for a single warehouse — the commercial and engineering overhead is designed for nine-figure contracts.
+**Best fit:** national infrastructure, airport terminals, stadiums, projects where the client requires a Fortune 500 contractor on the signature page. **Not a fit** for a single warehouse. The commercial and engineering overhead is designed for nine-figure contracts.
 
 ### 2. Anhui Honglu Steel Construction (002541.SZ)
 
@@ -68,7 +68,7 @@ Founded in 2002 in Hefei and listed on the Shenzhen Stock Exchange in 2011, Hong
 
 ### 3. Changjiang Jinggong Steel (600496.SH)
 
-Founded in 1999 and listed in Shanghai, Jinggong fabricated steel for the Beijing National Stadium — the "Bird's Nest" — and Beijing Daxing International Airport, and holds six national science and technology awards. It carries EN 1090, AISC and GOST certification and is particularly strong in large public buildings and metal roofing systems.
+Founded in 1999 and listed in Shanghai, Jinggong fabricated steel for the Beijing National Stadium — the "Bird's Nest", and Beijing Daxing International Airport, and holds six national science and technology awards. It carries EN 1090, AISC and GOST certification and is particularly strong in large public buildings and metal roofing systems.
 
 **Best fit:** architecturally complex buildings, long-span public structures, projects needing multiple international design codes simultaneously.
 
@@ -82,7 +82,7 @@ Founded in 1985, Hangxiao was the first Chinese steel structure company to list 
 
 Founded in 1984 and listed in Shenzhen in 2007, Southeast Space Frame operates six manufacturing bases with reported capacity above 1.3 million tonnes per year and is regarded as one of the strongest names in large-span spatial structures.
 
-**Best fit:** space frames, long-span roof structures, sports venues, exhibition halls and airport concourses — anything where the structural challenge is the span rather than the walls.
+**Best fit:** space frames, long-span roof structures, sports venues, exhibition halls and airport concourses. Anything where the structural challenge is the span rather than the walls.
 
 ## Tier 2: Export-Focused Factories — the Sweet Spot for Most Buyers
 
@@ -102,9 +102,9 @@ A Heilongjiang-based group reporting fabrication capacity in the region of 120,0
 
 ### 8. Laotie Steel Structure
 
-Based in Shangqiu, Henan province, Laotie operates five production lines producing around 5,000 tonnes per month — roughly 60,000 tonnes annually — and holds CE (EN 1090) and ISO 9001 certification. The company exports to 40-plus countries and structures its commercial model around overseas projects from roughly 300 to 20,000 m²: portal frame warehouses and factories, workshops, cold storage, agricultural buildings, mezzanine floors, space frames and floor decking.
+Based in Shangqiu, Henan province, Laotie operates five production lines producing around 5,000 tonnes per month. Roughly 60,000 tonnes annually, and holds CE (EN 1090) and ISO 9001 certification. The company exports to 40-plus countries and structures its commercial model around overseas projects from roughly 300 to 20,000 m²: portal frame warehouses and factories, workshops, cold storage, agricultural buildings, mezzanine floors, space frames and floor decking.
 
-Every project is engineered to the buyer's local design code — Eurocode, AISC or GB — in Tekla, with structural calculations and shop drawings issued for approval before production begins. Standard commercial terms are 30% deposit with the balance payable before shipment.
+Every project is engineered to the buyer's local design code: Eurocode, AISC or GB — in Tekla, with structural calculations and shop drawings issued for approval before production begins. Standard commercial terms are 30% deposit with the balance payable before shipment.
 
 **Best fit:** overseas buyers who need a factory-scale supplier, not a trading company, on a project that the Tier 1 groups would not quote. **Honest limitation:** we are not the right choice for a 10,000-tonne contract that requires a Fortune Global 500 signature, or for architecturally unique landmark work.
 
@@ -135,7 +135,7 @@ A practical rule: **if your tonnage has fewer than four digits, you belong in Ti
 
 ## Steel Structure Prices from China in 2026
 
-These are FOB reference ranges for fabricated, primed structural steel, Q3 2026, Tianjin / Qingdao / Shanghai. Treat them as a sanity check on your quotes, not as a firm offer — steel grades, spans, cranes and cladding specifications move the number by 40% or more.
+These are FOB reference ranges for fabricated, primed structural steel, Q3 2026, Tianjin / Qingdao / Shanghai. Treat them as a sanity check on your quotes, not as a firm offer. Steel grades, spans, cranes and cladding specifications move the number by 40% or more.
 
 | Building Type | Typical Span | Steel Consumption | Structure Only (FOB) | Full Package with Cladding (FOB) |
 |---|---|---|---|---|
@@ -166,7 +166,7 @@ Two suppliers can quote the same building 40% apart. Almost all of that differen
 | **Documentation** | Fabrication drawings only | Sealed structural calculations, MTCs, weld reports |
 | **Inspection** | Buyer arranges separately | Third-party inspection (SGS / BV / TÜV) included or quoted transparently |
 
-Before comparing any two quotes, insist that both are itemized on these six lines. A quote that cannot be broken down is not a quote — it is an estimate with a profit margin hidden inside it.
+Before comparing any two quotes, insist that both are itemized on these six lines. A quote that cannot be broken down is not a quote. It is an estimate with a profit margin hidden inside it.
 
 ## A 12-Point Checklist to Verify Any Manufacturer
 
@@ -174,18 +174,18 @@ Before comparing any two quotes, insist that both are itemized on these six line
 
 Run these twelve checks before you transfer a deposit. Any supplier who resists three or more of them is telling you something.
 
-1. **Legal entity check** — confirm the factory name, not the trading company's name, on the business licence.
+1. **Legal entity check**. Confirm the factory name, not the trading company's name, on the business licence.
 2. **Certification validity** — ask for the current EN 1090 or AISC certificate with scope, not a JPEG from 2019.
-3. **Live video factory tour** — a scheduled walk-through, not a marketing video.
-4. **Production capacity evidence** — monthly tonnage backed by equipment lists and line counts.
-5. **Reference projects in your region** — with contact details you can actually call.
-6. **Engineering capability** — Tekla or equivalent BIM modelling, in-house structural engineers.
-7. **Third-party inspection acceptance** — willingness to have SGS, BV or TÜV inspect at agreed milestones.
-8. **Material traceability** — EN 10204 3.1 mill test certificates for every heat number.
-9. **Welder qualification records** — certified welders to AWS D1.1 or EN ISO 9606.
-10. **Export documentation capability** — certificate of origin, bill of lading, packing lists in your language.
+3. **Live video factory tour**. A scheduled walk-through, not a marketing video.
+4. **Production capacity evidence**. Monthly tonnage backed by equipment lists and line counts.
+5. **Reference projects in your region**. With contact details you can actually call.
+6. **Engineering capability**: Tekla or equivalent BIM modelling, in-house structural engineers.
+7. **Third-party inspection acceptance**. Willingness to have SGS, BV or TÜV inspect at agreed milestones.
+8. **Material traceability**: EN 10204 3.1 mill test certificates for every heat number.
+9. **Welder qualification records**. Certified welders to AWS D1.1 or EN ISO 9606.
+10. **Export documentation capability**. Certificate of origin, bill of lading, packing lists in your language.
 11. **Payment terms** — a 30% deposit with the balance before shipment is normal; 100% upfront is a warning sign.
-12. **Response discipline** — how fast and how completely they answer technical questions before you pay anything.
+12. **Response discipline**. How fast and how completely they answer technical questions before you pay anything.
 
 For the full buying process behind these checks, see our [10-point manufacturer selection checklist](/blog/how-to-choose-reliable-steel-structure-manufacturer-checklist) and the [RFQ process guide](/blog/how-to-get-steel-structure-quote-rfq-process).
 
@@ -202,7 +202,7 @@ For the full buying process behind these checks, see our [10-point manufacturer 
 
 ### What is the minimum order for a Chinese steel structure manufacturer?
 
-For export-focused factories, 50–100 tonnes of fabricated steel is a realistic minimum, roughly 500–1,500 m² of building area. Larger groups typically set the bar much higher — 1,000 tonnes or more — because their engineering and project management overhead only amortises at scale.
+For export-focused factories, 50–100 tonnes of fabricated steel is a realistic minimum, roughly 500–1,500 m² of building area. Larger groups typically set the bar much higher — 1,000 tonnes or more, because their engineering and project management overhead only amortises at scale.
 
 ### How long does fabrication and shipping take from China?
 
@@ -210,11 +210,11 @@ Fabrication usually runs 3–5 weeks from design approval. Add 1–2 weeks for p
 
 ### Can a Chinese manufacturer design to my local building code?
 
-Yes — the capable ones can. Look for manufacturers who work in Tekla, employ in-house structural engineers, and can issue calculations to Eurocode, AISC, AS/NZS or GB, sealed by a licensed engineer if your authority requires it. If a supplier only designs to Chinese standards and refuses to convert, keep looking.
+Yes, the capable ones can. Look for manufacturers who work in Tekla, employ in-house structural engineers, and can issue calculations to Eurocode, AISC, AS/NZS or GB, sealed by a licensed engineer if your authority requires it. If a supplier only designs to Chinese standards and refuses to convert, keep looking.
 
 ### What payment terms are standard?
 
-The industry standard is 30% T/T deposit to confirm the order with the balance payable before shipment, or an irrevocable letter of credit for larger contracts. Be cautious of suppliers demanding 100% upfront, and equally cautious of unusually generous credit terms — those usually mean the factory is financing itself with your deposit.
+The industry standard is 30% T/T deposit to confirm the order with the balance payable before shipment, or an irrevocable letter of credit for larger contracts. Be cautious of suppliers demanding 100% upfront, and equally cautious of unusually generous credit terms. Those usually mean the factory is financing itself with your deposit.
 
 ### Is a factory's price really lower than a trading company's?
 

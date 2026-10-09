@@ -44,7 +44,7 @@ Not all steel is equal. The steel grade directly affects structural safety and b
 
 ### Question 2: What's the Total Steel Tonnage?
 
-The single most objective way to compare two steel structure quotes: **total steel weight in kilograms or tons**. More steel = stronger structure = higher cost. A quote that's 20% cheaper but has 30% less steel is not actually cheaper — it's a lighter, weaker building.
+The single most objective way to compare two steel structure quotes: **total steel weight in kilograms or tons**. More steel = stronger structure = higher cost. A quote that's 20% cheaper but has 30% less steel is not actually cheaper, it's a lighter, weaker building.
 
 **What to ask**: "Please provide the total steel tonnage broken down by primary frame (kg), secondary framing (kg), and purlins (kg)."
 
@@ -173,8 +173,8 @@ No. Choose the quote with the best value: the right steel grade and tonnage for 
 A quotation is generally valid for 15–30 days due to fluctuating steel prices. After that, the supplier may need to reprice. If you're close to ordering, ask the supplier to lock in the price with a letter of intent (LOI) or proforma invoice.
 
 ### What's the difference between a quotation and a proforma invoice?
-A quotation is an estimate. A proforma invoice is a formal offer with fixed terms — it's one step before a commercial contract. Once you accept a proforma invoice and pay the deposit, the price and terms are locked.
+A quotation is an estimate. A proforma invoice is a formal offer with fixed terms. It's one step before a commercial contract. Once you accept a proforma invoice and pay the deposit, the price and terms are locked.
 
 ---
 
-**Ready to get comparable quotes?** [Contact us](/contact) with your building specifications. We'll provide a detailed BOQ quotation that answers all 10 questions — and tell you exactly what's included and excluded.
+**Ready to get comparable quotes?** [Contact us](/contact) with your building specifications. We'll provide a detailed BOQ quotation that answers all 10 questions, and tell you exactly what's included and excluded.

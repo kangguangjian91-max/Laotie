@@ -111,7 +111,7 @@ export default function ProductsPage() {
 
           <div className="space-y-16">
             {products.map((product, i) => (
-              <div key={product.title} className={`grid lg:grid-cols-2 gap-10 items-center ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
+              <div key={product.title} className={`grid lg:grid-cols-2 gap-10 items-stretch ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
                 <div className={i % 2 === 1 ? "lg:order-2" : ""}>
                   <p className="text-steel-accent font-semibold text-sm tracking-wider uppercase mb-2">{product.subtitle}</p>
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">{product.title}</h2>
@@ -138,7 +138,7 @@ export default function ProductsPage() {
                     </a>
                   </div>
                 </div>
-                <div className={`bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 lg:h-80 overflow-hidden relative ${i % 2 === 1 ? "lg:order-1" : ""}`}>
+                <div className={`bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 lg:h-full lg:min-h-[20rem] overflow-hidden relative ${i % 2 === 1 ? "lg:order-1" : ""}`}>
                   <Image
                     src={product.image}
                     alt={product.title}

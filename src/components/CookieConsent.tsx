@@ -71,6 +71,8 @@ function Toggle({ checked, disabled = false, onChange, label }: { checked: boole
 export default function CookieConsent() {
   const [mounted, setMounted] = useState(false);
   const [show, setShow] = useState(false);
+  // 移动端折叠开关：小屏默认只显示一句话+两个按钮，点 Customize 再展开偏好设置
+  const [customOpen, setCustomOpen] = useState(false);
   const [consent, setConsent] = useState<Consent>({
     necessary: true,
     analytics: false,
@@ -134,7 +136,14 @@ export default function CookieConsent() {
                 .
               </p>
             </div>
-            <div className="flex gap-2 flex-shrink-0">
+            <div className="flex flex-wrap gap-2 flex-shrink-0">
+              <button
+                onClick={() => setCustomOpen((v) => !v)}
+                aria-expanded={customOpen}
+                className="px-3 py-2 text-xs font-semibold text-steel border border-steel/30 hover:bg-steel/5 rounded-lg transition-colors sm:hidden"
+              >
+                {customOpen ? 'Hide Options' : 'Customize'}
+              </button>
               <button
                 onClick={() =>
                   applyAndClose({ necessary: true, analytics: false, marketing: false })
@@ -154,8 +163,8 @@ export default function CookieConsent() {
             </div>
           </div>
 
-          {/* Preferences */}
-          <div className="space-y-1.5 mb-4">
+          {/* Preferences — 移动端默认收起（避免占满首屏挡住 CTA），桌面端始终展开 */}
+          <div className={`space-y-1.5 mb-4 ${customOpen ? 'block' : 'hidden'} sm:block`}>
             {/* Necessary */}
             <div className="flex items-center justify-between py-2 px-3 rounded-lg bg-gray-50">
               <div>
@@ -203,8 +212,8 @@ export default function CookieConsent() {
             </div>
           </div>
 
-          {/* Save */}
-          <div className="flex justify-end">
+          {/* Save — 跟随偏好设置：移动端只在展开时显示 */}
+          <div className={`justify-end ${customOpen ? 'flex' : 'hidden'} sm:flex`}>
             <button
               onClick={() => applyAndClose({ ...consent })}
               className="px-4 py-2 text-xs font-semibold text-steel border border-steel/30 hover:bg-steel/5 rounded-lg transition-colors"

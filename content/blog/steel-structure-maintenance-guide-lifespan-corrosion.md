@@ -8,7 +8,7 @@ keywords: ["steel structure maintenance", "steel building lifespan", "corrosion 
 
 # Steel Structure Maintenance: Extend Building Lifespan to 50+ Years
 
-A well-designed steel structure should last 50 years or more — but only with proper maintenance. Unlike concrete or timber buildings, steel structures have predictable deterioration patterns. When you know what to watch for and when to act, maintenance becomes a manageable annual routine rather than an emergency response.
+A well-designed steel structure should last 50 years or more, but only with proper maintenance. Unlike concrete or timber buildings, steel structures have predictable deterioration patterns. When you know what to watch for and when to act, maintenance becomes a manageable annual routine rather than an emergency response.
 
 This guide covers everything building owners and facility managers need to maintain their steel structures — from routine inspections to major coating renewal.
 
@@ -40,10 +40,10 @@ The single most impactful maintenance activity is a thorough annual inspection. 
 
 **What to check on columns, rafters, and beams:**
 
-- [ ] **Visual sweep**: Walk the entire perimeter. Look for rust spots, paint blistering, or flaking — especially at connection points and base plates
+- [ ] **Visual sweep**: Walk the entire perimeter. Look for rust spots, paint blistering, or flaking. Especially at connection points and base plates
 - [ ] **Column verticality**: Check with plumb bob or laser level. Deviation should not exceed H/500 (2mm per meter of height)
 - [ ] **Beam deflection**: Measure at mid-span. Compare against original design values. Excessive deflection signals overload or section weakening
-- [ ] **Connection bolts**: Check for looseness with torque wrench (5% random sample). Missing bolts are a red flag — replace immediately
+- [ ] **Connection bolts**: Check for looseness with torque wrench (5% random sample). Missing bolts are a red flag, replace immediately
 - [ ] **Base plate condition**: Look for water pooling around column bases. Standing water accelerates corrosion dramatically
 
 [Image suggestion: Worker in safety gear inspecting a bolted steel column connection with a flashlight and inspection checklist — emphasizing professional maintenance practices]
@@ -58,7 +58,7 @@ The single most impactful maintenance activity is a thorough annual inspection. 
 
 ### Wall System Inspection
 
-- [ ] **Wall cladding**: Look for physical damage — vehicle impacts, forklift scrapes, storm damage
+- [ ] **Wall cladding**: Look for physical damage. Vehicle impacts, forklift scrapes, storm damage
 - [ ] **Girt alignment**: Check wall girts for straightness. Bent girts indicate impact damage or wind overload
 - [ ] **Door tracks and frames**: Lubricate roller door tracks. Check frame anchors and seals
 - [ ] **Window seals**: Replace cracked or dried-out sealant
@@ -89,7 +89,7 @@ Consistency is more important than intensity. Follow this schedule:
 
 ### Quarterly
 
-- Inspect all roof penetrations (vents, flues, skylights) — reseal if needed
+- Inspect all roof penetrations (vents, flues, skylights), reseal if needed
 - Lubricate roller door tracks and hinges
 - Check tension in bracing rods
 
@@ -98,7 +98,7 @@ Consistency is more important than intensity. Follow this schedule:
 - Complete structural inspection using the checklist above
 - Coating thickness measurement on 10 representative points
 - Bolt torque audit (5% random sample)
-- Document findings with dated photos — build a maintenance history
+- Document findings with dated photos, build a maintenance history
 
 ### Every 5-7 Years
 
@@ -142,7 +142,7 @@ Consistency is more important than intensity. Follow this schedule:
 
 **Fix**:
 1. Scrape away all loose paint
-2. Power-tool clean to St 3 standard (ISO 8501-1) — no visible rust, metallic sheen
+2. Power-tool clean to St 3 standard (ISO 8501-1), no visible rust, metallic sheen
 3. Apply compatible primer to bare steel within 4 hours of cleaning
 4. Apply intermediate and top coats matching the original system
 
@@ -151,10 +151,10 @@ Consistency is more important than intensity. Follow this schedule:
 **Cause**: Vibration, thermal cycling, or improper initial torque.
 
 **Fix**:
-1. Never simply re-tighten a loose high-strength bolt — replace it
-2. Check adjacent bolts — if one is loose, several may be
+1. Never simply re-tighten a loose high-strength bolt, replace it
+2. Check adjacent bolts. If one is loose, several may be
 3. If bolt loss is widespread (>2% of connections), conduct a full torque audit
-4. Investigate root cause — excess vibration may require additional bracing
+4. Investigate root cause. Excess vibration may require additional bracing
 
 ## Cost of Maintenance vs Cost of Neglect
 
@@ -164,7 +164,7 @@ Consistency is more important than intensity. Follow this schedule:
 | Reactive (fix only when problems visible) | 8-15% | Fair — accumulated damage, patch repairs |
 | Neglect (no maintenance) | 20-40% (or replacement) | Poor to unsafe — structural deterioration |
 
-**The math is clear**: spending $3,000-5,000 per year on a $100,000 steel building saves $15,000-35,000 over the building's life — and that's before accounting for operational downtime.
+**The math is clear**: spending $3,000-5,000 per year on a $100,000 steel building saves $15,000-35,000 over the building's life, and that's before accounting for operational downtime.
 
 ## When to Call a Structural Engineer
 
@@ -180,19 +180,19 @@ Routine maintenance is manageable in-house. But certain conditions demand profes
 
 Every OldTie steel structure ships with:
 
-- ✅ **Complete as-built documentation** — original design parameters, material certificates, coating specifications
+- ✅ **Complete as-built documentation**. Original design parameters, material certificates, coating specifications
 - ✅ **Maintenance manual** — tailored to your specific coating system and environment
 - ✅ **Touch-up paint kit** — 2 liters of matching primer and topcoat for minor repairs
-- ✅ **Spare fasteners** — 2% extra bolts, screws, and washers
+- ✅ **Spare fasteners**, 2% extra bolts, screws, and washers
 
 ## Start With a Structure Built to Last
 
 The best maintenance program starts with a well-built structure. Our factory in Shangqiu, Henan produces steel buildings engineered for your local conditions — correct steel grade, wind/snow/seismic design, and coating system matched to your environment.
 
-Contact OldTie for a quote on your next project — built to last, designed for easy maintenance.
+Contact OldTie for a quote on your next project. Built to last, designed for easy maintenance.
 
 📱 **WhatsApp**: +86 166-5073-5555  
 🌐 **Website**: https://oldtie-steel.netlify.app  
 
 ---
-*OldTie Steel Structure — 50-year buildings start with quality fabrication. CE & ISO certified, 5,000 tons/month capacity, shipping to 20+ countries.*
+*OldTie Steel Structure. 50-year buildings start with quality fabrication. CE & ISO certified, 5,000 tons/month capacity, shipping to 20+ countries.*

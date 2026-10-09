@@ -218,4 +218,4 @@ Our engineering team can help you select the optimal floor deck type, provide sp
 
 ---
 
-*OldTie Steel Structure — Floor deck manufacturer and steel building supplier. Shangqiu, Henan, China. 5,000 tons/month production capacity. CE & ISO 9001 certified.*
+*OldTie Steel Structure: Floor deck manufacturer and steel building supplier. Shangqiu, Henan, China. 5,000 tons/month production capacity. CE & ISO 9001 certified.*

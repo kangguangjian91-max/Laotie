@@ -9,7 +9,7 @@ image: "/images/blog/blog-seismic-design-cover.webp"
 
 # Steel Structure Seismic Design: Earthquake-Resistant Building Guide 2026
 
-Earthquakes don't kill people — buildings do. And in seismic zones across Asia, the Middle East, and the Americas, the choice of structural material and design approach literally determines whether a building stands or collapses. Steel is the superior material for seismic design — its inherent ductility allows it to bend and absorb earthquake energy without fracturing, a property concrete can only achieve through heavy reinforcement.
+Earthquakes don't kill people, buildings do. And in seismic zones across Asia, the Middle East, and the Americas, the choice of structural material and design approach literally determines whether a building stands or collapses. Steel is the superior material for seismic design — its inherent ductility allows it to bend and absorb earthquake energy without fracturing, a property concrete can only achieve through heavy reinforcement.
 
 At **OldTie Steel Structure**, we design and fabricate seismic-resistant steel buildings for clients in the Philippines, Indonesia, Japan, Turkey, and other high-seismicity regions. This guide covers seismic design principles, code requirements, structural systems, and costs for 2026.
 
@@ -32,7 +32,7 @@ When an earthquake hits, the building must absorb and dissipate energy. Steel's 
 
 Earthquake forces are proportional to building mass (F = m × a). Steel structures are **40–60% lighter** than equivalent concrete buildings, which means:
 
-- **40–60% lower seismic base shear** — smaller foundations, smaller members
+- **40–60% lower seismic base shear**, smaller foundations, smaller members
 - **Lower amplification** in taller buildings (reduced mass = shorter natural period in some cases)
 - **Feasibility on soft soil** where heavy concrete buildings would settle unevenly
 
@@ -52,13 +52,13 @@ Modern seismic design follows a three-tier performance objective:
 
 ### Design Approaches
 
-**Force-Based Design (FBD)** — Traditional approach:
+**Force-Based Design (FBD)**: Traditional approach:
 1. Calculate elastic seismic forces
 2. Apply response modification factor (R) to reduce forces
 3. Design members for reduced forces
 4. Detail for ductility to justify force reduction
 
-**Performance-Based Design (PBD)** — Modern approach:
+**Performance-Based Design (PBD)**: Modern approach:
 1. Define performance targets (drift, damage level)
 2. Non-linear analysis (pushover or time-history)
 3. Verify performance at each hazard level
@@ -98,7 +98,7 @@ For higher seismic demands where CBF ductility is insufficient:
 
 For buildings requiring open floor plans and architectural flexibility:
 
-- **Beam-to-column connections**: Fully welded flange, bolted web — prequalified per ANSI/AISC 358
+- **Beam-to-column connections**: Fully welded flange, bolted web, prequalified per ANSI/AISC 358
 - **Strong column–weak beam**: ΣMpc/ΣMpb > 1.0 at every joint
 - **Panel zone**: Doubler plates as needed to resist shear
 - **Drift limit**: 2.0% story drift under DBE (ASCE 7)
@@ -109,7 +109,7 @@ The premium seismic system for critical facilities:
 
 - **BRB core**: Steel core yields in tension and compression
 - **Restraining mechanism**: Concrete-filled tube prevents global buckling
-- **Symmetric hysteresis**: Equal strength in tension and compression — unlike conventional braces
+- **Symmetric hysteresis**: Equal strength in tension and compression, unlike conventional braces
 - **Cost premium**: 20–40% over CBF
 
 ## Seismic Design Codes by Region
@@ -221,7 +221,7 @@ For single-story industrial buildings, Ordinary Concentrically Braced Frames (OC
 
 ## Earthquake-Ready Steel Structures from OldTie
 
-Steel structures save lives in earthquakes — but only when properly designed. OldTie Steel provides complete seismic design and fabrication to international codes including ASCE 7, Eurocode 8, GB 50011, NSCP, SNI, and TBDY.
+Steel structures save lives in earthquakes, but only when properly designed. OldTie Steel provides complete seismic design and fabrication to international codes including ASCE 7, Eurocode 8, GB 50011, NSCP, SNI, and TBDY.
 
 **We provide:**
 - Site-specific seismic analysis (response spectrum, time history)

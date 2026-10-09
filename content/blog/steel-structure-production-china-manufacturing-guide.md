@@ -140,4 +140,4 @@ Ready to start your steel structure project? Contact OldTie for a **free quote w
 
 ---
 
-*OldTie Steel Structure — Trusted by 200+ clients across 20+ countries. Factory-direct pricing, international quality standards.*
+*OldTie Steel Structure: Trusted by 200+ clients across 20+ countries. Factory-direct pricing, international quality standards.*

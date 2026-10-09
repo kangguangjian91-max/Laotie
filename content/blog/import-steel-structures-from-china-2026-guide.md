@@ -108,11 +108,11 @@ During fabrication, arrange **third-party inspection** at key milestones:
 
 ## Common Pitfalls to Avoid
 
-1. **Skipping third-party inspection** — Factory photos don't guarantee quality
-2. **Choosing the cheapest quote** — Lowest price often means thinner steel or lower-grade paint
-3. **Incomplete specification** — Missing details lead to expensive change orders
-4. **Ignoring local building codes** — Your manufacturer must design to your local standards
-5. **Forgetting about corrosion protection** — Coastal environments require Z350 galvanizing or PVDF coating
+1. **Skipping third-party inspection**: Factory photos don't guarantee quality
+2. **Choosing the cheapest quote**: Lowest price often means thinner steel or lower-grade paint
+3. **Incomplete specification**: Missing details lead to expensive change orders
+4. **Ignoring local building codes**: Your manufacturer must design to your local standards
+5. **Forgetting about corrosion protection**: Coastal environments require Z350 galvanizing or PVDF coating
 
 ## Conclusion
 

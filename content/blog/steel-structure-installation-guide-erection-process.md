@@ -178,4 +178,4 @@ Every OldTie order includes:
 
 ---
 
-*OldTie Steel Structure — Your trusted partner from factory to finished building.*
+*OldTie Steel Structure: Your trusted partner from factory to finished building.*

@@ -23,7 +23,7 @@ A steel-framed 5-story office building can be structurally complete in **8–12 
 
 ### Flexible Floor Plans
 
-Steel's long-span capability (12–18 m between columns) creates open, adaptable floor plates. Tenants can reconfigure interiors without structural constraints — a major leasing advantage.
+Steel's long-span capability (12–18 m between columns) creates open, adaptable floor plates. Tenants can reconfigure interiors without structural constraints, a major leasing advantage.
 
 ### Lighter Foundation
 
@@ -191,7 +191,7 @@ Acoustic separation is achieved through:
 - **Ceiling**: Acoustic ceiling tiles with plenum barrier
 - **Flanking**: Isolation strips at column and slab connections
 
-Steel buildings achieve STC 50–55 ratings — equivalent to concrete construction.
+Steel buildings achieve STC 50–55 ratings, equivalent to concrete construction.
 
 ### What about thermal performance in hot climates?
 

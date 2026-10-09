@@ -72,10 +72,10 @@ Erection was completed in six weeks by a local Kenyan crew of 12 workers, suppor
 
 1. **Foundation inspection** — anchor bolt positions verified within ±2 mm tolerance
 2. **Column erection** — 40 main columns lifted and plumbed using a 50-ton mobile crane
-3. **Rafter installation** — roof beams connected with high-strength 10.9S bolts
+3. **Rafter installation**. Roof beams connected with high-strength 10.9S bolts
 4. **Bracing and purlins** — roof and wall bracing installed to stabilize the frame
 5. **Cladding** — roof and wall sheets installed, flashings sealed with butyl tape
-6. **Doors and gutters** — roller shutter doors hung, drainage system connected
+6. **Doors and gutters**. Roller shutter doors hung, drainage system connected
 
 ## Challenges and Solutions
 
@@ -101,10 +101,10 @@ The client reported that the clear-span design allowed flexible racking layouts 
 
 ## Lessons Learned for Future Buyers
 
-1. **Start with local engineering review** — Have a Kenyan engineer review drawings early to prevent foundation and code surprises.
-2. **Plan for weather** — Build a buffer into the erection schedule for rain, dust, or high winds.
-3. **Use third-party inspection** — A pre-shipment inspection in China is worth the cost for first-time buyers.
-4. **Keep spare fasteners** — Request 2% extra bolts and screws to replace lost or damaged items on site.
+1. **Start with local engineering review**: Have a Kenyan engineer review drawings early to prevent foundation and code surprises.
+2. **Plan for weather**: Build a buffer into the erection schedule for rain, dust, or high winds.
+3. **Use third-party inspection**: A pre-shipment inspection in China is worth the cost for first-time buyers.
+4. **Keep spare fasteners**: Request 2% extra bolts and screws to replace lost or damaged items on site.
 
 ## Image Suggestions
 
@@ -118,4 +118,4 @@ This Kenya warehouse demonstrates that a well-managed **steel warehouse project*
 
 **Contact OldTie for a free quote → WhatsApp: +86 166-5073-5555**
 
-*OldTie Steel Structure — Factory-direct steel warehouses, exported from Shangqiu, Henan, China.*
+*OldTie Steel Structure: Factory-direct steel warehouses, exported from Shangqiu, Henan, China.*

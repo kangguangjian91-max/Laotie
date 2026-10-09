@@ -56,7 +56,7 @@ export default function Hero() {
               <span className="block mt-1 bg-gradient-to-r from-[#7dd3fc] via-[#38bdf8] to-[#FF6B00] bg-clip-text text-transparent">
                 Delivered Globally in 30 Days
               </span>
-              <span className="block mt-1 text-gray-300 text-[0.65em] font-semibold">Factory Direct — Free Quote in 24h</span>
+              <span className="block mt-2 text-white/90 text-[0.65em] font-semibold tracking-tight">Factory Direct — Free Quote in 24h</span>
             </h1>
 
             {/* Subtitle */}

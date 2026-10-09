@@ -14,7 +14,7 @@ At OldTie Steel Structure, our Shangqiu factory processes over 5,000 tons of ste
 
 ## CNC Cutting: The Foundation of Precision Fabrication
 
-Modern steel fabrication begins with computer-controlled cutting. Manual cutting is virtually extinct in professional factories — CNC (Computer Numerical Control) technology ensures every component matches the shop drawing within millimeter tolerances.
+Modern steel fabrication begins with computer-controlled cutting. Manual cutting is virtually extinct in professional factories: CNC (Computer Numerical Control) technology ensures every component matches the shop drawing within millimeter tolerances.
 
 ### Plasma Cutting
 
@@ -63,7 +63,7 @@ Welding quality determines whether a steel structure stands for 5 years or 50. D
 
 The preferred method for long, straight seams in H-beams and box sections:
 
-- **Process**: Arc burns beneath a blanket of granular flux — no visible arc, no spatter
+- **Process**: Arc burns beneath a blanket of granular flux, no visible arc, no spatter
 - **Penetration**: Deep, consistent fusion into the root of the joint
 - **Productivity**: 3-5× faster than manual welding for beam fabrication
 - **Applications**: Web-to-flange seams on H-columns and H-rafters, plate girder fabrication
@@ -110,14 +110,14 @@ Welding introduces heat, and heat causes distortion. Every welded steel member p
 
 ## Surface Treatment: Corrosion Protection That Lasts
 
-Surface preparation and coating are the final — and arguably most important — processing step. Poor surface treatment is the #1 cause of premature steel structure degradation.
+Surface preparation and coating are the final — and arguably most important, processing step. Poor surface treatment is the #1 cause of premature steel structure degradation.
 
 ### Shot Blasting (Surface Preparation)
 
 Before any paint touches steel, the surface must be prepared:
 
 - **Process**: Steel shot or grit is propelled at high velocity to remove mill scale, rust, and welding slag
-- **Standard**: SA 2.5 (near-white metal) per ISO 8501-1 — the industry benchmark for structural steel
+- **Standard**: SA 2.5 (near-white metal) per ISO 8501-1. The industry benchmark for structural steel
 - **Result**: A clean, profiled surface with 50-75μm roughness for optimal paint adhesion
 
 ### Painting Systems
@@ -189,4 +189,4 @@ Whether you're building a 500m² warehouse or a 10,000m² factory complex, proce
 📧 **Email**: Contact us via the website contact form
 
 ---
-*OldTie Steel Structure — Precision fabrication from China's steel heartland. 5 production lines, 5,000 tons/month, CE & ISO certified.*
+*OldTie Steel Structure: Precision fabrication from China's steel heartland. 5 production lines, 5,000 tons/month, CE & ISO certified.*

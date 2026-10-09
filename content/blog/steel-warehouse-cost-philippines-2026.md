@@ -92,7 +92,7 @@ The worst approach: email 3 suppliers saying "I need a warehouse, how much?" The
 2. **Specify wind zone**: Tell them your city/municipality so they engineer to the correct NSCP wind load
 3. **Clarify insulation**: Single skin or sandwich panel? If sandwich: EPS, PU, or Rockwool? What thickness?
 4. **List doors and openings**: How many roll-up doors? What size? Any personnel doors?
-5. **Mention crane plans**: Even if it's "maybe in 3 years" — design for it now
+5. **Mention crane plans**: Even if it's "maybe in 3 years", design for it now
 6. **Ask for BOQ (Bill of Quantities)**: Not just a total price. You need to see kg of steel, sqm of cladding, number of bolts. This is the only way to compare quotes.
 
 ## FOB China vs Local Philippines Supplier: A Real Example
@@ -130,4 +130,4 @@ Yes. Many clients buy the steel frame FOB from us and source roofing sheets, wal
 
 ---
 
-**Planning a steel warehouse in the Philippines?** [Get a free BOQ quote](/contact) with detailed steel tonnage, cladding quantities, and landed cost estimate — typically within 48 hours.
+**Planning a steel warehouse in the Philippines?** [Get a free BOQ quote](/contact) with detailed steel tonnage, cladding quantities, and landed cost estimate, typically within 48 hours.

@@ -242,4 +242,4 @@ Our engineering team specializes in space frame design, from preliminary concept
 
 ---
 
-*OldTie Steel Structure — Space frame truss manufacturer and designer. Shangqiu, Henan, China. 5,000 tons/month production capacity. CE & ISO 9001 certified. Projects delivered to 30+ countries.*
+*OldTie Steel Structure: Space frame truss manufacturer and designer. Shangqiu, Henan, China. 5,000 tons/month production capacity. CE & ISO 9001 certified. Projects delivered to 30+ countries.*

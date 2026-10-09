@@ -85,7 +85,9 @@ function BlogContent() {
                     }`}
                 >
                   All Posts
-                  <span className="ml-2 text-xs opacity-60">
+                  <span className={`ml-2 text-xs px-1.5 py-0.5 rounded-full font-medium ${
+                    !activeCategory ? "bg-white/20 text-white" : "bg-gray-100 text-gray-600"
+                  }`}>
                     {posts.length}
                   </span>
                 </button>
@@ -99,7 +101,9 @@ function BlogContent() {
                       }`}
                   >
                     {cat.name}
-                    <span className="ml-2 text-xs opacity-60">
+                    <span className={`ml-2 text-xs px-1.5 py-0.5 rounded-full font-medium ${
+                      activeCategory === cat.name ? "bg-white/20 text-white" : "bg-gray-100 text-gray-600"
+                    }`}>
                       {cat.count}
                     </span>
                   </button>
